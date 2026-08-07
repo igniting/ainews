@@ -62,6 +62,7 @@ around them one-to-one.
 | RQ6 | Can relative capability be recovered from discourse alone? | 5.6 |
 | RQ7 | Is technical attention concentrating or fragmenting? | 5.7 |
 | RQ8 | Which apparent signals are artifacts of the instrument? | 5.8 |
+| RQ9 | Do the results survive holding the source surface fixed, and where do announcement-space and practitioner-space diverge? | 5.9 |
 
 **1.3 Contributions.**
 - C1. A cleaned, indexed 690-issue / 15.3M-word corpus with per-issue structured
@@ -122,14 +123,26 @@ per-channel transcripts.
 into four regimes; the 460-issue stable core (2024-05-20 → 2026-03-10). Stated up
 front because it constrains every result that follows.
 
-**3.6 Title and lede templating.** A distinct artifact from the format regimes and
+**3.6 Source composition and declared sampling effort.** The single largest
+confound in the study, and it is declared in-band: each issue states how many
+subreddits, Twitter accounts and Discords it checked. Discord sampling falls 30 →
+0 servers while Twitter rises 384 → 544, and the resulting share of issue words
+goes from 96% Discord / 2% Twitter (2024H1) to 0% / 23% (2026H1). Figure 1b.
+Every whole-issue density series must be re-derived inside a fixed section; §5.9
+reports the controlled results.
+
+**3.7 Title and lede templating.** A distinct artifact from the format regimes and
 worth its own subsection: both the title field and the opening lede converge on
 placeholders ("not much happened today", "**a quiet day.**") independently of
 whether anything happened. All 23 issues in the final month carry the placeholder
 lede, three of them major launches. Any measure keyed on either field needs
 conditioning.
 
-**3.7 Provenance caveats.** LLM-drafted, human-edited; the mix changes over time.
+**3.8 The three editorial layers.** Lede (thesis), title/slug (event), body
+(source recaps). 234 issues carry an "X is all you need" lede — a dated,
+human-authored one-line call used in §5.9 as independent validation.
+
+**3.9 Provenance caveats.** LLM-drafted, human-edited; the mix changes over time.
 Coverage bias toward open models, tooling and the sampled Discord ecosystems.
 
 ---
@@ -146,6 +159,7 @@ before any method. Five measures that fail on this corpus and why:
 | Title/headline share | tracks editorial framing **and title templating** | title is a placeholder in 0% of 2023 issues → 68% of 2026 |
 | KL over topic distributions | tracks format regimes | top-10 novelty days all in one regime change |
 | Raw co-occurrence | tracks marginal frequency | resolved with PPMI |
+| **Whole-issue density** | **tracks source composition** | **issue words go 96% Discord → 0%; Twitter 2% → 23%** |
 
 Resolution used throughout: **mentions per 10⁴ words**, ranks, or PPMI, with
 regime controls.
@@ -313,6 +327,28 @@ Full section, not a footnote.
 
 ---
 
+### 5.9 RQ9 — Source-controlled results, and the announcement/practice gap
+
+The validation section, and the strongest part of the study.
+
+- 5.9.1 **The control.** Density recomputed inside the Twitter and Reddit recaps
+  separately, holding the sampled surface fixed. All six headline results survive;
+  the China rise and Meta/Mistral fall reproduce in *both* sections independently,
+  making them the most robust findings in the paper.
+- 5.9.2 **The announcement/practice gap.** Where the two surfaces disagree, the
+  gap is the result: `agentic` rises 8.0× on Twitter but 2.0× on Reddit;
+  `fine-tuning` falls 90% on Twitter but 60% on Reddit and *recovers* in Reddit's
+  final period. Practitioners kept fine-tuning after it stopped being news.
+  Table + Figure 15.
+- 5.9.3 **Independent validation from the editorial lede.** 234 dated "X is all
+  you need" theses checked against the automated dates: MCP peak 2025-03 (PELT) vs
+  lede 2025-03-26; DeepSeek burst 2025-W04 (Kleinberg) vs lede 2025-01-27;
+  `harness` drift vs lede 2025-05-15. The one disagreement is informative — the
+  reasoning thesis was called 2024-09-12, roughly two quarters before density
+  peaked, so interpretation leads volume in a way volume-only methods cannot see.
+
+---
+
 ## 6. Discussion
 
 **6.1 What the trajectory implies about system design.** The measured sequence —
@@ -321,16 +357,22 @@ orchestration becoming dominant — is an architectural argument with dates atta
 Where the scarce resource moved: from model quality, to context, to orchestration
 and cost.
 
-**6.2 Referent drift as a practical hazard.** Concrete implications for eval
+**6.2 Read the documents before measuring the fields.** Three rounds of
+correction in this study, each from a field measured without being read: titles
+that became templates, density normalized by words whose source inverted, and a
+lede discarded as boilerplate that turned out to be the most informative field in
+the corpus. None of eleven statistical methods could surface any of it.
+
+**6.3 Referent drift as a practical hazard.** Concrete implications for eval
 suites, keyword monitoring and retrieval corpora spanning a drift boundary.
 
-**6.3 Incumbency as an observable.** What "being the reference model" looks like
+**6.4 Incumbency as an observable.** What "being the reference model" looks like
 in text, and why it is measurable independently of benchmarks.
 
-**6.4 Why supervised taxonomies under-detect.** The defense-topic miss as a
+**6.5 Why supervised taxonomies under-detect.** The defense-topic miss as a
 generalisable warning for anyone maintaining a category scheme over a moving field.
 
-**6.5 Generalisation.** Which findings are about AI and which are about this
+**6.6 Generalisation.** Which findings are about AI and which are about this
 newsletter. Stated conservatively.
 
 ---
@@ -394,6 +436,9 @@ weight.
 | Fig 12 | Hill-1 and top-3 share | line + bars | 5.7 |
 | Fig 13 | OpenAI headline share vs density | dual axis, shaded divergence | 5.8.1 |
 | Fig 14 | Co-occurrence network, 2026H1, Louvain communities | force layout | 5.8.4 |
+| Fig 1b | Source composition of issue words + declared sampling effort | stacked area + line | 3.6 |
+| Fig 15 | Twitter vs Reddit density for six patterns | paired small-multiple | 5.9.2 |
+| Fig 16 | Lede thesis dates against method-derived dates | dumbbell/timeline | 5.9.3 |
 | Tab 1–3 | Corpus statistics · embedded layers · method catalogue | tables | 3, 4 |
 
 Format regimes appear as consistent background bands on every time-series figure,

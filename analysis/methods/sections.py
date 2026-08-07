@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+"""Source-controlled density: measure within one recap section at a time.
+
+**This is the most important control in the repo.** Every other density figure is
+computed per 10,000 words of a whole issue — but the issue's *source composition
+inverts* across the corpus:
+
+| period | Twitter | Reddit | Discord |
+|---|---|---|---|
+| 2024H1 | 2% | 2% | **96%** |
+| 2025H2 | 5% | 15% | 79% |
+| 2026H1 | 23% | **61%** | **0%** |
+
+The newsletter declares this in-band: the per-issue header states how many
+subreddits, Twitter accounts and Discords were checked, and Discord sampling falls
+from 30 servers to **zero** while Twitter rises 384 → 544 accounts.
+
+So a whole-issue density series conflates two things: how much a topic was
+discussed, and which surface the newsletter happened to be sampling that year.
+Topics that live in Discord (fine-tuning help channels, local inference tooling)
+decline mechanically once Discord sampling stops; topics that live on Twitter
+(model launches) rise mechanically.
+
+Measuring *within* a section holds the source fixed. Twitter and Reddit are the
+only sections present across the whole corpus, so they are the usable controls.
+
+A second payoff: comparing the two sections separates **announcement-space**
+(Twitter) from **practitioner-space** (Reddit). Where they disagree, the gap is
+the finding — fine-tuning falls 18x on Twitter but only 3x on Reddit.
+
+Usage:
+    python3 analysis/methods/sections.py
+    python3 analysis/methods/sections.py --section reddit --patterns CHINA agentic
+"""
+
+from __future__ import annotations
+
+import argparse
+import collections
+import pathlib
+import re
+import sys
+
+REPO = pathlib.Path(__file__).resolve().parent.parent.parent
+ARTICLES = REPO / "articles"
+OUT = REPO / "analysis" / "sections.md"
+
+FRONT = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
+HEAD = re.compile(r"^#\s+AI (Twitter|Reddit|Discord) Recap.*$", re.M | re.I)
+NOISE = re.compile(r"localllama|local_llama|\bollama\b|llama[-_.]?cpp|llama[-_]?index", re.I)
+
+# Declared sampling effort, stated in each issue's header line.
+SOURCES = re.compile(
+    r"checked\s+(?:\*\*)?(?P<subs>\d+)(?:\*\*)?\s+subreddits|"
+    r"(?:\*\*)?(?P<tw>\d+)(?:\*\*)?\s*(?:\]\([^)]*\))?\s*Twitters|"
+    r"(?:\*\*)?(?P<dis>\d+)(?:\*\*)?\s+Discords|"
+    r"(?P<nodis>no further Discords)",
+    re.I,
+)
+
+PATTERNS: dict[str, str] = {
+    "CHINA": r"\bqwen\b|deepseek|kimi|moonshot|\bglm-|minimax",
+    "Meta+Mistral": r"\bllama[ -]?[234](?:\.\d)?\b|meta-llama|mistral|mixtral",
+    "agentic": r"\bagentic\b|\bagents?\b",
+    "fine-tuning": r"fine[- ]?tun|\bLoRA\b",
+    "RAG": r"\bRAG\b|retrieval[- ]augmented",
+    "reasoning": r"\breasoning\b|chain[- ]of[- ]thought",
+    "MCP": r"\bMCP\b",
+    "harness": r"\bharness(es)?\b",
+}
+
+
+def half(name: str) -> str:
+    return f"20{name[:2]}H{1 if int(name[3:5]) <= 6 else 2}"
+
+
+def sections_of(body: str) -> dict[str, str]:
+    marks = list(HEAD.finditer(body))
+    out: dict[str, str] = {}
+    for i, mark in enumerate(marks):
+        end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
+        out[mark.group(1).lower()] = body[mark.end() : end]
+    return out
+
+
+def scan(names: list[str]):
+    compiled = {n: re.compile(PATTERNS[n], re.I) for n in names}
+    words: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+    hits: dict[str, dict[str, collections.Counter]] = collections.defaultdict(
+        lambda: collections.defaultdict(collections.Counter)
+    )
+    composition: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+    total: collections.Counter = collections.Counter()
+
+    for path in sorted(ARTICLES.glob("*.md")):
+        body = FRONT.sub("", path.read_text(encoding="utf-8", errors="replace"))
+        secs = sections_of(body)
+        if not secs:
+            continue
+        period = half(path.name)
+        total[period] += len(body.split())
+        for source, text in secs.items():
+            text = NOISE.sub(" ", text)
+            n = len(text.split())
+            words[source][period] += n
+            composition[source][period] += n
+            for name, pattern in compiled.items():
+                hits[source][name][period] += len(pattern.findall(text))
+    return words, hits, composition, total
+
+
+def table(rows: list[tuple], headers: tuple) -> list[str]:
+    lines = ["| " + " | ".join(map(str, headers)) + " |", "|" + "|".join(["---"] * len(headers)) + "|"]
+    lines += ["| " + " | ".join(map(str, r)) + " |" for r in rows]
+    return lines + [""]
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--patterns", nargs="*", default=list(PATTERNS))
+    parser.add_argument("--section", nargs="*", default=["twitter", "reddit"])
+    parser.add_argument("--min-words", type=int, default=5000, help="suppress periods with too little text")
+    args = parser.parse_args(argv)
+
+    words, hits, composition, total = scan(args.patterns)
+    periods = sorted(total)
+
+    lines = [
+        "# Source-controlled density",
+        "",
+        "Generated by `analysis/methods/sections.py`.",
+        "",
+        "## Why this control is necessary",
+        "",
+        "The issue's source composition inverts across the corpus, so whole-issue density",
+        "conflates *how much a topic was discussed* with *which surface was being sampled*.",
+        "",
+    ]
+    lines += table(
+        [
+            tuple([s.title()] + [f"{composition[s][p]/total[p]*100:.0f}%" for p in periods])
+            for s in ("twitter", "reddit", "discord")
+        ],
+        tuple(["Share of issue words"] + periods),
+    )
+    lines += [
+        "Discord sampling falls from 30 servers to zero and Twitter rises 384 → 544",
+        "accounts, both declared in each issue's own header. Measuring inside a fixed",
+        "section removes the effect.",
+        "",
+    ]
+
+    for source in args.section:
+        lines += [f"## Within the {source.title()} recap only", "", "Mentions per 10,000 words of that section.", ""]
+        rows = [tuple(["*(section words)*"] + [f"*{words[source][p]/1000:.0f}k*" for p in periods])]
+        for name in args.patterns:
+            rows.append(
+                tuple(
+                    [name]
+                    + [
+                        f"{hits[source][name][p]/words[source][p]*10000:.1f}"
+                        if words[source][p] >= args.min_words
+                        else "—"
+                        for p in periods
+                    ]
+                )
+            )
+        lines += table(rows, tuple(["Pattern"] + periods))
+
+    lines += [
+        "## Announcement-space vs practitioner-space",
+        "",
+        "Twitter carries launches and claims; Reddit carries what people are running.",
+        "Where the two disagree, the gap is the finding rather than noise.",
+        "",
+    ]
+    first, last = periods[0], periods[-1]
+    rows = []
+    for name in args.patterns:
+        out = []
+        for source in ("twitter", "reddit"):
+            a = hits[source][name][first] / max(words[source][first], 1) * 10000
+            b = hits[source][name][last] / max(words[source][last], 1) * 10000
+            out.append(f"{b/a:.1f}x" if a > 0.2 else "—")
+        rows.append((name, out[0], out[1]))
+    lines += table(rows, ("Pattern", f"Twitter {first}→{last}", f"Reddit {first}→{last}"))
+
+    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"wrote {OUT.relative_to(REPO)}")
+    for source in args.section:
+        print(f"\n{source}:")
+        for name in args.patterns:
+            series = [
+                f"{hits[source][name][p]/words[source][p]*10000:.1f}" if words[source][p] >= args.min_words else "—"
+                for p in periods
+            ]
+            print(f"  {name:<14} " + "  ".join(f"{v:>6}" for v in series))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
