@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate report/index.html — the full analytical report, self-contained."""
 from __future__ import annotations
-import pathlib, sys
+import pathlib, re, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import data as D
 import charts as C
@@ -107,7 +107,7 @@ figcaption b{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;
 .serlab.ink2{fill:var(--ink)}
 .dot{stroke:none}
 .dot.sig{fill:var(--sig)} .dot.bench{fill:var(--bench)}
-.bar.sig{fill:var(--sig-line)} .bar.bench{fill:var(--sig)}
+.bar.sig{fill:var(--rule-strong)} .bar.bench{fill:var(--bench)}
 .band.disc{fill:var(--rule-strong);opacity:.55}
 .band.redd{fill:var(--bench-soft);stroke:var(--bench-line)}
 .band.twit{fill:var(--sig-soft);stroke:var(--sig-line)}
@@ -122,6 +122,8 @@ text{font-family:var(--mono);fill:var(--muted)}
 .gaplab{font-size:10px;fill:var(--faint);letter-spacing:.06em;text-transform:uppercase}
 .ptlab{font-size:10.5px;fill:var(--ink)}
 .bandlab{font-size:11px;font-weight:600;fill:var(--ink)}
+.cell{fill:var(--bench)}
+.cellv{font-size:9.5px;fill:var(--ground);font-weight:600}
 .reg.r1{fill:var(--r1)} .reg.r2{fill:var(--r2)} .reg.r3{fill:var(--r3)} .reg.r4{fill:var(--r4)}
 .regname{font-size:10.5px;font-weight:600;fill:var(--ground);text-anchor:middle;letter-spacing:.04em}
 
@@ -191,6 +193,21 @@ ol.refs li{margin-bottom:.5rem}
 ul.plain{padding-left:1.15rem;margin:0 0 1.05em}
 ul.plain li{margin-bottom:.42rem}
 hr{border:none;border-top:1px solid var(--rule);margin:2.6rem 0}
+.part{border-top:2px solid var(--ink);padding:2.6rem 0 .4rem;margin-top:1.5rem}
+.part .pn{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sig);display:block;margin-bottom:.6rem}
+.part h2{font-size:2.4rem;margin-bottom:.5rem}
+.part p{color:var(--muted);max-width:44ch;font-size:1.02rem}
+.thesis{display:grid;gap:0;margin:1.8rem 0;border-top:1px solid var(--rule-strong);max-width:44rem}
+.thesis div{display:grid;grid-template-columns:6.2rem 1fr;gap:1rem;padding:.44rem 0;
+  border-bottom:1px solid var(--rule);font-size:.87rem}
+.thesis span{font-family:var(--mono);font-size:.75rem;color:var(--sig)}
+.thesis em{font-style:normal;color:var(--ink);font-family:var(--sans);font-weight:550}
+.debate{border-left:2px solid var(--rule-strong);padding:.1rem 0 .1rem 1.1rem;margin:1.5rem 0}
+.debate h5{margin:0 0 .15rem;font-family:var(--sans);font-size:1rem;color:var(--ink);font-weight:650}
+.debate .dd{font-family:var(--mono);font-size:.72rem;color:var(--sig);letter-spacing:.06em}
+.debate p{margin:.4rem 0 0;font-size:.93rem}
+.debate .out{color:var(--muted);font-style:italic;font-size:.88rem}
 .foot{font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.05em;
   border-top:1px solid var(--rule);padding-top:1.4rem;margin-top:3rem;line-height:1.7}
 @media (max-width:640px){
@@ -252,15 +269,177 @@ def build() -> str:
                             ("Meta + Mistral", D.REDDIT["Meta+Mistral"], "bench")],
                        [0, 30, 60, 90], "mentions / 10⁴ words")
 
+
+    # ------------------------------------------------ NEW CONTENT SECTIONS
+    tech_tw = C.lines(P6, [("KV cache / serving", D.TECH_TW["KV cache / serving"], "sig"),
+                           ("MoE / routing", D.TECH_TW["MoE / routing"], "bench"),
+                           ("state-space (Mamba)", D.TECH_TW["state-space (Mamba)"], "ink"),
+                           ("quantization", D.TECH_TW["quantization"], "ink2")],
+                      [0, 10, 20, 30], "mentions / 10⁴ words")
+    tech_rd = C.lines(P6, [("quantization", D.TECH_RD["quantization"], "sig"),
+                           ("MoE / routing", D.TECH_RD["MoE / routing"], "bench"),
+                           ("KV cache / serving", D.TECH_RD["KV cache / serving"], "ink"),
+                           ("state-space (Mamba)", D.TECH_RD["state-space (Mamba)"], "ink2")],
+                      [0, 10, 20, 30], "mentions / 10⁴ words")
+    stack = C.lines(D.STACK_P, [("llama.cpp", D.STACK["llama.cpp"], "sig"),
+                                ("Unsloth", D.STACK["Unsloth"], "bench"),
+                                ("ollama", D.STACK["ollama"], "ink"),
+                                ("ComfyUI", D.STACK["ComfyUI"], "ink2")],
+                    [0, 5, 10, 15], "mentions / 10⁴ words")
+    theses_html = "".join(
+        f'<div><span>{C.esc(d)}</span><em>{C.esc(q)}</em></div>' for d, q in D.THESES)
+    debates_html = "".join(
+        f'<div class="debate"><span class="dd">{C.esc(d)}</span><h5>{C.esc(topic)}</h5>'
+        f'<p>{body}</p><p class="out">{C.esc(outcome)}</p></div>'
+        for d, topic, body, outcome in D.DEBATES)
+
+    SEC_AGENDA = f'''<section><div class="col">
+<span class="secnum">§ 3 — The agenda, in the field's own words</span>
+<h2>Twenty-two theses</h2>
+<p>Each issue opens with a one-line editorial lede, and 234 of them take the form
+"<em>X is all you need</em>" — a dated, human-written claim about what currently matters. Read
+in sequence they are the most compressed account of the field's agenda that exists anywhere,
+and they were written without hindsight.</p>
+<div class="thesis">{theses_html}</div>
+<p>The sequence tracks the measured series closely, and where it does not, it leads them.
+<em>Test-time reasoning is all you need</em> is dated the day o1 shipped — roughly two quarters
+before reasoning density actually peaked. <em>MCP is all you need</em> falls inside the
+five-month window that change point detection later identified as MCP's peak.
+<em>SSMs are all you need</em> is dated May 2024; by 2026 that architectural programme has
+disappeared from the corpus entirely.</p>
+</div></section>'''
+
+    SEC_ARCH = f'''<section><div class="col">
+<span class="secnum">§ 4 — Inside the models</span>
+<h2>What actually changed in the architecture</h2>
+<p>Underneath the model names, the corpus records a specific set of engineering concerns rising
+and falling. Measured inside a fixed recap section, four of them tell most of the story.</p>
+</div>
+{figtop(tech_tw, 3, "Architecture and systems concerns — announcement space",
+  "Serving infrastructure (oxblood) rises 23×. State-space models (solid grey) go from the "
+  "leading transformer alternative to zero. MoE (teal) oscillates around release cycles rather "
+  "than trending. Quantization (dashed) declines here — but see the next figure.")}
+<div class="col">
+<h3>The architectural programme that died in public</h3>
+<p>In 2024H1, state-space models — Mamba, RWKV, Hyena — run at 12.8 mentions per 10⁴ words,
+comparable to MoE at 13.8. The lede on 2024-05-29 reads <em>"SSMs are all you need."</em> By
+2026H2 the figure is <strong>0.0</strong>. The corpus records an entire credible alternative to
+the transformer being explored and then abandoned, and it never has a dramatic failure moment —
+it simply stops being mentioned. This is what a genuine non-arrival looks like, and it is
+usefully different in shape from retrieval's decline, which was absorption.</p>
+
+<h3>Serving replaced training as the hard problem</h3>
+<p>KV cache, paged attention, vLLM, SGLang, continuous batching and speculative decoding go
+from 1.2 to 27.6 mentions per 10⁴ words — a 23× rise, the largest of any technical concern
+measured. In 2024 the interesting engineering problem was how to make a model; by 2026 it is
+how to serve one cheaply at long context. Multi-token prediction appears late and mostly in
+practice space, arriving in 2026 rather than at the frontier.</p>
+
+<h3>The clearest announcement/practice split in the corpus</h3>
+</div>
+{figtop(tech_rd, 4, "The same concerns — practice space",
+  "Quantization (oxblood) is the dominant practitioner concern throughout and *rises* to 30.8, "
+  "while the announcement layer's interest in it falls by half. MoE rises steadily as "
+  "open-weight MoE models became runnable locally. Multi-token prediction shows up here in 2026.")}
+<div class="col">
+<p>Quantization is the sharpest example in the study of the two surfaces disagreeing.
+Announcement space runs 10.0 → 5.6 over the window; practice space runs
+<strong>22.6 → 30.8</strong>. Practitioners have cared about GGUF, AWQ, fp8 and 4-bit quants
+continuously and increasingly, because that is what determines whether a model runs on hardware
+they own. The announcement layer treated it as a solved 2024 topic.</p>
+<p>The same shape appears in MoE: flat-to-noisy in announcements, a steady 5.5 → 15.2 climb in
+practice, tracking the arrival of open-weight MoE models small enough to run locally.</p>
+</div></section>'''
+
+    SEC_BENCH = f'''<section><div class="col">
+<span class="secnum">§ 5 — How the field measured itself</span>
+<h2>Benchmarks have lifespans</h2>
+<p>Extracting every "<code>N% on BENCHMARK</code>" claim from the prose dates each benchmark's
+period of usefulness. Several die within months of arriving; one has survived the entire corpus;
+one has never been saturated.</p>
+</div>
+{figtop(C.lifecycle(D.BENCHMARKS), 5, "When each benchmark was worth citing",
+  "Bars span first to last claimed score. Teal bars are still in use at the end of the corpus; "
+  "grey bars stopped being cited. Numbers are the median claimed score across all mentions.")}
+<div class="col">
+<p>Three patterns are visible. <strong>Saturation kills a benchmark quickly:</strong> GSM8K,
+HumanEval and AlpacaEval each stop being cited within months, and MATH follows at a median
+claimed score of 84%. Once everyone scores high, the number stops carrying information.</p>
+<p><strong>New capabilities bring new benchmarks with them.</strong> AIME appears in the corpus
+in January 2025 — the same month as DeepSeek R1 — because competition mathematics only becomes a
+meaningful test once test-time compute exists. Terminal-Bench appears in 2026, because agentic
+terminal work only becomes a measurable category once harnesses exist. The benchmark set is a
+trailing indicator of what models can newly do.</p>
+<p><strong>One benchmark spans everything and one resists everyone.</strong> SWE-bench runs from
+April 2024 to June 2026 at a median claimed 55% — long-lived because real software tasks kept
+getting harder as fast as models improved. FrontierMath sits at a median 31% and is still cited
+at the end of the window: the corpus's clearest example of a benchmark nobody saturated.</p>
+</div></section>'''
+
+    SEC_STACK = f'''<section><div class="col">
+<span class="secnum">§ 6 — The practitioner stack</span>
+<h2>What people were actually running</h2>
+<p>The Reddit recap summarises <code>/r/LocalLLaMA</code> and adjacent communities, which makes
+it a direct record of the tools practitioners used rather than the ones vendors announced.</p>
+</div>
+{figtop(stack, 6, "The local stack, 2024–2026",
+  "Mentions per 10⁴ words of Reddit-recap text. llama.cpp (oxblood) is the only tool that rises "
+  "across the whole window. Unsloth (teal) grows while fine-tuning discourse collapses. "
+  "ollama (solid grey) and ComfyUI (dashed) fade.")}
+<div class="col">
+<p><code>llama.cpp</code> is the substrate. It goes 9.1 → 13.0 and is the only tool in the set
+that grows monotonically — through the reasoning shift, the agent shift and the arrival of the
+Chinese open-weights bloc. Everything else in the practitioner stack rotated around it.</p>
+<p><strong>Unsloth rising to 6.0 is the corroborating detail</strong> for the fine-tuning result
+in §8. If practitioners had genuinely stopped fine-tuning, the dedicated fine-tuning toolchain
+would not be growing. It is; the discourse simply stopped covering it.</p>
+<p>The hardware picture is consistent and rarely discussed elsewhere: consumer GPUs are
+mentioned two to three times as often as datacenter GPUs throughout, Apple silicon holds a
+steady share, and CPU/RAM offload climbs 0.8 → 2.3 as open-weight models outgrew consumer VRAM.
+Practice space runs on hardware people own.</p>
+</div></section>'''
+
+    SEC_DEBATE = f'''<section><div class="col">
+<span class="secnum">§ 7 — Arguments</span>
+<h2>Four things the field could not agree on</h2>
+<p>A daily record captures disagreements that retrospectives smooth over, because it has to
+publish before anyone knows who was right.</p>
+{debates_html}
+</div></section>'''
+
+    SEC_DOMAIN = f'''<section><div class="col">
+<span class="secnum">§ 8 — The whole map</span>
+<h2>Sixteen domains over seven half-years</h2>
+<p>Grouping the archive's 2,241 topic tags into sixteen domains gives the coverage surface as a
+whole. Two caveats: the categories are hand-built, so they can only find what was anticipated
+, and these shares are computed over whole issues, so they inherit the
+source-composition caveat in §11.</p>
+</div>
+{figtop(C.heat(D.DOMAIN_P, D.DOMAINS), 7, "Share of issues touching each domain",
+  "Darker is a larger share; numbers shown at 40% and above. Agents run 4% → 86%. Retrieval "
+  "collapses 31% → 4%. Evaluation and efficiency stay high throughout — the two concerns that "
+  "never stopped mattering.")}
+<div class="col">
+<p>The stable rows are as informative as the moving ones. <strong>Evaluation never drops below
+55%</strong> and <strong>efficiency and hardware never below 58%</strong> across three years of
+otherwise total turnover. Whatever else changed, the field was continuously arguing about how to
+measure things and how to make them cheaper.</p>
+<p>Robotics never exceeds 12% in any period. For a subject with enormous investment and constant
+"embodied AI is next" framing, the corpus records it as persistently marginal — though this is
+one place where the newsletter's builder-and-tooling readership is likely to be the limit rather
+than the field.</p>
+</div></section>'''
+
     H = []
     A = H.append
 
     # ---------------------------------------------------------- masthead
     A(f'''<div class="wrap"><header class="mast">
 <p class="kicker">Corpus study · 690 issues · 15.3M words · 2023–2026</p>
-<h1>Announcement space and practice space</h1>
-<p class="sub">A source-controlled study of three years of AI's daily trade press —
-what the field actually did, and how nearly every naive way of measuring it goes wrong.</p>
+<h1>What 690 days of AI news actually said</h1>
+<p class="sub">Three years of the field's daily record, read end to end: the architectures
+that won and died, how it learned to measure itself, what practitioners actually ran — and
+the gap between announcement space and practice space.</p>
 <div class="meta">
 <span><b>690</b> daily issues</span><span><b>15.3M</b> words</span>
 <span><b>13</b> methods</span><span><b>4</b> findings withdrawn</span>
@@ -271,25 +450,22 @@ what the field actually did, and how nearly every naive way of measuring it goes
     # ---------------------------------------------------------- abstract
     A(f'''<section><div class="col">
 <span class="secnum">Abstract</span>
-<p class="lede">We analyse 690 consecutive daily issues of an AI newsletter (15.3M words,
-December 2023 – August 2026) as a contemporaneous, never-revised record of what the field
-believed on each day. The corpus turns out to invert its own source composition — issue text
-moves from 96% Discord transcript to 0%, with Twitter rising from 2% to 23% — which
-confounds every whole-document frequency measure. Re-deriving all results <em>inside</em> a
-fixed source section both preserves six principal findings and produces the study's most
-useful one: a measurable gap between <strong>announcement space</strong> and
-<strong>practice space</strong>. Agent discourse rises 8.0× in the Twitter recap but only
-2.0× in the Reddit recap; fine-tuning falls 90% in announcement space but only 60% in
-practice, and recovers at the end. Where the two surfaces agree — agent harnesses (17.9×
-vs 16.8×), the Chinese open-weights bloc (8.6× vs 15.3×) — the shift is field-wide rather
-than narrative. We further show that five core engineering terms changed referent
-mid-corpus (<code>harness</code>, <code>skills</code>, <code>prompt</code>,
-<code>distillation</code>, <code>agentic</code>), which invalidates naive keyword series
-over them. A full method audit withdraws four earlier findings and bounds a fifth. The
-methodological result is the transferable one: eleven statistical methods, several of them
-sophisticated, could not surface artifacts that reading a hundred documents found
-immediately.</p>
-</div></section>''')
+<p class="lede">We read 690 consecutive daily issues of an AI newsletter — 15.3M words,
+December 2023 to August 2026 — as a contemporaneous record of what the field was doing.
+The technical agenda moves in three phases: producing models (fine-tuning at 34.9 mentions per
+10⁴ words in 2024H1, retrieval at 22.5), then reasoning at inference time (peaking 2025H1),
+then orchestration (agent harnesses rising 18×). Whole architectural programmes die in
+public — state-space models fall 12.8 → 0.0 — while serving infrastructure rises 23×.
+Benchmarks have visible lifespans: GSM8K, HumanEval and AlpacaEval are dead within months,
+SWE-bench spans the entire corpus, and FrontierMath sits unsaturated at 31%. The open-weights
+frontier changes hands so completely that the ratio between the Chinese bloc and Meta-plus-Mistral
+inverts by two orders of magnitude. Because each issue summarises the same day from Twitter and
+Reddit separately, we can measure <strong>announcement space against practice space</strong> —
+and they disagree. Agent discourse rises 8.0× in one and 2.0× in the other; quantization
+<em>rises</em> among practitioners while falling in announcements; <code>llama.cpp</code> is the
+only tool that grows across the whole window. Part II documents the instrument: the corpus
+inverts its own source composition, which confounds naive measurement and forced the split that
+produced the study's most useful result.</p></div></section>''')
 
     # ---------------------------------------------------------- 1. intro
     A(f'''<section><div class="col">
@@ -364,7 +540,7 @@ American.</p>
 <p>The inflection is September 2024. OpenAI's o1 ships, and the newsletter's editor calls it
 the same day with a one-line lede — <em>"Test-time reasoning is all you need."</em> In
 announcement space <code>reasoning</code> goes 7.0 → 23.4 → 40.2 across three half-years.
-The interesting detail, which we return to in §6.8, is that the <em>thesis</em> was stated
+The interesting detail, which we return to in §9.8, is that the <em>thesis</em> was stated
 roughly two quarters before the <em>volume</em> peaked.</p>
 <p>Two months later Anthropic ships the Model Context Protocol, to almost no immediate
 notice — the lede that day is <em>"<code>claude_desktop_config.json</code> is all you
@@ -456,12 +632,12 @@ consecutive issues.</p>
 <p style="font-family:var(--sans);font-size:.83rem;color:var(--muted);margin-top:-.4rem">
 Chronology drawn from issues with descriptive titles. 68% of 2026 titles are the placeholder
 "not much happened today" — including several of the launches above — which is itself a
-finding (§4.3).</p>
+finding (§11.3).</p>
 </div></section>''')
 
     # ---------------------------------------------------------- 3. corpus
     A(f'''<section><div class="col">
-<span class="secnum">§ 3 — The corpus</span>
+<span class="secnum">§ 10 — The corpus</span>
 <h2>What the archive is made of</h2>
 <p>690 issues, 2023-12-06 to 2026-08-06, 15.3M words of body text, published on roughly five
 days a week and covering about 70% of all calendar days in the window. Reconstructing it
@@ -483,9 +659,9 @@ people.</li>
  [["Discord telemetry", "31,688 channel-days · 2.15M messages · 56 servers", "community activity series (unused)"],
   ["Tweet attribution", "18,854 (handle, status-ID) pairs", "attribution-fidelity checks"],
   ["Reddit engagement", "3,070 scored posts", "practice-space weighting"],
-  ["Numeric claims in prose", "1,335 context · 990 parameter · 176 benchmark · 151 price", "§6.6"],
-  ["Editorial ledes", "234 “X is all you need” theses", "§6.8 validation"],
-  ["Declared sampling effort", "571 issues", "§4.2 — the central control"]],
+  ["Numeric claims in prose", "1,335 context · 990 parameter · 176 benchmark · 151 price", "§9.6"],
+  ["Editorial ledes", "234 “X is all you need” theses", "§9.8 validation"],
+  ["Declared sampling effort", "571 issues", "§11.2 — the central control"]],
  "Table 1 · Structured layers embedded in the prose", (1,))}
 <div class="col">
 <h3>Three editorial layers, not one</h3>
@@ -494,12 +670,12 @@ people.</li>
 the day's <strong>event</strong>; the lede states the editor's <strong>thesis</strong>; the
 body carries the <strong>sources</strong>. Our first several months of analysis used layers
 two and three and discarded layer one as boilerplate. It is in fact the most compressed and
-most human field in the corpus, and §6.8 uses it as independent ground truth.</p>
+most human field in the corpus, and §9.8 uses it as independent ground truth.</p>
 </div></section>''')
 
     # ---------------------------------------------------------- 4. instrument
     A(f'''<section><div class="col">
-<span class="secnum">§ 4 — The instrument</span>
+<span class="secnum">§ 11 — The instrument</span>
 <h2>Four regimes, one inversion, and a template</h2>
 <p>This section comes before Methods because every method depends on it. A daily publication
 is not a stationary instrument: its format, its sources and its editorial conventions all
@@ -542,7 +718,7 @@ K3 launch issues alike. All 23 issues in the final month open with the lede "a q
 three of them major launches.</p>
 <p>Since no company can be named in a placeholder title, any headline-share measure falls
 mechanically as the template spreads. This produced one of our four withdrawn findings
-(§7.1).</p>
+(§13.1).</p>
 
 <h3>4.4 Six ways to measure the wrong thing</h3>
 </div>
@@ -565,7 +741,7 @@ normalisation across regimes.</p>
     for name, what, verdict, why in D.AUDIT:
         method_rows.append([f"<code>{C.esc(name)}</code>", C.esc(what), C.esc(why)])
     A(f'''<section><div class="col">
-<span class="secnum">§ 5 — Methods</span>
+<span class="secnum">§ 12 — Methods</span>
 <h2>Thirteen methods, each with its failure mode</h2>
 <p>Methods are grouped by what they estimate. Every one is released with the way it breaks on
 this corpus, because on a non-stationary instrument that is as load-bearing as the citation.</p>
@@ -615,7 +791,7 @@ without that "Llama" scores 100% in every period.</p>
                  f"<b>{C.esc(ld)}</b>", f"<em>{C.esc(q)}</em>"] for w, m, src, ld, q in D.LEDE_VALIDATION]
 
     A(f'''<section><div class="col">
-<span class="secnum">§ 6 — Results</span>
+<span class="secnum">§ 9 — Results</span>
 <h2>What survives when the source is held fixed</h2>
 
 <h3>6.1 The agenda shift is real {tier("a")}</h3>
@@ -635,7 +811,7 @@ capability absorbed into the substrate rather than abandoned.</p>
   "fine-tuning recovers in the final period rather than continuing to fall.")}
 <div class="col">
 <h3>6.2 Announcement space and practice space diverge {tier("a")}</h3>
-<p>This is the study's most useful result, and it exists only because the confound in §4.2
+<p>This is the study's most useful result, and it exists only because the confound in §11.2
 forced us to split the corpus by surface. Twitter carries launches and claims; Reddit carries
 what people are running. Comparing fold-change within each gives a per-topic measure of how
 far discourse has run ahead of practice.</p>
@@ -823,7 +999,7 @@ measure.</p>
         f'<span class="vd {v}">{v}</span></div>' for n, what, v, why in D.AUDIT)
 
     A(f'''<section><div class="col">
-<span class="secnum">§ 7 — Audit</span>
+<span class="secnum">§ 13 — Audit</span>
 <h2>What did not survive</h2>
 <p>A study that runs thirteen methods and withdraws none is not reporting honestly. Four
 findings from earlier passes of this work were tested against the artifacts in §4 and did not
@@ -860,7 +1036,7 @@ requires per-section entity extraction rather than whole-issue tags.</p></div>
 
     # ---------------------------------------------------------- 8-11
     A(f'''<section><div class="col">
-<span class="secnum">§ 8 — Discussion</span>
+<span class="secnum">§ 14 — Discussion</span>
 <h2>What we would tell an engineer</h2>
 
 <h3>Read the documents before measuring the fields</h3>
@@ -904,7 +1080,7 @@ actually moved.</p>
 </div></section>
 
 <section><div class="col">
-<span class="secnum">§ 9 — Threats to validity</span>
+<span class="secnum">§ 15 — Threats to validity</span>
 <h2>What could still be wrong</h2>
 <h4>Construct</h4>
 <p>Reported attention is not field activity, and neither is deployment. The corpus measures one
@@ -912,7 +1088,7 @@ publication's summary of three social surfaces.</p>
 <h4>Internal</h4>
 <p>Four publishing regimes; the source-composition inversion; title and lede templating; a
 pipeline that is LLM-drafted and human-edited in a mix that changes over time; regex surface
-matching throughout; claim subjects unresolved, so §6.6 reports field-level distributions
+matching throughout; claim subjects unresolved, so §9.6 reports field-level distributions
 rather than per-model values.</p>
 <h4>External</h4>
 <p>One editorial viewpoint, weighted toward builders and open-model tooling. Enterprise
@@ -926,10 +1102,10 @@ connected component; survival cohorts affected by version-naming conventions.</p
 </div></section>
 
 <section><div class="col">
-<span class="secnum">§ 10 — Future work</span>
+<span class="secnum">§ 16 — Future work</span>
 <h2>What is left</h2>
 <ul class="plain">
-<li><strong>Per-section entity extraction</strong> to close the fragmentation confound in §7.3.
+<li><strong>Per-section entity extraction</strong> to close the fragmentation confound in §13.3.
 This is the highest-priority open item.</li>
 <li><strong>The Discord telemetry.</strong> 2.15M messages across 56 servers with per-channel
 daily counts, entirely unanalysed. It is the natural third surface for the announcement/practice
@@ -944,7 +1120,7 @@ vocabulary turning over while the topic persists — the formal version of the a
 </div></section>
 
 <section><div class="col">
-<span class="secnum">§ 11 — Conclusion</span>
+<span class="secnum">§ 17 — Conclusion</span>
 <h2>Two results, equally load-bearing</h2>
 <p>Substantively: over 690 days the field's agenda moved from training to inference to
 orchestration; the open-weights frontier relocated so completely that the ratio between the
@@ -985,13 +1161,19 @@ controlled · C = confounded, reported as a bound · ✗ = withdrawn.
 </div>
 </div></section>
 </div>''')
-    return "".join(H)
+    # Part I is the field; Part II is the instrument. Sections were authored in
+    # source order, so reorder here rather than duplicating them.
+    mast, abstract, intro, field, corpus_s, instr, methods, results, audit, tail = H
+    return "".join([mast, abstract, intro,
+                    '<div class="part"><span class="pn">Part I</span><h2>What happened</h2>\n<p>The field\'s technical trajectory, 2023–2026, read from the daily record.</p></div>', field, SEC_AGENDA, SEC_ARCH, SEC_BENCH, SEC_STACK,
+                    SEC_DEBATE, SEC_DOMAIN, results,
+                    '<div class="part"><span class="pn">Part II</span><h2>How we know</h2>\n<p>The instrument, the methods, and the four findings that did not survive contact with them.</p></div>', corpus_s, instr, methods, audit, tail])
 
 
-TITLE = ("Announcement Space and Practice Space — "
-         "690 days of AI's daily record, source-controlled")
-DESC = ("A source-controlled study of 690 daily AI newsletters, 2023-2026: how the field "
-        "evolved, and how four confident findings turned out to be measurement artifacts.")
+TITLE = ("What 690 Days of AI News Actually Said — "
+         "architectures, benchmarks, and the announcement/practice gap")
+DESC = ("Three years of AI's daily record read end to end: the architectures that won and died, "
+        "how the field learned to measure itself, and what practitioners actually ran.")
 
 # The Artifact host supplies its own <!doctype>/<head>/<body>, so the default build emits a
 # fragment. GitHub Pages needs a complete document, hence --standalone.
@@ -1004,7 +1186,7 @@ SHELL = """<!doctype html>
 <meta name="description" content="{desc}">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Announcement Space and Practice Space">
+<meta property="og:title" content="What 690 days of AI news actually said">
 <meta property="og:description" content="{desc}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2016%2016%27%3E%3Ctext%20y%3D%2713%27%20font-size%3D%2713%27%3E%F0%9F%93%B0%3C%2Ftext%3E%3C%2Fsvg%3E">
@@ -1017,9 +1199,19 @@ SHELL = """<!doctype html>
 """
 
 
+def renumber_figures(html: str) -> str:
+    """Figures are authored per-section; number them by final display order."""
+    counter = iter(range(1, 999))
+
+    def sub(m):
+        return f"<b>Figure {next(counter)} — "
+
+    return re.sub(r"<b>Figure \d+ — ", sub, html)
+
+
 if __name__ == "__main__":
     standalone = "--standalone" in sys.argv
-    body = build()
+    body = renumber_figures(build())
     if standalone:
         html = SHELL.format(title=TITLE, desc=DESC, css=CSS, body=body)
         out = pathlib.Path(__file__).resolve().parent.parent / "site" / "index.html"

@@ -173,3 +173,128 @@ AUDIT = [
     ("distributions.py", "diversity / RTD", "open", "confounded with sampling breadth"),
     ("analyze.py (quiet-day)", "title frequency", "out", "boilerplate, withdrawn"),
 ]
+
+# ---- content added for the restructure ---------------------------------
+
+# Architecture / technique density, per 10k words, within a fixed recap section
+TECH_TW = {
+    "MoE / routing":        [13.8, 7.8, 5.3, 15.3, 9.1, 9.2],
+    "attention variants":   [2.3, 2.4, 2.9, 4.7, 4.2, 1.9],
+    "quantization":         [10.0, 9.2, 5.9, 12.3, 8.0, 5.6],
+    "KV cache / serving":   [1.2, 3.1, 8.6, 34.2, 26.8, 27.6],
+    "RL post-training":     [7.0, 2.4, 6.6, 8.5, 3.6, 0.9],
+    "distributed training": [4.6, 2.6, 3.4, 4.0, 3.3, 1.9],
+    "state-space (Mamba)":  [12.8, 4.3, 0.8, 1.9, 1.5, 0.0],
+    "multi-token predict":  [0.4, 0.9, 0.2, 0.7, 1.6, 1.7],
+}
+TECH_RD = {
+    "MoE / routing":        [5.5, 6.5, 7.5, 7.3, 9.2, 15.2],
+    "attention variants":   [1.0, 1.9, 1.7, 1.1, 1.7, 1.6],
+    "quantization":         [22.6, 33.7, 22.7, 20.0, 25.0, 30.8],
+    "KV cache / serving":   [1.0, 5.5, 3.2, 3.3, 8.5, 6.6],
+    "RL post-training":     [1.0, 0.5, 1.5, 2.1, 0.5, 0.1],
+    "distributed training": [3.6, 2.7, 1.7, 2.0, 1.1, 0.9],
+    "state-space (Mamba)":  [1.6, 2.8, 0.3, 0.4, 0.1, 0.4],
+    "multi-token predict":  [0.0, 0.3, 0.3, 0.3, 6.4, 5.0],
+}
+
+# Benchmarks: (name, claims, first, last, median score, era)
+BENCHMARKS = [
+    ("swe-bench", 20, "2024-04", "2026-06", 55, "spans the whole corpus"),
+    ("aime", 15, "2025-01", "2026-06", 63, "arrives with reasoning models"),
+    ("mmlu", 13, "2024-03", "2026-03", 78, "saturating"),
+    ("math", 13, "2024-04", "2025-10", 84, "saturated, retired"),
+    ("arc-agi-2", 10, "2025-10", "2026-08", 52, "the 2026 frontier"),
+    ("terminal-bench", 8, "2026-05", "2026-08", 80, "agent-era benchmark"),
+    ("gpqa", 7, "2024-03", "2025-11", 60, "faded"),
+    ("frontiermath", 7, "2024-12", "2026-05", 31, "still unsaturated"),
+    ("gsm8k", 4, "2024-02", "2024-07", 44, "dead by mid-2024"),
+    ("humaneval", 4, "2024-04", "2024-09", 59, "dead by late 2024"),
+    ("alpacaeval", 4, "2024-06", "2024-07", 65, "dead in two months"),
+]
+
+# The local stack, per 10k words of Reddit recap
+STACK = {
+    "llama.cpp":       [9.1, 6.0, 7.5, 11.4, 13.0],
+    "Unsloth":         [2.4, 4.8, 3.4, 5.5, 6.0],
+    "ollama":          [6.8, 3.8, 1.6, 2.0, 0.0],
+    "ComfyUI":         [5.1, 5.0, 4.6, 0.8, 2.0],
+    "vLLM":            [3.0, 1.7, 1.9, 3.1, 1.3],
+    "exllama":         [3.8, 0.4, 0.1, 0.1, 1.5],
+    "OpenRouter":      [0.9, 0.7, 1.0, 1.0, 4.1],
+}
+STACK_P = ["2024H2", "2025H1", "2025H2", "2026H1", "2026H2"]
+HARDWARE = {
+    "consumer GPU": [10.9, 5.8, 3.9, 6.3, 5.8],
+    "Apple silicon": [6.2, 3.3, 2.9, 5.8, 4.7],
+    "datacenter GPU": [3.1, 2.2, 1.6, 2.0, 1.9],
+    "CPU / RAM offload": [0.8, 1.2, 1.5, 1.9, 2.3],
+}
+
+# Domain shares — analysis/domains.md, 16 domains x 7 half-years
+DOMAIN_P = ["2023H2", "2024H1", "2024H2", "2025H1", "2025H2", "2026H1", "2026H2"]
+DOMAINS = [
+    ("Agents & tool use", [4, 23, 35, 41, 62, 86, 85]),
+    ("Evaluation", [71, 55, 64, 69, 61, 56, 73]),
+    ("Efficiency & hardware", [58, 75, 58, 61, 68, 67, 58]),
+    ("Coding", [25, 20, 25, 38, 39, 43, 42]),
+    ("Context & memory", [25, 35, 38, 37, 50, 48, 42]),
+    ("Architecture", [33, 42, 32, 25, 45, 37, 38]),
+    ("Reasoning & RL", [8, 25, 39, 66, 57, 35, 31]),
+    ("Open source", [17, 17, 20, 33, 24, 18, 38]),
+    ("Safety & security", [21, 27, 30, 15, 15, 32, 27]),
+    ("Policy & business", [8, 16, 17, 19, 20, 17, 27]),
+    ("Vision & image", [38, 49, 61, 55, 44, 25, 46]),
+    ("Training & data", [46, 76, 60, 50, 43, 24, 23]),
+    ("Video", [8, 11, 17, 17, 16, 5, 12]),
+    ("Audio & speech", [21, 11, 19, 23, 13, 6, 8]),
+    ("Robotics & embodied", [0, 5, 12, 7, 6, 2, 8]),
+    ("Retrieval & search", [8, 31, 27, 14, 15, 6, 4]),
+]
+
+# The field's own agenda, in its own words: dated "X is all you need" theses
+THESES = [
+    ("2024-05-27", "RLHF is all you need."),
+    ("2024-05-29", "SSMs are all you need."),
+    ("2024-06-17", "MCTS is all you need."),
+    ("2024-07-23", "Synthetic Data is all you need."),
+    ("2024-08-23", "Pruning and Distillation are all you need."),
+    ("2024-09-12", "Test-time reasoning is all you need."),
+    ("2024-11-25", "claude_desktop_config.json is all you need."),
+    ("2024-11-26", "Reinforcement Learning with Verifiable Rewards is all you need."),
+    ("2024-12-23", "o3 is all you need."),
+    ("2025-01-20", "GRPO is all you need."),
+    ("2025-01-27", "DeepSeek is all you need."),
+    ("2025-02-14", "smolagents are all you need."),
+    ("2025-03-26", "MCP is all you need."),
+    ("2025-05-15", "Agent Harnesses are all you need."),
+    ("2025-05-27", "The LLM OS is all you need."),
+    ("2025-06-25", "Finely crafted context is all you need."),
+    ("2025-07-21", "General-purpose RL is all you need."),
+    ("2025-10-13", "ASICs are all you need."),
+    ("2025-10-29", "Agentic coding is all you need."),
+    ("2025-12-18", "Skills are going the way of MCP!"),
+    ("2026-01-21", "Agent Labs are all you need."),
+    ("2026-03-10", "World Models are all you need."),
+]
+
+# Dated disagreements the corpus records
+DEBATES = [
+    ("2025-06-13", "Multi-agent systems",
+     "Cognition published <em>Don't Build Multi-Agents</em> and Anthropic published how it builds "
+     "multi-agents — on the same day. The newsletter ran both under one headline.",
+     "Unresolved. Multi-agent framing keeps rising through 2026."),
+    ("2026-02-24", "Distillation ethics",
+     "Anthropic accused DeepSeek, Moonshot and MiniMax of “industrial-scale distillation attacks”. "
+     "The word <code>distillation</code> moves in the embedding space from <code>unet, dare, "
+     "imagenet</code> to <code>attacks, copyrighted, laws</code>.",
+     "A training technique became a legal category."),
+    ("2025-04-08", "Benchmark integrity",
+     "Llama 4's release drew immediate accusations of benchmark-specific tuning; the corpus had "
+     "already run “Did Nvidia's Nemotron 70B train on test?” six months earlier.",
+     "Evaluation moved toward held-out and agentic benchmarks (Table 3)."),
+    ("2025-10-17", "AGI timelines",
+     "The Karpathy–Dwarkesh interview is recorded in the archive as <em>delaying</em> timelines — "
+     "notable in a corpus whose ledes are otherwise relentlessly forward-leaning.",
+     "Followed by a visible turn toward containment and security framing."),
+]

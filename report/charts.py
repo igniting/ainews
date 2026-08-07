@@ -294,3 +294,54 @@ def context(rows):
     out.append(f'<text class="axlab" x="{PAD["l"]-40}" y="{PAD["t"]-6}">claimed context (log)</text>')
     out.append("</svg>")
     return "".join(out)
+
+
+def heat(periods, rows):
+    """Domain heatmap: rows = [(name, [pct,...])]"""
+    lh, left = 21, 168
+    h = 34 + len(rows) * lh
+    cw = (W - left - 24) / len(periods)
+    out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
+    for j, p in enumerate(periods):
+        out.append(f'<text class="tick tiny" x="{left+cw*(j+.5):.1f}" y="16" text-anchor="middle">{esc(p)}</text>')
+    for i, (name, vals) in enumerate(rows):
+        y = 26 + i * lh
+        out.append(f'<text class="rowlab" x="{left-10}" y="{y+14}" text-anchor="end">{esc(name)}</text>')
+        for j, v in enumerate(vals):
+            o = min(v / 90, 1.0)
+            out.append(f'<rect class="cell" x="{left+cw*j:.1f}" y="{y:.1f}" width="{cw-2:.1f}" '
+                       f'height="{lh-3}" rx="1.5" style="fill-opacity:{o:.3f}"/>')
+            if v >= 40:
+                out.append(f'<text class="cellv" x="{left+cw*(j+.5):.1f}" y="{y+14:.1f}" '
+                           f'text-anchor="middle">{v}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def lifecycle(rows):
+    """Benchmark lifespans as dated bars. rows = (name, claims, first, last, median, note)"""
+    import datetime as dt
+    lh, left, right = 24, 132, 210
+    h = 34 + len(rows) * lh
+    d0, d1 = dt.date(2024, 1, 1), dt.date(2026, 9, 1)
+    span = (d1 - d0).days
+
+    def px(s):
+        y, m = int(s[:4]), int(s[5:7])
+        return left + (W - left - right) * (dt.date(y, m, 1) - d0).days / span
+
+    out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
+    for yr in (2024, 2025, 2026):
+        x = px(f"{yr}-01")
+        out.append(f'<line class="grid" x1="{x:.1f}" y1="20" x2="{x:.1f}" y2="{h-16}"/>')
+        out.append(f'<text class="tick tiny" x="{x+4:.1f}" y="14">{yr}</text>')
+    for i, (name, n, a, b, med, note) in enumerate(rows):
+        y = 26 + i * lh
+        xa, xb = px(a), px(b)
+        alive = b >= "2026-05"
+        out.append(f'<text class="rowlab" x="{left-10}" y="{y+13}" text-anchor="end">{esc(name)}</text>')
+        out.append(f'<rect class="bar {"bench" if alive else "sig"}" x="{xa:.1f}" y="{y+2:.1f}" '
+                   f'width="{max(xb-xa,4):.1f}" height="13" rx="2"/>')
+        out.append(f'<text class="tick tiny" x="{xb+8:.1f}" y="{y+13:.1f}">{med}% · {esc(note)}</text>')
+    out.append("</svg>")
+    return "".join(out)
