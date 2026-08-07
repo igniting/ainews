@@ -1,41 +1,58 @@
 # ainews
 
-Tooling to mirror the [Latent Space AI News](https://www.latent.space/s/ainews/archive?sort=new)
-daily archive as markdown, one file per issue, so the issues can be analyzed offline.
+A local mirror of the [Latent Space AI News](https://www.latent.space/s/ainews/archive?sort=new)
+daily newsletter, plus scripts to analyze it.
 
-## Fetching
+## Contents
+
+| Path | What it is |
+| --- | --- |
+| `articles/` | 690 issues as markdown, `YY-MM-DD-slug.md`, 2023-12-06 → 2026-08-06 |
+| `analysis/build_index.py` | Parses every issue's YAML front matter into `analysis/index.json` |
+| `analysis/analyze.py` | Turns that index into `analysis/report.md` |
+| `analysis/index.json` | One record per issue: date, title, tags, body size |
+| `analysis/report.md` | Generated coverage/trend report |
+
+## Where the articles came from
+
+Sourced from [`smol-ai/ainews-web-2025`](https://github.com/smol-ai/ainews-web-2025),
+which is the site backing the Substack archive. Issues live in two directories
+there and both are needed for full text:
+
+- `src/content/frozen-issues/` — 538 issues, 2023-12-06 → 2025-12-31
+- `src/content/issues/` — 690 issues, but the pre-2026 ones are stubs pointing at
+  static HTML; only the 152 from 2026 carry their own body
+
+So `articles/` is `frozen-issues/` plus the 152 issues-only files from 2026.
+
+Each issue keeps its upstream front matter, which is the useful part for
+analysis — it tags every issue with the `companies`, `models`, `topics` and
+`people` it covered:
+
+```yaml
+title: 'DeepSeek #1 on US App Store, Nvidia stock tanks -17%'
+date: '2025-01-28T05:28:32.064176Z'
+companies: [deepseek, openai, nvidia, langchain]
+models: [deepseek-r1, deepseek-v3, qwen2.5-vl, o1]
+topics: [moe-architecture, chain-of-thought, fp8-precision, ...]
+people: [sama, mervenoyann, omarasar0, ...]
+```
+
+Tag coverage is near-total: `companies` and `topics` on all 690 issues, `models`
+on 682, `people` on 607.
+
+## Running the analysis
 
 ```bash
 pip install -r requirements.txt
-python3 scripts/fetch_ainews.py --since 2026-01-27
+python3 analysis/build_index.py    # articles/ -> analysis/index.json
+python3 analysis/analyze.py        # index.json -> analysis/report.md
 ```
 
-Issues land in `articles/` as `YYYY-MM-DD-<slug>.md` with YAML front matter
-(`title`, `subtitle`, `date`, `slug`, `url`, `source`), alongside an
-`articles/index.json` manifest of everything the run matched.
+`analyze.py` folds a handful of tags that the archive spells two ways
+(`huggingface`/`hugging-face`, `deepseek-ai`/`deepseek`, handles with and without
+a leading underscore) via the `ALIASES` map at the top of the file — extend it
+there if you spot more.
 
-The archive page is infinite-scroll, but it is backed by Substack's archive API,
-so the script pages through `/api/v1/archive` rather than driving a browser. It
-keeps posts in the `ainews` section (falling back to the `[AINews]` title prefix
-that every issue uses) and stops as soon as it walks past `--since`, since the
-API returns newest-first.
-
-Useful flags:
-
-| flag | effect |
-| --- | --- |
-| `--since` / `--until` | date window, `YYYY-MM-DD` (default since 2026-01-27) |
-| `--dry-run` | list what would be downloaded, write nothing |
-| `--max N` | stop after N issues |
-| `--force` | re-download issues already on disk |
-| `--sleep` | seconds between requests (default 1.0) |
-
-Re-running skips issues already present, so an interrupted run can just be
-restarted.
-
-## Network access
-
-`www.latent.space` must be reachable from wherever the script runs. Some sandboxed
-environments allow egress only to an allowlist of hosts; there the run fails with
-`Tunnel connection failed: 403 Forbidden` and the fetch has to happen somewhere
-with open egress.
+All counts are *issues mentioning a tag*, not raw mention counts, so an issue
+that names OpenAI six times still counts once.
