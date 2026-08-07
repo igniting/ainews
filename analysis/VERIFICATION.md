@@ -115,7 +115,7 @@ company that lost on merit. The decline is real in density (90.9 → 1.5) but
 stopped being *good* — which is a different and more interesting claim than the
 one I made.
 
-### ❌ WRONG — "OpenAI's coverage declined"
+### ❌ WRONG — "OpenAI's coverage declined" *(and my correction to it was also partly wrong — see below)*
 
 I wrote that OpenAI's headline share fell 18% → 4% because its news migrated to
 infrastructure finance. The first half is true; the conclusion isn't.
@@ -131,6 +131,30 @@ field got more competitors worth naming in a title, not less OpenAI.
 
 This is the clearest case of headline share measuring editorial framing rather
 than attention, and I read it as the latter.
+
+**Second correction, found by reading the last 30 days of issues.** I attributed
+the headline-share collapse to the field gaining more competitors worth naming.
+That attribution is mostly wrong. The real cause is that **the title field went
+generic**: "not much happened today" is 0% of 2023 titles, 18% of 2024, 42% of
+2025 and **68% of 2026**. It is boilerplate, not a verdict — the Claude Opus 5,
+GPT-5.6, Kimi K3 and Thinking Machines Inkling launches all carry it, and every
+one of the last 23 issues opens with the lede "**a quiet day.**", including three
+major launches.
+
+No company can be named in a placeholder title, so headline share falls
+mechanically as the template spreads. Conditioning on issues whose titles actually
+say something (`arcs.py --descriptive-only`):
+
+| Headline share among descriptive titles | 2023H2 | 2024H1 | 2024H2 | 2025H1 | 2025H2 | 2026H1 |
+|---|---|---|---|---|---|---|
+| OpenAI (raw) | 8% | 12% | 18% | 18% | 16% | **6%** |
+| OpenAI (conditioned) | 8% | 13% | 27% | 29% | 29% | **18%** |
+| Anthropic (conditioned) | 4% | 6% | 6% | 8% | 14% | **29%** |
+| China bloc (conditioned) | 0% | 2% | 7% | 13% | 17% | **24%** |
+
+OpenAI's decline is real but far milder than 18%→6% suggested — roughly 29%→18%.
+Anthropic's rise and the China bloc's rise are both *stronger* than originally
+reported. (2026H2 has only 4 descriptive-title issues and is excluded.)
 
 ### ❌ NOT SUPPORTED — "DeepSeek's role changed from protagonist to benchmark"
 

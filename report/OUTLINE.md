@@ -122,7 +122,14 @@ per-channel transcripts.
 into four regimes; the 460-issue stable core (2024-05-20 → 2026-03-10). Stated up
 front because it constrains every result that follows.
 
-**3.6 Provenance caveats.** LLM-drafted, human-edited; the mix changes over time.
+**3.6 Title and lede templating.** A distinct artifact from the format regimes and
+worth its own subsection: both the title field and the opening lede converge on
+placeholders ("not much happened today", "**a quiet day.**") independently of
+whether anything happened. All 23 issues in the final month carry the placeholder
+lede, three of them major launches. Any measure keyed on either field needs
+conditioning.
+
+**3.7 Provenance caveats.** LLM-drafted, human-edited; the mix changes over time.
 Coverage bias toward open models, tooling and the sampled Discord ecosystems.
 
 ---
@@ -136,7 +143,7 @@ before any method. Five measures that fail on this corpus and why:
 |---|---|---|
 | Issue mentions entity (binary) | saturates | 80–97% for most tracked entities |
 | Raw mention counts | tracks document length | median issue 28k → 5.8k words |
-| Title/headline share | tracks editorial framing | OpenAI 18%→4% while density flat |
+| Title/headline share | tracks editorial framing **and title templating** | title is a placeholder in 0% of 2023 issues → 68% of 2026 |
 | KL over topic distributions | tracks format regimes | top-10 novelty days all in one regime change |
 | Raw co-occurrence | tracks marginal frequency | resolved with PPMI |
 
@@ -285,8 +292,14 @@ Cross-validates the OpenAI result in 5.8: fragmentation, not decline.
 ### 5.8 RQ8 — Instrument artifacts, and three refuted hypotheses
 
 Full section, not a footnote.
-- 5.8.1 **"OpenAI's coverage declined."** Refuted: headline share 18%→4%, density
-  flat 59.1→51.1 (Figure 13). The measure, not the subject, changed.
+- 5.8.1 **"OpenAI's coverage declined."** Refuted twice. Headline share fell
+  18%→4% while density held flat (59.1→51.1, Figure 13). The first correction
+  attributed the gap to fragmentation; reading the recent issues showed the
+  dominant cause is simpler — **the title field became a template**. "not much
+  happened today" is 0% of 2023 titles and 68% of 2026, and it is carried by the
+  Opus 5, GPT-5.6 and Kimi K3 launch issues alike. Conditioned on descriptive
+  titles, OpenAI runs 29%→18%, Anthropic rises to 29% and the China bloc to 24%.
+  A worked example of an artifact surviving one round of correction.
 - 5.8.2 **"Llama 4 was the inflection."** Refuted: PELT places no change point
   there; decline began 2024-10.
 - 5.8.3 **"The Chinese labs are a second tier."** Refuted: 14 headline days for
