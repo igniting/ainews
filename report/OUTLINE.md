@@ -1,321 +1,401 @@
-# Report outline
+# Report outline (v2 — engineering / scientific)
 
-**Working title:** *The Attention Ledger: What 690 Days of AI's Daily Record Reveals About Where the Market Actually Went*
+**Working title:** *Three Years of the Field Talking to Itself: A Quantitative
+Study of 690 Daily AI Newsletters, 2023–2026*
 
-**Format:** single-page analytical HTML report, ~8,000–10,000 words, ~14 embedded
-visualisations, self-contained (inline CSS/SVG, no external assets).
+**Format:** single-page HTML, typeset as a research paper — numbered sections,
+numbered figures and tables with captions, inline citations, footnotes, monospace
+for identifiers. ~10,000–12,000 words. Self-contained (inline CSS/SVG).
 
-**Audience:** investors with technical fluency. Assumes the reader knows what MoE,
-RAG and inference cost are; does not assume they know what a Hill number or
-rank-turbulence divergence is, and explains those inline where used.
+**Audience:** AI engineers. Assumes fluency in MoE, RAG, quantization, KV cache,
+test-time compute, agent harnesses. Does *not* assume familiarity with corpus
+linguistics, survival analysis or Bradley-Terry — those are introduced where used,
+with enough detail to reimplement.
 
-**Editorial stance:** technical news reporting, not a vendor deck. Every headline
-claim carries its measurement, its sample, and its confound. The three claims we
-*refuted* are printed as prominently as the ones we confirmed — an investor
-paying for research is buying the error bars, not just the conclusions.
+**Register:** measurement paper. Claims are stated as estimates with samples and
+confounds. No prescription, no market commentary. Where the data cannot support a
+question, that is reported as a result.
 
-**The central thesis, stated once and defended throughout:**
-> This corpus is a *contemporaneous, never-revised record of what the AI builder
-> ecosystem believed on each day*. It is not a market dataset — it has no revenue,
-> no headcount, no funding rounds except as reported. What it has, and what no
-> market dataset has, is **attention with a timestamp and no hindsight**. Attention
-> leads capital. This report measures where attention went, how fast, and where
-> the corpus's own record shows the consensus was wrong.
-
----
-
-## Front matter
-
-**F1. Masthead and provenance box**
-Dataset one-liner, period covered, word count, method count, code location,
-reproducibility statement. Establishes this is instrumented, not impressionistic.
-
-**F2. How to read this report — the confidence ladder**
-A three-tier badge used on every finding throughout:
-- **Confirmed** — holds under two or more independent methods
-- **Measured** — one method, stated sample, stated confound
-- **Contested** — we tested it and it failed, or the corpus cannot answer it
-
-This device is the report's credibility spine and should appear in the first
-screen. It also lets us print negative results as content rather than as apology.
-
-**F3. Executive summary — eight findings, one line each**
-Each links to its section. Written so a partner can read only this page.
+**What makes it worth an engineer's time:**
+1. It measures the field's technical agenda instead of asserting it — the
+   fine-tuning → RAG → long-context → agents transition gets dates and effect sizes.
+2. It shows that several core terms (`harness`, `skills`, `prompt`) changed
+   referent mid-corpus, which means naive keyword series over them are measuring
+   two different things.
+3. Every method is released with its failure mode on this corpus. The
+   unit-of-observation problem generalises to anyone building evals, dashboards or
+   retrieval over a drifting corpus.
 
 ---
 
-## Part I — The instrument
+## Abstract
 
-*Why this dataset can support the claims that follow, and where it cannot.*
+~250 words. Corpus, methods, six principal quantitative results with effect sizes,
+the three refuted hypotheses, and the methodological finding about instrument
+artifacts. Written so it stands alone.
 
-**I.1 What the corpus is**
-690 issues, 2023-12-06 → 2026-08-06, 15.3M words, ~5 issues/week, 70% of all
-calendar days. Sourced from the site behind the Substack archive. Structure of an
-issue: editorial lede, then parallel Twitter / Reddit / Discord recaps.
+## Keywords
 
-**I.2 What is in it that nobody has mined**
-The three embedded layers, with counts: Discord telemetry (31,688 channel-days,
-2.15M messages, 56 servers), the tweet attribution graph (18,854 links), and
-in-prose numeric claims (1,335 context, 990 parameter, 176 benchmark, 151 price).
-
-**I.3 The four publishing regimes — and why they matter to a reader**
-The PELT-detected regimes, with the honest framing: *every unsupervised method we
-ran ranked format changes above every news event in three years until controlled
-for.* This is where we earn the reader's trust — we show the instrument's
-calibration before showing its readings.
-- Regime table + the 460-issue stable core
-- Sidebar: **"Three ways to measure the wrong thing confidently"** — presence
-  saturation, length-tracking counts, titles-as-attention. Short, punchy, and the
-  reason to believe the rest.
-
-**I.4 What this corpus is not**
-One editorial viewpoint, builder- and tooling-weighted. Under-covers enterprise
-deployment, hardware supply chains, non-English ecosystems. It is a summary layer
-written by an LLM and edited by a human — so it measures *reported* attention,
-one step removed from the field.
+corpus linguistics · diachronic embeddings · technology forecasting · change point
+detection · Bradley-Terry · LLM ecosystems
 
 ---
 
-## Part II — Market structure
+## 1. Introduction
 
-*The three findings with the clearest investment read-through.*
+**1.1 Motivation.** The history of a fast-moving technical field is normally
+written backwards, once the winners are known. This corpus was written forwards,
+daily, with the wrong guesses left intact. That makes it usable as a measurement
+substrate for questions about the field's own trajectory that retrospective
+sources cannot answer.
 
-**II.1 The open-weights frontier changed hands — and it is the largest movement in the corpus**
-The headline chart of the whole report: China bloc vs Meta+Mistral mention
-density, 73:1 inverting to 42:1, crossing in 2025H1.
-- Per-lab breakdown: Kimi/Moonshot 0.1 → 35.9 per 10k words (359x, steepest of
-  anything measured); GLM, MiniMax, Qwen trajectories
-- The price framing that recurs in nearly every mention: "8% of Claude Sonnet's
-  price", "11% of its cost", "10x cheaper"
-- **Investor read:** the substitution was visible in daily coverage roughly four
-  quarters before it was a consensus market view.
+**1.2 Research questions.** Eight, stated explicitly; Section 5 is organised
+around them one-to-one.
 
-**II.2 Attention fragmented ~5x — and that, not decline, is what happened to OpenAI**
-- Hill-1 effective company count 21.7 → 101.8; top-3 share 36% → 16–22%; Gini falling
-- The OpenAI paradox resolved: headline share 18% → 4% while mention density held
-  flat (59.1 → 51.1). Two independent methods, same conclusion.
-- **Investor read:** category leadership stopped being winner-take-all in
-  *attention* terms well before it did in revenue terms. Distribution of mindshare
-  is the leading edge of distribution of spend.
+| RQ | Question | Section |
+|---|---|---|
+| RQ1 | How did the technical agenda shift, and when? | 5.1 |
+| RQ2 | Did the open-weights frontier relocate, and by how much? | 5.2 |
+| RQ3 | How long does a model remain in active discussion? | 5.3 |
+| RQ4 | Do technical terms change referent, and can the change be dated? | 5.4 |
+| RQ5 | What do the field's own asserted numbers show about cost, context and scale? | 5.5 |
+| RQ6 | Can relative capability be recovered from discourse alone? | 5.6 |
+| RQ7 | Is technical attention concentrating or fragmenting? | 5.7 |
+| RQ8 | Which apparent signals are artifacts of the instrument? | 5.8 |
 
-**II.3 The incumbency index — a new instrument**
-Bradley-Terry over 801 extracted pairwise claims, with the launch-asymmetry bias
-measured and shown (win rate 0.68 at 3–7 comparisons → 0.49 at 41+).
-- The counter-intuitive ranking, and why it inverts: most-compared = lowest strength
-- Claude with 200 comparisons and the lowest strength is the corpus's reference standard
-- **Investor read:** "being the thing everyone benchmarks against" is a measurable,
-  dateable market position, distinct from either share or capability. It is
-  arguably the single best moat proxy this dataset produces.
+**1.3 Contributions.**
+- C1. A cleaned, indexed 690-issue / 15.3M-word corpus with per-issue structured
+  metadata, released with extraction code.
+- C2. Dated quantification of the fine-tuning → retrieval → long-context → agents
+  transition, with effect sizes from three independent measures.
+- C3. Evidence of **referent drift** in core engineering vocabulary, with dates —
+  and the consequence that keyword time-series over those terms are invalid.
+- C4. A discourse-derived incumbency index from 801 extracted pairwise claims, plus
+  measurement of the launch-asymmetry bias that makes the naive version wrong.
+- C5. Extraction of 2,652 in-prose numeric claims (price, context, parameters,
+  benchmark scores) into time series.
+- C6. A catalogue of instrument artifacts — four publishing regimes and five
+  distinct ways this corpus produces confident false signals.
 
----
-
-## Part III — Category dynamics
-
-*What grew, what died, and the pattern that distinguishes the two.*
-
-**III.1 Agents: the one-way door**
-4% → 86% of issues; agentic mention density 7.0 → 52.8 per 10k words (7.5x). Never
-retraces. Coding rises alongside (20% → 43%) because coding is where agents first
-worked.
-
-**III.2 Retrieval: the sharpest decline in the corpus — and the vendor split that matters**
-- RAG domain 31% → 4%; density 16.3 → 2.0
-- The mechanism, shown two ways: context windows ate it (context & memory 25% →
-  48%) and agents absorbed it
-- **The LangChain/LlamaIndex divergence**, which is the section's real payload:
-  LangChain hits its *all-time high* (24% of issues, 2026H1) while its home domain
-  collapses; LlamaIndex falls to 2%. The vendor that followed the workload into
-  agents kept its coverage.
-- **Investor read:** category death and vendor death are different events. The
-  domain counts alone would have gotten this exactly backwards.
-
-**III.3 The absorption pattern — why declining coverage usually means victory**
-Retrieval, reasoning (66% → 31%) and multimodality (49% → 25%) all fell hard after
-peaking, and all three won — they became infrastructure. Genuine failures look
-different: they never peak. Robotics never exceeds 12%.
-- The semantic proof: `agentic` sat next to *retrieval-augmented* in 2024 and next
-  to *long-horizon, computer-use, swe* by 2026
-- **Investor read:** the diligence question is not "is coverage falling" but "did
-  it peak first". A category that peaked and faded is a solved problem with a
-  shrinking premium; one that never peaked is a thesis that did not land.
-
-**III.4 The categories the taxonomy missed**
-Unsupervised NMF surfaced a **defense and national-security topic** rising 7x into
-2026 (0.6% → 8.0%) that no hand-built category anticipated. Also: open
-video-tooling as distinct from Sora/Veo; the small-model/function-calling era that
-peaked in 2024H2 and vanished.
-- **Investor read:** the hand-built taxonomy is the failure mode of most thematic
-  research. Stated as a method warning, with our own miss as the example.
+**1.4 Scope and non-goals.** Not a benchmark study, not a market analysis, not a
+claim about ground-truth capability. It measures *reported attention*.
 
 ---
 
-## Part IV — The economics the field asserted
+## 2. Related work
 
-**IV.1 The cheap frontier never moved**
-The most counterintuitive chart in the report: median claimed $/1M tokens swings
-$0.42 → $8.00 → $3.00 while the **10th percentile stays flat at $0.10–$0.45
-throughout**.
-- Why: the median tracks *which models were newsworthy*, not what inference cost.
-  The 2025H1 spike is the o1/o3/R1 reasoning-model period.
-- **Investor read:** "inference is collapsing in price" and "the cheap tier is
-  newly available" are different claims, and only the first is true. Budget
-  capacity was continuously available across the whole window.
+Short and honest — one page. Positions the study against:
+- diachronic word embeddings and semantic change (Hamilton et al. 2016)
+- burst and change point detection in document streams (Kleinberg 2002; Killick et al. 2012)
+- novelty/resonance in historical corpora (Barron et al. 2018)
+- distinctive-vocabulary methods (Monroe et al. 2008); rank divergence (Dodds et al. 2020)
+- paired comparison models (Bradley & Terry 1952; Hunter 2004)
+- technology hype and diffusion measurement
 
-**IV.2 Context windows: 40x, and the vocabulary that followed**
-Median claimed context 24K → 1M. Paired with the semantic finding that `context`
-acquired the neighbour `rot` — the field invented a failure mode for its own new
-capability.
-
-**IV.3 Parameter counts and what stopped being said**
-Distribution over time; the shift from parameter count as headline metric to
-active-parameter and cost-per-task framing.
+Explicit gap: these methods are usually applied to news, politics or literature.
+Applying them to a *technical field's own trade press* is uncommon, and the
+embedded structured layers (community telemetry, attribution links, in-prose
+numbers) are unusual.
 
 ---
 
-## Part V — Positioning, measured from language
+## 3. The corpus
 
-*The section with the most novel method and the most defensible per-company read.*
+**3.1 Provenance and construction.** Source, the two-directory reconstruction
+required for full text, filename and front-matter schema.
 
-**V.1 How to read a semantic axis** (short methods explainer with a validation)
-The cost axis separates open-weights from closed frontier models with no
-supervision — printed as the method's own face-validity check before any
-conclusion is drawn from it.
+**3.2 Descriptive statistics.** Table 1: issues per year, words, cadence, coverage
+of calendar days, gaps. Distribution of issue length.
 
-**V.2 DeepSeek's repositioning, visible from two directions**
-Most cheap-coded entity in the corpus in 2024H2 (+2.19) drifting to +0.50 by
-2026H1 — it stopped being framed as the budget option. The Bradley-Terry
-incumbency reading shows the same repositioning from a completely independent
-input.
+**3.3 Internal structure.** Anatomy of an issue — editorial lede, then parallel
+Twitter / Reddit / Discord recaps; Discord split into per-server summaries and
+per-channel transcripts.
 
-**V.3 The vocabulary shifts that reprice categories**
-Words whose frequency barely moved but whose meaning changed completely:
-- `harness`: evaluation harness → agent harness
-- `skills`: expertise → `skill.md`, a file format
-- `prompt`: engineering → injection, jailbreaks (a craft became an attack surface)
-- `distillation`: training technique → accusation
-- `safety`: legislation (SB-1047, California) → agent security
-- `r1`: the Rabbit gadget → DeepSeek (highest drift in the corpus, 0.921)
-- `stability`: a company name decaying back into a common noun
-- **Investor read:** each of these is a category boundary moving. "Prompt
-  engineering" and "prompt security" are different markets, and the corpus dates
-  the moment the word changed hands.
+**3.4 Embedded structured layers.** Table 2, with counts:
+- Discord telemetry: 31,688 channel-day records, 2.15M messages, 56 servers
+- Tweet attribution: 18,854 (handle, status-ID) links
+- Reddit engagement scores: 3,070
+- Front-matter tags: companies / models / topics / people, coverage per field
+- In-prose numeric claims: 1,335 context, 990 parameter, 176 benchmark, 151 price
+
+**3.5 Publishing regimes.** Figure 1: PELT segmentation of structural features
+into four regimes; the 460-issue stable core (2024-05-20 → 2026-03-10). Stated up
+front because it constrains every result that follows.
+
+**3.6 Provenance caveats.** LLM-drafted, human-edited; the mix changes over time.
+Coverage bias toward open models, tooling and the sampled Discord ecosystems.
 
 ---
 
-## Part VI — Timing and lifecycle
+## 4. Methods
 
-*The section a fund would use operationally.*
+**4.1 The unit-of-observation problem.** The paper's methodological spine, stated
+before any method. Five measures that fail on this corpus and why:
 
-**VI.1 Hype lead time — how long the field talks about things that do not exist**
-GPT-5 first mentioned 2023-12-07, peak 2025-08: **603 days**. Contrast with
-unannounced arrivals: deepseek-r1 71 days, gemini-2.5-pro 36. The ratio is a
-measure of how much discourse concerns unshipped product.
+| Measure | Failure | Evidence |
+|---|---|---|
+| Issue mentions entity (binary) | saturates | 80–97% for most tracked entities |
+| Raw mention counts | tracks document length | median issue 28k → 5.8k words |
+| Title/headline share | tracks editorial framing | OpenAI 18%→4% while density flat |
+| KL over topic distributions | tracks format regimes | top-10 novelty days all in one regime change |
+| Raw co-occurrence | tracks marginal frequency | resolved with PPMI |
 
-**VI.2 Bursts — dating the spikes without a threshold**
-Kleinberg results table. The finding worth the section: **`reasoning` bursts in the
-exact weeks as DeepSeek R1** (2025-W04→W10/W11), which is the cleanest evidence in
-the corpus that R1 generalised reasoning from an OpenAI product feature into a
-field-wide topic.
+Resolution used throughout: **mentions per 10⁴ words**, ranks, or PPMI, with
+regime controls.
 
-**VI.3 Model half-life**
-Kaplan-Meier: median model **137 days** between first and last mention; US frontier
-175 days, Chinese labs 85 — flagged as partly a naming artifact of faster version
-churn.
-- **Investor read:** a defensibility clock. Any thesis that depends on a specific
-  model staying relevant has a median of four and a half months.
+**4.2 Method catalogue.** Table 3 — twelve methods, each with: citation, what it
+estimates, unit of observation, parameters, and known failure mode here.
+Grouped as:
+- *Frequency and distinctiveness*: density, log-odds w/ Dirichlet prior, rank-turbulence divergence
+- *Temporal structure*: PELT change points, Kleinberg bursts, novelty/transience/resonance
+- *Semantics*: diachronic word2vec + Procrustes, semantic axis projection
+- *Structure*: NMF topics, PPMI co-occurrence + Louvain
+- *Lifecycle and ranking*: Kaplan-Meier, Bradley-Terry (MM)
+- *Extraction*: numeric claim patterns, pairwise comparison patterns
 
-**VI.4 The MCP curve — a full hype cycle in 24 months**
-0 → 23.3 → 3.3 per 10k words, peaking 2025H1, falling 7x even as Claude's own
-density doubled. Adoption and discussion decoupled. Presented as the canonical
-shape for protocol-layer bets.
+**4.3 Preprocessing.** Boilerplate and markup removal; transcript exclusion for
+topic models; handle blocklisting; alias folding. Each justified by the artifact
+it removed — e.g. NMF returned topics composed of Discord usernames before handle
+blocklisting.
 
----
-
-## Part VII — What we got wrong
-
-*Deliberately its own part, not an appendix. This is the section that makes the
-rest credible.*
-
-Three claims built from titles and tags, then refuted against the article bodies:
-1. **"OpenAI's coverage declined"** — headline share fell, density did not
-2. **"Llama 4 was Meta's inflection"** — the decline began six months earlier;
-   Llama 4 was a one-month spike inside an existing slide, and PELT places no
-   change point there at all
-3. **"The China bloc is second-tier"** — 14 headline days for Alibaba vs Qwen in
-   95% of 2026 issues
-
-Plus the one the network refuted: **the "China bloc" is not a community in the
-data** — Louvain groups those labs with Google, and surfaces a
-serving-infrastructure bloc (Ollama, vLLM, Baseten, OpenRouter, Together) that no
-hand-grouping named.
-
-**The general lesson, stated for the investor:** every error came from reading
-*editorial framing* as *attention*. Headlines are one story chosen from a crowded
-day. Most thematic AI research is built on exactly that signal.
+**4.4 Reproducibility.** Determinism, seeds, runtimes, dependency set, one command
+per figure.
 
 ---
 
-## Part VIII — Leading indicators and open questions
+## 5. Results
 
-**VIII.1 Where the corpus was early**
-Coding agents caught ~9 months before dominance; the China substitution ~4
-quarters before consensus; MCP's peak dated before its decline was visible.
+### 5.1 RQ1 — The technical agenda moved from training-time to inference-time to orchestration
 
-**VIII.2 What the corpus cannot tell you**
-Named limits, with the negative results: no source lead-lag (the three recaps are
-lag-0 by construction); no revenue or deployment data; no non-English ecosystem;
-robotics and enterprise systematically under-covered.
+The paper's core empirical section. Three independent measures agreeing:
 
-**VIII.3 The three analyses still open**
-CausalImpact (blocked on constructing a defensible control set in a field where
-everything co-moves), dynamic topic models, Hawkes processes.
+| Theme | 2023H2 | 2025H1 | 2026H2 | Change |
+|---|---|---|---|---|
+| `agentic` | 7.0 | 30.4 | **52.8** | 7.5× |
+| `fine-tuning` | 39.7 | 13.9 | **5.3** | 7.5× ↓ |
+| `RAG/retrieval` | 7.6 | 5.3 | **2.0** | 8× ↓ from peak |
+| `reasoning` | 3.1 | **21.1** | 11.4 | peak then absorb |
 
----
+(mentions per 10⁴ words)
 
-## Appendix — Methods
+- Figure 2: domain heatmap, 16 domains × 7 half-years
+- Figure 3: the four theme trajectories with regime bands
+- **5.1.1 The absorption pattern.** Reasoning, retrieval and multimodality all
+  peak then decline while remaining ubiquitous in prose. Distinguishing *absorbed*
+  from *abandoned* requires the peak: capabilities that won peak first, then fade
+  as they become substrate. Robotics never exceeds 12% — the shape of a
+  non-arrival.
+- **5.1.2 Vendor survival is not category survival.** RAG as a domain falls
+  31%→4%, but LangChain reaches its maximum coverage (24% of issues, 2026H1) while
+  LlamaIndex falls to 2%. Figure 4.
+- **5.1.3 An unanticipated category.** Unsupervised NMF surfaces a
+  defense/national-security topic rising 0.6% → 8.0%, absent from a hand-built
+  16-domain taxonomy — a demonstration that supervised category schemes cannot
+  find what they did not anticipate.
 
-**A.1 Method table** — 12 implemented methods, each with citation, what it
-measures, and its known failure mode on this corpus.
-**A.2 The unit-of-observation problem** — the report's methodological through-line,
-collected: presence saturates, counts track length, titles track framing, KL
-tracks format, co-occurrence tracks frequency.
-**A.3 Reproducibility** — repo layout, how to regenerate every figure.
-**A.4 Extraction caveats** — regex surface matching, unresolved claim subjects,
-launch asymmetry, naming artifacts in survival.
+### 5.2 RQ2 — The open-weights frontier relocated, and it is the largest measured movement
 
----
+- Figure 5: China bloc (DeepSeek+Qwen+Kimi+GLM+MiniMax) vs Meta+Mistral density;
+  1.3 vs 94.8 inverting to 89.2 vs 2.1 per 10⁴ words; crossover in 2025H1
+- Table: per-lab trajectories; Kimi/Moonshot 0.1 → 35.9 (steepest in the corpus)
+- 5.2.1 Meta's decline dated by PELT to **2024-10**, six months before Llama 4;
+  Llama 4 produces a one-month spike inside an existing decline and is *not* a
+  detected change point (Figure 6)
+- 5.2.2 Log-odds significance: `kimi` at 0 occurrences (2024) vs 2,185 (2026)
 
-## Visualisation plan
+### 5.3 RQ3 — Median model half-life is 137 days
 
-| # | Figure | Type | Section |
+Kaplan-Meier with right-censoring; why censoring is required (recent models have
+unfinished lives, and naive averaging biases against exactly the newest cohort).
+
+| Cohort | n | Died | Median lifespan |
 |---|---|---|---|
-| 1 | China bloc vs Meta+Mistral crossover | dual line, annotated crossover | II.1 |
-| 2 | Per-lab density small multiples | 6-panel sparkline grid | II.1 |
-| 3 | Hill-1 effective company count | line + top-3 share bars | II.2 |
-| 4 | OpenAI: headline share vs density | dual-axis line, divergence shaded | II.2 |
-| 5 | Bradley-Terry incumbency scatter | strength vs comparisons, log-x | II.3 |
-| 6 | Domain heatmap | 16 domains × 7 periods | III.1–III.3 |
-| 7 | LangChain vs LlamaIndex divergence | two lines against RAG domain area | III.2 |
-| 8 | Price: median vs 10th percentile | line pair, divergence shaded | IV.1 |
-| 9 | Context window growth | step/log line | IV.2 |
-| 10 | Cost-axis trajectories | slope chart, 2024H1 → 2026H1 | V.2 |
-| 11 | Semantic drift neighbour table | annotated before/after | V.3 |
-| 12 | Burst timeline | Gantt-style bands, regime overlay | VI.2 |
-| 13 | Kaplan-Meier survival curves | stepped KM, 3 cohorts | VI.3 |
-| 14 | MCP hype curve | single line, annotated peak | VI.4 |
+| All models | 255 | 217 | **137 d** |
+| US frontier | 161 | 141 | 175 d |
+| Chinese labs | 49 | 40 | 85 d |
 
-All inline SVG, theme-aware, one accent colour plus a neutral ramp; the format
-regimes appear as consistent background bands on every time-series chart so the
-reader can always see when a change is instrumental rather than real.
+- Figure 7: KM curves
+- 5.3.1 The cohort gap is partly a naming artifact — faster version churn splits a
+  persistent family into short-lived tags. Family-level grouping is future work.
+- **Engineering consequence**, stated plainly: any system pinned to a specific
+  model checkpoint faces a median four-and-a-half-month relevance window in the
+  field's discussion, which bounds how long integration-specific tuning holds value.
+
+### 5.4 RQ4 — Core engineering terms changed referent, and the change is dateable
+
+Highest-novelty section. Diachronic word2vec + Procrustes; median drift across
+3,455 shared terms = 0.365 defines the null.
+
+| Term | Drift | 2024H1 neighbours | 2026H1 neighbours | Referent change |
+|---|---|---|---|---|
+| `harness` | 0.568 | lm-evaluation-harness, eval, lm-eval | harnesses, orchestration, primitives | eval harness → agent harness |
+| `skills` | 0.524 | skill, expertise, proficiency | skill.md, reusable, primitives | capability → file format |
+| `agentic` | 0.375 | retrieval-augmented, production-ready | long-horizon, computer-use, swe | RAG pipeline → autonomous loop |
+| `prompt` | 0.266 | engineering, meta-prompting | injection, jailbreaks | craft → attack surface |
+| `distillation` | 0.514 | masked, unsupervised, contrastive | attacks, persona | technique → accusation |
+| `safety` | 0.340 | regulation, sb, california, bill | safeguards, cyber, resistance | legislation → operational security |
+| `context` | 0.269 | window, length | window, length, **rot**, kv | new failure mode named |
+
+- Figure 8: neighbour-set evolution for `harness` and `agentic` across five eras
+- 5.4.1 Highest drift in corpus: `r1` (0.921), from the Rabbit device to DeepSeek
+- 5.4.2 `stability` decays from a company name back to a common noun
+- **5.4.3 Consequence for measurement.** Any keyword time series over these terms
+  aggregates two different concepts. This is a concrete failure mode for
+  dashboards, trend tooling and retrieval corpora that span the drift date.
+
+### 5.5 RQ5 — What the field asserted about cost, context and scale
+
+- 5.5.1 **The cheap frontier is flat.** Median claimed $/1M tokens swings
+  $0.42 → $8.00 → $3.00 while the 10th percentile holds at $0.10–$0.45 throughout
+  (Figure 9). The median tracks *which models were newsworthy* — the 2025H1 spike
+  coincides with the o1/o3/R1 period — not the cost of inference.
+- 5.5.2 **Context windows 40×**: median claimed 24K → 1M (Figure 10), with the
+  vocabulary consequence in 5.4 (`context rot`).
+- 5.5.3 Parameter-count distributions and the shift toward active-parameter and
+  cost-per-task framing.
+- 5.5.4 **Benchmark lifecycle.** First/last claimed score per benchmark dates its
+  useful life; benchmarks stop being cited when saturated. Table.
+- Caveat: claim subjects are unresolved, so these are field-level distributions,
+  not per-model results.
+
+### 5.6 RQ6 — Relative capability from discourse alone: partially, once bias is removed
+
+- 5.6.1 Extraction: 801 dated pairwise claims over a 95-family lexicon
+- 5.6.2 **Launch asymmetry, measured**: mean win rate 0.68 at 3–7 comparisons →
+  0.49 at 41+; correlation with log(comparisons) −0.27. A model is claimant at
+  launch and incumbent only later. Table + Figure 11.
+- 5.6.3 The fitted ranking, and why it inverts: most-compared families score
+  lowest. Claude has the most comparisons in the corpus (200) and the lowest
+  strength (0.46).
+- 5.6.4 **Reinterpretation.** The estimand is not capability but *incumbency* —
+  the degree to which a model serves as the field's reference point. Stated as a
+  reinterpretation of a failed measurement, not a success.
+
+### 5.7 RQ7 — Attention fragmented roughly fivefold
+
+| Period | Distinct | Hill-1 (effective) | Gini | Top-3 share |
+|---|---|---|---|---|
+| 2023H2 | 34 | 21.7 | 0.48 | 36% |
+| 2025H2 | 247 | **101.8** | 0.61 | 19% |
+| 2026H1 | 207 | 88.1 | 0.59 | 22% |
+
+Hill numbers introduced properly (effective count interpretation). Figure 12.
+Cross-validates the OpenAI result in 5.8: fragmentation, not decline.
+
+### 5.8 RQ8 — Instrument artifacts, and three refuted hypotheses
+
+Full section, not a footnote.
+- 5.8.1 **"OpenAI's coverage declined."** Refuted: headline share 18%→4%, density
+  flat 59.1→51.1 (Figure 13). The measure, not the subject, changed.
+- 5.8.2 **"Llama 4 was the inflection."** Refuted: PELT places no change point
+  there; decline began 2024-10.
+- 5.8.3 **"The Chinese labs are a second tier."** Refuted: 14 headline days for
+  Alibaba against Qwen appearing in 95% of 2026 issues.
+- 5.8.4 **The asserted "China bloc" is not a community in the data.** Louvain
+  groups those labs with Google and surfaces an unnamed serving-infrastructure
+  community (Ollama, vLLM, Baseten, OpenRouter, Together). Figure 14.
+- 5.8.5 **A question the corpus cannot answer.** Source lead-lag: 33 significant
+  Granger relations, all at median lag 0, because the three recaps are written from
+  the same issue on the same day. Reported as a negative result.
 
 ---
 
-## Open decisions for the author
+## 6. Discussion
 
-1. **Length** — the outline supports 8–10k words. A tighter 5k "partner memo" cut
-   is possible by dropping Parts IV and VIII into the appendix.
-2. **Anonymity of the source** — currently named throughout (Latent Space / AI
-   News / smol.ai). Worth confirming that attribution is wanted this prominently.
-3. **Whether to finish the three open methods first.** CausalImpact in particular
-   would materially strengthen Part II.1 by turning "R1 preceded the shift" into an
-   effect size. It is the only outstanding item that changes a headline claim.
+**6.1 What the trajectory implies about system design.** The measured sequence —
+fine-tuning collapsing, retrieval absorbed by long context and then by tool calls,
+orchestration becoming dominant — is an architectural argument with dates attached.
+Where the scarce resource moved: from model quality, to context, to orchestration
+and cost.
+
+**6.2 Referent drift as a practical hazard.** Concrete implications for eval
+suites, keyword monitoring and retrieval corpora spanning a drift boundary.
+
+**6.3 Incumbency as an observable.** What "being the reference model" looks like
+in text, and why it is measurable independently of benchmarks.
+
+**6.4 Why supervised taxonomies under-detect.** The defense-topic miss as a
+generalisable warning for anyone maintaining a category scheme over a moving field.
+
+**6.5 Generalisation.** Which findings are about AI and which are about this
+newsletter. Stated conservatively.
+
+---
+
+## 7. Threats to validity
+
+- **Construct.** Reported attention ≠ field activity ≠ deployment.
+- **Internal.** Four format regimes; LLM-drafted, human-edited provenance with a
+  changing mix; regex surface matching; unresolved claim subjects.
+- **External.** One editorial viewpoint; builder- and tooling-weighted;
+  under-covers enterprise, hardware supply chains, non-English ecosystems.
+- **Statistical.** Thin end periods (2023H2, 2026H2); multiple comparisons across
+  entities; survival naming artifacts; BT identifiability restricted to the
+  largest connected component.
+
+---
+
+## 8. Limitations and future work
+
+The three unimplemented methods and what each would add: CausalImpact (blocked on
+constructing a defensible control set where all series co-move), dynamic topic
+models, Hawkes processes. Plus: family-level survival grouping, claim-subject
+resolution, and the untouched 2.15M-message Discord telemetry.
+
+## 9. Conclusion
+
+Six results restated with effect sizes; the methodological finding given equal
+weight.
+
+---
+
+## References
+
+~15 entries, formal citation style.
+
+## Appendices
+
+- **A.** Method parameters and runtimes
+- **B.** Extraction patterns (comparative verbs, numeric claim regexes) verbatim
+- **C.** Full domain composition — the raw tags matched into each of 16 domains
+- **D.** Corpus reconstruction procedure and schema
+- **E.** Reproducibility: repo layout, commands per figure
+
+---
+
+## Figures and tables
+
+| # | Content | Type | §|
+|---|---|---|---|
+| Fig 1 | Publishing regimes from PELT over structural features | segmented timeline | 3.5 |
+| Fig 2 | Domain heatmap, 16 × 7 | heatmap | 5.1 |
+| Fig 3 | Four theme trajectories with regime bands | multi-line | 5.1 |
+| Fig 4 | LangChain vs LlamaIndex against RAG domain | line + area | 5.1.2 |
+| Fig 5 | China bloc vs Meta+Mistral crossover | dual line, annotated | 5.2 |
+| Fig 6 | Monthly Llama density with PELT breakpoints | bar + markers | 5.2.1 |
+| Fig 7 | Kaplan-Meier survival, three cohorts | stepped KM | 5.3 |
+| Fig 8 | Neighbour-set evolution, `harness` / `agentic` | annotated small-multiple | 5.4 |
+| Fig 9 | Claimed price: median vs 10th percentile | line pair, shaded gap | 5.5.1 |
+| Fig 10 | Claimed context windows | log step | 5.5.2 |
+| Fig 11 | BT strength vs comparison count | scatter, log-x | 5.6.2 |
+| Fig 12 | Hill-1 and top-3 share | line + bars | 5.7 |
+| Fig 13 | OpenAI headline share vs density | dual axis, shaded divergence | 5.8.1 |
+| Fig 14 | Co-occurrence network, 2026H1, Louvain communities | force layout | 5.8.4 |
+| Tab 1–3 | Corpus statistics · embedded layers · method catalogue | tables | 3, 4 |
+
+Format regimes appear as consistent background bands on every time-series figure,
+so instrument boundaries are always visible alongside the data.
+
+---
+
+## Open decisions
+
+1. **Depth of the methods section.** Full reimplementable detail (adds ~1,500
+   words) versus catalogue-plus-appendix. Default: full detail, since the
+   unit-of-observation material is a genuine contribution.
+2. **Discord telemetry.** 2.15M messages of behavioural data remain unanalysed. It
+   is the largest untouched asset and could carry its own results subsection —
+   but it is new analysis, not write-up.
+3. **Whether §5.6 stays.** The Bradley-Terry result is a reinterpreted failure. It
+   is honest and interesting; it is also the weakest section. Keep, shorten, or
+   move to an appendix.
