@@ -988,9 +988,45 @@ controlled · C = confounded, reported as a bound · ✗ = withdrawn.
     return "".join(H)
 
 
+TITLE = ("Announcement Space and Practice Space — "
+         "690 days of AI's daily record, source-controlled")
+DESC = ("A source-controlled study of 690 daily AI newsletters, 2023-2026: how the field "
+        "evolved, and how four confident findings turned out to be measurement artifacts.")
+
+# The Artifact host supplies its own <!doctype>/<head>/<body>, so the default build emits a
+# fragment. GitHub Pages needs a complete document, hence --standalone.
+SHELL = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Announcement Space and Practice Space">
+<meta property="og:description" content="{desc}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2016%2016%27%3E%3Ctext%20y%3D%2713%27%20font-size%3D%2713%27%3E%F0%9F%93%B0%3C%2Ftext%3E%3C%2Fsvg%3E">
+<style>{css}</style>
+</head>
+<body>
+{body}
+</body>
+</html>
+"""
+
+
 if __name__ == "__main__":
-    title = ("Announcement Space and Practice Space — "
-             "690 days of AI's daily record, source-controlled")
-    html = f'<title>{title}</title>\n<style>{CSS}</style>\n{build()}'
-    OUT.write_text(html, encoding="utf-8")
-    print(f"wrote {OUT} — {len(html):,} bytes, ~{len(html.split()):,} tokens of markup")
+    standalone = "--standalone" in sys.argv
+    body = build()
+    if standalone:
+        html = SHELL.format(title=TITLE, desc=DESC, css=CSS, body=body)
+        out = pathlib.Path(__file__).resolve().parent.parent / "site" / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        html = f"<title>{TITLE}</title>\n<style>{CSS}</style>\n{body}"
+        out = OUT
+    out.write_text(html, encoding="utf-8")
+    kind = "standalone document" if standalone else "artifact fragment"
+    print(f"wrote {out} — {len(html):,} bytes ({kind})")

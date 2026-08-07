@@ -1,0 +1,88 @@
+name: Publish report to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'report/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+# Allow the workflow to publish to Pages via OIDC.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; let an in-flight run finish rather than cancelling it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # build_report.py, data.py and charts.py are pure standard library —
+      # the figures are computed SVG, so there is nothing to install.
+      - name: Build the report
+        run: python3 report/build_report.py --standalone
+
+      - name: Check the output is a complete, self-contained document
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          html = pathlib.Path("site/index.html").read_text(encoding="utf-8")
+          fail = []
+          if not html.startswith("<!doctype html>"): fail.append("missing doctype")
+          if "<title>" not in html: fail.append("missing title")
+          for tag in ("html", "head", "body"):
+              if f"</{tag}>" not in html: fail.append(f"missing </{tag}>")
+          # no external requests: the page must stand alone
+          for pat in (r'<script\b', r'<link[^>]+href="https?://', r'src="https?://', r'@import'):
+              if re.search(pat, html, re.I): fail.append(f"external reference: {pat}")
+          # balanced markup
+          VOID = {"br","hr","img","input","meta","link","circle","line","rect",
+                  "polyline","polygon","path","use"}
+          stack = []
+          for m in re.finditer(r'<(/?)([a-zA-Z][\w-]*)([^>]*?)(/?)>', html):
+              close, tag, selfc = m.group(1), m.group(2).lower(), m.group(4)
+              if tag == "!doctype" or selfc == "/" or (tag in VOID and not close):
+                  continue
+              if close:
+                  if not stack or stack[-1] != tag: fail.append(f"unbalanced </{tag}>")
+                  elif stack: stack.pop()
+              else:
+                  stack.append(tag)
+          if stack: fail.append(f"unclosed: {stack[:5]}")
+          if fail:
+              print("FAILED:", *fail, sep="\n  ")
+              sys.exit(1)
+          print(f"ok — {len(html):,} bytes, self-contained, balanced")
+          PY
+
+      # enablement: true turns Pages on (source = GitHub Actions) if it is not already,
+      # so the repo needs no manual setup in Settings.
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
