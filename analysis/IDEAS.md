@@ -14,11 +14,48 @@ The news itself is available elsewhere. What isn't available elsewhere:
 2. **It carries three layers of structured data in-band that nobody has
    extracted** — Discord telemetry, a tweet attribution graph, and provenance
    for the model that wrote each summary.
-3. **It is itself LLM output, produced daily by a documented and changing
-   pipeline for 975 days.** That makes it a natural experiment on LLM behavior.
+3. **It is a daily human-AI collaboration, documented for 975 days,** with the
+   division of labor visibly shifting. See "What this corpus actually is" below —
+   getting this wrong invalidates several otherwise-attractive analyses.
 
 Point 3 is the one I'd chase hardest. It's the analysis nobody else can run,
 because running it requires exactly this artifact.
+
+---
+
+## What this corpus actually is
+
+It is **not** raw LLM output, and analyses that assume it is will produce
+confounded results. The archive is LLM-drafted and human-edited throughout, and
+the mix changes over time. Evidence:
+
+| Marker | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|
+| `buttondown-editor-mode` (human in the editor) | 25/25 | 256/260 | 75/253 | 0/152 |
+| `> all recaps done by <model>` disclosure | 0 | 208/260 | 21/253 | 0/152 |
+| Human editorial lede | 0 | 4/260 | 170/253 | 150/152 |
+| Reddit `(Activity: N)` scores | 0 | 0 | 65 issues | 151 issues |
+
+The `all recaps done by Claude 3 Opus/3.5 Sonnet` line disclosed who wrote **the
+recap sections**, not the issue. It stops entirely on **2025-02-01**. Its absence
+in 2026 is a change of pipeline and platform (Buttondown → the Astro site behind
+Substack), not a change from human to machine.
+
+The human voice is explicit and datable. 2024 ledes talk about the pipeline in
+the first person — *"Some Smol Talk meta today: we didn't feel too happy
+with…"*, *"More tuning since yesterday. We've tuned down…"*. 2025 has **190
+distinct ledes across 253 issues**, most of them opinions with a running joke
+attached: *"Gemini is all you need."*, *"congrats Whale team!"*, *"Apple finally
+gives in."*, *"Anthropic's product studio grows up."* The 2026 bodies carry
+editorial synthesis an extractive summarizer does not produce on its own — *"Why
+engineers cared"*, *"The technical theme is harness-model co-design"*, *"The
+stronger takeaway is…"*.
+
+**Consequence for C1 below:** the attribution-error trend is real as a
+measurement but cannot be read as "LLMs got better." Human editing is an
+uncontrolled variable across the entire corpus, and the 1.3% figure for 2026
+falls exactly in the era of heaviest editorial synthesis. The confound runs in
+the same direction as the effect I originally claimed. C1 stays, reframed.
 
 ---
 
@@ -49,6 +86,14 @@ Concrete questions:
 - **Channel mix within a server.** A `#help`-to-`#research` ratio that climbs is
   a tool crossing from research toy to production dependency. That transition
   has a date, per tool.
+
+### A1b. Reddit engagement scores
+
+Reddit posts carry `(Activity: N)` — **3,070 scored posts**, 691 in 2025 and
+2,379 in 2026. This matters because the Discord telemetry stops at 2026-03-09;
+Reddit activity picks up exactly where Discord leaves off, so a continuous
+community-attention series can be stitched from the two with an overlap period to
+calibrate against.
 
 ### A2. Three-source propagation lag
 
@@ -107,12 +152,30 @@ knowledge no one has a corpus that permits this cleanly.
 
 ---
 
-## C. The corpus as an LLM evaluation set
+## C. The corpus as a record of human-AI collaboration
 
-**This is the strongest idea here.** The archive is a 975-day record of one LLM
-pipeline doing one task, and it embeds its own ground truth.
+The archive is a 975-day record of a hybrid editorial pipeline that embeds its
+own ground truth. The interesting object is **the collaboration**, not the model.
 
-### C1. Attribution fidelity over time
+### C0. How the division of labor moved — the strongest idea here
+
+Three years of a human and an LLM producing a daily publication together, where
+the seam between them is legible and datable. The lede is human. The recap
+sections are LLM-drafted. The synthesis lines in 2026 (*"Why engineers cared"*)
+are editorial. The `buttondown-editor-mode` marker times the human's presence in
+the tooling; the `all recaps done by` line times the machine's.
+
+Questions worth answering: as the models got better, did the human move **up** the
+stack — from correcting facts to supplying judgment? The lede data hints at
+exactly that (4 human ledes in 2024 → 150/152 in 2026, while per-issue length
+collapsed from 28k to 5.8k words). That reads as a shift from *volume produced by
+machine* to *verdict supplied by human*, which is a claim about how AI-assisted
+knowledge work actually evolved — with a primary source, not a survey.
+
+There is no shortage of hallucination benchmarks. There is close to nothing that
+documents one team's working relationship with an LLM, daily, for three years.
+
+### C1. Attribution fidelity over time (reframed)
 
 Tweets are cited as `[@DisplayName](https://twitter.com/handle/status/ID)`. The
 URL is ground truth; the display name is the model's recall. Measured across
@@ -124,17 +187,27 @@ URL is ground truth; the display name is the model's recall. Measured across
 | 2025 | 449 / 9,739 | 4.6% |
 | 2026 | 77 / 5,940 | **1.3%** |
 
-A 4x drop in attribution error on a fixed task over two years. There are also
-**23 cases of one status ID attributed to two different handles inside a single
-issue** — unambiguous errors, since a tweet has one author.
+A 4x drop in attribution error over two years. There are also **23 cases of one
+status ID attributed to two different handles inside a single issue** —
+unambiguous errors, since a tweet has one author.
 
-*Caveat:* some mismatches are legitimate (quote-tweets, display name genuinely
-differing from handle), so the absolute rate is an upper bound. The methodology
-is constant across years, so the **trend** is sound even though the level isn't.
+What this measures is **published error rate: the output of drafting plus
+editing**, which is the honest and still-useful reading. It says the pipeline got
+more accurate. It does **not** isolate the model, because human editing varies
+across the same period and in the same direction.
 
-### C2. The natural experiment
+To actually separate them, use the disclosure line as a natural experiment
+*within* its own era: the 229 issues carrying `all recaps done by <model>` name
+Claude 3 Opus (82) and Claude 3.5 Sonnet (142) under a comparable editorial
+regime. Comparing error rates between those two groups holds the human roughly
+constant. That is a real model comparison; the cross-year trend is not.
 
-The recaps state which model wrote them:
+*Also caveat:* some mismatches are legitimate (quote-tweets, display name
+genuinely differing from handle), so the absolute level is an upper bound.
+
+### C2. Which model wrote the recap
+
+For the 229 issues that disclose it, the recaps state which model wrote them:
 
 | Summarizer | Issues |
 |---|---|
@@ -143,15 +216,14 @@ The recaps state which model wrote them:
 | Gemini 2.0 Flash | 1 |
 | Claude 3 Opus, lightly edited by swyx | 2 |
 
-Combine with C1 and you get error rates **per summarizer model on identical
-work** — a real-world hallucination benchmark on a messy production task, with
-ground truth embedded in the artifact, spanning several model generations. The
-attribution notes even document the pipeline's intent ("We are working on
-antihallucination, NER, and context addition pipelines"), so pipeline changes are
-datable too.
+This is the controlled comparison C1 needs: Opus vs 3.5 Sonnet, same task, same
+era, same editor. The notes also document the pipeline's intent ("We are working
+on antihallucination, NER, and context addition pipelines"), so pipeline changes
+are datable — and must be treated as confounds, not noise.
 
-This is a genuinely novel eval. It is not a synthetic benchmark; it is three
-years of a production summarizer being graded against links it had to get right.
+Worth keeping in proportion: 229 issues under two models is a modest natural
+experiment, not a benchmark suite. Its value is that the task is real production
+work rather than a synthetic eval, and the ground truth is already in the file.
 
 ### C3. Metadata drift
 
@@ -191,9 +263,11 @@ artifact, and it is checkable against what actually happened.
 
 ## Honest limits
 
-- The recaps are **LLM summaries, not primary sources**. Every entity count is
-  filtered through a summarizer with its own biases — which is exactly why C3
-  matters before leaning hard on B and D.
+- The recaps are **LLM-drafted, human-edited, and neither alone** — see "What
+  this corpus actually is". Every entity count is filtered through both a
+  summarizer and an editor, which is why C3 matters before leaning hard on B
+  and D. Never attribute a change across years to the model without checking
+  what the editorial regime was doing at the same time.
 - **Discord telemetry covers 418 of 690 issues** (2024-05-21 → 2026-03-09). The
   format changed at both ends; don't read the boundaries as activity collapse.
 - **Issue length collapses in 2026** (28k → 5.8k words). Any raw-volume metric
@@ -205,8 +279,10 @@ artifact, and it is checkable against what actually happened.
 
 ## Where I'd start
 
-**C1 + C2** — the LLM fidelity benchmark. Highest novelty, ground truth is
-already in the file, and the extraction is validated above.
+**C0** — how the human-AI division of labor moved over three years. Highest
+novelty by a distance, and the seam is already legible in the markers above.
+C1 + C2 become the quantitative backbone of it rather than a standalone
+benchmark claim.
 
 **A1** — the Discord attention index. 2.1M messages of behavioral data is the
 largest untouched asset here, and the lead-indicator question is genuinely
