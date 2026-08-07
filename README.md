@@ -16,6 +16,9 @@ daily newsletter, plus scripts to analyze it.
 | `analysis/domains.py` | Topic tags grouped into domains → `analysis/domains.md` |
 | **`analysis/NEWS-ANALYSIS.md`** | **The written analysis: company arcs and domain evolution** |
 | `analysis/IDEAS.md` | Further analyses the corpus can support |
+| `analysis/VERIFICATION.md` | The arcs checked against the article bodies |
+| **`analysis/DEEPER-FINDINGS.md`** | **Results from the corpus-analysis methods** |
+| `analysis/methods/` | Change points, semantic drift, topic discovery, log-odds, novelty |
 
 ## Where the articles came from
 

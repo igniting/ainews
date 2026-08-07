@@ -164,6 +164,26 @@ a general pretrained one. This is the highest-value unexploited method available
 
 ---
 
+## Status
+
+| Method | Script | State |
+|---|---|---|
+| Log-odds, Dirichlet prior | `logodds.py` | done |
+| Novelty / transience / resonance | `novelty.py` | done |
+| Change point detection (PELT) | `changepoints.py` | done |
+| Diachronic embeddings + Procrustes | `semantic_drift.py` | done |
+| Unsupervised topics (NMF) | `topics.py` | done |
+| Kleinberg burst detection | — | not written |
+| Hawkes processes / Granger | — | not written |
+| Co-occurrence networks + Leiden | — | not written |
+| Survival analysis | — | not written |
+
+Findings are in [`../DEEPER-FINDINGS.md`](../DEEPER-FINDINGS.md).
+
+The remaining four all depend on the source-section split (Twitter / Reddit /
+Discord) or on the entity graph, and all are sensitive to the format regimes —
+which `changepoints.py` now dates, so they are unblocked.
+
 ## Recommended order
 
 1. **Change point detection** — cheap, `ruptures` is installed, and it does
@@ -176,5 +196,5 @@ a general pretrained one. This is the highest-value unexploited method available
 4. **Kleinberg bursts + Hawkes** — only after 1, since both are sensitive to the
    regime changes.
 
-Log-odds and novelty/resonance are implemented and runnable now. The rest is
-scoped but unwritten.
+Items 1-3 are now implemented; see the status table above. Kleinberg bursts and
+Hawkes remain, and both are now unblocked by the regime dates.

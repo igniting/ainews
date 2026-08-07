@@ -9,6 +9,7 @@ strip the boilerplate that repeats in every issue, and tokenize consistently.
 from __future__ import annotations
 
 import functools
+import json
 import pathlib
 import re
 
@@ -57,24 +58,61 @@ FORMAT_NOISE = set(
 STOP |= FORMAT_NOISE
 
 
-def clean(text: str) -> str:
-    return BOILER.sub(" ", FRONT.sub("", text))
+# "PART 2: Detailed by-Channel summaries" is a per-message transcript digest and is
+# dominated by Discord handles. Left in, topic models cluster on *who was talking*
+# rather than what about — a first pass returned topics made of usernames
+# (solbus, noobmaster29, poltronsuperstar) instead of subjects.
+PART2 = re.compile(r"^#\s*PART 2\b.*", re.M | re.I | re.S)
+# The whole Discord recap is person-centric: even the Part 1 per-server summaries
+# are built from "<handle> said X" lines. For topic modelling we want the news
+# prose (lede + Twitter + Reddit), so this drops Discord entirely.
+DISCORD = re.compile(r"^#\s*AI Discord Recap\b.*", re.M | re.I | re.S)
 
 
 @functools.lru_cache(maxsize=1)
-def load() -> list[tuple[str, str, str]]:
+def handles() -> frozenset[str]:
+    """Known person handles, taken from the front-matter `people` tags."""
+    index = REPO / "analysis" / "index.json"
+    if not index.exists():
+        return frozenset()
+    names = set()
+    for record in json.loads(index.read_text(encoding="utf-8")):
+        for person in record.get("people", []):
+            person = person.strip().lower().lstrip("_")
+            if person:
+                names.add(person)
+                names.add(person.replace("-", ""))
+                names.update(person.split("-"))
+    return frozenset(n for n in names if len(n) > 2)
+
+
+def clean(text: str, drop_transcripts: bool = False, drop_discord: bool = False) -> str:
+    text = FRONT.sub("", text)
+    if drop_discord:
+        text = DISCORD.sub(" ", text)
+    elif drop_transcripts:
+        text = PART2.sub(" ", text)
+    return BOILER.sub(" ", text)
+
+
+@functools.lru_cache(maxsize=4)
+def load(drop_transcripts: bool = False, drop_discord: bool = False) -> list[tuple[str, str, str]]:
     """Return [(date, filename, cleaned body)] sorted by date."""
     out = []
     for path in sorted(ARTICLES.glob("*.md")):
         date = f"20{path.name[:8]}"
-        out.append((date, path.name, clean(path.read_text(encoding="utf-8", errors="replace"))))
+        raw = path.read_text(encoding="utf-8", errors="replace")
+        out.append((date, path.name, clean(raw, drop_transcripts, drop_discord)))
     return out
 
 
-def tokens(text: str, drop_stop: bool = True) -> list[str]:
+def tokens(text: str, drop_stop: bool = True, drop_handles: bool = False) -> list[str]:
     words = TOKEN.findall(text.lower())
     if drop_stop:
-        return [w for w in words if w not in STOP and len(w) > 2]
+        words = [w for w in words if w not in STOP and len(w) > 2]
+    if drop_handles:
+        bad = handles()
+        words = [w for w in words if w not in bad]
     return words
 
 
