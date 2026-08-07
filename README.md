@@ -12,6 +12,10 @@ daily newsletter, plus scripts to analyze it.
 | `analysis/analyze.py` | Turns that index into `analysis/report.md` |
 | `analysis/index.json` | One record per issue: date, title, tags, body size |
 | `analysis/report.md` | Generated coverage/trend report |
+| `analysis/arcs.py` | Per-company headline timelines → `analysis/ARCS.md` |
+| `analysis/domains.py` | Topic tags grouped into domains → `analysis/domains.md` |
+| **`analysis/NEWS-ANALYSIS.md`** | **The written analysis: company arcs and domain evolution** |
+| `analysis/IDEAS.md` | Further analyses the corpus can support |
 
 ## Where the articles came from
 
@@ -47,7 +51,13 @@ on 682, `people` on 607.
 pip install -r requirements.txt
 python3 analysis/build_index.py    # articles/ -> analysis/index.json
 python3 analysis/analyze.py        # index.json -> analysis/report.md
+python3 analysis/domains.py        # index.json -> analysis/domains.md
+python3 analysis/arcs.py openai anthropic deepseek --out analysis/ARCS.md
 ```
+
+`arcs.py --list` shows the companies it knows surface forms for. Start with
+[`analysis/NEWS-ANALYSIS.md`](analysis/NEWS-ANALYSIS.md) — the other files are
+its inputs.
 
 `analyze.py` folds a handful of tags that the archive spells two ways
 (`huggingface`/`hugging-face`, `deepseek-ai`/`deepseek`, handles with and without
