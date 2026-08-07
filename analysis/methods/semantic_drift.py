@@ -50,9 +50,16 @@ WATCH = [
 ]
 
 
-def sentences(era: str) -> list[list[str]]:
+def sentences(era: str, drop_discord: bool = False) -> list[list[str]]:
+    """Sentences for one era.
+
+    `drop_discord` is the genre control. The corpus goes from 96% Discord text in
+    2024H1 to 0% in 2026H1, so a model trained on whole issues learns partly the
+    difference between chat transcripts and news prose. Excluding Discord holds
+    the genre roughly fixed at the cost of much less text early on.
+    """
     out = []
-    for date, _, body in corpus.load():
+    for date, _, body in corpus.load(drop_discord=drop_discord):
         if corpus.half(date) != era:
             continue
         for line in body.split("\n"):
@@ -62,8 +69,8 @@ def sentences(era: str) -> list[list[str]]:
     return out
 
 
-def train(era: str, dim: int, min_count: int, seed: int = 0) -> Word2Vec:
-    sents = sentences(era)
+def train(era: str, dim: int, min_count: int, seed: int = 0, drop_discord: bool = False) -> Word2Vec:
+    sents = sentences(era, drop_discord)
     print(f"  {era}: {len(sents):,} sentences", file=sys.stderr)
     return Word2Vec(
         sents, vector_size=dim, window=5, min_count=min_count, workers=4, epochs=5, seed=seed, sg=1
@@ -98,10 +105,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--dim", type=int, default=150)
     parser.add_argument("--min-count", type=int, default=40)
     parser.add_argument("--top-drift", type=int, default=25)
+    parser.add_argument(
+        "--exclude-discord",
+        action="store_true",
+        help="genre control: train on lede+Twitter+Reddit only",
+    )
     args = parser.parse_args(argv)
 
     print("training one word2vec per era…", file=sys.stderr)
-    models = {era: train(era, args.dim, args.min_count) for era in ERAS}
+    models = {era: train(era, args.dim, args.min_count, drop_discord=args.exclude_discord) for era in ERAS}
 
     first, last = ERAS[0], ERAS[-1]
     R, shared = procrustes(models[first], models[last])

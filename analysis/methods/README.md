@@ -185,6 +185,10 @@ a general pretrained one. This is the highest-value unexploited method available
 | Dynamic topic model | — | outstanding |
 | Hawkes processes | — | outstanding |
 
+**Before using any result here, read [`../METHOD-AUDIT.md`](../METHOD-AUDIT.md)** —
+every method is re-examined against the source-composition inversion, and four
+findings are withdrawn.
+
 Findings are in [`../DEEPER-FINDINGS.md`](../DEEPER-FINDINGS.md).
 What to apply next, ranked, is in [`ROADMAP.md`](ROADMAP.md);
 results from those in [`../ROADMAP-FINDINGS.md`](../ROADMAP-FINDINGS.md).

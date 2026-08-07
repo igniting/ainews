@@ -9,7 +9,7 @@ pretrained model would. Independent embedding spaces are only defined up to
 rotation, so they are aligned before comparison.
 
 **Drift** is cosine distance between a word's 2024H1 and 2026H1 vectors.
-Median drift across 3,455 shared words is **0.365** — use that as
+Median drift across 4,183 shared words is **0.313** — use that as
 the baseline for 'this word did not really move'.
 
 The neighbour lists are the actual finding; the drift score only ranks them.
@@ -18,26 +18,16 @@ The neighbour lists are the actual finding; the drift score only ranks them.
 
 | Word | Drift | Nearest in 2024H1 | Nearest in 2026H1 |
 |---|---|---|---|
-| `agent` | 0.321 | agents, agent., agentic, flows, langgraph, react | multi-agent, agents, cognition, langsmith, agentic, orchestrator |
-| `agents` | **0.425** | agent, agents., flows, langgraph, multi-agent, simulated | agents., agent, assistants, multi-agent, sandboxes, devin |
-| `agentic` | **0.375** | agent, agents, jerryjliu0, retrieval-augmented, production-ready, multi-agent | long-horizon, multi-step, computer-use, swe, agent, long-running |
-| `reasoning` | 0.310 | reasoning., context-aware, logical, abilities., chain-of-thought, linguistic | reasoning., multilingual, spatial, thinking, cot, coherence |
-| `context` | 0.269 | window, length, contexts, lengths, context., length. | window, length, context., contexts, rot, kv |
-| `memory` | 0.250 | memory., allocation, vram, peak, disk, bandwidth | memory., bandwidth, storage, kv, persistent, stores |
-| `harness` | **0.568** | lm-evaluation-harness, eval, lm-eval-harness, lm-eval, evaluation, hailey | harnesses, vtrivedy10, orchestration, hwchase17, primitives, ux |
-| `skills` | **0.524** | skill, knowledge., rewards, expertise, proficiency, collaborating | replit, harnesses, reusable, skill.md, primitives, langsmith |
-| `tools` | 0.312 | tools., frameworks, apis, tool, integrations, workflows | assistants, tools., agents., workflows, apps, clients |
-| `scaling` | **0.395** | laws, extrapolation, chinchilla, properties, scales, empirical | laws, continual, theory, scales, sparsity, gradient |
-| `open` | 0.337 | source, open-source, oss, sourcing, powering, open-sourcing | open-weight, source, open-source, closed, open-weights, proprietary |
-| `cheap` | 0.360 | expensive, pcs, super, pretty, affordable, h100s | viable, expensive, cost-effective, money, low-cost, usd |
-| `fast` | **0.392** | memory-efficient, turboderp, fourier, cheap, dao-ailab, exllamav2 | cheap, lands, upgrades, easy, faster, default |
-| `benchmark` | 0.317 | eq-bench, benchmarks, mmlu, benchmarking, needle, hellaswag | scores, benchmarks, methodology, verified, swe-bench, suite |
-| `distillation` | **0.514** | masked, unsupervised, contrastive, svd, positional, bidirectional | attacks, persona, mhc, distill, innovations, continual |
-| `alignment` | **0.452** | lab, aligning, general-chat, forum, rlhf, direction | similarity, safety, geometry, refusal, theory, regulatory |
-| `safety` | 0.340 | regulation, risk, responsible, sb, california, bill | safeguards, measures, ethics, cyber, resistance, alignment |
-| `inference` | 0.280 | inference., inferencing, turboderp, exllamav2, deployment., serving | serving, inference., multi-gpu, concurrency, ssd, distributed |
-| `training` | 0.259 | training., pretraining, pretraining., fine-tuning, finetuning, train | pretraining, post-training, pre-training, training., fine-tuning, sft |
-| `prompt` | 0.266 | prompts, prompts., engineering, meta-prompting, prompt., prompting | prompts, injection, prompt., jailbreaks, fortress, eni |
+| `harness` | **0.439** | lm-evaluation-harness, eval, lm-eval, megatron-deepspeed, deadlock, helm | orchestration, harnesses, ux, dbreunig, hwchase17, abstraction |
+| `agentic` | **0.371** | empowers, augmenting, agents., production-ready, devika, low-code | long-horizon, tool-use, multi-step, computer-use, swe, browsing |
+| `agents` | 0.289 | agents., agent, empowers, sleeper, profound, react | agent, agents., skills, ops, cognition, multi-agent |
+| `prompt` | **0.363** | prompts, engineering, crafting, promptfoo, prompts., prompttools | injection, prompt., desired, adherence, drafting, caching |
+| `skills` | **0.590** | skills., goals, coding., experiences., abilities, continuously | middleware, reusable, execution., ide, filesystem, decomposition |
+| `context` | 0.170 | window, length, contexts, context., yarn, lengths | window, length, context., cache, kv, batch |
+| `reasoning` | 0.285 | multi-hop, knowledge., chain-of-thought, abilities, context-aware, reasoning. | multilingual, reasoning., spatial, instruction-following, instruction, configurable |
+| `distillation` | **0.448** | unet, ties, dare, neuron, u-net, imagenet | attacks, industrial-scale, copyrighted, teacher, legitimate, laws |
+| `safety` | 0.272 | measures, disclosure, copyright, legal, risk, regulatory | measures, concerns., political, mass, surveillance, misuse |
+| `open` | 0.249 | source, open-source, sourcing, whisper., huggingchat, powering | open-weight, open-weights, permissive, foundation, closed, open-model |
 
 ## Largest drift overall (2024H1 → 2026H1)
 
@@ -45,97 +35,95 @@ Ranked over all shared vocabulary. Words that changed company, not just frequenc
 
 | Word | Drift | Nearest in 2024H1 | Nearest in 2026H1 |
 |---|---|---|---|
-| `r1` | 0.921 | rabbit, shipping, purchase, ok.alex, o1 | mimo, v3.2, nemotron, vl, stepfun |
-| `ibm` | 0.802 | granite, deepseek-v2, medusa, bilingual, bagel | employees, dod, corporate, leadership, technological |
-| `axis` | 0.770 | dequantization, sum, fp32, integer, int4 | engram, persona, self-improvement, continual, sakana |
-| `slide` | 0.737 | beautiful, elicit, apps., builder, children | turbo, omni, nano, table, klein |
-| `description` | 0.722 | found, no, href, colaboratory, li | composition, precise, diagram, detail, descriptions |
-| `stability` | 0.715 | emad, stability.ai, stable, stabilityai, membership | reliability., reliability, robustness, instability, oom |
-| `replicate` | 0.715 | predibase, modal, fireworks, braintrust, credits | adapt, them., analyze, prioritize, produce |
-| `falls` | 0.713 | priorities., believe, priorities, the..., motivation | flat, woes, glitches, troubles, crashes |
-| `oobabooga` | 0.710 | text-generation-webui, open-webui, exl2, awq, llama-cpp-python | machinelearning, stablediffusion, singularity, chatgptcoding, aivideo |
-| `magic` | 0.709 | powers, entertainment, wars, universe, adventure | string, thing, instead., referring, stuff |
-| `codes` | 0.708 | client, surya, conversions, urls, typing | accidentally, telegram, banned, opening, refund |
-| `activity` | 0.707 | surge, group., had, hacker, issued | presents, depicts, qwen3.6-35b-a3b, newly, goes |
-| `stage` | 0.706 | panel, center, july, event, monday | shape, computation, intermediate, cold, scheduler |
-| `class` | 0.705 | print, name, none, div, invoke | ryzen, fitting, m4, high-performance, halo |
-| `shipping` | 0.704 | purchase, o1, r1, manufacturing, international | ainews, soon., thanks, form, ship |
-| `side` | 0.703 | lighter, touch, humor, hands, light-hearted | kimmonismus, zhihufrontier, philschmid, googledeepmind, reality |
-| `battle` | 0.700 | sentience, challenged, showdown, heated, giants | groups, veo, lmarena, mode, exclusively |
-| `third` | 0.694 | n..., february, weekend, aiatmeta, tomorrow | another, criticizes, situation, expresses, party |
-| `master` | 0.683 | mobiusml, pytorch-labs, mesozoic-egg, wip, tinygrad-notes | university, full-stack, lessons, distributed, nccl |
-| `effort` | 0.682 | efforts, initiative, efforts., contributions, aims | xhigh, medium, levels, depth, thinking |
-| `solar` | 0.680 | x7b, yi, ssm-transformer, b., stablelm | merits, practicality, purchase, savings, rising |
-| `distribution` | 0.673 | rounding, distributions, probability, decay, divergence | signals, infra, etc., vendors, theturingpost |
-| `deepseek` | 0.671 | coder, deepseek-v2, codestral, qwen, falcon | v4, v3.2, mhc, r1, anticipated |
-| `seed` | 0.670 | seeds, epoch, token., rounding, element | open-model, enters, lab, qwen3.5-397b-a17b, movement |
-| `comment` | 0.670 | singularity., llmdevs, artificialinteligence, crawling, stablediffusion | commenter, humorously, technology., situation, critiques |
+| `r1` | 0.786 | rabbit, aravsrinivas, purchase, srinivas, advertised | v3, deepseek-v4, ernie, v3.2, m2.7 |
+| `horizon` | 0.782 | celebrates, excitedly, teased, imminent, tease | metr, jumps, polynoamial, flat, variance |
+| `side` | 0.779 | lighter, events., ai-related, direction., keep | dive, liteparse, llamaindex, philschmid, clip |
+| `main` | 0.723 | src, master, readme.md, helpers, w2v2 | key, differentiator, unresolved, set., caveat |
+| `stability` | 0.718 | japan, mostaque, stability.ai, midjourney, emad | scalability, robustness, techniques., applicability, specifying |
+| `thinking` | 0.717 | hide, fight, lie, trees, mad | effort, disable, xhigh, lite, haiku |
+| `lighter` | 0.713 | events., reflections, industries, vibrant, cryptocurrency | devstral, b-a10b, favored, q1, balanced |
+| `spark` | 0.708 | sparks, surrounding, quandaries, unfolds, stir | dgx, ultra, muse, gb10, m3 |
+| `meeting` | 0.698 | attending, schedule, session., attendance, event. | samsung, advocating, raspberry, food, showcased |
+| `description` | 0.680 | found, no, gemma-2b-it-gguf, v0.10.13, kquant03 | diagram, artistic, text., animation, voting |
+| `epoch` | 0.677 | trainable, epochs, digit, decreasing, dropout | frontiermath, arc-agi-3, prize, metr, epochairesearch |
+| `positions` | 0.674 | implicitly, out-of-distribution, ignore, texts., singular | positioned, positioning, leader, competitor, presented |
+| `class` | 0.671 | whitespace-normal, pre, type, serialization, name | gx10, gb10, lt, totaling, geforce |
+| `effort` | 0.667 | efforts, encourage, volunteer, readiness, reinforcing | xhigh, disable, adaptive, thinking, extended |
+| `following` | 0.664 | submitting, matter., conflicting, continuation, timeline | instruction, strength, cutoff, imagine, physics |
+| `contribute` | 0.659 | deepseek-moe, irl., lwm, tinygrad-notes, mesozoic-egg | encourage, abilities, evolve, ones., hinder |
+| `channel` | 0.655 | channel., channels., etiquette, redirected, off-topic | swap, persistence, delegation, comms, loop. |
+| `surfaced` | 0.648 | quandaries, centered, arose, surrounding, arises | follow-on, writeup, zhihufrontier, swyx, cwolferesearch |
+| `oobabooga` | 0.642 | text-generation-webui, tabbyapi, koboldcpp, webui, llama-cpp-python | machinelearning, singularity, stablediffusion, chatgptcoding, aivideo |
+| `hits` | 0.638 | debuts, strikes, celebrating, drops, ignites | cached, ttft, bytes, min, tg |
+| `color` | 0.637 | font-family, underline, rgb, symbol, segoe | depicted, anime, realism., animated, light |
+| `stable` | 0.636 | diffusion, xl, civitai, sd3, cascade | regular, usable, scoped, smarter, lossless |
+| `discover` | 0.635 | gif, gifs, oh, click, smile | aim, databases, compress, groups, conflicts |
+| `tag` | 0.633 | redirect, smol, astraliteheart, social, checked | exposed, revealed, boris, sees, wrapper |
+| `conversations` | 0.632 | discussions, conversation, debates, dialogue, discourse | sessions., cot, sleep, retrieve, iteratively |
 
 ## Trajectory of key terms across all eras
 
 Nearest neighbours era by era — the clearest way to watch a concept move.
 
-**`agent`**
+**`harness`**
 
-- 2024H1: agents, agent., agentic, flows, langgraph, react, multi-agent
-- 2024H2: agents, orchestration, langchainai, langgraph, react, llamaindex., composio
-- 2025H1: agents, multi-agent, agent., langgraph, mastra, agents., handoff
-- 2025H2: agents, agentic, agents., agent., langchainai, orchestrator, langsmith
-- 2026H1: multi-agent, agents, cognition, langsmith, agentic, orchestrator, sandboxes
-
-**`agents`**
-
-- 2024H1: agent, agents., flows, langgraph, multi-agent, simulated, agentic
-- 2024H2: agent, mooc-questions, agents., mooc, composio, assistants, swe
-- 2025H1: agent, agents., multi-agent, mooc-lecture-discussion, mooc-questions, bots, agent.
-- 2025H2: agents., agent, multi-agent, slack, autonomously, langgraph, assistants
-- 2026H1: agents., agent, assistants, multi-agent, sandboxes, devin, orchestrator
+- 2024H1: lm-evaluation-harness, eval, lm-eval, megatron-deepspeed, deadlock, helm, lm-eval-harness
+- 2025H2: harnesses, scaffolds, durable, long-running, orchestrating, matter, sandbox
+- 2026H1: orchestration, harnesses, ux, dbreunig, hwchase17, abstraction, model-agnostic
 
 **`agentic`**
 
-- 2024H1: agent, agents, jerryjliu0, retrieval-augmented, production-ready, multi-agent, r2r
-- 2024H2: event-driven, orchestration, llm-powered, agent, multi-agent, langchainai, langgraph
-- 2025H1: jerryjliu0, rag, autonomous, retrieval-augmented, multi-agent, agents, llm-powered
-- 2025H2: agent, swe, orchestrator, langchainai, autonomous, commerce, multi-agent
-- 2026H1: long-horizon, multi-step, computer-use, swe, agent, long-running, multilingual
+- 2024H1: empowers, augmenting, agents., production-ready, devika, low-code, llm-based
+- 2024H2: workflows, multi-agent, langgraph, omarsar0, jerryjliu0, building, retrieval-augmented
+- 2025H1: multi-agent, llm-based, ai-assisted, end-to-end, multi-step, debugging, automating
+- 2025H2: coding, vibe, gui, jerryjliu0, swe, rag, orchestrating
+- 2026H1: long-horizon, tool-use, multi-step, computer-use, swe, browsing, sustained
 
-**`reasoning`**
+**`agents`**
 
-- 2024H1: reasoning., context-aware, logical, abilities., chain-of-thought, linguistic, abilities
-- 2024H2: reasoning., problem-solving, chain-of-thought, abilities, instruction-following, cot, mathematical
-- 2025H1: reasoning., thinking, cot, abilities, math, mathematical, problem-solving
-- 2025H2: thinking, chain-of-thought, reasoning., reasoner, cot, non-reasoning, multilingual
-- 2026H1: reasoning., multilingual, spatial, thinking, cot, coherence, multi-step
+- 2024H1: agents., agent, empowers, sleeper, profound, react, nextjs
+- 2024H2: langchainai, langgraph, qdrant, agentic, agent, rag, assistants
+- 2025H1: agents., computer, automate, building, swarm, langsmith, multi-agent
+- 2025H2: agents., subagents, scaffolds, skills, long-running, langgraph, orchestration
+- 2026H1: agent, agents., skills, ops, cognition, multi-agent, devin
 
-**`context`**
+**`prompt`**
 
-- 2024H1: window, length, contexts, lengths, context., length., window.
-- 2024H2: window, length, lengths, contexts, lengths., length., context.
-- 2025H1: window, contexts, window., context., length., sequence, sliding
-- 2025H2: window, context., window., contexts, sliding, length, contextual
-- 2026H1: window, length, context., contexts, rot, kv, compact
-
-**`memory`**
-
-- 2024H1: memory., allocation, vram, peak, disk, bandwidth, gbps
-- 2024H2: ram, memory., footprint, vram, oom, bandwidth, overhead.
-- 2025H1: memory., bandwidth, coalescing, registers, ram., vram, bottlenecks
-- 2025H2: memory., accesses, bandwidth, footprint, vram, completeness, nvme
-- 2026H1: memory., bandwidth, storage, kv, persistent, stores, overhead
-
-**`harness`**
-
-- 2024H1: lm-evaluation-harness, eval, lm-eval-harness, lm-eval, evaluation, hailey, schoelkopf
-- 2024H2: eval, lm-evaluation-harness, lm-eval, lm-eval-harness, eleutherai, lm, pruned
-- 2025H1: eval, gsm8k, evaluation, methodology, gaia, evaluate, evaluations
-- 2025H2: eval, standardized, lm-evaluation-harness, evals, evaluation, reproducible, metric
-- 2026H1: harnesses, vtrivedy10, orchestration, hwchase17, primitives, ux, sandboxing
+- 2024H1: prompts, engineering, crafting, promptfoo, prompts., prompttools, darthgustav.
+- 2024H2: prompts, system, instructions, proposing, multi-turn, experience., contextual
+- 2025H1: adherence, prompts, scene, extended, structure, rendering, photorealistic
+- 2025H2: prompts, templates, adherence, injection, structure, guidance, directory
+- 2026H1: injection, prompt., desired, adherence, drafting, caching, noise
 
 **`skills`**
 
-- 2024H1: skill, knowledge., rewards, expertise, proficiency, collaborating, abilities
-- 2024H2: skills., expertise, fundamentals, skill, proficiency, knowledge., vision.
-- 2025H1: skills., proficiency, abilities., abilities, expertise, principles, knowledge.
-- 2025H2: skills., coders, senior, hands-on, dl, problem-solving, interviews
-- 2026H1: replit, harnesses, reusable, skill.md, primitives, langsmith, agents.
+- 2024H1: skills., goals, coding., experiences., abilities, continuously, candidates
+- 2024H2: workflows., flow, enhancement, pdfs, precise, agents., voices
+- 2025H1: cognitive, domain-specific, problems., principles, validation, fundamental, oversight
+- 2025H2: agents., review, long-running, reusable, subagents, agent., scaffolds
+- 2026H1: middleware, reusable, execution., ide, filesystem, decomposition, langchain
+
+**`context`**
+
+- 2024H1: window, length, contexts, context., yarn, lengths, self-extend
+- 2024H2: window, length, lengths, token, long, windows, default
+- 2025H1: window, length, maximum, token, context., query, lengths
+- 2025H2: window, sliding, memory, contexts, token, window., tokens.
+- 2026H1: window, length, context., cache, kv, batch, contexts
+
+**`reasoning`**
+
+- 2024H1: multi-hop, knowledge., chain-of-thought, abilities, context-aware, reasoning., planning
+- 2024H2: mathematical, abilities, math, chain-of-thought, cot, mathematics, medical
+- 2025H1: chain-of-thought, generalization, cot, math, excelling, translation, mathematical
+- 2025H2: cot, non-reasoning, scoring, sota, chain-of-thought, reasoning., long-context
+- 2026H1: multilingual, reasoning., spatial, instruction-following, instruction, configurable, math
+
+**`distillation`**
+
+- 2024H1: unet, ties, dare, neuron, u-net, imagenet, progressive
+- 2024H2: entirely, scratch, mechanism, built-in, raw, reward, post-training
+- 2025H1: post-training, pretraining, cwolferesearch, recipe, generalization, combination, zero
+- 2025H2: lms, pretrain, qat, inference-time, ppo, corpus, frozen
+- 2026H1: attacks, industrial-scale, copyrighted, teacher, legitimate, laws, accused
 

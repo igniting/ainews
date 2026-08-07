@@ -379,6 +379,19 @@ newsletter. Stated conservatively.
 
 ## 7. Threats to validity
 
+**7.0 The method audit.** Every method re-examined against the two instrument
+artifacts; four findings withdrawn (the quiet-day series, `context rot`, the
+`agentic`/RAG adjacency, and OpenAI's headline collapse as evidence of
+fragmentation), three weakened, six re-verified inside a fixed source. Reported as
+a table, because a study that runs twelve methods and withdraws none is not
+reporting honestly.
+
+**7.0.1 The open threat.** The ~5× fragmentation result is confounded with
+sampling breadth — declared subreddits rose 7 → 12 and Twitter accounts 384 → 544
+over the same window. Stated as an upper bound pending per-section entity
+extraction, and the cross-validation with the OpenAI result is correspondingly
+weaker.
+
 - **Construct.** Reported attention ≠ field activity ≠ deployment.
 - **Internal.** Four format regimes; LLM-drafted, human-edited provenance with a
   changing mix; regex surface matching; unresolved claim subjects.
