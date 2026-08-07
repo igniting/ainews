@@ -177,9 +177,17 @@ a general pretrained one. This is the highest-value unexploited method available
 | Granger causality / lead-lag | `leadlag.py` | done (negative result) |
 | Co-occurrence networks + Louvain | `network.py` | done |
 | Survival analysis (Kaplan-Meier) | `survival.py` | done |
+| Bradley-Terry from "beats" claims | `bradley_terry.py` | done |
+| Semantic axis projection | `axes.py` | done |
+| Numeric claim extraction | `claims.py` | done |
+| Rank-turbulence divergence + diversity | `distributions.py` | done |
+| CausalImpact / BSTS | — | outstanding |
+| Dynamic topic model | — | outstanding |
+| Hawkes processes | — | outstanding |
 
 Findings are in [`../DEEPER-FINDINGS.md`](../DEEPER-FINDINGS.md).
-What to apply next, ranked, is in [`ROADMAP.md`](ROADMAP.md).
+What to apply next, ranked, is in [`ROADMAP.md`](ROADMAP.md);
+results from those in [`../ROADMAP-FINDINGS.md`](../ROADMAP-FINDINGS.md).
 
 All scoped methods are implemented. Hawkes processes were dropped in favour of
 Granger: `leadlag.py` establishes that the three source sections move at lag 0 by

@@ -18,6 +18,7 @@ daily newsletter, plus scripts to analyze it.
 | `analysis/IDEAS.md` | Further analyses the corpus can support |
 | `analysis/VERIFICATION.md` | The arcs checked against the article bodies |
 | **`analysis/DEEPER-FINDINGS.md`** | **Results from the corpus-analysis methods** |
+| **`analysis/ROADMAP-FINDINGS.md`** | **Results from the Bradley-Terry, axis, claims and diversity methods** |
 | `analysis/methods/` | Change points, semantic drift, topic discovery, log-odds, novelty |
 
 ## Where the articles came from
