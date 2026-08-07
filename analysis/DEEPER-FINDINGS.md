@@ -162,6 +162,128 @@ the taxonomy could not find what it did not anticipate.
 
 ---
 
+---
+
+## 4. Bursts: dating the spikes without a threshold
+
+`bursts.py`, Kleinberg (2002) two-state automaton.
+
+Getting the units right took three attempts, and the failures are the reusable
+lesson. Issues-mentioning-X **saturates** — most tracked entities appear in 80-97%
+of issues, so the algorithm returned 118-week "bursts". Kilowords-as-trials made
+mentions exceed trials for frequently-named entities, clamping the rate to 1.
+Only words-as-trials with mentions-as-successes gives a valid Poisson intensity.
+
+With that fixed the bursts land where they should:
+
+| Entity | Burst | Rate vs baseline | What it is |
+|---|---|---|---|
+| Mistral | 2023-W49 → 2024-W13 | 42.9 vs 9.5 (4.5x) | The Mixtral rush |
+| Meta Llama | 2024-W16 → 2024-W22 | 28.8 vs 9.1 (3.2x) | Llama 3 |
+| DeepSeek | 2025-W04 → 2025-W10 | 45.8 vs 9.8 (**4.7x**) | R1 |
+| reasoning | 2025-W04 → 2025-W11 | 27.5 vs 11.5 (2.4x) | fires in the *same weeks* as R1 |
+| GPT/OpenAI | 2025-W32 → 2025-W33 | 115.1 vs 34.0 (3.4x) | GPT-5 |
+| Kimi/Moonshot | 2026-W29 → 2026-W32 | 39.0 vs 4.4 (**8.9x**) | largest relative burst in the corpus |
+
+The `reasoning` burst coinciding exactly with the DeepSeek R1 burst is the
+cleanest evidence in the corpus that R1 was what made reasoning a general topic
+rather than an OpenAI product feature.
+
+---
+
+## 5. Lead-lag between sources: a negative result
+
+`leadlag.py`, cross-correlation plus Granger causality over the parallel
+Twitter / Reddit / Discord recaps, restricted to the 2024-05 → 2026-03 regime
+where all three exist.
+
+33 significant Granger relationships, and the **median best lag is +0 for every
+pair**. The sources move together, not in sequence.
+
+| Direction | Entities significant at p<0.05 | Median lag |
+|---|---|---|
+| discord → twitter | 14 | +0 |
+| discord → reddit | 12 | +0 |
+| reddit → twitter | 7 | +0 |
+
+This is a real answer, and it is mostly a limit on the question. The three recaps
+are written **from the same issue on the same day**, so a same-day story appears
+in all three at lag 0 by construction. What this can detect is only a source
+dwelling on something for days longer than the others — not who published first
+in the world. `IDEAS.md` proposed this as a way to find which surface breaks
+stories; the corpus cannot answer that, and it is better to say so than to report
+the lag-0 correlations as if they meant sequence.
+
+The one exception worth noting: Meta Llama shows discord → twitter at **lag +2**
+with r=0.51, the only entity with a consistent multi-issue lead. Local-model
+communities discussed Llama releases before the Twitter recap caught up — which
+fits Llama's distinctive position as the model people actually ran themselves.
+
+---
+
+## 6. Networks: the blocs I asserted are not the blocs in the data
+
+`network.py`, PPMI-weighted co-occurrence with Louvain community detection.
+Edges are PPMI rather than raw co-occurrence because raw counts merely rediscover
+the most-mentioned entities — OpenAI co-occurs with everything.
+
+I asserted a "China bloc" and grouped its members myself. Louvain, given no
+grouping, returns something different for 2026H1:
+
+1. `openai, anthropic, langchain, nous-research, hugging-face, cursor, microsoft, cognition, github`
+2. `ollama, nvidia, baseten, openrouter, vllm, unsloth, togethercompute`
+3. `google-deepmind, google, deepseek, alibaba, x-ai, z-ai`
+
+Two corrections fall out. **The Chinese labs do not form their own community** —
+they cluster with Google, presumably because they co-occur in the same
+model-release comparison stories. And there is a **serving-infrastructure
+community** (ollama, vLLM, Baseten, OpenRouter, Together, Unsloth) that I never
+identified as a bloc at all, despite it being one of the three main structures in
+the data.
+
+My bloc was defensible as a *market* grouping. It is not the grouping the
+coverage produces, and I presented it as though the data had found it.
+
+### Brokers
+
+Betweenness centrality over the whole corpus:
+
+`google, hugging-face, alibaba, nvidia, ollama, langchain, mistral-ai, deepseek`
+
+Hugging Face ranking second is the notable one — it is not a frontier lab, and by
+`density.py` it was fading. Structurally it is the connective tissue: the place
+where every other actor's work meets. Prominence and centrality are different
+things, and only the network sees the second one.
+
+---
+
+## 7. Survival analysis: models die faster than the arcs suggest
+
+`survival.py`, Kaplan-Meier with right-censoring. Censoring matters here: a model
+first seen recently and still discussed has an *unfinished* life, and averaging
+raw spans would understate exactly the newest models you most want to compare.
+
+| Cohort | Models | Died | Still alive | Median lifespan |
+|---|---|---|---|---|
+| All models | 255 | 217 | 38 | **137 days** |
+| US frontier labs | 161 | 141 | 20 | **175 days** |
+| Chinese labs | 49 | 40 | 9 | **85 days** |
+| Open-weights families | 100 | 90 | 10 | 117 days |
+
+The median model has **about four and a half months** between its first and last
+mention. That is the quantitative version of what the arcs showed anecdotally.
+
+Chinese-lab models have roughly **half the shelf life** of US frontier models
+(85 vs 175 days). Read carefully, though: this is at least partly a *naming*
+artifact rather than a relevance one. Chinese labs version-bump far more often —
+`qwen3.5`, `qwen3.6`, `qwen3.8` are three tags — so each named model is shorter-
+lived by construction while the *family* persists and grows. The honest reading
+is that the China bloc iterates faster, not that its models are forgotten faster.
+Distinguishing those two properly needs family-level grouping, which this does
+not do.
+
+---
+
 ## What changed in the conclusions
 
 Nothing in `NEWS-ANALYSIS.md` or `VERIFICATION.md` is overturned. The methods
@@ -177,6 +299,14 @@ three things the counting could not reach:
    retrieval, replacing an inference drawn from two counts moving oppositely.
 3. **Unsupervised topics found a domain I had no category for** — defense and
    national security, rising 7x into 2026.
+4. **The community structure is not the one I asserted.** Louvain puts the
+   Chinese labs with Google and surfaces a serving-infrastructure bloc I never
+   named; Hugging Face is the corpus's top broker despite fading in density.
+5. **One question the corpus cannot answer.** The Twitter/Reddit/Discord lead-lag
+   is lag-0 by construction, so "which surface breaks a story" is out of reach
+   here — a negative result worth recording, since `IDEAS.md` proposed it.
+6. **The median model lives ~137 days** between first and last mention, which
+   puts a number on the churn the arcs described.
 
 ## Method notes
 

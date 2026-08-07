@@ -173,16 +173,16 @@ a general pretrained one. This is the highest-value unexploited method available
 | Change point detection (PELT) | `changepoints.py` | done |
 | Diachronic embeddings + Procrustes | `semantic_drift.py` | done |
 | Unsupervised topics (NMF) | `topics.py` | done |
-| Kleinberg burst detection | — | not written |
-| Hawkes processes / Granger | — | not written |
-| Co-occurrence networks + Leiden | — | not written |
-| Survival analysis | — | not written |
+| Kleinberg burst detection | `bursts.py` | done |
+| Granger causality / lead-lag | `leadlag.py` | done (negative result) |
+| Co-occurrence networks + Louvain | `network.py` | done |
+| Survival analysis (Kaplan-Meier) | `survival.py` | done |
 
 Findings are in [`../DEEPER-FINDINGS.md`](../DEEPER-FINDINGS.md).
 
-The remaining four all depend on the source-section split (Twitter / Reddit /
-Discord) or on the entity graph, and all are sensitive to the format regimes —
-which `changepoints.py` now dates, so they are unblocked.
+All scoped methods are implemented. Hawkes processes were dropped in favour of
+Granger: `leadlag.py` establishes that the three source sections move at lag 0 by
+construction, so there is no cascade for a self-exciting model to fit.
 
 ## Recommended order
 
@@ -196,5 +196,7 @@ which `changepoints.py` now dates, so they are unblocked.
 4. **Kleinberg bursts + Hawkes** — only after 1, since both are sensitive to the
    regime changes.
 
-Items 1-3 are now implemented; see the status table above. Kleinberg bursts and
-Hawkes remain, and both are now unblocked by the regime dates.
+All of it is now implemented; see the status table. The recurring lesson across
+every method was the same: get the unit of observation right first. Binary
+presence saturates, raw counts follow issue length, and titles measure editorial
+framing — three different ways to measure the wrong thing confidently.
