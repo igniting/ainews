@@ -1,5 +1,13 @@
 # What actually happened, 2023–2026
 
+> **⚠️ Read [`VERIFICATION.md`](VERIFICATION.md) alongside this.** This document
+> was written from titles and tags (0.58% of the corpus). Checking it against the
+> article bodies confirmed four claims, corrected three, and refuted two. The
+> corrections are marked inline below. The headline error: title-based measures
+> track *what the editor picked as the day's story*, not how much something was
+> covered — which badly understated the Chinese labs and wrongly showed OpenAI
+> declining.
+
 Read from the archive's headline timelines (`analysis/arcs.py`) and domain
 tracking (`analysis/domains.py`). The title of each issue is the editor's verdict
 on what mattered that day, so "headline days" — days a company *was* the story —
@@ -48,11 +56,15 @@ race against Meta). Mistral kept shipping through 2025 — Agents API, Magistral
 Voxtral, Mistral 3 — and the archive kept covering it, but never again as the
 day's story.
 
+> **CORRECTED:** the China thesis is confirmed and much stronger than stated (73:1 → 42:1 inversion). But "decays to zero" is a headline artifact — Mistral is in 47% of 2026 issues, raised $1.7B at $11.7B, and Devstral 2 beat DeepSeek v3.2 in 71% of third-party human evals in Dec 2025.
+
 **The lesson in the arc:** Mistral's fall wasn't a collapse in output. It was
 the open-weights frontier moving to China. Mistral's decline and DeepSeek's rise
 are the same event viewed from two sides.
 
 ### DeepSeek: the only company that moved a stock index
+
+> **CORRECTED:** the "protagonist → benchmark" reading below is not supported. DeepSeek's yardstick framing *peaks* at its 2025H1 protagonist moment (56% of issues) and falls after. See VERIFICATION.md.
 
 DeepSeek's arc has a genuinely unusual property — it escapes the AI press
 entirely. The build-up is technical and gradual: *"DeepSeek-V2 beats Mixtral
@@ -108,6 +120,8 @@ shift about nine months before it became the field's dominant story.
 
 ### OpenAI: still the largest, no longer the default
 
+> **REFUTED:** OpenAI's coverage did **not** decline. Headline share fell 18% → 4%, but body density is flat to rising (59.1 → 51.1 per 10k words). It stopped being the headline without being covered less.
+
 94 headline days, more than double anyone else. But the trajectory is a clean
 inverted-U: 8% → 12% → 18% → 18% → 16% → 6% → 4%.
 
@@ -142,6 +156,8 @@ On-device 1B/3B, and Multimodal"*, *"Meta Llama 3.3: 405B/Nova Pro performance a
 70B price"* — plus genuine research risk in *"Meta BLT: Tokenizer-free, Byte-level
 LLM"* and *"Chameleon"*.
 
+> **REFUTED:** Llama's decline began ~6 months *earlier* (17.2 → 5.9 per 10k words, Oct 2024 → Mar 2025). Llama 4 was a one-month spike back to 19.7, then collapse — a failed rescue, not the cause.
+
 The inflection is a single dated headline: **"Llama 4's Controversial Weekend
 Release"** (2025-04-08). After it, Llama essentially stops appearing as a
 headline subject. Meta's later appearances are about *organization*, not models —
@@ -156,6 +172,8 @@ banner moved: Qwen, DeepSeek, Moonshot/Kimi, GLM, MiniMax. That substitution is
 the single most consequential shift in the corpus.
 
 ### The China bloc: the aggregate nobody tracks as one thing
+
+> **CORRECTED — this understates it badly.** By body density these labs are near-omnipresent: Qwen in 95% of 2026 issues, DeepSeek 83%, Kimi 82%, GLM 74%, MiniMax 65%. Kimi/Moonshot rises 0.1 → 35.9 per 10k words, the steepest climb of any entity. They are covered daily while almost never being the headline.
 
 Individually these look minor — Alibaba 14 headline days, Moonshot 7, DeepSeek
 20. Together they are the story of 2025–26, and the headlines increasingly treat
@@ -197,6 +215,8 @@ don't sum to 100%):
 | Audio & speech | 21% | 11% | 19% | 23% | 13% | 6% | 8% |
 | Video | 8% | 11% | 17% | 17% | 16% | 5% | 12% |
 | Robotics & embodied | 0% | 5% | 12% | 7% | 6% | 2% | 8% |
+
+> **CONFIRMED at body level:** agentic 7.0 → 52.8 per 10k words (7.5x), retrieval 16.3 → 2.0 (8x fall), fine-tuning 39.7 → 5.3 (7.5x fall), reasoning peaks at 21.1 and settles at 3.5x its baseline. The domain analysis holds.
 
 ### The one-way door: agents
 
