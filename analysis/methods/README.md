@@ -179,6 +179,7 @@ a general pretrained one. This is the highest-value unexploited method available
 | Survival analysis (Kaplan-Meier) | `survival.py` | done |
 
 Findings are in [`../DEEPER-FINDINGS.md`](../DEEPER-FINDINGS.md).
+What to apply next, ranked, is in [`ROADMAP.md`](ROADMAP.md).
 
 All scoped methods are implemented. Hawkes processes were dropped in favour of
 Granger: `leadlag.py` establishes that the three source sections move at lag 0 by
