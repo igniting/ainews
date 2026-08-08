@@ -76,7 +76,7 @@ CONTENTS = [
     ("ch", "10", "How ideas die",
      "Retrieval fell 99%. So did things that failed. How do you tell?", "ch10"),
     ("ch", "11", "How the field keeps score",
-     "Which benchmarks are worth believing, and for how long?", None),
+     "Which benchmarks are worth believing, and for how long?", "ch11"),
     ("ch", "12", "When words change meaning",
      "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
      "you started counting in 2024?", None),
@@ -1910,6 +1910,182 @@ check.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 11
+
+CH11 = """
+<p class="first">In the last half-year of this archive, <code>MMLU</code> appears zero times in
+announcement space. So does <code>HumanEval</code>. So do <code>GSM8K</code>,
+<code>MT-Bench</code> and <code>AIME</code>. Every general-knowledge and fixed-problem-set
+benchmark that defined how the field ranked models in 2024 reaches literal zero, in 46,815
+words of text about model launches.</p>
+
+<p>They were not discredited. There was no scandal and no replacement announcement. They
+stopped being mentioned, one at a time, over about two years — and the pattern of how long each
+one lasted turns out to be regular enough to plan around.</p>
+
+<h2>How long a scoreboard lasts</h2>
+
+<p>Take each benchmark's density inside the same fixed recap section, quarter by quarter. Find
+the quarter it peaks. Then find the first quarter after that where it has fallen below a quarter
+of its peak value — the point at which the field has functionally stopped using it.</p>
+"""
+
+CH11_B = """
+<p>The median is <strong>three quarters from peak to irrelevance</strong>. MT-Bench managed
+one. MMLU and HumanEval, the two benchmarks that appear in almost every model card of early
+2024, managed two each. The most durable of the fixed-answer benchmarks, GPQA and AIME, managed
+four.</p>
+
+<p>Three never fell at all, and they are the interesting ones. But first, why the others
+went.</p>
+
+<h2>Saturation, and then contamination</h2>
+
+<p>A benchmark is a fixed set of questions with known answers. That design has a built-in
+expiry date, and it expires twice.</p>
+
+<p>The first expiry is <strong>saturation</strong>. Once the leading models score 90% on
+something, the remaining 10% is disproportionately made of ambiguous items and mislabelled
+answers, and the benchmark can no longer rank anything. A test that everyone passes measures
+nothing, and the field's response is not to fix it but to stop citing it.</p>
+
+<p>The second expiry is <strong>contamination</strong>, and it is worse because it is invisible.
+The questions are published so people can use them; being published means being on the public
+internet; being on the public internet means being in the next model's training data. At that
+point a high score may mean the model can reason, or may mean it has seen the answer, and
+nothing about the number distinguishes those.</p>
+
+<p>You can watch the anxiety about this build. Contamination language in announcement space runs
+at 0.39 in early 2024 and <strong>1.92</strong> in the final half-year — its highest value in
+the corpus, at the point where most of the benchmarks it refers to have already gone quiet.</p>
+
+<p>By late 2025 it has stopped being a caveat and become a design requirement. Here is the
+newsletter describing a new benchmark in September 2025, and note where contamination sits in
+the list of features:</p>
+
+<blockquote><p>SWE-Bench Pro: a harder successor to SWE-Bench Verified with multi-file edits
+(avg ~107 LOC across ~4 files), <strong>contamination resistance (GPL/private repos)</strong>,
+and tougher deps. Current top scores: GPT-5 = 23.3%, Claude Opus 4.1 = 22.7%, most others
+&lt;15%.</p>
+<cite>AI News, 2025-09-22</cite></blockquote>
+
+<p>Contamination resistance is listed between the edit size and the dependency difficulty, as an
+ordinary engineering property of the artifact. And the top score is 23.3%, which is what a
+benchmark looks like before it saturates.</p>
+"""
+
+CH11_C = """
+<h2>The replacement that also died</h2>
+
+<p>If fixed questions saturate and leak, the obvious fix is to stop asking fixed questions. Show
+two anonymous answers to a human, ask which is better, and aggregate a few million of those into
+a ranking. That is the Chatbot Arena, and for a while it was the most-cited scoreboard in the
+field: 2.63 in early 2024, 8.32, and a peak of <strong>12.04</strong> in the first half of
+2025.</p>
+
+<p>Then it goes 6.93, 0.56, <strong>0.43</strong>.</p>
+
+<p>Two entries from April 2025 explain the fall better than the series does. The first is about
+what the ranking measures:</p>
+
+<blockquote><p>lm-sys highlighted the importance of style and model response tone on Arena,
+demonstrated in style control ranking … They updated their leaderboard policies to reinforce
+their commitment to fair, reproducible evaluations. [@vikhyatk] shared that <strong>this is the
+clearest evidence that no one should take these rankings seriously</strong>.</p>
+<cite>AI News, 2025-04-09</cite></blockquote>
+
+<p>The operators found that response style and tone were driving the votes, and shipped a
+correction for it. A prominent practitioner read the existence of the correction as proof the
+whole thing was unsound. Both reactions are defensible, which is the problem.</p>
+
+<p>The second is about what the ranking is a ranking <em>of</em>:</p>
+
+<blockquote><p>Llama 4 quietly dropped from <strong>1417 to 1273 ELO</strong>, on par with
+DeepSeek v2.5.</p>
+<cite>AI News, 2025-04-14</cite></blockquote>
+
+<p>A hundred and forty-four Elo points, because the checkpoint that had been evaluated was not
+the checkpoint that shipped. A score you cannot reproduce on the model you are able to call is
+not a score about that model.</p>
+
+<p class="pull">Human preference is a real signal and also a measurement of formatting, length
+and tone. The moment it becomes the target, it measures the targeting.</p>
+
+<h2>What survived</h2>
+"""
+
+CH11_D = """
+<p>Three benchmarks in this archive never fall below a quarter of their peak, and two of them
+are still climbing when the corpus ends. <strong>SWE-bench</strong> asks a model to fix a real
+issue in a real repository, and the test suite decides whether it worked.
+<strong>Terminal-Bench</strong> asks it to drive a shell to a goal state.
+<strong>ARC-AGI</strong> asks it to solve visual puzzles it has not seen, from a private
+holdout set.</p>
+
+<p>What they have in common is not difficulty. It is that <em>none of them has an answer
+key</em>.</p>
+
+<div class="aside">
+<h4>Why task benchmarks outlive quiz benchmarks</h4>
+<p><strong>There is a verifier, not a lookup.</strong> The tests pass or they do not; the shell
+reaches the goal state or it does not. Correctness is computed, so it cannot be memorised from a
+published table of answers.<br>
+<strong>The task space is effectively unbounded.</strong> There are always more repositories and
+more shell tasks. When the current set saturates you add harder instances, which is a data
+problem rather than a redesign.<br>
+<strong>Partial credit is meaningful.</strong> A 23% pass rate leaves room to rank things.
+A 94% multiple-choice score does not.</p>
+</div>
+
+<p>The same logic produced a structural fix for the quiz-style benchmarks that survived by
+changing what they are. From October 2025:</p>
+
+<blockquote><p>Rolling “Humanity's Last Exam”: CAIS released a <strong>dynamic fork</strong> of
+the well-known eval dataset that <strong>swaps easier questions for harder ones as models
+improve</strong>; gated to avoid contamination.</p>
+<cite>AI News, 2025-10-08</cite></blockquote>
+
+<p>A benchmark that is a service rather than a file. It cannot saturate because it replaces its
+own easy items, and it cannot leak because the items are not all public. That is the same two
+defences the task benchmarks get for free.</p>
+
+<h2>The other replacement, and its catch</h2>
+
+<p>Running enough real tasks is expensive, so the field did the other obvious thing: it asked a
+model to grade the output. LLM-as-judge language rises from 1.08 to <strong>4.27</strong>, and
+by the end of the corpus it is denser than any individual benchmark except the task suites.</p>
+
+<p>This solves cost and scale and does not solve validity. You have replaced a fixed set of
+questions whose answers might be in the training data with a grader whose own behaviour changes
+every time it is updated — and whose preferences, like the Arena's, include style. It is a
+reasonable tool for regression testing against yesterday's output. It is a weak instrument for
+deciding whether one model is better than another, and the archive does not contain a single
+result that resolves that.</p>
+"""
+
+CH11_E = """
+<div class="aside">
+<h4>What to do about scores</h4>
+<p><strong>Assume roughly three quarters of useful life from a public benchmark's peak.</strong>
+Plan to replace your evaluation set on that cadence rather than standardising on one.<br>
+<strong>Prefer a verifier to an answer key.</strong> If correctness is computed — tests pass,
+goal state reached, output parses and satisfies constraints — the benchmark resists both
+saturation and leakage.<br>
+<strong>Distrust any score you cannot reproduce on the checkpoint you can actually call.</strong>
+A hundred and forty-four Elo points separated the evaluated Llama 4 from the shipped one.<br>
+<strong>Keep a private held-out set drawn from your own traffic.</strong> It cannot leak, it
+cannot saturate while your traffic changes, and it measures the only thing you actually care
+about.</p>
+</div>
+
+<p>The field went through roughly a dozen scoreboards in thirty-two months. The ones it kept are
+the ones that ask a model to do something and then check whether it worked; the ones it dropped
+are the ones that ask a model a question someone already knows the answer to. That is a smaller
+claim than "benchmarks are broken", and a more useful one, because it tells you which kind to
+build.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -2149,6 +2325,36 @@ def pages():
                     (1, 2))
             + CH10_C + CH10_D)
 
+    life_rows = [[C.esc(n), C.esc(w),
+                  (f"{pk} → {fell}" if fell != "—" else f"{pk} → still rising"),
+                  (f"<b>{q}</b>" if q != "still rising" else "<b>—</b>")]
+                 for n, w, f, pk, fell, q in D.BENCH_LIFE]
+    ch11 = (CH11
+            + table(["Benchmark", "What it asks", "Peak → below 25% of peak", "Quarters"],
+                    life_rows,
+                    "Table 7 · Lifespan in announcement space, measured by quarter", (3,))
+            + CH11_B
+            + fig(C.lines(D.P6,
+                          [("LMSYS Arena", D.BENCH_TW["LMSYS Arena"], "sig"),
+                           ("SWE-bench", D.BENCH_TW["SWE-bench"], "bench"),
+                           ("Terminal-Bench", D.BENCH_TW["Terminal-Bench"], "ink"),
+                           ("MMLU", D.BENCH_TW["MMLU"], "ink2")],
+                          [0, 4, 8, 12], "mentions / 10⁴ words", gutter=120),
+                  20, "Four scoreboards",
+                  "Announcement space. One quiz benchmark, one preference ranking, and two "
+                  "task suites. The preference ranking rises highest and falls furthest; the "
+                  "task suites are the only lines still climbing at the end.")
+            + CH11_C
+            + fig(C.lines(D.P6,
+                          [("contamination", D.BENCH_TW["contamination"], "sig"),
+                           ("LLM-as-judge", D.BENCH_TW["LLM-as-judge"], "bench")],
+                          [0, 2, 4], "mentions / 10⁴ words", gutter=112),
+                  21, "What replaced the certainty",
+                  "Announcement space. Worry about contaminated test sets peaks at the end of "
+                  "the corpus, alongside the cheapest available substitute for a benchmark: "
+                  "asking a model to grade the output.")
+            + CH11_D + CH11_E)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -2175,4 +2381,6 @@ def pages():
          "On measuring a document whose composition inverted.", int2),
         ("ch10", "ch", "10", "How ideas die",
          "Retrieval fell 99%. So did things that failed. How do you tell?", ch10),
+        ("ch11", "ch", "11", "How the field keeps score",
+         "Which benchmarks are worth believing, and for how long?", ch11),
     ]

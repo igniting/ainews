@@ -577,3 +577,30 @@ NAME_MACH = [
     ("MMLU / HumanEval / GSM8K", 4.33, 0.21, 0.77, 9.40, "replaced"),
     ("model merging", 1.16, 0.00, 0.00, 0.00, "dead"),
 ]
+
+# Chapter 11 — benchmarks. Announcement space, mentions per 10^4 words.
+BENCH_TW = {
+    "MMLU":           [2.63, 1.48, 0.76, 0.83, 0.15, 0.00],
+    "HumanEval":      [1.16, 0.55, 0.15, 0.00, 0.15, 0.00],
+    "LMSYS Arena":    [2.63, 8.32, 12.04, 6.93, 0.56, 0.43],
+    "SWE-bench":      [0.08, 3.70, 2.97, 2.43, 4.69, 2.14],
+    "ARC-AGI":        [0.00, 1.29, 1.07, 2.29, 2.27, 1.92],
+    "Terminal-Bench": [0.00, 0.00, 0.08, 0.76, 2.67, 3.84],
+    "GPQA":           [0.15, 0.74, 2.36, 1.46, 0.66, 0.64],
+    "AIME":           [0.00, 0.00, 2.06, 1.94, 0.40, 0.00],
+    "contamination":  [0.39, 0.00, 0.53, 1.18, 0.56, 1.92],
+    "LLM-as-judge":   [1.08, 1.66, 1.52, 1.11, 1.97, 4.27],
+}
+# (benchmark, what it asks, first seen, peak quarter, quarter it fell below 25% of peak, quarters)
+BENCH_LIFE = [
+    ("MT-Bench", "rated answers", "2024Q2", "2024Q2", "2024Q3", "1"),
+    ("MMLU", "multiple-choice recall", "2024Q1", "2024Q2", "2024Q4", "2"),
+    ("HumanEval", "fixed coding problems", "2024Q1", "2024Q2", "2024Q4", "2"),
+    ("LMSYS Arena", "human preference", "2024Q1", "2025Q1", "2025Q4", "3"),
+    ("FrontierMath", "fixed maths problems", "2024Q4", "2025Q4", "2026Q3", "3"),
+    ("GPQA", "graduate-level recall", "2024Q2", "2025Q1", "2026Q1", "4"),
+    ("AIME", "fixed maths problems", "2025Q1", "2025Q1", "2026Q1", "4"),
+    ("SWE-bench", "fix a real repository", "2024Q2", "2026Q1", "—", "still rising"),
+    ("ARC-AGI", "solve unseen puzzles", "2024Q3", "2026Q1", "—", "still rising"),
+    ("Terminal-Bench", "drive a shell to a goal", "2025Q2", "2026Q3", "—", "still rising"),
+]
