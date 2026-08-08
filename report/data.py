@@ -666,13 +666,17 @@ KM_WHY = [("Chinese labs", "5.44", "2025-07-29", "77 d"),
 # (what was published, what was true, root cause)
 LEDGER = [
     ("OpenAI's share of headlines fell from 18% to 4%",
-     "Title templating rose from 8% to 68% of issues. Conditioned on descriptive titles the "
-     "series is 29% → 18%, and every company falls.",
-     "field"),
+     "Templated titles rose from 8% to 68% of issues, so every company falls. The template "
+     "was the mirror's, not the newsletter's: 8% of issues were sent that way.",
+     "copy"),
     ("Quiet-day language rose sharply, so the field was slowing",
-     "The title and lede are templates. 26 of the last 30 issues open that way, including "
-     "several major launches.",
-     "field"),
+     "The stored title and lede are placeholders. 80 of 133 recoverable issues went out "
+     "under a real headline, including several major launches.",
+     "copy"),
+    ("The editorial layer thinned to nothing — a median of 3 words per issue by 2026",
+     "The mirror had stopped carrying it. Restored from the sent emails the 2026 median is "
+     "183 words, close to the 2024 peak of 190.",
+     "copy"),
     ("<code>context rot</code> was a rising concern across the field",
      "A Discord idiom. It disappears entirely once chat logs are excluded from the corpus.",
      "document"),
@@ -689,11 +693,17 @@ LEDGER = [
      "At family level they are the longest-lived cohort measured, 398 days against 315.",
      "unit"),
 ]
-LEDGER_KIND = {"field": "the field stopped meaning what it meant",
+LEDGER_KIND = {"copy": "the archive was a copy, and the copy was lossy",
                "document": "the document stopped being the document",
                "unit": "the unit of observation was wrong"}
 # Share of issues opening with a templated non-title, by year
-TEMPLATED = [("2023", 8), ("2024", 18), ("2025", 43), ("2026", 68)]
+# Share of issues whose stored `title` field is a template rather than a description.
+# This series measures the GitHub mirror, not the newsletter: on the 133 issues recoverable
+# from the sent emails (2026-01-26 on), only 8.3% were actually published under a templated
+# subject line, against the 68% the mirror stores. See analysis/methods/titles.py.
+TEMPLATED = [("2023", 8), ("2024", 16), ("2025", 42), ("2026", 68)]
+TEMPLATED_PUBLISHED = 8.3
+TEMPLATED_EVENT = [(3, "as actually sent: 8%")]
 
 # Chapter 15 — one question, six defensible units. Fine-tuning, 2024H1 → 2026H2.
 # (unit, what one row is, start, end, change)

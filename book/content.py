@@ -148,7 +148,7 @@ amount possible.</p>
 same kind of text. The recaps underneath the header are model-generated from the sampled
 sources. The passage <em>above</em> it — the headline, the opening claim, the judgement about
 what mattered that day — is written by a person, and across the whole archive it comes to
-<strong>98,384 words, or 0.64% of the corpus</strong>. Everything else is summary.</p>
+<strong>124,977 words, or 0.81% of the corpus</strong>. Everything else is summary.</p>
 
 <p>You can watch the seam. The human passage regularly argues with the summaries below it, and
 it is the only place in the corpus where anyone commits to an opinion that could later look
@@ -278,7 +278,7 @@ kept separate on the page. Nobody designed this as a measuring device. It is one
 
 <p>There is a fourth layer, and it is different in kind. Above all three recaps sits a short
 passage written by the editor — the headline claim, the judgement, the argument. It is thin,
-98,384 words against 15.3 million, and where the other three sample a <em>population</em>, this
+124,977 words against 15.4 million, and where the other three sample a <em>population</em>, this
 one samples a <em>person</em>. That makes it a confound when you are measuring the field and a
 signal when you are measuring the coverage, and it is worth keeping separate for both
 reasons.</p>
@@ -393,18 +393,19 @@ narrative</em>.</p>
 
 <hr class="sep">
 
-<p>Here are four consecutive titles from the summer of 2026, exactly as published:</p>
+<p>Here are four consecutive titles from March 2026, exactly as the archive stores them:</p>
 
 <blockquote><p>not much happened today<br>
 not much happened today<br>
 not much happened today<br>
 not much happened today</p></blockquote>
 
-<p>Underneath those four issues, among other things, were a frontier model launch, a major
-open-weights release, and a funding round in the billions. The phrase is not a description.
-At some point in 2025 it had quietly become the newsletter's default title — the thing that
-goes in the field when the editor has not written something better yet. In 2023, zero percent
-of titles began that way. In 2026, <strong>68%</strong> did.</p>
+<p>Underneath those four issues, among other things, were an agent launch from Replit, an
+essay on raising your expectations of language models, and an NVIDIA GTC keynote announcing a
+trillion-dollar sale. The phrase is not a description. It is what sits in the
+<code>title</code> field when nothing else does, and the share of issues carrying it climbs
+steadily across the corpus: 8% in late 2023, 27% by the second half of 2024, 46% through late
+2025, <strong>85%</strong> in the final months.</p>
 
 <p>My series was not measuring which companies led the news. It was measuring <em>how often
 the title field got filled in</em>. And because the templating ramped up over exactly the
@@ -427,17 +428,48 @@ using the old label.</p>
 <p class="pull">There is no statistical test for “this field stopped meaning what it used to
 mean.” There is only reading it.</p>
 
+<h2>The same mistake, one level down</h2>
+
+<p>That is where this interlude ended for several months, and it was still wrong.</p>
+
+<p>What I had been reading was not the newsletter. It was a public mirror of the newsletter,
+and I had never checked it against the thing it mirrored. When I finally went back to the sent
+emails — the issues as they actually landed in an inbox — the four titles above were not what
+anyone received. They went out as <em>Replit Agent 4: The Knowledge Work Agent</em>, <em>The
+high-return activity of raising your aspirations for LLMs</em>, <em>Context Drought</em>, and
+<em>NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sale</em>.</p>
+
+<p>Of the 133 issues I could recover, <strong>80</strong> that the archive files under a
+templated title had been published under a real headline. Measured on what was sent instead of
+what was stored, the templated share in the first half of 2026 is <strong>4.6%</strong>, not
+64%. The template is real — some days genuinely went out as <em>not much happened today</em> —
+but the archive inflates it fourteenfold.</p>
+
+<p>So the field did not lose its meaning because an editor got tired. It lost it because
+somewhere between the newsletter and the mirror a pipeline began dropping the subject line and
+writing a placeholder, and the placeholder was plausible enough to read as editorial fatigue.
+The same thing had happened to the human-written opening underneath it, which the mirror
+replaced with the words <em>a quiet day</em> on 104 issues that were nothing of the kind.
+Restoring those from the emails moved the typical issue's editorial opening from three words
+back to 183 — roughly where it had been at the newsletter's most expansive, in 2024.</p>
+
+<p class="pull">The first correction caught a field that had changed meaning. The second caught
+the fact that I had been reading a copy and calling it the thing.</p>
+
 <h2>What survived</h2>
 
-<p>The fix was to restrict every headline measurement to titles that actually describe
-something, which drops roughly half the corpus in the later years and makes the remaining
-series much noisier and much less quotable. Under that restriction, the OpenAI collapse
-disappears. So does most of the fragmentation story that had been built on top of it.</p>
+<p>There is no fix that rescues the original series. The stored title cannot be repaired, and
+the published subject lines exist only for the last seven months of the corpus, which is
+another way of saying that the measurement I wanted cannot be made across the window I wanted
+it for. The OpenAI collapse disappears either way, and so does most of the fragmentation story
+built on top of it.</p>
 
 <p>What survived was the thing I had not built a story around: measurements taken inside the
 body of the issues, in fixed sections, where the population writing the text was held constant.
-That is the instrument used everywhere in this book, and the reason it is used is that the
-obvious alternative failed first.</p>
+Those sections came through the mirror intact — byte-identical to the sent emails on every
+issue I could check, which is why the rest of this book still stands. That is the instrument
+used everywhere here, and the reason it is used is that the obvious alternative failed first,
+and then failed again underneath.</p>
 
 <p>The general form of the lesson is short enough to keep. <strong>Before you measure a field,
 read enough of it to know what your fields contain.</strong> Not the schema — the values.
@@ -2559,18 +2591,18 @@ three has a different detection method that costs almost nothing to run.</p>
 """
 
 INT3_B = """
-<h2>The first kind: a field stopped meaning what it meant</h2>
+<h2>The first kind: the archive was a copy, and the copy was lossy</h2>
 
-<p>Two of the six come from treating a database field as though its contents were stable. The
-<code>title</code> column of this archive contains a title in 2023 and, increasingly, a
-placeholder afterwards.</p>
+<p>Three of the seven come from treating a database field as though its contents were stable.
+The <code>title</code> column of this archive contains a title in 2023 and, increasingly, a
+placeholder afterwards, and the human-written opening underneath it goes the same way.</p>
 """
 
 INT3_C = """
 <p>Eight percent of 2023 issues open with a non-title — <em>not much happened today</em>,
-<em>a quiet weekend</em>, <em>small news items</em>. By 2026 it is <strong>68%</strong>, and
-26 of the last 30 issues in the archive are titled that way, including days carrying frontier
-model launches and billion-dollar funding rounds.</p>
+<em>a quiet weekend</em>, <em>small news items</em>. By the end of the archive it is
+<strong>85%</strong>, including days carrying frontier model launches and billion-dollar
+funding rounds.</p>
 
 <p>Any series built on titles therefore has a denominator that is quietly filling with blanks.
 Every company's headline share falls; I picked the two I expected to fall and wrote a story
@@ -2581,9 +2613,19 @@ field.</p>
 <p><strong>Detection:</strong> read the values, not the schema. Twenty rows, spread across the
 range, read by a person. It takes an afternoon and nothing else catches this.</p>
 
+<p><strong>What reading the values still missed.</strong> Nothing above is wrong, and all of it
+is beside the point. Reading the archive carefully establishes that its title field went
+blank; it cannot establish <em>why</em>, because the answer is not in the archive. The
+newsletter had gone on writing titles the whole time — the same four issues went out as
+<em>Context Drought</em> and <em>NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and
+announces $1T sale</em> — and the blanks were introduced by the mirror I was reading. On the
+133 issues recoverable from the sent emails, 80 of the templated titles turn out to be real
+headlines, and the rate for the first half of 2026 falls from 64% to 4.6%. Detection at this level costs more than
+an afternoon: it requires a second copy of the data, obtained by a different route.</p>
+
 <h2>The second kind: the document stopped being the document</h2>
 
-<p>Three of the six come from one cause. The archive's issues are assembled from three kinds of
+<p>Three of the seven come from one cause. The archive's issues are assembled from three kinds of
 source — chat logs, forum threads and posts — and the proportions invert completely across the
 corpus. The median issue in early 2024 is almost entirely chat; the median issue at the end
 contains none at all.</p>
@@ -2609,7 +2651,7 @@ of this book's surviving results depend on.</p>
 
 <h2>The third kind: the unit of observation was wrong</h2>
 
-<p>One of the six, and it is the one I would most likely make again, because nothing about it
+<p>One of the seven, and it is the one I would most likely make again, because nothing about it
 looks like an error.</p>
 
 <p>Measuring how long models stay in the conversation, I used the model tag as the subject.
@@ -2650,7 +2692,7 @@ a good one.</p>
 <p>There is a selection effect worth naming, because it operates on published work generally and
 not just on this project.</p>
 
-<p>In every one of the six cases, <strong>the wrong finding was more quotable than the
+<p>In every one of the seven cases, <strong>the wrong finding was more quotable than the
 correction</strong>. “OpenAI's share of the conversation collapsed” is a headline; “headline
 share is uninformative because the title field is increasingly a placeholder” is a footnote.
 “Chinese models have half the shelf life” is a slide; “the ranking depends on whether you count
@@ -2665,7 +2707,7 @@ re-examine.</p>
 
 <h2>What it cost</h2>
 
-<p>Roughly two months, six findings, and one genuinely load-bearing claim that had already been
+<p>Roughly two months, seven findings, and one genuinely load-bearing claim that had already been
 written up before it collapsed. Set against that, two of the three fixes produced things worth
 more than what they destroyed: the source split became the comparison this book is organised
 around, and the family-level grouping turned a wrong recommendation into a right one.</p>
@@ -2831,14 +2873,26 @@ to do all of it beautifully to a quantity nobody meant to measure.</p>
 # ---------------------------------------------------------------- chapter 16
 
 CH16 = """
-<p class="first">The last issue in this archive is dated 6 August 2026. Its title is
-<em>not much happened today</em>, and the human-written line underneath it is four words
-long:</p>
+<p class="first">The last issue in this archive is dated 6 August 2026. In the archive its title
+is <em>not much happened today</em> and the human-written line underneath it is three words
+long — <em>a quiet day.</em> Neither is what was published. The issue went out under a
+headline and a subtitle of its own:</p>
 
-<blockquote><p><strong>a quiet day.</strong></p>
-<cite>AI News, 2026-08-06 — the final issue</cite></blockquote>
+<blockquote><p><strong>AMD buys Taalas</strong><br>
+<em>The Inference Inflection is HEATING up.</em></p>
+<cite>AI News, 2026-08-06 — the final issue, as sent</cite></blockquote>
 
-<p>Here is part of what the machine summary underneath that sentence describes:</p>
+<p>Underneath that, the editor was not being quiet at all. He was collecting on a call he had
+made twice:</p>
+
+<blockquote><p>In <em>The Custom ASIC Thesis</em> we said Taalas was worth paying attention to,
+and in <em>the Inference Inflection</em> we said everything would go vertical. Our Baseten
+episode had some skeptical counterpoints against etched LLMs, not just custom ASICs, but
+clearly Lisa Su disagrees for now.</p>
+<cite>AI News lede, 2026-08-06</cite></blockquote>
+
+<p>And here is part of what the machine summary further down the same issue describes — a third
+account of the same day, which agrees with neither of the first two:</p>
 
 <blockquote><p>Meta's Muse Spark 1.2 rapidly rose to frontier-tier with top 5 ranking on Vals
 Index at <strong>$0.69/test</strong>, being 3× cheaper than Kimi and 10×+ cheaper than Fable,
@@ -2846,10 +2900,12 @@ Opus, and 5.6 Sol. It achieved <strong>gold-medal-level performance in five STEM
 Olympiads</strong> with perfect theory scores in APhO and IPhO.</p>
 <cite>AI News, 2026-08-06</cite></blockquote>
 
-<p>Nothing at the top of that page tells you which of those two things is true. Both are, in
-different senses: it was an ordinary Thursday in a field where a model winning five Olympiad
-golds is an ordinary Thursday. The only way to find out was to read past the headline, and that
-is the whole problem, still present on the archive's last day.</p>
+<p>So the final day of this corpus has three accounts of itself: an archive that says nothing
+happened, an editor who says the inference market just turned, and a summary that says a model
+won five Olympiad golds. All three are true, in different senses, and they are ordered by
+distance from the day — the further from it you stand, the flatter it looks. The one that got
+stored, indexed and handed to me was the flattest. The only way to find out was to read past
+it, and that is the whole problem, still present on the archive's last day.</p>
 
 <p>This chapter is what to do about it, stated so it works on any technical field and takes
 about an hour a month.</p>
@@ -3002,8 +3058,8 @@ retrospective clarity will be available in time to help. What is available is th
 what is being announced and what is being run — and that gap, unlike the future, you can measure
 this afternoon.</p>
 
-<p class="pull">A quiet day, with five Olympiad golds underneath it. You only find out by
-reading.</p>
+<p class="pull">A quiet day, with an inference inflection and five Olympiad golds underneath it.
+You only find out by reading.</p>
 """
 
 
@@ -3349,12 +3405,15 @@ def pages():
                     "Table 14 · Every finding withdrawn or reversed, and why")
             + INT3_B
             + fig(F.timeline([y for y, _ in D.TEMPLATED],
-                             [("templated titles", [v for _, v in D.TEMPLATED], "sig")],
-                             [0, 25, 50, 75], "% of issues", every=1, gutter=126),
-                  25, "The title field filling with placeholders",
-                  "Share of issues whose title is a template — “not much happened today”, "
-                  "“a quiet weekend”, “small news items” — rather than a description of the "
-                  "day. Any series built on titles inherits this denominator.")
+                             [("stored titles", [v for _, v in D.TEMPLATED], "sig")],
+                             [0, 25, 50, 75], "% of issues", every=1, gutter=126,
+                             events=D.TEMPLATED_EVENT),
+                  25, "A placeholder that was never published",
+                  "Share of issues whose stored title is a template — “not much happened "
+                  "today”, “a quiet weekend” — rather than a description of the day. The rise "
+                  "is real and the explanation is not: on the 133 issues recoverable from the "
+                  f"sent emails, only <b>{D.TEMPLATED_PUBLISHED}%</b> went out under a "
+                  "templated subject. The series measures the mirror, not the newsletter.")
             + INT3_C + INT3_D)
 
     unit_rows = [[C.esc(u), f"<i>{C.esc(row)}</i>", a, b, f"<b>{chg}</b>"]
