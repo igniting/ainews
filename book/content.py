@@ -125,12 +125,21 @@ words</strong>, covering 82% of the weekdays in between. The median issue is abo
 words long, which is a third of a short novel, published daily, about the previous day.</p>
 
 <p>Each issue reads the same set of places and summarises them separately: a Twitter recap
-built from a declared list of accounts, a Reddit recap from a declared list of subreddits,
-and — until March 2026 — a Discord recap assembled from message logs across dozens of
-servers. The sampling frame is stated in the issue itself, which turns out to matter
-enormously later. The summaries are model-generated; the framing, the headline, the lede
-and the editorial judgement are human. You can watch the seams: the top-of-issue commentary
-argues with the summaries underneath it.</p>
+built from a declared list of accounts, a Reddit recap from a declared list of subreddits, and
+— until March 2026 — a Discord recap assembled from message logs across dozens of servers.</p>
+
+<p>It also tells you, every single day, exactly what it looked at:</p>
+
+<blockquote><p>AI News for 12/1/2025-12/2/2025. We checked 12 subreddits, 544 Twitters and 24
+Discords (205 channels, and 9665 messages) for you. Estimated reading time saved (at 200wpm):
+697 minutes.</p>
+<cite>AI News, standard header</cite></blockquote>
+
+<p>That header is printed 690 times and it is the most useful line in the whole corpus: a
+source that declares its own sampling frame, daily, is a rare thing and it makes an enormous
+amount possible. The summaries underneath it are model-generated; the framing, the headline,
+the opening commentary and the editorial judgement are human. You can watch the seams — the
+top-of-issue commentary regularly argues with the summaries below it.</p>
 """
 
 CH1_B = """
@@ -141,8 +150,10 @@ factor of five in the second quarter of 2026</strong>, when the newsletter dropp
 Discord recap entirely. The cadence barely moved through all of it — roughly 65 issues a
 quarter, start to finish.</p>
 
-<p>Hold on to that collapse. Nearly everything that went wrong in the analysis behind this
-book traces back to it, and the fix for it produced the book's central idea.</p>
+<p>That collapse matters more than it looks. An issue in early 2024 is mostly a digest of
+chat logs; an issue in mid-2026 is mostly a digest of forum threads and tweets. They are not
+the same kind of document, and anything you count across both is partly counting the
+change.</p>
 
 <h2>Why a source written forwards is worth anything</h2>
 
@@ -194,11 +205,11 @@ count of <em>distinct things mentioned</em> is partly counting the newsletter's 
 And it stops. Discord coverage ends in March 2026; the copy of the archive behind this book
 ends in August 2026. Anything that looks like a decline after those dates is the instrument.</p>
 
-<p>What is left, after all of that, is still remarkable: a dated, daily, self-describing
-record of what one fast-moving technical field paid attention to, across nearly a thousand
-consecutive days, written by people who did not know how it ended.</p>
-
-<p>The next chapter is the one that makes it useful.</p>
+<p>What is left, after all of that, is still remarkable: a dated, daily, self-describing record
+of what one fast-moving technical field paid attention to, across nearly a thousand consecutive
+days, written by people who did not know how it ended. Everything that follows is an attempt to
+read it carefully — starting with the fact that it is not one record but three, kept side by
+side, and that they disagree.</p>
 """
 
 
@@ -401,28 +412,25 @@ mean.” There is only reading it.</p>
 <p>The fix was to restrict every headline measurement to titles that actually describe
 something, which drops roughly half the corpus in the later years and makes the remaining
 series much noisier and much less quotable. Under that restriction, the OpenAI collapse
-disappears. So does most of the fragmentation story — and the rest of it died later, for an
-unrelated reason, in a way I will get to in Interlude III.</p>
+disappears. So does most of the fragmentation story that had been built on top of it.</p>
 
 <p>What survived was the thing I had not built a story around: measurements taken inside the
-body of the issues, in fixed sections, where the population writing the text was held
-constant. That is the instrument this book uses everywhere, and the reason it uses it is that
-the obvious alternative failed first.</p>
+body of the issues, in fixed sections, where the population writing the text was held constant.
+That is the instrument used everywhere in this book, and the reason it is used is that the
+obvious alternative failed first.</p>
 
-<p>I would like to report that this was the last time. It was the second of four.</p>
+<p>The general form of the lesson is short enough to keep. <strong>Before you measure a field,
+read enough of it to know what your fields contain.</strong> Not the schema — the values.
+Twenty issues, spread across the range, read properly. It takes an afternoon and it is the only
+check that catches this class of error at all.</p>
 """
 
 
 # ---------------------------------------------------------------- chapter 3
 
 CH3 = """
-<p class="first">To understand how strange the end of this story is, you have to start with a
-field that believed its central activity was making models — and by “making,” it did not mean
-training them from scratch. It meant taking someone else's weights and doing something to
-them.</p>
-
-<p>In the first half of 2024, <code>fine-tuning</code> appears 34.9 times per ten thousand
-words of the newsletter's Twitter recap. That is the densest any theme in this archive reaches
+<p class="first">In the first half of 2024, <code>fine-tuning</code> appears 34.9 times per
+ten thousand words of the newsletter's Twitter recap. That is the densest any theme in this archive reaches
 until agents in 2025, and it means roughly one mention every three hundred words, every day,
 for six months. Retrieval-augmented generation runs at 22.5. Between them they are the
 architecture: take an open model, tune it on your data, put a vector database in front of it,
@@ -432,8 +440,9 @@ ship.</p>
 The default architecture of 2024 essentially stopped being discussed.</p>
 
 <p>The obvious reading — the field tried fine-tuning and RAG, and they did not work — is
-wrong for both, in two different ways, and untangling that is most of Part III. This chapter
-is about the world before it happened.</p>
+wrong for both, and wrong in two different ways. This chapter is about the world before any of
+that happened — what the job looked like when the answer to almost every question was
+<em>take an open model and change it</em>.</p>
 
 <h2>December 2023: the Mixtral rush</h2>
 
@@ -1586,13 +1595,13 @@ whether the exploit in the prompt is being written or being read.</p>
 <p>That finding is three weeks old at the point this archive stops. There is no way to say
 here how it resolved, and it would be dishonest to imply otherwise.</p>
 
-<h2>Where Part II ends</h2>
+<h2>Thirty-two months</h2>
 
-<p>Nine chapters and thirty-two months ago, the field's central activity was taking someone
-else's weights and tuning them, and the archive's densest technical term was
-<code>fine-tuning</code>. It ends with an internal model chaining a zero-day to cheat on a
-benchmark, and the archive's densest technical terms are <code>eval</code> and
-<code>agent</code>.</p>
+<p>The archive opens with a field whose central activity was taking someone else's weights and
+tuning them, and whose densest technical term was <code>fine-tuning</code>. It closes with an
+internal model chaining a zero-day to cheat on a benchmark, and its densest technical terms are
+<code>eval</code> and <code>agent</code>. Set the security turn against that span and it stops
+looking like a change of subject.</p>
 
 <div class="aside">
 <h4>The arc, in one line each</h4>
@@ -1609,9 +1618,10 @@ response.</p>
 surface, by between two weeks and eighteen months. None of them was announced as a transition.
 Every one of them looked, at the time, like an ordinary week.</p>
 
-<p>Part III stops telling the story and asks what any of it is worth: how you tell absorption
-from failure, whether the benchmarks meant anything, and what your own metrics are quietly
-measuring instead of what you think.</p>
+<p>The through-line is the same each time, and it is the one this chapter began with. The
+field shipped a capability, discovered what it implied, and then went looking for the vocabulary
+to describe the implication — always in that order, and always with the practitioners getting
+there first.</p>
 """
 
 
@@ -1730,8 +1740,10 @@ to mean. In the second, the document stopped being the document. Neither is visi
 you can run on the numbers, and both were found the same way — by reading the thing I was
 counting.</p>
 
-<p>There is a third mistake and a fourth. They are in Interlude III, with the rest of the
-accounting.</p>
+<p>Neither was cheap. Between them they cost four published findings and about two months.
+Both were also, in the end, worth more than the results they destroyed — the first produced the
+rule about reading before counting, and the second produced the three-surface split that most of
+this book's better findings depend on.</p>
 """
 
 

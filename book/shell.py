@@ -50,6 +50,11 @@ code{background:var(--sunk);padding:.06em .3em;border-radius:2px}
 
 /* chapter opener */
 .opener{padding:4.5rem 0 2.2rem;border-bottom:1px solid var(--rule);margin-bottom:2.6rem}
+/* interludes are asides about method, set apart from the running argument */
+.inter-open{border-left:3px solid var(--sig);padding-left:1.4rem;border-bottom-style:dotted}
+.inter-open h1{font-style:italic;font-weight:500}
+.chno .kind{font-family:var(--book);font-style:italic;text-transform:none;letter-spacing:0;
+  color:var(--soft);font-size:.98rem;margin-left:.9rem}
 .chno{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--sig);margin:0 0 1.1rem}
 h1{font-family:var(--book);font-weight:600;font-size:clamp(2.1rem,5.4vw,3.2rem);

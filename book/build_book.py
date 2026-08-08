@@ -124,7 +124,11 @@ def contents_page(drafted: set[str]) -> str:
 def chapter_page(entry, prev, nxt) -> str:
     slug, kind, num, title, question, body = entry
     label = f"{KIND_LABEL[kind]} {num}"
-    opener = (f'<header class="opener"><p class="chno">{esc(label)}</p>'
+    # Interludes are asides about method, not steps in the argument. Mark them so a
+    # reader landing on one knows immediately that the narrative has not moved on.
+    cls = "opener inter-open" if kind == "inter" else "opener"
+    tag = ('<span class="kind">an aside on method</span>' if kind == "inter" else "")
+    opener = (f'<header class="{cls}"><p class="chno">{esc(label)}{tag}</p>'
               f'<h1>{esc(title)}</h1><p class="q">{question}</p></header>')
     html = ('<div class="col">' + opener + '</div>'
             + wrap_columns(body)
