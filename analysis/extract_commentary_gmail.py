@@ -61,6 +61,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import base64
 import datetime as dt
 import html
 import json
@@ -87,9 +88,57 @@ COVERS = re.compile(r"AI News for\s*(\d{1,2})/(\d{1,2})/(\d{4})\s*[-–—]\s*"
                     r"(\d{1,2})/(\d{1,2})/(\d{4})", re.I)
 # Substack stores the unresized original in a JSON blob on the img tag.
 DATA_ATTRS = re.compile(r'data-attrs="([^"]*)"', re.I)
-# `?j=<base64>` on a redirect link identifies the subscriber who was sent the
-# email, not the link. It is removed from every URL before anything is written.
-RECIPIENT_TOKEN = re.compile(r"([?&]amp;|[?&])j=[A-Za-z0-9_.\-]+")
+# Newsletter mail carries two per-recipient identifiers, and both are removed
+# from every URL before anything is written:
+#   ?j=<base64>     on a Substack redirect link — decodes to a subscriber id
+#   ?token=<jwt>    on the open-tracking pixel — decodes to the *email address*
+RECIPIENT_TOKEN = re.compile(r"([?&]amp;|[?&])(?:j|token|r|isFreemail|publication_id"
+                             r"|post_id|utm_[a-z_]+)=[A-Za-z0-9_.\-]+")
+# substack.com/redirect/2/<base64> and /app-link/... embed a JWT carrying the
+# reader's user_id. There is no non-identifying part to keep, so the whole link goes.
+RECIPIENT_LINK = re.compile(
+    r"https?://(?:substack\.com/(?:redirect/2/|app-link/)|[^\s\")]*?/action/)"
+    r"[^\s\"<>)]+", re.I)
+# The open-tracking pixel itself carries nothing but that identifier, so the
+# whole image goes rather than leaving a stripped URL behind.
+TRACKING_PIXEL = re.compile(
+    r"<img[^>]*\b(?:eotrx\.|/o/[0-9a-f]{8,}/p\.gif|open\.aspx|/track/open)[^>]*>", re.I)
+# Invisible padding some providers use to pad the preview text.
+INVISIBLE = re.compile(r"[\u00ad\u200b-\u200f\u2060\ufeff]")
+# Anything that still looks like it could carry an address, checked before writing.
+LOOKS_B64 = re.compile(r"[A-Za-z0-9_-]{24,}")
+
+
+# Addresses the newsletter publishes about itself. A recipient's address is
+# never one of these, so they are not what this check is looking for.
+PUBLISHER_DOMAINS = ("buttondown.email", "smol.ai", "substack.com", "ai.engineer",
+                     "latent.space", "example.com")
+
+
+def carries_address(text: str) -> str:
+    """Recipient data in the clear, or recoverable from a base64 blob. '' if clean.
+
+    Two separate risks. A plaintext address is only a problem when it is not the
+    publisher's own — the newsletter prints `hello@ai.engineer` in its footer and
+    that is public. A base64 blob that decodes to *any* address is always a
+    problem: that is an open-tracking token, and it identifies the reader.
+    """
+    for m in re.finditer(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", text):
+        addr = m.group(0)
+        if not addr.lower().endswith(PUBLISHER_DOMAINS) and not addr.endswith((".png", ".jpg")):
+            return addr
+    for blob in LOOKS_B64.findall(text):
+        try:
+            raw = base64.urlsafe_b64decode(blob + "=" * (-len(blob) % 4))
+        except Exception:                                      # noqa: BLE001
+            continue
+        hit = re.search(rb"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", raw)
+        if hit:
+            return hit.group(0).decode("utf-8", "replace") + " (base64)"
+        ident = re.search(rb'"?(user_id|subscriber_id)"?\s*[:=]\s*"?(\d+)', raw)
+        if ident:
+            return ident.group(0).decode("utf-8", "replace") + " (base64)"
+    return ""
 # Quoted tweets are the editor's evidence, so they are kept as quotations rather
 # than flattened into a link. Substack renders them as a nest of tables.
 TWEET = re.compile(r'<table[^>]*data-component-name="Tweet[^"]*"[^>]*>', re.I)
@@ -232,7 +281,9 @@ def image(tag: str) -> str:
 def to_markdown(fragment: str) -> str:
     """HTML -> markdown, keeping the structure the commentary actually uses:
     paragraphs, headings, lists, blockquotes, links, emphasis and images."""
-    s = RECIPIENT_TOKEN.sub("", fragment)
+    s = TRACKING_PIXEL.sub("", fragment)
+    s = RECIPIENT_TOKEN.sub(r"\1", s)
+    s = INVISIBLE.sub("", s)
     s = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", "", s, flags=re.S | re.I)
     s = unwrap_tweets(s)
     s = re.sub(r"<img\b[^>]*>", lambda m: "\n\n" + image(m.group(0)) + "\n\n", s, flags=re.I)
@@ -250,10 +301,12 @@ def to_markdown(fragment: str) -> str:
     s = re.sub(r"</(p|div|figure|table|tr|ul|ol)>", "\n\n", s, flags=re.I)
     s = re.sub(r"<[^>]+>", "", s)
     s = html.unescape(s)
+    s = INVISIBLE.sub("", s)          # &shy;/&zwnj; only become characters here
     s = s.replace(" ", " ").replace("͏", "").replace(" ", "")
     s = re.sub(r"[ \t]+", " ", s)
     s = re.sub(r" *\n *", "\n", s)
     s = re.sub(r"\*\*\s*\*\*", "", s)          # emphasis left empty by a stripped tag
+    s = re.sub(r"([(\s])(https?://[^\s)]*?)[?&]+(?=[)\s])", r"\1\2", s)  # query emptied by scrubbing
     s = re.sub(r"!\[\s*\]\(\s*\)", "", s)      # an image whose source did not survive
     # A linked image arrives as [ \n\n ![](src) \n\n ](href); put it back on one line.
     s = re.sub(r"\[\s*(!\[[^\]]*\]\([^)]*\))\s*\]\(([^)]*)\)", r"[\1](\2)", s)

@@ -42,58 +42,170 @@ people:
   - osanseviero
 ---
 
+**GDM is all you need.**
 
-<!-- buttondown-editor-mode: plaintext -->**GDM is all you need.**
 
-> AI News for 3/12/2025-3/13/2025. We checked 7 subreddits, [**433** Twitters](https://twitter.com/i/lists/1585430245762441216) and **28** Discords (**224** channels, and **2511** messages) for you. Estimated reading time saved (at 200wpm): **275 minutes**. You can now tag [@smol_ai](https://x.com/smol_ai) for AINews discussions!
 
 Today's o1-preview (at this point the only model competitive with Flash Thinking at AINews tasks, and yes [o1-preview is better than o1-full or o3-mini-high](https://x.com/swyx/status/1836515558810132628)) Discord recap is spot on - Google took the occasion of their [Gemma Developer Day in Paris](https://x.com/mervenoyann/status/1899773637063761938) to launch a slew of notable updates:
 
-![image.png](https://assets.buttondown.email/images/97aaf712-d79a-40ef-b467-b5d1465e42c4.png?w=960&fit=max)
 
-https://www.youtube.com/watch?v=UU13FN2Xpyw
 
-**Gemma 3**. People are loving that it is 128k context. Other than of course strong LMArena scores for an open model:
+![](https://assets.buttondown.email/images/97aaf712-d79a-40ef-b467-b5d1465e42c4.png?w=960&fit=max)
 
-![image.png](https://assets.buttondown.email/images/3b6938f6-35d4-4819-add4-cd79b6d5cb77.png?w=960&fit=max)
+
+[
+
+![](https://i.imgur.com/PokcERC.png)
+
+![](https://img.youtube.com/vi/UU13FN2Xpyw/0.jpg)
+
+](https://www.youtube.com/watch?v=UU13FN2Xpyw)**Gemma 3**. People are loving that it is 128k context. Other than of course strong LMArena scores for an open model:
+
+
+
+![](https://assets.buttondown.email/images/3b6938f6-35d4-4819-add4-cd79b6d5cb77.png?w=960&fit=max)
+
 
 it is also a new Pareto frontier for its weight class by a country mile:
 
-![image.png](https://assets.buttondown.email/images/c3a8f375-c165-4e28-af66-caf51b461507.png?w=960&fit=max)
+
+
+![](https://assets.buttondown.email/images/c3a8f375-c165-4e28-af66-caf51b461507.png?w=960&fit=max)
+
 
 It also looks to [completely subsume PaliGemma](https://x.com/giffmana/status/1899776751925920181) in incorporating vision as a first class capability ([ShieldGemma is still a thing](https://x.com/mervenoyann/status/1899809277247623499)).
 
+
 **Gemini Flash Native Image Generation**.
+
 
 as teased at the Gemini 2 launch ([our coverage here](https://buttondown.com/ainews/archive/ainews-google-wakes-up-gemini-20-et-al/)), [Gemini 2 actually launched image editing](https://developers.googleblog.com/en/experiment-with-gemini-20-flash-native-image-generation/), which OpenAI teased and never launched, and the results are pretty spectacular (if you can [figure out how to find it in the complicated UI](https://x.com/fofrAI/status/1899924245918212201)). Image editing has never been this easy.
 
-https://x.com/19kaushiks/status/1899856652666568732?s=46
 
 
-https://x.com/m__dehghani/status/1899854209081868663?s=46
+> [![](https://pbs.twimg.com/media/Gl2ljoAacAE7Jnl.jpg)](https://x.com/19kaushiks/status/1899856652666568732)
+>
+> ![](https://pbs.twimg.com/profile_images/1730452027757703168/7d2AP5ps_normal.jpg)
+>
+> [ Kaushik Shivakumar
+>
+> @19kaushiks
+>
+> ](https://x.com/19kaushiks)
+>
+> Super excited to ship Gemini's native image generation into public experimental today :) We've made a lot of progress and still have a way to go, please send us feedback!
+> 
+> And yes, I made the image using Gemini.
+>
+> [https://x.com/19kaushiks/status/1899856652666568732/photo/1
+> ](https://x.com/19kaushiks/status/1899856652666568732/photo/1)
+> 2025-03-12T16:14:58.000Z
 
-https://x.com/multimodalart/status/1899881757396099231
-
-https://x.com/fofrAI/status/1899927094727000126
 
 
+> [![](https://pbs.twimg.com/media/Gl2cbyYWgAQGkft.jpg)](https://x.com/m__dehghani/status/1899854209081868663)
+>
+> ![](https://pbs.twimg.com/profile_images/890616195875045376/GCso9UO0_normal.jpg)
+>
+> [ Mostafa Dehghani
+>
+> @m__dehghani
+>
+> ](https://x.com/m__dehghani)
+>
+> Anyone who has been in this room knows that it’s never just another day in here! This space has seen the extremes of chaos and genius!
+> 
+> ...and we ship! 
+> 
+> 
+> Happy Wednesday everyone!
+>
+> [
+> 
+> 
+>
+> ![](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/gemini-image-generation_1.2e16d0ba.fill-1200x600.png)
+>
+> 
+>
+> 
+> 
+> 
+>
+> #### 
+> 
+> 
+> Experiment with Gemini 2.0 Flash native image generation
+> 
+> 
+> - Google Developers Blog
+> 
+>
+> 
+>
+> 
+>
+> 
+> ](https://developers.googleblog.com/en/experiment-with-gemini-20-flash-native-image-generation/)
+> [https://x.com/m__dehghani/status/1899854209081868663/photo/1
+> ](https://x.com/m__dehghani/status/1899854209081868663/photo/1)
+> 2025-03-12T16:05:15.000Z
 
----
 
 
-{% if medium == 'web' %}
+> [![](https://pbs.twimg.com/media/Gl28WzgXkAAPdkH.jpg)](https://x.com/multimodalart/status/1899881757396099231) [![](https://pbs.twimg.com/media/Gl28Gs-WIAEcD0K.jpg)](https://x.com/multimodalart/status/1899881757396099231)
+>
+> ![](https://pbs.twimg.com/profile_images/1501000577165275142/cS4FyQjl_normal.jpg)
+>
+> [ apolinario 🌐
+>
+> @multimodalart
+>
+> ](https://x.com/multimodalart)
+>
+> completely sota for image editing! both generated and real images
+> 
+> great 🚢 from google! i hope to see a gemma with image generation soon too ✨
+>
+> [https://x.com/multimodalart/status/1899881757396099231/photo/1
+> ](https://x.com/multimodalart/status/1899881757396099231/photo/1)
+> [https://x.com/multimodalart/status/1899881757396099231/photo/1
+> ](https://x.com/multimodalart/status/1899881757396099231/photo/1)
+> [https://twitter.com/19kaushiks/status/1899856652666568732
+> ](https://twitter.com/19kaushiks/status/1899856652666568732)
+> 2025-03-12T17:54:43.000Z
 
 
-**Table of Contents**
 
-[TOC] 
+> [![](https://pbs.twimg.com/media/Gl3ldAzXAAA6Vis.jpg)](https://x.com/fofrAI/status/1899927094727000126) [![](https://pbs.twimg.com/media/Gl3ldAsWsAAxoWu.jpg)](https://x.com/fofrAI/status/1899927094727000126)
+>
+> ![](https://pbs.twimg.com/profile_images/1732174612178350080/X1uR3MvQ_normal.jpg)
+>
+> [ fofr
+>
+> @fofrAI
+>
+> ](https://x.com/fofrAI)
+>
+> I had to try this. Gemini 2.0 Flash Experimental with image output 🤯
+>
+> [https://x.com/fofrAI/status/1899927094727000126/photo/1
+> ](https://x.com/fofrAI/status/1899927094727000126/photo/1)
+> [https://x.com/fofrAI/status/1899927094727000126/photo/1
+> ](https://x.com/fofrAI/status/1899927094727000126/photo/1)
+> [https://twitter.com/multimodalart/status/1899887369811009802
+> ](https://twitter.com/multimodalart/status/1899887369811009802)
+> 2025-03-12T20:54:52.000Z
 
-{% else %}
 
-The **Table of Contents** and **Channel Summaries** have been moved to the web version of this email: [{{ email.subject }}]({{ email_url }})!
 
-{% endif %}
 
+
+
+
+The **Table of Contents** and **Channel Summaries** have been moved to the web version of this email: [[AINews] Gemma 3 beats DeepSeek V3 in Elo, 2.0 Flash beats GPT4o with Native Image Gen](https://buttondown.com/ainews/archive/ainews-gemma-3-beats-deepseek-v3-in-elo-20-flash/)!
+
+> AI News for 3/12/2025-3/13/2025. We checked 7 subreddits, [**433** Twitters](https://twitter.com/i/lists/1585430245762441216) and **28** Discords (**224** channels, and **2511** messages) for you. Estimated reading time saved (at 200wpm): **275 minutes**. You can now tag [@smol_ai](https://x.com/smol_ai) for AINews discussions!
 
 ---
 

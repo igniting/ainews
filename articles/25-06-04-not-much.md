@@ -40,13 +40,26 @@ topics:
 people: []
 ---
 
-
 **A happy day.**
 
-> AI News for 6/3/2025-6/4/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (218 channels, and 6571 messages) for you. Estimated reading time saved (at 200wpm): 503 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-Mistral launched a [Code](https://mistral.ai/products/mistral-code) project and [Cursor went 1.0](https://www.cursor.com/en/changelog/1-0) and Anthropic [improved Claude Code plans](https://youtu.be/Yf_1w00qIKc?si=wDtapcnvLfnq5ip4) and ChatGPT [announced more connections](https://x.com/openai/status/1930319398897889707?s=46), but probably the day rightfully belonged to AIE in terms of the news cycle, with an [incredible set of keynotes bookending the MCP track](https://www.youtube.com/watch?v=U-fMsbY-kHY) for the main stream, and notable [GraphRAG](https://www.youtube.com/watch?v=RR5le0K4Wtw) and [RecSys](https://www.youtube.com/watch?v=3k4a0PemMu4) and [Tiny Teams](https://www.youtube.com/watch?v=xhKgTkzSmuQ) tracks streamed as well.
+
+
+
+
+Mistral launched a Code project and Cursor went 1.0 and Anthropic improved Claude Code plans and ChatGPT announced more connections, but probably the day rightfully belonged to AIE in terms of
+the news cycle, with an incredible set of keynotes bookending the MCP track for the main stream, and notable GraphRAG and RecSys and Tiny Teams tracks streamed as well.
+
+
+
+Tomorrow it is time for **keynotes day 2 + SWE Agents:**
+
+
+
+https://www.youtube.com/watch?v=U-fMsbY-kHY
+
+> AI News for 6/3/2025-6/4/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (218 channels, and 6571 messages) for you. Estimated reading time saved (at 200wpm): 503 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 

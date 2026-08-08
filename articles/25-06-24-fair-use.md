@@ -49,25 +49,84 @@ people:
   - demishassabis
 ---
 
+**An important ruling, but not a final one.
+**
 
-**An important ruling, but not a final one.**
 
-> AI News for 6/23/2025-6/24/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (220 channels, and 3440 messages) for you. Estimated reading time saved (at 200wpm): 365 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-Last August, a group of authors led by Andrea Bartz [brought a class action lawsuit](https://entertainmentlawreview.lls.edu/authors-v-anthropic-the-legal-showdown-over-ai-copyright-and-fair-use/) on Anthropic PBC for "illegally downloading" their works to train Claude. The scale of the destructive book scanning (perhaps [<$2 per book](https://twitter.com/giffmana/status/1937591844252385323) esp used books) is impressive:
+
+
+
+Last August, a group of authors led by Andrea Bartz brought a class action lawsuit
+on Anthropic PBC for "illegally downloading" their
+works to train Claude. The scale of the destructive book
+scanning (perhaps <$2 per book esp used books) is impressive:
+
+
+
+
+
+
 
 ![](https://resend-attachments.s3.amazonaws.com/S9Up265zT1VJ0VA)
 
-This is of course familiar to anyone who knows [Authors Guild v Google](https://en.wikipedia.org/wiki/Authors_Guild,_Inc._v._Google,_Inc.), aka the Google Books lawsuit, which had a very similar setup, but this is the first direct ruling on the legality of pretraining on copyrighted content.
 
-The filings from that case are [here](https://www.courtlistener.com/docket/69058235/bartz-v-anthropic-pbc/) but the result today is from the [Motion for Summary Judgment](https://www.courtlistener.com/docket/69058235/231/bartz-v-anthropic-pbc/), where Anthropic [arguably](https://x.com/mjbommar/status/1937562175955980614) "won" with the explicit ruling that "training use [is] fair use".
+
+
+
+
+
+
+
+
+
+This is of course familiar to anyone who knows Authors Guild v Google, aka the Google Books lawsuit, which had a very similar setup,
+but this is the first direct ruling on the legality of
+pretraining on copyrighted content.
+
+
+
+The filings from that case are here but the result today is from the Motion for Summary Judgment, where Anthropic arguably
+"won" with the explicit ruling that "training use
+[is] fair use".
+
+
+
+
+
+
+
+
 
 ![](https://resend-attachments.s3.amazonaws.com/y4sXpTlxUVp0VvI)
 
-It seems that [the ghost of Books3](https://www.wired.com/story/battle-over-books3/) haunts Anthropic as there is a separate issue on using pirated books, but the judgment is pretty clear here and likely sets an important precedent for years to come: no less than 32 mentions of how "transformative" a use case that pretraining is, regardless of how much the LLM memorizes:
+
+
+
+
+
+
+
+
+
+
+It seems that the ghost of Books3
+haunts Anthropic as there is a separate issue on using pirated
+books, but the judgment is pretty clear here and likely sets an
+important precedent for years to come: no less than 32 mentions
+of how "transformative" a use case that pretraining
+is, regardless of how much the LLM memorizes:
+
+
+
+
+
+
 
 ![](https://resend-attachments.s3.amazonaws.com/RcxQDzqlkw3F10a)
+
+> AI News for 6/23/2025-6/24/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (220 channels, and 3440 messages) for you. Estimated reading time saved (at 200wpm): 365 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 
