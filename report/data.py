@@ -454,3 +454,41 @@ BLOC_Q = [
     ("Practice (Reddit)", "China bloc", 40, 87, 98),
     ("Practice (Reddit)", "DeepSeek alone", 17, 73, 26),
 ]
+
+# Chapter 7 — the software around the model. Mentions per 10^4 words in section.
+STACK_TW = {
+    "harness":             [1.78, 0.00, 0.15, 4.09, 22.66, 31.83],
+    "coding agents":       [2.55, 5.17, 19.43, 44.78, 54.60, 38.66],
+    "orchestration":       [0.93, 5.17, 5.94, 10.61, 21.34, 17.73],
+    "sandboxing":          [1.24, 0.37, 0.91, 3.26, 9.54, 10.68],
+    "MCP":                 [0.00, 1.29, 11.50, 12.55, 8.12, 5.55],
+    "context engineering": [0.00, 0.00, 2.06, 4.64, 1.97, 1.07],
+    "prompt engineering":  [2.86, 2.40, 1.68, 0.90, 0.25, 0.43],
+    "evals":               [28.05, 39.73, 35.65, 51.30, 60.15, 67.93],
+}
+STACK_RD = {
+    "harness":             [0.32, 0.00, 0.16, 0.25, 1.35, 5.39],
+    "coding agents":       [7.11, 2.82, 10.04, 8.84, 22.22, 15.30],
+    "orchestration":       [0.00, 0.63, 2.32, 2.94, 4.46, 6.08],
+    "sandboxing":          [0.65, 1.25, 1.40, 1.13, 1.58, 6.57],
+    "MCP":                 [0.00, 1.78, 2.48, 1.72, 2.42, 2.26],
+    "context engineering": [0.00, 0.00, 0.03, 0.19, 0.29, 0.10],
+    "prompt engineering":  [2.26, 2.35, 2.75, 2.54, 1.70, 0.39],
+    "evals":               [34.90, 28.64, 35.19, 35.69, 28.73, 60.12],
+}
+# MCP monthly in community space — a ramp, not a spike
+MCP_M_P = ["24-10", "24-11", "24-12", "25-01", "25-02", "25-03", "25-04", "25-05", "25-06",
+           "25-07", "25-08", "25-09", "25-10", "25-11", "25-12", "26-01", "26-02", "26-03"]
+MCP_M = [0.0, 2.3, 3.6, 13.3, 22.7, 38.8, 32.1, 33.1, 34.6, 25.3, 19.5, 14.3, 15.7, 10.4,
+         13.4, 11.1, 6.6, 8.8]
+MCP_EVENTS = [(1, "Anthropic publishes MCP"), (5, "OpenAI adopts it")]
+
+# Chapter 7 — fold change 2024H1 -> 2026H2 within each surface
+STACK_GAP = [
+    ("orchestration", 19.1, 9.7, "field-wide"),
+    ("harness", 17.9, 16.8, "field-wide"),
+    ("coding agents", 15.2, 2.2, "announcement-led"),
+    ("sandboxing", 8.6, 10.1, "practice leads"),
+    ("evals", 2.4, 1.7, "field-wide"),
+    ("prompt engineering", 0.15, 0.17, "gone, everywhere"),
+]

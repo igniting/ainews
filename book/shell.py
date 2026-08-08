@@ -77,6 +77,9 @@ h3{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.14em
 .aside h4{margin:0 0 .4rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;
   text-transform:uppercase;color:var(--sig);font-weight:600}
 .aside p:last-child{margin-bottom:0}
+.warn{border-left:3px solid var(--sig);background:var(--sig-tint);border-radius:0 3px 3px 0;
+  padding:1.1rem 1.3rem;margin:2rem 0;font-size:.96rem;line-height:1.6}
+.warn p:last-child{margin-bottom:0}
 .scene{border-left:2px solid var(--rule);padding-left:1.2rem;margin:2rem 0;color:var(--soft);
   font-size:.97rem}
 .scene .when{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--sig);

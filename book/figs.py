@@ -104,7 +104,8 @@ def timeline(labels, series, ticks, ylab="", every=1, events=(), gutter=0, h=300
             out.append(f'<text class="serlab {cls}" x="{x(n-1)+9:.1f}" '
                        f'y="{y(ys[-1])+4:.1f}">{C.esc(name)}</text>')
     if ylab:
-        out.append(f'<text class="axlab" x="{pad["l"]-44}" y="{pad["t"]-24}">{C.esc(ylab)}</text>')
+        # below the event rows, so a marker label never lands on the axis label
+        out.append(f'<text class="axlab" x="{pad["l"]-44}" y="{pad["t"]-8}">{C.esc(ylab)}</text>')
     out.append("</svg>")
     return "".join(out)
 

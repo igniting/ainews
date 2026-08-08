@@ -64,7 +64,7 @@ CONTENTS = [
      "What does it look like when something actually breaks through?", "ch6"),
     ("ch", "7", "The harness",
      "When did the field stop talking about models and start talking about the "
-     "software around them?", None),
+     "software around them?", "ch7"),
     ("ch", "8", "The handover",
      "How does a technological lead change hands?", None),
     ("ch", "9", "Containment",
@@ -1006,6 +1006,162 @@ ones standing next to them — which is the problem the rest of this book is abo
 """
 
 
+# ---------------------------------------------------------------- chapter 7
+
+CH7 = """
+<p class="first">Train a word-embedding model on the archive's 2024 text and ask it what
+<code>harness</code> is closest to. The answer comes back:
+<code>lm-evaluation-harness</code>, <code>eval</code>, <code>lm-eval</code>,
+<code>helm</code>. In 2024 a harness was a test runner — the thing that fed a benchmark
+suite to a model and collected the scores.</p>
+
+<p>Train the same model on the archive's 2026 text and ask again:
+<code>orchestration</code>, <code>harnesses</code>, <code>ux</code>,
+<code>abstraction</code>.</p>
+
+<p>Same word. Different thing. The cosine distance between the two neighbourhoods is 0.439,
+the third-largest drift of any term in the corpus, and over the same window the word's density
+in announcement space goes from 1.78 to <strong>31.83</strong>.</p>
+
+<div class="warn">
+<p>A dashboard counting the string <code>harness</code> since 2024 would show a clean
+eighteen-fold rise and would be measuring two unrelated things. Nothing about the series would
+look wrong. This is the single cleanest example in the archive of the hazard that runs through
+this whole book, and chapter 12 is about how common it is.</p>
+</div>
+
+<p>But the drift is not the story here. The story is what the new meaning is <em>for</em>,
+because the word changed at exactly the moment the field's centre of gravity moved off the
+model and onto the software around it.</p>
+
+<div class="aside">
+<h4>What a harness is</h4>
+<p>Everything that is not the model. The loop that decides to call it again; the tools it is
+allowed to invoke and what happens when one fails; the sandbox the whole thing runs in; what
+goes into the context window, when, and what gets thrown out to make room; how many attempts
+before giving up; when to stop. In 2024 you wrote a prompt and got a completion. In 2026 you
+write a harness, and the model is one component inside it — the one you did not write, cannot
+debug, and swap out every few months.</p>
+</div>
+"""
+
+CH7_B = """
+<p>The whole layer moves together. Coding agents rise twenty-onefold from 2.55 to a peak of
+54.60. Orchestration language — multi-agent, sub-agent, scaffolding, agent loops — rises
+twenty-threefold. Sandboxing, which is what you need once a model is running code you did not
+read, rises from 1.24 to 10.68.</p>
+
+<p>And one line goes the other way.</p>
+
+<h2>The thing the harness ate</h2>
+
+<p><strong>Prompt engineering falls from 2.86 to 0.43 in announcement space</strong>, and from
+2.26 to 0.39 among practitioners. In early 2024 it was a named skill with conference talks and
+job titles. By the end of the corpus it is a rounding error in both surfaces, which by the
+chapter-2 test means it is genuinely gone rather than merely unfashionable.</p>
+
+<p>Watch what happens next, because it is the clearest small example of absorption in the book.
+In June 2025 the newsletter runs a headline called <em>Context Engineering: Much More than
+Prompts</em>, and a new term arrives: 0.00, 0.00, 2.06, <strong>4.64</strong> — and then 1.97,
+1.07. It rises for a year and fades in one.</p>
+
+<p>Both terms describe the same job: getting the right words in front of the model. It stopped
+being a human craft not because it stopped mattering but because it moved inside the software.
+Deciding what is in the context window is now retrieval, compaction and memory management —
+code that runs on every turn, not a thing a person writes once. The discipline did not fail. It
+was promoted into the harness, and things inside the harness do not get discussed.</p>
+
+<p class="pull">The vocabulary of a craft disappears when the craft becomes a subroutine.</p>
+"""
+
+CH7_C = """
+<h2>MCP, or what adoption looks like when it is not a spike</h2>
+
+<p>On 26 November 2024, Anthropic published the Model Context Protocol — a specification for
+how a model talks to external tools. The archive's coverage that day is unremarkable, and the
+community-surface density for the month is 2.3.</p>
+
+<p>Nothing much happens for two months. Then it climbs: 3.6, 13.3, 22.7, and a peak of
+<strong>38.8 in March 2025</strong> — the month a competitor adopted it.</p>
+"""
+
+CH7_D = """
+<p>Four months from publication to peak, with the inflection at somebody else's decision. That
+shape is not a failure of the launch; it is what a protocol's adoption curve has to look like.
+A protocol is worth exactly nothing until a second party implements it, so the interesting
+event is never the release. It is the first adoption you did not control.</p>
+
+<p>Then the familiar decline: 25.3, 19.5, 14.3, down to 6.6 by early 2026. Not because MCP
+failed — by then it is in every major product in the archive — but because it stopped being
+worth mentioning. Chapter 5's became-boring curve, run at protocol scale.</p>
+
+<p>So the book now has three distinct shapes for how something arrives, and they are
+distinguishable in the data within weeks:</p>
+
+<div class="tw"><table>
+<caption>Three arrival shapes</caption>
+<thead><tr><th>Shape</th><th>Looks like</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><b>Spike and step</b></td><td>Enormous day-one movement, three-week decay, permanent
+elevation of the category</td><td>DeepSeek R1 (chapter 6)</td></tr>
+<tr><td><b>Ramp and absorb</b></td><td>Modest launch, months of climb driven by third-party
+adoption, peak, then quiet</td><td>MCP</td></tr>
+<tr><td><b>Silent relabel</b></td><td>No event at all; an existing word's meaning migrates
+while its count rises</td><td><code>harness</code></td></tr>
+</tbody></table></div>
+
+<h2>Nobody knew how to build these things</h2>
+
+<p>On 13 June 2025 the newsletter's headline is <em>Cognition vs Anthropic: Don't Build
+Multi-Agents / How to Build Multi-Agents</em>. Two well-resourced companies published directly
+contradictory architecture guidance close enough together that a daily newsletter covered them
+in one line.</p>
+
+<p>That is worth pausing on, because it is what an engineering discipline looks like before it
+has patterns. The orchestration line rising twenty-threefold is not a field converging on how
+to build agents. It is a field arguing about it in public at increasing volume, and the
+archive's headlines make the disagreement legible in a way the density series cannot:
+<em>Every 7 Months: The Moore's Law for Agent Autonomy</em> in March 2025,
+<em>Claude Agent Skills — glorified AGENTS.md? or MCP killer?</em> in October,
+<em>Agentic Engineering: WTF Happened in December 2025?</em> in February 2026. Three
+different framings of the same unsettled question, ten months apart.</p>
+"""
+
+CH7_E = """
+<h2>What it all turned into</h2>
+
+<p>There is one line in this chapter's data that is larger than everything else and that I have
+been saving.</p>
+
+<p>Evaluation language — <code>eval</code>, <code>evaluation</code>, <code>benchmark</code> —
+runs at 28.05 per ten thousand words of announcement space in early 2024. At the end of the
+corpus it is <strong>67.93</strong>. In practice space, 34.90 to <strong>60.12</strong>. It
+roughly doubles in both surfaces and ends higher than any other term in this chapter by a
+factor of two.</p>
+
+<p>The reason is mechanical. When the model was the product, you compared models. When the
+model is a component inside a system you wrote — with a retry policy, a context strategy, a
+tool set and a stopping rule, every one of which you chose — there is no way to know whether
+any change helped except to measure it. The harness turned every team into a team that needs an
+eval suite.</p>
+
+<p>Which raises the obvious question, and it is the one chapter 11 is about: were the
+measurements any good?</p>
+
+<div class="aside">
+<h4>What to take from this chapter</h4>
+<p><strong>Track the layer, not the component.</strong> Between 2024 and 2026 the interesting
+engineering moved from choosing a model to building the thing around it, and every series in
+this chapter says so at once.<br>
+<strong>A protocol's launch date is not its adoption date.</strong> Watch for the first
+implementation you did not control; that is the event.<br>
+<strong>Re-derive what your metrics mean, on a schedule.</strong> <code>harness</code> went
+from meaning an eval runner to meaning an agent loop while its count rose eighteenfold, and no
+automated check anywhere would have caught it.</p>
+</div>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -1137,6 +1293,30 @@ def pages():
                    (2, 3, 4))
            + CH6_D)
 
+    ch7 = (CH7
+           + fig(C.paired(D.STACK_GAP),
+                 11, "The software around the model",
+                 "Fold change from 2024H1 to 2026H2, log scale. Red is announcement space, "
+                 "teal is practice. Five terms describing the layer outside the model, and "
+                 "one — prompt engineering — describing the craft it replaced. Orchestration "
+                 "is measured from 2024H2, its practice baseline being zero.")
+           + CH7_B
+           + fig(F.timeline(D.MCP_M_P, [("MCP", D.MCP_M, "bench")], [0, 10, 20, 30, 40],
+                            "mentions / 10⁴ words", every=3, events=D.MCP_EVENTS),
+                 12, "A protocol's adoption curve",
+                 "Community space, monthly. The launch barely registers; the peak arrives four "
+                 "months later, in the month a competitor implemented the spec.")
+           + CH7_C + CH7_D
+           + fig(C.lines(D.P6,
+                         [("evals (announcement)", D.STACK_TW["evals"], "sig"),
+                          ("evals (practice)", D.STACK_RD["evals"], "bench"),
+                          ("harness (announcement)", D.STACK_TW["harness"], "ink")],
+                         [0, 20, 40, 60], "mentions / 10⁴ words", gutter=160),
+                 13, "The largest line in the chapter",
+                 "Evaluation language roughly doubles in both durable surfaces and ends the "
+                 "corpus at twice the density of anything else measured here.")
+           + CH7_E)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -1152,4 +1332,7 @@ def pages():
          "How does a whole field change its mind in four months?", ch5),
         ("ch6", "ch", "6", "Seven days in January",
          "What does it look like when something actually breaks through?", ch6),
+        ("ch7", "ch", "7", "The harness",
+         "When did the field stop talking about models and start talking about the "
+         "software around them?", ch7),
     ]

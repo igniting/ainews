@@ -102,8 +102,8 @@ def paired(rows):
     """rows: [(label, a, b, verdict)] — log-scaled fold changes around 1.0"""
     import math
     h = 40 + len(rows) * 46
-    left = 132
-    gutter = 96  # fixed right column for the verdict label, so it never clips
+    left = 152   # room for the longest row label
+    gutter = 118  # fixed right column for the verdict label, so it never clips
     out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
     lo, hi = math.log10(0.02), math.log10(20)
 
