@@ -41,6 +41,8 @@ import pathlib
 import re
 import sys
 
+from recaps import sections_of  # one shared, tested recap splitter
+
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
 ARTICLES = REPO / "articles"
 OUT = REPO / "analysis" / "sections.md"
@@ -74,13 +76,6 @@ def half(name: str) -> str:
     return f"20{name[:2]}H{1 if int(name[3:5]) <= 6 else 2}"
 
 
-def sections_of(body: str) -> dict[str, str]:
-    marks = list(HEAD.finditer(body))
-    out: dict[str, str] = {}
-    for i, mark in enumerate(marks):
-        end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
-        out[mark.group(1).lower()] = body[mark.end() : end]
-    return out
 
 
 def scan(names: list[str]):

@@ -35,6 +35,8 @@ import pathlib
 import re
 import sys
 
+from recaps import sections_of  # one shared, tested recap splitter
+
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
 ARTICLES = REPO / "articles"
 OUT = REPO / "analysis" / "discord.md"
@@ -90,13 +92,7 @@ def main(argv: list[str] | None = None) -> int:
 
     for path in sorted(ARTICLES.glob("*.md")):
         body = FRONT.sub("", path.read_text(encoding="utf-8", errors="replace"))
-        marks = list(HEAD.finditer(body))
-        disc = ""
-        for i, m in enumerate(marks):
-            if m.group(1).lower() != "discord":
-                continue
-            end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
-            disc = body[m.end():end]
+        disc = sections_of(body).get("discord", "")
         if not disc:
             continue
         h, mo = half(path.name), month(path.name)

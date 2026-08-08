@@ -9,9 +9,9 @@ conflates *how much a topic was discussed* with *which surface was being sampled
 
 | Share of issue words | 2024H1 | 2024H2 | 2025H1 | 2025H2 | 2026H1 | 2026H2 |
 |---|---|---|---|---|---|---|
-| Twitter | 6% | 2% | 4% | 5% | 12% | 31% |
-| Reddit | 2% | 5% | 11% | 17% | 33% | 68% |
-| Discord | 91% | 92% | 85% | 77% | 54% | 0% |
+| Twitter | 2% | 2% | 4% | 5% | 12% | 30% |
+| Reddit | 1% | 5% | 11% | 17% | 32% | 65% |
+| Discord | 255% | 251% | 228% | 200% | 138% | 0% |
 
 Discord sampling falls from 30 servers to zero and Twitter rises 384 → 544
 accounts, both declared in each issue's own header. Measuring inside a fixed
@@ -23,15 +23,15 @@ Mentions per 10,000 words of that section.
 
 | Pattern | 2024H1 | 2024H2 | 2025H1 | 2025H2 | 2026H1 | 2026H2 |
 |---|---|---|---|---|---|---|
-| *(section words)* | *130k* | *54k* | *131k* | *144k* | *198k* | *47k* |
-| CHINA | 8.4 | 13.3 | 48.5 | 51.1 | 46.7 | 72.0 |
-| Meta+Mistral | 26.9 | 32.9 | 14.0 | 7.9 | 2.9 | 1.3 |
-| agentic | 12.7 | 38.8 | 67.4 | 99.0 | 138.5 | 101.6 |
-| fine-tuning | 34.9 | 12.0 | 8.0 | 10.3 | 4.9 | 1.9 |
-| RAG | 22.5 | 21.0 | 5.6 | 5.6 | 2.6 | 0.2 |
-| reasoning | 7.0 | 23.4 | 40.2 | 35.8 | 17.2 | 14.3 |
+| *(section words)* | *47k* | *54k* | *131k* | *144k* | *198k* | *47k* |
+| CHINA | 10.2 | 13.3 | 48.5 | 51.1 | 46.7 | 72.0 |
+| Meta+Mistral | 42.3 | 32.9 | 14.0 | 7.9 | 2.9 | 1.3 |
+| agentic | 25.4 | 38.8 | 67.4 | 99.0 | 138.5 | 101.6 |
+| fine-tuning | 25.6 | 12.0 | 8.0 | 10.3 | 4.9 | 1.9 |
+| RAG | 30.9 | 21.0 | 5.6 | 5.6 | 2.6 | 0.2 |
+| reasoning | 15.0 | 23.4 | 40.2 | 35.8 | 17.2 | 14.3 |
 | MCP | 0.0 | 1.1 | 10.1 | 12.1 | 8.1 | 5.6 |
-| harness | 1.8 | 0.0 | 0.2 | 4.1 | 22.6 | 31.8 |
+| harness | 0.2 | 0.0 | 0.2 | 4.1 | 22.6 | 31.8 |
 
 ## Within the Reddit recap only
 
@@ -39,14 +39,14 @@ Mentions per 10,000 words of that section.
 
 | Pattern | 2024H1 | 2024H2 | 2025H1 | 2025H2 | 2026H1 | 2026H2 |
 |---|---|---|---|---|---|---|
-| *(section words)* | *31k* | *192k* | *379k* | *477k* | *525k* | *102k* |
-| CHINA | 6.4 | 31.3 | 49.4 | 36.9 | 57.1 | 97.8 |
-| Meta+Mistral | 65.5 | 43.4 | 12.6 | 6.3 | 4.0 | 2.4 |
-| agentic | 15.3 | 5.0 | 11.4 | 12.7 | 18.5 | 31.2 |
-| fine-tuning | 19.2 | 15.7 | 11.0 | 11.1 | 4.9 | 6.9 |
+| *(section words)* | *31k* | *192k* | *379k* | *477k* | *522k* | *102k* |
+| CHINA | 6.4 | 31.3 | 49.4 | 36.9 | 57.5 | 98.2 |
+| Meta+Mistral | 65.5 | 43.4 | 12.6 | 6.3 | 4.0 | 2.5 |
+| agentic | 15.3 | 5.0 | 11.4 | 12.7 | 18.6 | 31.3 |
+| fine-tuning | 19.2 | 15.7 | 11.0 | 11.1 | 5.0 | 7.0 |
 | RAG | 12.5 | 2.4 | 2.3 | 1.4 | 1.4 | 2.8 |
-| reasoning | 7.0 | 18.0 | 19.5 | 11.0 | 9.6 | 9.8 |
-| MCP | 0.0 | 1.1 | 2.3 | 1.4 | 2.3 | 2.2 |
+| reasoning | 7.0 | 18.0 | 19.5 | 11.0 | 9.7 | 9.8 |
+| MCP | 0.0 | 1.1 | 2.3 | 1.4 | 2.3 | 2.3 |
 | harness | 0.3 | 0.0 | 0.2 | 0.3 | 1.4 | 5.4 |
 
 ## Announcement-space vs practitioner-space
@@ -56,12 +56,12 @@ Where the two disagree, the gap is the finding rather than noise.
 
 | Pattern | Twitter 2024H1→2026H2 | Reddit 2024H1→2026H2 |
 |---|---|---|
-| CHINA | 8.6x | 15.3x |
+| CHINA | 7.1x | 15.4x |
 | Meta+Mistral | 0.0x | 0.0x |
-| agentic | 8.0x | 2.0x |
+| agentic | 4.0x | 2.0x |
 | fine-tuning | 0.1x | 0.4x |
 | RAG | 0.0x | 0.2x |
-| reasoning | 2.0x | 1.4x |
+| reasoning | 1.0x | 1.4x |
 | MCP | — | — |
-| harness | 17.9x | 16.8x |
+| harness | 150.3x | 16.9x |
 

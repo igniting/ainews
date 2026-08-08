@@ -33,6 +33,8 @@ import pathlib
 import re
 import sys
 
+from recaps import sections_of  # one shared, tested recap splitter
+
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
 ARTICLES = REPO / "articles"
 INDEX = REPO / "analysis" / "index.json"
@@ -71,13 +73,6 @@ def lexicon(min_issues: int = 5) -> dict[str, str]:
     return out
 
 
-def sections_of(body: str) -> dict[str, str]:
-    marks = list(HEAD.finditer(body))
-    out: dict[str, str] = {}
-    for i, m in enumerate(marks):
-        end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
-        out[m.group(1).lower()] = body[m.end() : end]
-    return out
 
 
 def hill(counter: collections.Counter) -> dict[str, float]:

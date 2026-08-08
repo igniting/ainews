@@ -39,6 +39,8 @@ import corpus  # noqa: E402
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 from density import NOISE, PATTERNS  # noqa: E402
 
+from recaps import sections_of  # one shared, tested recap splitter
+
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
 OUT = REPO / "analysis" / "leadlag.md"
 
@@ -48,12 +50,7 @@ SOURCES = ["twitter", "reddit", "discord"]
 
 def split_sections(body: str) -> dict[str, str]:
     """Body → {source: text}. Discord includes its PART 1/2 tail."""
-    marks = list(HEAD.finditer(body))
-    out: dict[str, str] = {}
-    for i, mark in enumerate(marks):
-        end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
-        out[mark.group(1).lower()] = body[mark.end() : end]
-    return out
+    return sections_of(body)
 
 
 def raw_bodies() -> list[tuple[str, str]]:

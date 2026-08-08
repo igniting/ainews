@@ -300,10 +300,14 @@ year. Holding the section fixed removes that. The section is the unit throughout
 """
 
 CH2_B = """
-<p>Agents rise 10.9× in announcement space between the first half of 2024 and the first half
-of 2026. In community space, 3.5×. Among people running models on their own machines,
-<strong>1.2×</strong> — which is to say, essentially not at all. Reasoning does the same thing
-more gently: 2.5×, 1.9×, 1.4×.</p>
+<p>Agents rise 5.5× in announcement space between the first half of 2024 and the first half
+of 2026. In community space, 3.0×. Among people running models on their own machines,
+<strong>1.2×</strong> — which is to say, essentially not at all.</p>
+
+<p>Reasoning, measured the same way, does <em>not</em> do this: 1.2× in announcement space,
+2.1× in community space, 1.4× in practice. The staircase is flat, and if anything it tilts the
+wrong way. That is the test doing its job rather than confirming a theme — whatever happened
+to reasoning between 2024 and 2026, it was not a story that lived mainly in announcements.</p>
 
 <p>That descending staircase is what hype looks like when you can measure it. It is not that
 agents are fake; it is that the further you get from the people with something to announce,
@@ -318,9 +322,9 @@ method. The useful discovery is that <strong>some patterns run the other way</st
 """
 
 CH2_C = """
-<p>The Chinese open-weights bloc — Qwen, DeepSeek, Kimi, GLM, MiniMax — rises 5.6× in
-announcement space and <strong>8.9× in practice space</strong>, with community space higher
-still at 12.2×. Practitioners were running those models, in volume, before the announcement
+<p>The Chinese open-weights bloc — Qwen, DeepSeek, Kimi, GLM, MiniMax — rises 4.6× in
+announcement space and <strong>9.0× in practice space</strong>, with community space higher
+still at 9.9×. Practitioners were running those models, in volume, before the announcement
 layer had adjusted to them. Quantization is the same shape in miniature: down 20% in
 announcement space, up 10% in practice. Both are cases where the coverage was behind the
 ground.</p>
@@ -481,10 +485,10 @@ check that catches this class of error at all.</p>
 # ---------------------------------------------------------------- chapter 3
 
 CH3 = """
-<p class="first">In the first half of 2024, <code>fine-tuning</code> appears 34.9 times per
-ten thousand words of the newsletter's Twitter recap. That is the densest any theme in this archive reaches
-until agents in 2025, and it means roughly one mention every three hundred words, every day,
-for six months. Retrieval-augmented generation runs at 22.5. Between them they are the
+<p class="first">In the first half of 2024, <code>fine-tuning</code> appears 25.6 times per
+ten thousand words of the newsletter's Twitter recap, and retrieval-augmented generation runs
+higher still at 30.9 — the two densest themes in announcement space that half-year. Together
+that is a mention every hundred and eighty words, every day, for six months. Between them they are the
 architecture: take an open model, tune it on your data, put a vector database in front of it,
 ship.</p>
 
@@ -690,7 +694,7 @@ same window. Community space falls from 199 mentions in a half-year to 43.</p>
 <p>No successor headline. No hybrid. No product that quietly contains it. This is what a real
 death looks like in this data. The reason is legible from the archive around it: merging was a
 technique for a world in which everyone had a pile of their own fine-tunes to combine — and
-over the same window, fine-tuning language in announcement space fell from 34.9 to 1.9. When
+over the same window, fine-tuning language in announcement space fell from 25.6 to 1.9. When
 that world ended, the technique had nothing left to operate on.</p>
 """
 
@@ -1319,10 +1323,11 @@ CH7_E = """
 been saving.</p>
 
 <p>Evaluation language — <code>eval</code>, <code>evaluation</code>, <code>benchmark</code> —
-runs at 28.05 per ten thousand words of announcement space in early 2024. At the end of the
-corpus it is <strong>67.93</strong>. In practice space, 34.90 to <strong>60.12</strong>. It
-roughly doubles in both surfaces and ends higher than any other term in this chapter by a
-factor of two.</p>
+runs at 38.37 per ten thousand words of announcement space in early 2024. At the end of the
+corpus it is <strong>67.93</strong>. In practice space, 34.90 to <strong>60.35</strong>. It
+rises by about three quarters in both surfaces — the same slope on each, which is what a
+field-wide shift looks like — and ends higher than any other term in this chapter by a factor
+of two.</p>
 
 <p>The reason is mechanical. When the model was the product, you compared models. When the
 model is a component inside a system you wrote — with a retry policy, a context strategy, a
@@ -1364,7 +1369,7 @@ like from the inside, which is not disappearance. It is becoming background.</p>
 <h2>The fall, in two different shapes</h2>
 
 <p>In early 2024 the open-weights frontier had two names on it, and between them they were the
-loudest thing in the archive. Meta and Mistral together run at 26.9 mentions per ten thousand
+loudest thing in the archive. Meta and Mistral together run at 42.3 mentions per ten thousand
 words of announcement space and <strong>65.5 in practice space</strong> — higher than any
 single lab reaches at any point in the corpus. By the end they are at 1.3 and 2.4.</p>
 
@@ -1804,10 +1809,10 @@ this book's better findings depend on.</p>
 
 CH10 = """
 <p class="first">Retrieval-augmented generation is the most complete disappearance in this
-archive. Inside announcement space it runs at 22.57 mentions per ten thousand words in early
-2024 — the second-densest technical idea in the corpus at that point — and in the final
-half-year it runs at <strong>0.21</strong>. That is a hundred-and-sevenfold fall. Nothing else
-measured in this book falls that far.</p>
+archive. Inside announcement space it runs at 30.95 mentions per ten thousand words in early
+2024 — the densest technical idea in the corpus at that point — and in the final half-year it
+runs at <strong>0.21</strong>. That is a hundred-and-fortyfold fall. Nothing else measured in
+this book falls that far.</p>
 
 <p>"RAG is dead" was a real position, argued in public by people who build things, and the data
 above is exactly what you would show to support it.</p>
@@ -3009,12 +3014,12 @@ one curated view rather than deployment or revenue:</p>
 
 <ul>
 <li><strong>The job kept moving outward from the model.</strong> In early 2024 the central
-activity was adapting weights — fine-tuning language ran at 34.9 mentions per ten thousand words
+activity was adapting weights — fine-tuning language ran at 25.6 mentions per ten thousand words
 of announcement text. By the end it was 1.9, while the vocabulary for the software
 <em>around</em> the model rose eighteen- to twenty-threefold and evaluation language roughly
 doubled to become the densest technical term in the corpus.</li>
 <li><strong>The frontier of open weights changed continents, and not to a company.</strong> Two
-Western labs fell from 26.9 to 1.3 in announcement space; a bloc of five Chinese labs rose, with
+Western labs fell from 42.3 to 1.3 in announcement space; a bloc of five Chinese labs rose, with
 no individual member holding the lead for more than two half-years.</li>
 <li><strong>Scoreboards last about three quarters.</strong> Every fixed-answer benchmark that
 defined 2024 reaches literal zero. The ones still standing ask a model to complete a task and
@@ -3084,9 +3089,9 @@ def pages():
                  "Mentions of agents per 10⁴ words, measured inside the Twitter recap and "
                  "the Reddit recap. Same days, same corpus, same regular expression.")
            + CH2_B
-           + fig(F.surfaces([("agents", 10.9, 3.5, 1.2, "sig"),
-                             ("reasoning", 2.5, 1.9, 1.4, "sig"),
-                             ("China bloc", 5.6, 12.2, 8.9, "bench"),
+           + fig(F.surfaces([("agents", 5.5, 3.0, 1.2, "sig"),
+                             ("reasoning", 1.2, 2.1, 1.4, "bench"),
+                             ("China bloc", 4.6, 9.9, 9.0, "bench"),
                              ("quantization", 0.8, 0.5, 1.1, "bench"),
                              ("fine-tuning", 0.1, 0.3, 0.3, "bench"),
                              ("RAG", 0.1, 0.2, 0.1, "ink")]),
