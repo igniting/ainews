@@ -560,3 +560,20 @@ MIXTURE = [
 # Issues carrying a Discord recap, by half-year
 DISCORD_PRESENT = [("2024H1", 64, 130), ("2024H2", 129, 130), ("2025H1", 124, 126),
                    ("2025H2", 126, 127), ("2026H1", 46, 126), ("2026H2", 0, 26)]
+
+# Chapter 10 — the name/machinery test. Announcement space, mentions per 10^4 words.
+NAME_MACH_TW = {
+    "RAG (the name)":       [22.57, 21.07, 5.64, 5.61, 2.57, 0.21],
+    "retrieval machinery":  [14.22, 12.38, 4.49, 12.76, 13.37, 7.48],
+    "memory":               [12.91, 6.28, 7.54, 12.20, 20.74, 16.45],
+    "merging (the name)":   [1.16, 2.40, 0.69, 0.14, 0.00, 0.00],
+    "merging machinery":    [0.00, 0.37, 0.00, 0.07, 0.00, 0.00],
+}
+# (idea, name start, name end, machinery start, machinery end, verdict)
+NAME_MACH = [
+    ("RAG", 22.57, 0.21, 14.22, 7.48, "absorbed"),
+    ("fine-tuning", 26.35, 1.50, 16.07, 9.83, "absorbed"),
+    ("prompt engineering", 1.78, 0.21, 1.55, 2.56, "absorbed, machinery grew"),
+    ("MMLU / HumanEval / GSM8K", 4.33, 0.21, 0.77, 9.40, "replaced"),
+    ("model merging", 1.16, 0.00, 0.00, 0.00, "dead"),
+]

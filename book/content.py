@@ -74,7 +74,7 @@ CONTENTS = [
 
     ("part", "Part III — What it means"),
     ("ch", "10", "How ideas die",
-     "Retrieval fell 99%. So did things that failed. How do you tell?", None),
+     "Retrieval fell 99%. So did things that failed. How do you tell?", "ch10"),
     ("ch", "11", "How the field keeps score",
      "Which benchmarks are worth believing, and for how long?", None),
     ("ch", "12", "When words change meaning",
@@ -1601,6 +1601,166 @@ accounting.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 10
+
+CH10 = """
+<p class="first">Retrieval-augmented generation is the most complete disappearance in this
+archive. Inside announcement space it runs at 22.57 mentions per ten thousand words in early
+2024 — the second-densest technical idea in the corpus at that point — and in the final
+half-year it runs at <strong>0.21</strong>. That is a hundred-and-sevenfold fall. Nothing else
+measured in this book falls that far.</p>
+
+<p>"RAG is dead" was a real position, argued in public by people who build things, and the data
+above is exactly what you would show to support it.</p>
+
+<p>It is also wrong, and this chapter is about the test that shows why — a test that costs about
+twenty minutes and works on any technology, in any field, without needing to know the story.</p>
+
+<h2>The problem with a falling line</h2>
+
+<p>Chapter 4 established that a line going down has at least four possible causes: the idea was
+absorbed below the level of discussion, the idea genuinely died, the idea was deferred and will
+return, or the measurement is an artifact. That was true and not much use, because I assigned
+those verdicts by reading headlines. Reading works, but it does not scale and it is not
+falsifiable.</p>
+
+<p>Here is the version that is.</p>
+
+<div class="aside">
+<h4>The name / machinery test</h4>
+<p>Measure two things instead of one. The <strong>name</strong> — what the idea is called. And
+the <strong>machinery</strong> — the vocabulary of the mechanism the idea needs in order to
+work at all, which for RAG means retrieval, chunking, reranking, vector indexes, embeddings,
+BM25, hybrid search.</p>
+<p>If the name falls and the machinery holds, <strong>the idea won</strong> so completely that
+naming it became unnecessary. If the name falls and the machinery falls with it,
+<strong>the idea died</strong>. The machinery is the tell, because an idea that shipped keeps
+generating machinery talk — things inside working systems still break, get tuned, and get
+argued about.</p>
+</div>
+"""
+
+CH10_B = """
+<p>RAG's name falls a hundred and sevenfold. Its machinery falls <strong>1.9-fold</strong>, and
+it is <em>higher</em> in the first half of 2026 (13.37) than it was in the second half of 2024
+(12.38). The mechanism never went anywhere. Only the label did.</p>
+
+<p>And the line above both of them is the one that settles it. Memory — long-term memory,
+memory layers, what a system keeps and retrieves across turns — goes from 12.91 to a peak of
+<strong>20.74</strong>. The job RAG existed to do is being discussed <em>more</em> at the end
+of the corpus than at the beginning. It is simply not called RAG any more, because it stopped
+being an architecture you choose and became something your harness does on every turn. Chapter 7
+measured the container arriving. This is what got put inside it.</p>
+
+<h2>The control</h2>
+
+<p>A test that returns "absorbed" for everything is worthless, so run it on something that
+actually died. Chapter 4 nominated model merging.</p>
+
+<p>The name goes 1.16, 2.40, 0.69, 0.14, <strong>0.00, 0.00</strong>. The machinery — weight
+averaging, weight interpolation, task vectors, task arithmetic — never exceeds
+<strong>0.37 anywhere in the corpus</strong>, in any surface, and is 0.00 at the end. There is
+no residue. Nobody is arguing about the tuning of a thing nobody ships.</p>
+
+<p>That is what death looks like, and it does not look like RAG.</p>
+
+<h2>Three more, without commentary</h2>
+"""
+
+CH10_C = """
+<p>Read the middle two columns as one ratio. <strong>Fine-tuning</strong> settles the question
+chapter 3 left open: the name falls eighteenfold while the machinery — LoRA, QLoRA, PEFT,
+adapters, SFT, instruction tuning, post-training, synthetic data — falls 1.6-fold and sits at
+9.83 at the end of the corpus. Fine-tuning did not stop. It stopped being a topic and became
+a step.</p>
+
+<p><strong>Prompt engineering</strong> is the strongest case in the table: the name falls
+eightfold while its machinery — system prompts, few-shot examples, instruction files,
+compaction, context management — <em>rises</em> 1.7-fold. An idea whose vocabulary of practice
+grows while its name disappears is not in decline by any reading.</p>
+
+<h2>The fifth fate</h2>
+
+<p>The fourth row is doing something the other rows are not, and it needs its own name.</p>
+
+<p><code>MMLU</code>, <code>HumanEval</code> and <code>GSM8K</code> — the benchmarks that
+defined 2024 — fall twenty-onefold, from 4.33 to 0.21. But their machinery is not diffuse
+mechanism vocabulary. It is <strong>a specific list of successors</strong>: SWE-bench, ARC-AGI,
+GPQA, FrontierMath, Terminal-Bench, SciCode, AIME, LiveBench. Those rise from 0.77 to 9.40, a
+twelvefold gain, and they occupy the exact role the old ones did.</p>
+
+<p>That is <strong>replacement</strong>, and it is worth separating from absorption because the
+two imply opposite actions. When something is absorbed, the mechanism is still there and you
+should leave your system alone. When something is replaced, there is a named successor doing
+the same job better, and you should migrate. Chapter 11 is about how well that particular
+migration went.</p>
+
+<div class="tw"><table>
+<caption>Five fates, and how to tell them apart from the outside</caption>
+<thead><tr><th>Fate</th><th>The name</th><th>The machinery</th><th>What to do</th></tr></thead>
+<tbody>
+<tr><td><b>Absorbed</b></td><td>falls hard</td><td>holds or rises</td><td>nothing; you are
+already using it</td></tr>
+<tr><td><b>Replaced</b></td><td>falls hard</td><td>a named successor rises</td><td>migrate</td></tr>
+<tr><td><b>Dead</b></td><td>falls to zero</td><td>falls to zero</td><td>drop it, and check what
+depended on it</td></tr>
+<tr><td><b>Deferred</b></td><td>falls in announcement, returns in practice</td><td>reappears
+with new hardware or tooling</td><td>watch practice space</td></tr>
+<tr><td><b>Artifact</b></td><td>falls in the aggregate only</td><td>holds in every
+surface</td><td>fix the instrument</td></tr>
+</tbody></table></div>
+"""
+
+CH10_D = """
+<h2>When the test fails</h2>
+
+<p>It is a cheap test and cheap tests have failure modes. Three of them matter.</p>
+
+<p><strong>Generic machinery vocabulary.</strong> My <code>memory</code> line is the weakest
+number in this chapter: the word means at least three things in this corpus — what a system
+retains across turns, what a model has memorised, and how many gigabytes a GPU has. The rise
+from 12.91 to 20.74 is real but it is not purely about retrieval, and I would not build a
+decision on that line alone. The retrieval-machinery line, which uses specific terms, is the
+one carrying the argument.</p>
+
+<p><strong>Shared machinery.</strong> Two ideas can need the same mechanism, in which case the
+mechanism's persistence tells you one of them survived but not which. Embeddings serve
+retrieval, classification, clustering and search alike.</p>
+
+<p><strong>The instrument.</strong> All of this has to be measured inside a fixed source, for
+the reason Interlude II is about. Run the name/machinery test on whole-issue densities and you
+will get a confident answer about the mixture.</p>
+
+<h2>Running it forwards</h2>
+
+<p>The test also works in the other direction, which is where it earns its keep, because
+falling lines are a retrospective problem and rising lines are a decision you have to make now.</p>
+
+<p>Take the biggest rising line in the book. <code>Agentic</code> language in announcement space
+rises eightfold. Its machinery — orchestration, sub-agents, tool-use, sandboxing, scaffolding —
+rises <strong>nineteenfold</strong>, faster than the name. Whatever else is true about the agent
+narrative, real engineering vocabulary is accumulating underneath it at a greater rate than the
+label, which is not what a purely marketed term looks like.</p>
+
+<p>And yet chapter 2 measured that same word rising only 1.2× among practitioners. Both results
+stand, because they answer different questions:</p>
+
+<div class="aside">
+<h4>Two tests, two questions</h4>
+<p><strong>The hype gradient</strong> (chapter 2) asks: <em>has this reached the people doing
+the work?</em> Compare the same term across surfaces.<br>
+<strong>The name/machinery test</strong> (this chapter) asks: <em>is there real engineering
+under this term?</em> Compare the term against its mechanism inside one surface.<br>
+Agents pass the second and fail the first, which is a coherent and quite specific description of
+2026: a large amount of genuine engineering, concentrated among the people building the tools,
+that has not yet changed what most practitioners do.</p>
+</div>
+
+<p>A name that rises faster than its machinery is a term being marketed. A name that falls while
+its machinery holds is a technology that won. Neither is visible in the line everybody quotes.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -1822,6 +1982,24 @@ def pages():
                     (1, 2, 3, 4))
             + INT2_C)
 
+    nm_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
+                f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.NAME_MACH]
+    ch10 = (CH10
+            + fig(C.lines(D.P6,
+                          [("RAG (the name)", D.NAME_MACH_TW["RAG (the name)"], "sig"),
+                           ("retrieval machinery", D.NAME_MACH_TW["retrieval machinery"], "bench"),
+                           ("memory", D.NAME_MACH_TW["memory"], "ink")],
+                          [0, 10, 20], "mentions / 10⁴ words", gutter=134),
+                  19, "The name died; the machinery did not",
+                  "Announcement space. RAG's own name falls 107-fold. The vocabulary of the "
+                  "mechanism it needs — retrieval, chunking, reranking, vector indexes, "
+                  "embeddings — falls 1.9-fold, and memory language rises.")
+            + CH10_B
+            + table(["Idea", "The name", "The machinery", "Verdict"], nm_rows,
+                    "Table 6 · Announcement space, 2024H1 → 2026H2, mentions per 10⁴ words",
+                    (1, 2))
+            + CH10_C + CH10_D)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -1846,4 +2024,6 @@ def pages():
          "What happens after the capability race?", ch9),
         ("interlude-2", "inter", "II", "The day the corpus changed shape underneath me",
          "On measuring a document whose composition inverted.", int2),
+        ("ch10", "ch", "10", "How ideas die",
+         "Retrieval fell 99%. So did things that failed. How do you tell?", ch10),
     ]
