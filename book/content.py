@@ -70,7 +70,7 @@ CONTENTS = [
     ("ch", "9", "Containment",
      "What happens after the capability race?", "ch9"),
     ("inter", "II", "The day the corpus changed shape underneath me",
-     "On measuring a document whose composition inverted.", None),
+     "On measuring a document whose composition inverted.", "interlude-2"),
 
     ("part", "Part III — What it means"),
     ("ch", "10", "How ideas die",
@@ -1481,6 +1481,126 @@ measuring instead of what you think.</p>
 """
 
 
+# ---------------------------------------------------------------- interlude II
+
+INT2 = """
+<p class="first">The instrument seemed unimpeachable. Take a pattern, count how often it occurs
+per ten thousand words of an issue, average over a half-year, plot the series. The issues are
+all the same kind of document — a daily summary of AI news — so the series is comparable end to
+end. I built about forty of them before I checked whether that last sentence was true.</p>
+
+<p>It is not true. It is not even close to true.</p>
+"""
+
+INT2_B = """
+<p>The median issue in the first half of 2024 is <strong>96% Discord recap</strong>. The median
+issue in the last half-year of the corpus is 70% Reddit, 28% Twitter, and <strong>0%
+Discord</strong> — not a small share, none at all. Eighty of the 126 issues in the first half of
+2026 have no Discord section, and none of the final 26 do.</p>
+
+<p>Between those two points the document turned inside out. It kept its name, its cadence, its
+byline and its title format. It stopped being the same object.</p>
+
+<p>And the newsletter says so, in-band, in a line at the top of every single issue:</p>
+
+<blockquote><p>We checked 12 subreddits, 544 Twitters and 24 Discords (205 channels, and 9665
+messages) for you.</p>
+<cite>AI News, standard header, 2025-12-02</cite></blockquote>
+
+<p>Over the corpus that line goes from 7 subreddits to 12, from 384 Twitter accounts to 544,
+and from 30 Discords to zero. It was printed 690 times. I had read it hundreds of times without
+once treating it as data.</p>
+
+<h2>What that does to a density series</h2>
+
+<p>A per-issue density is a weighted average over the sources inside the issue, and the weights
+inverted. So every whole-issue series measures two things superimposed — how much a subject was
+discussed, and how much of the document happened to come from the surface where that subject
+lives — and no amount of care afterwards can separate them.</p>
+
+<p>The clearest damage is in the terms that belong to one surface.</p>
+"""
+
+INT2_C = """
+<p>Read the first row again. Language about consumer GPUs and VRAM is <strong>up 39%</strong>
+across the corpus and <strong>down 81% inside announcement space</strong>. Both are computed
+from the same 15.3 million words. The aggregate rose because the document filled up with the
+surface where the term is dense, and for no other reason.</p>
+
+<p>If you had used the aggregate to decide whether the field was still paying attention to what
+runs on a desktop, you would have concluded it was paying <em>more</em> attention, at the exact
+moment the people announcing things stopped mentioning it almost entirely.</p>
+
+<p class="pull">Every number I had was a weighted average whose weights were moving, and the
+weights were moving faster than the thing I was trying to measure.</p>
+
+<h2>How I found it</h2>
+
+<p>Not from a diagnostic. There is no diagnostic — a mixture that shifts underneath you produces
+series that look completely normal, with no discontinuities, no outliers and no failed
+assumptions to test. Change-point detection finds breaks in the series; it cannot tell you the
+series is about a different population on either side of them.</p>
+
+<p>I found it by reading recent issues, for a different reason, and noticing that a 2026 issue
+does not resemble a 2024 issue in any respect except the header. That is the same way I found
+the mistake in Interlude I, one month earlier, having apparently learned nothing from it.</p>
+
+<h2>What it cost</h2>
+
+<p>Three findings did not survive the correction, and each failed in a slightly different way.</p>
+
+<ul>
+<li><strong><code>context rot</code> as a phenomenon in the corpus.</strong> A striking phrase,
+a clean rise, and it disappears entirely once the Discord recap is excluded. It was
+practitioners in chat naming a failure mode they were hitting — real, and worth knowing about,
+but it was never in the field's news prose. I had reported a Discord idiom as a field-wide
+development.</li>
+<li><strong>"<code>agentic</code> sat next to <code>retrieval-augmented</code> in 2024."</strong>
+This was my evidence that agents had absorbed RAG. Controlled for genre, <code>agentic</code>'s
+2024 neighbours are <code>low-code</code> and <code>devika</code>. The adjacency was an artifact
+of mixing chat and prose in one embedding.</li>
+<li><strong>The fivefold rise in the number of distinct companies discussed.</strong> This one
+survived the section fix and died later, to the same underlying cause: measured inside a fixed
+recap section, effective diversity rises 1.1× on Twitter and 1.3× on Reddit, not 4.7×. What
+I had measured was mostly the newsletter widening its sampling frame — the same header line,
+again.</li>
+</ul>
+
+<h2>The fix, and the accident</h2>
+
+<p>The repair is simple and expensive: <strong>measure inside a fixed section</strong>. The
+Twitter and Reddit recaps run the whole corpus; the Discord recap runs May 2024 to March 2026.
+Holding the source fixed costs you almost everything — the Twitter recap in the final half-year
+is 46,815 words, against 15.3 million for the corpus — and buys you the only thing that matters,
+which is that the population generating the text is roughly the same at both ends of the line.</p>
+
+<p>Every number in this book is computed that way. Where a series has to end early, or a count
+is too small to carry a ratio, the text says so.</p>
+
+<p>And then the accident. Splitting the corpus by source to remove a confound left me with two
+series where there had been one, for every pattern — announcement and practice, measured
+identically, on the same days. That is not a control. That is chapter 2.</p>
+
+<div class="aside">
+<h4>Three questions for any longitudinal corpus</h4>
+<p><strong>Is the unit of observation the same kind of thing at both ends?</strong> Not "does it
+have the same name" — read one from each end, side by side, and see.<br>
+<strong>Did the sampling frame change, and does the source tell you?</strong> Mine did, in a
+line printed at the top of all 690 issues.<br>
+<strong>If you split the corpus by source, does the finding survive in each part?</strong> If it
+only exists in the aggregate, it may be a fact about the mixture rather than the world.</p>
+</div>
+
+<p>Two interludes, two mistakes, one shape. In the first, a field stopped meaning what it used
+to mean. In the second, the document stopped being the document. Neither is visible to any check
+you can run on the numbers, and both were found the same way — by reading the thing I was
+counting.</p>
+
+<p>There is a third mistake and a fourth. They are in Interlude III, with the rest of the
+accounting.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -1683,6 +1803,25 @@ def pages():
                  "alignment falls in both.")
            + CH9_C + CH9_D)
 
+    mix_rows = [[C.esc(n), a, b, c, d] for n, a, b, c, d in D.MIXTURE]
+    int2 = (INT2
+            + fig(C.stacked(D.P6,
+                            [("Discord recap", D.COMPOSITION["Discord"], "disc"),
+                             ("Reddit recap", D.COMPOSITION["Reddit"], "redd"),
+                             ("Twitter recap", D.COMPOSITION["Twitter"], "twit")],
+                            [0, 25, 50, 75, 100], "% of issue words"),
+                  18, "The document turned inside out",
+                  "Median share of an issue's words by source section. The Discord recap is "
+                  "96% of the median issue in early 2024 and absent from the median issue in "
+                  "2026 — 80 of 126 issues in 2026H1 have no Discord section, and none of the "
+                  "final 26 do.")
+            + INT2_B
+            + table(["Pattern", "Whole issue", "Announcement", "Practice", "Community"],
+                    mix_rows,
+                    "Table 5 · Change from 2024H1 to the end of each surface's coverage",
+                    (1, 2, 3, 4))
+            + INT2_C)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -1705,4 +1844,6 @@ def pages():
          "How does a technological lead change hands?", ch8),
         ("ch9", "ch", "9", "Containment",
          "What happens after the capability race?", ch9),
+        ("interlude-2", "inter", "II", "The day the corpus changed shape underneath me",
+         "On measuring a document whose composition inverted.", int2),
     ]

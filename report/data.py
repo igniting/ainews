@@ -548,3 +548,15 @@ SEC_GAP = [
     ("alignment", 0.18, 0.54, "old vocabulary"),
     ("regulation", 1.2, 0.51, "spiked, then reverted"),
 ]
+
+# Interlude II — what the wrong instrument did to one series.
+# (pattern, whole-issue fold, twitter fold, reddit fold, discord fold), 2024H1 -> end
+MIXTURE = [
+    ("consumer-GPU / VRAM", "+39%", "−81%", "+51%", "+6%"),
+    ("quantization", "+27%", "−51%", "+29%", "−48%"),
+    ("hallucination", "+54%", "−63%", "−32%", "+90%"),
+    ("fine-tuning", "−84%", "−95%", "−64%", "−72%"),
+]
+# Issues carrying a Discord recap, by half-year
+DISCORD_PRESENT = [("2024H1", 64, 130), ("2024H2", 129, 130), ("2025H1", 124, 126),
+                   ("2025H2", 126, 127), ("2026H1", 46, 126), ("2026H2", 0, 26)]
