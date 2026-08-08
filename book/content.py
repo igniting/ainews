@@ -57,7 +57,7 @@ CONTENTS = [
     ("ch", "3", "Everyone is fine-tuning",
      "What did the field think the job was?", "ch3"),
     ("ch", "4", "The road not taken",
-     "What does it look like when a good idea simply does not arrive?", None),
+     "What does it look like when a good idea simply does not arrive?", "ch4"),
     ("ch", "5", "Learning to think",
      "How does a whole field change its mind in four months?", None),
     ("ch", "6", "Seven days in January",
@@ -502,6 +502,188 @@ serious people, that simply never arrived at all.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 4
+
+CH4 = """
+<p class="first">The third issue this book quotes ran on 8 December 2023 under the headline
+<em>Mamba v Mistral v Hyena</em>. Three architectures, presented as live competitors on equal
+footing. One of them is now inside nearly every model you use. Of the other two, one is a
+footnote and one you have probably never heard of.</p>
+
+<p>The interesting part is not that two of them lost. It is that the archive contains
+<strong>four different ways to lose</strong>, they look almost identical in a chart, and only
+one of them means the idea was wrong. Getting this distinction right is the difference
+between correctly dropping a dead technique and abandoning something that was merely early.</p>
+
+<h2>The bet against the transformer</h2>
+
+<p>Attention — the mechanism at the heart of every transformer — compares every token in the
+input with every other token. That is quadratic: double the context and you quadruple the
+work. In late 2023 this looked like the wall the whole field would eventually hit, and there
+was a serious, credentialed alternative.</p>
+
+<div class="aside">
+<h4>State-space models, as the field met them</h4>
+<p>A state-space model processes a sequence the way a control system does: it keeps a
+fixed-size internal state, updates it one token at a time, and never looks back at the raw
+history. Cost is linear in sequence length instead of quadratic, and inference needs no
+growing key-value cache. Mamba, RWKV and StripedHyena were three takes on the idea. The
+trade is that a fixed state must forget things, and what it forgets turns out to matter for
+exactly the recall-heavy tasks people use language models for.</p>
+</div>
+
+<p>In the first half of 2024, state-space language runs at <strong>12.13 mentions per ten
+thousand words</strong> of announcement space. Mixture-of-experts — the architecture that
+did win — runs at 12.83 in the same window. They were, by this measure, equally live
+questions.</p>
+
+<p>In the last half-year of the corpus, state-space language appears <strong>zero
+times</strong> in 46,815 words of announcement space. It falls in practice space too (1.62 to
+0.39) and in community space (2.38 to 0.43). Whatever happened, it happened everywhere, so by
+the chapter-2 test it is not a coverage artifact. Something real ended.</p>
+"""
+
+CH4_B = """
+<h2>Fate one: absorbed below the vocabulary</h2>
+
+<p>Here is the thing that makes the naive reading wrong. Search the archive for the day
+state-space models were declared dead and there is no such day. What there is instead is a
+headline from 13 June 2024:</p>
+
+<blockquote><p>Hybrid SSM/Transformers &gt; Pure SSMs/Pure Transformers</p>
+<cite>AI News, 2024-06-13</cite></blockquote>
+
+<p>And then, eighteen months later:</p>
+
+<blockquote><p>NVIDIA Nemotron 3: hybrid Mamba-Transformer completely open source models from
+30B to 500B</p>
+<cite>AI News, 2025-12-15</cite></blockquote>
+
+<p>A 30-billion-parameter open-weights model with a one-million-token context window, built
+from Mamba layers interleaved with attention layers, shipped with weights, training recipes
+and datasets. The pure-SSM bet lost. The mechanism is in production.</p>
+
+<p>What did not happen is the part worth noticing: <strong>no vocabulary rose to replace the
+one that fell</strong>. Hybrid-architecture language never picks up the slack — it sits at
+one to three mentions per ten thousand words in every surface across the whole corpus, on
+counts small enough (never more than 29 in a half-year) that the series is mostly noise.
+The architecture stopped being a topic and became an implementation detail, which is what
+winning quietly looks like.</p>
+
+<p class="pull">An idea that gets absorbed leaves the same hole in the record as one that
+failed. The difference is whether a product exists that nobody argues about.</p>
+
+<h2>Fate two: the actual death</h2>
+
+<p>Model merging is the control case. The technique: take two models fine-tuned separately
+from the same base, average their weights, and — unreasonably — often get something better
+than either. It had tooling (MergeKit), named methods (TIES-merging, SLERP, task arithmetic)
+and a genre of results (frankenmerges — models stapled together out of duplicated layers).
+It peaks in announcement space in the second half of 2024 at 2.59.</p>
+
+<p>Then: 9 mentions, 2 mentions, <strong>0, 0</strong>. Practice space ends at zero in the
+same window. Community space falls from 199 mentions in a half-year to 43.</p>
+
+<p>No successor headline. No hybrid. No product that quietly contains it. This is what a real
+death looks like in this data, and the reason is legible from chapter 3: merging was a
+technique for a world in which everyone had a pile of their own fine-tunes to combine. When
+that world ended, the technique had nothing to operate on.</p>
+"""
+
+CH4_C = """
+<h2>Fate three: refuted, then revived from below</h2>
+
+<p>On 1 March 2024 the headline was <em>The Era of 1-bit LLMs</em>. The paper behind it —
+BitNet b1.58 — proposed training models whose weights are restricted to three values,
+&minus;1, 0 and 1, which removes multiplication from the forward pass almost entirely.
+Announcement-space density hits 6.96. It is, briefly, the most exciting idea in the corpus.</p>
+
+<p>Then, on 13 November 2024, a headline that is itself a verdict:</p>
+
+<blockquote><p>BitNet was a lie?</p>
+<cite>AI News, 2024-11-13</cite></blockquote>
+
+<p>By the first half of 2025, the density is <strong>0.08</strong> — one mention in 131,271
+words of announcement space. That is as dead as anything in this archive gets.</p>
+
+<p>And then, in July 2026, it comes back — in the wrong surface. The newsletter's Reddit
+recap fills up with a ternary variant of Qwen3.6 27B, reported as compressing roughly 54GB of
+weights to under 4GB and running locally in a browser through custom WebGPU kernels.
+Practice-space density reaches <strong>4.71, its highest value in the corpus</strong>, against
+1.71 in announcement space. For the first time in the life of this idea, the people running
+it are ahead of the people announcing it.</p>
+
+<p>The reception is also exactly what practice space is for:</p>
+
+<blockquote><p>Commenters pushed back on the wording “near fp16 precision” because ternary
+weights are {&minus;1, 0, 1} … A commenter distinguished 1-bit models trained from scratch
+from extreme post-training quantization, arguing the former should retain much more
+capability … Several asked for rigorous benchmarks such as SciCode or SWE-rebench.</p>
+<cite>AI News, Reddit recap, 2026-07-15</cite></blockquote>
+
+<p>Nobody there is excited about the era of anything. They are asking which 4GB model is
+better than which other 4GB model, on a laptop they own. That is the signature of an idea
+that was not wrong, only early — it was waiting on kernels and hardware rather than on
+insight, and it reappeared the moment someone shipped the kernels.</p>
+"""
+
+CH4_D = """
+<h2>Fate four: still open</h2>
+
+<p>On 10 March 2026 the headline was <em>Yann LeCun's AMI Labs launches with a $1.03B seed to
+build world models</em>. World-model language in announcement space goes from 0.31 in early
+2024 to 4.59 by early 2026 and 5.34 by the last half-year — a fifteenfold rise, on counts
+large enough to trust (4 mentions, then 91).</p>
+
+<p>Run the chapter-2 test on it. Because the practice-space baseline is a single mention, a
+fold change is meaningless, so compare levels instead. In the first half of 2026: <strong>4.59
+in announcement space, 1.22 in community space, 0.29 in practice space.</strong> That is the
+descending staircase — the narrative signature, the same shape agents made.</p>
+
+<p>Except this time I do not think the test applies, and it is worth being precise about why.</p>
+
+<div class="aside">
+<h4>Where the practice surface is blind</h4>
+<p>Practice space is people running models on hardware they own. It is therefore an excellent
+check on anything downloadable and <strong>no check at all</strong> on anything that requires
+a data centre. You could not run a world model in 2026 if you wanted to. Reasoning models had
+the same problem in late 2024 — invisible in practice space for months — and they were real.
+When the practice surface is silent because the thing is unrunnable rather than uninteresting,
+its silence carries no information.</p>
+</div>
+
+<p>So the honest verdict on world models is: undecided, and the instrument that settled the
+other three cases cannot settle this one. That is a less satisfying answer than a prediction
+and a more useful one, because it tells you what evidence would change your mind — the first
+world model somebody can run on a consumer GPU, and what practice space says about it the
+following week.</p>
+
+<h2>Four fates, four signatures</h2>
+"""
+
+CH4_E = """
+<div class="aside">
+<h4>How to tell them apart</h4>
+<p><strong>Falls everywhere, and a product exists that nobody argues about</strong> →
+absorbed. Stop tracking the word; track the product.<br>
+<strong>Falls everywhere, and nothing succeeded it</strong> → gone. Safe to drop, and worth
+asking what else depended on the world it assumed.<br>
+<strong>Falls in announcement space, returns in practice space</strong> → deferred. It was
+waiting on hardware or tooling, not on ideas. This is the one worth watching for.<br>
+<strong>Rises in announcement space, and cannot be run by anyone outside a lab</strong> →
+undecided. The test does not apply; do not read the silence as a verdict.</p>
+</div>
+
+<p>None of these four is visible from the falling line alone, which is the recurring lesson of
+this book stated in a new place. A chart of attention tells you where the conversation went.
+It never tells you why, and the why is the entire decision.</p>
+
+<p>The next chapter is about the one case where the conversation changed faster than anyone
+could have kept up with — a whole field revising what it thought a model was, in about four
+months.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -549,6 +731,34 @@ def pages():
                  "are measured the same way in the same section.")
            + CH3_C)
 
+    fate_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
+                  f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.FATES]
+    ch4 = (CH4
+           + fig(C.lines(D.P6,
+                         [("state-space", D.FATES_TW["state-space"], "sig"),
+                          ("1-bit / ternary", D.FATES_TW["1-bit"], "bench"),
+                          ("model merging", D.FATES_TW["model merging"], "ink2"),
+                          ("world models", D.FATES_TW["world model"], "ink")],
+                         [0, 4, 8, 12], "mentions / 10⁴ words"),
+                 5, "Four ideas, announcement space",
+                 "Mentions per 10⁴ words inside the Twitter recap. Three of these lines end "
+                 "at or near zero and one is climbing — but the shape of a line says nothing "
+                 "about which fate produced it.")
+           + CH4_B + CH4_C
+           + fig(C.lines(D.P6,
+                         [("1-bit (announcement)", D.FATES_TW["1-bit"], "sig"),
+                          ("1-bit (practice)", D.FATES_RD["1-bit"], "bench")],
+                         [0, 2, 4, 6], "mentions / 10⁴ words"),
+                 6, "An idea returning from below",
+                 "The same pattern in the Twitter and Reddit recaps. Announcement space "
+                 "peaks in 2024 and effectively stops; practice space reaches its corpus "
+                 "high two years later, on hardware that did not exist for it in 2024.")
+           + CH4_D
+           + table(["Idea", "Announcement", "Practice", "Fate"], fate_rows,
+                   "Table 1 · Mentions per 10⁴ words, 2024H1 → 2026H2, in each surface",
+                   (1, 2))
+           + CH4_E)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -558,4 +768,6 @@ def pages():
          "On checking what the field you are counting actually contains.", INT1),
         ("ch3", "ch", "3", "Everyone is fine-tuning",
          "What did the field think the job was?", ch3),
+        ("ch4", "ch", "4", "The road not taken",
+         "What does it look like when a good idea simply does not arrive?", ch4),
     ]

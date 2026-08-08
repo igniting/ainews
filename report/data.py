@@ -353,3 +353,36 @@ CADENCE = [
     ("24Q4", 66, 27), ("25Q1", 60, 32), ("25Q2", 66, 25), ("25Q3", 64, 25),
     ("25Q4", 63, 21), ("26Q1", 62, 24), ("26Q2", 64, 5), ("26Q3", 26, 6),
 ]
+
+# Chapter 4 — density inside each recap section, mentions per 10^4 words.
+# Counts are in analysis/; cells below n=10 are flagged in the text.
+FATES_TW = {
+    "state-space":   [12.13, 4.25, 0.84, 1.94, 1.51, 0.00],
+    "1-bit":         [6.96, 2.59, 0.08, 0.28, 0.56, 1.71],
+    "model merging": [1.08, 2.59, 0.69, 0.14, 0.00, 0.00],
+    "world model":   [0.31, 0.37, 0.53, 2.15, 4.59, 5.34],
+    "MoE":           [12.83, 6.84, 4.95, 13.93, 8.12, 7.69],
+}
+FATES_RD = {
+    "state-space":   [1.62, 2.67, 0.24, 0.38, 0.11, 0.39],
+    "1-bit":         [1.94, 2.46, 1.08, 0.46, 0.95, 4.71],
+    "model merging": [0.97, 0.26, 0.05, 0.08, 0.10, 0.00],
+    "world model":   [0.32, 0.05, 0.48, 0.52, 0.29, 0.10],
+    "MoE":           [4.85, 5.33, 6.76, 6.45, 7.94, 11.08],
+}
+# Discord ends 2026-03: DISCORD_P periods
+FATES_DC = {
+    "state-space":   [2.38, 2.05, 0.99, 0.86, 0.43],
+    "1-bit":         [1.99, 1.76, 0.57, 0.42, 0.28],
+    "model merging": [1.09, 1.09, 0.15, 0.12, 0.50],
+    "world model":   [0.04, 0.16, 0.46, 0.53, 1.22],
+    "MoE":           [2.56, 1.30, 3.34, 3.93, 4.39],
+}
+# (idea, 2024H1 announcement, 2026 announcement, 2024H1 practice, 2026 practice, verdict)
+FATES = [
+    ("state-space models", 12.13, 0.00, 1.62, 0.39, "absorbed (below the vocabulary)"),
+    ("model merging", 1.08, 0.00, 0.97, 0.00, "gone"),
+    ("1-bit / ternary", 6.96, 1.71, 1.94, 4.71, "deferred, revived in practice"),
+    ("mixture-of-experts", 12.83, 7.69, 4.85, 11.08, "absorbed (into infrastructure)"),
+    ("world models", 0.31, 5.34, 0.32, 0.10, "undecided"),
+]

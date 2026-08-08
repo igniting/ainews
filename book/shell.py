@@ -134,7 +134,7 @@ th{text-align:left;font-weight:600;color:var(--ink);letter-spacing:.06em;text-tr
   font-size:.65rem;padding:.6rem .7rem;border-bottom:1px solid var(--rule);white-space:nowrap}
 td{padding:.5rem .7rem;border-bottom:1px solid var(--edge);color:var(--body)}
 tr:last-child td{border-bottom:none}
-td.n,th.n{text-align:right}
+td.n,th.n{text-align:right;white-space:nowrap}
 caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:.67rem;
   letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding:0 .7rem .6rem}
 .hi{color:var(--sig);font-weight:600}.hib{color:var(--bench);font-weight:600}
