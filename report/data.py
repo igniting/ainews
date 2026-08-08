@@ -708,3 +708,23 @@ UNIT_ANSWERS = [
     ("Messages per month, busiest fine-tuning community", "a Discord message",
      "7,208", "19,400", "+169%"),
 ]
+
+# The editorial layer — analysis/methods/editorial.py. The lede is the only text
+# in the corpus written by a person; everything under a recap heading is generated.
+EDITORIAL_P = ["2024H1", "2024H2", "2025H1", "2025H2", "2026H1"]
+EDITORIAL = {
+    "agentic":     [13.1, 17.9, 59.7, 65.1, 47.1],
+    "China bloc":  [12.1, 15.0, 72.3, 88.1, 68.2],
+    "fine-tuning": [21.5, 9.3, 9.9, 6.1, 0.0],
+    "RAG":         [10.4, 6.8, 2.0, 0.0, 0.0],
+    "reasoning":   [4.9, 9.7, 21.9, 12.3, 13.4],
+    "evals":       [29.7, 32.9, 19.2, 35.2, 35.5],
+    "promotional": [15.3, 45.1, 62.3, 43.7, 24.0],
+}
+# (half, issues, editorial words, median per issue, issues that are boilerplate only)
+EDITORIAL_SIZE = [
+    ("2023H2", 25, 1158, 42, 0), ("2024H1", 130, 30650, 158, 0),
+    ("2024H2", 130, 27956, 193, 0), ("2025H1", 126, 15079, 94, 0),
+    ("2025H2", 127, 13052, 72, 1), ("2026H1", 126, 10411, 3, 77),
+    ("2026H2", 26, 78, 3, 26),
+]

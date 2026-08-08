@@ -128,7 +128,12 @@ words long, which is a third of a short novel, published daily, about the previo
 built from a declared list of accounts, a Reddit recap from a declared list of subreddits, and
 — until March 2026 — a Discord recap assembled from message logs across dozens of servers.</p>
 
-<p>It also tells you, every single day, exactly what it looked at:</p>
+<p>A note on dates, since they will matter. Every date in this book is the day an issue
+<em>covers</em>, not the day it was sent — an issue about Monday goes out on Tuesday morning,
+and the archive stores both. The covered day is the one that matters for a chronology, so that
+is the one used throughout.</p>
+
+<p>Each issue also tells you, every single day, exactly what it looked at:</p>
 
 <blockquote><p>AI News for 12/1/2025-12/2/2025. We checked 12 subreddits, 544 Twitters and 24
 Discords (205 channels, and 9665 messages) for you. Estimated reading time saved (at 200wpm):
@@ -137,9 +142,17 @@ Discords (205 channels, and 9665 messages) for you. Estimated reading time saved
 
 <p>That header is printed 690 times and it is the most useful line in the whole corpus: a
 source that declares its own sampling frame, daily, is a rare thing and it makes an enormous
-amount possible. The summaries underneath it are model-generated; the framing, the headline,
-the opening commentary and the editorial judgement are human. You can watch the seams — the
-top-of-issue commentary regularly argues with the summaries below it.</p>
+amount possible.</p>
+
+<p>It is worth being exact about who wrote what, because the two halves of an issue are not the
+same kind of text. The recaps underneath the header are model-generated from the sampled
+sources. The passage <em>above</em> it — the headline, the opening claim, the judgement about
+what mattered that day — is written by a person, and across the whole archive it comes to
+<strong>98,384 words, or 0.64% of the corpus</strong>. Everything else is summary.</p>
+
+<p>You can watch the seam. The human passage regularly argues with the summaries below it, and
+it is the only place in the corpus where anyone commits to an opinion that could later look
+foolish.</p>
 """
 
 CH1_B = """
@@ -262,6 +275,13 @@ happened.</li>
 
 <p>Three views of one day, produced by three populations with three different incentives, and
 kept separate on the page. Nobody designed this as a measuring device. It is one anyway.</p>
+
+<p>There is a fourth layer, and it is different in kind. Above all three recaps sits a short
+passage written by the editor — the headline claim, the judgement, the argument. It is thin,
+98,384 words against 15.3 million, and where the other three sample a <em>population</em>, this
+one samples a <em>person</em>. That makes it a confound when you are measuring the field and a
+signal when you are measuring the coverage, and it is worth keeping separate for both
+reasons.</p>
 
 <h2>The measurement</h2>
 
@@ -661,10 +681,11 @@ law in the token/parameter ratio seen during pretraining.</p>
 <cite>AI News, 2024-11-12</cite></blockquote>
 
 <p>In other words: the harder you train a model, the less of it you can throw away afterwards —
-and everyone was training harder every month. The next day's headline was blunter.</p>
+and everyone was training harder every month. The headline the editor put on that same issue was
+blunter than the finding.</p>
 
 <blockquote><p>BitNet was a lie?</p>
-<cite>AI News, 2024-11-13</cite></blockquote>
+<cite>AI News, 2024-11-12 — the headline over the passage above</cite></blockquote>
 
 <p>By the first half of 2025, the density is <strong>0.08</strong> — one mention in 131,271
 words of announcement space. That is as dead as anything in this archive gets.</p>
@@ -771,7 +792,7 @@ bending.</p>
 believed it.</p>
 
 <div class="scene">
-<span class="when">2024-09-07</span>
+<span class="when">2024-09-06</span>
 <p><em>Reflection 70B, by Matt from IT Department.</em> A two-person team announces a
 fine-tune of Llama-3.1-70B using a technique they call reflection tuning — training the model
 to emit explicit <code>thinking</code> and <code>reflection</code> steps before answering —
@@ -783,7 +804,7 @@ performance, results nobody could reproduce. Within days it had fallen apart.</p
 <p>It is easy to read that as a story about a bad actor. The more useful reading is that the
 field was primed. The idea that a model could get better by <em>thinking longer before
 answering</em> was so attractive, and so nearly in the air, that a thin claim about it went
-straight to the top of the newsletter. Five days later the real thing shipped.</p>
+straight to the top of the newsletter. Six days later the real thing shipped.</p>
 """
 
 CH5_B = """
@@ -1359,7 +1380,7 @@ before anyone would describe the handover as complete. It is the earliest action
 this archive, and it is a joke in brackets.</p>
 
 <div class="scene">
-<span class="when">2025-04-08</span>
+<span class="when">2025-04-07</span>
 <p><em>Llama 4's Controversial Weekend Release.</em> Two mid-size mixture-of-experts models and
 a promised two-trillion-parameter “behemoth”, with genuinely new engineering — early fusion with
 MetaCLIP, interleaved chunked attention without RoPE, native FP8 training, up to 40 trillion
