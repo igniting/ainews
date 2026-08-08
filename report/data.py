@@ -298,3 +298,49 @@ DEBATES = [
      "notable in a corpus whose ledes are otherwise relentlessly forward-leaning.",
      "Followed by a visible turn toward containment and security framing."),
 ]
+
+# ---- future-work items now completed -----------------------------------
+
+# Three-surface gradient, fold change 2024H1 -> 2026H1 (Discord coverage ends 2026-03)
+GRADIENT = [
+    ("agentic", 10.9, 3.5, 1.2, "announcement → community → practice"),
+    ("reasoning", 2.5, 1.9, 1.4, "announcement → community → practice"),
+    ("China bloc", 5.6, 12.2, 8.9, "practice led announcement"),
+    ("fine-tuning", 0.1, 0.3, 0.3, "falls hardest in announcement"),
+    ("RAG", 0.1, 0.2, 0.1, "falls everywhere"),
+    ("quantization", 0.8, 0.5, 1.1, "rises only in practice"),
+]
+DISCORD_P = ["2024H1", "2024H2", "2025H1", "2025H2", "2026H1"]
+DISCORD = {
+    "agentic":      [11.0, 15.5, 31.2, 32.3, 38.5],
+    "China bloc":   [3.6, 9.8, 38.7, 36.3, 43.8],
+    "fine-tuning":  [34.3, 22.1, 14.3, 12.8, 9.7],
+    "quantization": [17.9, 14.1, 12.6, 11.8, 9.4],
+    "RAG":          [13.6, 10.9, 5.0, 4.1, 2.3],
+    "reasoning":    [4.8, 9.1, 19.4, 10.5, 9.3],
+}
+# (server, messages, first, last) — 2.14M messages, 56 servers, 31,607 channel-days
+COMMUNITIES = [
+    ("Unsloth AI", 302248, "2024-05", "2026-03", "fine-tuning"),
+    ("Perplexity AI", 253114, "2024-05", "2026-03", "product"),
+    ("LMArena", 209662, "2025-03", "2026-03", "evaluation"),
+    ("OpenAI", 157818, "2024-05", "2026-03", "frontier"),
+    ("LM Studio", 134890, "2024-05", "2026-03", "local inference"),
+    ("Cursor Community", 127021, "2025-03", "2026-03", "coding agents"),
+    ("BASI Jailbreaking", 95310, "2025-11", "2026-03", "security"),
+    ("HuggingFace", 90759, "2024-05", "2026-03", "infrastructure"),
+]
+# Source-controlled entity diversity (Hill-1), closing the fragmentation threat
+DIVERSITY = {
+    "twitter": [("2024H1", 22.1), ("2024H2", 24.5), ("2025H1", 30.1),
+                ("2025H2", 33.2), ("2026H1", 27.4), ("2026H2", 24.9)],
+    "reddit":  [("2024H1", 12.4), ("2024H2", 18.9), ("2025H1", 18.0),
+                ("2025H2", 17.9), ("2026H1", 16.2), ("2026H2", 16.5)],
+}
+# Kaplan-Meier at model level vs family level
+SURVIVAL_FAMILY = [
+    ("All models", 255, 137, 140, 254),
+    ("US frontier labs", 161, 175, 49, 315),
+    ("Chinese labs", 49, 85, 21, 398),
+    ("Open-weights families", 100, 117, 43, 273),
+]

@@ -286,6 +286,16 @@ def build() -> str:
                                 ("ollama", D.STACK["ollama"], "ink"),
                                 ("ComfyUI", D.STACK["ComfyUI"], "ink2")],
                     [0, 5, 10, 15], "mentions / 10⁴ words")
+    grad_rows = [[f"<code>{C.esc(n)}</code>",
+                  f"<span class='hi'>{a:g}x</span>", f"{b:g}x", f"<span class='hib'>{c:g}x</span>",
+                  C.esc(note)] for n, a, b, c, note in D.GRADIENT]
+    comm_rows = [[C.esc(s), f"{n:,}", C.esc(a), C.esc(b), C.esc(k)] for s, n, a, b, k in D.COMMUNITIES]
+    disc_fig = C.lines(D.DISCORD_P,
+                       [("agentic", D.DISCORD["agentic"], "sig"),
+                        ("China bloc", D.DISCORD["China bloc"], "bench"),
+                        ("fine-tuning", D.DISCORD["fine-tuning"], "ink"),
+                        ("RAG", D.DISCORD["RAG"], "ink2")],
+                       [0, 15, 30, 45], "mentions / 10⁴ words")
     theses_html = "".join(
         f'<div><span>{C.esc(d)}</span><em>{C.esc(q)}</em></div>' for d, q in D.THESES)
     debates_html = "".join(
@@ -399,8 +409,52 @@ steady share, and CPU/RAM offload climbs 0.8 → 2.3 as open-weight models outgr
 Practice space runs on hardware people own.</p>
 </div></section>'''
 
+    SEC_THIRD = f'''<section><div class="col">
+<span class="secnum">§ 7 — Three surfaces</span>
+<h2>The hype gradient</h2>
+<p>Each issue also carries a Discord recap, and every channel heading in it declares its own
+message volume — <strong>2,142,082 messages across 56 servers and 31,607 channel-days</strong>,
+between May 2024 and March 2026. That is behavioural data: nobody wrote those messages for a
+newsletter. It gives a third measurement surface, sitting between announcement and practice.</p>
+</div>
+{figtop(disc_fig, 7, "Community space — inside the Discord recap",
+  "Mentions per 10⁴ words of Discord-recap text. Coverage ends March 2026 when the newsletter "
+  "dropped the section, so nothing here speaks to 2026H2.")}
+<div class="col">
+<p>Measuring the same patterns in all three surfaces gives a gradient rather than a binary.</p>
+</div>
+{table(["Pattern", "Announcement", "Community", "Practice", "Shape"], grad_rows,
+ "Table 4 · Fold change 2024H1 to 2026H1 within each surface", (1, 2, 3))}
+<div class="col">
+<p><strong>Agents and reasoning fall off monotonically from announcement to community to
+practice</strong> — 10.9x to 3.5x to 1.2x, and 2.5x to 1.9x to 1.4x. Those are the corpus's
+two most promoted ideas, and the further you get from the announcement layer the smaller they
+look. That is what a hype gradient is, and it is measurable.</p>
+<p>The gradient is <em>not</em> universal, which is the useful part. The Chinese open-weights
+bloc runs the other way — community and practice both ahead of announcement (12.2x and
+8.9x against 5.6x). Practitioners were running those models before the announcement layer caught
+up. RAG falls uniformly everywhere. Quantization rises only in practice.</p>
+<p class="pull">A shift that shrinks as you approach the people doing the work is a narrative.
+One that grows is an adoption the coverage has not caught up with.</p>
+
+<h3>Which communities existed, and when</h3>
+</div>
+{table(["Server", "Messages", "First", "Last", "Centre of gravity"], comm_rows,
+ "Table 5 · The busiest communities in the sampled window", (1,))}
+<div class="col">
+<p>The single busiest community in the entire corpus is <strong>Unsloth AI</strong>, a
+fine-tuning toolchain, at 302,248 messages. That is the strongest corroboration available for
+the fine-tuning result: while announcement-space coverage of fine-tuning fell by roughly 90%,
+the largest sustained community conversation in the archive was people fine-tuning models.</p>
+<p>The arrival dates are informative too. LMArena and Cursor Community both appear in March 2025
+— evaluation-as-product and coding-agents-as-product entering together. BASI Jailbreaking
+appears in November 2025 and accumulates 95,310 messages in five months, which is the security
+turn showing up as community formation before it shows up as coverage.</p>
+</div></section>'''
+
+
     SEC_DEBATE = f'''<section><div class="col">
-<span class="secnum">§ 7 — Arguments</span>
+<span class="secnum">§ 8 — Arguments</span>
 <h2>Four things the field could not agree on</h2>
 <p>A daily record captures disagreements that retrospectives smooth over, because it has to
 publish before anyone knows who was right.</p>
@@ -408,7 +462,7 @@ publish before anyone knows who was right.</p>
 </div></section>'''
 
     SEC_DOMAIN = f'''<section><div class="col">
-<span class="secnum">§ 8 — The whole map</span>
+<span class="secnum">§ 9 — The whole map</span>
 <h2>Sixteen domains over seven half-years</h2>
 <p>Grouping the archive's 2,241 topic tags into sixteen domains gives the coverage surface as a
 whole. Two caveats: the categories are hand-built, so they can only find what was anticipated
@@ -540,7 +594,7 @@ American.</p>
 <p>The inflection is September 2024. OpenAI's o1 ships, and the newsletter's editor calls it
 the same day with a one-line lede — <em>"Test-time reasoning is all you need."</em> In
 announcement space <code>reasoning</code> goes 7.0 → 23.4 → 40.2 across three half-years.
-The interesting detail, which we return to in §9.8, is that the <em>thesis</em> was stated
+The interesting detail, which we return to in §10.8, is that the <em>thesis</em> was stated
 roughly two quarters before the <em>volume</em> peaked.</p>
 <p>Two months later Anthropic ships the Model Context Protocol, to almost no immediate
 notice — the lede that day is <em>"<code>claude_desktop_config.json</code> is all you
@@ -632,12 +686,12 @@ consecutive issues.</p>
 <p style="font-family:var(--sans);font-size:.83rem;color:var(--muted);margin-top:-.4rem">
 Chronology drawn from issues with descriptive titles. 68% of 2026 titles are the placeholder
 "not much happened today" — including several of the launches above — which is itself a
-finding (§11.3).</p>
+finding (§12.3).</p>
 </div></section>''')
 
     # ---------------------------------------------------------- 3. corpus
     A(f'''<section><div class="col">
-<span class="secnum">§ 10 — The corpus</span>
+<span class="secnum">§ 11 — The corpus</span>
 <h2>What the archive is made of</h2>
 <p>690 issues, 2023-12-06 to 2026-08-06, 15.3M words of body text, published on roughly five
 days a week and covering about 70% of all calendar days in the window. Reconstructing it
@@ -659,9 +713,9 @@ people.</li>
  [["Discord telemetry", "31,688 channel-days · 2.15M messages · 56 servers", "community activity series (unused)"],
   ["Tweet attribution", "18,854 (handle, status-ID) pairs", "attribution-fidelity checks"],
   ["Reddit engagement", "3,070 scored posts", "practice-space weighting"],
-  ["Numeric claims in prose", "1,335 context · 990 parameter · 176 benchmark · 151 price", "§9.6"],
-  ["Editorial ledes", "234 “X is all you need” theses", "§9.8 validation"],
-  ["Declared sampling effort", "571 issues", "§11.2 — the central control"]],
+  ["Numeric claims in prose", "1,335 context · 990 parameter · 176 benchmark · 151 price", "§10.6"],
+  ["Editorial ledes", "234 “X is all you need” theses", "§10.8 validation"],
+  ["Declared sampling effort", "571 issues", "§12.2 — the central control"]],
  "Table 1 · Structured layers embedded in the prose", (1,))}
 <div class="col">
 <h3>Three editorial layers, not one</h3>
@@ -670,12 +724,12 @@ people.</li>
 the day's <strong>event</strong>; the lede states the editor's <strong>thesis</strong>; the
 body carries the <strong>sources</strong>. Our first several months of analysis used layers
 two and three and discarded layer one as boilerplate. It is in fact the most compressed and
-most human field in the corpus, and §9.8 uses it as independent ground truth.</p>
+most human field in the corpus, and §10.8 uses it as independent ground truth.</p>
 </div></section>''')
 
     # ---------------------------------------------------------- 4. instrument
     A(f'''<section><div class="col">
-<span class="secnum">§ 11 — The instrument</span>
+<span class="secnum">§ 12 — The instrument</span>
 <h2>Four regimes, one inversion, and a template</h2>
 <p>This section comes before Methods because every method depends on it. A daily publication
 is not a stationary instrument: its format, its sources and its editorial conventions all
@@ -718,7 +772,7 @@ K3 launch issues alike. All 23 issues in the final month open with the lede "a q
 three of them major launches.</p>
 <p>Since no company can be named in a placeholder title, any headline-share measure falls
 mechanically as the template spreads. This produced one of our four withdrawn findings
-(§13.1).</p>
+(§14.1).</p>
 
 <h3>4.4 Six ways to measure the wrong thing</h3>
 </div>
@@ -741,7 +795,7 @@ normalisation across regimes.</p>
     for name, what, verdict, why in D.AUDIT:
         method_rows.append([f"<code>{C.esc(name)}</code>", C.esc(what), C.esc(why)])
     A(f'''<section><div class="col">
-<span class="secnum">§ 12 — Methods</span>
+<span class="secnum">§ 13 — Methods</span>
 <h2>Thirteen methods, each with its failure mode</h2>
 <p>Methods are grouped by what they estimate. Every one is released with the way it breaks on
 this corpus, because on a non-stationary instrument that is as load-bearing as the citation.</p>
@@ -791,7 +845,7 @@ without that "Llama" scores 100% in every period.</p>
                  f"<b>{C.esc(ld)}</b>", f"<em>{C.esc(q)}</em>"] for w, m, src, ld, q in D.LEDE_VALIDATION]
 
     A(f'''<section><div class="col">
-<span class="secnum">§ 9 — Results</span>
+<span class="secnum">§ 10 — Results</span>
 <h2>What survives when the source is held fixed</h2>
 
 <h3>6.1 The agenda shift is real {tier("a")}</h3>
@@ -811,13 +865,13 @@ capability absorbed into the substrate rather than abandoned.</p>
   "fine-tuning recovers in the final period rather than continuing to fall.")}
 <div class="col">
 <h3>6.2 Announcement space and practice space diverge {tier("a")}</h3>
-<p>This is the study's most useful result, and it exists only because the confound in §11.2
+<p>This is the study's most useful result, and it exists only because the confound in §12.2
 forced us to split the corpus by surface. Twitter carries launches and claims; Reddit carries
 what people are running. Comparing fold-change within each gives a per-topic measure of how
 far discourse has run ahead of practice.</p>
 </div>
 {table(["Pattern", "Announcement (Twitter)", "Practice (Reddit)", "Reading"], gap_rows,
- "Table 4 · Fold-change 2024H1 → 2026H2, computed inside each section", (1, 2))}
+ "Table 6 · Fold-change 2024H1 → 2026H2, computed inside each section", (1, 2))}
 {figtop(C.paired(D.GAP), 5, "The gap between what is announced and what is run",
   "Each row is one topic; the oxblood dot is announcement space, the teal dot practice space, "
   "on a log scale about no-change. A long connector means the surfaces disagree — the shift is "
@@ -902,7 +956,7 @@ on lede + Twitter + Reddit only — Discord chat excluded from every era. Five o
 terms survive that control; two do not, and both are reported.</p>
 </div>
 {table(["Term", "Drift", "Neighbours 2024H1", "Neighbours 2026H1", "Genre control"], drift_rows,
- "Table 5 · Referent drift, genre-controlled. Median drift 0.313", (1,))}
+ "Table 7 · Referent drift, genre-controlled. Median drift 0.313", (1,))}
 <div class="col">
 <p><code>harness</code> is the clearest case: an <em>evaluation</em> harness in 2024, an
 <em>agent</em> harness in 2026. A frequency series over that token sees one word used
@@ -924,7 +978,7 @@ still active has an <em>unfinished</em> life, and naive averaging would understa
 newest cohort.</p>
 </div>
 {table(["Cohort", "Models", "Died", "Median lifespan"], surv_rows,
- "Table 6 · Kaplan-Meier survival, right-censored at 90 days of silence", (1, 2, 3))}
+ "Table 8 · Kaplan-Meier survival, right-censored at 90 days of silence", (1, 2, 3))}
 {figtop(C.km(D.SURVIVAL), 9, "How long a model stays in the conversation",
   "Survival curves by cohort. The Chinese-lab median of 85 days against 175 for US frontier "
   "labs is partly a naming artifact — faster version churn splits a persistent family into "
@@ -933,6 +987,30 @@ newest cohort.</p>
 <p>For anything pinned to a specific checkpoint, the engineering consequence is direct: the
 median relevance window in the field's own discussion is about four and a half months. That
 bounds how long integration-specific tuning holds its value.</p>
+
+<h4>Family-level survival reverses the cohort reading</h4>
+<p>We flagged the Chinese cohort's 85-day median as possibly a naming artifact, since those labs
+version-bump far more often and each tag is therefore shorter-lived by construction. Collapsing
+version and size suffixes so that <code>qwen3.5-235b</code>, <code>qwen3.6</code> and
+<code>qwen3.8-max</code> are one subject settles it — and inverts the result.</p>
+<div class="tw"><table>
+<caption>Median survival: individual model tags vs collapsed families</caption>
+<thead><tr><th>Cohort</th><th class="n">Tags</th><th class="n">Median</th>
+<th class="n">Families</th><th class="n">Median</th></tr></thead><tbody>
+<tr><td>All models</td><td class="n">255</td><td class="n">137 d</td><td class="n">140</td>
+<td class="n"><b>254 d</b></td></tr>
+<tr><td>US frontier labs</td><td class="n">161</td><td class="n">175 d</td><td class="n">49</td>
+<td class="n"><b>315 d</b></td></tr>
+<tr><td>Chinese labs</td><td class="n">49</td><td class="n"><span class="hi">85 d</span></td>
+<td class="n">21</td><td class="n"><b>398 d</b></td></tr>
+<tr><td>Open-weights families</td><td class="n">100</td><td class="n">117 d</td><td class="n">43</td>
+<td class="n"><b>273 d</b></td></tr>
+</tbody></table></div>
+<p>At family level the Chinese cohort is the <strong>longest</strong>-lived, at 398 days against
+315 for US frontier labs. The 85-day figure was entirely an artifact of release cadence: those
+labs ship more named versions of a more persistent thing. The correct reading is not that their
+models are forgotten faster but that they iterate faster, and the family outlives the field
+average by a wide margin.</p>
 
 <h3>6.6 The numbers the field asserted {tier("b")} {tier("c")}</h3>
 <p>The prose is dense with quantitative claims that appear nowhere in the structured metadata.
@@ -980,7 +1058,7 @@ failed measurement rather than a leaderboard.</p>
 none of our methods touch that field, it is independent ground truth for the automated dates.</p>
 </div>
 {table(["Result", "Method-derived date", "Lede date", "The lede"], val_rows,
- "Table 7 · Automated dates against the editor's own dated theses")}
+ "Table 9 · Automated dates against the editor's own dated theses")}
 <div class="col">
 <p>Three of four agree closely. The disagreement is the informative one: the test-time
 reasoning thesis was stated on the day o1 shipped, roughly two quarters before mention density
@@ -999,7 +1077,7 @@ measure.</p>
         f'<span class="vd {v}">{v}</span></div>' for n, what, v, why in D.AUDIT)
 
     A(f'''<section><div class="col">
-<span class="secnum">§ 13 — Audit</span>
+<span class="secnum">§ 14 — Audit</span>
 <h2>What did not survive</h2>
 <p>A study that runs thirteen methods and withdraws none is not reporting honestly. Four
 findings from earlier passes of this work were tested against the artifacts in §4 and did not
@@ -1021,14 +1099,31 @@ token is <code>x.com</code> at z = −46.2 — the twitter.com → x.com domain 
 by <code>status</code> from URL paths. The content signal exists beneath that, but URL and
 template drift dominate even after source control.</p>
 
-<h3>7.3 The open threat {tier("c")}</h3>
-<div class="warn"><p>We measured the effective number of companies discussed rising roughly
-fivefold (Hill-1: 21.7 → 101.8) and presented it as fragmentation. <strong>Declared sampling
-breadth rose over the same window</strong> — 7 → 12 subreddits, 384 → 544 Twitter accounts.
-More sources sampled mechanically yields more distinct entities. The two are confounded and we
-did not control for it. The magnitude is reported as an upper bound, and the cross-validation
-we previously claimed with the OpenAI headline result is correspondingly weaker. Closing this
-requires per-section entity extraction rather than whole-issue tags.</p></div>
+<h3>7.3 The open threat, now closed {tier("x")}</h3>
+<p>We measured the effective number of companies discussed rising roughly fivefold
+(Hill-1: 21.7 → 101.8) from whole-issue tags and presented it as fragmentation, flagging that
+declared sampling breadth rose over the same window — 7 → 12 subreddits, 384 → 544 Twitter
+accounts. Extracting entities <em>inside a fixed recap section</em> settles it, and the finding
+does not survive:</p>
+<div class="tw"><table>
+<caption>Effective number of entities (Hill-1), whole-issue vs source-controlled</caption>
+<thead><tr><th>Measure</th><th class="n">2024H1</th><th class="n">2025H2</th>
+<th class="n">2026H2</th><th class="n">Factor</th></tr></thead><tbody>
+<tr><td>Whole-issue tags (as published)</td><td class="n">21.7</td><td class="n">101.8</td>
+<td class="n">62.8</td><td class="n"><span class="hi">4.7×</span></td></tr>
+<tr><td>Inside the Twitter recap</td><td class="n">22.1</td><td class="n">33.2</td>
+<td class="n">24.9</td><td class="n"><b>1.1×</b></td></tr>
+<tr><td>Inside the Reddit recap</td><td class="n">12.4</td><td class="n">17.9</td>
+<td class="n">16.5</td><td class="n"><b>1.3×</b></td></tr>
+</tbody></table></div>
+<div class="warn"><p><strong>The ~5× fragmentation result was almost entirely the instrument.</strong>
+Holding the source fixed, attention diversity is close to flat. What remains is a smaller and
+more specific shape: diversity <em>rises</em> to a peak in 2025H2 (Twitter Hill-1 33.2, top-3
+share down to 24%) and then <strong>re-concentrates</strong> through 2026 (27.4, then 24.9, with
+top-3 share back to 32%). The field diversified and then narrowed again — which is a different
+claim from the one we published, and the opposite of a monotonic fragmentation story.</p></div>
+<p>The cross-validation we had claimed with the OpenAI headline result is withdrawn along with
+it. Both were partly measuring how many sources the newsletter sampled.</p>
 
 <h3>7.4 Full audit</h3>
 <div class="audit">{arows}</div>
@@ -1036,7 +1131,7 @@ requires per-section entity extraction rather than whole-issue tags.</p></div>
 
     # ---------------------------------------------------------- 8-11
     A(f'''<section><div class="col">
-<span class="secnum">§ 14 — Discussion</span>
+<span class="secnum">§ 15 — Discussion</span>
 <h2>What we would tell an engineer</h2>
 
 <h3>Read the documents before measuring the fields</h3>
@@ -1080,7 +1175,7 @@ actually moved.</p>
 </div></section>
 
 <section><div class="col">
-<span class="secnum">§ 15 — Threats to validity</span>
+<span class="secnum">§ 16 — Threats to validity</span>
 <h2>What could still be wrong</h2>
 <h4>Construct</h4>
 <p>Reported attention is not field activity, and neither is deployment. The corpus measures one
@@ -1088,7 +1183,7 @@ publication's summary of three social surfaces.</p>
 <h4>Internal</h4>
 <p>Four publishing regimes; the source-composition inversion; title and lede templating; a
 pipeline that is LLM-drafted and human-edited in a mix that changes over time; regex surface
-matching throughout; claim subjects unresolved, so §9.6 reports field-level distributions
+matching throughout; claim subjects unresolved, so §10.6 reports field-level distributions
 rather than per-model values.</p>
 <h4>External</h4>
 <p>One editorial viewpoint, weighted toward builders and open-model tooling. Enterprise
@@ -1102,25 +1197,38 @@ connected component; survival cohorts affected by version-naming conventions.</p
 </div></section>
 
 <section><div class="col">
-<span class="secnum">§ 16 — Future work</span>
-<h2>What is left</h2>
-<ul class="plain">
-<li><strong>Per-section entity extraction</strong> to close the fragmentation confound in §13.3.
-This is the highest-priority open item.</li>
-<li><strong>The Discord telemetry.</strong> 2.15M messages across 56 servers with per-channel
-daily counts, entirely unanalysed. It is the natural third surface for the announcement/practice
-split — a deeper practice space than Reddit — for the periods where it exists.</li>
-<li><strong>Causal impact estimation</strong> for discrete events such as R1. Blocked on
-constructing a control set that is genuinely unaffected, which in a field this coupled is the
-actual work.</li>
-<li><strong>Dynamic topic models</strong> chained through time, which could represent a topic's
-vocabulary turning over while the topic persists — the formal version of the absorption claim.</li>
-<li><strong>Family-level survival grouping</strong> and claim-subject resolution.</li>
-</ul>
+<span class="secnum">§ 17 — Future work</span>
+<h2>What is done, and what is left</h2>
+<p>Three of the five items flagged in an earlier draft have since been completed, and two of
+them changed published claims.</p>
+<div class="tw"><table>
+<thead><tr><th>Item</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+<tr><td>Per-section entity extraction</td><td><b>done</b></td>
+<td>Refuted the ~5× fragmentation result (§14.3); the real shape is a rise to 2025H2 then
+re-concentration.</td></tr>
+<tr><td>The Discord telemetry</td><td><b>done</b></td>
+<td>2.14M messages across 56 servers became the third surface (§7), turning the
+announcement/practice binary into a measurable gradient.</td></tr>
+<tr><td>Family-level survival grouping</td><td><b>done</b></td>
+<td>Reversed the cohort reading (§10.5): Chinese families are the longest-lived at 398 days.</td></tr>
+<tr><td>Claim-subject resolution</td><td>open</td>
+<td>Benchmark scores are still not attributed to the models they belong to, so §5 reports
+field-level distributions.</td></tr>
+<tr><td>Dynamic topic models</td><td>open</td>
+<td>Would formalise the absorption claim by letting a topic's vocabulary turn over while the
+topic persists. Compute-bound rather than blocked.</td></tr>
+<tr><td>Causal impact estimation</td><td>blocked</td>
+<td>Needs a control set genuinely unaffected by the intervention. The diversity work above makes
+this harder, not easier: within a fixed surface the entity distribution is stable enough that
+finding uncorrelated controls for an event like R1 is the whole problem.</td></tr>
+</tbody></table></div>
+<p>The two remaining open items are both about resolution rather than reach — attributing claims
+to subjects, and letting topics evolve rather than being re-fit per period. Neither would change
+a headline result; both would sharpen one.</p>
 </div></section>
 
 <section><div class="col">
-<span class="secnum">§ 17 — Conclusion</span>
+<span class="secnum">§ 18 — Conclusion</span>
 <h2>Two results, equally load-bearing</h2>
 <p>Substantively: over 690 days the field's agenda moved from training to inference to
 orchestration; the open-weights frontier relocated so completely that the ratio between the
@@ -1166,7 +1274,7 @@ controlled · C = confounded, reported as a bound · ✗ = withdrawn.
     mast, abstract, intro, field, corpus_s, instr, methods, results, audit, tail = H
     return "".join([mast, abstract, intro,
                     '<div class="part"><span class="pn">Part I</span><h2>What happened</h2>\n<p>The field\'s technical trajectory, 2023–2026, read from the daily record.</p></div>', field, SEC_AGENDA, SEC_ARCH, SEC_BENCH, SEC_STACK,
-                    SEC_DEBATE, SEC_DOMAIN, results,
+                    SEC_THIRD, SEC_DEBATE, SEC_DOMAIN, results,
                     '<div class="part"><span class="pn">Part II</span><h2>How we know</h2>\n<p>The instrument, the methods, and the four findings that did not survive contact with them.</p></div>', corpus_s, instr, methods, audit, tail])
 
 
@@ -1199,6 +1307,32 @@ SHELL = """<!doctype html>
 """
 
 
+def renumber_subsections(html: str) -> str:
+    """Rewrite h3/h4 sub-numbers to match their parent section.
+
+    Sections are authored independently and then reordered, so hand-written
+    sub-numbers drift. Deriving them from the surrounding section at build time
+    means a future reorder cannot desynchronise them again.
+    """
+    out, cur = [], None
+    for chunk in re.split(r'(<span class="secnum">§ \d+[^<]*</span>)', html):
+        m = re.match(r'<span class="secnum">§ (\d+)', chunk)
+        if m:
+            cur = m.group(1)
+            out.append(chunk)
+            continue
+        if cur:
+            chunk = re.sub(r'(<h[34]>)(\d+)\.(\d+)', lambda x: f"{x.group(1)}{cur}.{x.group(3)}", chunk)
+        out.append(chunk)
+    return "".join(out)
+
+
+def renumber_tables(html: str) -> str:
+    """Tables are authored per-section; number them by final display order."""
+    counter = iter(range(1, 999))
+    return re.sub(r"Table \d+ · ", lambda m: f"Table {next(counter)} · ", html)
+
+
 def renumber_figures(html: str) -> str:
     """Figures are authored per-section; number them by final display order."""
     counter = iter(range(1, 999))
@@ -1211,7 +1345,7 @@ def renumber_figures(html: str) -> str:
 
 if __name__ == "__main__":
     standalone = "--standalone" in sys.argv
-    body = renumber_figures(build())
+    body = renumber_subsections(renumber_tables(renumber_figures(build())))
     if standalone:
         html = SHELL.format(title=TITLE, desc=DESC, css=CSS, body=body)
         out = pathlib.Path(__file__).resolve().parent.parent / "site" / "index.html"

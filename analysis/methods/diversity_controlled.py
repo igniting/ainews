@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""Source-controlled entity diversity — closing the fragmentation confound.
+
+`distributions.py` measured the effective number of companies discussed rising
+~5x (Hill-1: 21.7 -> 101.8) from whole-issue front-matter tags, and reported it
+as fragmentation. That result was left as Tier C because it is confounded with
+**sampling breadth**: the newsletter's declared coverage rose from 7 to 12
+subreddits and 384 to 544 Twitter accounts over the same window. More sources
+sampled mechanically yields more distinct entities, so the rise could be the
+instrument rather than the field.
+
+The fix is to count entities *inside a fixed recap section*. Holding the surface
+constant removes the composition effect; what remains of the rise is either real
+fragmentation or the residual effect of sampling more accounts within that one
+surface — which is testable, because Twitter's account count rose 42% while the
+subreddit count rose 71%, so the two sections carry different amounts of that
+residual.
+
+Entities are matched from the front-matter `companies` vocabulary rather than a
+hand list, so the lexicon is the corpus's own.
+
+Usage:
+    python3 analysis/methods/diversity_controlled.py
+"""
+
+from __future__ import annotations
+
+import argparse
+import collections
+import json
+import math
+import pathlib
+import re
+import sys
+
+REPO = pathlib.Path(__file__).resolve().parent.parent.parent
+ARTICLES = REPO / "articles"
+INDEX = REPO / "analysis" / "index.json"
+OUT = REPO / "analysis" / "diversity-controlled.md"
+
+FRONT = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
+HEAD = re.compile(r"^#\s+AI (Twitter|Reddit|Discord) Recap.*$", re.M | re.I)
+
+ALIASES = {
+    "huggingface": "hugging-face", "deepseek-ai": "deepseek", "deepseek_ai": "deepseek",
+    "langchainai": "langchain", "langchain-ai": "langchain", "meta": "meta-ai-fair",
+    "meta-ai": "meta-ai-fair", "deepmind": "google-deepmind", "qwen": "alibaba",
+    "mistral": "mistral-ai", "xai": "x-ai", "perplexity": "perplexity-ai",
+    "cursor_ai": "cursor", "moonshot": "moonshot-ai", "vllm_project": "vllm",
+}
+
+
+def half(name: str) -> str:
+    return f"20{name[:2]}H{1 if int(name[3:5]) <= 6 else 2}"
+
+
+def lexicon(min_issues: int = 5) -> dict[str, str]:
+    """Surface form -> canonical entity, built from the corpus's own tag vocabulary."""
+    records = json.loads(INDEX.read_text(encoding="utf-8"))
+    counts: collections.Counter = collections.Counter()
+    for record in records:
+        counts.update({c.strip().lower() for c in record.get("companies", []) if c.strip()})
+    out = {}
+    for name, n in counts.items():
+        if n < min_issues or len(name) < 4:
+            continue
+        # tag slugs are hyphenated; the prose spells them with spaces too
+        canon = ALIASES.get(name, name)
+        out[name] = canon
+        out[name.replace("-", " ")] = canon
+    return out
+
+
+def sections_of(body: str) -> dict[str, str]:
+    marks = list(HEAD.finditer(body))
+    out: dict[str, str] = {}
+    for i, m in enumerate(marks):
+        end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
+        out[m.group(1).lower()] = body[m.end() : end]
+    return out
+
+
+def hill(counter: collections.Counter) -> dict[str, float]:
+    """Richness, Shannon, and Hill-1/2 as effective entity counts."""
+    if not counter:
+        return {"richness": 0.0, "hill1": 0.0, "hill2": 0.0, "top3": 0.0}
+    import numpy as np
+
+    c = np.asarray(list(counter.values()), dtype=float)
+    p = c / c.sum()
+    shannon = float(-(p * np.log(p)).sum())
+    order = np.sort(p)[::-1]
+    return {
+        "richness": float(len(c)),
+        "hill1": float(math.exp(shannon)),
+        "hill2": float(1 / float((p ** 2).sum())),
+        "top3": float(order[:3].sum() * 100),
+    }
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--min-issues", type=int, default=5)
+    parser.add_argument("--min-hits", type=int, default=2, help="entity must appear this often in a period")
+    args = parser.parse_args(argv)
+
+    lex = lexicon(args.min_issues)
+    surfaces = sorted(lex, key=len, reverse=True)
+    finder = re.compile(r"(?<![\w-])(" + "|".join(re.escape(s) for s in surfaces) + r")(?![\w-])", re.I)
+    print(f"lexicon: {len(surfaces)} surface forms -> {len(set(lex.values()))} entities", file=sys.stderr)
+
+    per: dict[str, dict[str, collections.Counter]] = collections.defaultdict(
+        lambda: collections.defaultdict(collections.Counter))
+    words: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+
+    for path in sorted(ARTICLES.glob("*.md")):
+        body = FRONT.sub("", path.read_text(encoding="utf-8", errors="replace"))
+        secs = sections_of(body)
+        if not secs:
+            continue
+        period = half(path.name)
+        for source, text in secs.items():
+            words[source][period] += len(text.split())
+            for m in finder.finditer(text):
+                per[source][period][lex[m.group(1).lower()]] += 1
+
+    periods = sorted(words["twitter"])
+    lines = [
+        "# Entity diversity, source-controlled",
+        "",
+        "Generated by `analysis/methods/diversity_controlled.py`.",
+        "",
+        "Entities counted **inside a fixed recap section**, so the source-composition",
+        "inversion cannot drive the trend. Hill-1 is the effective number of",
+        "equally-discussed entities. An entity must appear at least",
+        f"{args.min_hits} times in a period to count, which keeps one-off mentions from",
+        "inflating richness as section word counts grow.",
+        "",
+    ]
+
+    verdicts = {}
+    for source in ("twitter", "reddit"):
+        rows = []
+        for p in periods:
+            if words[source][p] < 20000:
+                continue
+            counter = collections.Counter(
+                {k: v for k, v in per[source][p].items() if v >= args.min_hits})
+            h = hill(counter)
+            rows.append((p, words[source][p], h))
+        lines += [f"## Within the {source.title()} recap", "",
+                  "| Period | Section words | Distinct entities | Hill-1 | Hill-2 | Top-3 share |",
+                  "|---|---|---|---|---|---|"]
+        for p, w, h in rows:
+            lines.append(f"| {p} | {w/1000:,.0f}k | {h['richness']:.0f} | **{h['hill1']:.1f}** | "
+                         f"{h['hill2']:.1f} | {h['top3']:.0f}% |")
+        lines.append("")
+        if len(rows) >= 2:
+            a, b = rows[0][2]["hill1"], rows[-1][2]["hill1"]
+            verdicts[source] = (rows[0][0], a, rows[-1][0], b, b / a if a else 0)
+            lines.append(f"Hill-1 moves **{a:.1f} → {b:.1f}** ({rows[0][0]} → {rows[-1][0]}), "
+                         f"a factor of **{b/a:.1f}×**.")
+            lines.append("")
+
+    lines += ["## Verdict", ""]
+    tw = verdicts.get("twitter")
+    rd = verdicts.get("reddit")
+    if tw and rd:
+        lines += [
+            f"Whole-issue tags gave Hill-1 21.7 → 101.8, a factor of 4.7×, which we could not",
+            f"separate from sampling breadth. Holding the source fixed gives **{tw[4]:.1f}×** in",
+            f"announcement space and **{rd[4]:.1f}×** in practice space.",
+            "",
+        ]
+    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"wrote {OUT.relative_to(REPO)}")
+    for s, v in verdicts.items():
+        print(f"  {s:<8} Hill-1 {v[1]:6.1f} ({v[0]}) -> {v[3]:6.1f} ({v[2]})   {v[4]:.2f}x")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

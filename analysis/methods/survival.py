@@ -44,6 +44,24 @@ US_LAB = re.compile(r"^(gpt|claude|gemini|llama|grok|^o[134]|codex|phi|command|d
 OPENISH = re.compile(r"llama|qwen|deepseek|mistral|mixtral|gemma|olmo|phi|glm|kimi|minimax|falcon|nemotron|smol", re.I)
 
 
+# Strip version and size suffixes so a persistent family is one subject rather than
+# a dozen short-lived tags: qwen3.5-235b-a22b, qwen3.6, qwen3.8-max -> qwen3.
+VERSION = re.compile(r"[-_]?\d+(\.\d+)*([bkm]\b)?", re.I)
+SIZE = re.compile(r"[-_](\d+x)?\d+[bkm](-a\d+[bkm])?\b|[-_](mini|nano|small|medium|large|max|pro|ultra|"
+                  r"flash|turbo|instruct|base|chat|thinking|preview|exp|it|vl|coder|reasoner)\b", re.I)
+
+
+def collapse(model: str) -> str:
+    """Reduce a model tag to its family stem."""
+    s = model.lower().strip()
+    prev = None
+    while prev != s:
+        prev = s
+        s = SIZE.sub("", s)
+    s = VERSION.sub("", s).strip("-_. ")
+    return s or model.lower()
+
+
 def kaplan_meier(durations: np.ndarray, observed: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     """Product-limit estimator. Returns (times, survival probability)."""
     order = np.argsort(durations)
@@ -71,13 +89,19 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--silence", type=int, default=90, help="days without a mention before a model counts as dead")
     parser.add_argument("--min-issues", type=int, default=3, help="ignore models mentioned fewer times")
+    parser.add_argument(
+        "--family",
+        action="store_true",
+        help="group version variants into families (qwen3.5/3.6/3.8 -> qwen3) before fitting; "
+        "tests whether the Chinese-cohort gap is a naming artifact of faster version churn",
+    )
     args = parser.parse_args(argv)
 
     records = json.loads(INDEX.read_text(encoding="utf-8"))
     seen: dict[str, list[str]] = collections.defaultdict(list)
     for record in records:
         for model in {m.strip().lower() for m in record.get("models", []) if m.strip()}:
-            seen[model].append(record["date"])
+            seen[collapse(model) if args.family else model].append(record["date"])
 
     end = dt.date.fromisoformat(max(r["date"] for r in records))
     rows = []
