@@ -661,3 +661,36 @@ KM_COHORT = [("All models", 255, 137, 140, 254), ("US frontier labs", 161, 175, 
 # Why the reversal: naming granularity and cohort age, inside the survival cohort
 KM_WHY = [("Chinese labs", "5.44", "2025-07-29", "77 d"),
           ("US frontier labs", "4.03", "2024-09-13", "138 d")]
+
+# Interlude III — the consolidated ledger of withdrawn or reversed findings.
+# (what was published, what was true, root cause)
+LEDGER = [
+    ("OpenAI's share of headlines fell from 18% to 4%",
+     "Title templating rose from 8% to 68% of issues. Conditioned on descriptive titles the "
+     "series is 29% → 18%, and every company falls.",
+     "field"),
+    ("Quiet-day language rose sharply, so the field was slowing",
+     "The title and lede are templates. 26 of the last 30 issues open that way, including "
+     "several major launches.",
+     "field"),
+    ("<code>context rot</code> was a rising concern across the field",
+     "A Discord idiom. It disappears entirely once chat logs are excluded from the corpus.",
+     "document"),
+    ("<code>agentic</code> sat next to <code>retrieval-augmented</code> in 2024, so agents "
+     "absorbed retrieval",
+     "A genre artifact of mixing chat and prose in one embedding. Controlled, the 2024 "
+     "neighbours are <code>low-code</code> and <code>devika</code>.",
+     "document"),
+    ("The effective number of companies discussed rose 4.7×, so the field fragmented",
+     "1.1× inside the Twitter recap and 1.3× inside the Reddit recap. The rest was the "
+     "sampling frame widening from 7 to 12 subreddits and 384 to 544 accounts.",
+     "document"),
+    ("Models from Chinese labs have half the shelf life — 85 days against 175",
+     "At family level they are the longest-lived cohort measured, 398 days against 315.",
+     "unit"),
+]
+LEDGER_KIND = {"field": "the field stopped meaning what it meant",
+               "document": "the document stopped being the document",
+               "unit": "the unit of observation was wrong"}
+# Share of issues opening with a templated non-title, by year
+TEMPLATED = [("2023", 8), ("2024", 18), ("2025", 43), ("2026", 68)]

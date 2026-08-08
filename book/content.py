@@ -84,8 +84,8 @@ CONTENTS = [
      "If announcements are unreliable, what does the ground truth look like?", "ch13"),
     ("ch", "14", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", "ch14"),
-    ("inter", "III", "The four things I got wrong",
-     "Consolidated, with what each one cost.", None),
+    ("inter", "III", "The six things I got wrong",
+     "Consolidated, with what each one cost.", "interlude-3"),
 
     ("part", "Part IV — Reading forwards"),
     ("ch", "15", "The unit of observation",
@@ -2528,6 +2528,145 @@ name, and let the lab decide which weights are behind it.</p>
 """
 
 
+# ---------------------------------------------------------------- interlude III
+
+INT3 = """
+<p class="first">Six findings in this work were published and then withdrawn or reversed. That
+is the honest number, and it is worth setting out in one place — not as a penance, but because
+they are not six unrelated mistakes. They are three mistakes made twice each, and each of the
+three has a different detection method that costs almost nothing to run.</p>
+"""
+
+INT3_B = """
+<h2>The first kind: a field stopped meaning what it meant</h2>
+
+<p>Two of the six come from treating a database field as though its contents were stable. The
+<code>title</code> column of this archive contains a title in 2023 and, increasingly, a
+placeholder afterwards.</p>
+"""
+
+INT3_C = """
+<p>Eight percent of 2023 issues open with a non-title — <em>not much happened today</em>,
+<em>a quiet weekend</em>, <em>small news items</em>. By 2026 it is <strong>68%</strong>, and
+26 of the last 30 issues in the archive are titled that way, including days carrying frontier
+model launches and billion-dollar funding rounds.</p>
+
+<p>Any series built on titles therefore has a denominator that is quietly filling with blanks.
+Every company's headline share falls; I picked the two I expected to fall and wrote a story
+about them. The same mechanism produced a second finding — that quiet-day language was rising,
+so the field was slowing down — which is a measurement of the template rather than the
+field.</p>
+
+<p><strong>Detection:</strong> read the values, not the schema. Twenty rows, spread across the
+range, read by a person. It takes an afternoon and nothing else catches this.</p>
+
+<h2>The second kind: the document stopped being the document</h2>
+
+<p>Three of the six come from one cause. The archive's issues are assembled from three kinds of
+source — chat logs, forum threads and posts — and the proportions invert completely across the
+corpus. The median issue in early 2024 is almost entirely chat; the median issue at the end
+contains none at all.</p>
+
+<p>A count taken across a whole issue is therefore a weighted average whose weights are moving,
+and the weights move faster than most of the things being measured. That produced three separate
+published claims, each with a different flavour of wrong:</p>
+
+<ul>
+<li>A term that existed only in chat logs, reported as a field-wide concern.</li>
+<li>Two terms that appeared to be neighbours, because their genres were mixed in one embedding
+rather than because anyone used them together.</li>
+<li>A fivefold rise in the diversity of subjects discussed, which was mostly the newsletter
+adding sources — the sampling frame widened from 7 subreddits to 12 and from 384 accounts to
+544 over the same window.</li>
+</ul>
+
+<p><strong>Detection:</strong> split the corpus by source and re-run. If the finding only exists
+in the aggregate, it may be a fact about the mixture rather than about the world. This is the
+single most productive check in the whole project, and not only because it catches errors —
+splitting by source to remove a confound is what produced the three-surface comparison that most
+of this book's surviving results depend on.</p>
+
+<h2>The third kind: the unit of observation was wrong</h2>
+
+<p>One of the six, and it is the one I would most likely make again, because nothing about it
+looks like an error.</p>
+
+<p>Measuring how long models stay in the conversation, I used the model tag as the subject.
+<code>qwen3.5-235b-a22b</code> is a row; <code>qwen3.6</code> is a row; <code>qwen3.8-max</code>
+is a row. That is a defensible choice — those are genuinely different artifacts with different
+weights — and it produced a clean result: models from Chinese labs had a median life of 85 days
+against 175 for US frontier labs.</p>
+
+<p>Collapse the version and size suffixes so those three rows become one subject, and the
+cohort with the shortest lives becomes the longest-lived of any measured: 398 days against 315.
+The ranking inverts, on identical data, because <em>a lab that ships more named checkpoints of
+the same underlying thing looks like a lab whose models die young</em>.</p>
+
+<p><strong>Detection:</strong> ask what one row <em>is</em>, and whether the thing you actually
+care about is one row or many. If a decision would be made about the family, measure families.
+The question is not statistical, and no diagnostic will raise it.</p>
+"""
+
+INT3_D = """
+<h2>What all six have in common</h2>
+
+<p><strong>Not one of them was a statistical error.</strong> Every count was correct. Every
+difference was far outside anything sampling noise could produce. Every significance test would
+have passed, every confidence interval would have been narrow, and every one of those numbers
+would have been describing the wrong quantity.</p>
+
+<p>All six live in the step before statistics — the one where you decide what to count, over
+what population, treating what as a subject. That step has essentially no tooling. There is no
+linter for it, no test that fails, and no warning in any output. It is checked by reading, or it
+is not checked.</p>
+
+<p class="pull">Every one of these errors produced a clean series with no anomalies in it. That
+is what makes them dangerous: the output of a broken definition looks exactly like the output of
+a good one.</p>
+
+<h2>Why the wrong versions survived longer</h2>
+
+<p>There is a selection effect worth naming, because it operates on published work generally and
+not just on this project.</p>
+
+<p>In every one of the six cases, <strong>the wrong finding was more quotable than the
+correction</strong>. “OpenAI's share of the conversation collapsed” is a headline; “headline
+share is uninformative because the title field is increasingly a placeholder” is a footnote.
+“Chinese models have half the shelf life” is a slide; “the ranking depends on whether you count
+checkpoints or families” is a caveat nobody remembers. “The field fragmented fivefold” travels;
+“diversity is roughly flat once you hold the source constant” does not.</p>
+
+<p>Errors that produce a clean story are therefore selected for at every stage — they survive
+review longer, they get repeated more, and they are harder to retract because more people have
+built on them. Nothing about that is specific to this archive. It is a reason to be most
+suspicious of your best-sounding result, which is precisely the one you least want to
+re-examine.</p>
+
+<h2>What it cost</h2>
+
+<p>Roughly two months, six findings, and one genuinely load-bearing claim that had already been
+written up before it collapsed. Set against that, two of the three fixes produced things worth
+more than what they destroyed: the source split became the comparison this book is organised
+around, and the family-level grouping turned a wrong recommendation into a right one.</p>
+
+<div class="aside">
+<h4>The whole method, as a checklist</h4>
+<p><strong>Read twenty rows, spread across the range, before you count anything.</strong> Not
+the schema, not the aggregate — the values.<br>
+<strong>Split by source and re-run.</strong> If it only exists in the pooled data, it may be
+about the pooling.<br>
+<strong>State what a subject is</strong> and ask whether a decision would be made about that
+thing or a different one.<br>
+<strong>Re-read the same twenty rows on a schedule</strong>, because all three of these failures
+can arrive later in a series that started out fine.<br>
+<strong>Be most suspicious of the finding you most want to publish.</strong></p>
+</div>
+
+<p>None of this is sophisticated, and none of it is new. All of it is cheaper than the two
+months.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -2864,6 +3003,20 @@ def pages():
                     "Table 13 · The two mechanisms behind the reversal", (1,))
             + CH14_F)
 
+    led_rows = [[pub, was, C.esc(D.LEDGER_KIND[kind])] for pub, was, kind in D.LEDGER]
+    int3 = (INT3
+            + table(["What I published", "What was true", "Root cause"], led_rows,
+                    "Table 14 · Every finding withdrawn or reversed, and why")
+            + INT3_B
+            + fig(F.timeline([y for y, _ in D.TEMPLATED],
+                             [("templated titles", [v for _, v in D.TEMPLATED], "sig")],
+                             [0, 25, 50, 75], "% of issues", every=1, gutter=126),
+                  25, "The title field filling with placeholders",
+                  "Share of issues whose title is a template — “not much happened today”, "
+                  "“a quiet weekend”, “small news items” — rather than a description of the "
+                  "day. Any series built on titles inherits this denominator.")
+            + INT3_C + INT3_D)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -2899,4 +3052,6 @@ def pages():
          "If announcements are unreliable, what does the ground truth look like?", ch13),
         ("ch14", "ch", "14", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
+        ("interlude-3", "inter", "III", "The six things I got wrong",
+         "Consolidated, with what each one cost.", int3),
     ]
