@@ -638,3 +638,26 @@ DISCORD_SAMPLE_P = ["24-05", "24-07", "24-09", "24-11", "25-01", "25-03", "25-05
                     "25-07", "25-09", "25-11", "26-01", "26-03"]
 DISCORD_SAMPLE = [28, 31, 32, 30, 33, 32, 29, 30, 23, 23, 23, 23]
 DISCORD_PER_SERVER = [1665, 2430, 2145, 384, 2459, 3288, 4346, 4043, 3842, 5200, 4685, 2259]
+
+# Chapter 14 — Kaplan-Meier survival, % still discussed, sampled every 30 days to 720.
+# Death = 90 days of silence before the corpus ends; live models are right-censored.
+KM_DAYS = list(range(0, 721, 30))
+KM = {
+    "tags_all": [100.0, 83.5, 71.4, 61.8, 54.5, 46.4, 40.9, 31.8, 28.9, 28.0, 24.5, 21.6,
+                 21.1, 19.1, 15.6, 14.5, 14.0, 13.5, 12.4, 11.9, 9.7, 9.7, 8.7, 6.5, 5.4],
+    "fams_all": [96.4, 87.1, 82.0, 76.7, 72.9, 68.2, 60.2, 55.5, 50.7, 49.9, 46.7, 45.9,
+                 45.9, 44.2, 39.8, 38.1, 37.2, 36.2, 31.4, 29.4, 27.4, 26.4, 24.3, 23.3, 23.3],
+    "tags_cn": [100.0, 79.6, 59.0, 50.6, 42.0, 32.6, 24.8, 16.1, 12.9, 12.9, 12.9, 12.9,
+                12.9, 12.9, 12.9, 6.4, 6.4, 6.4, 6.4, 6.4, 6.4, 6.4, 6.4, 6.4, 6.4],
+    "fams_cn": [95.2, 85.7, 81.0, 76.2, 76.2, 66.7, 66.7, 61.9, 57.1, 57.1, 52.4, 52.4,
+                52.4, 52.4, 46.6, 39.9, 39.9, 39.9, 39.9, 31.9, 31.9, 31.9, 31.9, 31.9, 31.9],
+}
+# still-discussed probability at fixed horizons: (label, checkpoint %, family %)
+KM_HORIZON = [("1 month", 84, 87), ("3 months", 62, 77), ("6 months", 41, 60),
+              ("1 year", 21, 45), ("18 months", 12, 30), ("2 years", 5, 21)]
+# (cohort, tags, tag median days, families, family median days)
+KM_COHORT = [("All models", 255, 137, 140, 254), ("US frontier labs", 161, 175, 49, 315),
+             ("Open-weights families", 100, 117, 43, 273), ("Chinese labs", 49, 85, 21, 398)]
+# Why the reversal: naming granularity and cohort age, inside the survival cohort
+KM_WHY = [("Chinese labs", "5.44", "2025-07-29", "77 d"),
+          ("US frontier labs", "4.03", "2024-09-13", "138 d")]

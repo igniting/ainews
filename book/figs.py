@@ -151,3 +151,53 @@ def surfaces(rows):
     out.append(f'<text class="axlab" x="{pad["l"]-70}" y="{pad["t"]-11}">fold change, 2024H1 → 2026H1</text>')
     out.append("</svg>")
     return "".join(out)
+
+
+def survival(days, curves, marks=()):
+    """Kaplan-Meier step curves. curves: [(name, percents, css_class)];
+    marks: [(day, label)] drawn as vertical references."""
+    h = 320
+    pad = {"t": 26, "r": 128, "b": 44, "l": 52}
+    inner_w = W - pad["l"] - pad["r"]
+    top = days[-1]
+
+    def x(d):
+        return pad["l"] + inner_w * d / top
+
+    def y(v):
+        return pad["t"] + (h - pad["t"] - pad["b"]) * (1 - v / 100)
+
+    out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
+    for v in (0, 25, 50, 75, 100):
+        out.append(f'<line class="grid" x1="{pad["l"]}" y1="{y(v):.1f}" '
+                   f'x2="{W-pad["r"]}" y2="{y(v):.1f}"/>')
+        out.append(f'<text class="tick" x="{pad["l"]-8}" y="{y(v)+3.5:.1f}" '
+                   f'text-anchor="end">{v}%</text>')
+    for d in range(0, top + 1, 180):
+        out.append(f'<text class="tick" x="{x(d):.1f}" y="{h-pad["b"]+16}" '
+                   f'text-anchor="middle">{d // 30} mo</text>')
+    out.append(f'<line class="ref dash" x1="{pad["l"]}" y1="{y(50):.1f}" '
+               f'x2="{W-pad["r"]}" y2="{y(50):.1f}"/>')
+    for d, lab in marks:
+        out.append(f'<line class="ref dash" x1="{x(d):.1f}" y1="{y(50):.1f}" '
+                   f'x2="{x(d):.1f}" y2="{h-pad["b"]:.1f}"/>')
+        out.append(f'<text class="ptlab" x="{x(d)+6:.1f}" y="{h-pad["b"]-6}">{C.esc(lab)}</text>')
+    placed = []
+    for name, pct, cls in curves:
+        pts = []
+        for i, v in enumerate(pct):
+            pts.append(f"{x(days[i]):.1f},{y(v):.1f}")
+            if i + 1 < len(pct):
+                pts.append(f"{x(days[i+1]):.1f},{y(v):.1f}")
+        out.append(f'<polyline class="ln {cls}" points="{" ".join(pts)}"/>')
+        placed.append((y(pct[-1]), name, cls))
+    laid = []
+    for yy, name, cls in sorted(placed):
+        yy = max(yy, (laid[-1][0] + 16) if laid else yy)
+        laid.append((yy, name, cls))
+    for yy, name, cls in laid:
+        out.append(f'<text class="serlab {cls}" x="{W-pad["r"]+9:.1f}" '
+                   f'y="{yy+4:.1f}">{C.esc(name)}</text>')
+    out.append(f'<text class="axlab" x="{pad["l"]-44}" y="{pad["t"]-8}">still discussed</text>')
+    out.append("</svg>")
+    return "".join(out)

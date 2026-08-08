@@ -83,7 +83,7 @@ CONTENTS = [
     ("ch", "13", "What people actually ran",
      "If announcements are unreliable, what does the ground truth look like?", "ch13"),
     ("ch", "14", "The half-life of a dependency",
-     "You are about to build on a model. How long will it stay relevant?", None),
+     "You are about to build on a model. How long will it stay relevant?", "ch14"),
     ("inter", "III", "The four things I got wrong",
      "Consolidated, with what each one cost.", None),
 
@@ -2382,6 +2382,152 @@ repetitive, and organised around what things cost.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 14
+
+CH14 = """
+<p class="first">The model tag <code>gpt-4o-2024-08-06</code> appears in this archive in four
+issues, across <strong>two days</strong>. The tag <code>gemini</code> appears across
+<strong>973</strong>. In August 2024 both were things you could have written into a config file
+and shipped.</p>
+
+<p>That spread is the practical problem this chapter is about. Every integration built on a
+model is a dependency with an expiry date, the date is not published, and the difference between
+the shortest and longest lives in this corpus is a factor of nearly five hundred. So: given a
+model you are about to build on, what is the distribution?</p>
+
+<h2>Why you cannot just average the lifespans</h2>
+
+<p>The obvious approach — take every model, subtract its first mention from its last, average —
+is wrong in a way that gets worse the more recent your data is. A model first mentioned last
+month and still being discussed today has not had a one-month life. Its life is
+<em>unfinished</em>, and counting it as one month drags the average down. Worse, it drags it
+down hardest for the newest models, which are exactly the ones you want to compare against the
+old ones.</p>
+
+<div class="aside">
+<h4>Survival analysis, in one box</h4>
+<p>This is the standard problem in medical statistics — patients still alive when the study ends
+— and the standard fix is the Kaplan-Meier estimator. Rather than averaging lifespans, it walks
+forward in time and asks, at each moment when something died, what fraction of the things still
+being observed died then. Multiply those fractions together and you get a curve: the probability
+of surviving past any given age. Things still alive at the end contribute to the denominator for
+as long as they were watched and then drop out without counting as deaths. That is called
+right-censoring, and handling it is the entire reason to use this method.</p>
+<p>Here, birth is a model's first mention, and death is its last mention, provided that last
+mention is more than 90 days before the archive ends. Models mentioned recently are treated as
+alive.</p>
+</div>
+
+<p>Run that over every model tag appearing in at least three issues — 255 of them — and the
+answer to “how long will it stay relevant” is a curve rather than a number.</p>
+"""
+
+CH14_B = """
+<p>The median is <strong>137 days</strong>. Four and a half months from a model's first mention
+to the halfway point of its time in the conversation.</p>
+
+<p>Stated as a decision table, it is blunter:</p>
+"""
+
+CH14_C = """
+<p>If you pin an integration to a specific checkpoint today, there is a <strong>one in five
+chance anyone is still talking about it in a year</strong>, and a one in twenty chance in two.
+Pin to the family instead and those become roughly one in two and one in five.</p>
+
+<h2>The result I published, which was wrong</h2>
+
+<p>Split the same 255 tags by cohort and something jumps out.</p>
+"""
+
+CH14_D = """
+<p>Read the left half of that table. Models from Chinese labs have a median life of
+<strong>85 days</strong> against 175 for US frontier labs — less than half the shelf life. That
+is a clean, quotable, decision-relevant finding, and I published it, with a note that it might
+be a naming artifact.</p>
+
+<p>It is a naming artifact. Collapse version and size suffixes so that
+<code>qwen3.5-235b-a22b</code>, <code>qwen3.6</code> and <code>qwen3.8-max</code> count as one
+subject rather than three, and read the right half of the table. The cohort with the shortest
+individual lives has <strong>the longest family lives of any group measured</strong>: 398 days
+against 315 for US frontier labs.</p>
+
+<p>The ranking inverts completely, on the same data, from one decision about what counts as a
+thing.</p>
+"""
+
+CH14_E = """
+<h2>Why it inverts</h2>
+
+<p>Two measurable causes, and neither is flattering to the original result.</p>
+
+<p><strong>Naming granularity.</strong> Inside this cohort, Chinese labs produce
+<strong>5.44 distinct model tags per family</strong> against 4.03 for US frontier labs. More
+named checkpoints per underlying thing means each individual name is shorter-lived by
+construction, before anything about quality or adoption enters. A lab that ships
+<code>kimi-k2</code>, <code>kimi-k2-0905</code>, <code>kimi-k2-thinking</code> and
+<code>kimi-k2-turbo-preview</code> will look, at tag level, like four models that each died
+young.</p>
+
+<p><strong>Cohort age.</strong> The median Chinese tag first appears on
+<strong>2025-07-29</strong>. The median US frontier tag first appears on
+<strong>2024-09-13</strong> — eleven months earlier. The estimator handles censoring correctly,
+but a cohort concentrated in the final year of the corpus is estimated from far less evidence
+than one spread across all three, and its curve is correspondingly jumpy: the Chinese tag curve
+below sits flat at 12.9% for five straight months because almost nothing in that group is old
+enough to produce another event.</p>
+
+<div class="warn">
+<p>The corrected figure rests on <strong>21 Chinese families</strong>. It is the better
+estimate — it is measuring subjects rather than strings — and it is not a precise one. Treat
+“longest-lived” as “not shortest-lived, and probably above average”, and do not build a
+procurement policy on the difference between 398 and 315.</p>
+</div>
+"""
+
+CH14_F = """
+<h2>What this is a clock for</h2>
+
+<p>One thing this number is not: a switch-off date. <code>GPT-4</code> remained callable long
+after the conversation moved on, and a model dropping out of this archive says nothing about
+whether its endpoint still answers.</p>
+
+<p>What it does measure is how long the field keeps paying attention, and that turns out to be
+the clock that governs most of what actually goes wrong with an integration:</p>
+
+<ul>
+<li>How long the community answers stay accurate. Stack Overflow-style knowledge about a
+checkpoint's quirks stops accumulating when the conversation does.</li>
+<li>How long third-party tooling keeps testing against it — quantizations, serving configs,
+adapter formats, prompt libraries.</li>
+<li>How long the documentation you are relying on stays maintained.</li>
+<li>Whether the next engineer to touch your code has heard of the thing it depends on.</li>
+</ul>
+
+<div class="aside">
+<h4>Four things to do with a 137-day median</h4>
+<p><strong>Pin to a family, not a checkpoint</strong>, wherever the API allows it. The whole
+difference between the two columns of that decision table is this one choice.<br>
+<strong>Budget a migration every four to six months</strong> for anything keyed to a specific
+checkpoint, and treat it as routine maintenance rather than an incident.<br>
+<strong>Depreciate checkpoint-specific work on the same clock.</strong> Prompts tuned to one
+model's quirks, few-shot examples chosen for its failure modes, and thresholds calibrated to its
+scores are all assets with a four-month half-life. Anything you would be unwilling to redo twice
+a year should not depend on a specific checkpoint.<br>
+<strong>Choose the ecosystem, not the score.</strong> What persists across a family is the
+tooling around it — the quantizations, the serving stack, the community's accumulated tricks.
+That is what you are really adopting, and it outlives any individual set of weights by a factor
+of about two.</p>
+</div>
+
+<p class="pull">A model is a dependency whose version you do not control, on a release cadence
+nobody publishes, with a median attention span of four and a half months.</p>
+
+<p>That is a worse deal than almost any library you have ever taken, and it is priced into
+nothing. The single cheapest mitigation is the one in the table above: depend on the family
+name, and let the lab decide which weights are behind it.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -2681,6 +2827,43 @@ def pages():
                   "several communities look as though they stopped existing in August.")
             + CH13_E)
 
+    hz_rows = [[C.esc(l), f"{a}%", f"<b>{b}%</b>"] for l, a, b in D.KM_HORIZON]
+    coh_rows = [[C.esc(c), f"{nt}", f"{mt} d", f"{nf}", f"<b>{mf} d</b>"]
+                for c, nt, mt, nf, mf in D.KM_COHORT]
+    why_rows = [[C.esc(c), g, age, obs] for c, g, age, obs in D.KM_WHY]
+    ch14 = (CH14
+            + fig(F.survival(D.KM_DAYS,
+                             [("all families", D.KM["fams_all"], "bench"),
+                              ("all model tags", D.KM["tags_all"], "sig")],
+                             marks=[(137, "137 d"), (254, "254 d")]),
+                  23, "How long a model stays in the conversation",
+                  "Kaplan-Meier curves over 255 model tags and the 140 families they collapse "
+                  "into. Death is 90 days of silence before the archive ends; anything "
+                  "mentioned more recently is treated as alive and censored.")
+            + CH14_B
+            + table(["If you build on it today", "Still discussed — checkpoint",
+                     "— family"], hz_rows,
+                    "Table 11 · Probability a model is still being discussed after…", (1, 2))
+            + CH14_C
+            + table(["Cohort", "Tags", "Median", "Families", "Median"], coh_rows,
+                    "Table 12 · Median survival at tag level and at family level",
+                    (1, 2, 3, 4))
+            + CH14_D
+            + fig(F.survival(D.KM_DAYS,
+                             [("Chinese families", D.KM["fams_cn"], "bench"),
+                              ("Chinese model tags", D.KM["tags_cn"], "sig")],
+                             marks=[(85, "85 d"), (398, "398 d")]),
+                  24, "The same models, counted two ways",
+                  "The lower curve counts each named checkpoint as a separate subject; the "
+                  "upper one collapses version and size suffixes into families. The long flat "
+                  "stretches in the lower curve are periods with too few subjects old enough "
+                  "to produce an event.")
+            + CH14_E
+            + table(["Cohort", "Tags per family", "Median first appearance",
+                     "Median observed span"], why_rows,
+                    "Table 13 · The two mechanisms behind the reversal", (1,))
+            + CH14_F)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -2714,4 +2897,6 @@ def pages():
          "you started counting in 2024?", ch12),
         ("ch13", "ch", "13", "What people actually ran",
          "If announcements are unreliable, what does the ground truth look like?", ch13),
+        ("ch14", "ch", "14", "The half-life of a dependency",
+         "You are about to build on a model. How long will it stay relevant?", ch14),
     ]
