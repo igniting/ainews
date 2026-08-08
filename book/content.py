@@ -66,7 +66,7 @@ CONTENTS = [
      "When did the field stop talking about models and start talking about the "
      "software around them?", "ch7"),
     ("ch", "8", "The handover",
-     "How does a technological lead change hands?", None),
+     "How does a technological lead change hands?", "ch8"),
     ("ch", "9", "Containment",
      "What happens after the capability race?", None),
     ("inter", "II", "The day the corpus changed shape underneath me",
@@ -474,11 +474,12 @@ company outside OpenAI holds that share for that long.</p>
 <p>By the first half of 2026 it is in <strong>2%</strong>.</p>
 
 <p>Nothing in this chapter's period would have let you predict that, and the naive explanation
-— they got worse — is not what the archive says. Mistral raised $1.7 billion and beat DeepSeek
-in human evaluations in roughly the same month its coverage reached zero. Chapter 8 takes that
-apart properly, because <em>ceasing to be news</em> and <em>ceasing to be good</em> turn out to
-be different events with different causes, and telling them apart is worth real money to
-anyone choosing a dependency.</p>
+— they got worse — is not what the archive says. In December 2025, the month its density
+reached the floor, Mistral raised $1.7 billion at an $11.7 billion valuation and shipped a
+coding model that practitioners reported beating or tying DeepSeek v3.2 in 71% of third-party
+preferences. Chapter 8 takes that apart properly, because <em>ceasing to be news</em> and
+<em>ceasing to be good</em> turn out to be different events with different causes, and telling
+them apart is worth real money to anyone choosing a dependency.</p>
 """
 
 CH3_C = """
@@ -1162,6 +1163,152 @@ automated check anywhere would have caught it.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 8
+
+CH8 = """
+<p class="first">Here are two measurements of the same company in the same year. Mistral is
+<strong>named somewhere in 48% of the issues published in 2026</strong> — every other day.
+Mistral's density inside the newsletter's announcement recap in 2026 is <strong>1.3 mentions
+per ten thousand words</strong>, down from 15.2 two years earlier.</p>
+
+<p>Both are correct. Together they describe what losing a technological lead actually looks
+like from the inside, which is not disappearance. It is becoming background.</p>
+
+<h2>The fall, in two different shapes</h2>
+
+<p>In early 2024 the open-weights frontier had two names on it, and between them they were the
+loudest thing in the archive. Meta and Mistral together run at 26.9 mentions per ten thousand
+words of announcement space and <strong>65.5 in practice space</strong> — higher than any
+single lab reaches at any point in the corpus. By the end they are at 1.3 and 2.4.</p>
+
+<p>Separate them and the two falls have completely different shapes.</p>
+
+<p><strong>Meta breaks.</strong> Its line does not decline from 2024; it <em>rises</em> to a
+peak of 34.5 in the second half of 2024 — Llama 3.1 and the 405B, the most-discussed
+open-weights moment in the corpus to that point — and then falls off a cliff: 15.4, 4.3, 1.4,
+1.1. Thirty-one-fold from peak in two years.</p>
+
+<p><strong>Mistral erodes.</strong> 15.2, 10.3, 8.7, 7.9, 2.3, 1.3. No peak, no cliff, no
+event. Every half-year is a little lower than the one before, for two and a half years, until
+there is nothing left.</p>
+"""
+
+CH8_B = """
+<h2>The first warning is seven weeks after the peak</h2>
+
+<p>On 19 April 2024 the headline is <em>Meta Llama 3 (8B, 70B)</em>, and the next day
+<em>Llama-3-70b is GPT-4-level Open Model</em>. This is the high-water mark of American open
+weights — a free model matching the best commercial system in the world.</p>
+
+<p>Forty-eight days later:</p>
+
+<blockquote><p>Qwen 2 beats Llama 3 (and we don't know how)</p>
+<cite>AI News, 2024-06-06</cite></blockquote>
+
+<p>Read the parenthesis again. It is doing more work than the rest of the sentence. The field
+could see the thing happening and could not account for it, in June 2024, seven months before
+R1 and eighteen months before anyone would describe the handover as complete. That headline is
+the earliest actionable signal in this entire book, and it is a joke in brackets.</p>
+
+<div class="scene">
+<span class="when">2025-04-08</span>
+<p><em>Llama 4's Controversial Weekend Release.</em> Two mid-size mixture-of-experts models
+and a promised two-trillion-parameter "behemoth", with genuinely new engineering — early
+fusion with MetaCLIP, interleaved chunked attention, native FP8 training, up to 40 trillion
+tokens. Released on a Saturday, and received badly. Change-point detection on the monthly
+Llama series puts structural breaks either side of it, in October 2024 and August 2025. It is
+the last time Meta's line moves at all.</p>
+</div>
+
+<p>And then, on 29 December 2025, this:</p>
+
+<blockquote><p>Meta Superintelligence Labs acquires Manus AI for over $2B, at $100M ARR,
+9 months after launch</p>
+<cite>AI News, 2025-12-29</cite></blockquote>
+
+<p>Meta's announcement-space density in that half-year is <strong>1.4</strong>. The company was
+spending billions and had almost no share of the conversation. Capital and attention had come
+completely apart, which is worth remembering the next time either one is offered as evidence
+of the other.</p>
+
+<h2>What replaced them was not a company</h2>
+"""
+
+CH8_C = """
+<p>This is the finding the chapter exists for, and it is easy to miss because everyone
+remembers a single name.</p>
+
+<p><strong>DeepSeek</strong> peaks at 34.5 in the first half of 2025 — the R1 window from
+chapter 6 — and then falls to 10.9, 8.6, 10.0. It never leads again.
+<strong>Qwen</strong> never spikes at all: 4.3, 1.8, 10.7, 11.5, 6.9, 6.4 in announcement
+space, and in practice space it climbs steadily from 1.3 to <strong>22.8</strong>, the most
+consistent single line in this book. <strong>Kimi</strong> is at zero for two years and then
+19.8, 15.7, <strong>40.8</strong> — the largest single-lab value anywhere in the corpus, in
+the final half-year. <strong>GLM</strong> arrives at 9.5 in late 2025 and holds. <strong>MiniMax</strong>
+comes up behind it.</p>
+
+<p>No individual Chinese lab holds the top position for more than two consecutive half-years.
+The lead did not pass from Meta to DeepSeek. It passed from two named companies to a rotating
+cast of five, and the rotation is the point: whichever one was ahead, the category kept its
+gain, exactly as chapter 6 measured during the week it started.</p>
+
+<div class="aside">
+<h4>The decision this actually changes</h4>
+<p>The obvious strategic response to February 2025 was "switch to DeepSeek." That would have
+been a bet on the single line in this chart that reverted. The correct read was never a
+company — it was that a category had become viable, and the individual names inside it would
+keep changing. If you are choosing a dependency, the durable question is which
+<em>ecosystem</em> your tooling, quantizations and fine-tunes will follow, not which lab
+posted the best number this quarter.</p>
+</div>
+
+<h2>Three measurements, three answers, all correct</h2>
+
+<p>Return to Mistral, because the way the archive contradicts itself about it is the most
+useful methodological lesson in Part II.</p>
+"""
+
+CH8_D = """
+<p>These are three different questions wearing the same clothes. <em>Is it still around</em>
+(named in the body). <em>Is it still the story</em> (tagged as a subject). <em>How much of the
+conversation is it</em> (density in a fixed section). Ask the first and Mistral is fine; ask
+the third and Mistral has essentially vanished. Both conclusions have been published, by
+people looking at the same archive.</p>
+
+<p>And the underlying reality is stranger than either. In the same month its density hit the
+floor, Mistral raised <strong>$1.7 billion at an $11.7 billion valuation</strong> and shipped
+Mistral Large 3 plus three sizes of Ministral, all open weights under Apache 2.0. A week later
+practitioners were reporting that its Devstral 2 Small <em>"beats or ties DeepSeek v3.2 in 71%
+of third-party preferences while being smaller, faster and cheaper."</em> The newsletter's own
+lede that day was two words long:</p>
+
+<blockquote><p>Mistral is back!</p>
+<cite>AI News lede, 2025-12-02</cite></blockquote>
+
+<p>The density series never registers it. Not a bump.</p>
+
+<p class="pull">Being good and being the story became independent variables, and only one of
+them is visible in any measurement of attention.</p>
+
+<h2>What the archive can and cannot tell you here</h2>
+
+<p>It shows the open-weights frontier relocating, in every surface, over about eighteen months.
+It shows the first legible warning arriving in June 2024 and being treated as a curiosity. It
+shows the replacement being a bloc rather than a company. It shows a firm continuing to ship
+competitive models, raise enormous sums, and win third-party comparisons while its share of the
+conversation went to nearly nothing.</p>
+
+<p>What it does not show is <em>why</em> — and this book will not pretend otherwise. A record
+of what a field discussed cannot tell you whether Meta's problem was organisational, whether
+Mistral's was distribution, or whether the whole thing was decided by the cost of compute in
+two countries. Those are questions for evidence this corpus does not contain.</p>
+
+<p>What it does tell you is the shape, and the shape has a use. A lead changes hands slowly,
+visibly, and with the first warning arriving about eighteen months before anyone acts on it —
+phrased, on the day, as a joke.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -1317,6 +1464,34 @@ def pages():
                  "corpus at twice the density of anything else measured here.")
            + CH7_E)
 
+    m3 = [[C.esc(q), a, b, c, d] for q, a, b, c, d in D.MISTRAL_THREE]
+    ch8 = (CH8
+           + fig(C.lines(D.P6,
+                         [("Meta / Llama", D.LABS_TW["Meta / Llama"], "sig"),
+                          ("Mistral", D.LABS_TW["Mistral"], "ink2"),
+                          ("Meta / Llama (practice)", D.LABS_RD["Meta / Llama"], "bench")],
+                         [0, 20, 40, 60], "mentions / 10⁴ words", gutter=168),
+                 14, "Two shapes of losing",
+                 "Meta rises to a peak and breaks; Mistral erodes with no event at all. The "
+                 "practice-space line for Meta starts at 55.6, the highest any single lab "
+                 "reaches among practitioners anywhere in the corpus.")
+           + CH8_B
+           + fig(C.lines(D.P6,
+                         [("Kimi / Moonshot", D.LABS_TW["Kimi / Moonshot"], "sig"),
+                          ("DeepSeek", D.LABS_TW["DeepSeek"], "bench"),
+                          ("GLM / Zhipu", D.LABS_TW["GLM / Zhipu"], "ink"),
+                          ("Qwen", D.LABS_TW["Qwen"], "ink2")],
+                         [0, 10, 20, 30, 40], "mentions / 10⁴ words", gutter=126),
+                 15, "The relay",
+                 "Announcement space, the Chinese open-weights bloc by lab. MiniMax is omitted "
+                 "for legibility; it rises from zero to 6.8 on the same shape as GLM. No lab "
+                 "holds the top position for more than two half-years.")
+           + CH8_C
+           + table(["How you ask", "2023", "2024", "2025", "2026"], m3,
+                   "Table 4 · Is Mistral still there? Three measurements, by year. The density row averages the two half-year values.",
+                   (1, 2, 3, 4))
+           + CH8_D)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -1335,4 +1510,6 @@ def pages():
         ("ch7", "ch", "7", "The harness",
          "When did the field stop talking about models and start talking about the "
          "software around them?", ch7),
+        ("ch8", "ch", "8", "The handover",
+         "How does a technological lead change hands?", ch8),
     ]

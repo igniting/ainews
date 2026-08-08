@@ -492,3 +492,30 @@ STACK_GAP = [
     ("evals", 2.4, 1.7, "field-wide"),
     ("prompt engineering", 0.15, 0.17, "gone, everywhere"),
 ]
+
+# Chapter 8 — the handover, per lab, mentions per 10^4 words in section.
+# Llama-tooling noise (localllama, llama.cpp, ollama, llamaindex) stripped first.
+LABS_TW = {
+    "Meta / Llama":  [20.3, 34.5, 15.4, 4.3, 1.4, 1.1],
+    "Mistral":       [15.2, 10.3, 8.7, 7.9, 2.3, 1.3],
+    "DeepSeek":      [3.9, 11.3, 34.5, 10.9, 8.6, 10.0],
+    "Qwen":          [4.3, 1.8, 10.7, 11.5, 6.9, 6.4],
+    "Kimi / Moonshot": [0.0, 0.2, 1.7, 19.8, 15.7, 40.8],
+    "GLM / Zhipu":   [0.2, 0.0, 0.2, 9.5, 12.6, 12.4],
+    "MiniMax":       [0.0, 0.0, 1.5, 5.7, 6.7, 6.8],
+}
+LABS_RD = {
+    "Meta / Llama":  [55.6, 37.7, 12.5, 4.6, 2.9, 2.6],
+    "Mistral":       [17.3, 15.1, 8.1, 5.7, 3.8, 1.7],
+    "DeepSeek":      [5.1, 13.3, 36.1, 7.7, 14.6, 26.1],
+    "Qwen":          [1.3, 17.1, 11.3, 18.7, 21.4, 22.8],
+    "Kimi / Moonshot": [0.0, 0.0, 0.4, 7.0, 8.8, 34.1],
+    "GLM / Zhipu":   [0.0, 0.6, 0.6, 7.8, 12.1, 10.0],
+    "MiniMax":       [0.0, 0.3, 1.0, 0.2, 5.6, 10.9],
+}
+# Three ways of asking "is Mistral still around", all correct, all different
+MISTRAL_THREE = [
+    ("Named anywhere in the issue body", "100%", "99%", "87%", "48%"),
+    ("Tagged as a subject in front matter", "54%", "33%", "15%", "2%"),
+    ("Density in announcement space", "—", "12.8", "8.3", "1.8"),
+]
