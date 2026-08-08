@@ -495,22 +495,38 @@ anyone received. They went out as <em>Replit Agent 4: The Knowledge Work Agent</
 high-return activity of raising your aspirations for LLMs</em>, <em>Context Drought</em>, and
 <em>NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sale</em>.</p>
 
-<p>Of the 133 issues I could recover, <strong>80</strong> that the archive files under a
-templated title had been published under a real headline. Measured on what was sent instead of
-what was stored, the templated share in the first half of 2026 is <strong>4.6%</strong>, not
-64%. The template is real — some days genuinely went out as <em>not much happened today</em> —
-but the archive inflates it fourteenfold.</p>
+<p>Of the 258 issues I could eventually recover, <strong>80</strong> that the archive files
+under a templated title had been published under a real headline. In the first half of 2026 the
+templated share of what was actually sent is <strong>4.6%</strong>, against the 64% the archive
+stores.</p>
 
-<p>So the field did not lose its meaning because an editor got tired. It lost it because
-somewhere between the newsletter and the mirror a pipeline began dropping the subject line and
-writing a placeholder, and the placeholder was plausible enough to read as editorial fatigue.
-The same thing had happened to the human-written opening underneath it, which the mirror
-replaced with the words <em>a quiet day</em> on 104 issues that were nothing of the kind.
-Restoring those from the emails moved the typical issue's editorial opening from three words
-back to 183 — roughly where it had been at the newsletter's most expansive, in 2024.</p>
+<p>Which looks like a clean verdict: the mirror invented the trend. It is not, and the way it is
+not is the more useful lesson. Compare the two series on the same issues:</p>
+
+<div class="tw"><table><thead><tr><th>Half-year</th><th class="n">Archive says templated</th>
+<th class="n">Actually sent that way</th></tr></thead><tbody>
+<tr><td>2024H2</td><td class="n">26.9%</td><td class="n">28.6%</td></tr>
+<tr><td>2025H1</td><td class="n">38.1%</td><td class="n">39.2%</td></tr>
+<tr><td>2025H2</td><td class="n">45.7%</td><td class="n">47.8%</td></tr>
+<tr><td>2026H1</td><td class="n">64.3%</td><td class="n"><b>4.6%</b></td></tr>
+<tr><td>2026H2</td><td class="n">84.6%</td><td class="n"><b>24.0%</b></td></tr>
+</tbody></table></div>
+
+<p>Through 2024 and 2025 the two agree within two points. The climb from 27% to 48% is
+<em>real</em> — the editor genuinely did reach for the template more and more, and my original
+series was tracking something that was happening. Only in 2026 do the columns come apart, and
+there they come apart in two directions at once: the mirror began writing placeholders in the
+same months the editor went back to writing headlines. One movement was hidden underneath its
+opposite.</p>
+
+<p>The commentary underneath shows the same double motion. The mirror replaced it with the words
+<em>a quiet day</em> on 104 issues in 2026, and restoring those from the sent emails moves the
+typical issue's opening from three words back to 183. But the genuine thinning through 2025 — a
+median of 190 words in late 2024, 92 by early 2025, 72 by late 2025 — survives the correction
+untouched. It was real, and the mirror's failure was layered on top of it.</p>
 
 <p class="pull">The first correction caught a field that had changed meaning. The second caught
-the fact that I had been reading a copy and calling it the thing.</p>
+a real trend and an artifact of the copy, superimposed, moving opposite ways.</p>
 
 <h2>What survived</h2>
 
@@ -2693,15 +2709,17 @@ field.</p>
 <p><strong>Detection:</strong> read the values, not the schema. Twenty rows, spread across the
 range, read by a person. It takes an afternoon and nothing else catches this.</p>
 
-<p><strong>What reading the values still missed.</strong> Nothing above is wrong, and all of it
-is beside the point. Reading the archive carefully establishes that its title field went
-blank; it cannot establish <em>why</em>, because the answer is not in the archive. The
-newsletter had gone on writing titles the whole time — the same four issues went out as
-<em>Context Drought</em> and <em>NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and
-announces $1T sale</em> — and the blanks were introduced by the mirror I was reading. On the
-133 issues recoverable from the sent emails, 80 of the templated titles turn out to be real
-headlines, and the rate for the first half of 2026 falls from 64% to 4.6%. Detection at this level costs more than
-an afternoon: it requires a second copy of the data, obtained by a different route.</p>
+<p><strong>What reading the values still missed.</strong> Nothing above is wrong, and it is
+only half the story. Reading the archive carefully establishes that its title field went blank;
+it cannot establish <em>why</em>, because the answer is not in the archive. Against 258 issues
+recovered from the sent emails, the stored and published series agree within two points through
+2024 and 2025 — the editor really was templating more — and then diverge sharply in 2026, where
+64% stored meets 4.6% sent. Four consecutive March 2026 issues the archive files as <em>not much
+happened today</em> went out as <em>Context Drought</em> and <em>NVIDIA GTC: Jensen goes hard on
+OpenClaw, Vera CPU, and announces $1T sale</em>. So a real trend and a broken pipeline ran in
+the same column, in opposite directions, and no amount of careful reading <em>within</em> the
+archive separates them. Detection at this level costs more than an afternoon: it requires a
+second copy of the data, obtained by a different route.</p>
 
 <h2>The second kind: the document stopped being the document</h2>
 
