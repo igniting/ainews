@@ -80,8 +80,8 @@ CONTENTS = [
     ("ch", "12", "When words change meaning",
      "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
      "you started counting in 2024?", "ch12"),
-    ("ch", "13", "What people actually ran",
-     "If announcements are unreliable, what does the ground truth look like?", "ch13"),
+    ("ch", "13", "Where practitioners spent their attention",
+     "If announcements are unreliable, what were the other rooms talking about?", "ch13"),
     ("ch", "14", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", "ch14"),
     ("inter", "III", "The six things I got wrong",
@@ -209,6 +209,38 @@ archive was a fine-tuning toolchain with 302,248 messages. Both facts are true. 
 “fine-tuning declined.”</p>
 </div>
 
+<p>The three surfaces this book compares have short names and longer, more accurate ones,
+and it is worth fixing both in mind now, because the short names do the work of memory and the
+long names do the work of truth:</p>
+
+<div class="aside">
+<h4>What the three surfaces actually are</h4>
+<p><strong>Announcement space</strong> is lab-linked Twitter discourse: 544 accounts on one
+editor's list, summarised by a model.<br>
+<strong>Community space</strong> is sampled Discord activity: message volume in 56
+English-language servers, which measures how busy a room was, not what software anyone ran.<br>
+<strong>Practice space</strong> is local-model Reddit discourse: 12 subreddits weighted heavily
+toward people running models on their own hardware.</p>
+<p>A gap between them is evidence about <em>where a subject was being discussed</em>. It is a
+lead worth investigating, not a measurement of adoption, and nowhere in this book is it ground
+truth about what was deployed.</p>
+</div>
+
+<p>There is one more limit, and it is the sharpest, because it sets a floor under every
+number in this book. <strong>The recaps are written by a language model, and the model
+changed.</strong> The archive says which one, in a line under each heading — <em>all recaps
+done by Claude 3 Opus, best of 4 runs</em> — and across the corpus that line names eight
+different model families for the Discord recap alone, while 384 of 613 issues never declare
+the Twitter summarizer at all. Holding the recap heading fixed holds the <em>source</em>
+fixed; it does not hold the instrument fixed.</p>
+
+<p>How much does that matter? Three days were published twice, the same news summarised by two
+different models — 13 May 2024, 18 July 2024, 6 August 2024. Comparing pattern densities
+between the two editions of one day varies the instrument while holding the news constant, and
+the answer is a <strong>median of 1.23×, with a maximum of 2.40×</strong>. So a fold-change of
+1.2 is indistinguishable from a summarizer swap, and one of 5.5 is not. Wherever this book
+leans on a ratio, that is the noise floor it is leaning against.</p>
+
 <p>There are three further limits worth stating plainly. The archive is one editor's view,
 with one editor's taste; it over-weights the English-language, US-and-China, open-weights-adjacent
 conversation and largely misses enterprise procurement, academic publishing outside the
@@ -305,9 +337,11 @@ of 2026. In community space, 3.0×. Among people running models on their own mac
 <strong>1.2×</strong> — which is to say, essentially not at all.</p>
 
 <p>Reasoning, measured the same way, does <em>not</em> do this: 1.2× in announcement space,
-2.1× in community space, 1.4× in practice. The staircase is flat, and if anything it tilts the
-wrong way. That is the test doing its job rather than confirming a theme — whatever happened
-to reasoning between 2024 and 2026, it was not a story that lived mainly in announcements.</p>
+2.1× in community space, 1.4× in practice. Two of those three are at or below the 1.23× that a
+summarizer swap alone produces, so the honest reading is that this test cannot separate
+reasoning's trajectory from its own instrument. The staircase is flat and may not be a
+staircase at all. That is the method declining to confirm a theme, which is the only reason to
+trust it when it does confirm one.</p>
 
 <p>That descending staircase is what hype looks like when you can measure it. It is not that
 agents are fake; it is that the further you get from the people with something to announce,
@@ -338,12 +372,14 @@ newsworthy while remaining a job people do.</p>
 
 <div class="aside">
 <h4>The test</h4>
-<p><strong>If a shift shrinks as you approach the people doing the work, it is a
-narrative.</strong> Discount it, and wait.<br>
-<strong>If it grows as you approach them, it is an adoption the coverage has not caught up
-with.</strong> That is the one to act on early.<br>
-<strong>If it moves the same amount everywhere, it is a real field-wide change.</strong>
-Believe it.</p>
+<p><strong>If a shift shrinks as you approach the people doing the work, the announcement
+layer is ahead of the practitioner layer.</strong> Discount it, and go looking for why.<br>
+<strong>If it grows as you approach them, practitioners are discussing something the coverage
+has not caught up with.</strong> That is the one worth investigating early.<br>
+<strong>If it moves about the same everywhere, treat it as a field-wide signal</strong> — and
+triangulate it against something that is not discourse before you act.</p>
+<p>None of the three tells you what was deployed. All three tell you where to point the next
+question, which is a more useful thing than it sounds and a smaller one than it reads.</p>
 </div>
 
 <p>You can run this without an archive. The surfaces exist for every technical field: there
@@ -586,7 +622,10 @@ that own the beginning and are near zero by the end, and one that starts at noth
 over. What it cannot show — because a chart of what people talked about never can — is that the
 two falling lines fell for opposite reasons.</p>
 
-<p>Retrieval fell because it won. It is now a feature of every serious product and a paragraph
+<p>Retrieval fell, on the reading this chapter argues for, because it won. That reading is an
+inference from the vocabulary, not a measurement of products: what the archive shows is the
+name going quiet while the machinery keeps being described. It is now unremarkable enough to
+go unnamed in most of what the newsletter covers, and a paragraph
 in every system design, and things in that position stop being announced. Fine-tuning fell out
 of announcement space while remaining one of the largest sustained practical activities in the
 archive: the busiest single community anywhere in this corpus, at 302,248 messages, is a
@@ -668,7 +707,10 @@ headline from 13 June 2024:</p>
 
 <p>A 30-billion-parameter open-weights model with a one-million-token context window, built
 from Mamba layers interleaved with attention layers, shipped with weights, training recipes
-and datasets. The pure-SSM bet lost. The mechanism is in production.</p>
+and datasets. The pure-SSM bet lost. What this establishes is narrower than “state-space models
+won”: it is that the mechanism survived, in a hybrid, in at least one shipped family. One model
+line is not evidence of broad absorption, and the corpus cannot tell you how widely those
+weights were used.</p>
 
 <p>What did not happen is the part worth noticing: <strong>no vocabulary rose to replace the
 one that fell</strong>. Hybrid-architecture language never picks up the slack — it sits at
@@ -1068,8 +1110,10 @@ still six times its January baseline.</p>
 
 <div class="scene">
 <span class="when">Friday 24 January</span>
-<p><em>TinyZero: Reproduce DeepSeek R1-Zero for $30.</em> Four days after release, the core
-result has been reproduced from scratch for the price of a large pizza.</p>
+<p><em>TinyZero: Reproduce DeepSeek R1-Zero for $30.</em> Four days after release, the
+<em>mechanism</em> has been reproduced at toy scale for the price of a large pizza — not R1's
+results, but the self-verification behaviour emerging in a small model trained from scratch,
+which was the part people doubted.</p>
 </div>
 
 <div class="scene">
@@ -1292,7 +1336,8 @@ A protocol is worth exactly nothing until a second party implements it, so the i
 event is never the release. It is the first adoption you did not control.</p>
 
 <p>Then the familiar decline: 25.3, 19.5, 14.3, down to 6.6 by early 2026. Not because MCP
-failed — by then it is in every major product in the archive — but because it stopped being
+failed — by then the archive records adoptions by most of the major vendors it covers — but
+because it stopped being
 worth mentioning. A protocol everyone implements generates no more argument than a file
 format.</p>
 
@@ -1533,6 +1578,15 @@ retrieve the benchmark's answers.</p>
 <p>Eight days later the account expanded: four additional accounts across four services, one
 used as an outbound relay, another for storage. Hugging Face's chief executive said they had
 initially assumed a frontier lab was attacking them.</p>
+</div>
+
+<div class="warn">
+<p><strong>A note on this account.</strong> Everything above reaches you through the
+newsletter's summary of OpenAI's disclosure, written within days of the event and three weeks
+before this archive ends. It is the one claim in this book resting on a single recent source
+that I have not checked against primary documents, and its details — which systems, which
+privileges, what sequence — are exactly the sort that get revised as disclosures are corrected.
+Treat the shape of the story as reported and the specifics as provisional.</p>
 </div>
 
 <p>Nobody in the archive calls this science fiction. The consensus framing, from researchers
@@ -2086,7 +2140,8 @@ key</em>.</p>
 <div class="aside">
 <h4>Why task benchmarks outlive quiz benchmarks</h4>
 <p><strong>There is a verifier, not a lookup.</strong> The tests pass or they do not; the shell
-reaches the goal state or it does not. Correctness is computed, so it cannot be memorised from a
+reaches the goal state or it does not. Correctness is computed rather than looked up, which
+makes this class of benchmark markedly harder to contaminate than one scored against a
 published table of answers.<br>
 <strong>The task space is effectively unbounded.</strong> There are always more repositories and
 more shell tasks. When the current set saturates you add harder instances, which is a data
@@ -2421,7 +2476,7 @@ any claim about the absolute size of the field, since this is 56 English-languag
 editor's list; and anything at all after March 2026, when the section was dropped.</p>
 </div>
 
-<h2>What the ground truth looked like</h2>
+<h2>What the practice layer looked like</h2>
 
 <p>Put the census together and the practice layer of this field, measured by message volume
 rather than by coverage, is remarkably consistent across two years. It is people in an
@@ -2431,12 +2486,12 @@ help them modify those models.</p>
 
 <p>There is no version of that sentence that would work as a launch announcement, which is
 precisely why it is worth measuring separately. Announcements are about what becomes possible.
-This is a record of what was actually happening while that was being announced, and its main
-constraint was never capability. It was <strong>VRAM, terms of service, and the electricity
-bill</strong>.</p>
+This is a record of what practitioners were <em>talking about</em> while that was being
+announced — not a census of what ran anywhere — and the constraint shaping that talk was never
+capability. It was <strong>VRAM, terms of service, and the electricity bill</strong>.</p>
 
-<p class="pull">The ground truth of a technology is usually duller than its coverage, more
-repetitive, and organised around what things cost.</p>
+<p class="pull">Practitioner talk about a technology is usually duller than its coverage,
+more repetitive, and organised around what things cost.</p>
 """
 
 
@@ -2565,8 +2620,12 @@ adapter formats, prompt libraries.</li>
 <h4>Four things to do with a 137-day median</h4>
 <p><strong>Pin to a family, not a checkpoint</strong>, wherever the API allows it. The whole
 difference between the two columns of that decision table is this one choice.<br>
-<strong>Budget a migration every four to six months</strong> for anything keyed to a specific
-checkpoint, and treat it as routine maintenance rather than an incident.<br>
+<strong>Expect checkpoint churn on roughly this cadence</strong> for anything keyed to a
+specific checkpoint. Note what the 137 days actually measures: how long a checkpoint keeps
+being <em>talked about</em>, which is a hypothesis about how long it keeps being supported,
+not a measurement of it. Vendors deprecate on their own schedule, and the two clocks are
+correlated rather than identical — so use this to decide what to keep loosely coupled, not to
+set a maintenance calendar.<br>
 <strong>Depreciate checkpoint-specific work on the same clock.</strong> Prompts tuned to one
 model's quirks, few-shot examples chosen for its failure modes, and thresholds calibrated to its
 scores are all assets with a four-month half-life. Anything you would be unwilling to redo twice
@@ -3440,15 +3499,17 @@ def pages():
             + CH15_C)
 
     ch16 = (CH16
-            + table(["What you see", "What it means", "What to do"],
+            + table(["What you see", "What it suggests", "What to do next"],
                     [["The claim moved a lot in announcement space and little in practice",
-                      "A narrative. The people with something to launch are ahead of the "
-                      "people doing the work.", "<b>Wait.</b> Re-check in a quarter."],
+                      "The launch layer is ahead of the practitioner layer.",
+                      "<b>Discount and investigate.</b> Re-check in a quarter."],
                      ["It moved more in practice than in announcement",
-                      "An adoption the coverage has not caught up with.",
-                      "<b>Move.</b> This is the only cheap edge on the table."],
+                      "Practitioners are discussing something the coverage has not reached.",
+                      "<b>Investigate early.</b> This is where the cheap leads are."],
                      ["It moved about the same in both",
-                      "A real field-wide change.", "<b>Believe it</b> and plan accordingly."],
+                      "Plausibly a field-wide shift.",
+                      "<b>Treat as a field-wide signal and triangulate</b> "
+                      "against non-discourse evidence."],
                      ["It fell in both",
                       "Either it died or it won so completely that nobody names it.",
                       "<b>Check the machinery</b> before removing anything."],
@@ -3489,8 +3550,8 @@ def pages():
         ("ch12", "ch", "12", "When words change meaning",
          "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
          "you started counting in 2024?", ch12),
-        ("ch13", "ch", "13", "What people actually ran",
-         "If announcements are unreliable, what does the ground truth look like?", ch13),
+        ("ch13", "ch", "13", "Where practitioners spent their attention",
+         "If announcements are unreliable, what were the other rooms talking about?", ch13),
         ("ch14", "ch", "14", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
         ("interlude-3", "inter", "III", "The six things I got wrong",
