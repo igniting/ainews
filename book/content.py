@@ -182,7 +182,7 @@ public conversation</strong>. Not deployment. Not revenue. Not capability. When 
 that fine-tuning fell by 95%, that means the newsletter's Twitter recap devoted 95% less of
 its text to fine-tuning — and in chapter 13 you will see that during exactly that window,
 the single busiest community in the archive was a fine-tuning toolchain with 302,248
-messages. Both facts are true. Neither is "fine-tuning declined."</p>
+messages. Both facts are true. Neither is “fine-tuning declined.”</p>
 </div>
 
 <p>There are three further limits worth stating plainly. The archive is one editor's view,
@@ -295,7 +295,7 @@ cannot — which is, in one sentence, the methodological argument of this entire
 
 <h2>Why the surfaces disagree</h2>
 
-<p>It is worth being precise about the mechanism, because "hype" is a lazy explanation and
+<p>It is worth being precise about the mechanism, because “hype” is a lazy explanation and
 the real one is more useful.</p>
 
 <p>Announcement space has a launch schedule. Its population is rewarded for novelty, and its
@@ -367,8 +367,8 @@ quietly starts measuring something else, and every downstream method — every r
 every change-point detector, every significance test — faithfully processes the new thing
 using the old label.</p>
 
-<p class="pull">There is no statistical test for "this field stopped meaning what it used to
-mean." There is only reading it.</p>
+<p class="pull">There is no statistical test for “this field stopped meaning what it used to
+mean.” There is only reading it.</p>
 
 <h2>What survived</h2>
 
@@ -391,7 +391,7 @@ instrument is that the obvious alternative failed first.</p>
 
 CH3 = """
 <p class="first">To understand how strange the end of this story is, you have to start with a
-field that believed its central activity was making models — and by "making," it did not mean
+field that believed its central activity was making models — and by “making,” it did not mean
 training them from scratch. It meant taking someone else's weights and doing something to
 them.</p>
 
