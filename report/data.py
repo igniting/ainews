@@ -604,3 +604,37 @@ BENCH_LIFE = [
     ("ARC-AGI", "solve unseen puzzles", "2024Q3", "2026Q1", "—", "still rising"),
     ("Terminal-Bench", "drive a shell to a goal", "2025Q2", "2026Q3", "—", "still rising"),
 ]
+
+# Chapter 13 — the Discord census. Message counts are declared in the channel
+# headings themselves, so these are counts rather than summaries.
+DISCORD_KIND = [
+    ("general chat", 1785284, 83.3),
+    ("uncategorised", 221304, 10.3),
+    ("help / support", 68106, 3.2),
+    ("research / papers", 40330, 1.9),
+    ("announcements", 14402, 0.7),
+    ("builds / showcase", 12601, 0.6),
+]
+DISCORD_CHAN = [("general", 1397089), ("ai-discussions", 130924), ("off-topic", 58840),
+                ("general-chat", 50927), ("hardware-discussion", 46273), ("help", 46132),
+                ("research", 32006), ("windsurf", 29373), ("jailbreaking", 25992)]
+# (server, messages, first, last, months, messages per active month)
+DISCORD_SERVERS = [
+    ("Unsloth AI", 302248, "2024-05", "2026-03", 23, 13141),
+    ("Perplexity AI", 253114, "2024-05", "2026-03", 23, 11005),
+    ("LMArena", 209662, "2025-03", "2026-03", 13, 16128),
+    ("OpenAI", 157818, "2024-05", "2026-03", 23, 6862),
+    ("LM Studio", 134890, "2024-05", "2026-03", 23, 5865),
+    ("Cursor Community", 127021, "2025-03", "2026-03", 13, 9771),
+    ("BASI Jailbreaking", 95310, "2025-11", "2026-03", 5, 19062),
+    ("HuggingFace", 90759, "2024-05", "2026-03", 21, 4322),
+    ("Nous Research AI", 68783, "2024-05", "2026-03", 23, 2991),
+    ("aider", 59431, "2024-08", "2026-03", 20, 2972),
+    ("Eleuther", 51763, "2024-05", "2026-03", 23, 2251),
+    ("Stability.ai", 38429, "2024-05", "2025-04", 12, 3202),
+]
+# Servers sampled per month — the frame shrinks by a quarter in September 2025
+DISCORD_SAMPLE_P = ["24-05", "24-07", "24-09", "24-11", "25-01", "25-03", "25-05",
+                    "25-07", "25-09", "25-11", "26-01", "26-03"]
+DISCORD_SAMPLE = [28, 31, 32, 30, 33, 32, 29, 30, 23, 23, 23, 23]
+DISCORD_PER_SERVER = [1665, 2430, 2145, 384, 2459, 3288, 4346, 4043, 3842, 5200, 4685, 2259]

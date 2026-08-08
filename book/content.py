@@ -81,7 +81,7 @@ CONTENTS = [
      "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
      "you started counting in 2024?", "ch12"),
     ("ch", "13", "What people actually ran",
-     "If announcements are unreliable, what does the ground truth look like?", None),
+     "If announcements are unreliable, what does the ground truth look like?", "ch13"),
     ("ch", "14", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", None),
     ("inter", "III", "The four things I got wrong",
@@ -2252,6 +2252,136 @@ checks that the pointer is still valid.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 13
+
+CH13 = """
+<p class="first">Every Discord channel heading in this archive looks like this:</p>
+
+<blockquote><p><code>### **Unsloth AI (Daniel Han) ▷ #[general](…)** (1123 messages🔥🔥🔥):</code></p>
+<cite>AI News, a typical Discord channel heading</cite></blockquote>
+
+<p>That number is not an editorial judgement. Nobody decided the conversation was worth 1,123
+units of importance. A bot counted the messages that existed in a room on a day, and printed
+the count. Across the whole archive there are <strong>31,607 of those channel-day records,
+covering 2,142,082 messages in 56 servers</strong>, from May 2024 to March 2026.</p>
+
+<p>Everything else in this book measures what a publication chose to write about. This measures
+what people did, whether or not anyone wrote about it — and what people did turns out to be
+duller, more repetitive, and far more constrained by money than any announcement suggests.</p>
+
+<h2>Where the words actually are</h2>
+
+<p>Sort all 2.14 million messages by the kind of channel they were posted in and the result is
+lopsided enough to be worth staring at.</p>
+"""
+
+CH13_B = """
+<p><strong>Five sixths of everything happens in a channel called <code>general</code>.</strong>
+A single channel name accounts for 1,397,089 messages — 65% of the entire corpus on its own.
+Structured help channels account for 3.2%. Research and paper channels account for 1.9%.
+Showcase channels, where people post the things they built, account for 0.6%.</p>
+
+<p>If your mental model of a technical community is a place where people ask well-formed
+questions and receive well-formed answers, the census does not support it. The activity is
+overwhelmingly undifferentiated conversation, and the second-largest identifiable topic — after
+<code>general</code>, <code>ai-discussions</code> and <code>off-topic</code> — is hardware.
+<code>hardware-discussion</code> carries 46,273 messages, which puts it fractionally ahead of
+every channel named <code>help</code> in the archive combined.</p>
+
+<p>Here is what that channel contains, on three consecutive working days in January 2025:</p>
+
+<blockquote><p>@octaviagoetia expressed a preference for using GPUs over online APIs, citing
+concerns over <strong>TOS restrictions</strong> and potential latency issues. @heychazza agreed,
+highlighting the benefits of using a beefy laptop for tinkering with LLMs <strong>without
+worrying about unexpected costs</strong>.</p>
+<p>Users noted that running a 70B model requires more VRAM than available on common GPUs,
+leading to reliance on slower CPU inference. Recommendations included <strong>sticking to models
+under 16B with Q8 or Q6 quantization</strong> for better performance.</p>
+<p>@octaviagoetia is currently using Llama 3.1 for <strong>generating quest lines</strong>, with
+plans to upgrade to Llama 3.2 1b, finding it more creative and efficient.</p>
+<cite>AI News, Discord recap, LM Studio #hardware-discussion, 2025-01-03 to 2025-01-07</cite></blockquote>
+
+<p>Terms of service, electricity bills, VRAM ceilings, and someone generating quest lines for a
+game on a laptop. That is the ground floor of this field by volume, and none of it appears in
+any launch post.</p>
+"""
+
+CH13_C = """
+<h2>The busiest room in the archive</h2>
+
+<p>Rank the 56 servers by total messages and the top of the list is not a frontier lab.</p>
+"""
+
+CH13_D = """
+<p><strong>Unsloth AI is a fine-tuning toolchain</strong>, and it is the most active community
+in this corpus: 302,248 messages across 23 months, more than the OpenAI server and the
+HuggingFace server put together. It is busiest in exactly the period when the practice it
+supports had largely stopped being written about.</p>
+
+<p>Two other entries are worth pulling out. <strong>LMArena and Cursor Community both appear in
+March 2025</strong> and are immediately among the busiest rooms in the archive — evaluation and
+coding agents arriving as fully-formed communities rather than growing into them. And
+<strong>BASI Jailbreaking</strong>, which starts in November 2025, has the highest activity rate
+of any server measured: <strong>19,062 messages per month</strong>, ahead of every established
+community including the ones that had been running for two years.</p>
+
+<h2>Two ways this census lies to you</h2>
+
+<p>The counts are mechanical, which makes them tempting to over-read. There are two specific
+traps in this data and both took me a while to see.</p>
+
+<p><strong>The identity key is a display name.</strong> Servers appear to die when they have
+only been renamed. <em>Cursor IDE</em> runs from November 2024 to April 2025 and stops;
+<em>Cursor Community</em> starts in March 2025 and continues. <em>CUDA MODE</em> ends in
+September 2024; <em>GPU MODE</em> begins the same month. <em>OpenRouter (Alex Atallah)</em> ends
+in August 2025; <em>OpenRouter</em> begins in August 2025. Nothing in the record links them.
+Take the birth and death dates literally and you will report a churn of communities that is
+partly a churn of strings.</p>
+
+<p><strong>The sample changes underneath the counts.</strong> This is the larger problem.</p>
+"""
+
+CH13_E = """
+<p>The number of servers sampled runs at about 30 for sixteen months and then drops to
+<strong>23 in September 2025</strong> and stays there. That single decision produces a cluster
+of servers whose last appearance is August 2025 — Cohere, LlamaIndex, Notebook LM, MCP (Glama)
+— and every one of them looks, in the raw data, like a community that died in the same month.
+They did not. They were dropped from a list.</p>
+
+<p>The same decision inflates the other line. Messages per sampled server rises from 1,665 in
+May 2024 to 6,941 by February 2026, and some of that is real growth and some of it is the
+sample being pruned down to the busiest rooms. There is no way to separate the two after the
+fact.</p>
+
+<div class="aside">
+<h4>What this surface can and cannot support</h4>
+<p><strong>It can support:</strong> the trend inside a server that is present throughout.
+Nobody wrote those messages for a newsletter and the count is a count, so a server going from
+5,000 to 15,000 messages a month is a real change in how busy that room was.<br>
+<strong>It cannot support:</strong> comparisons across servers that enter and leave the sample;
+any claim about the absolute size of the field, since this is 56 English-language servers on one
+editor's list; and anything at all after March 2026, when the section was dropped.</p>
+</div>
+
+<h2>What the ground truth looked like</h2>
+
+<p>Put the census together and the practice layer of this field, measured by message volume
+rather than by coverage, is remarkably consistent across two years. It is people in an
+undifferentiated chat room, talking mostly about what they can afford to run, on hardware they
+own, using models they downloaded — and the single largest such room in the archive exists to
+help them modify those models.</p>
+
+<p>There is no version of that sentence that would work as a launch announcement, which is
+precisely why it is worth measuring separately. Announcements are about what becomes possible.
+This is a record of what was actually happening while that was being announced, and its main
+constraint was never capability. It was <strong>VRAM, terms of service, and the electricity
+bill</strong>.</p>
+
+<p class="pull">The ground truth of a technology is usually duller than its coverage, more
+repetitive, and organised around what things cost.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -2531,6 +2661,26 @@ def pages():
                     "Median across the corpus: 0.313", (1,))
             + CH12_B + CH12_C + CH12_D)
 
+    kind_rows = [[C.esc(k), f"{n:,}", f"{pct}%"] for k, n, pct in D.DISCORD_KIND]
+    srv_rows = [[C.esc(s), f"{n:,}", f"{f} → {l}", f"{m}", f"<b>{r:,}</b>"]
+                for s, n, f, l, m, r in D.DISCORD_SERVERS]
+    ch13 = (CH13
+            + table(["Channel kind", "Messages", "Share"], kind_rows,
+                    "Table 9 · All 2,142,082 messages, by the kind of channel they were in",
+                    (1, 2))
+            + CH13_B + CH13_C
+            + table(["Server", "Messages", "Active", "Months", "Per month"], srv_rows,
+                    "Table 10 · The busiest communities in the sampled window", (1, 3, 4))
+            + CH13_D
+            + fig(F.timeline(D.DISCORD_SAMPLE_P,
+                             [("servers sampled", D.DISCORD_SAMPLE, "sig")],
+                             [0, 10, 20, 30], "servers in the sample", every=2, gutter=112),
+                  22, "The frame shrinks by a quarter",
+                  "Distinct Discord servers appearing in the recap, by month. The drop from "
+                  "about 30 to 23 in September 2025 is an editorial decision, and it makes "
+                  "several communities look as though they stopped existing in August.")
+            + CH13_E)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -2562,4 +2712,6 @@ def pages():
         ("ch12", "ch", "12", "When words change meaning",
          "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
          "you started counting in 2024?", ch12),
+        ("ch13", "ch", "13", "What people actually ran",
+         "If announcements are unreliable, what does the ground truth look like?", ch13),
     ]
