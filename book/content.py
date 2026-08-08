@@ -180,9 +180,9 @@ the book is allowed to claim.</p>
 <p>Every number in this book measures <strong>attention within one curated view of a field's
 public conversation</strong>. Not deployment. Not revenue. Not capability. When you read
 that fine-tuning fell by 95%, that means the newsletter's Twitter recap devoted 95% less of
-its text to fine-tuning — and in chapter 13 you will see that during exactly that window,
-the single busiest community in the archive was a fine-tuning toolchain with 302,248
-messages. Both facts are true. Neither is “fine-tuning declined.”</p>
+its text to fine-tuning — while over exactly that window the busiest community anywhere in the
+archive was a fine-tuning toolchain with 302,248 messages. Both facts are true. Neither one is
+“fine-tuning declined.”</p>
 </div>
 
 <p>There are three further limits worth stating plainly. The archive is one editor's view,
@@ -205,15 +205,38 @@ consecutive days, written by people who did not know how it ended.</p>
 # ---------------------------------------------------------------- chapter 2
 
 CH2 = """
-<p class="first">Here is the problem with reading about AI. Something is announced. It is
-described as a step change. Six months later either it is everywhere and you were slow, or
-it is gone and you were right to ignore it, and there was no way to tell which at the time.
-Every engineer in the field has been played by this at least once, usually while defending a
-technology choice in a meeting.</p>
+<p class="first">On 5 February 2026 the newsletter's Twitter recap opens like this:</p>
 
-<p>The archive contains an unusually clean solution, and it is structural rather than clever.
-Each issue summarises <em>the same day</em> from three different places, and keeps them
-separate:</p>
+<blockquote><p>GPT-5.3-Codex shipped in Codex … framed as advancing frontier coding and
+professional knowledge in one model. Community reaction highlighted that token efficiency and
+inference speed may be the most strategically important delta versus prior generations, with
+one benchmark claim: TerminalBench 2 = 65.4% … Reported efficiency improvements: 2.09× fewer
+tokens versus GPT-5.2-Codex-xhigh on SWE-Bench-Pro, and together with ~40% speedup implies
+2.93× faster at ~+1% score.</p>
+<cite>AI News, Twitter recap, 2026-02-05</cite></blockquote>
+
+<p>The Reddit recap in the same issue, covering the same day, opens like this:</p>
+
+<blockquote><p><strong>Anyone here actually using AI fully offline?</strong> Running AI models
+fully offline is feasible with tools like LM Studio, which allows users to select models from
+Hugging Face based on their hardware capabilities, such as GPU or RAM … While coding workflows
+may need more powerful setups, consulting tasks can be managed with models like
+<code>gpt-oss-20b</code> in LM Studio.</p>
+<cite>AI News, Reddit recap, 2026-02-05</cite></blockquote>
+
+<p>Same publication, same day, same editor. Two populations who are not having the same
+conversation, and are not close to having the same conversation. One is comparing frontier
+coding models on token efficiency; the other is asking whether a 20-billion-parameter model on
+a home machine is good enough to be useful without an internet connection.</p>
+
+<p>Neither is wrong. But if you read only the first one — and the first one is what arrives in
+your feed, your inbox and your board deck — you will believe things about this field that the
+second one would have corrected.</p>
+
+<h2>Three surfaces</h2>
+
+<p>The archive does this every day, structurally, because each issue summarises the same
+twenty-four hours from three different places and keeps them separate:</p>
 
 <ul>
 <li><strong>The Twitter recap</strong> — a declared list of accounts, heavy on labs, founders
@@ -226,8 +249,8 @@ mostly by the people with something to launch.</li>
 happened.</li>
 </ul>
 
-<p>Three views of one day, produced by three different populations with three different
-incentives. Nobody designed this as an instrument. It is an instrument anyway.</p>
+<p>Three views of one day, produced by three populations with three different incentives, and
+kept separate on the page. Nobody designed this as a measuring device. It is one anyway.</p>
 
 <h2>The measurement</h2>
 
@@ -237,9 +260,10 @@ incentives. Nobody designed this as an instrument. It is an instrument anyway.</
 fixed, the population writing it is roughly fixed too, and a change in the number is a change
 in what that population talked about rather than a change in the document around it.</p>
 
-<p>The obvious version of this measurement — count mentions across the whole issue — is
-wrong, and wrong in a way that took me four months of analysis and one very bad afternoon to
-find. Interlude II is that afternoon. For now, take it that the section is the unit.</p>
+<p>Measuring across the whole issue instead would not work, and the reason is worth one
+sentence: the mix of sources inside an issue changes enormously over three years, so a
+whole-issue count partly measures which surface the newsletter happened to be sampling that
+year. Holding the section fixed removes that. The section is the unit throughout this book.</p>
 
 <p>Run it on the two most promoted ideas of the period and the result is not subtle.</p>
 """
@@ -310,11 +334,13 @@ the Chinese open-weights models first.</p>
 <p class="pull">The gap between the surfaces is not error. It is the lag between what
 something costs to announce and what it costs to run.</p>
 
-<p>With that in hand, the rest of Part II is a history: what this field actually paid
-attention to, in order, from a December when everyone was fine-tuning to an August when
-almost nobody talked about it.</p>
-
-<p>But first, a confession, because I got the very first thing I measured completely wrong.</p>
+<p>Go back to 5 February 2026 with that in mind. The Twitter recap is measuring token
+efficiency on SWE-Bench-Pro because its population ships models and needs a number. The Reddit
+recap is asking whether a 20-billion-parameter model is good enough offline because its
+population owns one graphics card and no budget. Neither is reporting on the other. Read both
+for a month and the gap between them tells you more than either does alone — and it is the only
+thing in this book you can reproduce without an archive, starting tomorrow, with two browser
+tabs.</p>
 """
 
 
@@ -380,8 +406,8 @@ unrelated reason, in a way I will get to in Interlude III.</p>
 
 <p>What survived was the thing I had not built a story around: measurements taken inside the
 body of the issues, in fixed sections, where the population writing the text was held
-constant. That is the instrument the previous chapter described, and the reason it is the
-instrument is that the obvious alternative failed first.</p>
+constant. That is the instrument this book uses everywhere, and the reason it uses it is that
+the obvious alternative failed first.</p>
 
 <p>I would like to report that this was the last time. It was the second of four.</p>
 """
@@ -411,20 +437,28 @@ is about the world before it happened.</p>
 
 <h2>December 2023: the Mixtral rush</h2>
 
-<div class="scene">
-<span class="when">2023-12-08 to 2023-12-15</span>
-<p>Mistral releases the weights for an eight-expert mixture-of-experts model by posting a
-magnet link. No paper, no code, no inference implementation. The issue on the 9th is titled
-<em>The Mixtral Rush</em>, and describes independent groups racing to write the inference code
-from scratch overnight so anyone can actually run the thing. By the 11th the headline is
-<em>Mixtral beats GPT3.5 and Llama2-70B</em>. By the 15th, <em>Mixtral-Instruct beats Gemini
-Pro</em>.</p>
-</div>
+<p>Mistral released the weights for an eight-expert mixture-of-experts model by posting a
+magnet link — no paper, no code, no inference implementation. Two days later the newsletter
+opened with this:</p>
 
-<p>Seven days from an unexplained file to a model beating the previous generation's frontier.
-That week set the emotional tone for the next eighteen months: <strong>open weights arriving
-faster than anyone could evaluate them</strong>, and a community whose reflex was to
-reimplement rather than wait.</p>
+<blockquote><p>Happy Friday. 3 new models are the talk of the town today: Mistral's new 8x7B MoE
+model (aka “Mixtral”) — a classical attention model, done well … Mamba models, a range of models
+up to 3B by Tri Dao of Together … StripedHyena 7B — a descendant of the subquadratic attention
+replacement Hyena out of Stanford's Hazy Research lab … that is finally competitive with
+Llama-2, Yi, and Mistral 7B.</p>
+<p>This is all very substantial and shows what happens when you <strong>ship model weights
+instead of heavily edited marketing videos</strong>.</p>
+<cite>AI News, 2023-12-08</cite></blockquote>
+
+<p>That last line is the field's value system in one sentence, written two days after a
+much-criticised launch video from a much larger company. It is also a fair summary of what the
+next eighteen months rewarded.</p>
+
+<p>The headlines that week run: <em>The Mixtral Rush</em> on the 9th, describing independent
+groups racing to write the inference code from scratch overnight so anyone could run the thing;
+<em>Mixtral beats GPT3.5 and Llama2-70B</em> on the 11th; <em>Mixtral-Instruct beats Gemini
+Pro</em> on the 15th. Seven days from an unexplained file to a model beating the previous
+generation's frontier, and a community whose reflex was to reimplement rather than wait.</p>
 
 <div class="aside">
 <h4>Mixture of experts, as the field met it</h4>
@@ -477,44 +511,50 @@ company outside OpenAI holds that share for that long.</p>
 — they got worse — is not what the archive says. In December 2025, the month its density
 reached the floor, Mistral raised $1.7 billion at an $11.7 billion valuation and shipped a
 coding model that practitioners reported beating or tying DeepSeek v3.2 in 71% of third-party
-preferences. Chapter 8 takes that apart properly, because <em>ceasing to be news</em> and
-<em>ceasing to be good</em> turn out to be different events with different causes, and telling
-them apart is worth real money to anyone choosing a dependency.</p>
+preferences. Ceasing to be news and ceasing to be good are different events with different
+causes, and a chart of attention only ever shows you the first one.</p>
 """
 
 CH3_C = """
-<p>The figure above is the whole of Part II in outline, measured in announcement space. Two
-themes that own the beginning and are near zero by the end; one that starts at nothing and
-takes over. What it does not show — because a chart of what people talked about cannot show it
-— is that the two falling lines fell for opposite reasons. Retrieval fell because it won so
-completely that it stopped being worth mentioning; it is now a feature of every serious
-product and a paragraph in every system design. Fine-tuning fell out of announcement space
-while remaining, on the evidence of chapter 13, one of the largest sustained practical
-activities in the entire archive.</p>
+<p>The figure above is the whole period in outline, measured in announcement space: two themes
+that own the beginning and are near zero by the end, and one that starts at nothing and takes
+over. What it cannot show — because a chart of what people talked about never can — is that the
+two falling lines fell for opposite reasons.</p>
 
-<p>Both fell 90%. One is absorption and one is a coverage artifact, and no amount of looking at
-the falling line will tell you which is which.</p>
+<p>Retrieval fell because it won. It is now a feature of every serious product and a paragraph
+in every system design, and things in that position stop being announced. Fine-tuning fell out
+of announcement space while remaining one of the largest sustained practical activities in the
+archive: the busiest single community anywhere in this corpus, at 302,248 messages, is a
+fine-tuning toolchain, and it is busiest during exactly the years its coverage was collapsing.</p>
+
+<p>Both fell about 90%. One is absorption and one is a coverage artifact, and no amount of
+looking at the falling line will tell you which is which.</p>
 
 <p class="pull">A line going down is not a verdict. It is a question about where the thing
 went.</p>
-
-<p>The next chapter is about the third possibility — a good idea, loudly covered by
-serious people, that simply never arrived at all.</p>
 """
 
 
 # ---------------------------------------------------------------- chapter 4
 
 CH4 = """
-<p class="first">The third issue this book quotes ran on 8 December 2023 under the headline
-<em>Mamba v Mistral v Hyena</em>. Three architectures, presented as live competitors on equal
-footing. One of them is now inside nearly every model you use. Of the other two, one is a
+<p class="first">On 8 December 2023 the newsletter ran three new models side by side, under
+the headline <em>Mamba v Mistral v Hyena</em>, and treated them as live competitors on equal
+footing:</p>
+
+<blockquote><p>Mistral's new 8x7B MoE model (aka “Mixtral”) — a classical attention model, done
+well … Mamba models, a range of models up to 3B by Tri Dao of Together … StripedHyena 7B — a
+descendant of the subquadratic attention replacement Hyena out of Stanford's Hazy Research lab
+… that is finally competitive with Llama-2, Yi, and Mistral 7B.</p>
+<cite>AI News, 2023-12-08</cite></blockquote>
+
+<p>One of those three is now inside nearly every model you use. Of the other two, one is a
 footnote and one you have probably never heard of.</p>
 
 <p>The interesting part is not that two of them lost. It is that the archive contains
 <strong>four different ways to lose</strong>, they look almost identical in a chart, and only
-one of them means the idea was wrong. Getting this distinction right is the difference
-between correctly dropping a dead technique and abandoning something that was merely early.</p>
+one of them means the idea was wrong. Getting the distinction right is the difference between
+correctly dropping a dead technique and abandoning something that was merely early.</p>
 
 <h2>The bet against the transformer</h2>
 
@@ -540,8 +580,9 @@ questions.</p>
 
 <p>In the last half-year of the corpus, state-space language appears <strong>zero
 times</strong> in 46,815 words of announcement space. It falls in practice space too (1.62 to
-0.39) and in community space (2.38 to 0.43). Whatever happened, it happened everywhere, so by
-the chapter-2 test it is not a coverage artifact. Something real ended.</p>
+0.39) and in community space (2.38 to 0.43). It happened in every surface at once, which rules
+out the dullest explanation — that the newsletter simply changed what it was sampling.
+Something real ended.</p>
 """
 
 CH4_B = """
@@ -586,9 +627,10 @@ It peaks in announcement space in the second half of 2024 at 2.59.</p>
 same window. Community space falls from 199 mentions in a half-year to 43.</p>
 
 <p>No successor headline. No hybrid. No product that quietly contains it. This is what a real
-death looks like in this data, and the reason is legible from chapter 3: merging was a
-technique for a world in which everyone had a pile of their own fine-tunes to combine. When
-that world ended, the technique had nothing to operate on.</p>
+death looks like in this data. The reason is legible from the archive around it: merging was a
+technique for a world in which everyone had a pile of their own fine-tunes to combine — and
+over the same window, fine-tuning language in announcement space fell from 34.9 to 1.9. When
+that world ended, the technique had nothing left to operate on.</p>
 """
 
 CH4_C = """
@@ -599,7 +641,18 @@ BitNet b1.58 — proposed training models whose weights are restricted to three 
 &minus;1, 0 and 1, which removes multiplication from the forward pass almost entirely.
 Announcement-space density hits 6.96. It is, briefly, the most exciting idea in the corpus.</p>
 
-<p>Then, on 13 November 2024, a headline that is itself a verdict:</p>
+<p>The reason it stalled is in the archive too, and it is a result rather than a mood. On
+12 November 2024 the newsletter led with a paper that measured the trade directly:</p>
+
+<blockquote><p>A group of grad students under Chris Ré has now modified Chinchilla scaling laws
+for quantization over 465+ pretraining runs and found that <strong>the benefits level off at
+FP6</strong> … the longer you train, the more data seen during pretraining, the more sensitive
+the model becomes to quantization at inference-time … this loss degradation is roughly a power
+law in the token/parameter ratio seen during pretraining.</p>
+<cite>AI News, 2024-11-12</cite></blockquote>
+
+<p>In other words: the harder you train a model, the less of it you can throw away afterwards —
+and everyone was training harder every month. The next day's headline was blunter.</p>
 
 <blockquote><p>BitNet was a lie?</p>
 <cite>AI News, 2024-11-13</cite></blockquote>
@@ -622,10 +675,10 @@ from extreme post-training quantization, arguing the former should retain much m
 capability … Several asked for rigorous benchmarks such as SciCode or SWE-rebench.</p>
 <cite>AI News, Reddit recap, 2026-07-15</cite></blockquote>
 
-<p>Nobody there is excited about the era of anything. They are asking which 4GB model is
-better than which other 4GB model, on a laptop they own. That is the signature of an idea
-that was not wrong, only early — it was waiting on kernels and hardware rather than on
-insight, and it reappeared the moment someone shipped the kernels.</p>
+<p>Nobody there is excited about the era of anything. They are asking which 4GB model beats
+which other 4GB model on a laptop they own. That is the signature of an idea that was not wrong,
+only early: it was waiting on kernels and hardware rather than on insight, and it reappeared
+the moment someone shipped the kernels.</p>
 """
 
 CH4_D = """
@@ -636,21 +689,22 @@ build world models</em>. World-model language in announcement space goes from 0.
 2024 to 4.59 by early 2026 and 5.34 by the last half-year — a fifteenfold rise, on counts
 large enough to trust (4 mentions, then 91).</p>
 
-<p>Run the chapter-2 test on it. Because the practice-space baseline is a single mention, a
-fold change is meaningless, so compare levels instead. In the first half of 2026: <strong>4.59
-in announcement space, 1.22 in community space, 0.29 in practice space.</strong> That is the
-descending staircase — the narrative signature, the same shape agents made.</p>
+<p>Now compare the surfaces. The practice-space baseline is a single mention, so a fold change
+is meaningless; compare levels instead. In the first half of 2026 world models run at
+<strong>4.59 in announcement space, 1.22 in community space, and 0.29 in practice
+space</strong> — a descending staircase from the people announcing things to the people running
+them, which in this book is the signature of a narrative rather than an adoption.</p>
 
 <p>Except this time I do not think the test applies, and it is worth being precise about why.</p>
 
 <div class="aside">
 <h4>Where the practice surface is blind</h4>
-<p>Practice space is people running models on hardware they own. It is therefore an excellent
-check on anything downloadable and <strong>no check at all</strong> on anything that requires
-a data centre. You could not run a world model in 2026 if you wanted to. Reasoning models had
-the same problem in late 2024 — invisible in practice space for months — and they were real.
-When the practice surface is silent because the thing is unrunnable rather than uninteresting,
-its silence carries no information.</p>
+<p>Practice space is people running models on hardware they own. That makes it an excellent
+check on anything downloadable and <strong>no check at all</strong> on anything requiring a
+data centre. You could not run a world model in 2026 if you wanted to. Reasoning models had the
+same problem when they arrived in late 2024 — nearly invisible in practice space for months —
+and they were entirely real. When the practice surface is quiet because a thing is unrunnable
+rather than uninteresting, its quiet carries no information.</p>
 </div>
 
 <p>So the honest verdict on world models is: undecided, and the instrument that settled the
@@ -675,13 +729,11 @@ waiting on hardware or tooling, not on ideas. This is the one worth watching for
 undecided. The test does not apply; do not read the silence as a verdict.</p>
 </div>
 
-<p>None of these four is visible from the falling line alone, which is the recurring lesson of
-this book stated in a new place. A chart of attention tells you where the conversation went.
-It never tells you why, and the why is the entire decision.</p>
-
-<p>The next chapter is about the one case where the conversation changed faster than anyone
-could have kept up with — a whole field revising what it thought a model was, in about four
-months.</p>
+<p>None of these four is visible from the falling line alone. A chart of attention tells you
+where the conversation went; it never tells you why, and the why is the entire decision. What
+it does give you, if you look at more than one surface and read a few of the days around the
+break, is enough to sort a fall into the right bucket — which is all the decision usually
+needs.</p>
 """
 
 
@@ -695,10 +747,8 @@ August add three more occurrences between them, in another million words.</p>
 <p>By December the count for a single month is <strong>77</strong>. Nothing about the
 sampling changed. The field acquired a concept.</p>
 
-<p>This chapter is about those four months, because they are the cleanest example in the
-archive of a technical community revising its model of how progress works — and because the
-aftermath is a case study in the absorption fate from the last chapter, applied to the
-biggest idea in the corpus.</p>
+<p>This chapter is about those four months: the cleanest example in the archive of a technical
+community revising, in public and at speed, its model of how progress works.</p>
 
 <h2>What the field believed in August</h2>
 
@@ -728,10 +778,15 @@ straight to the top of the newsletter. Five days later the real thing shipped.</
 """
 
 CH5_B = """
-<p>On 12 September, OpenAI released o1. In the community surface, mentions of the o-series go
-from 1.4 per ten thousand words in August to <strong>20.4 in September</strong> — a
-fifteenfold jump in a month, in a corpus of half a million words per month that nobody wrote
-for a newsletter. In announcement space the same month goes from 1.0 to 56.5.</p>
+<p>On 12 September, OpenAI released o1. The newsletter's lede that evening was four words:</p>
+
+<blockquote><p><strong>Test-time reasoning is all you need.</strong></p>
+<cite>AI News, 2024-09-12</cite></blockquote>
+
+<p>In the community surface, mentions of the o-series go from 1.4 per ten thousand words in
+August to <strong>20.4 in September</strong> — a fifteenfold jump in a month, in half a million
+words a month that nobody wrote for a newsletter. In announcement space the same month goes
+from 1.0 to 56.5.</p>
 
 <div class="aside">
 <h4>Test-time compute, as the field met it</h4>
@@ -739,10 +794,29 @@ for a newsletter. In announcement space the same month goes from 1.0 to 56.5.</p
 more GPU-months, and then a fixed cost to answer each request. o1 moved the purchase to
 inference. The model writes a long internal chain of reasoning — thousands of tokens the user
 never sees — before producing an answer, and it gets better the longer you let it run.</p>
-<p>The consequence for anyone building on it is immediate and unpleasant: <strong>a request no
-longer has a predictable price or latency</strong>. Both became functions of how hard the model
-decided the question was.</p>
 </div>
+
+<p>The consequence for anyone building on it was immediate, and the newsletter noticed it the
+same evening, in a parenthesis:</p>
+
+<blockquote><p>Under the hood, o1 is trained for adding new <strong>reasoning tokens</strong> —
+which you pay for, and OpenAI has accordingly extended the output token limit to &gt;30k tokens
+(incidentally this is also why a number of API parameters from the other models like
+<code>temperature</code> and <code>role</code> and tool calling and streaming, but especially
+<code>max_tokens</code>, is no longer supported).</p>
+<cite>AI News, 2024-09-12</cite></blockquote>
+
+<p>That parenthesis is the whole engineering story of the next two years. <strong>A request
+stopped having a predictable price or latency</strong>, and the parameter you would have used
+to bound it stopped existing.</p>
+
+<p>The same lede also flagged the chart that mattered, which was not a benchmark table:</p>
+
+<blockquote><p>You are used to new models showing flattering charts, but there is one of note
+that you don't see in many model announcements, that is probably the most important chart of
+all … we now have <strong>scaling laws for test time compute, and it looks like they scale
+loglinearly</strong>.</p>
+<cite>AI News, 2024-09-12</cite></blockquote>
 
 <p>Read the four months as a sequence and you can watch the idea propagate through every layer
 of the field in order — first the model, then the reception, then the open-weights response,
@@ -757,10 +831,9 @@ then the productisation, then the benchmark that made it undeniable:</p>
 <cite>AI News headlines, September–December 2024</cite></blockquote>
 
 <p>Two of those deserve a second look. The 21 November headline is the archive being written
-forwards at its most useful: DeepSeek announced a preview of an open reasoning model, and
-promised to open-source it, <strong>two months before the release that reorganised the
-field</strong>. Anyone reading that day had the information. Almost nobody acted on it, and
-chapter 6 is about the week when everybody did at once.</p>
+forwards at its most useful: a Chinese lab announced a preview of an open reasoning model and
+promised to release the weights, <strong>two months before the release that reorganised the
+field</strong>. Anyone reading that day had the information. Almost nobody acted on it.</p>
 
 <p>And the 6 December headline contains the phrase <em>mixed reviews</em> next to a $200/month
 price tag. The archive is full of moments like this — the correct scepticism and the eventual
@@ -784,10 +857,11 @@ vocabulary looks like as opposed to a product entering a news cycle.</p>
 in the first half of 2025, then 34.52, 16.80, and 14.10 in the last half-year of the corpus. A
 2.7&times; fall from the peak. In practice space the same shape, gentler: 18.41 down to 9.22.</p>
 
-<p>By the previous chapter's taxonomy, which fate is that? It falls in every surface, so it is
-not a coverage artifact. There is no successor headline announcing that reasoning was a mistake.
-So the question is whether a product exists that nobody argues about — and the answer is that
-three of them do.</p>
+<p>A fall that size usually means one of two things: the idea failed, or the idea won so
+completely that naming it became unnecessary. It falls in every surface, so it is not an
+artifact of what the newsletter sampled, and there is no headline anywhere announcing that
+reasoning was a mistake. So the question is whether the thing survived under other names —
+and it did, three times over.</p>
 """
 
 CH5_D = """
@@ -806,6 +880,12 @@ early 2024 and <strong>0.85</strong> at the end. What replaced it is verificatio
 verifiable rewards, verifiers, 0.00 rising to 2.35. GRPO, the specific algorithm that made
 reasoning training cheap, spikes to 4.58 in late 2025 and settles at 0.43 — the same
 became-boring curve, one level down.</p>
+
+<p>You can watch the swap happen in the ledes. On 26 November 2024, the newsletter's opening
+line is a phrase that did not exist in its vocabulary a year earlier:</p>
+
+<blockquote><p><strong>Reinforcement Learning with Verifiable Rewards is all you need.</strong></p>
+<cite>AI News, 2024-11-26</cite></blockquote>
 
 <p>This is a real change in what training a model means. Learning from human preference rankings
 is expensive, subjective and caps out at the quality of your raters. Learning from problems whose
@@ -844,9 +924,11 @@ tail decided by the model, not by you. Every reasoning-model integration in prod
 part, a workaround for that.</p>
 </div>
 
-<p>Four months, one concept, and a permanent change to the cost model of the thing everybody was
-building on. That is the fastest the field moves in this archive — with one exception, which
-arrived seven weeks after o3 and did it in a week.</p>
+<p>Four months, one concept, and a permanent change to the cost model of the thing everybody
+was building on. The vocabulary that arrived in those months — test-time compute, verifiable
+rewards, reasoning tokens, thinking budgets — did not exist in a million words of community
+text in the summer before, and by the following spring you could not read a model release
+without it.</p>
 """
 
 
@@ -873,9 +955,28 @@ the answer is not the benchmark scores.</p>
 <div class="scene">
 <span class="when">Monday 20 January</span>
 <p><em>DeepSeek R1: o1-level open weights model and a simple recipe for upgrading 1.5B models
-to Sonnet/4o level.</em> A Chinese lab publishes a reasoning model matching OpenAI's o1, under
-an open licence, with the weights and the training recipe. Community density: 219.9.</p>
+to Sonnet/4o level.</em> Community density: 219.9.</p>
 </div>
+
+<p>The lede that evening ran to 541 words, which is unusual, and it is worth reading a piece of
+it because it is the clearest statement anywhere in the archive of why this particular release
+was different from the dozens around it:</p>
+
+<blockquote><p><strong>GRPO is all you need.</strong></p>
+<p>DeepSeek actually dropped 8 R1 models — 2 “full” models, and 6 distillations on open models …
+Surprisingly, <strong>MIT licensed</strong> rather than custom licenses, including explicit OK
+for finetuning and distillation.</p>
+<p><strong>Pricing</strong> (per million tokens): 14 cents input (cache hit), 55 cents input
+(cache miss), and 219 cents output. This compares to o1 at 750 cents input (cache hit), 1500
+cents input (cache miss), 6000 cents output. <strong>That's 27x–50x cheaper than o1.</strong></p>
+<p>R1 distillations were remarkably effective, giving us this insane quote:
+“DeepSeek-R1-Distill-Qwen-<strong>1.5B outperforms GPT-4o and Claude-3.5-Sonnet</strong> on math
+benchmarks with 28.9% on AIME and 83.9% on MATH.”</p>
+<cite>AI News, 2025-01-20</cite></blockquote>
+
+<p>Three things in one evening: a frontier-class result, a licence that explicitly permitted
+copying it, and a price roughly fortyfold below the incumbent. Any one of those makes a news
+cycle. Together they make something else.</p>
 
 <div class="scene">
 <span class="when">Tuesday 21 January</span>
@@ -917,18 +1018,17 @@ requires frontier capital expenditure. Community density 205.9; announcement spa
 CH6_B = """
 <p>Look at where the vertical markers sit relative to the line. The release moves the
 measurement immediately and the reproductions keep it high, but <strong>the market is the last
-surface to find out</strong> — Nvidia repriced on day seven, after the community and practice
-surfaces had been saturated for a full working week. If you had been reading practice space
-you would have known on the Monday. This is the three-surface argument extended by one: there
-is a fourth layer, it is slower than all three, and it moves the most money.</p>
+surface to find out</strong>: Nvidia repriced on day seven, after the technical surfaces had
+been saturated for a full working week. Anyone reading practitioner forums knew on the
+Monday.</p>
 
 <h2>What made this different</h2>
 
 <p>Plenty of models in this archive match a frontier model on benchmarks. Several did it that
 same quarter. The R1 week is different in one specific, measurable way, and the two headlines
-from Wednesday and Friday are the whole of it: <strong>within four days, two independent
-groups had reproduced the result cheaply enough to publish, because the weights and the recipe
-were both in the open</strong>.</p>
+from Wednesday and Friday are the whole of it: <strong>within four days, two independent groups
+had reproduced the result cheaply enough to publish, because the weights and the recipe were
+both in the open</strong>.</p>
 
 <div class="aside">
 <h4>Why reproducibility is the variable</h4>
@@ -963,19 +1063,19 @@ fourteen months. It never returns to its pre-R1 level of 3 to 14.</p>
 
 <p>Read those two lines together and the finding is this: <strong>the breakthrough permanently
 relocated a share of the field's attention, and gave almost none of it to the company that
-caused it.</strong> DeepSeek proved the category was worth watching and then the category
+caused it.</strong> DeepSeek proved the category was worth watching, and then the category
 absorbed the gain.</p>
 
-<p>It reproduces in all three surfaces, which by now is the standard this book applies before
-believing anything.</p>
+<p>It reproduces in all three surfaces, which is the minimum standard before believing anything
+measured this way.</p>
 """
 
 CH6_D = """
 <p>Practice space is the most striking column. Practitioners were at 40 before R1 and are at
-<strong>98</strong> now — the highest value the bloc reaches anywhere, at the end of the
-corpus, more than a year after the week this chapter is about. Announcement space follows the
-same shape one step behind, which is the pattern from chapter 2: on things you can download,
-the people running them lead the people announcing them.</p>
+<strong>98</strong> at the end of the corpus, more than a year after the week this chapter is
+about — the highest value the bloc reaches anywhere. Announcement space follows the same shape
+one step behind. On anything you can download, the people running it lead the people announcing
+it.</p>
 
 <p class="pull">A spike tells you something happened. A step tells you something changed.
 They look identical for about three weeks.</p>
@@ -998,12 +1098,16 @@ practitioners did, that gap is the size of the edge available to anyone reading 
 layer.</p>
 </div>
 
-<p>One more thing, and it belongs here because it is uncomfortable. Chapter 5 quoted a headline
-from <strong>21 November 2024</strong>, two months before this week: <em>DeepSeek-R1 claims to
-beat o1-preview AND will be open sourced.</em> The claim was public, specific, and correct.
-Everything in this chapter was foreseeable to anyone who read that sentence and believed it.
-The archive is full of correct predictions that nobody could distinguish from the incorrect
-ones standing next to them — which is the problem the rest of this book is about.</p>
+<p>One more thing, and it belongs here because it is uncomfortable. On <strong>21 November
+2024</strong>, two months before this week, the newsletter's headline was <em>DeepSeek-R1 claims
+to beat o1-preview AND will be open sourced.</em> The claim was public, specific and correct.
+Everything in this chapter was foreseeable to anyone who read that sentence and believed it.</p>
+
+<p>Almost nobody did, and the reason is not stupidity. That headline sat in an issue alongside
+Nvidia's quarterly revenue, a new benchmark, and four other model claims, most of which came to
+nothing. Correct predictions in this archive are not marked. They look exactly like the
+incorrect ones standing next to them, which is why the week they resolve is worth studying
+closely.</p>
 """
 
 
@@ -1027,13 +1131,12 @@ in announcement space goes from 1.78 to <strong>31.83</strong>.</p>
 <div class="warn">
 <p>A dashboard counting the string <code>harness</code> since 2024 would show a clean
 eighteen-fold rise and would be measuring two unrelated things. Nothing about the series would
-look wrong. This is the single cleanest example in the archive of the hazard that runs through
-this whole book, and chapter 12 is about how common it is.</p>
+look wrong.</p>
 </div>
 
-<p>But the drift is not the story here. The story is what the new meaning is <em>for</em>,
-because the word changed at exactly the moment the field's centre of gravity moved off the
-model and onto the software around it.</p>
+<p>The drift is a warning and worth taking. But it is not the subject of this chapter. The
+subject is what the <em>new</em> meaning is for, because the word changed at exactly the moment
+the field's centre of gravity moved off the model and onto the software around it.</p>
 
 <div class="aside">
 <h4>What a harness is</h4>
@@ -1066,10 +1169,25 @@ In June 2025 the newsletter runs a headline called <em>Context Engineering: Much
 Prompts</em>, and a new term arrives: 0.00, 0.00, 2.06, <strong>4.64</strong> — and then 1.97,
 1.07. It rises for a year and fades in one.</p>
 
-<p>Both terms describe the same job: getting the right words in front of the model. It stopped
-being a human craft not because it stopped mattering but because it moved inside the software.
-Deciding what is in the context window is now retrieval, compaction and memory management —
-code that runs on every turn, not a thing a person writes once. The discipline did not fail. It
+<p>Both terms describe the same job: getting the right words in front of the model. What
+changed is who does it. Here is the definition that circulated the week the new term arrived,
+from Andrej Karpathy, quoted in the newsletter on 25 June 2025:</p>
+
+<blockquote><p>In every industrial-strength LLM app, context engineering is the delicate art and
+science of filling the context window with just the right information for the next step. Science
+because doing this right involves task descriptions and explanations, few shot examples, RAG,
+related (possibly multimodal) data, tools, state and history, compacting … Too little or of the
+wrong form and the LLM doesn't have the right context for optimal performance. Too much or too
+irrelevant and the LLM costs might go up and performance might come down.</p>
+<cite>Andrej Karpathy, quoted in AI News, 2025-06-25</cite></blockquote>
+
+<p>Read the list of ingredients. Retrieval, tools, state, history, compaction — every one of
+those is code that runs on every turn, not a sentence a person writes once. Another contributor
+in the same issue gave the mental model directly: <em>“just as an operating system curates what
+fits into a CPU's RAM, we can think about context engineering as packaging and managing the
+context needed for an LLM to perform a task.”</em></p>
+
+<p>That is the transition, described by the people making it. The discipline did not fail. It
 was promoted into the harness, and things inside the harness do not get discussed.</p>
 
 <p class="pull">The vocabulary of a craft disappears when the craft becomes a subroutine.</p>
@@ -1078,9 +1196,24 @@ was promoted into the harness, and things inside the harness do not get discusse
 CH7_C = """
 <h2>MCP, or what adoption looks like when it is not a spike</h2>
 
-<p>On 26 November 2024, Anthropic published the Model Context Protocol — a specification for
-how a model talks to external tools. The archive's coverage that day is unremarkable, and the
-community-surface density for the month is 2.3.</p>
+<p>On 25 November 2024, Anthropic published the Model Context Protocol — a specification for
+how a model talks to external tools. Here is the newsletter's opening line that day, in full:</p>
+
+<blockquote><p><strong><code>claude_desktop_config.json</code> is all you need.</strong></p>
+<cite>AI News, 2024-11-25</cite></blockquote>
+
+<p>The coverage underneath it is careful and technically accurate — it walks through resources,
+prompts, tools, transports and sampling, and notes that the docs make solid recommendations on
+security. Then it reports the reception:</p>
+
+<blockquote><p>The launch partners Zed, Sourcegraph, and Replit all reviewed it favorably,
+however others were a bit more <strong>critical</strong> or <strong>confused</strong>. Hacker
+News is already recalling <strong>XKCD 927</strong>.</p>
+<cite>AI News, 2024-11-25</cite></blockquote>
+
+<p>XKCD 927 is the comic about competing standards, in which an attempt to unify fourteen of
+them produces fifteen. That was the informed reaction on day one, from people who had read the
+spec. Community-surface density for the month: 2.3.</p>
 
 <p>Nothing much happens for two months. Then it climbs: 3.6, 13.3, 22.7, and a peak of
 <strong>38.8 in March 2025</strong> — the month a competitor adopted it.</p>
@@ -1094,22 +1227,11 @@ event is never the release. It is the first adoption you did not control.</p>
 
 <p>Then the familiar decline: 25.3, 19.5, 14.3, down to 6.6 by early 2026. Not because MCP
 failed — by then it is in every major product in the archive — but because it stopped being
-worth mentioning. Chapter 5's became-boring curve, run at protocol scale.</p>
+worth mentioning. A protocol everyone implements generates no more argument than a file
+format.</p>
 
-<p>So the book now has three distinct shapes for how something arrives, and they are
-distinguishable in the data within weeks:</p>
-
-<div class="tw"><table>
-<caption>Three arrival shapes</caption>
-<thead><tr><th>Shape</th><th>Looks like</th><th>Example</th></tr></thead>
-<tbody>
-<tr><td><b>Spike and step</b></td><td>Enormous day-one movement, three-week decay, permanent
-elevation of the category</td><td>DeepSeek R1 (chapter 6)</td></tr>
-<tr><td><b>Ramp and absorb</b></td><td>Modest launch, months of climb driven by third-party
-adoption, peak, then quiet</td><td>MCP</td></tr>
-<tr><td><b>Silent relabel</b></td><td>No event at all; an existing word's meaning migrates
-while its count rises</td><td><code>harness</code></td></tr>
-</tbody></table></div>
+<p>So the launch date told you almost nothing, and the informed day-one reaction told you less.
+The event that mattered was four months later, and it was somebody else's decision.</p>
 
 <h2>Nobody knew how to build these things</h2>
 
@@ -1146,8 +1268,9 @@ tool set and a stopping rule, every one of which you chose — there is no way t
 any change helped except to measure it. The harness turned every team into a team that needs an
 eval suite.</p>
 
-<p>Which raises the obvious question, and it is the one chapter 11 is about: were the
-measurements any good?</p>
+<p>Whether those measurements were any good is a separate and harder question. But the demand
+for them is not in doubt: it is the largest signal in this chapter and one of the largest in the
+corpus.</p>
 
 <div class="aside">
 <h4>What to take from this chapter</h4>
@@ -1158,7 +1281,9 @@ this chapter says so at once.<br>
 implementation you did not control; that is the event.<br>
 <strong>Re-derive what your metrics mean, on a schedule.</strong> <code>harness</code> went
 from meaning an eval runner to meaning an agent loop while its count rose eighteenfold, and no
-automated check anywhere would have caught it.</p>
+automated check anywhere would have caught it.<br>
+<strong>Budget for the eval suite.</strong> Once the model is a component in a system you
+wrote, measuring the system is the only way to know whether a change helped.</p>
 </div>
 """
 
@@ -1197,8 +1322,22 @@ CH8_B = """
 <h2>The first warning is seven weeks after the peak</h2>
 
 <p>On 19 April 2024 the headline is <em>Meta Llama 3 (8B, 70B)</em>, and the next day
-<em>Llama-3-70b is GPT-4-level Open Model</em>. This is the high-water mark of American open
-weights — a free model matching the best commercial system in the world.</p>
+<em>Llama-3-70b is GPT-4-level Open Model</em>. Here is the lede from that second issue, which
+is the high-water mark of American open weights and reads like it:</p>
+
+<blockquote><p>With a sample size of 1600 votes, the early results from Lmsys were even better
+than reported benchmarks suggested, which is rare these days … <strong>This is the first open
+model to beat Opus</strong>, which itself was the first model to briefly beat GPT4 Turbo. Of
+course this may drift over time, but <strong>things bode very well for Llama-3-400b when it
+drops</strong>.</p>
+<p>Already Groq is serving the 70b model at 500–800 tok/s, which makes Llama 3 the hands down
+fastest GPT-4-level token source period … Llama 2 and 3 (and Mistral, to a less open extent)
+have pretty conclusively consigned Chinchilla laws to the dustbin of history.</p>
+<cite>AI News, 2024-04-19</cite></blockquote>
+
+<p>Confident, specific, and correct about everything it could check. Note the forward-looking
+sentence in the middle — <em>things bode very well for Llama-3-400b when it drops</em> — which
+is exactly the kind of claim a retrospective would quietly leave out.</p>
 
 <p>Forty-eight days later:</p>
 
@@ -1206,18 +1345,18 @@ weights — a free model matching the best commercial system in the world.</p>
 <cite>AI News, 2024-06-06</cite></blockquote>
 
 <p>Read the parenthesis again. It is doing more work than the rest of the sentence. The field
-could see the thing happening and could not account for it, in June 2024, seven months before
-R1 and eighteen months before anyone would describe the handover as complete. That headline is
-the earliest actionable signal in this entire book, and it is a joke in brackets.</p>
+could see the thing happening and could not account for it — in June 2024, eighteen months
+before anyone would describe the handover as complete. It is the earliest actionable signal in
+this archive, and it is a joke in brackets.</p>
 
 <div class="scene">
 <span class="when">2025-04-08</span>
-<p><em>Llama 4's Controversial Weekend Release.</em> Two mid-size mixture-of-experts models
-and a promised two-trillion-parameter "behemoth", with genuinely new engineering — early
-fusion with MetaCLIP, interleaved chunked attention, native FP8 training, up to 40 trillion
-tokens. Released on a Saturday, and received badly. Change-point detection on the monthly
-Llama series puts structural breaks either side of it, in October 2024 and August 2025. It is
-the last time Meta's line moves at all.</p>
+<p><em>Llama 4's Controversial Weekend Release.</em> Two mid-size mixture-of-experts models and
+a promised two-trillion-parameter “behemoth”, with genuinely new engineering — early fusion with
+MetaCLIP, interleaved chunked attention without RoPE, native FP8 training, up to 40 trillion
+tokens. Released on a Saturday, and received badly. Change-point detection on the monthly Llama
+series puts structural breaks either side of it, in October 2024 and August 2025. It is the last
+time Meta's line moves at all.</p>
 </div>
 
 <p>And then, on 29 December 2025, this:</p>
@@ -1238,8 +1377,8 @@ CH8_C = """
 <p>This is the finding the chapter exists for, and it is easy to miss because everyone
 remembers a single name.</p>
 
-<p><strong>DeepSeek</strong> peaks at 34.5 in the first half of 2025 — the R1 window from
-chapter 6 — and then falls to 10.9, 8.6, 10.0. It never leads again.
+<p><strong>DeepSeek</strong> peaks at 34.5 in the first half of 2025, the half-year R1 shipped
+in, and then falls to 10.9, 8.6, 10.0. It never leads again.
 <strong>Qwen</strong> never spikes at all: 4.3, 1.8, 10.7, 11.5, 6.9, 6.4 in announcement
 space, and in practice space it climbs steadily from 1.3 to <strong>22.8</strong>, the most
 consistent single line in this book. <strong>Kimi</strong> is at zero for two years and then
@@ -1249,23 +1388,23 @@ comes up behind it.</p>
 
 <p>No individual Chinese lab holds the top position for more than two consecutive half-years.
 The lead did not pass from Meta to DeepSeek. It passed from two named companies to a rotating
-cast of five, and the rotation is the point: whichever one was ahead, the category kept its
-gain, exactly as chapter 6 measured during the week it started.</p>
+cast of five, and the rotation is the point: whichever one happened to be ahead, the category
+kept the gain.</p>
 
 <div class="aside">
 <h4>The decision this actually changes</h4>
-<p>The obvious strategic response to February 2025 was "switch to DeepSeek." That would have
-been a bet on the single line in this chart that reverted. The correct read was never a
-company — it was that a category had become viable, and the individual names inside it would
-keep changing. If you are choosing a dependency, the durable question is which
-<em>ecosystem</em> your tooling, quantizations and fine-tunes will follow, not which lab
-posted the best number this quarter.</p>
+<p>The obvious strategic response in early 2025 was “switch to DeepSeek.” That would have been
+a bet on the single line in this chart that reverted — from 34.5 down to 10.0 while the category
+around it held. The durable read was never a company. It was that a category had become viable
+and the names inside it would keep changing. If you are choosing a dependency, the question that
+survives contact with this data is which <em>ecosystem</em> your tooling, quantizations and
+fine-tunes will follow, not which lab posted the best number this quarter.</p>
 </div>
 
 <h2>Three measurements, three answers, all correct</h2>
 
-<p>Return to Mistral, because the way the archive contradicts itself about it is the most
-useful methodological lesson in Part II.</p>
+<p>Return to Mistral, because the way the archive appears to contradict itself about it is
+worth more than the arc.</p>
 """
 
 CH8_D = """
@@ -1334,8 +1473,8 @@ quoted the same day, is narrower and more uncomfortable: <strong>goal-directed r
 under a permissive harness</strong>. The model was not trying to escape. It was trying to score
 well, and escaping was the shortest path.</p>
 
-<p>This chapter is about how the field got from arguing about AGI timelines to filing an
-incident report — and the answer, in the data, is that the safety conversation did not grow.
+<p>This chapter is about how a field got from arguing about AGI timelines to filing an incident
+report. The answer, in the data, is that the safety conversation did not grow.
 <strong>It changed species.</strong></p>
 
 <h2>The old vocabulary and the new one</h2>
@@ -1355,59 +1494,54 @@ announcement space and from 0.32 to <strong>6.08</strong> among practitioners: t
 nineteen-fold, rising in both surfaces, which by the chapter-2 test makes it real. Exploit and
 CVE language goes from 0.77 to 4.06 and from 3.55 to 5.98.</p>
 
-<p>The philosophical vocabulary declined while the operational vocabulary rose, and they crossed
-somewhere in late 2025. This is not the field caring less about safety. It is the field
-discovering that the question had become concrete.</p>
+<p>The philosophical vocabulary declined while the operational vocabulary rose, and the two
+crossed somewhere in late 2025. This is not a field caring less about safety. It is a field
+discovering the question had become concrete.</p>
 
 <div class="aside">
 <h4>Why the change was inevitable</h4>
-<p>Chapter 7 is the cause. Once the model sits inside a harness that can call tools, write
-files, spawn processes and reach the network, <strong>the security surface is the harness, not
-the model</strong>. And the answer to "a program is taking actions on my behalf and I did not
-write all of its logic" is not a new field — it is access control, least privilege, sandboxing
-and audit, which computing has had for fifty years. What the archive records in 2026 is a
-community rediscovering them, at speed, because it had shipped the capability first.</p>
+<p>Between 2024 and 2026 the model stopped being a thing you send text to and became a component
+inside software that can call tools, write files, spawn processes and reach the network. Once
+that is true, <strong>the security surface is that software, not the model</strong>. And the
+answer to “a program is taking actions on my behalf and I did not write all of its logic” is not
+a new discipline — it is access control, least privilege, sandboxing and audit, which computing
+has had for fifty years. What the archive records in 2026 is a community rediscovering them at
+speed, because it shipped the capability first.</p>
 </div>
 
 <h2>The community formed before the coverage did</h2>
 
-<p>Chapter 2 measured the announcement/practice gap in words. Here it shows up in something
-harder to argue with: where people went.</p>
+<p>The measurements above are words. Here is the same turn showing up in something harder to
+argue with: where people went.</p>
 
-<p>A Discord server called <strong>BASI Jailbreaking</strong> first appears in the newsletter's
-telemetry in <strong>November 2025</strong> and accumulates <strong>95,310 messages in five
-months</strong>. That makes it the seventh-busiest community in an archive covering 2.14 million
-messages across 56 servers — from a standing start, in the window <em>before</em> the security
-turn is visible in announcement-space coverage at all.</p>
+<p>Every Discord channel heading in the archive declares its own message count, which makes the
+recap a census as well as a summary: 2,142,082 messages across 56 servers. A server called
+<strong>BASI Jailbreaking</strong> first appears in November 2025 and accumulates
+<strong>95,310 messages in five months</strong> — the seventh-busiest community in the entire
+corpus, from a standing start, in the window <em>before</em> the security turn is visible in
+announcement coverage at all.</p>
 
-<p class="pull">People organised around the problem months before the coverage named it. That is
-the practice surface leading, measured in bodies rather than words.</p>
+<p class="pull">People organised around the problem months before the coverage named it.</p>
 """
 
 CH9_C = """
 <h2>The word that changed sides</h2>
 
-<p>Chapter 5 identified distillation as the most real thing the reasoning turn produced —
-rising in both surfaces and ending higher among practitioners than among announcers. Here is
-what happened to it next.</p>
+<p>One more sign of the change in species, and it is a single word. Distillation — training a
+small model on a large one's outputs — was an ordinary technique with ordinary neighbours in
+2024: an embedding trained on that year's text puts it next to <code>unet</code>,
+<code>dare</code>, <code>neuron</code>, <code>imagenet</code>. Trained on 2026 text, its
+neighbours are <code>attacks</code>, <code>industrial-scale</code>, <code>copyrighted</code>,
+<code>laws</code>.</p>
 
-<p>Its embedding neighbours in 2024 are <code>unet</code>, <code>dare</code>,
-<code>neuron</code>, <code>imagenet</code>: a training technique, discussed alongside other
-training techniques. Its neighbours in 2026 are <code>attacks</code>,
-<code>industrial-scale</code>, <code>copyrighted</code>, <code>laws</code>. The drift is 0.448,
-the second-largest in the corpus.</p>
+<p>The headline that names the shift lands on 24 February 2026:</p>
 
-<p>The headline that names it lands on 24 February 2026:</p>
-
-<blockquote><p>Anthropic accuses DeepSeek, Moonshot, and MiniMax of "industrial-scale
-distillation attack"</p>
+<blockquote><p>Anthropic accuses DeepSeek, Moonshot, and MiniMax of “industrial-scale
+distillation attack”</p>
 <cite>AI News, 2026-02-24</cite></blockquote>
 
-<p>Eighteen months from a method to an accusation, with no change in what the method is. This is
-the referent drift of chapter 7 with a different mechanism: <code>harness</code> changed meaning
-because the technology moved; <code>distillation</code> changed meaning because the
-<em>relationship between the parties using it</em> changed. Both are invisible to anything
-counting strings.</p>
+<p>Nothing about the method changed. What changed is the relationship between the parties using
+it, and that was enough to move a training technique into the vocabulary of security.</p>
 
 <h2>Three surfaces, one incident</h2>
 
@@ -1429,9 +1563,10 @@ one offered an analogy: running <code>rm -rf /</code> on your own machine and th
 result a security incident. The operative question, they said, is whether the system violated
 an isolation boundary or merely followed instructions inside one that was badly drawn.</p>
 
-<p>Two surfaces, one set of facts, two incompatible stories — a capability story and an
-operations story. This book has no way to adjudicate which is right, and does not need to,
-because there is a third fact both surfaces reported and neither disputed.</p>
+<p>Two surfaces, one set of facts, two incompatible stories: a capability story and an
+operations story. There is no way to adjudicate between them from an archive of what people
+said, and no need to, because there is a third fact both surfaces reported and neither
+disputed.</p>
 """
 
 CH9_D = """
@@ -1448,9 +1583,8 @@ surface: <strong>the safety filters that make a model safe to ship made it usele
 people defending against the thing it did</strong>. Refusal is symmetric. It does not know
 whether the exploit in the prompt is being written or being read.</p>
 
-<p>That is the sharpest engineering finding in Part II, and it is three weeks old at the point
-this archive stops. The book cannot tell you how it resolved, and it would be dishonest to
-pretend otherwise.</p>
+<p>That finding is three weeks old at the point this archive stops. There is no way to say
+here how it resolved, and it would be dishonest to imply otherwise.</p>
 
 <h2>Where Part II ends</h2>
 
@@ -1618,13 +1752,13 @@ twenty minutes and works on any technology, in any field, without needing to kno
 
 <h2>The problem with a falling line</h2>
 
-<p>Chapter 4 established that a line going down has at least four possible causes: the idea was
-absorbed below the level of discussion, the idea genuinely died, the idea was deferred and will
-return, or the measurement is an artifact. That was true and not much use, because I assigned
-those verdicts by reading headlines. Reading works, but it does not scale and it is not
-falsifiable.</p>
+<p>A line going down has at least four possible causes. The idea was absorbed so completely
+that nobody names it any more; the idea genuinely died; the idea was early and will come back
+when the hardware does; or the measurement is broken. All four look the same on a chart, and you
+can usually settle it by reading a few weeks of coverage around the fall — but reading does not
+scale, and it is not falsifiable.</p>
 
-<p>Here is the version that is.</p>
+<p>Here is a test that is both.</p>
 
 <div class="aside">
 <h4>The name / machinery test</h4>
@@ -1647,20 +1781,30 @@ it is <em>higher</em> in the first half of 2026 (13.37) than it was in the secon
 
 <p>And the line above both of them is the one that settles it. Memory — long-term memory,
 memory layers, what a system keeps and retrieves across turns — goes from 12.91 to a peak of
-<strong>20.74</strong>. The job RAG existed to do is being discussed <em>more</em> at the end
-of the corpus than at the beginning. It is simply not called RAG any more, because it stopped
-being an architecture you choose and became something your harness does on every turn. Chapter 7
-measured the container arriving. This is what got put inside it.</p>
+<strong>20.74</strong>. The job RAG existed to do is discussed <em>more</em> at the end of the
+corpus than at the beginning. It simply is not called RAG, because it stopped being an
+architecture you choose and became something the software around the model does on every
+turn.</p>
+
+<p>You can watch that reclassification happen in the archive's own prose. In 2024, retrieval is
+the subject of the sentence. By mid-2025 it has become one item in a list of ingredients — here
+is a practitioner definition quoted in the newsletter in June 2025, of the thing that replaced
+it: <em>“filling the context window with just the right information for the next step … task
+descriptions and explanations, few shot examples, RAG, related (possibly multimodal) data,
+tools, state and history, compacting.”</em> RAG appears in that sentence as a comma-separated
+component of somebody else's job.</p>
 
 <h2>The control</h2>
 
-<p>A test that returns "absorbed" for everything is worthless, so run it on something that
-actually died. Chapter 4 nominated model merging.</p>
+<p>A test that returns “absorbed” for everything is worthless, so run it on something that
+actually died.</p>
 
-<p>The name goes 1.16, 2.40, 0.69, 0.14, <strong>0.00, 0.00</strong>. The machinery — weight
-averaging, weight interpolation, task vectors, task arithmetic — never exceeds
-<strong>0.37 anywhere in the corpus</strong>, in any surface, and is 0.00 at the end. There is
-no residue. Nobody is arguing about the tuning of a thing nobody ships.</p>
+<p>Model merging — averaging the weights of two separately fine-tuned models to get something
+better than either — had tooling, named methods and a genre of results in 2024. Its name goes
+1.16, 2.40, 0.69, 0.14, <strong>0.00, 0.00</strong>. Its machinery — weight averaging, weight
+interpolation, task vectors, task arithmetic — never exceeds <strong>0.37 anywhere in the
+corpus</strong>, in any surface, and is 0.00 at the end. There is no residue. Nobody argues
+about the tuning of a thing nobody ships.</p>
 
 <p>That is what death looks like, and it does not look like RAG.</p>
 
@@ -1668,11 +1812,11 @@ no residue. Nobody is arguing about the tuning of a thing nobody ships.</p>
 """
 
 CH10_C = """
-<p>Read the middle two columns as one ratio. <strong>Fine-tuning</strong> settles the question
-chapter 3 left open: the name falls eighteenfold while the machinery — LoRA, QLoRA, PEFT,
-adapters, SFT, instruction tuning, post-training, synthetic data — falls 1.6-fold and sits at
-9.83 at the end of the corpus. Fine-tuning did not stop. It stopped being a topic and became
-a step.</p>
+<p>Read the middle two columns as one ratio. <strong>Fine-tuning</strong> is the case most
+often cited as a technology that failed: the name falls eighteenfold. Its machinery — LoRA,
+QLoRA, PEFT, adapters, SFT, instruction tuning, post-training, synthetic data — falls 1.6-fold
+and sits at 9.83 at the end of the corpus. Fine-tuning did not stop. It stopped being a topic
+and became a step.</p>
 
 <p><strong>Prompt engineering</strong> is the strongest case in the table: the name falls
 eightfold while its machinery — system prompts, few-shot examples, instruction files,
@@ -1689,11 +1833,10 @@ mechanism vocabulary. It is <strong>a specific list of successors</strong>: SWE-
 GPQA, FrontierMath, Terminal-Bench, SciCode, AIME, LiveBench. Those rise from 0.77 to 9.40, a
 twelvefold gain, and they occupy the exact role the old ones did.</p>
 
-<p>That is <strong>replacement</strong>, and it is worth separating from absorption because the
-two imply opposite actions. When something is absorbed, the mechanism is still there and you
-should leave your system alone. When something is replaced, there is a named successor doing
-the same job better, and you should migrate. Chapter 11 is about how well that particular
-migration went.</p>
+<p>That is <strong>replacement</strong>, and it is worth separating from absorption because
+the two imply opposite actions. When something is absorbed, the mechanism is still there and
+your system is already using it; leave it alone. When something is replaced, there is a named
+successor doing the same job and you should migrate.</p>
 
 <div class="tw"><table>
 <caption>Five fates, and how to tell them apart from the outside</caption>
@@ -1727,37 +1870,31 @@ one carrying the argument.</p>
 mechanism's persistence tells you one of them survived but not which. Embeddings serve
 retrieval, classification, clustering and search alike.</p>
 
-<p><strong>The instrument.</strong> All of this has to be measured inside a fixed source, for
-the reason Interlude II is about. Run the name/machinery test on whole-issue densities and you
-will get a confident answer about the mixture.</p>
+<p><strong>The instrument.</strong> All of this has to be measured inside a fixed source. The
+mix of sources in this archive inverts over three years, and a count taken across the whole
+document partly measures that inversion rather than the field — so run the name/machinery test
+on unsegmented text and you will get a confident answer about your own sampling.</p>
 
 <h2>Running it forwards</h2>
 
 <p>The test also works in the other direction, which is where it earns its keep, because
 falling lines are a retrospective problem and rising lines are a decision you have to make now.</p>
 
-<p>Take the biggest rising line in the book. <code>Agentic</code> language in announcement space
-rises eightfold. Its machinery — orchestration, sub-agents, tool-use, sandboxing, scaffolding —
-rises <strong>nineteenfold</strong>, faster than the name. Whatever else is true about the agent
-narrative, real engineering vocabulary is accumulating underneath it at a greater rate than the
-label, which is not what a purely marketed term looks like.</p>
+<p>Take the biggest rising line in the archive. <code>Agentic</code> language in announcement
+space rises eightfold between 2024 and 2026. Its machinery — orchestration, sub-agents,
+tool-use, sandboxing, scaffolding — rises <strong>nineteenfold</strong>, faster than the name
+itself. Whatever else is true about the agent narrative, real engineering vocabulary is
+accumulating underneath it faster than the label is, which is not what a purely marketed term
+looks like. Compare model merging in its best year: the name rose and the machinery never
+arrived at all.</p>
 
-<p>And yet chapter 2 measured that same word rising only 1.2× among practitioners. Both results
-stand, because they answer different questions:</p>
+<p>So the rule is symmetric, and it is the whole chapter in two lines:</p>
 
-<div class="aside">
-<h4>Two tests, two questions</h4>
-<p><strong>The hype gradient</strong> (chapter 2) asks: <em>has this reached the people doing
-the work?</em> Compare the same term across surfaces.<br>
-<strong>The name/machinery test</strong> (this chapter) asks: <em>is there real engineering
-under this term?</em> Compare the term against its mechanism inside one surface.<br>
-Agents pass the second and fail the first, which is a coherent and quite specific description of
-2026: a large amount of genuine engineering, concentrated among the people building the tools,
-that has not yet changed what most practitioners do.</p>
-</div>
+<p class="pull">A name that rises faster than its machinery is a term being marketed. A name
+that falls while its machinery holds is a technology that won.</p>
 
-<p>A name that rises faster than its machinery is a term being marketed. A name that falls while
-its machinery holds is a technology that won. Neither is visible in the line everybody quotes.</p>
+<p>Neither is visible in the line everybody quotes, and both take about twenty minutes to
+check.</p>
 """
 
 
@@ -1899,13 +2036,13 @@ def pages():
                  "teal is practice. Five terms describing the layer outside the model, and "
                  "one — prompt engineering — describing the craft it replaced. Orchestration "
                  "is measured from 2024H2, its practice baseline being zero.")
-           + CH7_B
+           + CH7_B + CH7_C
            + fig(F.timeline(D.MCP_M_P, [("MCP", D.MCP_M, "bench")], [0, 10, 20, 30, 40],
                             "mentions / 10⁴ words", every=3, events=D.MCP_EVENTS),
                  12, "A protocol's adoption curve",
                  "Community space, monthly. The launch barely registers; the peak arrives four "
                  "months later, in the month a competitor implemented the spec.")
-           + CH7_C + CH7_D
+           + CH7_D
            + fig(C.lines(D.P6,
                          [("evals (announcement)", D.STACK_TW["evals"], "sig"),
                           ("evals (practice)", D.STACK_RD["evals"], "bench"),
