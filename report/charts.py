@@ -103,7 +103,7 @@ def paired(rows):
     import math
     h = 40 + len(rows) * 46
     left = 152   # room for the longest row label
-    gutter = 118  # fixed right column for the verdict label, so it never clips
+    gutter = 140  # fixed right column for the verdict label, so it never clips
     out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
     lo, hi = math.log10(0.02), math.log10(20)
 

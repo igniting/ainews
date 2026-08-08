@@ -519,3 +519,32 @@ MISTRAL_THREE = [
     ("Tagged as a subject in front matter", "54%", "33%", "15%", "2%"),
     ("Density in announcement space", "—", "12.8", "8.3", "1.8"),
 ]
+
+# Chapter 9 — the security turn. Mentions per 10^4 words in section.
+SEC_TW = {
+    "agent permissions": [0.93, 1.11, 1.60, 3.67, 9.59, 9.40],
+    "CVE / exploit":     [0.77, 0.74, 0.46, 1.18, 3.08, 4.06],
+    "prompt injection":  [0.08, 0.00, 0.46, 0.55, 0.86, 0.85],
+    "alignment":         [7.19, 7.21, 3.43, 4.30, 3.03, 1.28],
+    "regulation":        [1.47, 14.60, 2.82, 1.04, 0.86, 1.71],
+    "existential risk":  [1.00, 1.85, 2.06, 1.04, 0.50, 1.28],
+    "jailbreak":         [2.32, 1.11, 1.52, 0.62, 0.81, 1.28],
+}
+SEC_RD = {
+    "agent permissions": [0.32, 0.68, 0.71, 2.08, 1.64, 6.08],
+    "CVE / exploit":     [3.55, 1.10, 1.14, 0.97, 3.70, 5.98],
+    "prompt injection":  [1.29, 0.21, 0.21, 0.42, 0.40, 0.88],
+    "alignment":         [4.20, 1.62, 2.48, 4.14, 1.32, 2.26],
+    "regulation":        [8.72, 6.22, 3.67, 3.21, 1.68, 4.41],
+    "existential risk":  [1.94, 0.26, 1.16, 1.09, 0.34, 0.78],
+    "jailbreak":         [5.49, 1.78, 1.53, 2.23, 2.99, 2.94],
+}
+# Old vocabulary vs new, fold change 2024H1 -> 2026H2 in each surface
+SEC_GAP = [
+    ("agent permissions", 10.1, 19.0, "new vocabulary"),
+    ("prompt injection", 10.6, 0.68, "announcement-led"),
+    ("CVE / exploit", 5.3, 1.7, "field-wide"),
+    ("jailbreak", 0.55, 0.54, "flat, never large"),
+    ("alignment", 0.18, 0.54, "old vocabulary"),
+    ("regulation", 1.2, 0.51, "spiked, then reverted"),
+]
