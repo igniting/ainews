@@ -44,25 +44,69 @@ people:
   - jim_fan
 ---
 
-
 **Execuhires are back!**
 
+
+
+
+
+
+
+
+
+Execuhires first started in Aug 2024 and again in Jun 2025, but it seems Christmas Eve 2025 isn't
+too late for a hat-trick. In a 5 sentence post,
+Groq confirmed it's "non-exclusive
+licensing agreement" for most of
+Groq's leadership team to join Nvidia,
+leaving behind GroqCloud, while the current CFO
+will become the CEO of the old Groq, for reported total consideration of $20 billion
+cash.
+
+
+
+It's an acquisition in everything but
+name, and made interesting by a few other facts:
+Groq was last valued at $6.9B in Sept, and says
+Nvidia came inbound to Groq. Nvidia's
+former largest acquisition was the 2019
+acquisition of Mellanox for $7B, yet this
+acquisition is only 1/3 of Nvidia's cash
+war chest.
+
+
+
+Jensen's quote is the most actual detail
+we have on future plans:
+
+
+
+> “We plan to integrate Groq’s low-latency
+> processors into the NVIDIA AI factory
+> architecture, extending the platform to serve
+> an even broader range of AI inference and
+> real-time workloads,” Huang wrote.
+>
+> 
+> 
+> Huang added that, “While we are adding
+> talented employees to our ranks and licensing
+> Groq’s IP, we are not acquiring Groq as a
+> company.”
+
+
+
+
+
+
+
+
+That's all we know, but in semis world
+this is very very earth shaking, not least for
+hopeful Nvidia competitors.
+
 > AI News for 12/24/2025-12/25/2025. We checked 12 subreddits, 544 Twitters and 24 Discords (208 channels, and 5086 messages) for you. Estimated reading time saved (at 200wpm): 346 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
-
-Execuhires first started [in Aug 2024](https://news.smol.ai/issues/24-08-02-ainews-execuhires-tempting-the-wrath-of-khan) and again in [Jun 2025](https://news.smol.ai/issues/25-06-11-execuhires-2), but it seems Christmas Eve 2025 isn't too late for a hat-trick. In a 5 sentence post, Groq confirmed it's "non-exclusive licensing agreement" for most of Groq's leadership team to join Nvidia, leaving behind GroqCloud, while the current CFO will become the CEO of the old Groq, for [reported total consideration of $20 billion cash.](https://www.cnbc.com/2025/12/24/nvidia-buying-ai-chip-startup-groq-for-about-20-billion-biggest-deal.html)
-
-It's an acquisition in everything but name, and made interesting by a few other facts: Groq was last valued at $6.9B in Sept, and says Nvidia came inbound to Groq. Nvidia's former largest acquisition was the 2019 acquisition of Mellanox for $7B, yet this acquisition is only 1/3 of Nvidia's cash war chest.
-
-Jensen's quote is the most actual detail we have on future plans:
-
-> “We plan to integrate Groq’s low-latency processors into the NVIDIA AI factory architecture, extending the platform to serve an even broader range of AI inference and real-time workloads,” Huang wrote.
-> 
-> 
-> Huang added that, “While we are adding talented employees to our ranks and licensing Groq’s IP, we are not acquiring Groq as a company.”
-> 
-
-That's all we know, but in semis world this is very very earth shaking, not least for hopeful Nvidia competitors.
+>
 
 ---
 

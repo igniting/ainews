@@ -56,13 +56,25 @@ people:
   - john__allard
 ---
 
-
 **a quiet day.**
 
-> AI News for 5/8/2025-5/9/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (215 channels, and 4687 messages) for you. Estimated reading time saved (at 200wpm): 486 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-It's a pretty quiet weekend, so we'll plug [our AI Engineer World's Fair writeup](https://news.smol.ai/issues/25-05-07-aiewf-2025) — last chance for [the Early Bird discount](https://ti.to/software-3/ai-engineer-worlds-fair-2025/discount/AINEWS) for those who haven't yet got tickets!
+
+
+
+
+It's a pretty quiet weekend, so we'll plug our AI Engineer World's Fair writeup — last chance for the Early Bird discount for those who haven't yet got tickets!
+
+
+
+
+
+
+
+![](https://resend-attachments.s3.amazonaws.com/7aTKTJ31vD6J3qo)
+
+> AI News for 5/8/2025-5/9/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (215 channels, and 4687 messages) for you. Estimated reading time saved (at 200wpm): 486 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 

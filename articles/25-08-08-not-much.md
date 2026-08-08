@@ -55,13 +55,16 @@ people:
   - gdb
 ---
 
+** a quiet day.**
 
-**a quiet day.**
+
+
+
+Lots of debates over the quality, style and rollout of GPT5,
+including the surprise decision to immediately deprecate GPT 4o, which has since been rolled back.
 
 > AI News for 8/7/2025-8/8/2025. We checked 12 subreddits, 544 Twitters and 29 Discords (227 channels, and 16496 messages) for you. Estimated reading time saved (at 200wpm): 1217 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
-
-Lots of debates over the quality, style and rollout of GPT5, including the [surprise decision to immediately deprecate GPT 4o](https://news.ycombinator.com/item?id=44839842), which has since been rolled back.
+>
 
 ---
 

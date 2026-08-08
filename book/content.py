@@ -495,8 +495,8 @@ anyone received. They went out as <em>Replit Agent 4: The Knowledge Work Agent</
 high-return activity of raising your aspirations for LLMs</em>, <em>Context Drought</em>, and
 <em>NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sale</em>.</p>
 
-<p>Of the 258 issues I could eventually recover, <strong>80</strong> that the archive files
-under a templated title had been published under a real headline. In the first half of 2026 the
+<p>Of the 397 issues I could eventually recover, <strong>80</strong> that the archive files
+under a templated title had been published under a real headline — 84 of them. In the first half of 2026 the
 templated share of what was actually sent is <strong>4.6%</strong>, against the 64% the archive
 stores.</p>
 
@@ -506,15 +506,15 @@ not is the more useful lesson. Compare the two series on the same issues:</p>
 <div class="tw"><table><thead><tr><th>Half-year</th><th class="n">Archive says templated</th>
 <th class="n">Actually sent that way</th></tr></thead><tbody>
 <tr><td>2024H2</td><td class="n">26.9%</td><td class="n">28.6%</td></tr>
-<tr><td>2025H1</td><td class="n">38.1%</td><td class="n">39.2%</td></tr>
-<tr><td>2025H2</td><td class="n">45.7%</td><td class="n">47.8%</td></tr>
+<tr><td>2025H1</td><td class="n">38.1%</td><td class="n">38.1%</td></tr>
+<tr><td>2025H2</td><td class="n">45.7%</td><td class="n">41.0%</td></tr>
 <tr><td>2026H1</td><td class="n">64.3%</td><td class="n"><b>4.6%</b></td></tr>
 <tr><td>2026H2</td><td class="n">84.6%</td><td class="n"><b>24.0%</b></td></tr>
 </tbody></table></div>
 
-<p>Through 2024 and 2025 the two agree within two points. The climb from 27% to 48% is
-<em>real</em> — the editor genuinely did reach for the template more and more, and my original
-series was tracking something that was happening. Only in 2026 do the columns come apart, and
+<p>Through 2024 and 2025 the two agree closely — exactly, in the first half of 2025, across
+118 issues. The climb from 27% to 41% is <em>real</em>: the editor genuinely did reach for the
+template more and more, and my original series was tracking something that was happening. Only in 2026 do the columns come apart, and
 there they come apart in two directions at once: the mirror began writing placeholders in the
 same months the editor went back to writing headlines. One movement was hidden underneath its
 opposite.</p>
@@ -2711,9 +2711,9 @@ range, read by a person. It takes an afternoon and nothing else catches this.</p
 
 <p><strong>What reading the values still missed.</strong> Nothing above is wrong, and it is
 only half the story. Reading the archive carefully establishes that its title field went blank;
-it cannot establish <em>why</em>, because the answer is not in the archive. Against 258 issues
-recovered from the sent emails, the stored and published series agree within two points through
-2024 and 2025 — the editor really was templating more — and then diverge sharply in 2026, where
+it cannot establish <em>why</em>, because the answer is not in the archive. Against 397 issues
+recovered from the sent emails, the stored and published series track each other through 2024
+and 2025 — matching exactly in 2025H1, across 118 issues — the editor really was templating more — and then diverge sharply in 2026, where
 64% stored meets 4.6% sent. Four consecutive March 2026 issues the archive files as <em>not much
 happened today</em> went out as <em>Context Drought</em> and <em>NVIDIA GTC: Jensen goes hard on
 OpenClaw, Vera CPU, and announces $1T sale</em>. So a real trend and a broken pipeline ran in

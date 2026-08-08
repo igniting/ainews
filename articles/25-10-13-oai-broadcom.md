@@ -38,56 +38,181 @@ people:
   - gdb
 ---
 
-
 **ASICs are all you need.**
 
-> AI News for 10/10/2025-10/13/2025. We checked 12 subreddits, 544 Twitters and 23 Discords (197 channels, and 15120 messages) for you. Estimated reading time saved (at 200wpm): 1127 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-There's been a lot of chip dealmaking by OpenAI recently to create "the biggest joint industrial project in human history":
 
-- Sept 10: [$300B in compute](https://news.smol.ai/issues/25-09-10-oci) from Oracle
-- Sept 22: [10GW from NVIDIA](https://news.smol.ai/issues/25-09-22-nvda-oai)
-- Oct 6: [6GW from AMD](https://x.com/amd/status/1975155370860384576?s=46)
 
-and today, the final shoe drops - as [widely rumored and on schedule, after hiring TPU alums from Google](https://www.reuters.com/technology/openai-set-finalize-first-custom-chip-design-this-year-2025-02-10/) - **10GW** of OpenAI's own ASIC and systems specifically designed for OpenAI's inference capacity (as Sam says on [the OpenAI podcast](https://www.youtube.com/watch?app=desktop&v=qqAbVTFnfk8)).
+
+
+
+
+
+There's been a lot of chip dealmaking by OpenAI
+recently to create "the biggest joint industrial
+project in human history":
+
+
+
+
+- 
+
+Sept 10: $300B in compute from Oracle
+
+
+
+
+- 
+
+Sept 22: 10GW from NVIDIA
+
+
+
+
+- 
+
+Oct 6: 6GW from AMD
+
+
+
+
+
+
+and today, the final shoe drops - as widely rumored and on schedule, after hiring TPU
+alums from Google - **10GW**
+of OpenAI's own ASIC and systems specifically
+designed for OpenAI's inference capacity (as Sam
+says on the OpenAI podcast).
+
+
 
 To put this in scale, all of OpenAI has **2GW** of compute now, majority spent on R&D:
 
+
+
 ![](https://resend-attachments.s3.amazonaws.com/AkhFZMi62VP2yIV)
 
-and this is 12% of an overall roadmap going to 250GW (half the energy consumption of the United States)
+
+
+
+
+
+
+
+and this is 12% of an overall roadmap going to 250GW
+(half the energy consumption of the United States)
+
+
 
 ![](https://resend-attachments.s3.amazonaws.com/ek6nyYd2AZvWYCp)
 
-Greg says ambient agents are a big part of the reason why inference demand will go up a lot:
 
-> But I think that we are heading to a world where AI intelligence is able to help humanity make new breakthroughs that just would not be possible otherwise.
+
+
+
+
+
+
+Greg says ambient agents are a big part of the reason
+why inference demand will go up a lot:
+
+
+
+> But I think that we are heading to a world where AI
+> intelligence is able to help humanity make new
+> breakthroughs that just would not be possible
+> otherwise.
+>
 > 
 > 
-> And we're going to need just as much compute as possible to power that.
+> And we're going to need just as much compute as
+> possible to power that.
+>
 > 
-> Like one example of something very concrete is that we are in a world now where **ChatGPT is changing from something that you talk to interactively to something that can go do work for you behind the scenes.**
 > 
-> If you've used features like Pulse, You wake up every morning. It has some really interesting things that are related to what you're interested in. It's very personalized. And our intent is to turn ChatGPT into something that helps you achieve your goals.
+> Like one example of something very concrete is that
+> we are in a world now where ChatGPT is changing from something that you talk to
+> interactively to something that can go do work for
+> you behind the scenes.
+>
 > 
-> The thing is, we can only release this to the pro tier because that's the amount of compute that we have available. And ideally, everyone would have an agent that's running for them 24-7 behind the scenes, helping them achieve their goals. **And so ideally, everyone has their own accelerator, has their own compute power that's just running constantly.**
+> 
+> If you've used features like Pulse, You wake up
+> every morning. It has some really interesting things
+> that are related to what you're interested in.
+> It's very personalized. And our intent is to turn
+> ChatGPT into something that helps you achieve your
+> goals.
+>
+> 
+> 
+> The thing is, we can only release this to the pro
+> tier because that's the amount of compute that we
+> have available. And ideally, everyone would have an
+> agent that's running for them 24-7 behind the
+> scenes, helping them achieve their goals. And so ideally, everyone has their own accelerator,
+> has their own compute power that's just running
+> constantly.
+>
+> 
 > 
 > And that means there's 10 billion humans.
+>
 > 
-> We are nowhere near being able to build 10 billion chips.
 > 
-> And so there's a long way to go before we are able to saturate not just the demand, but what humanity really deserves.
+> We are nowhere near being able to build 10 billion
+> chips.
+>
 > 
-
-Greg says that they have been working on their ASIC for 18 months, and why they did this in house:
-
-> "There were all sorts of chip startups with novel approaches that were very different from GPUs. And we started giving them a ton of feedback saying, here's where we think things are going. It needs to be models of this shape. And honestly, a lot of them just didn't listen to us, right? And so it's like very frustrating to be in this position where you say we see the direction the future should be going. We have no ability to really influence it besides sort of, you know, just like sort of trying to influence other people's roadmaps. And so by being able to take some of this in-house, we feel like we are able to actually realize that vision."
 > 
+> And so there's a long way to go before we are
+> able to saturate not just the demand, but what
+> humanity really deserves.
 
-While nothing yet has been announced with Intel, it is surely not far behind given [the clear interest in the American AI stack](https://news.smol.ai/issues/25-09-18-nvidia-intc).
 
-Broadcom's stock jumped 10% (+$150B) on today's news.
+
+
+
+
+
+
+Greg says that they have been working on their ASIC for
+18 months, and why they did this in house:
+
+
+
+> "There were all sorts of chip startups with
+> novel approaches that were very different from GPUs. And we started giving them a ton of feedback
+> saying, here's where we think things are going.
+> It needs to be models of this shape. And honestly, a
+> lot of them just didn't listen to us,
+> right?
+> And so it's like very frustrating to be in this
+> position where you say we see the direction the future
+> should be going. We have no ability to really
+> influence it besides sort of, you know, just like sort
+> of trying to influence other people's roadmaps.
+> And so by being able to take some of this in-house, we
+> feel like we are able to actually realize that
+> vision."
+
+
+
+
+
+
+
+
+While nothing yet has been announced with Intel, it is
+surely not far behind given the clear interest in the American AI stack.
+
+
+
+Broadcom's stock jumped 10% (+$150B) on
+today's news.
+
+> AI News for 10/10/2025-10/13/2025. We checked 12 subreddits, 544 Twitters and 23 Discords (197 channels, and 15120 messages) for you. Estimated reading time saved (at 200wpm): 1127 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 

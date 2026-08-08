@@ -56,19 +56,50 @@ people:
   - corbtt
 ---
 
-
 **Congrats Ant team!**
 
+
+
+
+
+
+
+
+
+This was widely rumored, but the final valuation came in
+higher. Some notable numbers from their announcement:
+
+
+
+
+- 
+
+In Jan 2025, Anthropic at about a $1B run-rate. **By August 2025, it crossed $5B** (36.6x current ARR multiple, but 20x EOY25 multiple)
+
+
+
+
+- 
+
+Claude Code was GA in May 2025 - **usage grew >10x in last three months and now is $500m in run-rate revenue **(we called this out in June)
+
+
+
+
+- 
+
+Anthropic now serves over **300,000 business customers**, and our number of **large accounts**—customers that each represent over $100,000 in run-rate
+revenue—has **grown nearly 7x in the past year**.
+
+
+
+
+
+
+Congrats Anthropic! they also shipped some code execution tool API updates.
+
 > AI News for 9/2/2025-9/3/2025. We checked 12 subreddits, 544 Twitters and 22 Discords (186 channels, and 2882 messages) for you. Estimated reading time saved (at 200wpm): 239 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
-
-This was widely rumored, but the final valuation came in higher. Some notable numbers from their [announcement](https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation):
-
-- In Jan 2025, Anthropic at about a $1B run-rate. **By August 2025, it crossed $5B** (36.6x current ARR multiple, but [20x EOY25 multiple](https://x.com/swyx/status/1951775849533038969))
-- Claude Code was GA in May 2025 - **usage grew >10x in last three months** and now is **$500m in run-rate revenue** (we called this out [in June](https://news.smol.ai/issues/25-06-20-claude-code))
-- Anthropic now serves over **300,000 business customers**, and our number of **large accounts**—customers that each represent over $100,000 in run-rate revenue—has **grown nearly 7x in the past year**.
-
-Congrats Anthropic!
+>
 
 ---
 

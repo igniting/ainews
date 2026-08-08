@@ -76,6 +76,50 @@ covers	sent	subject	subtitle
 2025-03-12	2025-03-13	[AINews] Gemma 3 beats DeepSeek V3 in Elo, 2.0 Flash beats GPT4o with Native Image Gen	
 2025-03-13	2025-03-13	[AINews] not much happened today	
 2025-03-14	2025-03-14	[AINews] not much happened today	
+2025-03-17	2025-03-18	[AINews] Cohere's Command A claims #3 open model spot (after DeepSeek and Gemma)	
+2025-03-18	2025-03-18	[AINews] not much happened today	
+2025-03-19	2025-03-20	[AINews] Every 7 Months: The Moore's Law for Agent Autonomy	
+2025-03-20	2025-03-20	[AINews] Promptable Prosody, SOTA ASR, and Semantic VAD: OpenAI revamps Voice AI	
+2025-03-21	2025-03-22	[AINews] lots of little things happened this week	
+2025-03-24	2025-03-25	[AINews] Halfmoon is Reve Image: a new SOTA Image Model from ex-Adobe/Stability trio	
+2025-03-25	2025-03-26	[AINews] Gemini 2.5 Pro + 4o Native Image Gen	
+2025-03-26	2025-03-27	[AINews] OpenAI adopts MCP	
+2025-03-27	2025-03-28	[AINews] not much happened today	
+2025-03-28	2025-03-28	[AINews] not much happened today	
+2025-03-31	2025-04-01	[AINews] >$41B raised today (OpenAI @ 300b, Cursor @ 9.5b, Etched @ 1.5b)	
+2025-04-01	2025-04-02	[AINews] not much happened today	
+2025-04-03	2025-04-04	[AINews] not much happened today	
+2025-04-07	2025-04-08	[AINews] Llama 4's Controversial Weekend Release	
+2025-04-09	2025-04-10	[AINews] Google's Agent2Agent Protocol (A2A)	
+2025-04-10	2025-04-11	[AINews] not much happened today	
+2025-04-11	2025-04-11	[AINews] not much happened today	
+2025-04-14	2025-04-15	[AINews] GPT 4.1: The New OpenAI Workhorse	
+2025-04-15	2025-04-16	[AINews] SOTA Video Gen: Veo 2 and Kling 2 are GA for developers	
+2025-04-17	2025-04-18	[AINews] Gemini 2.5 Flash completes the total domination of the Pareto Frontier	
+2025-04-18	2025-04-19	[AINews] Grok 3 & 3-mini now API Available	
+2025-04-23	2025-04-24	[AINews] gpt-image-1 - ChatGPT's imagegen model, confusingly NOT 4o, now available in API	
+2025-04-24	2025-04-25	[AINews] not much happened today	
+2025-04-25	2025-04-26	[AINews] Cognition's DeepWiki	
+2025-04-29	2025-04-30	[AINews] LlamaCon: Meta AI gets into the Llama API platform business	
+2025-04-30	2025-05-01	[AINews] ChatGPT responds to GlazeGate + LMArena responds to Cohere	
+2025-05-01	2025-05-02	[AINews] not much happened today	
+2025-05-02	2025-05-03	[AINews] not much happened today	
+2025-05-05	2025-05-06	[AINews] Cursor @ $9b, OpenAI Buys Windsurf @ $3b	
+2025-05-06	2025-05-07	[AINews] Gemini 2.5 Pro Preview 05-06 (I/O edition) - the SOTA vision+coding model	
+2025-05-07	2025-05-08	[AINews] AI Engineer World's Fair: Second Run, Twice The Fun	
+2025-05-08	2025-05-09	[AINews] not much happened today	
+2025-05-09	2025-05-10	[AINews] not much happened today	
+2025-05-12	2025-05-13	[AINews] Prime Intellect's INTELLECT-2 and PRIME-RL advance distributed reinforcement learning	
+2025-05-13	2025-05-14	[AINews] not much happened today	
+2025-05-14	2025-05-15	[AINews] Granola launches team notes, while Notion launches meeting transcription	
+2025-05-15	2025-05-16	[AINews] Gemini's AlphaEvolve agent uses Gemini 2.0 to find new Math and cuts Gemini cost 1% — without RL	
+2025-05-16	2025-05-17	[AINews] ChatGPT Codex, OpenAI's first cloud SWE agent	
+2025-05-19	2025-05-20	[AINews] not much happened today	
+2025-05-20	2025-05-21	[AINews] Google I/O: new Gemini native voice, Flash, DeepThink, AI Mode (DeepSearch+Mariner+Astra)	
+2025-05-21	2025-05-22	[AINews] OpenAI buys Jony Ive's io for $6.5b, LMArena lands $100m seed from a16z	
+2025-05-22	2025-05-23	[AINews] Anthropic releases Claude 4 Sonnet and Opus: Memory, Agent Capabilities, Claude Code, Redteam Drama	
+2025-05-23	2025-05-23	[AINews] not much happened today	
+2025-05-26	2025-05-27	[AINews] not much happened today	
 2025-05-27	2025-05-28	[AINews] Mistral's Agents API and the 2025 LLM OS	
 2025-05-28	2025-05-29	[AINews] not much happened today	
 2025-05-29	2025-05-30	[AINews] DeepSeek-R1-0528 - Gemini 2.5 Pro-level model, SOTA Open Weights release	
@@ -124,6 +168,101 @@ covers	sent	subject	subtitle
 2025-08-01	2025-08-02	[AINews] Gemini 2.5 Deep Think finally ships	
 2025-08-04	2025-08-05	[AINews] Qwen-Image: SOTA text rendering + 4o-imagegen-level Editing Open Weights MMDiT	
 2025-08-05	2025-08-06	[AINews] OpenAI's gpt-oss 20B and 120B, Claude Opus 4.1, DeepMind Genie 3	
+2025-08-06	2025-08-07	[AINews] not much happened today	
+2025-08-07	2025-08-08	[AINews] OpenAI rolls out GPT-5 and GPT-5 Thinking to >1B users worldwide; -mini and -nano help claim Pareto Frontier	
+2025-08-08	2025-08-09	[AINews] not much happened today	
+2025-08-11	2025-08-12	[AINews] OpenAI's IMO Gold model also achieves IOI Gold; 49th->98th percentile in one year	
+2025-08-12	2025-08-13	[AINews] not much happened today	
+2025-08-13	2025-08-14	[AINews] not much happened today	
+2025-08-14	2025-08-15	[AINews] Western Open Models get Funding: Cohere $500m @ 6.8B, AI2 gets $152m NSF+NVIDIA grants	
+2025-08-15	2025-08-16	[AINews] not much happened today	
+2025-08-18	2025-08-19	[AINews] not much happened today	
+2025-08-19	2025-08-20	[AINews] Databricks' $100B Series K	
+2025-08-20	2025-08-21	[AINews] DeepSeek V3.1: 840B token continued pretrain, beating Claude 4 Sonnet at 11% of its cost	
+2025-08-21	2025-08-22	[AINews] Cohere Command A Reasoning beats GPT-OSS-120B and DeepSeek R1 0528	
+2025-08-22	2025-08-23	[AINews] not much happened today	
+2025-08-25	2025-08-26	[AINews] not much happened today	
+2025-08-26	2025-08-27	[AINews] nano-banana is Gemini‑2.5‑Flash‑Image, beating Flux Kontext by 170 Elo with SOTA Consistency, Editing, and Multi-Image Fusion	
+2025-08-27	2025-08-28	[AINews] OpenAI updates Codex, VSCode Extension that can sync tasks with Codex Cloud	
+2025-08-28	2025-08-29	[AINews] OpenAI Realtime API GA and new `gpt-realtime` model, 20% cheaper than 4o	
+2025-08-29	2025-08-30	[AINews] not much happened today	
+2025-09-01	2025-09-02	[AINews] not much happened today	
+2025-09-02	2025-09-03	[AINews] not much happened today	
+2025-09-03	2025-09-04	[AINews] not much happened today	
+2025-09-05	2025-09-06	[AINews] Kimi K2‑0905 and Qwen3‑Max preview: Two 1T param open weights models launched	
+2025-09-09	2025-09-10	[AINews] not much happened today	
+2025-09-10	2025-09-11	[AINews] Oracle jumps +36% in a day after winning $300B OpenAI contract	
+2025-09-11	2025-09-11	[AINews] Qwen3-Next-80B-A3B-Base: Towards Ultimate Training & Inference Efficiency	
+2025-09-12	2025-09-13	[AINews] not much happened today	
+2025-09-15	2025-09-16	[AINews] GPT-5-Codex launch and OpenAI's quest to retake Agentic Coding	
+2025-09-16	2025-09-17	[AINews] not much happened today	
+2025-09-17	2025-09-17	[AINews] not much happened today	
+2025-09-18	2025-09-19	[AINews] Softbank, NVIDIA and US Govt take 2%, 5% and 10% of Intel, will develop Intel x86 RTX SOCs for consumer & datacenters	
+2025-09-19	2025-09-20	[AINews] Grok 4 Fast: Xai's distilled, 40% more token efficient, 2m context, 344 tok/s frontier model	
+2025-09-22	2025-09-23	[AINews] NVIDIA to invest $100B in OpenAI for >10GW of Vera Rubin rollout	
+2025-09-23	2025-09-24	[AINews] Alibaba Yunqi: 7 models released in 4 days (Qwen3-Max, Qwen3-Omni, Qwen3-VL) and $52B roadmap	
+2025-09-24	2025-09-24	[AINews] not much happened today	
+2025-09-25	2025-09-26	[AINews] GDPVal finding: Claude Opus 4.1 within 95% of AGI (human experts in top 44 white collar jobs)	
+2025-09-26	2025-09-27	[AINews] not much happened today	
+2025-09-29	2025-09-30	[AINews] Anthropic Claude Sonnet 4.5, Claude Code 2.0, new VS Code Extensions	
+2025-09-30	2025-10-01	[AINews] Sora 2: new video+audio model and OpenAI's first Social Network	
+2025-10-01	2025-10-02	[AINews] Thinking Machines' Tinker: LoRA based LLM fine-tuning API	
+2025-10-02	2025-10-03	[AINews] not much happened today	
+2025-10-03	2025-10-04	[AINews] not much happened today	
+2025-10-06	2025-10-07	[AINews] OpenAI Dev Day: Apps SDK, AgentKit, Codex GA, GPT‑5 Pro and Sora 2 APIs	
+2025-10-07	2025-10-08	[AINews] Gemini 2.5 Computer Use preview beats Sonnet 4.5 and OAI CUA	
+2025-10-08	2025-10-09	[AINews] not much happened today	
+2025-10-09	2025-10-10	[AINews] Air Street's State of AI 2025 Report	
+2025-10-10	2025-10-11	[AINews] not much happened today	
+2025-10-13	2025-10-14	[AINews] OpenAI Titan XPU: 10GW of self-designed chips with Broadcom	
+2025-10-14	2025-10-15	[AINews] not much happened today	
+2025-10-15	2025-10-16	[AINews] Claude Haiku 4.5	
+2025-10-16	2025-10-17	[AINews] Claude Agent Skills - glorified AGENTS.md? or MCP killer?	
+2025-10-20	2025-10-21	[AINews] DeepSeek-OCR finds vision models can decode 10x more efficiently with ~97% accuracy of text-only, 33/200k pages/day/A100	
+2025-10-21	2025-10-22	[AINews] ChatGPT Atlas: OpenAI's AI Browser	
+2025-10-22	2025-10-23	[AINews] AI Engineer Code Summit - NYC Nov 20-22	
+2025-10-23	2025-10-24	[AINews] not much happened today	
+2025-10-24	2025-10-25	[AINews] not much happened today	
+2025-10-27	2025-10-28	[AINews] MiniMax M2 230BA10B — 8% of Claude Sonnet's price, ~2x faster, new SOTA open model	
+2025-10-28	2025-10-29	[AINews] OpenAI completes Microsoft + For-profit restructuring + announces 2028 AI Researcher timeline + Platform / AI cloud product direction + next $1T of compute	
+2025-10-29	2025-10-30	[AINews] Cursor 2.0 & Composer-1: Fast Models and New Agents UI	
+2025-10-30	2025-10-31	[AINews] not much happened today	
+2025-10-31	2025-11-01	[AINews] not much happened today	
+2025-11-03	2025-11-04	[AINews] not much happened today	
+2025-11-04	2025-11-05	[AINews] not much happened today	
+2025-11-05	2025-11-06	[AINews] not much happened today	
+2025-11-06	2025-11-07	[AINews] Kimi K2 Thinking: 1T-A32B params, SOTA HLE, BrowseComp, TauBench && Soumith leaves Pytorch	
+2025-11-07	2025-11-08	[AINews] Terminal-Bench 2.0 and the Harbor container environment framework	
+2025-11-10	2025-11-11	[AINews] not much happened	
+2025-11-11	2025-11-12	[AINews] not much happened today	
+2025-11-12	2025-11-13	[AINews] GPT 5.1 in ChatGPT: No evals, but adaptive thinking and instruction following	
+2025-11-13	2025-11-14	[AINews] minor updates to GPT 5.1 and SIMA	
+2025-11-14	2025-11-15	[AINews] not much happened today	
+2025-11-17	2025-11-18	[AINews] xAI Grok 4.1: #1 in Text Arena, Better Creative Writing, Fewer Hallucination	
+2025-11-18	2025-11-19	[AINews] Gemini 3 Pro — new GDM frontier model 6, Gemini 3 Deep Think, and Antigravity IDE	
+2025-11-19	2025-11-19	[AINews] OpenAI fires back: GPT 5.1 Codex (API) and GPT 5.1 Pro (ChatGPT)	
+2025-11-20	2025-11-21	[AINews] Nano Banana Pro (Gemini Image Pro) solves text-in-images, infographic generation, 2-4k resolution, and Google Search grounding	
+2025-11-21	2025-11-22	[AINews] AI Engineer Code Summit 2025	
+2025-11-24	2025-11-25	[AINews] Claude Opus 4.5: 3rd new SOTA coding model in past week, 1/3 the price of Opus	
+2025-11-25	2025-11-26	[AINews] Black Forest Labs FLUX.2 [pro|flex|dev|klein]: near-Nano Banana quality bu Open Weights	
+2025-11-26	2025-11-27	[AINews] not much happened today	
+2025-12-01	2025-12-02	[AINews] DeepSeek V3.2 & 3.2-Speciale: GPT5-High Open Weights, Context Management, Plans forCompute Scaling	
+2025-12-02	2025-12-03	[AINews] Mistral 3: Mistral Large 3 + Ministral 3B/8B/14B open weights models	
+2025-12-03	2025-12-04	[AINews] not much ha	
+2025-12-04	2025-12-05	[AINews] OpenRouter's State of AI: An Empirical 100 Trillion Token Study	
+2025-12-05	2025-12-06	[AINews] not much happened today	
+2025-12-08	2025-12-09	[AINews] not much happened today	
+2025-12-09	2025-12-10	[AINews] MCP -> Agentic AI Foundation, Mistral Devstral 2	
+2025-12-10	2025-12-11	[AINews] not much happened today	
+2025-12-11	2025-12-12	[AINews] GPT-5.2 (Instant/Thinking/Pro): 74% on GDPVal, 1.4x cost of GPT 5., on 10 Year OpenAI Anniversary	
+2025-12-12	2025-12-13	[AINews] not much happene	
+2025-12-15	2025-12-16	[AINews] NVIDIA Nemotron 3: hybrid Mamba-Transformer completely open source models from 30B to 500B	
+2025-12-16	2025-12-17	[AINews] OpenAI GPT Image-1.5 claims to beat Nano Banana Pro, #1 across all Arenas, but completely fails Vibe Checks	
+2025-12-17	2025-12-18	[AINews] Gemini 3.0 Flash Preview: 1/4 of Pro, but ~as smart, destroys Pareto Frontier	
+2025-12-19	2025-12-20	[AINews] not much hapep	
+2025-12-24	2025-12-24	[AINews] Nvidia buys (most of) Groq for $20B; their largest acq	
+2025-12-29	2025-12-30	[AINews] Meta Superintelligence Labs acquires Manus AI for ~$4B at $100M ARR, 9 months after launch	
+2026-01-06	2026-01-07	[AINews] xAI raises $20B Series E at ~$230B valuation	
 2026-01-26	2026-01-27	[AINews] Anthropic launches the MCP Apps open spec, in Claude.ai	Open Standards for Rich generative UI is all you need.
 2026-01-27	2026-01-28	[AINews] Moonshot Kimi K2.5 - Beats Sonnet 4.5 at half the cost, SOTA Open Model, first Native Image+Video, 100 pa…	China takes another huge leap ahead in open models
 2026-01-28	2026-01-29	[AINews] Sam Altman's AI Combinator	a quiet day in the news lets us reflect on Sama's town hall message this week

@@ -27,15 +27,42 @@ topics:
   - supercomputers
 ---
 
-
-
 **a quiet day**
 
-> AI News for 4/23/2025-4/24/2025. We checked 9 subreddits, [**449** Twitters](https://twitter.com/i/lists/1585430245762441216) and **29** Discords (**214** channels, and **6713** messages) for you. Estimated reading time saved (at 200wpm): **560 minutes**. **Our new website** is now up with full text search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on https://x.com/Smol_AI!
 
-This is the last week to get [AI Engineer Super Early Bird tix](https://ti.to/software-3/ai-engineer-worlds-fair-2025)!
+
+
+This is the last week to get AI Engineer Super Early Bird tix!
+
+
 
 Check out the brand new AINews website: https://news.smol.ai/
+
+
+
+
+
+
+
+
+
+![](https://resend-attachments.s3.amazonaws.com/cfHFpFx96QzQbRp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+![](https://resend-attachments.s3.amazonaws.com/GyhAq67qVJgRUfc)
+
+> AI News for 4/23/2025-4/24/2025. We checked 9 subreddits, [**449** Twitters](https://twitter.com/i/lists/1585430245762441216) and **29** Discords (**214** channels, and **6713** messages) for you. Estimated reading time saved (at 200wpm): **560 minutes**. **Our new website** is now up with full text search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on https://x.com/Smol_AI!
 
 ---
 

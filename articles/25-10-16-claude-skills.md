@@ -45,38 +45,113 @@ people:
   - aravsrinivas
 ---
 
-
 **Claude is all you need**
 
-> AI News for 10/15/2025-10/16/2025. We checked 12 subreddits, 544 Twitters and 23 Discords (197 channels, and 6365 messages) for you. Estimated reading time saved (at 200wpm): 492 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-In a rare feat for any lab, Anthropic gets [two back to back](https://news.smol.ai/issues/25-10-15-haiku-45) AINews headline stories with [Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) today, "a new way to build specialized agents using files and folders". It turns out that Claude's recent new skills for creating and reading PDFs and Docs and PPTs were all Skills.
 
-[](https://resend-attachments.s3.amazonaws.com/G0aCs2pSirnjnWA)
 
-- [Introduction blogpost and video](https://www.anthropic.com/news/skills)
-- [Engineering writeup](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
-- [HN discussion](https://news.ycombinator.com/item?id=45607117)
-- [Simon Willison calls it "bigger deal than MCP"](https://simonwillison.net/2025/Oct/16/claude-skills/)
+
+
+
+
+
+In a rare feat for any lab, Anthropic gets two back to back AINews headline stories with Agent Skills today, "a new way to build specialized agents using files and
+folders". It turns out that Claude's recent
+new skills for creating and reading PDFs and Docs and
+PPTs were all Skills.
+
+
+
+![](https://resend-attachments.s3.amazonaws.com/G0aCs2pSirnjnWA)
+
+
+
+
+
+
+
+
+
+- 
+
+Introduction blogpost and video
+
+
+
+
+- 
+
+Engineering writeup
+
+
+
+
+- 
+
+HN discussion
+
+
+
+
+- 
+
+Simon Willison calls it "bigger deal than
+MCP"
+
+
+
+
+
 
 Quoting Simon:
 
-> Skills are conceptually extremely simple: a skill is a Markdown file telling the model how to do something, optionally accompanied by extra documents and pre-written scripts that the model can run to help it accomplish the tasks described by the skill.
+
+
+> Skills are conceptually extremely simple: a skill is
+> a Markdown file telling the model how to do something,
+> optionally accompanied by extra documents and
+> pre-written scripts that the model can run to help it
+> accomplish the tasks described by the skill.
+>
 > 
 > 
-> Claude’s new [document creation abilities](https://www.anthropic.com/news/create-files), which accompanied [their new code interpreter feature](https://simonwillison.net/2025/Sep/9/claude-code-interpreter/) in September, turned out to be entirely implemented using skills. Those are [now available Anthropic’s repo](https://github.com/anthropics/skills/tree/main/document-skills) covering `.pdf`, `.docx`, `.xlsx`, and `.pptx` files.
-> 
+> Claude’s new document creation abilities, which accompanied their new code interpreter feature in September, turned out to be entirely implemented
+> using skills. Those are now available Anthropic’s repo covering .pdf, .docx, .xlsx, and .pptx files.
+
+
+
+
+
+
+
 
 and:
 
-> I expect we’ll see a Cambrian explosion in Skills which will make this year’s MCP rush look pedestrian by comparison.
-> 
-> 
-> Skills are Markdown with a tiny bit of YAML metadata and some optional scripts in whatever you can make executable in the environment. They feel a lot closer to the spirit of LLMs—throw in some text and let the model figure it out.
-> 
 
-[](https://resend-attachments.s3.amazonaws.com/M84445mZrQ4drWs)
+
+> I expect we’ll see a Cambrian explosion in Skills
+> which will make this year’s MCP rush look pedestrian
+> by comparison.
+>
+> 
+> 
+> Skills are Markdown with a tiny bit of YAML metadata
+> and some optional scripts in whatever you can make
+> executable in the environment. They feel a lot closer
+> to the spirit of LLMs—throw in some text and let the
+> model figure it out.
+
+
+
+
+
+
+
+
+![](https://resend-attachments.s3.amazonaws.com/M84445mZrQ4drWs)
+
+> AI News for 10/15/2025-10/16/2025. We checked 12 subreddits, 544 Twitters and 23 Discords (197 channels, and 6365 messages) for you. Estimated reading time saved (at 200wpm): 492 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 

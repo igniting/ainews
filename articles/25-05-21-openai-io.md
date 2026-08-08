@@ -36,19 +36,36 @@ people:
   - sundar_pichai
 ---
 
-
 **Jony Ive is all you need.**
 
+
+
+
+
+
+A day after Google's I/O, OpenAI picked up its own
+io.
+
+
+
+OpenAI consummated
+the long rumored Jony Ive partnership and confirmed plans to
+ship consumer hardware.
+
+
+
+LMArena announced their $100m SEED (!?!?) from a16z.
+
+
+
+Mistral launched a new code model finetune.
+
+
+
+You could be forgiven for completely missing OpenAI's nice updates to the Responses API.
+
 > AI News for 5/20/2025-5/21/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (215 channels, and 6969 messages) for you. Estimated reading time saved (at 200wpm): 597 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
-
-A day after Google's I/O, OpenAI [consummated](https://x.com/sama/status/1925242282523103408?s=46&t=b7l37rB6wtbyAh6ah1NpZQ) the long rumored Jony Ive partnership and confirmed plans to ship consumer hardware.
-
-LMArena [announced](https://www.bloomberg.com/news/articles/2025-05-21/lmarena-goes-from-academic-project-to-600-million-startup) their $100m SEED (!?!?) from a16z.
-
-Mistral launched a new [code model finetune](https://x.com/mistralai/status/1925191937792901298?s=46).
-
-You could be forgiven for completely missing OpenAI's nice [updates to the Responses API](https://openai.com/index/new-tools-and-features-in-the-responses-api/).
+>
 
 ---
 

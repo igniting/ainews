@@ -43,35 +43,142 @@ people:
   - yuchenj_uw
 ---
 
-
 **Gated Attention is all you need?**
 
-> AI News for 9/10/2025-9/11/2025. We checked 12 subreddits, 544 Twitters and 22 Discords (187 channels, and 4884 messages) for you. Estimated reading time saved (at 200wpm): 414 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-Since Noam Shazeer et al [invented](https://arxiv.org/abs/1701.06538) them in his annus mirabilis, MoE models have steadily increased in importance through [GPT4](https://x.com/swyx/status/1671272883379908608?ref_src=twsrc%5Etfw) and [Mixtral](https://mistral.ai/news/mixtral-of-experts)(8 experts). [DeepSeek](https://news.smol.ai/issues/24-05-06-ainews-deepseek-v2-beats-mixtral-8x22b-with-greater160-experts-at-half-the-cost) (160 experts), [Snowflake](https://news.smol.ai/issues/24-04-25-ainews-snowflake-arctic-fully-open-10b128x4b-dense-moe-hybrid-llm) (128 experts) and others then pushed the sparsity even further, and today it is fair to say that no frontier model is served without being an MoE (we have outright confirmations from Gemini, whereas the rest are strong rumors.)
 
-Today's [Qwen3-Next release](https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list) pushes model sparsity even further - the industry has switched from "expert count" to total param vs active param ratio - and 3.75% (3B / 80B = 3.75%) is appreciably lower than [GPT-OSS](https://news.smol.ai/issues/25-08-05-gpt-oss)' 4.3% and [Qwen3](https://news.smol.ai/issues/25-04-28-qwen-3)'s own prior 10%.
+
+
+
+
+
+
+Since Noam Shazeer et al invented
+them in his annus mirabilis, MoE models have steadily increased
+in importance through GPT4 and Mixtral(8 experts). DeepSeek (160 experts), Snowflake
+(128 experts) and others then pushed the sparsity even further,
+and today it is fair to say that no frontier model is served
+without being an MoE (we have outright confirmations from
+Gemini, whereas the rest are strong rumors.)
+
+
+
+Today's Qwen3-Next release
+pushes model sparsity even further - the industry has switched
+from "expert count" to total param vs active param
+ratio - and 3.75% (3B / 80B = 3.75%) is appreciably lower than GPT-OSS' 4.3% and Qwen3's own prior 10%.
+
+
+
+
+
+
+
+
+
+
+
 
 ![](https://resend-attachments.s3.amazonaws.com/DJmyVCbWnbgSMfu)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 According to them:
 
-> Ultra-Sparse MoE: Activating Only 3.7% of Parameters
-> 
-> 
-> Qwen3-Next uses a highly sparse MoE design: 80B total parameters, but only ~3B activated per inference step. Experiments show that, with global load balancing, increasing total expert parameters while keeping activated experts fixed steadily reduces training loss. Compared to Qwen3’s MoE (128 total experts, 8 routed), **Qwen3-Next expands to 512 total experts, combining 10 routed experts + 1 shared expert** — maximizing resource usage without hurting performance.
-> 
 
-But for the ML folks, the probable bigger win is the strict pareto win seen in pretraining:
+
+> **Ultra-Sparse MoE: Activating Only 3.7% of Parameters
+> **
+>
+> 
+> 
+> Qwen3-Next uses a highly sparse MoE design: 80B total
+> parameters, but only ~3B activated per inference step.
+> Experiments show that, with global load balancing, increasing
+> total expert parameters while keeping activated experts fixed
+> steadily reduces training loss. Compared to Qwen3’s MoE (128
+> total experts, 8 routed), Qwen3-Next expands to 512 total experts, combining 10
+> routed experts + 1 shared expert
+> — maximizing resource usage without hurting performance.
+
+
+
+
+
+
+
+
+But for the ML folks, the probable bigger win is the strict
+pareto win seen in pretraining:
+
+
+
+
+
+
 
 ![](https://resend-attachments.s3.amazonaws.com/aoT1VPauj4wiiUl)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 The authors credit a few architecture advancements:
 
-- **Hybrid Architecture: Gated DeltaNet + Gated Attention:** We found that the attention output gating mechanism helps eliminate issues like Attention Sink and Massive Activation , ensuring numerical stability across the model.
-- **new Layer Norm:** In Qwen3, we use QK-Norm, but notice some layer norm weights become abnormally large. To fix this and further improve stability, Qwen3-Next adopts Zero-Centered RMSNorm, and applies weight decay to norm weights to prevent unbounded growth.
-- **better MoE selection**: normalize MoE router parameters during initialization , ensuring each expert is unbiasedly selected early in training — reducing noise from random initialization.
+
+
+
+- 
+
+**Hybrid Architecture: Gated DeltaNet + Gated
+Attention:
+We found that the attention output gating mechanism helps
+eliminate issues like Attention Sink and Massive Activation
+, ensuring numerical stability across the model.
+
+
+
+
+- 
+
+new Layer Norm:**
+In Qwen3, we use QK-Norm, but notice some layer norm weights
+become abnormally large. To fix this and further improve
+stability, Qwen3-Next adopts Zero-Centered RMSNorm, and
+applies weight decay to norm weights to prevent unbounded
+growth.
+
+
+
+
+- 
+
+**better MoE selection**: normalize MoE router parameters during initialization ,
+ensuring each expert is unbiasedly selected early in
+training — reducing noise from random initialization.
+
+> AI News for 9/10/2025-9/11/2025. We checked 12 subreddits, 544 Twitters and 22 Discords (187 channels, and 4884 messages) for you. Estimated reading time saved (at 200wpm): 414 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 

@@ -62,15 +62,22 @@ people:
   - risingsayak
 ---
 
-
 **a quiet day.**
 
-> AI News for 5/7/2025-5/8/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (215 channels, and 3981 messages) for you. Estimated reading time saved (at 200wpm): 396 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
-> 
 
-OpenAI launched both [Reinforcement Finetuning](https://platform.openai.com/docs/guides/rft-use-cases?chipstack=review&runloop=grader&thomsonreuters=use-case&safetykit=use-case&accordance=use-case&harvey=review#enforcement-of-nuanced-content-moderation-policies) and [Deep Research on GitHub repos](https://x.com/openaidevs/status/1920556386083102844?s=46&t=jDrfS5vZD4MFwckU5E8f5Q), which many are comparing to [Cognition's DeepWiki.](https://news.smol.ai/issues/25-04-25-cognition-deepwiki)
+
+
+
+
+OpenAI launched both [Reinforcement Finetuning and Deep Research on GitHub repos, which many are comparing to Cognition's DeepWiki.
+](https://41598e5c38d3cd55e335e985614d0883.us-east-1.resend-links.com/CL0/https:%2F%2Fplatform.openai.com%2Fdocs%2Fguides%2Frft-use-cases%3Fchipstack=review%26runloop=grader%26thomsonreuters=use-case%26safetykit=use-case%26accordance=use-case%26harvey=review%23enforcement-of-nuanced-content-moderation-policies/1/01000196b2585007-a083bea6-25eb-4b6b-b7fe-7874edfd85f6-000000/YuRtb7i9JmoVJQVA6l9XI9AzNm7WoF7HjviuBapkCp8=404)
+
+
 
 But it is a quiet day otherwise.
+
+> AI News for 5/7/2025-5/8/2025. We checked 9 subreddits, 449 Twitters and 29 Discords (215 channels, and 3981 messages) for you. Estimated reading time saved (at 200wpm): 396 minutes. Our new website is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on @smol_ai!
+>
 
 ---
 
