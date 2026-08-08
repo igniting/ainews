@@ -694,3 +694,17 @@ LEDGER_KIND = {"field": "the field stopped meaning what it meant",
                "unit": "the unit of observation was wrong"}
 # Share of issues opening with a templated non-title, by year
 TEMPLATED = [("2023", 8), ("2024", 18), ("2025", 43), ("2026", 68)]
+
+# Chapter 15 — one question, six defensible units. Fine-tuning, 2024H1 → 2026H2.
+# (unit, what one row is, start, end, change)
+UNIT_ANSWERS = [
+    ("Raw mentions per issue", "an issue", "84.4", "3.1", "−96%"),
+    ("Mentions per 10⁴ words, announcement space", "a word of the Twitter recap",
+     "34.9", "1.9", "−94%"),
+    ("Mentions per 10⁴ words, whole issue", "a word of the issue", "33.0", "5.3", "−84%"),
+    ("Mentions per 10⁴ words, practice space", "a word of the Reddit recap",
+     "19.4", "7.0", "−64%"),
+    ("Share of issues mentioning it at all", "an issue", "100%", "65%", "−35%"),
+    ("Messages per month, busiest fine-tuning community", "a Discord message",
+     "7,208", "19,400", "+169%"),
+]

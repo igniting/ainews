@@ -89,7 +89,7 @@ CONTENTS = [
 
     ("part", "Part IV — Reading forwards"),
     ("ch", "15", "The unit of observation",
-     "Why did none of this get caught by better statistics?", None),
+     "Why did none of this get caught by better statistics?", "ch15"),
     ("ch", "16", "How to read a field",
      "What do you do on Monday?", None),
 ]
@@ -2667,6 +2667,146 @@ months.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 15
+
+CH15 = """
+<p class="first">Here is a question with one obviously correct answer: <em>by how much did this
+field's interest in fine-tuning decline between early 2024 and the middle of 2026?</em></p>
+
+<p>Below are six answers. They are computed from the same archive, over the same window, with
+no arithmetic errors and no cherry-picking — these are simply the six most natural ways to ask
+the question.</p>
+"""
+
+CH15_B = """
+<p>The range is <strong>265 percentage points</strong>, and it includes a sign change. One of
+these units says the subject nearly vanished. Another says it grew by more than half again.
+Every one of them is defensible, and I would have trouble telling you that any is wrong.</p>
+
+<p>Nothing statistical happened here. The spread was fixed before a single number was computed,
+by decisions nobody writes down.</p>
+
+<h2>The four decisions</h2>
+
+<p>Every measurement over a corpus silently answers four questions. They are not statistical
+questions and there is no procedure for them.</p>
+
+<div class="aside">
+<h4>What is one?</h4>
+<p><strong>What is one subject?</strong> A model checkpoint, a model family, a lab, a
+technique.<br>
+<strong>What is one document?</strong> An issue, a section of an issue, a paragraph, a
+channel-day.<br>
+<strong>What counts as one observation?</strong> A string match, a tagged entity, a claim made
+about the subject, a person mentioning it.<br>
+<strong>What is the denominator?</strong> Words, documents, days, people, messages — or
+nothing, if you report raw counts.</p>
+</div>
+
+<p>Walk the table with those four in hand and every row differs from its neighbours on exactly
+one of them.</p>
+
+<p>Rows one and five share a document (an issue) and differ on the observation: one counts every
+mention, the other counts whether there was at least one. That single change moves the answer
+from &minus;96% to &minus;35%, because a subject can be mentioned once in almost every issue
+while its share of the text collapses.</p>
+
+<p>Rows two, three and four share everything except the document. Narrowing from “an issue” to
+“the part of the issue written about announcements” moves it to &minus;94%; narrowing to “the
+part written about practitioners” moves it to &minus;64%. The two populations were doing
+different things, and the whole-issue number is a blend of them weighted by how much of each the
+publication happened to carry that year.</p>
+
+<p>Row six changes the subject entirely. It stops counting words about fine-tuning and starts
+counting <em>messages in the busiest community where people fine-tune models</em>. That is a
+different population — participants rather than coverage — and it is the only row that measures
+activity rather than attention. It is also the only row that goes up.</p>
+
+<h2>Why more statistics cannot help</h2>
+
+<p>This is the part I found genuinely uncomfortable, because my instinct when a result looks
+shaky is to reach for a better method, and none of the available methods touch this.</p>
+"""
+
+CH15_C = """
+<p>Every tool in that list operates on a quantity that has already been defined. Give any of
+them a larger sample and they will describe the wrong quantity more precisely. Precision and
+validity are orthogonal, and almost all the tooling — and almost all the training — is on the
+precision side.</p>
+
+<p>The significance test is the clearest case. Ask of any row in that table whether the change
+could be sampling noise, and the answer is no, overwhelmingly, for all six rows
+<em>simultaneously</em> — including the one that goes up while the others go down. A test that
+confirms every mutually contradictory answer is not adjudicating between them. It was never
+asking that question.</p>
+
+<p class="pull">Statistics tells you how much to trust the number you computed. It has nothing
+to say about whether you computed the number you meant.</p>
+
+<h2>Write down the estimand</h2>
+
+<p>The quantity you intend to measure has a name — the <strong>estimand</strong> — and the
+useful discipline is writing it as a sentence that somebody could disagree with.</p>
+
+<p>“Fine-tuning declined” is not an estimand. It contains no subject definition, no population,
+no denominator and no window. Compare:</p>
+
+<blockquote><p>The share of text in this newsletter's Twitter-derived recap devoted to
+fine-tuning, measured as regex matches per 10,000 words of that section, fell 94% between the
+first half of 2024 and the second half of 2026.</p></blockquote>
+
+<p>That sentence is long, and it is the point. Every clause in it is a decision that could have
+gone another way, and stating them makes the disagreement possible. Someone can now tell you
+that the Twitter recap is the wrong population for the decision you are making, which is a
+useful thing to be told and impossible to say about “fine-tuning declined”.</p>
+
+<p>Most arguments about data are arguments about estimands, conducted as though they were
+arguments about method. Two people looking at the same corpus and reaching opposite conclusions
+are usually both computing correctly.</p>
+
+<h2>Choosing the unit</h2>
+
+<p>There is no universally right unit, which is why this cannot be automated. There is a rule
+that resolves nearly every case in practice: <strong>the unit should match the population your
+decision affects</strong>.</p>
+
+<div class="tw"><table>
+<caption>The same subject, three decisions, three correct units</caption>
+<thead><tr><th>The decision</th><th>The population it affects</th><th>The unit to measure</th></tr></thead>
+<tbody>
+<tr><td>Should we publish a post about our fine-tuning work?</td><td>People who read
+announcements</td><td>Density in announcement coverage</td></tr>
+<tr><td>Should we keep the fine-tuning path in the product?</td><td>People who would use
+it</td><td>Activity in practitioner communities</td></tr>
+<tr><td>Should we hire someone to maintain the tuning pipeline?</td><td>Our own
+engineers</td><td>Neither — internal usage of the pipeline</td></tr>
+</tbody></table></div>
+
+<p>The third row matters as much as the other two. Sometimes the right answer is that the corpus
+in front of you does not contain the population you care about, and the correct move is to stop
+measuring it rather than to measure it more carefully.</p>
+
+<h2>The sentence to write before the query</h2>
+
+<p>The whole of this chapter compresses into one fill-in-the-blank, and it takes about thirty
+seconds:</p>
+
+<div class="aside">
+<h4>Before you compute anything</h4>
+<p><strong>One row is ______, drawn from ______, and I am counting ______ per ______, over the
+window ______, in order to decide ______.</strong></p>
+<p>If any blank is hard to fill, the number does not mean anything yet. If the last blank is
+empty, you are measuring for the pleasure of it, which is allowed but should be admitted. And
+if two people fill the blanks differently, they will get different answers and neither will be
+wrong — that is the moment to argue about the sentence rather than about the result.</p>
+</div>
+
+<p>None of this is hard. It is just early, and everything that makes analysis feel rigorous —
+the tests, the intervals, the diagnostics, the plots — happens later, which makes it very easy
+to do all of it beautifully to a quantity nobody meant to measure.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -3017,6 +3157,24 @@ def pages():
                   "day. Any series built on titles inherits this denominator.")
             + INT3_C + INT3_D)
 
+    unit_rows = [[C.esc(u), f"<i>{C.esc(row)}</i>", a, b, f"<b>{chg}</b>"]
+                 for u, row, a, b, chg in D.UNIT_ANSWERS]
+    ch15 = (CH15
+            + table(["How you ask", "One row is", "2024H1", "2026H2", "Change"], unit_rows,
+                    "Table 15 · Six answers to “how much did fine-tuning decline?”, from one "
+                    "corpus", (2, 3, 4))
+            + CH15_B
+            + table(["Tool", "What it protects you from", "What it says about the unit"],
+                    [["Larger sample", "Sampling noise", "Nothing"],
+                     ["Confidence interval", "Overstating precision", "Nothing"],
+                     ["Significance test", "Reading noise as signal", "Nothing"],
+                     ["Multiple-comparison correction", "Fishing across many tests", "Nothing"],
+                     ["Censoring-aware estimator", "Unfinished observations", "Nothing"],
+                     ["Change-point detection", "Missing a break in a series",
+                      "Nothing — it finds breaks <i>within</i> a unit"]],
+                    "Table 16 · What the statistical toolkit is for")
+            + CH15_C)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -3054,4 +3212,6 @@ def pages():
          "You are about to build on a model. How long will it stay relevant?", ch14),
         ("interlude-3", "inter", "III", "The six things I got wrong",
          "Consolidated, with what each one cost.", int3),
+        ("ch15", "ch", "15", "The unit of observation",
+         "Why did none of this get caught by better statistics?", ch15),
     ]
