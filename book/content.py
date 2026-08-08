@@ -61,7 +61,7 @@ CONTENTS = [
     ("ch", "5", "Learning to think",
      "How does a whole field change its mind in four months?", "ch5"),
     ("ch", "6", "Seven days in January",
-     "What does it look like when something actually breaks through?", None),
+     "What does it look like when something actually breaks through?", "ch6"),
     ("ch", "7", "The harness",
      "When did the field stop talking about models and start talking about the "
      "software around them?", None),
@@ -849,6 +849,163 @@ arrived seven weeks after o3 and did it in a week.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 6
+
+CH6 = """
+<p class="first">Through the first three weeks of January 2025, the newsletter's Discord recap
+mentions DeepSeek about thirteen times per ten thousand words — the ordinary background rate
+for a lab that had shipped a well-regarded open model the previous month. On Monday
+20 January the same measurement reads <strong>219.9</strong>, from 643 mentions in a single
+day's recap.</p>
+
+<p>Seventeen times the baseline, overnight, in text nobody wrote for a newsletter. That is the
+largest single-day movement anywhere in this archive.</p>
+
+<p>What follows is the only week in three years where you can watch the entire field reorganise
+in real time, day by day. It is worth reading closely, because the interesting question is not
+what happened — everyone knows what happened — but <strong>what distinguishes this from the
+dozens of launches that also spiked and then reverted</strong>. The archive answers that, and
+the answer is not the benchmark scores.</p>
+
+<h2>The week</h2>
+
+<div class="scene">
+<span class="when">Monday 20 January</span>
+<p><em>DeepSeek R1: o1-level open weights model and a simple recipe for upgrading 1.5B models
+to Sonnet/4o level.</em> A Chinese lab publishes a reasoning model matching OpenAI's o1, under
+an open licence, with the weights and the training recipe. Community density: 219.9.</p>
+</div>
+
+<div class="scene">
+<span class="when">Tuesday 21 January</span>
+<p><em>Project Stargate: $500b datacenter (1.7% of US GDP).</em> The largest infrastructure
+announcement in the corpus lands the day after, and does not displace R1 — the DeepSeek
+measurement stays at 135.5.</p>
+</div>
+
+<div class="scene">
+<span class="when">Wednesday 22 January</span>
+<p><em>Bespoke-Stratos + Sky-T1: The Vicuna+Alpaca moment for reasoning.</em> Two days after
+release, independent groups have distilled R1's reasoning into small models and published
+them. The headline's comparison is to the week in 2023 when Llama's weights leaked and the
+open-source ecosystem materialised in days.</p>
+</div>
+
+<div class="scene">
+<span class="when">Thursday 23 January</span>
+<p><em>OpenAI launches Operator, its first Agent.</em> OpenAI's biggest product launch of the
+month gets one day at the top of the newsletter, and the DeepSeek line barely notices — 85.9,
+still six times its January baseline.</p>
+</div>
+
+<div class="scene">
+<span class="when">Friday 24 January</span>
+<p><em>TinyZero: Reproduce DeepSeek R1-Zero for $30.</em> Four days after release, the core
+result has been reproduced from scratch for the price of a large pizza.</p>
+</div>
+
+<div class="scene">
+<span class="when">Monday 27 January</span>
+<p><em>DeepSeek #1 on US App Store, Nvidia stock tanks &minus;17%.</em> Day seven. The
+consumer app tops the charts and the market reprices the assumption that frontier capability
+requires frontier capital expenditure. Community density 205.9; announcement space 376.4, and
+500.0 the following day — its highest value of the entire corpus.</p>
+</div>
+"""
+
+CH6_B = """
+<p>Look at where the vertical markers sit relative to the line. The release moves the
+measurement immediately and the reproductions keep it high, but <strong>the market is the last
+surface to find out</strong> — Nvidia repriced on day seven, after the community and practice
+surfaces had been saturated for a full working week. If you had been reading practice space
+you would have known on the Monday. This is the three-surface argument extended by one: there
+is a fourth layer, it is slower than all three, and it moves the most money.</p>
+
+<h2>What made this different</h2>
+
+<p>Plenty of models in this archive match a frontier model on benchmarks. Several did it that
+same quarter. The R1 week is different in one specific, measurable way, and the two headlines
+from Wednesday and Friday are the whole of it: <strong>within four days, two independent
+groups had reproduced the result cheaply enough to publish, because the weights and the recipe
+were both in the open</strong>.</p>
+
+<div class="aside">
+<h4>Why reproducibility is the variable</h4>
+<p>An announcement you cannot check produces one news cycle. A result anyone can reproduce
+produces a research programme. R1 shipped weights, a training recipe, and — through the
+distillation work in the same week — a path to running the capability on hardware people
+already owned. Each of those turns readers into participants, and participants generate more
+of everything: derivative models, benchmarks, tooling, arguments. That is the difference
+between an event and a regime change, and it is legible in the data within four days.</p>
+</div>
+
+<p>The decay confirms it in the opposite direction. Density falls from 215.3 on 28 January to
+roughly 50 by mid-February — a three-week half-life, which is ordinary. By the end of February
+the specific event is over.</p>
+
+<p>And yet nothing went back to how it was.</p>
+
+<h2>The step and the spike</h2>
+"""
+
+CH6_C = """
+<p>These are the same measurement in the same surface over twenty months, and they separate
+completely.</p>
+
+<p><strong>DeepSeek</strong> — the company — spikes from 3 to <strong>58</strong> and then
+decays for a year, ending at <strong>2</strong> in March 2026: below where it started, before
+the release that made it famous.</p>
+
+<p><strong>The Chinese open-weights bloc</strong> — Qwen, DeepSeek, Kimi, GLM, MiniMax taken
+together — spikes to 73 and then settles into a band between 20 and 49 and stays there for
+fourteen months. It never returns to its pre-R1 level of 3 to 14.</p>
+
+<p>Read those two lines together and the finding is this: <strong>the breakthrough permanently
+relocated a share of the field's attention, and gave almost none of it to the company that
+caused it.</strong> DeepSeek proved the category was worth watching and then the category
+absorbed the gain.</p>
+
+<p>It reproduces in all three surfaces, which by now is the standard this book applies before
+believing anything.</p>
+"""
+
+CH6_D = """
+<p>Practice space is the most striking column. Practitioners were at 40 before R1 and are at
+<strong>98</strong> now — the highest value the bloc reaches anywhere, at the end of the
+corpus, more than a year after the week this chapter is about. Announcement space follows the
+same shape one step behind, which is the pattern from chapter 2: on things you can download,
+the people running them lead the people announcing them.</p>
+
+<p class="pull">A spike tells you something happened. A step tells you something changed.
+They look identical for about three weeks.</p>
+
+<h2>What this is worth on a Monday morning</h2>
+
+<p>The practical content of this chapter is a test you can run on any breakthrough, in any
+field, without an archive:</p>
+
+<div class="aside">
+<h4>Event or regime change?</h4>
+<p><strong>Can other people reproduce it, and how fast?</strong> Not "is it impressive" but
+"is the recipe in the open." Four days is a regime change; a paper with no weights and no code
+is a news cycle.<br>
+<strong>Does the attention transfer to the category or stay with the author?</strong> Track
+the competitors, not the company. If the whole category steps up and holds, something real
+moved.<br>
+<strong>Where did the last surface find out?</strong> If the money moved a week after the
+practitioners did, that gap is the size of the edge available to anyone reading the right
+layer.</p>
+</div>
+
+<p>One more thing, and it belongs here because it is uncomfortable. Chapter 5 quoted a headline
+from <strong>21 November 2024</strong>, two months before this week: <em>DeepSeek-R1 claims to
+beat o1-preview AND will be open sourced.</em> The claim was public, specific, and correct.
+Everything in this chapter was foreseeable to anyone who read that sentence and believed it.
+The archive is full of correct predictions that nobody could distinguish from the incorrect
+ones standing next to them — which is the problem the rest of this book is about.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -953,6 +1110,33 @@ def pages():
                    (1, 2))
            + CH5_E)
 
+    bloc_rows = [[C.esc(s), C.esc(w), f"{a}", f"{b}", f"{c}",
+                  ("<b>holds</b>" if "bloc" in w else "reverts")]
+                 for s, w, a, b, c in D.BLOC_Q]
+    ch6 = (CH6
+           + fig(F.timeline([d for d, _ in D.R1_DAILY],
+                            [("DeepSeek / R1", [v for _, v in D.R1_DAILY], "sig")],
+                            [0, 50, 100, 150, 200], "mentions / 10⁴ words",
+                            every=3, events=D.R1_EVENTS),
+                 9, "One week, by the day",
+                 "Mentions of DeepSeek or R1 per 10⁴ words inside the Discord recap, by the "
+                 "day each issue covers, 6 January to 19 February 2025. Gaps are weekends.")
+           + CH6_B
+           + fig(F.timeline(D.BLOC_M_P,
+                            [("China bloc", D.BLOC_M["China bloc"], "bench"),
+                             ("DeepSeek", D.BLOC_M["DeepSeek"], "sig")],
+                            [0, 20, 40, 60], "mentions / 10⁴ words",
+                            every=3, gutter=92),
+                 10, "The step and the spike",
+                 "Community space, monthly. The company reverts below its pre-R1 level; the "
+                 "category it belongs to does not. Coverage ends March 2026 with the Discord "
+                 "recap.")
+           + CH6_C
+           + table(["Surface", "What", "Before R1", "Peak", "Latest", "Outcome"], bloc_rows,
+                   "Table 3 · Mentions per 10⁴ words, 2024Q4 → 2025Q1 → latest quarter",
+                   (2, 3, 4))
+           + CH6_D)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -966,4 +1150,6 @@ def pages():
          "What does it look like when a good idea simply does not arrive?", ch4),
         ("ch5", "ch", "5", "Learning to think",
          "How does a whole field change its mind in four months?", ch5),
+        ("ch6", "ch", "6", "Seven days in January",
+         "What does it look like when something actually breaks through?", ch6),
     ]

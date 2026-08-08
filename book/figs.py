@@ -56,6 +56,59 @@ def cadence(rows):
     return "".join(out)
 
 
+def timeline(labels, series, ticks, ylab="", every=1, events=(), gutter=0, h=300):
+    """Like charts.lines but for long dated series: labels every `every` points, and
+    optional vertical event markers at given indices.
+
+    series: [(name, values, css_class)]; events: [(index, text)]"""
+    # one row per event annotation, so long labels never collide with each other
+    pad = {"t": 26 + 14 * len(events), "r": 20 + gutter, "b": 40, "l": 52}
+    n = len(labels)
+    inner_w = W - pad["l"] - pad["r"]
+    hi = max(v for _, ys, _ in series for v in ys) * 1.14
+
+    def x(i):
+        return pad["l"] + inner_w * i / max(n - 1, 1)
+
+    def y(v):
+        return pad["t"] + (h - pad["t"] - pad["b"]) * (1 - v / hi)
+
+    out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
+    for t in ticks:
+        out.append(f'<line class="grid" x1="{pad["l"]}" y1="{y(t):.1f}" '
+                   f'x2="{W-pad["r"]}" y2="{y(t):.1f}"/>')
+        out.append(f'<text class="tick" x="{pad["l"]-8}" y="{y(t)+3.5:.1f}" '
+                   f'text-anchor="end">{t}</text>')
+    drawn = [i for i in range(n) if i % every == 0]
+    if n - 1 - drawn[-1] > every * 0.6:
+        drawn.append(n - 1)
+    for i in drawn:
+        out.append(f'<text class="tick tiny" x="{x(i):.1f}" y="{h-pad["b"]+16}" '
+                   f'text-anchor="middle">{C.esc(labels[i])}</text>')
+    # event markers first, so the data draws over them
+    for k, (idx, text) in enumerate(events):
+        ex = x(idx)
+        out.append(f'<line class="ref dash" x1="{ex:.1f}" y1="{18+14*k:.0f}" '
+                   f'x2="{ex:.1f}" y2="{h-pad["b"]:.1f}"/>')
+        # anchor away from the nearer edge so the label always has room
+        anchor = "end" if ex > pad["l"] + (W - pad["l"] - pad["r"]) * 0.62 else "start"
+        dx = -6 if anchor == "end" else 6
+        out.append(f'<text class="ptlab" x="{ex+dx:.1f}" y="{22+14*k:.0f}" '
+                   f'text-anchor="{anchor}">{C.esc(text)}</text>')
+    for name, ys, cls in series:
+        pts = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(ys))
+        out.append(f'<polyline class="ln {cls}" points="{pts}"/>')
+        for i, v in enumerate(ys):
+            out.append(f'<circle class="dot {cls}" cx="{x(i):.1f}" cy="{y(v):.1f}" r="2.2"/>')
+        if gutter:
+            out.append(f'<text class="serlab {cls}" x="{x(n-1)+9:.1f}" '
+                       f'y="{y(ys[-1])+4:.1f}">{C.esc(name)}</text>')
+    if ylab:
+        out.append(f'<text class="axlab" x="{pad["l"]-44}" y="{pad["t"]-24}">{C.esc(ylab)}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
 def surfaces(rows):
     """rows: [(pattern, announcement, community, practice)] — three-point slope chart,
     log-scaled fold change, one line per pattern."""

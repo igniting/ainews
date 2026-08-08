@@ -423,3 +423,34 @@ LEGACY = [
     ("RLHF / DPO / PPO", 8.04, 0.85, 0.97, 0.10, "displaced"),
     ("distillation", 1.08, 6.62, 0.97, 9.42, "grows toward practice"),
 ]
+
+# Chapter 6 — DeepSeek R1. Daily density inside the Discord recap (the largest
+# surface in this window), by covered day. Pattern: deepseek|R1|r1-zero.
+R1_DAILY = [
+    ("01-06", 12.3), ("01-07", 12.9), ("01-08", 17.4), ("01-09", 7.3), ("01-10", 8.3),
+    ("01-13", 7.5), ("01-14", 19.5), ("01-15", 17.2), ("01-16", 9.8), ("01-17", 16.1),
+    ("01-20", 219.9), ("01-21", 135.5), ("01-22", 128.8), ("01-23", 85.9), ("01-24", 121.4),
+    ("01-27", 205.9), ("01-28", 215.3), ("01-29", 207.6), ("01-30", 159.6), ("02-01", 155.1),
+    ("02-03", 129.6), ("02-04", 62.9), ("02-05", 63.1), ("02-06", 78.5), ("02-07", 95.6),
+    ("02-10", 38.3), ("02-11", 31.6), ("02-12", 48.2), ("02-13", 72.1), ("02-14", 50.0),
+    ("02-17", 53.0), ("02-18", 33.5), ("02-19", 53.7),
+]
+R1_EVENTS = [(10, "R1 ships"), (12, "distilled reproductions"), (14, "$30 reproduction"),
+             (15, "#1 on the App Store")]
+# The step and the spike, monthly, inside the Discord recap
+BLOC_M_P = ["24-08", "24-09", "24-10", "24-11", "24-12", "25-01", "25-02", "25-03", "25-04",
+            "25-05", "25-06", "25-07", "25-08", "25-09", "25-10", "25-11", "25-12",
+            "26-01", "26-02", "26-03"]
+BLOC_M = {
+    "China bloc": [3, 9, 4, 14, 21, 73, 46, 31, 29, 21, 20, 33, 40, 38, 35, 33, 40, 40, 49, 38],
+    "DeepSeek":   [3, 5, 2, 5, 16, 58, 40, 24, 18, 12, 10, 9, 15, 10, 10, 5, 12, 8, 8, 2],
+}
+# Quarterly, all three surfaces — (label, pre-R1 2024Q4, peak 2025Q1, latest)
+BLOC_Q = [
+    ("Announcement (Twitter)", "China bloc", 17, 65, 72),
+    ("Announcement (Twitter)", "DeepSeek alone", 16, 52, 10),
+    ("Community (Discord)", "China bloc", 13, 50, 44),
+    ("Community (Discord)", "DeepSeek alone", 7, 41, 7),
+    ("Practice (Reddit)", "China bloc", 40, 87, 98),
+    ("Practice (Reddit)", "DeepSeek alone", 17, 73, 26),
+]
