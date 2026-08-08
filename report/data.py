@@ -386,3 +386,40 @@ FATES = [
     ("mixture-of-experts", 12.83, 7.69, 4.85, 11.08, "absorbed (into infrastructure)"),
     ("world models", 0.31, 5.34, 0.32, 0.10, "undecided"),
 ]
+
+# Chapter 5 — the reasoning turn, monthly, inside the Discord recap (the
+# largest surface in this window: ~500k words/month).
+REASON_M_P = ["24-06", "24-07", "24-08", "24-09", "24-10", "24-11", "24-12",
+              "25-01", "25-02", "25-03", "25-04"]
+REASON_M = {
+    "o1 / o3":            [0.7, 0.9, 1.4, 20.4, 8.4, 8.6, 20.0, 13.8, 17.3, 6.5, 7.9],
+    "reasoning":          [4.2, 7.4, 5.8, 10.4, 8.1, 6.4, 10.4, 16.3, 28.8, 20.8, 14.6],
+    "test-time compute":  [0.0, 0.0, 0.0, 0.4, 0.4, 0.9, 1.4, 0.7, 1.9, 0.7, 0.7],
+}
+# raw counts for "test-time compute" in the Discord recap, with monthly word totals
+TTC_COUNTS = [("2024-05", 703846, 0), ("2024-06", 484082, 0), ("2024-07", 611680, 1),
+              ("2024-08", 476031, 2), ("2024-09", 556662, 22), ("2024-10", 594242, 24),
+              ("2024-11", 497759, 43), ("2024-12", 547511, 77), ("2025-01", 546486, 40)]
+# What the turn left behind — announcement space unless noted
+LEGACY_TW = {
+    "reasoning":            [6.26, 20.33, 37.71, 34.52, 16.80, 14.10],
+    "reasoning as a knob":  [0.00, 1.29, 11.20, 6.17, 2.93, 3.20],
+    "verifiable rewards":   [0.00, 0.74, 1.22, 2.29, 1.87, 2.35],
+    "RLHF / DPO / PPO":     [8.04, 2.22, 5.10, 7.35, 2.47, 0.85],
+    "distillation":         [1.08, 2.77, 5.33, 2.91, 3.99, 6.62],
+}
+LEGACY_RD = {
+    "reasoning":            [6.79, 15.21, 18.41, 10.69, 9.39, 9.22],
+    "reasoning as a knob":  [0.00, 1.36, 3.30, 1.32, 1.22, 0.49],
+    "verifiable rewards":   [0.00, 0.10, 0.18, 0.10, 0.27, 0.20],
+    "RLHF / DPO / PPO":     [0.97, 0.57, 1.14, 1.95, 0.36, 0.10],
+    "distillation":         [0.97, 1.15, 3.06, 0.80, 4.02, 9.42],
+}
+# (idea, announcement start, end, practice start, end, verdict)
+LEGACY = [
+    ("reasoning (the word)", 6.26, 14.10, 6.79, 9.22, "peaked, then absorbed"),
+    ("reasoning as a knob", 0.00, 3.20, 0.00, 0.49, "became an API parameter"),
+    ("verifiable rewards", 0.00, 2.35, 0.00, 0.20, "replaced the old objective"),
+    ("RLHF / DPO / PPO", 8.04, 0.85, 0.97, 0.10, "displaced"),
+    ("distillation", 1.08, 6.62, 0.97, 9.42, "grows toward practice"),
+]

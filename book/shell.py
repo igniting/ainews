@@ -118,7 +118,10 @@ figcaption b{color:var(--ink);letter-spacing:.1em;text-transform:uppercase;font-
 text{font-family:var(--mono);fill:var(--soft)}
 .tick{font-size:10.5px}.tick.tiny{font-size:9px}
 .axlab{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;fill:var(--faint)}
-.serlab{font-size:11px;font-weight:600;stroke:none}
+/* series labels sit inside the plot, so knock a halo of page colour out
+   behind them — otherwise a steeply descending line runs through the text */
+.serlab{font-size:11px;font-weight:600;stroke:var(--paper);stroke-width:3.5px;
+  stroke-linejoin:round;paint-order:stroke fill}
 .serlab.sig{fill:var(--sig)}.serlab.bench{fill:var(--bench)}
 .serlab.ink,.serlab.ink2{fill:var(--ink)}
 .rowlab{font-size:12px;fill:var(--ink)}

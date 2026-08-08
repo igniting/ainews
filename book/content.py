@@ -59,7 +59,7 @@ CONTENTS = [
     ("ch", "4", "The road not taken",
      "What does it look like when a good idea simply does not arrive?", "ch4"),
     ("ch", "5", "Learning to think",
-     "How does a whole field change its mind in four months?", None),
+     "How does a whole field change its mind in four months?", "ch5"),
     ("ch", "6", "Seven days in January",
      "What does it look like when something actually breaks through?", None),
     ("ch", "7", "The harness",
@@ -684,6 +684,171 @@ months.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 5
+
+CH5 = """
+<p class="first">In May and June of 2024 the newsletter's Discord recap ran to 1,187,928
+words. In all of it, the phrase <em>test-time compute</em> appears zero times. July and
+August add three more occurrences between them, in another million words.</p>
+
+<p>By December the count for a single month is <strong>77</strong>. Nothing about the
+sampling changed. The field acquired a concept.</p>
+
+<p>This chapter is about those four months, because they are the cleanest example in the
+archive of a technical community revising its model of how progress works — and because the
+aftermath is a case study in the absorption fate from the last chapter, applied to the
+biggest idea in the corpus.</p>
+
+<h2>What the field believed in August</h2>
+
+<p>There was one theory of progress and everybody had it: bigger models, more data, more
+pre-training compute, with the returns predicted by scaling laws. Every headline in the
+archive from that summer is a variation on it — a larger open model, a cheaper way to serve
+a large model, a new dataset. The interesting arguments were about whether the curve was
+bending.</p>
+
+<p>Then, a week before everything changed, the field got a preview of what it wanted, and
+believed it.</p>
+
+<div class="scene">
+<span class="when">2024-09-07</span>
+<p><em>Reflection 70B, by Matt from IT Department.</em> A two-person team announces a
+fine-tune of Llama-3.1-70B using a technique they call reflection tuning — training the model
+to emit explicit <code>thinking</code> and <code>reflection</code> steps before answering —
+and claims frontier-beating results from a small amount of synthetic data. The issue records
+the claims and, in the same breath, the objections: contamination concerns, worse coding
+performance, results nobody could reproduce. Within days it had fallen apart.</p>
+</div>
+
+<p>It is easy to read that as a story about a bad actor. The more useful reading is that the
+field was primed. The idea that a model could get better by <em>thinking longer before
+answering</em> was so attractive, and so nearly in the air, that a thin claim about it went
+straight to the top of the newsletter. Five days later the real thing shipped.</p>
+"""
+
+CH5_B = """
+<p>On 12 September, OpenAI released o1. In the community surface, mentions of the o-series go
+from 1.4 per ten thousand words in August to <strong>20.4 in September</strong> — a
+fifteenfold jump in a month, in a corpus of half a million words per month that nobody wrote
+for a newsletter. In announcement space the same month goes from 1.0 to 56.5.</p>
+
+<div class="aside">
+<h4>Test-time compute, as the field met it</h4>
+<p>Everything before this bought capability at training time: more parameters, more tokens,
+more GPU-months, and then a fixed cost to answer each request. o1 moved the purchase to
+inference. The model writes a long internal chain of reasoning — thousands of tokens the user
+never sees — before producing an answer, and it gets better the longer you let it run.</p>
+<p>The consequence for anyone building on it is immediate and unpleasant: <strong>a request no
+longer has a predictable price or latency</strong>. Both became functions of how hard the model
+decided the question was.</p>
+</div>
+
+<p>Read the four months as a sequence and you can watch the idea propagate through every layer
+of the field in order — first the model, then the reception, then the open-weights response,
+then the productisation, then the benchmark that made it undeniable:</p>
+
+<blockquote><p>13 Sep — <em>Learnings from o1 AMA</em><br>
+18 Sep — <em>o1 destroys Lmsys Arena, Qwen 2.5, Kyutai Moshi release</em><br>
+21 Nov — <em>DeepSeek-R1 claims to beat o1-preview AND will be open sourced</em><br>
+28 Nov — <em>Qwen with Questions: 32B open weights reasoning model nears o1 in GPQA/AIME</em><br>
+6 Dec — <em>$200 ChatGPT Pro and o1-full/pro, with vision, without API, and mixed reviews</em><br>
+21 Dec — <em>o3 solves AIME, GPQA, Codeforces, makes 11 years of progress in ARC-AGI</em></p>
+<cite>AI News headlines, September–December 2024</cite></blockquote>
+
+<p>Two of those deserve a second look. The 21 November headline is the archive being written
+forwards at its most useful: DeepSeek announced a preview of an open reasoning model, and
+promised to open-source it, <strong>two months before the release that reorganised the
+field</strong>. Anyone reading that day had the information. Almost nobody acted on it, and
+chapter 6 is about the week when everybody did at once.</p>
+
+<p>And the 6 December headline contains the phrase <em>mixed reviews</em> next to a $200/month
+price tag. The archive is full of moments like this — the correct scepticism and the eventual
+outcome sitting in the same sentence, with no way at the time to tell which was which.</p>
+"""
+
+CH5_C = """
+<p>The figure shows the mechanism in an unusual amount of detail, because the community
+surface is large enough to resolve months. The o-series line is an event: a spike in September,
+a second at o3 in December. The <em>reasoning</em> line is not an event — it is a level shift
+that keeps climbing for five months after the launch that triggered it, peaking in February
+2025 at 28.8, nearly seven times its August value.</p>
+
+<p>And <em>test-time compute</em>, the phrase that did not exist, tracks neither. It ratchets:
+0, 0, 22, 24, 43, 77 raw mentions from July through December. That is what a concept entering a
+vocabulary looks like as opposed to a product entering a news cycle.</p>
+
+<h2>Then it peaks, and falls</h2>
+
+<p>Reasoning language in announcement space runs 6.26 &rarr; 20.33 &rarr; <strong>37.71</strong>
+in the first half of 2025, then 34.52, 16.80, and 14.10 in the last half-year of the corpus. A
+2.7&times; fall from the peak. In practice space the same shape, gentler: 18.41 down to 9.22.</p>
+
+<p>By the previous chapter's taxonomy, which fate is that? It falls in every surface, so it is
+not a coverage artifact. There is no successor headline announcing that reasoning was a mistake.
+So the question is whether a product exists that nobody argues about — and the answer is that
+three of them do.</p>
+"""
+
+CH5_D = """
+<h3>One: reasoning became a parameter</h3>
+
+<p>A vocabulary that did not exist in the first half of 2024 — <code>reasoning_effort</code>,
+thinking budgets, extended thinking, hybrid reasoning, <code>/no_think</code> — goes from
+<strong>0.00 to a peak of 11.20</strong> in announcement space and then settles at 3.20. That
+curve is not decline. It is a feature becoming boring: first nobody has the words, then everybody
+is discussing the words, then the words are in an API reference and nobody discusses them at all.</p>
+
+<h3>Two: the training objective changed underneath</h3>
+
+<p>The alignment vocabulary of 2024 — RLHF, DPO, PPO, preference optimisation — runs at 8.04 in
+early 2024 and <strong>0.85</strong> at the end. What replaced it is verification: RLVR,
+verifiable rewards, verifiers, 0.00 rising to 2.35. GRPO, the specific algorithm that made
+reasoning training cheap, spikes to 4.58 in late 2025 and settles at 0.43 — the same
+became-boring curve, one level down.</p>
+
+<p>This is a real change in what training a model means. Learning from human preference rankings
+is expensive, subjective and caps out at the quality of your raters. Learning from problems whose
+answers can be checked by a program is cheap, objective, and scales to as many problems as you can
+generate. That swap is the reason reasoning models proliferated as fast as they did.</p>
+
+<h3>Three: distillation, which is the one that matters</h3>
+
+<p>Distillation — training a small model on a large one's outputs — is old and was not new in
+2024. But it goes from 1.08 to <strong>6.62</strong> in announcement space, and from 0.97 to
+<strong>9.42</strong> in practice space, ending the corpus as one of the densest technical terms
+in either surface.</p>
+
+<p>Note the direction. It <em>grows toward practice</em>, and it is higher among people running
+models on their own hardware than among people announcing things. By the chapter-2 test that
+makes it the most real thing the reasoning turn produced.</p>
+
+<p>The mechanism is worth spelling out, because it explains the direction. A reasoning model
+emits its chain of thought as text. Text is copyable. A frontier model's traces are a training
+set for a small model, and a small model trained on them recovers a surprising fraction of the
+capability at a fraction of the size. Distillation is the pipe through which frontier reasoning
+reaches a consumer GPU — which is precisely why the practice surface talks about it most.</p>
+
+<p class="pull">The word <em>reasoning</em> peaked and fell by a factor of three. The three
+things it introduced are all still rising.</p>
+"""
+
+CH5_E = """
+<div class="aside">
+<h4>What this cost engineers</h4>
+<p>If you built anything before September 2024 that assumed a model request has a bounded,
+predictable cost and latency, the reasoning turn broke that assumption and nothing has restored
+it. Timeouts sized for a one-second completion now sit in front of something that may think for
+two minutes. Per-request cost ceilings became per-request cost <em>distributions</em> with a long
+tail decided by the model, not by you. Every reasoning-model integration in production is, in
+part, a workaround for that.</p>
+</div>
+
+<p>Four months, one concept, and a permanent change to the cost model of the thing everybody was
+building on. That is the fastest the field moves in this archive — with one exception, which
+arrived seven weeks after o3 and did it in a week.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -724,7 +889,7 @@ def pages():
                          [("fine-tuning", tw["fine-tuning"], "sig"),
                           ("RAG", tw["RAG"], "ink2"),
                           ("agentic", tw["agentic"], "bench")],
-                         [0, 40, 80, 120], "mentions / 10⁴ words"),
+                         [0, 40, 80, 120], "mentions / 10⁴ words", gutter=92),
                  4, "The handover, in announcement space",
                  "Mentions per 10⁴ words inside the Twitter recap. Fine-tuning and RAG "
                  "own the beginning of the corpus; agents own the end. All three lines "
@@ -739,7 +904,7 @@ def pages():
                           ("1-bit / ternary", D.FATES_TW["1-bit"], "bench"),
                           ("model merging", D.FATES_TW["model merging"], "ink2"),
                           ("world models", D.FATES_TW["world model"], "ink")],
-                         [0, 4, 8, 12], "mentions / 10⁴ words"),
+                         [0, 4, 8, 12], "mentions / 10⁴ words", gutter=112),
                  5, "Four ideas, announcement space",
                  "Mentions per 10⁴ words inside the Twitter recap. Three of these lines end "
                  "at or near zero and one is climbing — but the shape of a line says nothing "
@@ -759,6 +924,35 @@ def pages():
                    (1, 2))
            + CH4_E)
 
+    legacy_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
+                    f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.LEGACY]
+    ch5 = (CH5 + CH5_B
+           + fig(C.lines(D.REASON_M_P,
+                         [("o1 / o3", D.REASON_M["o1 / o3"], "sig"),
+                          ("reasoning", D.REASON_M["reasoning"], "bench"),
+                          ("test-time compute", D.REASON_M["test-time compute"], "ink")],
+                         [0, 10, 20, 30], "mentions / 10⁴ words", gutter=126),
+                 7, "Four months, month by month",
+                 "Measured inside the Discord recap, the largest surface in this window at "
+                 "roughly half a million words a month. o1 ships on 12 September 2024, o3 "
+                 "on 20 December. The vocabulary moves after the products, not with them.")
+           + CH5_C
+           + fig(C.lines(D.P6,
+                         [("reasoning as a knob", D.LEGACY_TW["reasoning as a knob"], "sig"),
+                          ("distillation", D.LEGACY_TW["distillation"], "bench"),
+                          ("verifiable rewards", D.LEGACY_TW["verifiable rewards"], "ink"),
+                          ("RLHF / DPO / PPO", D.LEGACY_TW["RLHF / DPO / PPO"], "ink2")],
+                         [0, 4, 8, 12], "mentions / 10⁴ words", gutter=140),
+                 8, "What the reasoning turn left behind",
+                 "Announcement space. Two vocabularies that did not exist in early 2024, one "
+                 "that did and was displaced, and one — distillation — that was old and came "
+                 "back bigger. The word “reasoning” is off this chart at 37.7.")
+           + CH5_D
+           + table(["What", "Announcement", "Practice", "Outcome"], legacy_rows,
+                   "Table 2 · Mentions per 10⁴ words, 2024H1 → 2026H2, in each surface",
+                   (1, 2))
+           + CH5_E)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -770,4 +964,6 @@ def pages():
          "What did the field think the job was?", ch3),
         ("ch4", "ch", "4", "The road not taken",
          "What does it look like when a good idea simply does not arrive?", ch4),
+        ("ch5", "ch", "5", "Learning to think",
+         "How does a whole field change its mind in four months?", ch5),
     ]

@@ -35,31 +35,39 @@ def _frame(labels, lo, hi, ticks, h=H, w=W, ylab=""):
     return "".join(out)
 
 
-def lines(labels, series, ticks, ylab="", h=H, note_last=True):
-    """series: [(name, values, css_class)]"""
+def lines(labels, series, ticks, ylab="", h=H, note_last=True, gutter=0):
+    """series: [(name, values, css_class)]
+
+    gutter reserves that many pixels on the right and puts the end labels there,
+    outside the plot. Use it when several series converge — labels placed inside
+    the plot end up sitting on the lines they name."""
     vals = [v for _, ys, _ in series for v in ys]
     lo, hi = 0, max(vals) * 1.12
+    w = W - gutter
     out = [f'<svg viewBox="0 0 {W} {h}" role="img" preserveAspectRatio="xMidYMid meet">']
-    out.append(_frame(labels, lo, hi, ticks, h, ylab=ylab))
+    out.append(_frame(labels, lo, hi, ticks, h, w=w, ylab=ylab))
     for name, ys, cls in series:
-        pts = " ".join(f"{_x(i,len(ys)):.1f},{_y(v,lo,hi,h):.1f}" for i, v in enumerate(ys))
+        pts = " ".join(f"{_x(i,len(ys),w):.1f},{_y(v,lo,hi,h):.1f}" for i, v in enumerate(ys))
         out.append(f'<polyline class="ln {cls}" points="{pts}"/>')
         for i, v in enumerate(ys):
-            out.append(f'<circle class="dot {cls}" cx="{_x(i,len(ys)):.1f}" cy="{_y(v,lo,hi,h):.1f}" r="2.6"/>')
+            out.append(f'<circle class="dot {cls}" cx="{_x(i,len(ys),w):.1f}" cy="{_y(v,lo,hi,h):.1f}" r="2.6"/>')
     if note_last:
         # place end labels, then push apart any that would overlap
         placed = sorted(((_y(ys[-1], lo, hi, h), name, cls) for name, ys, cls in series))
         laid = []
         for y, name, cls in placed:
-            y = max(y, (laid[-1][0] + 15) if laid else y)
+            y = max(y, (laid[-1][0] + 17) if laid else y)
             laid.append((y, name, cls))
         # if the stack ran past the plot area, slide all of it back up
         over = laid[-1][0] - (h - PAD["b"]) if laid else 0
         if over > 0:
             laid = [(y - over, name, cls) for y, name, cls in laid]
-        lx = _x(len(series[0][1]) - 1, len(series[0][1]))
+        lx = _x(len(series[0][1]) - 1, len(series[0][1]), w)
         for y, name, cls in laid:
-            out.append(f'<text class="serlab {cls}" x="{lx-7:.1f}" y="{y-8:.1f}" text-anchor="end">{esc(name)}</text>')
+            if gutter:
+                out.append(f'<text class="serlab {cls}" x="{lx+9:.1f}" y="{y+4:.1f}">{esc(name)}</text>')
+            else:
+                out.append(f'<text class="serlab {cls}" x="{lx-7:.1f}" y="{y-8:.1f}" text-anchor="end">{esc(name)}</text>')
     out.append("</svg>")
     return "".join(out)
 
