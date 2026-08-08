@@ -343,11 +343,27 @@ reasoning's trajectory from its own instrument. The staircase is flat and may no
 staircase at all. That is the method declining to confirm a theme, which is the only reason to
 trust it when it does confirm one.</p>
 
+<div class="warn">
+<p><strong>How much of that staircase is the baseline?</strong> More than I would like. The
+comparison starts at 2024H1 because that is where the corpus's section headings settle, which
+is a reason unrelated to the answer — but it is not the only defensible start. Run the same
+measurement from the stable publishing regime that begins on 20 May 2024 and the agent
+gradient gets steeper: 6.8× announcement against 1.1× practice. Run it from 2024H2 and it
+<em>vanishes</em>: 3.6× against 3.7×.</p>
+<p>The practice-side baseline is doing the work. The Reddit recap in the first half of 2024 is
+only 30,947 words, and its agent density is three times its 2024H2 value, which suppresses the
+fold. So the honest statement of this chapter's central finding is narrower than the number
+suggests: <strong>agents rose far more in announcement space than in practice space on two of
+three baselines, and equally on the third.</strong> Of every gradient in this book, only RAG's
+survives all three. <code>analysis/methods/sensitivity.py</code> runs the comparison.</p>
+</div>
+
 <p>That descending staircase is what hype looks like when you can measure it. It is not that
 agents are fake; it is that the further you get from the people with something to announce,
 the smaller the change becomes. If you only ever read announcement space — and announcement
 space is what shows up in your feed, your inbox and your board deck — you are reading the
-largest of three numbers and believing it is the only one.</p>
+largest of three numbers and believing it is the only one. That much is worth knowing even
+where the exact ratio is not stable, because the direction of the error is always the same.</p>
 
 <h2>The part that makes it a tool</h2>
 
