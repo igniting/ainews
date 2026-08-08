@@ -57,13 +57,19 @@ people:
   - simplifyinai
 ---
 
+It is NVIDIA GTC day again, and over his [signature 2hr unrehearsed keynote](https://substack.com/redirect/9b4a6d7c-6b7a-469f-92f8-d0c1d5ad370b), Jensen gave updates on the entire NVIDIA [universe](https://substack.com/redirect/680c2d3c-6ff3-475c-a02d-051de822f6c0) and ecosystem and celebrated his [InferenceMAX champions belt](https://substack.com/redirect/6bdeef7f-473c-4613-bcbd-fab0505a603f). As one might expect, Blackwell and Rubin are selling very very well (some [accounting is necesary](https://substack.com/redirect/561e9c42-58aa-40d8-9dd0-f419d1d48d3d)):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/3c9e5d8d-2b90-4c27-ab1c-fd67c035acb4_3592x1886.png)](https://substack.com/redirect/e45eaae4-9176-4b8d-b153-11dd41ccf544)
+
+The final section of the keynote was focused on OpenClaw, where Jensen went extremely hard in complimenting it and then pointed out the security issues, then pitched his solution, NemoClaw:
+
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/cfaddec2-3aea-4a3f-b4bd-07158c2251d6_2048x945.jpeg)](https://substack.com/redirect/077f6c01-ab1a-4992-98be-4447dd7d4bec)
+
+NVIDIA moves at impressive speed for a $4T company, and [we had some of their next generation leaders on the pod](https://substack.com/redirect/1696f20b-fb52-4b08-9fda-f93575f2b6bf) to give more insight on how NVIDIA works this fast:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/64D6tcsPH1U)](https://substack.com/redirect/801e8e8c-ee78-44e6-94e5-a5bd57e4991b)
 
 > AI News for 3/14/2026-3/16/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

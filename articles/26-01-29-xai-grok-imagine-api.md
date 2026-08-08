@@ -50,21 +50,23 @@ people:
   - sundarpichai
 ---
 
+It looks like [OpenAI](https://substack.com/redirect/45d8e566-2653-4c9a-9aca-69f8f3dc6076) (fundraising at around ~800b),[ Anthropic](https://substack.com/redirect/45d8e566-2653-4c9a-9aca-69f8f3dc6076) (worth $350b) and now [SpaceX + xAI](https://substack.com/redirect/bc39d850-e7a8-4f27-ae35-54d32ab4c350) ([$1100B?](https://substack.com/redirect/d94fe726-9451-42ba-ac68-2bcd7cab28f8) - folllowing their [$20B Series E](https://substack.com/redirect/3debe713-82dc-452e-b5fd-2b687e6f071e) 3 weeks ago) are in a dead heat racing to IPO by year end. Google made an EXTREMELY strong play today [launching Genie 3](https://substack.com/redirect/87668221-2c3b-4f77-ae46-097abcec73dd) ([previously reported](https://substack.com/redirect/2aa797e4-a6f3-4478-bc32-84cb7f52432c)) to Ultra subscribers, and though technically impressive,, today’s headline story rightfully belongs to Grok, who now have [the SOTA Image/Video Generation and Editing model released in API](https://substack.com/redirect/04f745ba-cf82-4f4e-85cc-c56a04994554) that you can use today.
 
-**xAI cements its position as a frontier lab.**
-
-> AI News for 1/28/2026-1/29/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**253** channels, and **7278** messages) for you. Estimated reading time saved (at 200wpm): **605 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
-
-It looks like [OpenAI](https://x.com/mattzeitlin/status/2017027653040001368?s=46) (fundraising at around ~800b), [Anthropic](https://x.com/mattzeitlin/status/2017027653040001368?s=46) (worth $350b) and now [SpaceX + xAI](https://x.com/amitisinvesting/status/2017001950563160517) ([$1100B?](https://x.com/RampLabs/status/2016991534944592176?s=20) - folllowing their [$20B Series E](https://news.smol.ai/issues/26-01-06-xai-series-e) 3 weeks ago) are in a dead heat racing to IPO by year end. Google made an EXTREMELY strong play today [launching Genie 3](https://x.com/swyx/status/2017111381456400603) ([previously reported](https://news.smol.ai/issues/25-08-05-gpt-oss)) to Ultra subscribers, and though technically impressive,, today’s headline story rightfully belongs to Grok, who now have [the SOTA Image/Video Generation and Editing model released in API](https://x.ai/news/grok-imagine-api) that you can use today.
+> **xAI** (@xai) — [5:30 AM · Jan 29, 2026 · 5.76M Views](https://substack.com/redirect/4ad6f747-da84-4335-82b8-b80f02efd77d)
+>
+> Understanding requires imagining. Grok Imagine lets you bring what’s in your brain to life, and now it’s available via the world’s fastest, and most powerful video API: x.ai/news/grok-imag… Try it out and let your Imagination run wild.
 
 Artificial Analysis’ rankings says it all:
 
-![Image](https://substackcdn.com/image/fetch/$s_!m-eA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29bc2b9a-cc66-409f-bc00-3eb1abffc039_697x317.png)
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/29bc2b9a-cc66-409f-bc00-3eb1abffc039_697x317.png)](https://substack.com/redirect/cc575b1c-24f3-448a-a9dd-f11b390dd46a)
 
 There’s not much else to say here apart from look at the list of small video model labs and wonder which of them just got bitter lessoned…
 
-![](https://substackcdn.com/image/fetch/$s_!Mm1U!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14da553b-af70-4a5e-beb7-4b02e80ae424_2164x912.png)
+[![](https://substack-post-media.s3.amazonaws.com/public/images/14da553b-af70-4a5e-beb7-4b02e80ae424_2164x912.png)](https://substack.com/redirect/a4e784c9-7ef0-4bab-8f0d-afd01156bfb6)
 
+AI News for 1/28/2026-1/29/2026. We checked 12 subreddits, **[544](https://substack.com/redirect/50df4557-e4c0-43df-bec5-a19437432968)**[ Twitters](https://substack.com/redirect/50df4557-e4c0-43df-bec5-a19437432968) and **24** Discords (**253** channels, and **7278** messages) for you. Estimated reading time saved (at 200wpm): **605 minutes**. *[AINews’ website](https://substack.com/redirect/dbf05f96-3891-4d7e-99a9-b9ff1b994cf5) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://substack.com/redirect/7d4c1936-b014-44a1-8c9c-e2837e946cab). You can [opt in/out](https://substack.com/redirect/a17fd04b-6799-4c77-94e8-d646f5580b7d) of email frequencies!*
+
+> AI News for 1/28/2026-1/29/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**253** channels, and **7278** messages) for you. Estimated reading time saved (at 200wpm): **605 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
 
 ---
 

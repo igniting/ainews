@@ -63,13 +63,41 @@ people:
   - teortaxestex
 ---
 
+As every lab sprints toward being some form of Anthropic (aka having a coding and enterprise AI focus, producing ever better PDFs and PPTs and spreadsheets), it is still refreshing to see that [GPT-Image-2](https://substack.com/redirect/a3d7a876-6acb-4f9e-8bed-9816e0660f80) is continuing to drive more creative applications, for example[ this](https://substack.com/redirect/14b98126-41df-48f3-85e0-a98ef2fe3188):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f9f9f0ee-3f92-4689-9d39-fd6138ac5986_1024x1248.png)](https://substack.com/redirect/d1dc29b9-33c5-41c2-97e4-92c0d4bf0d78)
+
+Considering the extremely high NPS score of the [Lego Rocky Space Friend](https://substack.com/redirect/ec90f572-9fdb-47bd-a9a3-1796c44ed7c1) on date nights, you can imagine how good a low-hallucination, research-enabled, fully multimodal reasoning image model can be.
+
+Of course it’s good for education:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8275103b-9763-4cb8-893b-92f19c8beec2_1010x1056.png)](https://substack.com/redirect/736d56ea-3026-4561-b11b-80ca95232bfd)
+
+[tweet](https://substack.com/redirect/220dbbf7-3104-4ca9-b9b8-aed421af9aba)
+
+or pop culture:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f34dba5e-112f-4588-89ea-d11dc543aef1_1026x930.png)](https://substack.com/redirect/5f58d6ca-363d-4ad1-a0da-0b475e9ca76e)
+
+or precise, clean infographics:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/68a6918e-3b75-49bf-90ad-af0cb37ed0e4_1022x1336.png)](https://substack.com/redirect/b9b58f1f-d87b-4529-ad98-1cf0646e42f3)
+
+And of course the GPT-Image-2 + Codex combo, which is available as a skill in Codex, which you can iteratively use to generate assets [WHILE](https://substack.com/redirect/4937b7d1-cfdb-4519-a4d0-e9d113ff7ba5) you code:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/48e3f4ca-b337-47ba-b5d7-6e077a1a84cd_976x1164.png)](https://substack.com/redirect/04598544-d12b-4116-a4cb-9188253261f4)
+
+And just like that, [Claude Design](https://substack.com/redirect/0e789c0d-7fc4-4365-81c4-52fb8c2c8cb1), the previous Current Thing, isn’t even in the conversation anymore. Quite simply, if you can “close” the loop, you win.
+
+But that isn’t *quite* the argument we’re making here. What we’re focusing on is the very literal and serious question of whether or not models like [Nano Banana](https://substack.com/redirect/0cfbc89f-be87-4c99-95a2-c4b3247e2e59) or GPT-Image-2 or [Grok Imagine](https://substack.com/redirect/aec96f50-ca1f-4fdd-ac50-fc9159bd90f1) are necessary uses of scarce GPU capacity if you are eschewing “side quests” and seriously pursuing AGI and trying to hit the revenue, efficiency, and funding goals necessary to not die along the way.
+
+The answer is emergingly clear: **yes**. Not merely because of the “closing the loop”. But also because you can only do so much with text and code and structured output generation. When you have multimodal voice and visual generation (including [transparency](https://substack.com/redirect/1cccc765-c70e-4d8a-9848-9a19fa2f907a)!), you truly flex the “G” part of “AGI” - after all, what good is AI if it only narrowly takes all programming jobs?
+
+By the way, [horse-riding astronauts](https://substack.com/redirect/522f055e-62da-4815-b9ac-58b547a1bc5f) used to be hard in imagegen, then it was [astronaut-riding-horses](https://substack.com/redirect/e40ff206-4b28-43f1-bdd6-5a6f34ffa327), and [now](https://substack.com/redirect/0a145b7d-e40c-443a-a69d-2fd6c8f7f538), well…
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/87ebd73a-c87b-43eb-8e83-283fba3db684_834x1198.png)](https://substack.com/redirect/b42017c7-605f-4bd9-8e27-f38321352854)
 
 > AI News for 4/26/2026-4/27/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

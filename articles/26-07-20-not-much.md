@@ -50,13 +50,13 @@ people:
   - cline
 ---
 
+On any given Sunday, the announcement that [the 2.4T param Qwen 3.8 Max will be open weight ](https://substack.com/redirect/0b8bbd2d-1e10-47b7-9fc6-4120ab5eae50)wouldve earned title story status, but they had the misfortune to do this [4 days after Kimi K3 2.8T was announced](https://substack.com/redirect/0c6ba1e4-ed3f-4c2d-b2d6-dd56a92c9f77).
 
-**a quiet day.**
+Instead, we’re once again declaring a quiet day as far as technical news goes. The [AIE Security track](https://substack.com/redirect/d90b557b-b290-4b2c-8ba0-722b7d0ebbf4) was released today (ft [Steve Yegge’s latest](https://substack.com/redirect/107f3d1a-bf8d-4e7b-8f67-2fb56b85bc6d)) and the top release of the day goes to Sonar CEO Tariq Shaukat, who echoed [Erik Meijer’s emphasis on verification](https://substack.com/redirect/336d7c11-182e-476b-9965-4c3b08d55bb7) for safety/security/correctness:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/VrpEyglYgeU)](https://substack.com/redirect/6e657b3a-b16f-433f-ad13-7cfe502403e8)
 
 > AI News for 7/18/2026-7/20/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

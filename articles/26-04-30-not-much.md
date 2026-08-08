@@ -54,13 +54,33 @@ people:
   - arix
 ---
 
+We mentioned on [the Unsupervised Learning pod](https://substack.com/redirect/961a0850-31a3-4b14-8309-58946d06c154) about the thesis that “coding agents are breaking containment”, and that talk is [published live](https://substack.com/redirect/ed22c4a4-1398-453e-bcbb-770e6013c0cc) today.
 
-**a quiet day.**
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/zepu8Kk6FBQ)](https://substack.com/redirect/ed22c4a4-1398-453e-bcbb-770e6013c0cc)Some launches are discrete; others roll up over time. Both Claude and Codex had very big weeks, with Claude generally winning the impression count war as [has been happening for a while now](https://substack.com/redirect/18b9a50e-1a15-40ae-8f6d-b7f8f25047ee).
+
+## Codex
+
+Today’s big Codex update was “[Codex for Work](https://substack.com/redirect/ad4d2094-8cee-4abf-a584-b68d6e3a0f5b)”, basically a landing page that pitches Codex for Knowledge Work (not just coding), following on from last week’s beginnings of turning Codex into the [presumptive OpenAI “SuperApp](https://substack.com/redirect/1e4c9e51-262b-4984-b6a2-82c8a0de63de)”. But it’s not just a landing page update; the latest Codex now has [42% faster CUA](https://substack.com/redirect/58f365f7-afb2-462c-8d0e-767638470ecc), [responsive browser](https://substack.com/redirect/19a95801-46fb-4b7c-baaf-cf541ad7f93a), [/chronicle](https://substack.com/redirect/f343d751-8ddc-49b8-80d4-93a3792de239), [/goal](https://substack.com/redirect/c73c9b13-c44f-48ac-9f58-b92529cc51dd) (“[our take on the Ralph loop](https://substack.com/redirect/4ec905bb-05d3-4d4f-8bc5-e0ede1371adf)), and the onboarding now encourages you to plug into the [Microsoft/Google/Salesforce suite](https://substack.com/redirect/5b15f3e2-8d1e-4b76-913c-d0361cc08fcf) and the agent now has a curiously Cowork-like [planning UI](https://substack.com/redirect/2944f0df-e2e8-447c-8519-be0eab65b15c) and shows an [in-app file editor](https://substack.com/redirect/07801ce5-c880-4a08-9f0a-d0f1680d45bb) for MS Office files.
+
+Basically, as Tibo says, “[Codex now available for non-coders](https://substack.com/redirect/3251c2ba-fce4-4984-8a1a-e12cae295bf1)”, Greg “[Codex is for everyone, for any task done with a computer](https://substack.com/redirect/0c63b164-4eaf-4f9a-8e14-8c61f07ce132)”, and Sam “[try it for non-coding computer work](https://substack.com/redirect/635fa4ca-15c8-4568-af44-70ada66935ec).” You get the picture.
+
+The “[dynamic UI](https://substack.com/redirect/306bda78-a68d-4590-a754-a19e9e10ea95)” is an interesting choice - the team [explicitly rejects](https://substack.com/redirect/0c9b09da-28aa-4426-896b-1c9cf6f434b9) the Claude Cowork-like toggle, choosing instead to let the agent route the UI experience.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/e9c1a69f-4874-43c2-b553-c96e3c543100_1202x1066.png)](https://substack.com/redirect/cffebaac-5f41-4157-862d-9967d34f68aa)
+
+[source](https://substack.com/redirect/cb13e395-4b96-44c9-907d-80d3f1e9b14c)
+
+## Claude
+
+Against the backdrop of [increasing security vulnerabilities](https://substack.com/redirect/7015eb45-8997-4f2a-a05a-685fa42c6efb), and a meta mythos around Mythos, Anthropic launched [Claude Security](https://substack.com/redirect/6b0e1638-f8a2-4016-aa0d-c54ceb7ae3a4), a code review tool.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/59882c7c-a93c-47d6-bcf3-b9fa938fadeb_688x568.png)](https://substack.com/redirect/5d2ece37-d4da-4684-84d6-d31ddaa0db77)
+
+But probably the bigger news this week was the support of [creative tools](https://substack.com/redirect/ef2b1cbf-5664-49db-9895-0a4724599d6d) like Blender, Autodesk, Adobe Creative Cloud, Ableton, Splice, Canva Affinity, and more.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0d765e76-fd11-4065-a1d0-b980581bb5c4_1188x924.png)](https://substack.com/redirect/d9f4b48b-43dd-49df-8f58-847344b824d9)
 
 > AI News for 4/29/2026-4/30/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

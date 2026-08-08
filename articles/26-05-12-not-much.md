@@ -48,13 +48,31 @@ people:
   - omarsar0
 ---
 
+The proximal cause of today’s op-ed is OpenAI’s deprecation of their finetuning APIs.
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d6915f95-7d03-4a7d-81b1-df255b9debcb_1192x1422.png)](https://substack.com/redirect/49326ee5-19c5-437b-8e84-5efba4e00526)
+
+For years, OpenAI stood out among the big labs for their finetuning support, and [many many many talks and content pieces and AI engineers](https://substack.com/redirect/56819410-569e-4a98-b7a1-0c9c6fbbb638) promoted how you can get some variant of “get o1 performance at 4o prices” and insisting that it was an important part of the toolkit.
+
+Now the tide is out, [Anthropic will probably raise at a higher valuation than OpenAI for the first time ever](https://substack.com/redirect/3b70de1d-7732-41fb-af8f-9995cd329615), and Finetuning is the[ next casualty of the 2026 Side Quest massacre (after Sora)](https://substack.com/redirect/943a65ab-693d-4652-8e13-65d85b7c155c). If you assume an extreme GPU crunch, that makes sense, but even without dramatic compute constraints, the modal 80% of the AI Engineering industry was probably trending there anyway, with [Jeremy Howard calling it out on the pod as early as 2023](https://substack.com/redirect/7c22b032-4330-4918-8c6b-a65334d9aad6).
+
+[![](https://substackcdn.com/image/fetch/$s_!etoW!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd9b184c0-cde2-4d90-9511-f4d5f2daf769_1280x720.png)](https://substack.com/redirect/7c22b032-4330-4918-8c6b-a65334d9aad6)
+
+#### [The End of Finetuning — with Jeremy Howard of Fast.ai](https://substack.com/redirect/7c22b032-4330-4918-8c6b-a65334d9aad6)
+
+October 19, 2023
+
+[Read full story
+
+](https://substack.com/redirect/7c22b032-4330-4918-8c6b-a65334d9aad6)
+
+The “End” of a thing for most people does NOT mean the “End” of a thing period - and in fact the top tier, like Cursor and Cognition (whose [$25B round ](https://substack.com/redirect/3b655018-9822-4c06-a930-fb105edd129e)is now public discussion) have both INCREASED open model RLFT and usage, rather than decreased. Open Model finetunes may also be central to [the Custom ASIC Thesis](https://substack.com/redirect/8ac05cfd-256f-475c-9cb0-4335a75ea50d), but if Taalas’ model and continued P/D Disaggregation inference solutions are any indication, then maybe Just Very Long Prompts (like [Claude’s Constitution](https://substack.com/redirect/5400e63e-f8d1-4451-b6d7-fc6df041a364)) are all you need…
+
+> **swyx 🌉** (@swyx) — [5:20 PM · Jun 9, 2025 · 28.7K Views](https://substack.com/redirect/866d9c3a-9f71-497c-8038-90785e9bffec)
+>
+> the most headfucky thing about building/investing in ai devtools is that the top 1% of ai applications are building compeltely differently than the bottom 99% both are correct and good and usecase appropriate and the only people who are guaranteed to fail are those who try to
 
 > AI News for 5/11/2026-5/12/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

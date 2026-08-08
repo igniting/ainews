@@ -35,11 +35,9 @@ people:
   - laurentsolly
 ---
 
-
-**World Models are all you need.**
+Most days, AINews’ op-ed is human written, while the sections below are human curated selections from multiple LLM generations. However, some days there’s one clear big story, and in those cases, we’ve been developing a new methodology that reports the big story in more detail. Today is one of those days — GPT 5.4 won today’s battle in describing AI Twitter coverage of AMI. So, read on, feedback welcome. *— Ed.*
 
 > AI News for 12/23/2025-12/24/2025. We checked 12 subreddits and [**544** Twitters](https://twitter.com/i/lists/1585430245762441216). Estimated reading time saved (at 200wpm): **341 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
-
 
 ---
 

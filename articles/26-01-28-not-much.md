@@ -38,13 +38,55 @@ topics:
 people: []
 ---
 
+Before recording started at the [OpenAI Town Hall](https://substack.com/redirect/56fa35f2-fbd5-431d-a765-0a9684c8d69c) this week, Sam Altman gave us **the question that was at the top of his mind**. So I [asked Sam](https://substack.com/redirect/ff8e2d2b-5581-4c2b-adbc-8dbbf039df30) on his behalf:
 
-**a quiet day**
+**Swyx:** *I tend to think in terms of constraints. On the consumption side, human attention is the rate-limiting factor. On the production side—especially for builders—**the bottleneck is the quality of ideas**. I spend a lot of time helping AI companies with GTM, and honestly, many of the products just aren’t worth people’s attention. So my question is: **what tools can we build to improve the quality of ideas people come up with?***
+
+—-
+
+**Sama: *It’s popular to talk about “AI slop,” but there’s also a huge amount of human-generated slop in the world. **(swyx: [we agree](https://substack.com/redirect/34303521-30e7-4ced-ad0e-9b96883bb7a1)!) Coming up with genuinely good, new ideas is hard. I increasingly believe that **we think at the limits of our tools**, and that **we should explicitly try to build tools that help people think better**.*
+
+*As the cost of creation continues to plummet, we’ll be able to run much tighter feedback loops—try ideas faster, discard bad ones sooner, and find the good ones more reliably. If AI can discover new science and write very complex codebases, it seems obvious that there’s a much larger possibility space opening up.*
+
+*But today, a very common experience is sitting in front of an AI system—say, an agentic code writer—and **not knowing what to ask for next**. A lot of people report this. *
+
+*I believe we can build tools to help you come up with good ideas. I believe we could look at all your past work and all your past code and try to figure out what might be useful to you or interesting to you and and can just continuously suggest things. *
+
+*We can build really great brainstorming partners. **There have been like three or four people in my life that I have consistently found every time I hang out with them, I leave with a lot of ideas. They’re people who are just really good at asking questions or giving you seeds to build on.** *
+
+*Paul Graham is off the charts amazing at this. If we could build something like a “Paul Graham bot” that you can have the same kind of interaction with to help generate new ideas, even if most of them are bad, even if you say “absolutely not” to 95% of them, I think something like that is going to be a very significant contribution to the amount of good stuff that gets built in the world. *
+
+*The models feel like they ought to be capable of that. With 5.2, a special version of 5.2 we use internally, **we’re now for the first time hearing from scientists that these the scientific progress of these models is no longer super trivial**. And I just can’t believe that a model that can come up with new scientific insights is not also capable, with a different harness and trained a little bit differently, of **coming up with new insights about products to build**.*
+
+You can catch the full text in his own words here:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/Wpxv-8nG8ec)](https://substack.com/redirect/50cf9709-e709-4269-aed0-33e846e920f3)
+
+## Reflections on “AI Paul Graham”
+
+There are a few reactions I have here that I’ll fire off in quick succession:
+
+- It’s nice to see him acknowledge that the potential of AI is not just in helping to attract more attention through generated images and videos and marketing text (AI GTM, the first question from the town hall), but also it should be used in raising the quality of product, because there is a lot of **human-origin slop** too!
+
+- In many ways, Sam here is trying to bring in what YCombinator does for improving founder success to the general thought partnership capability of ChatGPT. Everyone could benefit from having their own personal YC Group Partner, on demand, no office hours. Much less having a PG-tier Partner. And yes, this is just the business form of the more general domain of advising and coaching, which probably everyone can benefit from **if we knew how to make it good enough**.
+
+- Many, many people have tried to build an “AI Paul Graham” bot. These flopped because they mostly did RAG or finetunes on his essays. **Information Retrieval isn’t what PG -does-** for Sam. He challenges you, runs you through multiple internal world models and pattern matches of past learned experiences, filters through what he should say to elicit the best response out of you instead of simply blurting out what he thinks token by token, and raises your ambitions.
+
+- For both model trainers and agent harness builders, it’s instructive to draw a spectrum from the poorest implementation to the most ambitious implementation you can think of, and think about the sequencing of intelligent feedback and pushback you need.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/2e605f33-4fd5-4eb8-9b10-1ac4ac8e9fb6_2656x912.png)](https://substack.com/redirect/91e3ffc1-953a-4a0d-8f15-f36eca83853c)
+
+It is too lazy to wait for the God Model to arrive to do all these, there are probably concrete thought partner jobs that can be broken out into Agent Skills and MCP tools and Multi-agent Swarms and other tricks of the AI Engineer trade.
+
+- “Accuracy” for an AI PG is not 90%, not even 50% — even a 5% accurate PG is acceptable and valuable (and is probably reflective of most real life conversations with him - most questions or comments are NOT valuable, but a human filter on the comments will surface some very generative and out of distribution “seeds”). So this is a very scalable “throw shit at the wall” task where AI can act as mass generator and Humans can act as discriminator/judge, and **our existence proof that high-miss-rate question generation is still useful is YCombinator and Sam’s personal experience.**
+
+- When faced with “AI as thought partner” I see a lot of parallels with the alignment problem, and I often think about the [Weak-to-Strong Superalignment](https://substack.com/redirect/3ae8c1a9-da9d-4b24-8df8-2bde0bd0cb5a) diagram:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0a27adf1-5470-41ab-aad4-4ee0c0a60bdf_2202x1322.png)](https://substack.com/redirect/06249825-27cc-48f9-9be7-b5334f69e088)
+
+Where we are currently treating agents as a junior Software Engineer or “[research intern](https://substack.com/redirect/7d92e17f-8847-43de-9009-b19f1a62cdc3)” (this is certainly the relationship we have with ChatGPT or [Prism](https://substack.com/redirect/45d06f0e-d11d-4ad8-941e-75fea0c8972c) today), we want to build the PG agent that is smarter than us, and perhaps the path there is to build smart agents for dumber people/usecases and then ladder up from there.
 
 > AI News for 1/27/2026-1/28/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**206** channels, and **7100** messages) for you. Estimated reading time saved (at 200wpm): **559 minutes**. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026/comments). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-quiet day.
-
 
 ---
 

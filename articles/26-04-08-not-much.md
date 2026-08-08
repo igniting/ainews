@@ -52,14 +52,17 @@ people:
   - sebastian_raschka
 ---
 
+It’s not much, but [it’s good numbers](https://substack.com/redirect/93a3149b-7751-4083-a39a-e486136625d9):
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0027e0c1-c564-4c19-88d6-323d3ca86508_1172x1586.png)](https://substack.com/redirect/3cdc90f5-1c6b-4b94-9354-1e66a6805363)
 
-**a quiet day.**
+Alexandr also concludes:
+
+> “***bigger models are already in development** with infrastructure scaling to match.* private api preview open to select partners today, with plans to open-source future versions. incredibly proud of the MSL team. excited for what’s to come!”
+
+What’s to come remains to be seen, but the day rightfully belongs to MSL for finally coming good on a promise hanging since launch.
 
 > AI News for 4/5/2026-4/8/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

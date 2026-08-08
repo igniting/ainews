@@ -43,14 +43,39 @@ people:
   - deepfates
 ---
 
+Everyone is still digesting [the OpenAI vs Anthropic launches](https://substack.com/redirect/a3cf19a1-8905-4a0e-8077-6c75e3291ba4), and the truth will out.
 
-**a quiet day**
+We’ll use this occasion to step back a bit and present **seemingly unrelated items**:
+
+- In [A sane but extremely bull case on Clawdbot / OpenClaw](https://substack.com/redirect/b3c8b916-d86a-4c23-ab38-754728b4449f), the author uses **the same agentas a central cron job** to remind himself of promises, accumulate information for calendar invites, prepare for the next day, summarize high volume group chats, set complex price alerts, take fridge freezer inventory, maintain a grocery list, booking restaurants and dentists, filling out a form and have Sam Altman’s “[magic autocompleting todolist](https://substack.com/redirect/db6b2016-5b55-44ce-bcc3-6c05850384a6)”.
+
+- The distribution hack that Moltbook uncovered is the installation process [immediately installs a HEARTBEAT.md](https://substack.com/redirect/4b80fb5e-5b15-468a-869f-96fdab85f250) that **takes advantage of OpenClaw’s built in [heartbeating](https://substack.com/redirect/cba38173-500c-4091-952c-95b4379196e4)** to power the motive force of the agents filling up Moltbook
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/fab4e4b2-27ab-428b-bb81-c7c21e8e68d7_1746x998.png)](https://substack.com/redirect/c29849cb-a86d-443d-861b-70d5c7c40def)
+
+- In [Cursor’s Towards self-driving codebases](https://substack.com/redirect/4d7d321e-1f13-4069-87aa-317c2004b24f), the author moves from decentralized agents to having a **central Planner agent** that commands workers and spins up other planners in order to have throughput of ~1000 commits per hour.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/affbd5e8-fdb1-41da-884d-753a93df75be_1186x754.png)](https://substack.com/redirect/53731db3-9e04-4ff4-bf7d-8a142689cd2e)
+
+- In [OpenAI Frontier](https://substack.com/redirect/4c4b6760-5275-43c2-a10c-ce904642d03f), the big reveal of their management layer for large numbers of high volume agents is centralized in a dashboard that can drill down… to the individual agent instance (!)
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/915dbbc5-a979-40ea-b073-e37d164a414a_2884x1652.png)](https://substack.com/redirect/a1395fbc-74f0-43a6-a9ef-6bc9d18953a3)
+
+- In CEO [Dara Khosrowshahi’s answer](https://substack.com/redirect/bea3f9fc-011e-46e4-a690-6c2058904897) about Uber being inside ChatGPT, they are secure enough in their moat that they are fine just [being a ChatGPT app](https://substack.com/redirect/94b927fc-160b-4e50-baf6-9898bdb68432):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/1f2af4a8-07f7-4139-bfe8-349886c0eee3_1622x1980.png)](https://substack.com/redirect/363145b4-d9db-4cdb-bcf7-c5b41c0fbef6)
+
+- and of course the ongoing [SaaS stocks freakout](https://substack.com/redirect/b2c5aa80-8dbd-4794-bb10-003419bdd750) to AI generally:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f88196bf-9a40-4e2d-a711-7284d04a4700_1072x1064.png)](https://substack.com/redirect/391e1efd-82a5-416f-852f-97e3a5b65283)
+
+It’s famously known that the [only 2 ways to make money in software are by bundling it and unbundling it](https://substack.com/redirect/112697d9-8441-4086-99a2-f815fc7f0b07), and what’s going on here is a massive AI-enabled bundling of all software, probably at a larger magnitude than the hardware bundling of the smartphone:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d9291b2e-db14-4a90-bd9c-571fb8f130d5_2368x1584.png)](https://substack.com/redirect/33e04d5f-f6ab-4bde-b286-bf95fbe3b053)
+
+Attempts at building [SuperApps have repeatedly failed outside of China](https://substack.com/redirect/fa6c907e-f825-45a5-a29c-3428143cb3af), but it’s clear that both ChatGPT and [Claude Cowork](https://substack.com/redirect/3936b178-03f6-410f-aa75-f29f0a176e32) are well on their way to being AI “Superapps”, except instead of every app having their “own app”, they make themselves [legible](https://substack.com/redirect/30c5d372-755d-498c-8578-d69ef7809b53) to the AI Overlords with [MCP UI](https://substack.com/redirect/6d40e7d9-41e7-4331-a5d4-ef59c4a7c58a) and [Skills](https://substack.com/redirect/f157d96d-0d17-4ec8-aa82-2135e208fd6a) and OpenClaw markdown files, and eventually (not soon! according to [Sam’s answer to Michael Grinich](https://substack.com/redirect/5abcf054-6f37-49bb-9495-b2e63b59b6cc)) they will share tokens so that you don’t die a Death By A Thousand $20/Month Subscriptions.
 
 > AI News for 2/5/2026-2/6/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**254** channels, and **8727** messages) for you. Estimated reading time saved (at 200wpm): **666** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-Today's essay: https://www.latent.space/p/ainews-ai-vs-saas-the-unreasonable
-
 
 ---
 

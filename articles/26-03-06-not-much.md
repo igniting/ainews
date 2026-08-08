@@ -50,11 +50,33 @@ topics:
 people: []
 ---
 
+If you’re new to Latent Space you may not be aware of [our Discord](https://substack.com/redirect/f2ebf771-4bd0-4c4b-b970-a53b429c8f0c), where we chitchat about the (mostly AI, some non AI) news of the day. Now that [both OpenAI and Anthropic think AI can do ~70% of most white collar jobs](https://substack.com/redirect/754198bb-6209-4e0f-b18f-e509899b900d), between all the discussion about AI-induced layoffs and how most of coding, including [SWE-Bench Verified](https://substack.com/redirect/26e77f51-a44d-4796-9a93-cc5951a05072) and [METR](https://substack.com/redirect/8998ced9-2bd8-4139-bba6-1e6fd97c0879), is solved, some are confused by [Citadel’s response to Citrini Research](https://substack.com/redirect/8c378b82-8e57-46be-96d2-58f9c3a96f26):
 
-**a quiet day**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8ca19888-a908-4b16-ac39-7d848efda0e0_986x1128.png)](https://substack.com/redirect/ab0d5673-2abe-4137-bd1e-6884808a4a3d)
+
+While overall job postings are trending down, postings for software engineers are rebounding -HIGHER- as models get better at software engineering
+
+We have said repeatedly on the podcast that “**AI Engineer will be the LAST job”**. It started as a bit of a memey joke doubling down on [the Rise of the AI Engineer](https://substack.com/redirect/0e01dece-4429-4ed6-be9c-cdf605e98649) in 2023 (and yes, I am the [most biased](https://substack.com/redirect/2c9f3858-38fa-4cfa-a4ae-74c9f9159db5) person in the world on this), but we are getting increasingly serious about this in 2026. The lazy explanation is pointing to [Jevons Paradox](https://substack.com/redirect/61aceb0d-8307-4cf6-9317-456b956438b0), but we think pointing to some wikipedia page about a random [eponymous law](https://substack.com/redirect/8889385e-a884-46a0-96cc-9202ebd0a340) is severely underselling the causality and magnitude of what is going on.
+
+For example, how do you react to [this other Anthropic report](https://substack.com/redirect/2169d512-2eb1-44e8-953e-cf3bafe321fd) showing that Software Engineering has taken over 50% of usecases of Claude models:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/68de8ccf-117d-48cd-932e-8bdcad9af497_1318x1292.png)](https://substack.com/redirect/75ef7198-4f6d-4a19-b5b1-87f1205000b1)
+
+Do you agree with Han that you should work on the other usecases? Surely with 2025 being the year of coding agents, in 2026 the other fields will play catch up right?
+
+Congratulations, you just made the classic egocentric error and joined the permanent underclass.
+
+**[There is no wall.](https://substack.com/redirect/f002ecb8-1000-427b-9a70-aa52d821289a) There is no reason to believe what has already hit 50% will not keep going to 80%, to 90%, and more.**
+
+The current consensus is that **2026 is the Year of Knowledge Work Agents** (more on this in our upcoming Claude Cowork and [OpenAI Frontiers podcasts](https://substack.com/redirect/19a4592f-5a3b-4877-ad31-423a2d29b711)), but, just like [OpenClaw is based on a coding agent, Pi](https://substack.com/redirect/f19552c8-5187-4726-a878-b22255b7229f), and Cowork is based on Claude Code, and [OpenAI Symphony](https://substack.com/redirect/712e6911-6127-49f6-be58-dff653d06769) maximizes [harness engineering](https://substack.com/redirect/23dc26a9-6517-4061-b75c-c8b1a1370a64). With [Code Mode](https://substack.com/redirect/ba139dd2-c4e2-412b-a2fa-3f3b0d71f53a)/[CLIs](https://substack.com/redirect/99ad3b1a-7275-46ea-8149-3417b336a72a) eating MCP, and [Filesystems eating Memory/RAG](https://substack.com/redirect/1885e2b9-620f-4a65-98b0-217f33963fd9), and [Sandboxes eating Vision](https://substack.com/redirect/2b3fcd0b-532d-4cb7-a233-73dd9973d17e), it turns out that potentially ~all agents are JUST coding agents with extra skills, and every additional SKILLS.md eats another task of a white collar job… for coding agents.
+
+> *“it’s possible that software engineering is the **only** profession that experiences jevons paradox because they are the ones who use ai to automate other professions out of existence*” — [QwQiao making the Last AI Engineer argument](https://substack.com/redirect/9fcbe85c-4fbc-4ccc-89ee-ce221762c162)
+
+The final battle for jobs, when all the economy is a wasteland and we are frantically printing worthless money for Universal Basic Income, is the showdown between the AI Engineer and the AI Researcher. It’s the inverse of the chicken and egg problem — which comes LAST? The Engineer chicken, or the Researcher egg?
+
+There, we have ALSO thought this through and concluded that the Researchers will probably hang up their hats first before the Engineers are done deploying the last mile of what the Researchers produce.
 
 > AI News for 3/5/2026-3/6/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**264** channels, and **13382** messages) for you. Estimated reading time saved (at 200wpm): **1311** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
 
 ---
 

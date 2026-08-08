@@ -29,83 +29,75 @@ topics:
 people: []
 ---
 
+OpenAI’s [Largest Fundraise in Human History](https://substack.com/redirect/c7ef11e3-27d6-471f-92dd-7179f9a03236) closed today, [growing by a few billion](https://substack.com/redirect/804ea878-3759-475e-8305-5edf24724b96), but disclosing some cool numbers like $24B ARR (growing 4x faster than Google/Meta in their heyday), and also had a “soft IPO” with $3B of investment from rich people and inclusion in [ETFs from ARK Invest](https://substack.com/redirect/cc73a8a6-d671-4ca5-9f4d-98c93ba2a47d), although ChatGPT WAU growth seem to has stalled out - they STILL have not crossed the 1B WAU mark targeted for end 2025. Codex also worryingly has [not announced a new milestone for March](https://substack.com/redirect/81b86efa-4303-495e-8ed2-6644b4506c3d).
 
-**The accidental "open sourcing" of Claude Code brings a ton of insights.**
+By far the biggest news of the day is [the Claude Code source leak](https://substack.com/redirect/383b8aa5-7440-466f-be41-b6fd7131ca6d), in itself not particularly damaging for Anthropic, but surely embarrassing and also somewhat educational - Christmas come early for Coding Agent nerds. You can read the many many tweets and posts covering the 500k LOC codebase, and you can [browse multiple hosted forks of the source](https://substack.com/redirect/9bccbfa0-5003-4a9b-8f73-3c35772faa81).
 
-> AI News for 3/23/2026-3/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
+There are fun curiosities, such as the [full verb list](https://substack.com/redirect/7478c8a1-c6ed-4351-9cb5-e8a419461603), or [Capybara/Mythos v8](https://substack.com/redirect/fbcec787-267e-479f-9326-abb97814871e), or [the /buddy April Fools feature](https://substack.com/redirect/6274e4af-d70b-499f-af7b-885f5a18f505), or Boris’ [confirmed WTF counter](https://substack.com/redirect/44abf7f0-e667-42a9-b0b6-524f6fd57adf), or creating the cursed “[Claude Codex](https://substack.com/redirect/bc23610d-7713-4fdb-8a58-245cb7303336)”, or the [dozen other unreleased features](https://substack.com/redirect/7a4c1961-1540-4af4-9b9f-54bf87bc7a73), but most serious players are commenting on a few things. Sebastian Raschka probably has [a good list of the top 6](https://substack.com/redirect/55e82a33-0e71-4de1-8c90-56b4600dcc53):
 
+- Putting Repo state in Context (eg recent commits, git branch info)
 
-OpenAI’s Largest Fundraise in Human History closed today, growing by a few billion, but disclosing some cool numbers like $24B ARR (growing 4x faster than Google/Meta in their heyday), and also had a “soft IPO” with $3B of investment from rich people and inclusion in ETFs from ARK Invest, although ChatGPT WAU growth seem to has stalled out - they STILL have not crossed the 1B WAU mark targeted for end 2025. Codex also worryingly has not announced a new milestone for March.
+- Aggressive cache reuse
 
-By far the biggest news of the day is the Claude Code source leak, in itself not particularly damaging for Anthropic, but surely embarrassing and also somewhat educational - Christmas come early for Coding Agent nerds. You can read the many many tweets and posts covering the 500k LOC codebase, and you can browse multiple hosted forks of the source.
+- Custom Grep/Glob/LSP (standard in industry)
 
-There are fun curiosities, such as the full verb list, or Capybara/Mythos v8, or the /buddy April Fools feature, or Boris’ confirmed WTF counter, or creating the cursed “Claude Codex”, or the dozen other unreleased features, but most serious players are commenting on a few things. Sebastian Raschka probably has a good list of the top 6:
+Claude code has [less than 20 tools](https://substack.com/redirect/6439953c-ac2f-4230-bd43-9d307065226a) default on (up to [60+ total](https://substack.com/redirect/2b66ac80-cdd5-43c5-8862-95477d01f05a)): AgentTool, BashTool, FileReadTool, FileEditTool, FileWriteTool, NotebookEditTool, WebFetchTool, WebSearchTool, TodoWriteTool, TaskStopTool, TaskOutputTool, AskUserQuestionTool, SkillTool, EnterPlanModeTool, ExitPlanModeV2Tool, SendMessageTool, BriefTool, ListMcpResourcesTool, and ReadMcpResourceTool.
 
-Putting Repo state in Context (eg recent commits, git branch info)
+- File read deduplication/tool result sampling
 
-Aggressive cache reuse
+- Structured Session Memory (more on this)
 
-Custom Grep/Glob/LSP (standard in industry)
+- Subagents
 
-Claude code has less than 20 tools default on (up to 60+ total): AgentTool, BashTool, FileReadTool, FileEditTool, FileWriteTool, NotebookEditTool, WebFetchTool, WebSearchTool, TodoWriteTool, TaskStopTool, TaskOutputTool, AskUserQuestionTool, SkillTool, EnterPlanModeTool, ExitPlanModeV2Tool, SendMessageTool, BriefTool, ListMcpResourcesTool, and ReadMcpResourceTool.
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d5c7ee5f-e03e-434b-b52a-3c0a0470e111_1444x577.png)](https://substack.com/redirect/d49ea9cb-0d64-4601-935e-150c77f2f0e8)
 
+## Memory
 
+Claude Code’s Memory has a [3 layer design](https://substack.com/redirect/3e846ef7-7ba1-4f06-a8cb-0aa6a4773400) with 1) a MEMORY.md that is just an index to other knowledge, 2) topic files loaded on demand, and 3) full session transcripts that can be searched. There’s also an “autoDream” mode for “sleep” - merging memories, deduping, pruning, removing contradictions.
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/658d124b-b5d7-4075-af07-2bb850a42d32_1754x1052.png)](https://substack.com/redirect/28bd1baf-cddb-4a56-89c1-673a901a5126)
 
-more in ccunpacked
-File read deduplication/tool result sampling
+A [deeper analysis from mem0](https://substack.com/redirect/d806a673-4429-4cfd-b99e-49ffb9e77f4b) finds 8 phases:
 
-Structured Session Memory (more on this)
-
-Subagents
-
-
-
-
-Memory
-Claude Code’s Memory has a 3 layer design with 1) a MEMORY.md that is just an index to other knowledge, 2) topic files loaded on demand, and 3) full session transcripts that can be searched. There’s also an “autoDream” mode for “sleep” - merging memories, deduping, pruning, removing contradictions.
-
-
-
-
-A deeper analysis from mem0 finds 8 phases:
-
-
-
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a4d57d8b-f3b3-4005-90bc-129661d8c15b_1899x2048.png)](https://substack.com/redirect/4a5f2f46-9bd8-4079-99e5-42acb6c08067)
 
 caption...
+
 And there are 5 kinds of Compaction:
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0165c08d-6763-490a-9b76-5c9c957f5d06_1182x1612.png)](https://substack.com/redirect/efa8999f-b0d8-4c59-8759-16bc725da0db)
 
+## Subagents use Prompt Caching
 
+A key feature [of CC](https://substack.com/redirect/7216ec83-0dfe-4e86-b81a-96b01d22a828): they use the KV cache to create a fork-join model for their subagents, meaning they contain the full context and don’t have to repeat work. In other words: [Parallelism is basically free](https://substack.com/redirect/2b66ac80-cdd5-43c5-8862-95477d01f05a).
 
-Subagents use Prompt Caching
-A key feature of CC: they use the KV cache to create a fork-join model for their subagents, meaning they contain the full context and don’t have to repeat work. In other words: Parallelism is basically free.
+## The 5 level Permission System
 
-The 5 level Permission System
+[![](https://substack-post-media.s3.amazonaws.com/public/images/9d020dee-d813-4868-8df5-29454d48129a_1254x1592.png)](https://substack.com/redirect/b02dfd39-23ee-4ea0-bd59-0afcd278cbbb)
 
+## The 2 Types of Plan mode
 
+[here](https://substack.com/redirect/8a32bc85-27d8-425e-b29f-dc4b787bc704):
 
-The 2 Types of Plan mode
-here:
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/59924d12-f74b-4ba8-9272-5419fbad1ecd_1451x1609.jpeg)](https://substack.com/redirect/03a59812-df17-4f87-b877-bbddebec3057)
 
-Image
+## Resilience/Retry
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/293e920e-2e19-4e16-a04d-c52d699afe6b_1206x1228.png)](https://substack.com/redirect/817053c1-7d00-4545-9524-f616a09e4426)
 
-Resilience/Retry
+## Other Unreleased/Internal Features
 
+Including [an employee-only gate](https://substack.com/redirect/8048eb51-8578-48ca-bf3d-387280730cf1) and an [employee TUI](https://substack.com/redirect/b8a147c6-62b4-497f-8b1b-e3e785700955), but also a bunch of [other stuff in development](https://substack.com/redirect/91186ff0-23f8-492d-a4d4-f99c9e315775) including ULTRAPLAN and [KAIROS](https://substack.com/redirect/b3de5fb2-babd-478c-a58b-9ded7a0c1f31):
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/c3642b10-1f7e-49a0-af0d-986b24180a1c_1600x1084.png)](https://substack.com/redirect/8119864c-e84c-44c6-843c-ab9f8340379b)
 
-Other Unreleased/Internal Features
-Including an employee-only gate and an employee TUI, but also a bunch of other stuff in development including ULTRAPLAN and KAIROS:
+note a few of these [were recently shipped](https://substack.com/redirect/80cc0f90-d11d-4e7c-87c1-f9379feca990)
 
+And internal [MAGIC DOCS](https://substack.com/redirect/2ee5e670-c077-47b1-bd77-45421b2a4a48):
 
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/0b39db63-a7b1-48a1-839d-c498202c659e_1773x1822.jpeg)](https://substack.com/redirect/d32fa55e-a4cd-44ca-b66f-9b6187da398f)
 
-
-note a few of these were recently shipped
-And internal MAGIC DOCS:
-
-Image
+> AI News for 3/23/2026-3/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
 
 ---
 

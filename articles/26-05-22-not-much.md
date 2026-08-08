@@ -56,13 +56,27 @@ people:
   - hamelhusain
 ---
 
+Ahead of OpenAI’s likely IPO filing next week, Greg makes the latest in a series of comments where [Model Labs are increasingly also building Agents](https://substack.com/redirect/f7c9540e-8d3b-4204-9b83-b260a8f0cc74) as the product:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/348d0573-16b0-46d0-a852-ccaae2b6ff4f_1122x534.png)](https://substack.com/redirect/16d61fec-e46a-4879-a6c4-e5321216156e)
+
+The quote is a big reversal of stance from a position ~uniformly held by anyone who worked at **[Team Big Model](https://substack.com/redirect/e08cafe4-3348-4203-9f19-ddfe25238c8d)**, including [his previous head of OpenAI Labs](https://substack.com/redirect/116ddcf7-d4e4-4831-b0f3-a3a776b30487):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f0b62ab4-065e-4317-857e-6483330aeb08_1088x1308.png)](https://substack.com/redirect/2076cda7-7ef0-4c84-b3c1-200a0c6bd09f)
+
+This comes with the shuttering of AI21’s model team, which is now pivoting to agents:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f8ba4c74-81d3-4163-a6c3-752ef8ec9fe6_1076x1362.png)](https://substack.com/redirect/efdef29c-593b-4943-8f26-ecbbc6681540)
+
+and even the venerable DeepSeek is now building a “Harness team” for the first time:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/77b428e9-bb30-464c-8dc2-827ae5accf1f_1084x426.png)](https://substack.com/redirect/daf4fb27-2fd3-45ef-9f2a-1a377730ba14)
+
+The “Systems over Models” people will take this as a point of validation of what they have been saying all along… except for the nuance that models cotrained with harnesses does open the door for closing access to models even further — if you can effectively posttrain a model to only meaningfully perform with your closed source agent, then you get to funnel the majority of users to your agent at the expense of your model/API co-opetition.
+
+But that’s a topic of a much larger discussion…
 
 > AI News for 5/4/2026-5/5/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

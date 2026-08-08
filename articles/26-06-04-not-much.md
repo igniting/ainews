@@ -54,13 +54,21 @@ people:
   - piotrz_zelasko
 ---
 
+Anthropic is seeing [Sparks of RSI](https://substack.com/redirect/f1f74715-7c3e-477f-ba4f-5fdda6bebd09), OpenAI’s ChatGPT has finally crossed 1B MAU ~5 months behind schedule and [improved memory](https://substack.com/redirect/739fa644-f197-4905-8f36-ac1e23a56730), and [SpaceXAI is explaining its IPO to people who might not know they will be forced into buying it](https://substack.com/redirect/0ca9a8de-25c6-4646-923e-40b79f3ebb17).
 
-**a quiet day.**
+None of which are as important as [getting your AIEWF tickets and hotels](https://substack.com/redirect/f744cb9a-ee9e-4353-89a7-22f9d08a37f7) and tuning in to [the latest pod with Andon Labs](https://substack.com/redirect/01c57447-21d7-4114-bfae-74094b045366)!
+
+[![](https://substackcdn.com/image/fetch/$s_!7756!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F200614482%2F1621f1b3-afdf-4e73-96ad-7e9344965086%2Ftranscoded-1780580537.png)](https://substack.com/redirect/01c57447-21d7-4114-bfae-74094b045366)
+
+#### [Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs](https://substack.com/redirect/01c57447-21d7-4114-bfae-74094b045366)
+
+Jun 4
+
+[Listen now
+
+](https://substack.com/redirect/01c57447-21d7-4114-bfae-74094b045366)
 
 > AI News for 6/3/2026-6/4/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

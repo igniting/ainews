@@ -54,13 +54,55 @@ people:
   - omarsar0
 ---
 
+While we congratulate [(friend of the show!) General Intuition](https://substack.com/redirect/e2e20fe0-324e-40a8-9ff6-13d5ae990227) on [their new model](https://substack.com/redirect/5c2fdb5e-83d6-4bee-a222-28b3494dd556) and [(friend of the show!) Shunyu Yao ](https://substack.com/redirect/29a1456d-1b59-453d-bd1b-27e739c2a083)on [their new model](https://substack.com/redirect/b5b9f16a-f124-4011-9e9d-90e5a7550fc2), and the world awaits the release of [GPT-5.6 Sol Ultra](https://substack.com/redirect/dc0ce73d-df3d-42c6-bc00-4a448fa5596c), people are racing to find the limits of Fable 5 before the [subscription subsidy ends tomorrow](https://substack.com/redirect/a3cba706-10a4-4de3-8098-e112bd1f7fa6).
 
-**a quiet day.**
+Thariq had been working on a “[Field Guide to Fable](https://substack.com/redirect/b4de4b03-7dcf-4d32-b12c-3a21e6694716)” blog series, and happened to have a keynote planned the day of the relaunch, so he kindly pivoted the entire keynote in one night to give the most timely advice he had, which was released today:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/9fubhllmsBU)](https://substack.com/redirect/f8e4be69-d906-4c55-96a9-9a568626343b)The 4 segments are (my watchalong commentary in italics):
+
+- [0:00](https://substack.com/redirect/f8e4be69-d906-4c55-96a9-9a568626343b) Introduction and setting the stage for Fable
+
+- [2:32](https://substack.com/redirect/ad36afa4-8f99-4713-af4f-5a5e78db7a8e) **Unhobbling Claude:** Understanding model behavior
+
+*The constraints on a model are often imposed by US - ***“the harness we put them in, and the way we prompt them”***. Therefore when we encounter a new class of model, we should expect to remove or change those harnesses and prompts in order to elicit new behaviors that you otherwise would never see because you were overly limiting (aka hobbling) the model.*
+
+- *Case in point: most people have come to agree with Thariq on the [unreasonable effectiveness of HTML](https://substack.com/redirect/33c8b43d-75bd-423e-9dd2-7d3f7a5ae46c).*
+
+- [9:08](https://substack.com/redirect/2efee9b2-3dd0-47c8-99ab-e9bb5ed4a5f7) **Finding your unknowns**: Navigating the gap between map and territory
+
+[already blogged here](https://substack.com/redirect/b4de4b03-7dcf-4d32-b12c-3a21e6694716).
+
+- *a close cousin to “unhobbling” - if unhobbling is about clearing out outdated knowns, then this is about finding things you didn’t even know you didn’t know.*
+
+- *easiest techniques:*
+
+*telling claude to do a “**blindspot pass**” for your unknowns*
+
+- ***brainstorm** for “wildly different design directions”*
+
+- ***interview me** - similar to [/grill-me](https://substack.com/redirect/497639e5-9e8d-49e8-9716-ff044a21341f), but prioritizing high impact questions*
+
+- ***use references**: in the case of migrations*
+
+- ***keep implementation-notes.md**: a running log of underspecified decisions made on your behalf*
+
+- ***quiz me** - ensure MY understanding*
+
+- [14:29](https://substack.com/redirect/2e1b71d2-41a7-4501-b975-44737edb28ce) **Dealing with Grief: **Reflecting on the emotional shift in coding productivity
+
+*What you used to spend weeks on is now done in hours*
+
+- [16:30](https://substack.com/redirect/e1994798-10ab-498d-a580-b1ea108cc6a7) **Being unreasonable**: Demanding good, fast, and cheap results
+
+“**Tradeoffs are not real**”* - because Fable is more capable, you can be more ambitious and not accept tradeoffs.*
+
+- “*Building is easy, generating value is still hard”*.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/179f6ab6-62ad-492e-bb2c-67f7f2dbb861_862x1396.png)](https://substack.com/redirect/f938e6f7-df7f-4f64-b4c9-afee8c942514)
+
+Overall, an excellent talk that we will be mapping out the implications of as the world acclimatizes to the first Fable-class models.
 
 > AI News for 7/04/2026-7/06/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

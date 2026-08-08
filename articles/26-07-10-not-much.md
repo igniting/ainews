@@ -52,13 +52,33 @@ people:
   - evi77ain
 ---
 
+So [dancing bugs](https://substack.com/redirect/8888f5ec-e0da-4c44-86e2-7d010ec10171) got upstaged by [kpop girls](https://substack.com/redirect/4d352478-983e-4941-bd61-a0c1c60feda2), there’s the whole [Bun vs Zig drama](https://substack.com/redirect/5bdb9274-0f30-4242-990f-9196671adc8d), and [yesterday’s ChatGPT/Codex superapp launch](https://substack.com/redirect/6205d71e-65c7-4263-b811-1023e9d3b320) was [bumpier than expected](https://substack.com/redirect/aed17228-9a35-4f59-9c96-acea4f880f24), and the [reset button](https://substack.com/redirect/2929f0d6-5c07-4d90-a369-91330dbe3dcd) was pressed a couple times to compensate.
 
-**a quiet day.**
+After [buying Statsig](https://substack.com/redirect/c987d852-a2ce-4c63-b979-601a00e28bbf) and making a big deal out of GPT5’s routing/getting rid of [the model picker](https://substack.com/redirect/f9aabea8-a194-435e-a608-0ba3961ddd12), the main issue now is that GPT 5.6’s extra options are confusing people a bit. Most people just have a single slider:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/780723c6-1158-4a6b-a957-490705fdba08_420x274.png)](https://substack.com/redirect/a0839ba0-4ef7-4898-adcb-fa5ad2c0ab36)
+
+But API users have literally 36 variants of GPT 5.6 now:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a462b771-b4e5-4d7a-b815-ac4ca35903f4_1328x982.png)](https://substack.com/redirect/9d43c88c-941f-49e5-9d76-de7f5b7149b2)
+
+Most people can get by with just 3 rough clusters
+
+> **JUMPERZ** (@jumperz) — [4:28 PM · Jul 10, 2026 · 31.5K Views](https://substack.com/redirect/df5d3b89-05da-472f-b8f9-00f07e40f48b)
+>
+> gpt 5.6 is honestly making the $200 pro plan harder to justify… when 5.5 never made me think about usage.. now you’ve got sol, terra, and luna, all with different limits and usage costs… so Instead of just picking the best model for the job, you’re constantly trying to make https://t.co/eA50elhmLP
+
+And many guides are coming up:
+
+> **Sebastian Raschka** (@rasbt) — [1:32 PM · Jul 10, 2026 · 459K Views](https://substack.com/redirect/337b0520-bbb0-44f3-a10f-38b7279ad5ac)
+>
+> For agentic coding, one can say: - Unless you need Terra Ultra perf, it's always better to use a Luna model with higher effort setting (same or better performance but cheaper). - Forget everything below Sol High, use Luna with higher effort settings here - Forget Sol Extra
+
+The top AIE talk so far this week has been Theo’s closing keynote, and the last of the online track will be released this weekend.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/xUnRQ9vLXxo)](https://substack.com/redirect/e0a70093-9792-4f48-a827-e126f8567ae7)
 
 > AI News for 7/09/2026-7/10/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

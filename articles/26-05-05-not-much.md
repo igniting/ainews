@@ -48,13 +48,25 @@ people:
   - finbarrtimbers
 ---
 
+We’ve written separately about 1) how [model labs will tack on an agent lab](https://substack.com/redirect/e468c12f-ee3d-4e06-9b87-59ce5e1532b1) to pursue last mile revenue and differentiated data/monetization, 2) how [coding agents breaking containment will pursue the rest of knowledge work](https://substack.com/redirect/38024ade-eeff-43e4-8a79-d16f327da2fb) this year, and both themes unite this week with both Anthropic and OpenAI announcing services companies:
 
-**a quiet day.**
+- [Anthropic’s unnamed JV with Blackstone, Hellman & Friedman, and Goldman Sachs](https://substack.com/redirect/6d5896af-cfe9-4d0d-b86a-a276b3f9476a) - funded with [$1.5B ($300m each](https://substack.com/redirect/11575816-17a4-47b7-9614-1b92cbec4125) from main participants) “*A typical engagement starts with a small team working closely with the customer to understand where Claude can have the biggest impact. From there, the company’s engineers—alongside Anthropic Applied AI staff—will **develop Claude-powered systems tailored to each organization’s operations.***”
+
+- [OpenAI’s The Deployment Company, backed by 19 investors, including TPG, Brookfield Asset Management, Advent, and Bain Capital](https://substack.com/redirect/2ddcc2ed-fd8f-46a9-8ef1-1ec1641db875) - raised about $4B so far at a $10B premoney valuation: “*Microsoft-backed OpenAI last month said that its chief operating officer, Brad Lightcap, will shift into a new role and lead special projects while reporting directly to CEO Sam Altman. **Lightcap would oversee OpenAI’s push to sell software to businesses through a joint venture with a private equity firm.***”
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a0374389-0ce7-4d8c-828c-335d3846130a_889x500.jpeg)](https://substack.com/redirect/01bad73c-664c-40b4-a22c-55f2c6b986fb)
+
+As Aaron Levie [says](https://substack.com/redirect/320465f0-d9f6-4c58-8ff0-525bc51f8066),
+
+> *“As agents enter knowledge work beyond coding, there is very real work to upgrade IT systems, get agents the context they need, modernize the workflows to work with agents, figure out the human-agent relationship in the workflow, drive adoption and do change management, and much more.
+>
+> While AI models have an incredible amount of capability packed into them, there’s no shortcut to getting that intelligence applied to a business process in a stable way. This is creating tons of opportunities across the market for new jobs and firms, and the labs are equally recognizing the criticality here.”*
+
+While these companies are likely more PE focused services, both companies have been pushing other vertical services initiatives for a while, and [Anthropic held a Financial Services event](https://substack.com/redirect/ea4fe9b4-b0cd-4ea9-93b6-bc264da13d55) in New York today with an extremely stacked guest list, noting that Finance is Anthropic’s [second highest](https://substack.com/redirect/48aef902-0d08-4bc1-8314-4f329944b56b) revenue segment:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/L1hB6Nz16Fw)](https://substack.com/redirect/0172e36d-5757-4bb8-863d-fbdf92f1a650)
 
 > AI News for 5/4/2026-5/5/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -50,13 +50,15 @@ people:
   - ksenia_se
 ---
 
+It feels like ages ago we released [our Gray Swan episode](https://substack.com/redirect/4b8ce95d-2eea-4584-a862-74c9f994e26c), with OpenAI boardmember Zico Kolter and his cofounder Matt Fredrikson, talking about the importance of AI in cybersecurity, and the topic du jour was the “too dangerous to release” Mythos.
 
-**a quiet day.**
+Today, our top 3 headlines all have cyber focuses - an unreleased OpenAI model trying to solve a benchmark exploited a zero-day vulnerability to break containment and attacked HuggingFace JUST to try to cheat to get the answer; and both [Sakana](https://substack.com/redirect/a776aebe-3b30-4103-a69f-52f213b0d613) and [Gemini](https://substack.com/redirect/fdb17750-30b8-462e-b177-cb0fefa6b72c) released Cyber models.
+
+We don’t think any individual headline deserves the title story, but collectively the rise in interest and modelbuilding forms a big enough trend that is worth calling out. We already [discussed the AIE Security last week](https://substack.com/redirect/a9b48765-6d4e-4c86-943d-f98b0c959feb) - over the weekend the top talk has been [dbt labs CISO Aaron Stanley](https://substack.com/redirect/9d1ab20b-e787-475d-9706-a7df7750c628)’s well delivered talk on how to ensure meaningful human oversight of agent decisions.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/1lgFGaHoGq8)](https://substack.com/redirect/ea0c7a27-6b9a-490f-9b9f-66ba830eda87)
 
 > AI News for 7/19/2026-7/21/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

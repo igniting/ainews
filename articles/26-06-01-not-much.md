@@ -57,13 +57,29 @@ people:
   - zhihufrontier
 ---
 
+[Today’s podcast guest](https://substack.com/redirect/06cffc0d-ffe2-4e16-b58f-f8a4221acbcb) was the lead on NVIDIA Cosmos over a year ago, discussing training videogen and world models. Fittingly, Cosmos 3 launched today, unifying language, image, video, audio and action in a [Mixture-of-Transformers architecture ](https://substack.com/redirect/6fc5b4f0-58d6-4747-b9de-f18eda957ee5)that pairs an autoregressive reasoner with a diffusion generator in:
 
-**a quiet day.**
+- **base Nano** (16B: 8B reasoner tower + 8B generator tower)
+
+- **Super** (64B: 32B reasoner tower + 32B generator tower) models, and
+
+- Super finetunes for **Text2Image** and **Image2Video**, which are now the [new SOTA open weights imagegen and videogen models](https://substack.com/redirect/593d654c-2b0a-4ef7-a07e-b07e3b30bad5), just [below Nano Banana 2](https://substack.com/redirect/6fc5b4f0-58d6-4747-b9de-f18eda957ee5)
+
+> **Ming-Yu Liu** (@liu_mingyu) — [7:10 PM · Jun 1, 2026 · 15.6K Views](https://substack.com/redirect/958c39fd-34e7-4642-b221-0c238d0548dc)
+>
+> Introducing NVIDIA Cosmos 3 We released NVIDIA Cosmos 3 last night. And today, seeing it take the top spots across 8+ open model leaderboards feels surreal. We spent months working towards this moment. Here’s the breakdown: The Leaderboard Wins World Reasoning 🏆 #1 open
+
+At Computex in Taiwan, Jensen also brought the heat with [Nemotron 3 Ultra](https://substack.com/redirect/3efcdb21-7e9b-4528-aaa9-5ca4225e35a2), their 550B-A55B, remarkably efficient/[fast](https://substack.com/redirect/4b0c6139-73c9-44f0-ab20-314e8d7f85fd) open weights LLM that is the new US SoTA:
+
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/f6685277-4569-4135-92cb-e7a645246125_4096x2732.jpeg)](https://substack.com/redirect/1b9d24b4-20b2-4520-a4b6-99eaf32f4400)
+
+Finally, the RTX Spark personal computer 1 petaflop superchip, was previewed with [Microsoft](https://substack.com/redirect/5cb82d10-dd4c-48c3-8be5-4823cb8c42fa) and [OpenClaw](https://substack.com/redirect/749ebdae-c660-43d1-8896-63f5552f3a7d) and [Hermes Agent](https://substack.com/redirect/88358163-5389-4365-96df-eb1a0c5cc1c3) as a launch partner (good analysis [here](https://substack.com/redirect/31de80e3-c7fa-493b-93b7-d24c53f82e67))
+
+> **NVIDIA RTX Spark** (@NVIDIARTXSpark) — [6:05 PM · Jun 1, 2026 · 93K Views](https://substack.com/redirect/a1fb338a-d11d-421f-a690-142948206f93)
+>
+> RTX Spark, early preview 👀 Personal AI agents. Faster creator workflows. RTX ON gaming. NVIDIA’s Jacob Freeman walks through how one Superchip brings it all together in a new class of slim laptops. 👇
 
 > AI News for 5/30/2026-6/1/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

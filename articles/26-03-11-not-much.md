@@ -62,11 +62,39 @@ people:
   - artificialanlys
 ---
 
+**Replit just [tripled in valuation to $9B](https://substack.com/redirect/49107528-6325-4eff-83a9-9b9d2312d853) in the last 6 months.** You can accuse Amjad Masad of many things, but you cannot deny he and his team’s [incredible pulse](https://substack.com/redirect/822c7efe-ab10-49d0-8eb0-f0dd453cf9d3) on what the “current meta” in tech is:
 
-*a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/98d51887-ef65-46b8-88f3-275ddd3ae978_1186x1494.png)](https://substack.com/redirect/381e3cf5-94a0-45af-9cfe-587d8e6eff3d)
+
+Perhaps if you’re not close to Replit (eg you never saw their [2015 Master Plan](https://substack.com/redirect/eb8a967b-bc65-4779-a8fc-b6ed75c494a3) or their [Documentary](https://substack.com/redirect/3823eee8-042a-4ba0-83a6-fe9a56cf12a6)), you might watch that 8 minute video and think it is a generic AI platform launch like any other. But this Replit is unrecognizable from the “coding with some AI tacked on” platform that [Replit was just 2 years ago](https://substack.com/redirect/bfc8679b-da5b-4199-b444-ce43dbec6aab), with a bunch of now veritably antiquated conventional wisdoms of the time:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/ju73sWVtvU0)](https://substack.com/redirect/bfc8679b-da5b-4199-b444-ce43dbec6aab)Now that software engineering is approximately solved, where does a coding platform go? Well for Replit, it means going up the stack to be a fully integrated productivity suite, with a canvas, apps, sites, slides, [videos](https://substack.com/redirect/b83d09bc-fe7b-46e9-97be-07b44cc4488d), and others.
+
+This is a smart pivot that is inline with one of the most dominant themes of 2026 - now that coding agents have solved coding, it is the same coding agent builders that are expanding their scope to more and more knowledge work tasks, including [Pi → OpenClaw](https://substack.com/redirect/7bdca3af-75eb-4aed-af67-82d31c1c7bcd), Claude Code → Cowork, and [every model lab working on Excel and PowerPoint integrations](https://substack.com/redirect/e5b59187-6280-4602-88e8-52af07b51bf8), and [Notion building Custom Agents](https://substack.com/redirect/e657681c-fca8-4c5e-8f42-cef87959f3c4) for every other knowledge work integration in the world.
+
+## Our Running Trends List of 2026 in AI
+
+We have been somewhat accumulating a list of AI Trends that Matter in 2026 and it has slowly emerged through our coverage this year:
+
+- [The Coding/Reasoning Discontinuity of December 2025](https://substack.com/redirect/85e2ab58-b658-4eea-9c92-d97fddf25726)
+
+- Coding Agents → Knowledge Work Agents (today’s piece)
+
+- [Death of IDE](https://substack.com/redirect/fbfedc88-1a77-4834-8f99-bd53fb92cab2) → “Dark” Software Factories - with [no code review](https://substack.com/redirect/99f4eac5-6071-4b8f-abf1-a2a52f539d81)
+
+- AI research automation (aka [RSI](https://substack.com/redirect/c1f25bc7-f712-44de-884d-de30a98c3bfc), sometimes “AI Scientist”)
+
+- World Models ([AMI](https://substack.com/redirect/2397361d-0662-4ceb-a4da-6a5948bf74e8), [Adversarial](https://substack.com/redirect/cb43e7dc-3612-43b6-890a-62d97a182088))
+
+- [Memory Shortage and the Custom ASIC stack](https://substack.com/redirect/bc67157a-c5a5-4191-9cb5-efc18bc57916) (incl [Taalas](https://substack.com/redirect/de2ff8c5-8172-4ff9-bb14-ca2091ccbda7))
+
+- [The Great AI vs SaaS Rebundling](https://substack.com/redirect/5b69ab05-1ac8-4d94-a693-648e0c309a5a)
+
+- “[AI for Science](https://substack.com/redirect/6e32b8ac-0b56-4e6c-8c67-81a1b5ba6940)” finally working
+
+- [Scaling without Slop](https://substack.com/redirect/abca2d0f-b80f-4698-9059-2cba6e5eb7cf)
 
 > AI News for 3/10/2026-3/11/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
 
 ---
 

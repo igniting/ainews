@@ -48,21 +48,19 @@ people:
   - dharmesh_shah
 ---
 
+Our policy for quiet days is that we’ll now feature longer running, slow-burn stories that would otherwise not spike to the top of the heap on a certain day but will probably be of broader historical significance to AI Engineers. Today’s Lightning Pod (our Youtube-only short format) features the topic of Context Graphs, which [Jaya Gupta launched late December on X](https://substack.com/redirect/3b15e8b9-9c60-4cdd-9233-1a924a78913e) and has since inspired even former guests like [Dharmesh Shah](https://substack.com/redirect/4745f35d-9179-412d-a0b3-e51d1ccd66b3) (who has [reservations](https://substack.com/redirect/3788916e-9015-4680-96b2-158bf88f6e3a)). We chatted with both authors on the response:
 
-**a quiet day lets us feature a bubbling topic.**
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/zP8P7hJXwE0)](https://substack.com/redirect/c8fd9587-5f5c-44ce-b08a-66909857c1e3)That’s thoughtleading 101, but definitely helpful — for sure every founder building a data/context engineering product will go to them and say they got the people who coined Context Graphs on their cap table. But the problem with the post is that it promises a whole lot (evidenced in the title), but is not very prescriptive.
 
-> AI News for 1/30/2026-2/2/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**254** channels, and **14979** messages) for you. Estimated reading time saved (at 200wpm): **1408 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
+Recently, I also framed Cursor’s [Agent Trace initiative](https://substack.com/redirect/5d60a065-d34b-4399-9ca7-88285979d4c9) as a “Context Graph” for Code:
 
-
-Our policy for quiet days is that we’ll now feature longer running, slow-burn stories that would otherwise not spike to the top of the heap on a certain day but will probably be of broader historical significance to AI Engineers. Today’s Lightning Pod (our Youtube-only short format) features the topic of Context Graphs, which [Jaya Gupta launched late December on X](https://x.com/JayaGup10/status/2003525933534179480) and has since inspired even former guests like [Dharmesh Shah](http://latent.space/p/dharmesh) (who has [reservations](https://simple.ai/p/what-are-context-graphs)). We chatted with both authors on the response:
-
-https://youtu.be/zP8P7hJXwE0
-
-That’s thoughtleading 101, but definitely helpful — for sure every founder building a data/context engineering product will go to them and say they got the people who coined Context Graphs on their cap table. But the problem with the post is that it promises a whole lot (evidenced in the title), but is not very prescriptive.
-
-[Recently](https://x.com/cognition/status/2017057457332506846), I also framed Cursor’s [Agent Trace initiative](https://agent-trace.dev/) as a “Context Graph” for Code:
+> **Cognition** (@cognition) — [2:09 AM · Jan 30, 2026 · 37.1K Views](https://substack.com/redirect/00cc6992-5c6e-454d-9258-b81596e74406)
+>
+> Agent Trace: Capturing the Context Graph of Code We are delighted to collaborate with @cursor_ai , @opencode , @vercel , @julesagent , @AmpCode , @Cloudflare , and @savarlamov in an open standard for mapping back code:context. here's how we see the potential of code context graphs
 
 This is the first actual specification for a context graph for a specific domain (coding agents) that is agreed on between companies. It remains to be seen if it has actual staying power, which will mostly be driven by 1) high demonstrated improvement in agent performance, and 2) customer pressure to support it. Based on first principles, the idea (capture decision traces, exceptions and precedents scattered all over the “data mesh” into the context of an LLM) seems compelling, but of course, the devil is in the details.
+
+> AI News for 1/30/2026-2/2/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**254** channels, and **14979** messages) for you. Estimated reading time saved (at 200wpm): **1408 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
 
 ---
 

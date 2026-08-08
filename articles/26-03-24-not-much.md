@@ -46,13 +46,15 @@ topics:
 people: []
 ---
 
+There were few bright spots today, as [Microsoft AI execuhired AI2 leadership](https://substack.com/redirect/431a1c3c-779a-4428-b7a3-d030bf7c12b7), [OpenAI’s Sora became the first casualty](https://substack.com/redirect/5d22596f-fc2f-4939-a77e-35916a125361) of the Side Quest massacre (probably Atlas too), and [LiteLLM suffered/created a huge supply chain vulnerability](https://substack.com/redirect/0254a6a1-0358-47dd-bd68-7b57813f6dfd) for ~all Python AI projects.
 
-**a quiet day.**
+All will fade in due time, so do not deserve title story, but today we highlight this chart which tells an ongoing story that ALL traditional app stores like Apple and [AI-native app stores like Dreamer](https://substack.com/redirect/be9b4cc6-dcb2-4532-8c6f-b394278539ab) face:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/72bc7ca8-9c2b-4fc8-a615-0d3210287f22_1190x1682.png)](https://substack.com/redirect/46a7b529-ae31-4647-93dc-2da36022160d)
+
+Even as the debate rages on about [AI killing all SaaS](https://substack.com/redirect/c73a4570-856a-46e5-b5a4-e3fb4967cb69), the ability to vibecode apps and [hopefully buy a ticket to a >$100M exit as an 18 year old high school dropout](https://substack.com/redirect/28247973-6e2a-4de9-9cbc-5f97feafa8b2) means that ~everyone with any entrepreneurial spirit is going to at least try it, and traditional app store review processes will die. This comes even as Apple starts [blocking vibe code apps like Replit and Vibecode](https://substack.com/redirect/cef04a02-b0ea-4cd3-bd0f-0d7429e646b3) on policy reasons, and, even though there were legitimately defensible issues, it is clear that the normal app distribution paradigms are completely breaking down in 2026. We declared [the War on Slop a key theme for 2026](https://substack.com/redirect/e81d1cc0-aee3-4492-a77d-482c4c2dfb28) in Jan, and now this is one of the most important charts in the world for thinking through it’s ramifications on the decades-long supremacy of the Apple App Store as well as other similar software distribution platforms vs the open web.
 
 > AI News for 3/23/2026-3/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

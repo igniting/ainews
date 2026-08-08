@@ -50,13 +50,33 @@ people:
   - realyushibai
 ---
 
+Anthropic is rightfully being celebrated today for releasing their 1M context models in GA, with SOTA MRCR results that fight [Context Rot](https://substack.com/redirect/8e62bf10-c8a6-4123-b745-cd8edcd6a7e6) for as long as possible:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/da27b797-d630-432f-ad7b-bf1d08295e55_1256x1190.png)](https://substack.com/redirect/0ed30f65-abba-4be8-9b2f-8b77159da2f6)
+
+Very useful and any default model that pushes back the compaction dumb zone for longer is welcome, but we are still remembering that the 1M context window was [GA in March 2024](https://substack.com/redirect/e1b1e5a0-208d-4dc3-9ec7-ec26f1c97f3f), after Gemini did it in [Feb 2024](https://substack.com/redirect/e1b1e5a0-208d-4dc3-9ec7-ec26f1c97f3f), and GAing after OpenAI [GA’ed theirs last week](https://substack.com/redirect/ef9eaf65-ec73-41bd-951b-e8b194dfe6c1).
+
+It’s been 2 whole years since 1M context windows were theoretically possible, which means just under 1 order of magnitude growth in 2 years in context windows, which is much slower growth than all other dimensions (cost/speed/quality) of LLMs. We’re thinking back to [Sam Altman’s Town Hall](https://substack.com/redirect/1129197f-52fa-49c7-becf-b97899a22554) where **he said context windows would get 100x longer… and we would take the under on that**.
+
+The issue lies in the global memory shortage - there’s just no HBM, or even DRAM, to take in all of this context at the inference site. Our [podcast with Doug O’Laughlin](https://substack.com/redirect/ae5df4cf-7a7b-4050-9e1d-ea9f8791c62d) covers this in greater detail:
+
+> swyx: One thing I, I do tell people about is everyone, including Sam by the way, is like predicting longer context windows. **We’ve been effectively stuck at a million for two years now**. I’ve actually been thinking about that a lot. And like, this is not gonna go to a hundred million context windows. It’s not gonna go to trillion. Like, we’re this is it? Yeah. This is it for like five years, 10 years pretty much.
+>
+> [01:45:48] Doug: Yeah, probably actually. Will capitalism work? Will there be a way for supply to show up? Probably. But on top of that, you have to make a curve of the context windows. **Like does free context windows go to like 1000? Hey, you can use chatGPT free now, but your context window is like a thousand tokens or something like that**. And then you can just like somehow do a tiny parcel for that just so that you can then charge 100x more for 1 million. The 1 million context window is like a mansion, you know?
+>
+> [01:46:27] swyx: Oh my God. The word just **context rationing** just came to me. I’m like, fuck. Like we’re gonna have like vouchers for like, okay, you can have this amount of context today.
+>
+> I think for me, what matters is you represent the physical constraints that us, the software side can never surmount.
+>
+> [01:47:43] Because it’s a physical constraint and Well, I mean, it just, it just like, physically we cannot double, we can’t even, we can’t even double and much unless says 10x.
+>
+> [01:47:53] Doug: Context rationing. It’s pretty good. Context frugality or budget or something. I feel like everyone’s gonna be like, whoa, you’re running outta context window today. Maybe that’s what happens next year.
+
+Mark our words, people. Willing to bet that context windows do not meaningfully go higher than 1M in the next 2 years, which is a big bet to make in AI time.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/x9rWFiIubmc)](https://substack.com/redirect/ae5df4cf-7a7b-4050-9e1d-ea9f8791c62d)
 
 > AI News for 3/12/2026-3/13/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

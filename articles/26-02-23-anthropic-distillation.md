@@ -39,13 +39,29 @@ people:
   - simon_willison
 ---
 
+A big day of small news: [SWE-Bench Verified is dead](https://substack.com/redirect/35fc6026-bae7-4925-b246-d96ee5dca486), and [SaaS/DoorDash stocks notably dropped](https://substack.com/redirect/da7d4b5e-f28a-4fa4-8639-6479dd3b3a0f) with a lot of back and forth today on [the Citrini 2028 essay](https://substack.com/redirect/326decdd-1b6a-4d17-a93c-57b9a6493f1e), but we will dismiss doomer scifi as we did [AI 2027](https://substack.com/redirect/55cf7307-229e-4554-a343-01810ae4bc5c), not because it may not come true, but because it is unverifiable.
 
-**Export controls take a big step up.**
+What is reasonably believable today is Anthropic’s [-VERY- widely viewed](https://substack.com/redirect/5b72b3a0-184e-4763-9ff0-68c6dba61268) and criticized accusations of 3 of the leading Chinese labs of distillation:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a7f0d898-3968-435e-b48a-6d4f3b31e202_1206x796.png)](https://substack.com/redirect/5b8d235c-a084-4527-b850-aeef3dc84d36)
+
+The sizes of the distillation vary a lot - Minimax is an order of magnitude larger than Moonshot which is an order of magnitude higher than DeepSeek:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8f0e994e-d0fa-4728-9d61-34c0df21d7a0_1376x768.jpeg)](https://substack.com/redirect/0e50d0b8-4957-4c4e-a754-a650ae2f49c3)
+
+However, the timing also matters - Anthropic also says they caught MiniMax during an active distillation run, presumably for M2.5, but it is also easier to catch during an active run as compared to DeepSeek which presumably both did less and also mostly done during the V3 and R1 run. (Or… they are better at hiding it?)
+
+It’s worth mentioning that Qwen and Z.ai (GLM) were not accused. None of the companies implicated have yet responded.
+
+Anthropic is not alone in this - OpenAI has made similar though less public complaints both last year and recently.
+
+> **Shirin Ghaffary** (@shiringhaffary) — [10:12 PM · Feb 12, 2026 · 227K Views](https://substack.com/redirect/f0a6e782-6b97-4f4c-b107-1d0715927e40)
+>
+> SCOOP: OpenAI warned lawmakers in a memo sent today to the House Select Committee on China that DeepSeek is using “new, obfuscated methods” to continue to distill its AI models, as well as those of other US frontier AI labs bloomberg.com/news/articles/… w/ @eastland_maggie
+
+The story is interestingly timed amid Dario’s calls for stricter export controls on China, ahead of the DeepSeek V4 release, and comments on Chinese open source models “catching up” to Western closed models.
 
 > AI News for 2/20/2026-2/23/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**262** channels, and **28837** messages) for you. Estimated reading time saved (at 200wpm): **3003** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

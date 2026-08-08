@@ -42,13 +42,17 @@ people:
   - jeremyphoward
 ---
 
+By now we’re pretty used to LS Pod guests going on to great success, but today’s news is fast for even us - [Nat and Alex at MSL have execuhired Dreamer](https://substack.com/redirect/9ee844a9-440a-4757-baa4-d3f19e86ce31) just days after we shipped their pod, barely 11 days after we recorded with them:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/7af96441-4647-4d95-8ff4-9a507e6a50d8_1192x1348.png)](https://substack.com/redirect/e1b9a278-f86e-4d2f-98ea-9b661c525265)
+
+We’re surprised, but not at all disappointed. If you can’t tell [from the pod](https://substack.com/redirect/689e7696-4de7-4d7e-ba02-cd4e87f51533), we were immediately in love with the tech and the polish, but it was always going to be a long slog to build any consumer AI business and it is a very nice thing indeed to have Team Zuck on your side to push consumer distribution.
+
+Still, you should review the pod if you haven’t already:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/TvmxWWfiYWI)](https://substack.com/redirect/7caf409b-5318-4fe7-bb0b-d35b3c6c49c1)This execuhire (our term for [these licensing+hire-but-not-acquire deals](https://substack.com/redirect/72e13c73-b215-4031-a702-9bc66948df21)) comes after [the $2B Manus acquisition in December](https://substack.com/redirect/a7abc3ea-79b4-419f-8be5-9b3f29346d74), also done in a matter of 10 days, which had [similarly impressive tech](https://substack.com/redirect/408f2ebc-9680-4498-a326-f37f36a3cbec) and decent distribution, though perhaps with less of an “OS” and ecosystem heavy emphasis as Dreamer. Combining the two teams makes for one of the most formidable consumer [agent labs](https://substack.com/redirect/b97bc385-ab47-4bde-914d-da2ef7aab779) on Earth, and it is pretty clear what kind of talent Nat Friedman is in the market for. If you are savvy enough… you should be able to tell what other kinds of companies might be up next. (register your predictions in the comments!)
 
 > AI News for 3/20/2026-3/23/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -43,14 +43,15 @@ people:
   - jeffdean
 ---
 
+The [full keynote livestream](https://substack.com/redirect/22dcba76-b1b3-495c-8244-7fe8ec859d0b) was 2 hours, but as usual, The Verge has the best supercut down to 30 mins, which is very worthwhile to get a narrative sense:
 
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/OMhKgQmeMhI)](https://substack.com/redirect/ce61adc4-4b82-4b9a-9aac-618cbd88c132)The mainline Gemini 3.5 Flash is GA today (very nice compared to some staged rollouts) and is sold as a decent step up even compared to 3.1 Pro, with 3.5 Pro coming next month. Perhaps more impressive were the Gemini Live (Voice) and Omni (Video) and Google Pics/Flow (Images/VFX/music) modalities, where Google demonstrated industry leading capabilities and latency, all presumably made possible by industry leading hardware and models.
 
-**Google is so back!**
+Per longstanding tradition at every bigtech keynote these days, Google also showed off some smart glasses tech, which seems a little more likely to be seen on the street than many prior iterations from both Google and their peers.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/904f7a4e-f945-40e0-b980-024fc220d0b7_1524x912.png)](https://substack.com/redirect/70dedd25-1cf2-4d1a-bb88-10c1e43c3dd1)
 
 > AI News for 5/18/2026-5/19/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

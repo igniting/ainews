@@ -43,12 +43,39 @@ people:
   - willccbb
 ---
 
+*If you’re interested in how AI is improving Healthcare, tune in to our [first pod on it](https://substack.com/redirect/803be4f2-fa84-4213-a594-2143388bc31c) out today, and if you want to meet other top engineers in the field, [apply to speak](https://substack.com/redirect/279e9fe8-5d13-463a-b1ad-36e00d16ca75)!*
 
-**a quiet day.**
+There’s an ongoing joke in evolutionary biology that “Everything is Crab”: [the Crab form factor](https://substack.com/redirect/6ed1c194-cd1d-410a-83a1-388ec463e466) has independently evolved at least 7 times on earth:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/c44b00aa-b057-4698-a9c6-f8e73c7aaaf7_2289x1342.jpeg)](https://substack.com/redirect/9311a645-ade8-4f05-9c0b-0de4555b104d)
+
+The proximate cause of today’s op-ed is GitHub [announcing the new GitHub App](https://substack.com/redirect/5f5f3abb-c8fd-4c49-93d5-66a957d18b76) - as Oren Melamed says, “*If you are **code first** you might wanna stay on good ol’ VS Code, but if you are **agent first** and GitHub first you are in for a treat!*”
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/cc0e389d-df44-481c-998d-5524cf58e696_1194x1250.png)](https://substack.com/redirect/8b887b1a-66e1-4ffa-a71a-e7bcc8063ddb)
+
+Hmm. That looks familiar…
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/98d6e93c-4e99-4ff0-8a20-74c75f3a54b8_2310x1298.png)](https://substack.com/redirect/c7eb433c-4479-431d-b9e1-db00de7a6643)
+
+This is of course very nice for [Conductor](https://substack.com/redirect/0116284a-4620-4b23-8b11-31ff391471ed), which pioneered this form factor, and now has a loudly vocal fan in Garry Tan, the AI pilled CEO of Y Combinator:
+
+> **Garry Tan** (@garrytan) — [4:48 AM · Feb 22, 2026 · 61.8K Views](https://substack.com/redirect/0b08c39f-13d9-4473-a3dc-db7227e320b3)
+>
+> I spent the day using Claude Code macOS app with git worktrees head to head against @conductor_build and Conductor is still better - it's more responsive, doesn't hide what it's doing, more rock solid. Claude Code worktrees is good, but Conductor is still better.
+
+Now for two billion dollar questions:
+
+- if you pioneered a form factor, how do you monetize it while others copy it?
+
+- what’s next after this one?
+
+For those interested in alternate histories, here’s what happened with the Kanban board form factor that briefly trended last year:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/W76woOYHlvY)](https://substack.com/redirect/d066a90a-8d0f-4588-9aae-172121293688)And here is Maggie Appleton breaking down the design thinking [behind GitHub Ace](https://substack.com/redirect/aa1dcebe-ae1d-4db9-b7c6-59b5b112a1e9):
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/ClWD8OEYgp8)](https://substack.com/redirect/abab6aa4-547d-4c83-91c9-a28cd6fd2aed)
 
 > AI News for 5/13/2026-5/14/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
 
 ---
 

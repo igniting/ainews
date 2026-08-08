@@ -29,14 +29,399 @@ people:
   - iscienceluvr
 ---
 
+It’s a tough choice whether or not [the buzzy Midjourney Medical launch](https://substack.com/redirect/12af09fb-379f-409a-8bf7-cc10788cca31) today counts as AINews. Yes, Midjourney is one of the most significant and unique AI labs in the world. No, as David Holz was quick to point out, there’s not even any AI immediately present in the [Scanner](https://substack.com/redirect/39a8e5fb-4fd1-45e4-8f43-bf3d43975052) or [Spa](https://substack.com/redirect/140e7a2a-267b-4e52-9d13-b0fc3edee0e9). But yes, ultrasound CT imaging obviously needs heavy AI assistance, and unlocks massive new applications downstream as [BioHub’s CryoEMs](https://substack.com/redirect/34d5c9b7-bcdc-43e6-965b-eee91ee670c3) did for [ESM](https://substack.com/redirect/92efd64f-cbbf-49ef-bf19-e6cd3775b955). And no, as [Hacker News is quick to point out](https://substack.com/redirect/c2a72d09-ddeb-4ff7-b7b1-53d06bd0ffa0), there are a lot of unsolved questions as to how ready or useful this scanner really is.
 
+And yes, that was me in [the livestream, which we are transcribing to save you 2 hours](https://substack.com/redirect/77695a60-39e1-4985-b2ee-4ebb54d81753).
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/349ffc82-8a4a-4456-b50d-12dcab6016c9_3034x1320.png)](https://substack.com/redirect/4ffea352-47df-4569-b7f1-1ba7bb59aa08)
+
+Overall the vibe was electric and inspiring; I sat next to [Robert Scoble, who was there ](https://substack.com/redirect/d3ee1e79-7b24-4947-b784-3b7073bb91b7)at the original iPhone and Tesla (and Google Glass) launches, who agreed that this launch was comparable in ambition; and next to Tanishq Abraham, who, by sheer coincidence, [just so happened to tweet out this Nature paper on ultrasound CT](https://substack.com/redirect/c75a74a4-65b4-4b9c-8617-a33a3b1c1ee5):
+
+> **Tanishq Mathew Abraham, Ph.D.** (@iScienceLuvr) — [10:33 PM · Jun 17, 2026 · 8.12K Views](https://substack.com/redirect/8d08c825-4847-45cc-9c42-81c4a99fa2c8)
+>
+> This recent paper is super interesting... Using ultrasound imaging to generate images of the entire in vivo human cross-section in the abdomen and thighs Basically trying to do CT/MRI-like imaging but using ultrasound! Ultrasound imaging is highly underrated :)
+
+On to the facts you must know.
+
+## Facts / Announcements
+
+- **Midjourney announced a medical imaging project**, calling it the **Midjourney Scanner**.
+
+- The device is described as a **full-body ultrasonic CT** / **full-body ultrasound** system.
+
+- David Holz framed it as the **“first new whole-body medical imaging modality in 50 years.”**
+
+- The scanner uses ultrasound rather than MRI, X-ray, or CT radiation.
+
+- The system involves:
+
+**8,960 transducers per chip/system**
+
+- **40 systems arranged in a ring**
+
+- **358,000 ultrasonic elements total**
+
+- A **70 cm diameter ring**
+
+- Waves traveling through water at about **1,481 m/s**
+
+- Data capture around **17 GB/s**
+
+- Around **40 GB of data per body slice**
+
+- Reconstruction using **21 servers**
+
+- Claimed **2 PFLOPS compute**
+
+- Claimed **806 TB raw data**
+
+- Lift movement at **4 cm/s**
+
+- Goal of **several hundred slices in 60 seconds**
+
+- Claimed resolution of internal tissue details down to about **0.5 mm**
+
+- Current imagery shown included:
+
+Real body slices
+
+- Comparisons with MRI, especially thigh/muscle boundary imagery
+
+- Ultrasonic phantom images
+
+- Segmentations of organs and biological structures
+
+- The current system is **Gen 1 / prototype**, not the finished consumer product.
+
+- Midjourney says it is **not yet using AI** for the shown images.
+
+- The team size working on the device is about **nine people**.
+
+- About **a dozen people** have been scanned so far.
+
+- Current scans can take around **20 minutes**, because the system is still bottlenecked by bandwidth, algorithms, DSP, and prototype data-transfer infrastructure.
+
+- Midjourney also announced the **Midjourney Spa**:
+
+First location: around **Union Square, San Francisco**
+
+- About **25,000 sq ft**
+
+- **Four floors**
+
+- Hot tubs, saunas, cold plunges, gym, and other spa amenities
+
+- Around **9–10 scanners**
+
+- Lease signed and designs underway
+
+- Designed by architects associated with major spa projects such as Blue Lagoon
+
+- Target opening: **end of 2027**
+
+- Midjourney says it is **self-funded**, has **no investors**, and can fund the first spa itself.
+
+- The company says it has started **discussions with the FDA**.
+
+- Initial regulatory/commercial path is likely around **body composition**, because that is considered easier.
+
+- Jobs and more info are expected at **midjourney.com/medical**.
+
+## Projections / Goals / Claims About the Future
+
+- Midjourney’s stated long-term goal is a fleet of **50,000 scanners**.
+
+- Claimed goal: enable up to **1 billion scans per month**, enough to bring full-body imaging to everyone.
+
+- Holz suggested that fewer than a dozen such machines, operating at full speed, could perform more full-body scans than all MRI machines on Earth combined.
+
+- The company expects:
+
+**Gen 2 scanner** by the end of 2026
+
+- **Gen 3 scanner** with custom silicon later
+
+- Future systems to become much more advanced through custom chips, AI, physics simulations, and better compute infrastructure
+
+- Holz projected that the scanner could eventually support:
+
+Frequent personal health tracking
+
+- Daily/weekly/monthly body scans
+
+- Preventive medicine
+
+- Detection of “weird” changes in the body
+
+- Body composition tracking
+
+- Doctor-facing review
+
+- AI-assisted first-pass analysis
+
+- Potentially thousands of diagnoses
+
+- Eventually, some therapeutic uses
+
+- He speculated that preventive imaging could reduce healthcare costs substantially, possibly by catching disease earlier.
+
+- He suggested the scanner could become **hundreds or thousands of times cheaper than MRI** on a per-scan basis, because the machine is cheaper and faster.
+
+- He said the **marginal cost of a scan could be effectively zero**, though the actual business model will involve spa/facility economics.
+
+- Possible pricing models mentioned:
+
+Spa memberships
+
+- Walk-in scans
+
+- Scan-only pricing
+
+- Spa-only pricing
+
+- Some broader pricing matrix
+
+- The first spa is intended as a learning lab for usage patterns:
+
+Do people want full spa + scan?
+
+- Gym + scan?
+
+- Quick scan and leave?
+
+- Daily, weekly, monthly, or annual scanning?
+
+- Holz estimated scaling to thousands of spas could require around **$20B in upfront capex**.
+
+- He speculated the facilities might pay themselves back quickly, even mentioning **six months**, but explicitly caveated uncertainty.
+
+- Therapeutic uses were described as long-term, not day-one:
+
+Tendon/muscle healing
+
+- Focused ultrasound
+
+- Potential incisionless procedures
+
+- Possibly cancer tissue destruction at a distance, but explicitly not near-term.
+
+## Opinions / Vision / Framing
+
+- Holz framed Midjourney as a **community-supported research lab**, not a normal VC-backed startup.
+
+- He repeatedly emphasized that Midjourney’s image-generation revenue gives it freedom to fund ambitious R&D.
+
+- The scanner was presented as part of a broader mission around **positive human futures**, not just creativity tools.
+
+- He described the desired experience as:
+
+“As powerful as an MRI”
+
+- “As casual as a trip to the spa”
+
+- He does not want scanning to feel like a doctor’s office.
+
+- He wants the spa to be desirable even without the scanner.
+
+- He personally wants frequent health feedback so everyday diet/exercise choices become measurably visible.
+
+- He sees the scanner as a possible new pillar of AI-enabled healthcare: AI needs fast, rich, cheap bodily data.
+
+- He argued that the future is not only about AI models but about new infrastructure that lets AI reason over the physical body.
+
+- He sees ultrasound as the right modality because it can be fast, safe, dense, and data-rich.
+
+- He appears especially excited about **longitudinal, high-frequency, sub-millimeter differential tracking**: not just “one scan,” but changes over time.
+
+- He positioned this as “day one of MRI” for full-body ultrasonic CT: early images may look rough, but the modality could improve dramatically.
+
+## Reasons / Rationale
+
+- **Why ultrasound instead of MRI?**
+
+MRI is hard to make both fast and high-quality.
+
+- MRI scans are unpleasant: tubes, long sessions, loud sounds.
+
+- Ultrasound can push more energy through the body safely.
+
+- Ultrasound has no ionizing radiation.
+
+- Ultrasound can be repeated often.
+
+- Ultrasound is already widely used medically, making some regulatory paths easier.
+
+- **Why water immersion?**
+
+Sound travels through water much faster and more effectively than through air.
+
+- Water coupling enables whole-body ultrasound propagation.
+
+- The design requires the user to get wet, hence the spa concept.
+
+- **Why vertical up/down scanner design?**
+
+Optimized for throughput.
+
+- Easier than having users lie in and climb out of tubs.
+
+- “Down and up” scanning supports faster repeated use.
+
+- **Why build a spa first?**
+
+To learn real-world operations.
+
+- To test throughput.
+
+- To understand consumer behavior and willingness to use scans.
+
+- To refine pricing/business model.
+
+- To gather data.
+
+- To create a replicable template before scaling globally.
+
+- **Why Midjourney can attempt this?**
+
+Existing image business generates revenue.
+
+- No investors means fewer constraints.
+
+- Midjourney already has compute infrastructure.
+
+- The company has skills across AI, imaging, sensors, visualization, and systems engineering.
+
+- Holz has prior hardware experience from Leap Motion.
+
+- **Why not launch as pure medical device immediately?**
+
+FDA/regulatory path is complex.
+
+- Some use cases are easier than others.
+
+- Body composition is an easier initial wedge.
+
+- Diagnostic and therapeutic claims require staged approval.
+
+- **Why cloud processing?**
+
+Raw scanner data is enormous.
+
+- On-site compute can handle streaming/compression.
+
+- Midjourney’s large server clusters can process heavy reconstruction workloads.
+
+- They expect to use secure/private cloud workflows.
+
+## Criticisms / Risks / Open Questions
+
+- **Regulatory ambiguity**
+
+Holz repeatedly avoided precise FDA claims.
+
+- He said body composition is on a good path, but diagnostics are not yet cleared.
+
+- The path from body composition to “thousands of diagnoses” is extremely uncertain.
+
+- Insurance billing, CPT codes, clinical adoption, and FDA classification remain open.
+
+- **Medical validity not yet proven**
+
+The transcript presents impressive engineering claims, but not clinical validation.
+
+- No sensitivity/specificity numbers were given.
+
+- No disease-detection benchmarks were presented.
+
+- No peer-reviewed evidence was mentioned in the transcript.
+
+- “Can see weird things” is not yet the same as clinically actionable diagnosis.
+
+- **Comparison to MRI is partly apples-to-oranges**
+
+Ultrasound and MRI measure different physical properties.
+
+- Holz acknowledged MRI is still better in some ways.
+
+- Current ultrasound images are not yet broadly better than MRI.
+
+- The thigh comparison may show areas where USCT is better, but it is explicitly described as both “fair and unfair.”
+
+- **Cost claims are speculative**
+
+“Effectively zero” marginal scan cost excludes facility, staffing, regulatory, radiologist/doctor review, liability, cleaning, membership ops, and real estate.
+
+- Six-month payback was explicitly speculative.
+
+- $20B capex to scale is a huge financing and execution challenge.
+
+- **Throughput claims depend on future systems**
+
+Current scans take around 20 minutes.
+
+- The 60-second / high-throughput target depends on improvements in bandwidth, algorithms, DSP, and hardware.
+
+- Gen 1 is prototype-grade, not industrial-grade.
+
+- **Data/privacy concerns**
+
+Scans generate very sensitive full-body health data.
+
+- Data likely goes to Midjourney cloud clusters after compression.
+
+- Holz said it would be secure/private, but details were not provided.
+
+- Health data governance, consent, storage, access, deletion, and medical liability were not deeply addressed.
+
+- **False positives / overdiagnosis**
+
+Frequent full-body scanning could identify many ambiguous abnormalities.
+
+- This may create anxiety, unnecessary followups, incidentalomas, and downstream costs.
+
+- Holz acknowledged “flagging weird things” is not casual and could have downsides.
+
+- **Clinical workflow still unclear**
+
+Who reads the scans?
+
+- What does the user get back?
+
+- What goes to doctors?
+
+- What is legally considered diagnosis vs wellness/body composition?
+
+- How are urgent findings handled?
+
+- **Spa-medical hybrid creates operational complexity**
+
+Medical device + wet spa + high-throughput consumer facility is a weird stack.
+
+- Cleaning, infection control, accessibility, privacy, emergency protocols, staffing, and medical oversight are all nontrivial.
+
+- **Therapeutics are much further out**
+
+Focused ultrasound surgery/cancer destruction was mentioned as technically possible but not near-term.
+
+- Holz explicitly said imaging is the low-hanging fruit and therapeutics are scary/regulatory-heavy.
+
+- **Brand coherence risk**
+
+Midjourney is known for image generation; scanner/spa/medical infra is a major category jump.
+
+- Holz acknowledged the company may be “confusing for the next six months” as it announces more projects.
+
+## The “so what”
+
+- **Near-term reality:** Midjourney has built a real prototype full-body ultrasound CT scanner and is opening a San Francisco spa-like facility as the first deployment/testbed.
+
+- **Medium-term bet:** frequent, cheap, pleasant body imaging becomes a new consumer-health behavior.
+
+- **Long-term moonshot:** Midjourney wants to build global medical imaging infrastructure, potentially making full-body scans routine and AI-analyzable.
+
+- **Main skepticism:** the engineering demo is exciting, but the clinical/regulatory/economic case is still mostly unproven. The gap between “cool full-body images” and “safe, reimbursable, diagnostic healthcare product” is the whole ballgame.
 
 > AI News for 6/16/2026-6/17/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

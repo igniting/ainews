@@ -31,14 +31,41 @@ people:
   - alexalbert__
 ---
 
+We have covered [the Age of Async Agents](https://substack.com/redirect/be6daee6-c7f6-4781-8235-fefe8b72cc95) on the podcast:
 
+> *There has been a wave of companies building their own background agents from [Shopify](https://substack.com/redirect/0a4bbe50-8dbf-4049-a89e-bc0e6ab6a6c3) to [Stripe](https://substack.com/redirect/9d09134b-205d-43d6-957f-4fab8bebcd8f) to [Paradigm](https://substack.com/redirect/5f63ae4f-480b-494b-bd79-504f435b36f6) to [Razorpay](https://substack.com/redirect/8694507b-7d5d-4d05-b784-93f4d0e8b4d5), and even Cognition’s friends [Ramp](https://substack.com/redirect/234fbdc6-2b72-47fe-9e45-fcdc025411fc) have [built their own coding agent with other friend Modal](https://substack.com/redirect/c1a8f752-f675-42a0-a176-74e1f2ed4bbb).*
 
-**a quiet day.**
+And today it is time for Anthropic’s take on the situation with [Claude Tag](https://substack.com/redirect/9a613524-2f5c-46ec-9f08-2a8ac3e6b1f7):
+
+> **Claude** (@claudeai) — [5:12 PM · Jun 23, 2026 · 8.98M Views](https://substack.com/redirect/f55080a5-161c-488d-9506-7d4de38a2bb5)
+>
+> Introducing Claude Tag, a new way for teams to work with Claude. In Slack, Claude joins as a team member with access to the channels and tools you choose. Tag Claude in and delegate tasks to it while you focus on other work.
+
+Because this product does exist in various forms, there was some criticism, but overall this is a VERY significant next iteration in both the Claude and Claude Code form factor:
+
+- **Claude**: Web → Desktop → Slack (“[third major redesign of LLM UIUX](https://substack.com/redirect/84a45ca3-5205-45df-a73c-c71e99f4ca4a)”)
+
+- **Claude Code**: the Tag form now merges [65% of product PRs](https://substack.com/redirect/9af2cc1e-2f26-4e82-9bd7-971ad220dffb)
+
+As with all things Anthropic, the polish at launch is very good. From someone who has been watching the Async Agents space for a while, you might not appreciate:
+
+- Tag can **tag in coworkers** who own related code ([video](https://substack.com/redirect/12b71686-f796-486d-9fc0-3ce8327f03df))
+
+- Tag has **git webhooks** that can [wait for blocking dependencies for very long (days)](https://substack.com/redirect/3f3effd9-9cde-403b-bc11-5928e5e77423) periods (effectively achieving “stacked prompts” rather than “stacked diffs”)
+
+- Tag can [summarize threads](https://substack.com/redirect/b0598a82-fab6-4b13-9e2e-1c16638b9aa9) into **docs with action items**
+
+- Tag in ambient behavior mode:
+
+[responds to](https://substack.com/redirect/3be846bd-21e3-4e0f-970e-6ce32392bc58) channels **without being tagged **(aka reviewing each message if it needs a response)
+
+- [follows up](https://substack.com/redirect/503f0ef4-db77-40ca-a674-43556ba779f6) **across channels **(aka proactively syncing information from one channel to another)
+
+- [watches for](https://substack.com/redirect/25beb4d0-e163-4544-a7e9-b67e0c984891) thresholds to trigger and then attempts to fix if something broke, or if [an A/B test is successful](https://substack.com/redirect/6df8d337-e442-4a1f-8060-d0307c6debc4)
+
+Overall a very interesting harbinger for the future of work.
 
 > AI News for 6/22/2026-6/23/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

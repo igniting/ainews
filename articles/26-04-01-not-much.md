@@ -54,13 +54,9 @@ people:
   - zhihu_frontier
 ---
 
-
-**a quiet day.**
+Some notable mid tier model releases, but thankfully most companies respected that today is an awful day to launch anything. We’ll give [points to Liquid for best April Fools joke](https://substack.com/redirect/3e78aed2-7de1-48be-b656-a61bf224a514).
 
 > AI News for 3/23/2026-3/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -49,13 +49,17 @@ people:
   - scaling01
 ---
 
+Most people are still digesting the [massive Anthropic news](https://substack.com/redirect/0046db2b-60aa-412d-bcaa-a082ab715fd8) from yesterday.
 
-**a quiet day.**
+We’re taking the opportunity to solicit [the leading AI FDE’s](https://substack.com/redirect/6079bd69-affa-4f73-8e44-4b965c087d8b) in the world for AIE’s new Forward Deployed Engineer track, mirroring similar pushes from both [OpenAI DeployCo](https://substack.com/redirect/95d921cf-9524-4002-a9da-7a7625d207a9) and [Anthropic DeployCo](https://substack.com/redirect/4833c836-5246-4834-a60b-4c480e8d4164):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/b92541e3-151a-4f10-8226-b86cb12eaca0_2332x1344.png)](https://substack.com/redirect/7a476377-b353-4221-9d2a-f030fc23b9f7)
+
+as well as AIE’s new Founders program, where we are doing our version of the Startup Battlefield, a competitive pitch contest anchored by YCombinator’s Garry Tan and Howie Lu’s [$10 Million dollar Hyperagent ](https://substack.com/redirect/b07fdb9e-a545-4fb9-bf43-90c3ee5ac09d)contest. Sign up (and [book hotel](https://substack.com/redirect/2987fc9a-9132-4920-918d-aec51ee3a4ce)!) for details today if you are keen.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/aa6ef076-049b-4bd8-b183-4a49f1a913f8_2276x1306.png)](https://substack.com/redirect/2a82f6c5-c2e6-4ace-841a-2ba200f47cc5)
 
 > AI News for 5/28/2026-5/29/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -40,59 +40,45 @@ people:
   - alexalbert__
 ---
 
+It was Anthropic’s [second annual developer event](https://substack.com/redirect/028d8fe3-fe00-466c-805e-f674a338fc57) today, and the vibes were [immaculate](https://substack.com/redirect/2da76454-3148-4707-8319-0cffa656d204). No big model release, which some (miscalibrated) people were hoping for, but it was mostly [the SpaceX partnership announcement](https://substack.com/redirect/0b08f8a2-5dc9-415d-8daa-cd7c089b5b79) (on track to challenge [Claude’s biggest launch of all time](https://substack.com/redirect/6f5d21b2-442c-4840-9e17-18a635cb15a8)), [3 new features for Claude Managed Agents](https://substack.com/redirect/8dd49981-cdf3-4a49-a666-f5349cd24d34), and a recap/reintroduction/celebration of all that has been shipped in the past 6 months:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d591a434-a112-4fb9-829a-30ff2e4efbf5_2260x1442.png)](https://substack.com/redirect/933bfe44-aa03-4087-a803-eb6ee312cc27)
 
-> AI News for 5/5/2026-5/6/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
+[opening keynote](https://substack.com/redirect/028d8fe3-fe00-466c-805e-f674a338fc57)
 
+After [Elon signed off on it](https://substack.com/redirect/d9f1408e-0960-4ca2-b78b-0cf322323b4c), possibly [strategically](https://substack.com/redirect/1736c4ac-e55d-467b-81a6-91a668348385) just as his [lawsuit against OpenAI](https://substack.com/redirect/77ef929c-ca5a-438f-99b2-6eff819ca353) is in trial, Anthropic is taking over all of Colossus 1 with surprising speed (“[in the next few days](https://substack.com/redirect/09a4cbc6-d574-4d2b-b467-718567cbfa9f)”) which [some estimate](https://substack.com/redirect/f6582a3b-9485-4c08-bfd6-78f3f26b2ca2) to be a [roughly](https://substack.com/redirect/2ed9fffd-aa16-48ff-a7fc-875e2659cea5) **$5B/year deal**, making [xAI a neocloud](https://substack.com/redirect/d9a17425-b97f-4336-a9d5-50c9dedf43ad):
 
-It was Anthropic’s second annual developer event today, and the vibes were immaculate. No big model release, which some (miscalibrated) people were hoping for, but it was mostly the SpaceX partnership announcement (on track to challenge Claude’s biggest launch of all time), 3 new features for Claude Managed Agents, and a recap/reintroduction/celebration of all that has been shipped in the past 6 months:
+[![](https://substack-post-media.s3.amazonaws.com/public/images/1a49129f-2c6b-4bd5-bcbb-aa397b627218_1072x1064.png)](https://substack.com/redirect/aeb28c7e-e64b-4151-b355-662698924e20)
 
+The other big draw was the moderated session with the Amodei siblings, announcing [the 80x growth](https://substack.com/redirect/25509a49-545e-4574-b060-f5716a4add0d) and some commentary on [US and Chinese competitors](https://substack.com/redirect/cda74835-bf3a-453d-8622-bc7fe9517c6b):
 
-
-
-opening keynote
-After Elon signed off on it, possibly strategically just as his lawsuit against OpenAI is in trial, Anthropic is taking over all of Colossus 1 with surprising speed (“in the next few days”) which some estimate to be a roughly $5B/year deal, making xAI a neocloud:
-
-
-
-
-The other big draw was the moderated session with the Amodei siblings, announcing the 80x growth and some commentary on US and Chinese competitors:
-
-
-
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d1acd7ed-b0f8-4448-ac16-0dc71920093e_1354x872.png)](https://substack.com/redirect/59cab2e5-0137-4ae0-888a-ed8ac161ff22)
 
 The trends Dario is watching:
 
-Tiny Teams: He still thinks 2026 is the year we see a one person billion dollar company. “There is an enormous ability for one person or a tiny set of people to do a set of things that are incredible… Before, if you had an idea or vision there are so many resources you’d have to accumulate for several years in order to make that vision happen, and I think there’s a unique opportunity for single individuals or very tiny teams to do things that are incredible, where we move from the models are writing code, to the models are helping us think of software engineering as a task, to the models are helping us think of how can I build a business or economic unit as a task”.
+- **[Tiny Teams](https://substack.com/redirect/1c9b68de-c7eb-44b6-ac03-5c093ba680fd)**: He still thinks 2026 is the year we see a one person billion dollar company. “*There is an enormous ability for one person or a tiny set of people to do a set of things that are incredible… Before, if you had an idea or vision there are so many resources you’d have to accumulate for several years in order to make that vision happen, and I think **there’s a unique opportunity for single individuals or very tiny teams** to do things that are incredible, where we move from the models are writing code, to the models are helping us think of software engineering as a task, to the models are helping us think of how can I build a business or economic unit as a task”.*
 
-Multiagents: “starting with a team of smart people in a room and working our way up to a ‘country of geniuses in a datacenter’”
+- **[Multiagents](https://substack.com/redirect/db21924c-1ae1-4ed0-aa6b-159a1442fff7)**: “starting with a team of smart people in a room and working our way up to a ‘country of geniuses in a datacenter’”
 
-Enterprise Services: “Claude Code helps individuals to be more productive, but we’re increasingly going to help whole teams and organizations be more productive and more than the sum of its parts”.
+- **[Enterprise Services](https://substack.com/redirect/6d645af5-0170-4917-b1f7-f748d436a104): **“Claude Code helps individuals to be more productive, but we’re increasingly going to help whole teams and organizations be more productive and more than the sum of its parts”.
 
-Bottlenecks: Claude is of course speeding up Claude, but he thinks about Amdahl’s Law - Security, Verifiability - finding the bottlenecks in software engineering and removing them/speeding up the overall process.
+- **Bottlenecks: **Claude is of course speeding up Claude, but he thinks about [Amdahl’s Law](https://substack.com/redirect/e74dfa67-886f-4a5e-a127-f0343d28c2ba) - Security, Verifiability - finding the bottlenecks in software engineering and removing them/speeding up the overall process.
 
-
-The rest of the mainstage sessions included:
+The [rest of the mainstage sessions](https://substack.com/redirect/1605aa05-9f05-4499-aca6-9a37a5043183) included:
 
 Must know Claude Code updates:
 
-
-
+[![](https://substack-post-media.s3.amazonaws.com/public/images/410c6b30-1820-4dd4-b5b7-5bcaeb548a03_1790x990.png)](https://substack.com/redirect/81d830c7-4722-45ec-a37b-f5a8ca1138e4)
 
 More Outcomes content on the Inner vs the Outer Loop…
 
-
-
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8dee8da9-3dac-4336-a837-a7702e57f859_1354x840.png)](https://substack.com/redirect/c0c9f5db-a5a6-4880-8ce8-cf9087b700e1)
 
 … for automatic improvement of agents:
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/339addf2-fd81-4049-8f51-9042943b2fe5_1358x846.png)](https://substack.com/redirect/11abd782-ecc0-496a-90ee-c5c78eed455f)
 
-
-
-
-
-
+> AI News for 5/5/2026-5/6/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
 
 ---
 

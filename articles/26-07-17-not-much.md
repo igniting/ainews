@@ -54,13 +54,15 @@ people:
   - hqmank
 ---
 
+People continue to be impressed by [yesterday’s Kimi K3 launch](https://substack.com/redirect/358fc089-33bc-43c6-92b1-22f8407b873b). Congrats to [Databricks on their $188B Series M](https://substack.com/redirect/bfaa2359-1fdc-4c28-a028-e0d71c8b42a3) (watch [our pod on the latest Databricks narratives](https://substack.com/redirect/b7fe09e6-27db-4850-aee4-07bb98f2a374)) and [OpenRouter might get bought](https://substack.com/redirect/bb28110a-a11a-4822-89ad-37cc64b3dcdc) (watch [Alex Atallah’s keynote](https://substack.com/redirect/cf6338d4-efaf-4113-88c1-b9cc47dfaf7c)).
 
-**a quiet day.**
+On a slow news day, The most popular talk this week is Abhishek Bhardwaj’s Sandbox track keynote which recaps a year of growth since [his original work on Arrakis got him hired by Greg Brockman](https://substack.com/redirect/784034ec-3fc4-4b70-8f39-1161e01b5fef), and now building out the cloud infra behind [ChatGPT Work](https://substack.com/redirect/26bf3918-cc84-4f52-88cd-9df160ad647f) (upcoming episode!). Spoilers: if you think running agent sandboxes is just “run containers on Kubernetes”, 1) you havent been paying attention to our [E2B](https://substack.com/redirect/6139b6e9-2a1c-4f28-9831-5ec66ca7f910), [Daytona](https://substack.com/redirect/4166a945-8e3c-4293-b58d-8561aa22cb0c) and [both Modal podcasts](https://substack.com/redirect/0f4d299a-e3b6-48ed-ac50-62d7c9f9fb44), and 2) you might be overtuned to compute problems and are probably underestimating the importance of storage/filesystems…
+
+If you do leading AI work in NYC, especially for AI x Finance, [speaker applications for AIE NYC 2026](https://substack.com/redirect/3c604cdc-15a5-421a-9772-32ee3333ce4d) opened today.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/OqM67QG_Ikk)](https://www.youtube.com/watch?v=OqM67QG_Ikk)
 
 > AI News for 7/16/2026-7/17/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

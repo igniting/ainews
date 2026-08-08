@@ -15,12 +15,20 @@ Extraction is fiddly because the issue format changed twice:
 
 - Late 2023 / early 2024 issues run  lede -> "## <Server> Discord Summary".
 - From 2024-03 onwards they run       lede -> "# AI Twitter Recap".
-- From 2026 onwards the lede is a constant boilerplate line, "**a quiet day.**",
-  on 104 of 152 issues, sometimes followed by a "Top Story" section.
+- On days the editor calls quiet, the "AI News for <dates>" blockquote comes
+  first and the lede follows it, rather than the other way round.
 
 So the cut point is whichever of those headings comes first, and the standard
 "AI News for <dates>. We checked N subreddits..." blockquote is stripped, along
 with images, Astro template tags and the table-of-contents marker.
+
+A caution about what this measures. Until 2026-08 the corpus took its lede from
+the GitHub mirror, where 104 of 152 issues in 2026 carry nothing but the
+boilerplate line "**a quiet day.**" — which read as an editor going quiet, and
+was nothing of the kind. The mirror was dropping the lede; the sent email still
+had it. `analysis/extract_commentary_gmail.py` restored it for 2026-01-26
+onward, and the 2026 median went from 3 words to 183. Anything measured on this
+surface before that date is measuring the mirror.
 
 Usage:
     python3 analysis/methods/editorial.py
@@ -38,6 +46,9 @@ import sys
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
 ARTICLES = REPO / "articles"
 OUT = REPO / "analysis" / "editorial.md"
+
+# Total words in articles/, recomputed after the 2026 commentary was restored.
+CORPUS_WORDS = 15_433_052
 
 FRONT = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
 RECAP = re.compile(r"^#\s+AI (Twitter|Reddit|Discord) Recap.*$", re.M | re.I)
@@ -113,7 +124,7 @@ def main(argv: list[str] | None = None) -> int:
         "from sampled sources.",
         "",
         f"**{total:,} words across {sum(issues.values())} issues — "
-        f"{100 * total / 15265094:.1f}% of the corpus.**",
+        f"{100 * total / CORPUS_WORDS:.1f}% of the corpus.**",
         "",
         "| Half | Issues | Editorial words | Median per issue | Boilerplate-only |",
         "|---|---|---|---|---|",
@@ -130,14 +141,15 @@ def main(argv: list[str] | None = None) -> int:
     for name in PATTERNS:
         lines.append(f"| `{name}` | " + " | ".join(
             f"{hits[name][p] / words[p] * 10000:.1f}" for p in periods) + " |")
-    lines += ["", "> **Caveat.** This layer is thin — 10,000 to 31,000 words per half-year",
-              "> against 15.3M for the corpus — and from 2026 it is mostly the boilerplate",
-              "> line `**a quiet day.**`, which carries no information about the day. Treat",
-              "> the 2026 column as an upper bound on what can be said.", ""]
+    lines += ["", "> **Caveat.** This layer is thin — 13,000 to 33,000 words per half-year",
+              "> against 15.4M for the corpus — so a handful of issues can move a column.",
+              "> The dip through 2025 is real; the far deeper 2026 dip this table used to",
+              "> show was not, and came from the mirror dropping the lede rather than the",
+              "> editor dropping it. See `analysis/extract_commentary_gmail.py`.", ""]
 
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {OUT.relative_to(REPO)}")
-    print(f"{total:,} editorial words, {100 * total / 15265094:.2f}% of the corpus")
+    print(f"{total:,} editorial words, {100 * total / CORPUS_WORDS:.2f}% of the corpus")
     for h in sorted(issues):
         print(f"  {h}  {issues[h]:>3} issues  {words[h]:>7,} words  "
               f"median {statistics.median(lengths[h]):>5.0f}  boilerplate {boiler[h]:>3}")

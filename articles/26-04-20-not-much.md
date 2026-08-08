@@ -48,13 +48,25 @@ topics:
 people: []
 ---
 
+*Two days left before Early Bird ends for [AI Engineer World’s Fair](https://substack.com/redirect/e6b7dc18-c847-4393-b7c1-ed41f0904506) this Summer in SF. This is will be THE BIG ONE of the year - lock in discounts up to $500 (refundable).*
 
-**a quiet day.**
+[DeepSeek V4 rumors](https://substack.com/redirect/1dba29c4-a399-4e83-b68d-e40300ec8a19) are back, and we learned our lesson not to get too excited, but in their deafening silence [since v3.2](https://substack.com/redirect/893c4e1f-c5d2-41b6-baf4-1d3f56a8252c), Moonshot has owned the crown of [leading Chinese open model lab for all of 2026 to date](https://substack.com/redirect/fa31a58a-0cb0-46a7-bcf2-db94b5eea9ef), and K2.6 refreshes the lead that [K2.5 established in January](https://substack.com/redirect/c0800f77-c716-4046-bb49-fbc190f6ac31), with (presumably) more continued pre/posttraining (this time, details of how much more training were not disclosed). Comparing the numbers from the two launches 3 months apart demonstrates the staggering amount of progress:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/ba3bb8e1-94f7-4acd-a98b-e7d2ce0d577e_2886x1483.png)](https://substack.com/redirect/b8e14796-5eba-4d95-a73d-489d511c46b5)
+
+Moonshot/Kimi continues to compete at a level far above “just being open source versions of Frontier models” (though it is one of [the three Chinese labs accused by Anthropic in Feb](https://substack.com/redirect/7fda8976-46bb-43dd-88b2-5a6dd104b73d)) - they are taking on [Gemini 3.1](https://substack.com/redirect/adc1252d-2667-41e1-be48-6bca834d11e8) in their home turf of frontend design, touting a 68.6% win+tie rate vs Gemini 3.1 Pro:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d63fd66f-c5ac-4e9e-ba01-cc7669f946c3_1478x1386.png)](https://substack.com/redirect/5bdae8f2-9e7d-43f9-a525-c96b94ee0748)
+
+And scaling out the pioneering work they did with Agent Swarm RL last edition:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/e61ca9f0-f912-48cd-b7a7-fa1880cdcfcb_1454x888.png)](https://substack.com/redirect/16812593-9c19-4954-b51f-4347d1dde24c)
+
+And, with OpenClaw being the flavor of the quarter, their own **ClawBench **and a minor rebrand of their Agent Swarm work in to "Claw Groups”.
+
+Overall not as *technically *impressive in isolation as K2.5, but **overall** still showing far more execution and imagination and drive than their peers, an impressive update and incredible gift to the ecosystem.
 
 > AI News for 4/18/2026-4/20/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

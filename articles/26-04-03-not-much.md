@@ -58,13 +58,13 @@ people:
   - anomalistg
 ---
 
+We covered this yesterday, but [positive Gemma reviews](https://substack.com/redirect/715c4143-e89c-4c5a-8dab-542b8836f796) keep streaming in.
 
-**a quiet day.**
+Early analytics from our Marc Andreesen pod are already pointing towards it being one of the top Latent Space pods of all time. We’ll hear more from the creators of both live from London next week. Livestream links for [AIE Europe](https://substack.com/redirect/be62550a-a81a-4241-befa-83de6e6df000) next week is now up, including a great OpenClaw song. [Hit the bell](https://substack.com/redirect/be62550a-a81a-4241-befa-83de6e6df000) to help promote it in the algorithm please and thank you!
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/knx2wrILP1M)](https://substack.com/redirect/4aa74e62-6fb1-41eb-bb79-6fa8caff7c81)
 
 > AI News for 4/3/2026-4/4/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

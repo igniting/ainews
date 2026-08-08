@@ -54,13 +54,27 @@ people:
   - sydneyrunkle
 ---
 
+One topic that has come up again and again across Latent Space and AI Engineer is how much harder everyone seems to be working:
 
-**a quiet day.**
+- ([friend of the show](https://substack.com/redirect/82ef1b22-4846-43a5-9572-9cc609006caa)) Aaron Levie reports that “[AI is not causing anyone to do less work right now, and similar to Silicon Valley people feel their teams are the busiest they’ve ever been.](https://substack.com/redirect/b7e29c4f-f8ff-4ab2-a98b-35723a4d271e)”
+
+- Tyler Cowen argues from an economics standpoint that you should work much harder [RIGHT NOW](https://substack.com/redirect/b299d21d-f515-4af8-a280-dcb905e23875) whether you believe AI will lower your value OR increase your value.
+
+- [Simon Last of Notion commented on today’s pod](https://substack.com/redirect/2a5cff8e-7299-4403-b4c1-25e6258879cc) that he’s back to sleepless nights and 24/7 work for the first time since giving up on ML model training, but this time because of agent layer [token anxiety](https://substack.com/redirect/297628e9-0298-4c86-82fa-f1104466bdf6).
+
+How can it both be true that “Agents are doing more work and yet Everyone is working harder”? How can it be true that [Claude Mythos has been used internally for 2 months](https://substack.com/redirect/3eaa5146-1ad7-4a70-ba64-7016bb8809cd), and yet [Claude keeps going down](https://substack.com/redirect/83333f16-43ae-4a6e-aa56-5f67c4728bdb)? How can it be true that Model and Agent Labs are more productive than ever and yet [acquihiring](https://substack.com/redirect/b428c6a3-0869-4e54-87ab-3accaf0a0421) and [acquiring](https://substack.com/redirect/51d15867-5384-4ed8-91c0-0720fdd901de) more than ever?
+
+A simple thought exercise we’ve made before is the “[Turkey problem](https://substack.com/redirect/c55cea29-46f6-434e-852f-1614d022abd0)”, where, based on real evidence and an abundance of historical data, Turkeys should conclude that life is fantastic and all of humanity is set up to make turkeys well fed as far as they’ve ever experienced. Turkey doomsayers would be alarmist, crackpots, and then ignored. Until Thanksgiving.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/be710fc7-d4bc-4898-8998-0a28234eb8ad_1562x905.webp)](https://substack.com/redirect/33ebb759-5583-4b7e-9808-813c562f5253)
+
+Are engineers, or all knowledge workers in general, turkeys, in this scenario? Should our “elasticity” and value of work be increasingly positive, right up to some crossover point we become [horses](https://substack.com/redirect/5a5919fc-cee7-404d-9da3-432b75fb8286)? Now that [SWE-Bench is saturated](https://substack.com/redirect/c460aa80-c741-441d-b041-8c96d766b047) (with [SWE-Bench Pro soon to be, Mythos is at 78%](https://substack.com/redirect/685b7e69-885e-42cc-a388-aeb660f90060)) and [GDPval rates GPT 5.4 ](https://substack.com/redirect/916a32bf-3a5f-4ee6-82e6-f7505546f9f1)as better than/equal to human experts 83% of the time in most swathes of the economy, what’s left?
+
+Notion is working on [Notion’s Last Exam](https://substack.com/redirect/2a5cff8e-7299-4403-b4c1-25e6258879cc). Greg and Francois are have set out [ARC-AGI-3](https://substack.com/redirect/5b5b56ea-9a6d-4bad-92f1-068fc2b2fd40). I’m working on the next frontier of coding evals. But it all seems somewhat moot if [hardware is destiny](https://substack.com/redirect/992a394c-fbdd-4961-a240-0694d66bb6ed) and AGI is predictably a 20GW supercluster away…
+
+…or are there [more valuable problems left](https://substack.com/redirect/aacb6264-288d-4366-abb2-1e386fb00ef2)?
 
 > AI News for 4/3/2026-4/4/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -35,13 +35,17 @@ people:
   - yuchenj_uw
 ---
 
+We commented on this [last Thursday](https://substack.com/redirect/f01e20c3-6623-4fe5-85e6-1716c483e0f2), but Gemma 4’s continued deployment and positive reviews over the weekend has pushed it to **[around 2 million downloads in its first week](https://substack.com/redirect/d942f9a5-5477-4a8e-aa9b-fae37d25abd0)**!
 
-**a quiet day.**
+(For contrast, **[Gemma 3](https://substack.com/redirect/4e459a9b-8ef0-4ea5-9fd4-a0638754830f)**[ totaled 6.7m downloads](https://substack.com/redirect/4e459a9b-8ef0-4ea5-9fd4-a0638754830f) in the past year, **[Gemma 2](https://substack.com/redirect/ae4c48d7-8be6-4f98-9626-75620ee3a6f6)** had 1.4m downloads since Jun 2024 launch, whereas **Qwen 3.5** has gained about **27m** downloads inclusive of the 1.5 months [since their 397B-A17B flagship model drop](https://substack.com/redirect/6ec4e18d-365e-4c12-8879-f90819185b90))
+
+The [Gemma 4 keynote](https://substack.com/redirect/e239cf31-aa90-456b-9e6b-94a7dea9b814) will be live in 3 days from London, which you can bookmark now:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/_zdroS0Hc74)](https://substack.com/redirect/e239cf31-aa90-456b-9e6b-94a7dea9b814)
+
+Separately, we’d also highlight the Hermes Agent hype - our friends at the [Turing Post](https://open.substack.com/pub/turingpost?utm_source=mentions) have a good writeup on [the Hermes vs OpenClaw differences](https://substack.com/redirect/cbc1b184-0469-44d7-93dc-a6ce16bce9d7).
 
 > AI News for 4/4/2026-4/6/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

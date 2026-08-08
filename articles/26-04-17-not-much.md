@@ -52,13 +52,17 @@ people:
   - gdb
 ---
 
+In an opportune coinciding of big three letter conferences, the [TED talk](https://substack.com/redirect/11e76f1f-8211-45fb-9032-ea6a96c2f03d) and the [AIE talks](https://substack.com/redirect/fd4cc243-5649-497c-b22e-2295be8a1805) of Peter Steinberger dropped today. To the general public, the inspiring story of OpenClaw was delightfully [told onstage](https://substack.com/redirect/31e9ece1-9ed0-4dca-b8f0-59b9f093f6ee), which recaps all the highs:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d938eb29-488f-4a91-9b9d-7ba5dabf55af_1416x1022.png)](https://substack.com/redirect/e8b5c6e1-aa81-4940-b832-7f563a43ac88)
+
+To the engineering audience, it was more sober, talking about the unprecedented levels of security incidents (60x more reports than curl, at least 20% of skill contributions malicious) and scaling issues involved in maintaining the fastest growing open source project in history:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/zgNvts_2TUE)](https://substack.com/redirect/c2aa4c5e-daa0-4fda-af26-19b038536cde)An AMA moderated by me is included at the end.
+
+Contrast them, thoughts welcome.
 
 > AI News for 4/16/2026-4/17/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

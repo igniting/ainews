@@ -45,13 +45,19 @@ people:
   - ramplabs
 ---
 
+*This is the LAST WEEKEND to take the [AI Engineering Survey](https://substack.com/redirect/41398279-86f8-41bd-b0d5-e644e2eba246) and get >$2k in credits and and a chance for $2000 worth of [AIE WF tickets](https://substack.com/redirect/b8c11cae-ec6e-4a47-823c-6a1da8fbe231)!*
 
-**a quiet day.**
+Just as the whistle kicked off on [the USA v Paraguay game](https://substack.com/redirect/d0c466d4-0f9d-449a-bda2-89d020ec2556), Anthropic dropped a bombshell to end a remarkably eventful week: Fable and Mythos, released just [3 days ago](https://substack.com/redirect/a2f9fa38-5363-4ff6-8a52-ef0e0afe5d89), are now revoked for ALL customers due to [possible jailbreak](https://substack.com/redirect/e7a74522-442d-4a00-bb41-9fa7450c19b7) being a national cybersecurity risk.
+
+> **Anthropic** (@AnthropicAI) — [12:50 AM · Jun 13, 2026 · 41.2K Views](https://substack.com/redirect/14290172-8a1a-4e40-b4b6-b4367ca9a9a8)
+>
+> The US government, citing national security authorities, has issued an export control directive to suspend all access to Fable 5 and Mythos 5 by any foreign national, whether inside or outside the United States, including foreign national Anthropic employees. The net effect of
+
+We steer clear of commenting on politics and policy, even though this is not Anthropic’s first tangle with the US government, but surely this development, affecting all customers worldwide rather than just USgov employees and vendors, will be noteworthy for the precedent it sets, even as it is unclear how actually technically legitimate this claim is (Anthropic seems to “believe this is a **misunderstanding**” because “the government has only given us **verbal** evidence of a potential **narrow, non-universal** jailbreak”.)
+
+It is notable that Open Source AI advocates are once more [up in arms and trending](https://substack.com/redirect/93c1cb6e-4f16-4725-87b3-427588d6f50b).
 
 > AI News for 6/11/2026-6/12/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

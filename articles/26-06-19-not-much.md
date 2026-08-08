@@ -48,13 +48,21 @@ people:
   - teknium
 ---
 
+GLM 5.2 is still trending very hard, but you [knew that already](https://substack.com/redirect/3976cce7-c506-4ed4-bec4-61be78c7d901).
 
-**a quiet day.**
+Regular Tickets for [AIE WF 2026](https://substack.com/redirect/31635b40-5441-456f-b61f-91303e772c6f) will sell out by Monday. If you’re a Latent Space subscriber ($80 a year), a limited-time only $250 discount for select ticket classes is included below for the AIE-curious who have not yet got tickets.
+
+**Attendees also get $40k in sponsor credits**, from Warp, Datadog, SourceGraph, Stripe, Fireworks, and more.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/53ab5745-2cb8-4b37-b574-e6af9fa01f69_1854x1166.png)](https://substack.com/redirect/883e8759-a2e5-4f12-a5de-e0eb8bd13089)
+
+## Latent Space subscribers — $250 offer for AIEWF
+
+Use code LATENTSPACEPROMO at checkout for $250 off engineering and expo tix: [https://app.ai.engineer/e/ai-engineer-worlds-fair-2026?discount=LATENTSPACEPROMO](https://substack.com/redirect/9087c779-288f-4132-8a94-86d425bf6b37) . Unfortunately no refunds if you already bought a ticket, this is a limited time promo just for last minute sales this weekend for categories where we have more flex room.
+
+Thanks for being a LS reader and see you in SF!
 
 > AI News for 6/18/2026-6/19/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

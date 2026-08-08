@@ -54,15 +54,31 @@ people:
   - sebastienbubeck
 ---
 
+*Take the [2026 AI Engineering Survey](https://substack.com/redirect/2739fab5-57fd-436a-a30d-565d332ad520) and get >$2k in credits and [AIE WF tickets](https://substack.com/redirect/70b81935-6694-4d53-b5f5-44257d1434c7)!*
 
+Readers like when we report no news, but our second favorite to that is when we can simply reinforce a trend you should be aware of. In April we highlighted [the Inference Inflection](https://substack.com/redirect/5cce8d0d-998e-4680-a9e0-8daab20d8fc8), and If today’s headline reminds you of [last week’s headline](https://substack.com/redirect/e917ab23-69d6-42ea-bf80-eea413ff5280), it is exactly the point we are making.
 
+[![](https://substackcdn.com/image/fetch/$s_!_B64!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fab2507aa-9755-4e9d-9cbf-4c7f755a8527_1086x280.png)](https://substack.com/redirect/e917ab23-69d6-42ea-bf80-eea413ff5280)
 
-**a quiet day.**
+#### [[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer](https://substack.com/redirect/e917ab23-69d6-42ea-bf80-eea413ff5280)
+
+[Latent.Space](https://substack.com/profile/89230629-latentspace)
+
+·
+
+May 22
+
+[Read full story
+
+](https://substack.com/redirect/e917ab23-69d6-42ea-bf80-eea413ff5280)
+
+With the pace of AI fundraising these days, our general policy is to only cover startups when they cross decacorn status (>$10B) - but only when confirmed, and today’s news of [Fireworks’ $15B round](https://substack.com/redirect/27d0d51a-6682-450b-91e5-4d4168298f7e) (“in talks”, 3.75x in 7 months, [our podcast here](https://substack.com/redirect/6470b8e2-53bd-4bfe-863d-561a4386ae9d)) and [Baseten’s $11B round](https://substack.com/redirect/b9917e73-d61c-40e9-ace0-0298045ed335) (“is raising”, 2.2x in 3 months) is a bit premature, but the pace of the pickup in Inference land and unicorn to decacorn progression is too juicy not to serve as headline story today, with the [$113M OpenRouter Series C](https://substack.com/redirect/4c3f5226-138d-45b4-a187-c5d93de0b4ab) (5x volume in 6 months) as the cherry on top: if you are gonna do multimodel inference, you are gonna need a router.
+
+> **OpenRouter** (@OpenRouter) — [2:16 PM · May 26, 2026 · 224K Views](https://substack.com/redirect/2e1838cd-7b58-426d-884e-c75fb01449d1)
+>
+> Today we’re announcing our $113M Series B led by @CapitalGVC. Over the last 6 months, weekly volume on OpenRouter grew from 5T to 25T tokens as AI rapidly shifts from experimentation into production. We’re excited for what comes next.
 
 > AI News for 5/23/2026-5/26/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

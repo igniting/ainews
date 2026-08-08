@@ -52,13 +52,21 @@ people:
   - lvwerra
 ---
 
+*Take the [2026 AI Engineering Survey](https://substack.com/redirect/e56f96c8-b76c-4307-9d88-79dcd608c712) and get >$2k in credits and [AIE WF tickets](https://substack.com/redirect/63787e05-531d-4f6f-8a55-e8d0a093fdd4)!*
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0607846c-4654-4352-83ef-e0dd6e2b580a_1086x280.png)](https://substack.com/redirect/c101f834-a7e0-4b4c-9867-95523d3f1162)
+
+Congrats to all our past guests who reached huge milestones this week:
+
+- **[Turbopuffer](https://substack.com/redirect/a62daacb-4d78-4ff6-8263-0211b652e8d0)**: $100M ARR and profitable ([our podcast](https://substack.com/redirect/44bbec44-ebbc-4f8b-b38c-b1b015d86a4d))
+
+- **[Exa](https://substack.com/redirect/c598e287-ae25-45ed-989a-46026190f9ec)**: $250M@$2.2B Series C ([our podcast](https://substack.com/redirect/22d4acb9-a70a-42e3-80b4-e837787b9afd))
+
+- **[Modal](https://substack.com/redirect/c4d60369-eee2-4673-8b8e-c2f4515a07d4)**: $355M@$4.7B Series C ([our podcast](https://substack.com/redirect/7fc7e56e-9785-4c6b-b375-af77a1bc0053))
+
+We really need to be raising that Latent Space fund soon… but meanwhile.. **help us out** by taking the [2026 AI Engineering Survey](https://substack.com/redirect/e56f96c8-b76c-4307-9d88-79dcd608c712) and get >$2k in Notion and Vercel credits and [AIE WF tickets](https://substack.com/redirect/63787e05-531d-4f6f-8a55-e8d0a093fdd4)!
 
 > AI News for 5/20/2026-5/21/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

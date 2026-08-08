@@ -50,13 +50,87 @@ people:
   - alibaba_qwen
 ---
 
+Thursdays are the heaviest days for AI releases, and even though OpenAI scored a victory over Anthropic in launching the new [ChatGPT Voice](https://substack.com/redirect/d3b21dca-fa04-443f-b875-4c86f5053a73) (consumer) and [OpenAI Presence](https://substack.com/redirect/2fb7c873-0bde-460e-b894-5552bf872d56) (enterprise) and getting more impressions than [Claude Voice](https://substack.com/redirect/cfa7982a-91d5-44ce-85df-0a8451cbc78a) today (a completely accidental coincidence in timing, we are sure), neither seem as monumental as [BFL’s launch of FLUX 3 Video](https://substack.com/redirect/47839773-2610-44c5-a673-d5cde183b27e) today:
 
-**a quiet day.**
+> **Black Forest Labs** (@bfl_ai) — [3:08 PM · Jul 23, 2026 · 576K Views](https://substack.com/redirect/47839773-2610-44c5-a673-d5cde183b27e)
+>
+> Introducing FLUX 3. One multi-modal model for Image, Video, Audio and Action-Prediction. Creations are truer to life in every kind of style. FLUX 3 Video is now available in early access (link below). Jointly trained in one unified architecture, our model can be extended to
+
+We last covered BFL in our very well received [Anjney Midha podcast](https://substack.com/redirect/7bea54e0-afdd-479a-bcad-58ac3f7cfb67):
+
+[![](https://substackcdn.com/image/fetch/$s_!6XAi!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F202359797%2F8dbbb3fa-e808-473c-af72-b9aee4fe0026%2Ftranscoded-1781652240.png)](https://substack.com/redirect/7bea54e0-afdd-479a-bcad-58ac3f7cfb67)
+
+#### [The Professor of Outputmaxxing — Anjney Midha, AMP](https://substack.com/redirect/7bea54e0-afdd-479a-bcad-58ac3f7cfb67)
+
+Jun 18
+
+[Listen now
+
+](https://substack.com/redirect/7bea54e0-afdd-479a-bcad-58ac3f7cfb67)
+
+Most GenMedia people will remember the BFL homepage when they initially launched Flux 1 in 2024, [hinting at video models next](https://substack.com/redirect/b366f015-a777-4df1-868b-2fd8249bf307), with their logo in a forest. Well, 2 years later, it’s finally real:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/2704873d-cd6d-4867-9806-355bf9ca2c93_2258x1460.png)](https://www.latent.space/i/208288309?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2704873d-cd6d-4867-9806-355bf9ca2c93_2258x1460.png)
+
+The [blogpost](https://substack.com/redirect/50c3bf94-3acc-4f05-a451-013c835dc699) outlines Self Flow, covering ALL their modalities together with strong preference claims:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/3ea45a78-e130-413e-9ddb-b4b34e406782_3040x1256.png)](https://substackcdn.com/image/fetch/$s_!HINz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ea45a78-e130-413e-9ddb-b4b34e406782_3040x1256.png)
+
+**“**Its core capabilities include the following (**all outputs come with native audio generation**):
+
+- Text-to-video generation.
+
+- Image-to-video generation, either continuing from a starting frame (“animation”) or using images as visual references.
+
+- Video-to-video generation from a reference clip, carrying central elements of a source video - for instance the same character - into a new scene or context.
+
+- Generative video-audio continuation from input video and audio.
+
+- Keyframe-to-video generation for controlled transitions between defined moments.
+
+- Multilingual dialogue.
+
+- A broad range of visual styles and aspect ratios, extending far beyond conventional cinematic output.
+
+- Agentic chaining of individual clips into longer, multi-shot sequences.
+
+- High style diversity -- FLUX 3 Video easily handles ranges of styles from candid camcorder footage to animation and cinematics.
+
+- Strong typography generation and animated designs.”
+
+Some of the above are SOTA features from other frontier lab models, like we discussed in **[our Grok Imagine pod](https://substack.com/redirect/c71f681c-a063-4110-bc7a-9d2a4572698f)**, so the community has very much been put on notice that there has now been independent, perhaps SOTA, reproduction of these capabilities, with an open weights Dev version on the way.
+
+[
+
+## Why Video Agent models are next — Ethan He, xAI Grok Imagine
+
+](https://substack.com/redirect/c71f681c-a063-4110-bc7a-9d2a4572698f)
+
+Jun 1
+
+[![](https://substackcdn.com/image/fetch/$s_!VqZ9!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F200078058%2F18b60925-5d6b-45ed-8314-dbe0dd70fc79%2Ftranscoded-1780294263.png)](https://substack.com/redirect/c71f681c-a063-4110-bc7a-9d2a4572698f)
+
+[
+
+We’re announcing AIEWF speakers this week! Take the AI Engineering Survey!
+
+](https://substack.com/redirect/c71f681c-a063-4110-bc7a-9d2a4572698f)
+
+[Listen now
+
+](https://substack.com/redirect/c71f681c-a063-4110-bc7a-9d2a4572698f)
+
+As if this release wasn’t enough, the team also announced **[FLUX3-mimic](https://substack.com/redirect/f97cc2ae-91d7-4021-ae24-f54c488c0c52)**, which proves that the FLUX 3 model is learning a sufficient world model capable of driving robots…
+
+> **Black Forest Labs** (@bfl_ai) — [3:08 PM · Jul 23, 2026 · 14.5K Views](https://x.com/bfl_ai/status/2080309024806125879)
+>
+> Action: An early version of FLUX 3 is now running on robots. @mimicrobotics was one of the first partners to gain early access to FLUX 3. Together we developed FLUX-mimic, a video-action model combining the FLUX 3 backbone with mimic's expertise in robot learning for dexterous
+
+… and predicting their impact in real factory settings…
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/ccda8b0c-838f-4429-84dd-e7afada66480_2070x1580.png)](https://www.latent.space/i/208288309?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccda8b0c-838f-4429-84dd-e7afada66480_2070x1580.png)
 
 > AI News for 7/22/2026-7/23/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

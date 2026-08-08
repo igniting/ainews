@@ -52,13 +52,29 @@ people:
   - corbtt
 ---
 
+We thoroughly enjoyed [the charismatic Simon Eskildsen of Turbopuffer](https://substack.com/redirect/845ea033-dc49-4547-8d77-e05ba35497c3) on today’s pod, and highly encourage listening in even if you’re not a database nerd:
 
-**World Models are all you need.**
+[![](https://substackcdn.com/image/fetch/$s_!JIQL!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F190777516%2Ff7a9aba8-7fe1-4ab1-a5c6-c6a9d16344dc%2Ftranscoded-1773352613.png)](https://substack.com/redirect/845ea033-dc49-4547-8d77-e05ba35497c3)
+
+#### [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Simon Hørup Eskildsen of Turbopuffer](https://substack.com/redirect/845ea033-dc49-4547-8d77-e05ba35497c3)
+
+Mar 12
+
+[Read full story
+
+](https://substack.com/redirect/845ea033-dc49-4547-8d77-e05ba35497c3)
+
+As for today’s op-ed, it’s a quiet day. This comment [from Aidan](https://substack.com/redirect/f64dda1a-df8d-4167-aa63-87471f0cf58b) is currently living rent-free in my head:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/4fa1057c-b22d-4085-a460-34919a311581_1180x422.png)](https://substack.com/redirect/646c7952-eec9-47f3-8f52-8c306a1d0f3c)
+
+[tweet](https://substack.com/redirect/f64dda1a-df8d-4167-aa63-87471f0cf58b)
+
+Tyler Cowen has noted [The high-return activity of raising others’ aspirations](https://substack.com/redirect/5cce4079-3a4f-483b-8316-7fb539493c5d) 8 years ago, and it is commonly the biggest regret we see in others and the biggest regret I have had in my last 3 years covering and tinkering in AI. The people [just on the right side of insane](https://substack.com/redirect/12968cd7-2cff-43ac-9655-fdb8af5ed789) have pushed LLMs to their limits and benefited, whereas the pragmatic people who judge and manage LLMs as they were at their time, mostly didn’t go anywhere.
+
+So a fun question to ask an LLM, which we walk through in our upcoming Claude Cowork pod, is: **how can I be more ambitious than what I’m currently doing?**
 
 > AI News for 3/11/2026-3/12/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

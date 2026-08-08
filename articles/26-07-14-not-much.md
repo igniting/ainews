@@ -56,13 +56,43 @@ people:
   - andykonwinski
 ---
 
+[Yesterday’s headline story](https://substack.com/redirect/5233f302-74b6-44b7-886e-fff316d40ec0) became even more true, with Superapp usage adding yet another 1M users since we last wrote:
 
-**a quiet day.**
+> **swyx** (@swyx) — [10:43 PM · Jul 14, 2026 · 10.4K Views](https://substack.com/redirect/0431c966-69eb-4770-9039-5256d1a38b8e)
+>
+> Did... Codex just overtake Claude Code? 24.5 hours ago Tibo announced 6M active users. this means Codex usage jumped 1M in ~ONE DAY. the last user number we heard from Claude Code was 2M in Feb: https://t.co/jghFZlpjEq more analysis within, but this is very big if true. https://t.co/cMw1QUyj9C
+
+In other news, [Richard MacManus](https://open.substack.com/users/232063-richard-macmanus?utm_source=mentions) published his final AIEWF26 recap of recaps:
+
+[
+
+## 5 Trends That Defined AI Engineering at World’s Fair 2026
+
+](https://substack.com/redirect/f5ef714f-f2c8-49e8-96f0-8d3f2c4d7eed)
+
+[Richard MacManus](https://substack.com/profile/232063-richard-macmanus)
+
+·
+
+11:21 PM
+
+[![](https://substackcdn.com/image/fetch/$s_!3Be9!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4e070d1-3be3-48a9-a86b-ceaf34f4577b_1672x941.png)](https://substack.com/redirect/f5ef714f-f2c8-49e8-96f0-8d3f2c4d7eed)
+
+[
+
+swyx’s note: thanks to Richard for covering AIE while I was working on the conference itself! Make sure you have opted into the AINews feed to get our weekday updates. AIE next returns to NYC, Oct 12…
+
+](https://substack.com/redirect/f5ef714f-f2c8-49e8-96f0-8d3f2c4d7eed)
+
+[Read full story
+
+](https://substack.com/redirect/f5ef714f-f2c8-49e8-96f0-8d3f2c4d7eed)
+
+Including coverage of [Addy Osmani’s excellent keynote](https://substack.com/redirect/498cc22d-1be2-4203-8b13-2ec278230054) covering what AI engineers should continue doing even when the cost of code generation trends to zero:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/n97BCfyFIvw)](https://substack.com/redirect/6833581e-20c5-4267-81c2-dcf9a266ac53)
 
 > AI News for 7/13/2026-7/14/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

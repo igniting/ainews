@@ -48,13 +48,21 @@ people:
   - hrishioa
 ---
 
+Sarah Guo is a [friend of the pod](https://substack.com/redirect/95a073f3-329c-4617-958e-010bac8bf79e) and [Queen of AI](https://substack.com/redirect/51dbd377-09ca-49bd-83ce-46393838eef5), and after our [Satya crossover pod](https://substack.com/redirect/a59a0912-c038-44c5-9ae1-8d826e1bf908) (great [recap here from Gokul Rajaram](https://substack.com/redirect/e89523ea-a061-4fbf-a8da-6e9e5c2c4d7a)) wrote an excellent article on [her Substack](https://substack.com/redirect/1b923cbc-9186-4435-b1be-88bcecde8dfa). Go read it, and come back for this reaction:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/709bf7b6-3173-4a7f-9099-fcabd2ebd438_1954x2078.png)](https://substack.com/redirect/1d0e5cf1-ec0f-483a-8a8e-12cf0c89ce2a)
+
+This framework (based on [legibility, another worthwhile concept if you are unfamiliar](https://substack.com/redirect/3ccb04e0-34cc-43bb-9ee8-e304eae51fce)) simultaneously addresses a lot of the themes we have discussed on the Satya pod, but also Latent Space over the last two years:
+
+- **The Place of Open Models:** With Braintrust in 2024 we were [maximally bearish on Open Model adoption](https://substack.com/redirect/09b73652-67af-434f-9f28-10b299021da5), only to turn around by our [Pmarca](https://substack.com/redirect/fff65e47-d30e-4dd0-9811-9540feed0289), [Cursor](https://substack.com/redirect/35eb35ed-0b3f-4602-a993-c6bc47ab5427), and [Notion in 2026](https://substack.com/redirect/72dfc94a-2595-4fc0-8649-b37ed49dc742) pods
+
+- **[Agent Labs vs Model Labs](https://substack.com/redirect/68880dec-c4ff-439f-87a1-dfb18b3249b1): **Sarah (a Cognition investor) echos **[the Devin is in the Details](https://substack.com/redirect/dffcb878-bbf8-42b0-8906-8ce4f51b2479)**: “An application earns its place in the untrainable corner by **doing unglamorous work**: arranging a company’s private reality so a model can act on it, handing the model the tools to act, working with the customer to change the reality of its workforce. A company that brings the translation is tough to copy – and the translation never ends. Integration and maintenance run as long as the relationship does, **won by teams that put domain-specialized engineers and tools next to the customer**.”
+
+- **Free Verifiable Benchmarks**: Why labs like Anthropic were so quick to pick up [FrontierCode](https://substack.com/redirect/3236afd7-227a-4ad0-a73e-f9d27b999495) for the [Fable launch](https://substack.com/redirect/133b18f7-f543-4954-a750-735f8cc20e68), and why Sarah agrees, even with us, that “The most cited benchmark score of the year is a map of **territory about to be worthless**, and a notice of who is about to lose the right to say what counts as good.”
+
+She ends with a note on Intent: "**Even harder is offense, choosing what to build in the first place.** That’s what I spend the year looking for, and I find it maybe three times. The model is no help there. It will do whatever you point it at and can’t tell you what’s worth pointing it at, and you can’t benchmark that, so you can’t train it. It’s also the reason the incumbents don’t take everything: they keep the ground they have, and the next thing comes from someone who finds a use before the rest of us. Maybe intent is an even scarcer input than compute.”
 
 > AI News for 6/9/2026-6/10/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

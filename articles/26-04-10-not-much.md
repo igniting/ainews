@@ -53,13 +53,21 @@ people:
   - sentdex
 ---
 
+Yesterday was a quiet day and only AIE Day 1 so we skipped it, but the recaps are on [the archive site](https://substack.com/redirect/02b0f07b-c241-4dc4-905e-93f905ab1ba6) if you were missing them.
 
-**a quiet day.**
+We’ve just concluded a marathon 3 days in Europe - first [the Online Track](https://substack.com/redirect/fb7d371e-41c3-4221-b678-e85aa3b27560) and [the Workshops](https://substack.com/redirect/47824669-0f47-4a47-b714-6630fe99f42c), then over a hundred talks delivered in person, some livestreamed. There was also a fair amount of live podcast coverage, from [ThursdAI](https://substack.com/redirect/d1e31ec7-8b91-4613-904e-0b46c5eb641c) to [ETN](https://substack.com/redirect/b33a6a21-60ca-46cd-ad6a-9083d2706d29), from visits to [10 Downing Street](https://substack.com/redirect/d4d1f713-5f8f-466a-9166-e21582092679) to [morning runs](https://substack.com/redirect/3863e892-8fc7-4d7b-b84d-524cdd133aa2) to [cool swag](https://substack.com/redirect/346fb839-379e-4d6c-8047-5fb3c870c05b) to [viral talks](https://substack.com/redirect/e03b049d-4add-45c8-b06e-2d6e41c2886b) to [aquarium parties](https://substack.com/redirect/0f6b4e0d-7472-4142-a18a-ff2853716bfd) to [nightclub parties](https://substack.com/redirect/70fee0bf-2665-4bc4-a535-2022e80c7d51).
+
+We’ll try to publish a few recap thoughts in future days, but for now you can see my closing keynote at [the end of Day 2](https://substack.com/redirect/a1dc84e6-fe1f-492e-bbc2-200c37a4f9fd) and watch some of the large talks.
+
+## Day 1 Talks ([link](https://substack.com/redirect/cc9c14db-37ee-46a4-a5ec-13f2a1f5890c))
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/O_IMsEg91g8)](https://substack.com/redirect/271c7249-5e4f-4764-b180-78b7dfbcc622)
+
+## Day 2 Talks ([link](https://substack.com/redirect/a1dc84e6-fe1f-492e-bbc2-200c37a4f9fd))
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/_zdroS0Hc74)](https://substack.com/redirect/771d1c2e-a6d4-47d4-9bc5-2f45f2d2a492)
 
 > AI News for 4/9/2026-4/10/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

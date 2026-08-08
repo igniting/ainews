@@ -47,19 +47,21 @@ topics:
 people: []
 ---
 
+3 months after OpenAI floated a trial balloon with [ChatGPT Apps and the Apps SDK at Dev Day 2025](https://substack.com/redirect/bc305a43-f85d-4996-a50a-8850786a3688), Anthropic has now officially absorbed [the independent MCP UI project](https://substack.com/redirect/d7818902-1af2-490b-bc10-192cbf73389b) and, working with OpenAI, Block, VS Code, Antigravity, JetBrains, AWS, and others, has released both:
 
-**Rich generative UI is all you need.**
+- [the MCP Apps spec](https://substack.com/redirect/6b221bcb-bd11-4505-b8a2-697822acd0e7)
+
+- [official support in Claude.ai](https://substack.com/redirect/240e4416-e473-4849-83bf-a23242adef77) - comparatively very well received but of course not as popular as [the Claude in Excel announcement](https://substack.com/redirect/a017562e-773b-4cfb-9244-a49f1cb934a2).
+
+It’s fair to say that ChatGPT Apps haven’t exactly taken the world by storm since announcement, but the overall need for a standard format for applications to return rich UI still cannot be denied.
+
+Now that MCP Apps have been ratified by all the important players, this is the basis for a rich ecosystem of open source support and applications being able to interoperate, and perhaps one day solve the perpetual never ending pile of $20/month subscriptions piling up in your credit card bills.
+
+As a reminder, we interviewed David Soria Parra and the rest of the AAIF, who previewed a bit of the thinking and design process behind MCP Apps here:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/z6XWYCM3Q8s)](https://substack.com/redirect/9fdede05-90c1-412e-9865-5c14ec52d27b)
 
 > AI News for 1/23/2026-1/26/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**206** channels, and **14285** messages) for you. Estimated reading time saved (at 200wpm): **1208 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
-
-
-3 months after OpenAI floated a trial balloon with [ChatGPT Apps and the Apps SDK at Dev Day 2025](https://news.smol.ai/issues/25-10-06-devday), Anthropic has now officially absorbed [the independent MCP UI project](https://x.com/liadyosef/status/2002104900843679818) and, working with OpenAI, Block, VS Code, Antigravity, JetBrains, AWS, and others, has released both:
-
-- [the MCP Apps spec](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/)
-- [official support in Claude.ai](https://x.com/claudeai/status/2015851783655194640)
-
-It's fair to say that ChatGPT Apps haven't exactly taken the world by storm since announcement, but the overall need for a standard format for applications to return rich UI still cannot be denied. Now that MCP Apps have been ratified by all the important players, this is the basis for a rich ecosystem of open source support and applications being able to interoperate, and perhaps one day solve the perpetual never ending pile of $20/month subscriptions piling up in your credit card bills.
-
 
 ---
 

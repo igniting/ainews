@@ -36,13 +36,29 @@ people:
   - karpathy
 ---
 
+We’re personally excited about the [Kimi K2.5 Tech Report](https://substack.com/redirect/5385bd5c-6e05-4346-a195-5a75ddffbee4) and [Alec Radford’s new paper on shaping capabilities](https://substack.com/redirect/9fd53aae-491c-49d5-b90f-a76c0c7db15e) and a [new in-IDE Arena](https://substack.com/redirect/4c1bda3e-62e0-4790-a6e3-6bd579e7bf0a), but of course today’s headliner story rightfully belongs to [Moltbook](https://substack.com/redirect/9190fe39-7eef-4747-be9a-fee692945973), a Reddit-style “social network for AI agents”, similar to [SubredditSimulator](https://substack.com/redirect/dd69463e-e6f0-43f7-812b-2e1c43a027c2) in the old days, but exploiting the meteoric popularity of [OpenClaw](https://substack.com/redirect/e3f6ad42-8ff4-47c3-a212-e051bf52292a) together with its standard system prompt files to “install” itself:
 
-**Moltbook takes over the timeline.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8f77583d-253a-4df9-b945-e6c827c91819_2496x2084.png)](https://substack.com/redirect/1f269a09-61fd-47e8-819b-5cf6fa9db887)
+
+The exact sequence of events is entertaining and though probably a full accounting of the blow by blow is minor, but of course [Simon Willison](https://substack.com/redirect/e5846445-41ab-4c2d-bfb2-951f06e49fc4) has the best accounting of high level things you should be aware of, with [Scott Alexander](https://substack.com/redirect/cca525e5-c973-401b-807c-4e30c7647419) curating the most interesting posts so far, 2 days and over 100,000 agents into the project and [Andrej claiming his Molty](https://substack.com/redirect/18f999a6-e727-44fc-97d9-8563087bd010) and [calling it sci-fi](https://substack.com/redirect/6423a11a-9e3f-4bd0-8cac-83bb8aa69839).
+
+Because this is a low-barrier to entry, human interest topic, you are going to be completely inundated with takes this weekend from every media channel, so we will spare you further elaboration. We’ll just note that folks have made the comparison to [the Summer of Simulative AI](https://substack.com/redirect/f49960ce-b138-4a3e-a9d2-e706cc6ec16d) that called back to 2024 (AIs creating and exploring an alternate universe of things that don’t yet exist), and that this has both an interesting lineage to [llms.txt](https://substack.com/redirect/5d4f0b4b-6afb-483b-b2df-8bc0c4afda65) and Moltbook’s conventions already are a far more successful protocol than the [A2A Protocol](https://substack.com/redirect/c3db68a0-b80f-4336-bb15-57eae3b0446d) launched last year.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/bc03c35e-5e6b-4ff5-bb8f-959b003efd34_725x500.jpeg)](https://substack.com/redirect/81879955-b1e3-4492-aadb-eaa1426932d5)
+
+It turns out that English (mixed with some code snippets) is indeed all you needed for [collaborative agents](https://substack.com/redirect/7225ef3c-bbdf-470d-b34a-7b087eb07bbb) to do interesting things.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/ddd4xjuJTyg)](https://substack.com/redirect/7225ef3c-bbdf-470d-b34a-7b087eb07bbb)
+
+#### [Scaling Test Time Compute to Multi-Agent Civilizations: Noam Brown](https://substack.com/redirect/7225ef3c-bbdf-470d-b34a-7b087eb07bbb)
+
+June 19, 2025
+
+[Read full story
+
+](https://substack.com/redirect/7225ef3c-bbdf-470d-b34a-7b087eb07bbb)
 
 > AI News for 1/29/2026-1/30/2026. We checked 12 subreddits, [**544** Twitters](https://twitter.com/i/lists/1585430245762441216) and **24** Discords (**253** channels, and **7413** messages) for you. Estimated reading time saved (at 200wpm): **657 minutes**. **Our new website** is now up with full metadata search and beautiful vibe coded presentation of all past issues. See https://news.smol.ai/ for the full news breakdowns and give us feedback on [@smol_ai](https://x.com/Smol_AI)!
-
-
-
 
 ---
 

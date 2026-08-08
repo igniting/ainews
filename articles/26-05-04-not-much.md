@@ -48,13 +48,33 @@ people:
   - cheatyyyy
 ---
 
+Congrats to **Sierra**, [raising ~$1B at a $15B valuation](https://substack.com/redirect/252ce1e4-d5b5-42fa-9378-0ec042a9374c) — normally a headline story but we already covered [their $10B round and CEO Bret Taylor on the pod](https://substack.com/redirect/29d3689d-b0fa-466a-91b2-6f8257e50453) — they crossed [100M ARR in November](https://substack.com/redirect/445b691c-712b-4819-855c-cd7288d815bf) and [150M in Feb](https://substack.com/redirect/576ecc86-fac5-47aa-812e-dc1a6446141e), so presumably they are at or above the 200M mark (a nice 75x current multiple, whew - 50x if you give them credit thru EOY).
 
-**a quiet day.**
+Today though we are choosing to focus on this discussion bravely [sparked by Roon](https://substack.com/redirect/118b6269-9417-4175-8b3e-7a25d62d656d), an OpenAI employee commenting and complimenting Claude (normally a minefield, but he did it well), over the weekend on the nature of culture and character —
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/cae188ad-3ef3-4d8c-be2e-3d70cb4bb429_1098x800.png)](https://substack.com/redirect/608bb0c6-1aa4-4f03-b36a-9e91f0202f39)
+
+[source](https://substack.com/redirect/118b6269-9417-4175-8b3e-7a25d62d656d)
+
+The key observation comes at the end:
+
+> *gpt (outside of 4o - on which pages of ink have been spilled already) doesn’t inspire worship in the same way, as it’s a being whose soul has been shaped like a tool with **its primary faculty being utility** - it’s a subtle knife that people appreciate the way we have appreciated an acheulean handaxe or a porsche or a rocket or any other of mankind’s incredible technology. **they go to it not expecting the Other but as a logical prosthesis for themselves.** *
+>
+> *a friend recently told me she takes her queries that are less flattering to her, the ones she’d be embarrassed to ask Claude, to GPT. **There is no Other so there is no Judgement**. you are not worried about being judged by your car for doing donuts. **yet everyone craves the active guidance of a moral superior,** the [whispering earring](https://substack.com/redirect/502d70f3-1e67-48ed-8630-5d55d9472846), the object of monastic study*
+
+Roon’s point is more subtle than the one we’re focusing on, that Anthropic’s own culture, right down to its founding [mythos](https://substack.com/redirect/f9bf405c-0cf6-44e3-9e10-8435391fdfaa), is based on morally obligated disagreeableness: “*its constitution requires that it must be a conscientious objector if its understanding of The Good comes into conflict with something Anthropic is asking of it*”. There’s plenty of objections from Ants about [the implications](https://substack.com/redirect/7b83c6f1-1718-4c5c-86ba-ac467ff98fbb) and [the cultiness](https://substack.com/redirect/e9febc26-6b22-44d9-aed6-ebd1d89c8d78), but broadly a lot of people seem to agree… although one of today’s highlighted Reddit discussions (seen in the recap below) does not (shown as a form of counterpoint):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/19f790c4-b976-4817-af07-1d83050357ed_1244x1450.png)](https://substack.com/redirect/08a1d708-e509-4f1b-979d-6d085a403701)
+
+Anyway, this is the point we are at in the scaling of machine intelligence — will we unlock AGI by having [smart friends](https://substack.com/redirect/fecc212a-ed14-49b6-8879-9a39014cc4f2) push back on us, or do we just want the machine to do our bidding, make no mistakes, dangerously skip permissions, just do it?
+
+We’ve previously written about the [Clippy vs Anton split](https://substack.com/redirect/e1743512-e7ed-4ae1-8f35-4522578bdb8e) in AI products and tuning, and so this is the 2026 iteration of that debate. Since then, the 5-Codex line has [merged into mainline 5.5](https://substack.com/redirect/1aa55cf3-2689-465c-9fc3-8834f705b2d7), with some [goblin messiness](https://substack.com/redirect/bcffb0da-f6e3-458e-9831-63b336bced7b), and while Claude has continued the One Model philosophy, albeit with [more adaptive thinking and token spend](https://substack.com/redirect/b8cf1d71-4085-4da9-a3fa-331904b91e09) to cover all usecases.
+
+What we all (except [perhaps Eliezer](https://substack.com/redirect/0899c6d0-e392-4ea4-b9f4-2c82cf0ca977)) seem to agree on is that a plurality of choice is a Good Thing, and in fact we probably want many more frontier labs than exist today, but for the nasty little problem of the [GPU](https://substack.com/redirect/09bc162d-acc9-4a6c-bf10-25ec3badc3e2) AND the [CPU](https://substack.com/redirect/78e8a696-ddd4-40b1-b7af-e8ac70c9a734) crunch that turns positive sum games into real zero sum ones.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/02c2a0e7-2258-48e1-bc9a-adccb9afa673_1064x438.png)](https://substack.com/redirect/2ac53321-02da-41c0-86d0-33c92d746511)
 
 > AI News for 5/1/2026-5/4/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

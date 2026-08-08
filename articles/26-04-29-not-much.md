@@ -44,13 +44,55 @@ people:
   - pierceboggan
 ---
 
+Just as we covered **World Models** early this year, we’ll be releasing a short miniseries on the **CPU** compute/sandbox industry on the pod over the coming weeks, and it’s a good time to explain why.
 
-**a quiet day.**
+In recent days:
+
+- [Noam Brown](https://substack.com/redirect/09b4a53e-959e-4d7f-9ab6-f882f37f51b7): “inference compute is a strategic resource, currently undervalued”
+
+- [Sam Altman](https://substack.com/redirect/1886f430-1247-4871-b517-085e335a488a): “To a significant degree, we have to become an AI inference company now.”
+
+Taken individually, these comments might seem unremarkable normal reactions to a [very successful GPT 5.5 model launch](https://substack.com/redirect/4d0834cc-8d64-487b-81e1-499884d51b64). But in context they mark a very noteworthy reaction that you, dear reader, should probably be alerted to if you aren’t already taking this extremely seriously.
+
+The proximal trigger for today’s op-ed is Intel CEO Lip-Bu Tan’s Q1 earnings call, where he [gave numbers](https://substack.com/redirect/7fb555e8-01e4-42db-bfdd-7621401e677a) to illustrate the rising CPU (not GPU) compute demand:
+
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/abf7db12-c072-4887-b686-4de7a38fa84c_680x380.jpeg)](https://substack.com/redirect/d7ad5143-c589-49ff-9e77-632811ed6fbf)
+
+Obviously an Intel CEO has obvious incentives to talk up CPU demand, but that does not mean he is wrong:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/ce489d38-e839-4154-b78d-3deb24865002_2018x1072.png)](https://substack.com/redirect/e291442e-652b-4196-b0b7-3ac39508652c)
+
+[link](https://substack.com/redirect/33766389-57c7-4220-9bf8-d112c9dab72a)
+
+We’ve covered this trend in our [SemiAnalysis](https://substack.com/redirect/0fa28d3f-4080-4b12-9934-780886feace8) pod (edited for readability):
+
+> ***Doug:** We are kind of right at the exact five to six year period of the refresh cycle of COVID. So in 2020 - 2021, you bought like a hundred billion [01:52:00] dollars of CPUs. And so we’re right at the natural end of life for these chips.*
+>
+> *[01:52:04] And so **usually what you do is you have this big refresh of all these chips, but what what’s been happening instead is everyone has essentially scrounged all of their budget [for GPUs] as hard as they can**… Everyone’s scrounged every single dollar they could to essentially invest in as much as AI as possible and just do maintenance CapEx on CPU. Ironically, at the same time for all this Claude Code stuff is going on. where is the software gonna run? on CPUs. So I think we’re gonna see some increasing utilization as well as the fact that RL is like actually heavily used for like RL gyms.*
+>
+> *[01:52:52] You have to simulate software and it uses a lot of CPUs. So not quite like the orders of magnitude of GPU stuff, but it’s [01:53:00] just such a big trend, **we might actually be seeing a CPU shortage partially ‘cause of this refresh cycle.***
+>
+> *[01:53:17] swyx: Yeah. Yeah. And just general production agents as well. You know, we just yeah. Even RLMs take compute and you know, OpenClaw takes more compute and, and no, it’s just different slope, but at the same direction.*
+>
+> *[01:53:30] Doug: It’s still an up slope. Yeah. And **in a slope that, to be clear, has had massive underinvestment for the last two years.***
+
+and our [NVIDIA GTC coverage](https://substack.com/redirect/0a63016d-fce6-4797-8ce3-1cb763e56f83) of Jensen’s Keynote:
+
+> *[50:41] Finally, AI is able to do productive work and therefore **the inflection point of inference has arrived.***
+>
+> *AI now has to think. In order to think, it has to inference. AI now has to do. In order to do, it has to inference. AI has to read. In order to do so, it has to inference. It has to reason. It has to inference. every part of AI every time it has to think it has to reason it has to do it has to generate tokens it has to inference it’s way past training now it’s in the in the field of inference so **the inference inflection has arrived at the time when the amount of tokens the amount of compute necessary increased by roughly 10,000 times**.*
+>
+> *Now when I combine these to the fact that since in the last two years the computing demand of the work has gone up by 10,000 times and the amount of usage has probably gone up by a hundred times.*
+>
+> ***People have heard me say I believe that computing demand has increased by 1 million times in the last two years**. It is the feeling that we all have. It is the feeling every startup has. It’s the feeling that OpenAI has. It’s the feeling that Anthropic has. If they could just get more capacity, they could generate more tokens. Their revenues would go up. More people could use it.*
+>
+> *The more advanced, the smarter the AI could become. We are now at that positive flywheel system. We have reached that moment. **The inference inflection has arrived.***
+
+Apart from the CPU demand, the inference inflection has also resulted in unprecedented reshaping of GPU workloads as well. [Prefill/Decode disaggregation](https://substack.com/redirect/eb52bf62-85bd-4d8c-9bfd-25a3f8e8c041) is now the norm, with Nvidia buying Groq, Intel-Sambanova, and even Amazon jumping in on a similar Cerebras bandwagon that OpenAI and Cognition had previously struck:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/6cc698ab-21d4-4776-acf8-1f3700e0ef3c_1000x1062.png)](https://substack.com/redirect/8d5d7c89-fbbe-467c-b07b-d8155dcb5008)
 
 > AI News for 4/28/2026-4/29/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

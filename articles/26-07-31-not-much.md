@@ -50,13 +50,15 @@ people:
   - omarsar0
 ---
 
+It might seem strange that we aren’t giving title story to a noteworthy [DeepSeek open weights model update](https://substack.com/redirect/09f44f6f-fbf9-49f3-b4f3-24ff609040e8) that still bumps up the Pareto Frontier that [GPT 5.6 pushed out only yesterday](https://substack.com/redirect/efcc223c-4c35-4807-b427-05ad627e26c1):
 
-**a quiet day.**
+> **Artificial Analysis** (@ArtificialAnlys) — [8:26 AM · Jul 31, 2026 · 75.2K Views](https://substack.com/redirect/d5b65817-c453-40e3-b49f-e53de0880cea)
+>
+> @teortaxesTex Temporary error with cache hit rate calculation - it was rectified a couple of minutes after your screenshot! 0731 is only marginally higher Cost per Task than the earlier version, and via the DeepSeek API with ~99% cache hit discount it is most certainly on our Pareto frontier
+
+But because it is a post-train only update with no further details, there’s really not all that much to report, apart from noting that DeepSeek is finally relevant again after over a year of comparative obscurity (with [V4 Pro this April](https://substack.com/redirect/9f4b2891-5fee-4978-a02f-8395eadb2081) as an exception) after becoming way too prominent, well timed [after their $70B pre-IPO fundraise](https://substack.com/redirect/5eed5c91-92bf-4b06-aa67-ded7999b18b2).
 
 > AI News for 7/30/2026-7/31/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

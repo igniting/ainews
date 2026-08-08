@@ -32,13 +32,32 @@ people:
   - richard_socher
 ---
 
+There’s a lot of “loop discourse” in the air:
 
-**a quiet day.**
+- [Steipete](https://substack.com/redirect/9c762bd8-9e54-41a6-ae16-3a8724694a37): “Here’s your monthly reminder that you shouldn’t be prompting coding agents anymore. You should be designing loops that prompt your agents.”
+
+- [Boris](https://substack.com/redirect/6f247b6b-4c4f-49da-9c33-aa61b552ee7e): “I don’t prompt Claude anymore. I write loops, the loops do the work.”
+
+- [Andrej](https://substack.com/redirect/6c1aad1b-5aa8-488e-a3c8-545e008429ca) on [Autoresearch](https://substack.com/redirect/2c7b8e30-c70f-4130-8d16-5d5d3173d5d7): To get the most out of the tools that have become available now you have to **remove yourself as the bottleneck**. You can’t be there to prompt the next thing. You need to take yourself outside. You have to **arrange things such that they’re completely autonomous** and the more you know how can you maximize your token throughput and **not be in the loop**. This is the goal and the name of the game now is to **increase your leverage**…. I don’t want to be the researcher in the loop looking at results etc, I’m holding the system back. **So the question is how do I refactor all the abstractions so that I’m not I have to arrange it once and hit go.**”
+
+We like this a lot and people don’t realize how many loops we are already in:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/517bbc58-4f26-46b5-a12e-f4a5f84b0a30_1986x1118.png)](https://substack.com/redirect/764c2bb8-2ed0-47b7-8210-ed1b00915efc)
+
+More minimalist, a smaller set of loops:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/347a258a-520b-4c35-9bb5-84d753fcbe5b_920x380.png)](https://substack.com/redirect/f7bc21fc-6e95-46a0-a5c6-fbc0f8e85b7c)
+
+One might argue the entire game of the next century is to be able to **stack loops** as effectively as possible. In the early days of each phase, it will be valuable to know when to go **DOWN** a loop when things go wrong (for **reliability**)… but it will probably be more valuable to know how to go **UP** a loop as models improve (for **leverage**).
+
+If you don’t figure out how to do this, don’t be salty when you lose to those that do.
+
+Rich has his “[Bitter Lesson](https://substack.com/redirect/7fcc3ae6-f457-447f-a701-580ab3a04115)” for models. We now have **the Salty Lesson for agents**:
+
+> **Don’t fix things yourself, as you have done historically.
+> Instead focus on systems that scale with more agents, like goals and orchestration.**
 
 > AI News for 6/10/2026-6/11/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

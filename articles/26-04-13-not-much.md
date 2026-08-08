@@ -53,13 +53,72 @@ people:
   - sydneyrunkle
 ---
 
+As you know we read through /r/localLlama, /r/localLLM, and other local model subreddits on an almost daily basis, and every now and then it is good to step back and survey what the community consensus is landing on, with a sampling of models across different sizes. We started this work to power our local Claw.
 
-**a quiet day.**
+The top names you should know as a baseline, adjusted for “what people are actually recommending” rather than just benchmark supremacy:
+
+- **[Qwen 3.5](https://substack.com/redirect/842cafb0-4040-4c6c-8c64-dc642b12e2b0)** — most broadly recommended family right now across usecases.
+
+- **[Gemma 4](https://substack.com/redirect/c1626387-a156-49d7-b669-2303fc0de9be)** — strong recent buzz for local usability, especially smaller and mid-sized deployments.
+
+- **[GLM-5 / GLM-4.7](https://substack.com/redirect/2c6e5129-b71d-464e-b088-ffed1c47fdc2)**— near the top of broad open-model rankings, increasingly part of the “best overall” conversation.
+
+- **[MiniMax M2.5 / M2.7](https://substack.com/redirect/88adb781-afc6-4a6b-af61-35f5bdb0ba32)**— repeatedly cited for agentic/tool-heavy workloads.
+
+- **[DeepSeek V3.2](https://substack.com/redirect/cfad4d4e-e82c-4697-8094-8e2281fef25d)** — still firmly in the top cluster when people talk about strongest open-weight general models.
+
+- **[GPT-oss 20B](https://substack.com/redirect/2d017886-25fa-4c27-b3e6-94ede58c93aa)** — not the mainstream “winner,” but increasingly recommended as a practical local option and for uncensored variants.
+
+For local coding, the overwhelming consensus is **[Qwen3-Coder-Next](https://substack.com/redirect/c67fa060-c935-4a5f-a82f-36dbb0d706c5)**. So that’s easy.
+
+Naturally the fuller list is going to have a strong lean on [roleplay/creative writing, the #2 usecase of LLMs](https://substack.com/redirect/e15f1b8a-21a9-41af-916f-0f7494745d66), and we are NSFW-friendly so here goes…
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/3c135485-4e6a-4e07-ac7a-316104d4e2d8_2388x1248.png)](https://substack.com/redirect/00a57b1d-fa5c-4b02-945b-3ce2c24f1a7c)
+
+You can get the full list to dump into your clanker [here](https://substack.com/redirect/91df178e-dcf5-4171-a785-3809c1359e95).
+
+If you are an [Ollama enjoyer](https://substack.com/redirect/edb8e6eb-669c-475b-94e2-cfa93b72fc75) and just looking for a small subset for pulling before your next flight, you can do:
+
+# Small / fast
+ollama pull hf.co/KatyTestHistorical/SultrySilicon-7B-V2-GGUF:latest
+ollama pull hf.co/huihui-ai/Huihui-GLM-4.6V-Flash-abliterated-GGUF:latest
+
+# 9B
+ollama pull hf.co/bartowski/Gemma-2-Ataraxy-9B-GGUF:latest
+
+# 13B
+ollama pull hf.co/TheBloke/MythoMax-L2-13B-GGUF:latest
+
+# 24B
+ollama pull hf.co/bartowski/PocketDoc_Dans-PersonalityEngine-V1.3.0-24b-GGUF:latest
+
+# 26B multimodal
+ollama pull hf.co/Jiunsong/supergemma4-26b-abliterated-multimodal-gguf-8bit:latest
+
+# 27B
+ollama pull hf.co/KnutJaegersberg/gemma-3-27b-it-abliterated-Q8_0-GGUF:latest
+ollama pull hf.co/mradermacher/BlackSheep-Large-GGUF:latest
+
+# 31B
+ollama pull hf.co/paperscarecrow/Gemma-4-31B-it-abliterated:latest
+ollama pull hf.co/groxaxo/Huihui-gemma-4-31B-it-abliterated-v2-GGUF:latest
+
+# 35B MoE
+ollama pull hf.co/mradermacher/Huihui-Qwen3.5-35B-A3B-Claude-4.6-Opus-abliterated-i1-GGUF:latest
+
+# 70B
+ollama pull hf.co/Artefact2/Midnight-Rose-70B-v2.0.3-GGUF:latest
+ollama pull hf.co/mradermacher/Midnight-Miqu-70B-v1.5-GGUF:latest
+
+# MoE (E2B / E4B)
+ollama pull hf.co/mradermacher/Huihui-gemma-4-E2B-it-abliterated-GGUF:latest
+ollama pull hf.co/mradermacher/Huihui-gemma-4-E4B-it-abliterated-GGUF:latest
+
+# 123B (heavy)
+ollama pull hf.co/TheDrummer/Behemoth-123B-v1-GGUF:latest
+ollama pull hf.co/MarsupialAI/Monstral-123B_iMat_GGUF:latest
 
 > AI News for 4/11/2026-4/13/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

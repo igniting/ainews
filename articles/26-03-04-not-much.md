@@ -53,13 +53,56 @@ people:
   - simonw
 ---
 
+A common debate in my finance days was about [the value of the human vs the value of the seat](https://substack.com/redirect/1cbdd170-b71d-491d-915a-8956a703554a): if a trader made $3m in profits, how much of it was because of her skills, and how much was because of the position/institution/brand she is in, and any generally competent human could have made the same results?
 
-**a quiet day**
+The same debate is currently raging in “Harness Engineering”, the systems subset of [Agent Engineering](https://substack.com/redirect/346f2958-5509-4cf5-8106-4ee87d83bcc9), and the [main job of Agent Labs](https://substack.com/redirect/c0f4f836-3961-453d-b9fe-2bf43a3af2e6). The central tension is between **Big Model** and **Big Harness**. [An AI framework founder you all know] once confided in me at an OpenAI event: “I’m not even sure these guys want me to exist.”
+
+> *Aside: let’s [define Harness](https://substack.com/redirect/a2399b77-f0a0-4cdf-9a91-6a9ddb34afcb) — “In every engineering discipline, a harness is the same thing: the layer that connects, protects, and orchestrates components — without doing the work itself.“*
+
+And, talking with the **Big Model** guys, you really see it:
+
+- Every podcast with [Boris Cherny and Cat Wu](https://substack.com/redirect/ebeede3e-163e-4977-beba-f81b17c2161f) emphasizes how minimal the harness of Claude Code is, meaning their job is mostly letting the model express its full power in the way that only the model maker knows best:
+
+[Boris](https://open.substack.com/pub/swyx/p/claude-code?r=1h4isl&selectionX95f787-9fb7-4c30-82f0-98c9af305872&utm_campaign=post-share-selection&utm_medium=web&aspectRatio=instagram&textColor=%23ffffff&bgImage=true): “I would say like there’s nothing that secret in the source. And obviously it’s all JavaScript, so you can just decompile it. Compilation’s out there. It’s very interesting. Yeah. And generally our approach is, you know, all the secret sauce, it’s all in the model. And this is the thinnest possible wrapper over the model. We literally could not build anything more minimal. This is the most minimal thing.
+
+- Cat [01:09:21]: It is very much the simplest thing I think by design.
+
+- Boris [01:09:25]: So it’s got simpler. It got simpler. It doesn’t go more complex. We’ve rewritten it from scratch probably every three weeks, four weeks or something. And it just like all the, it’s like a ship of Theseus, right? Like every piece keeps getting swapped out and just cause quad is so good at writing its own code.”
+
+- OpenAI’s [own piece on Harness Engineering](https://substack.com/redirect/137d2973-69d4-4842-91b4-3aa24e3ad4c8) (with upcoming guest Ryan Lopopolo on the Codex team) emphasizes how simple it is to start. Of course, with [the “execuhire” of OpenClaw](https://substack.com/redirect/8e57d1f6-4bf1-40df-a376-ecf7879c1528), OpenAI are now big investors of the world’s most successful open source harness.
+
+- [Noam Brown](https://open.substack.com/pub/swyx/p/self-improving?r=1h4isl&selection�386440-623f-4e12-9475-16418f0b6414&utm_campaign=post-share-selection&utm_medium=web&aspectRatio=instagram&textColor=%23ffffff&bgImage=true): “*before the reasoning models emerged, there was like all of this work that went into engineering agentic systems that like made a lot of calls to GPT-4o or like these non-reasoning models to get reasoning behavior. And then it turns out we just created reasoning models and they, you don’t need this complex behavior. In fact, in many ways, it makes it worse. Like you just give the reasoning model the same question without any sort of scaffolding and it just does it. And so people are building scaffolding on top of the reasoning models right now. But I think in many ways, **those scaffolds will also just be replaced by the reasoning models and models in general becoming more capable**. And similarly, I think things like model routers, we’ve said pretty openly that we want to move to a world where there is a single unified model. And in that world, you shouldn’t need a router on top of the model.*”
+
+- [METR saying Claude Code and Codex](https://substack.com/redirect/34b642b1-55e4-47b2-9fad-c4fb0f24db57) don’t beat a basic scaffold:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/518dc06e-45ab-4c1d-81e5-76f385eae461_1174x1146.png)](https://substack.com/redirect/a7404a61-6bdf-4070-8c12-c0258be2ae16)
+
+- [Scale AI’s SWE-Atlas](https://substack.com/redirect/5d5f991b-672a-4834-a3fd-0cea870cc269) is finds that Opus 4.6 does 2.5 points better in Claude Code than in the generic SWE-Agent, but the reverse for GPT 5.2, making the harness you choose essentially noise within the margin of error:
+
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/d50421a3-d45c-4044-b491-8cc3348121eb_1214x1432.webp)](https://substack.com/redirect/9008e500-cb0c-42d1-98ff-10e46cd61b9f)
+
+And yet. The **Big Harness** guys disagree:
+
+- **[The Harness is the Product](https://substack.com/redirect/b0ba571a-f1ac-4432-8a74-eaa6e27988fc)**:
+
+Every production agent converges on this core loop:
+
+> while (model returns tool calls):
+> execute tool → capture result → append to context → call model again
+
+That is it. The entire architecture of Claude Code, Cursor’s agent, and Manus fits inside that loop.
+
+- [Jerry Liu](https://substack.com/redirect/d1793c29-8809-4047-9bcc-15c2aaec2b4b): “The Model Harness is Everything — the biggest barrier to getting value from AI is your own ability to context and workflow engineer the models. This is *especially* true the more horizontal the tool that you’re using.”
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/e98e0f7e-eee7-4ced-afd9-ccc4d5e2eead_1216x1040.png)](https://substack.com/redirect/cc7437b1-ed76-4cb3-bc11-efb549b1de29)
+
+- [Improving 15 LLMs at Coding in One Afternoon. Only the Harness Changed](https://substack.com/redirect/07f333e0-703f-4d71-b297-05db8be5be13) shows dramatic improvements in every model when you optimize the harness (Pi)
+
+Obviously Big Harness guys are trying to sell you their Harness, Big Model guys are trying to sell you their Model. The ML/AI industry has always had some form of milquetoast “[compound AI](https://substack.com/redirect/399e93c5-fa4c-4411-8fd0-0d51d12e61b0)” debate that tells you both are valuable. But perhaps the times are changing.
+
+On Latent Space we’ve been very, very respectful of the Bitter Lesson, but increasingly as the Agent Labs thesis has played out (with [Cursor now valued at $50B](https://substack.com/redirect/c61ad709-3f56-477a-bfca-48e403735726)), we are acknowledging that “Harness Engineering” has real value. [AIE Europe](https://substack.com/redirect/cdc0316d-f81b-4608-880b-26148d11d963) now has **the world’s first Harness Engineering track**, and if you are keen on this debate, you should join.
 
 > AI News for 3/3/2026-3/4/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**264** channels, and **14242** messages) for you. Estimated reading time saved (at 200wpm): **1397** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

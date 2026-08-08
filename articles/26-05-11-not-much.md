@@ -53,13 +53,43 @@ people:
   - matvelloso
 ---
 
+By complete coincidence, the day we [released](https://substack.com/redirect/2559a3d9-77e1-4040-be98-c6fe8cea9954) Neil Zeghidour (CEO of Gradium, the for profit spinoff of the vaunted [Kyutai Moshi](https://substack.com/redirect/51f9d0ca-5b82-4507-ac3f-1e3a814c3643))’s [talk](https://substack.com/redirect/6642eabf-a754-4263-90e0-4467b560dd4e) on what remains to be built for realtime voice, **Thinking Machines** emerged for only the [third](https://substack.com/redirect/bcfcc414-a5c9-4a96-8957-4d8c4695f54c) [time](https://substack.com/redirect/c924a472-93e5-4695-87a5-881e53acc223) in a ~year (despite much drama) to drop [Interaction Models: A Scalable Approach to Human-AI Collaboration](https://substack.com/redirect/64cb856f-4249-44b8-8d2c-917a0a4c5fb1), **TML-Interaction-Small** is a 276B parameter MoE with 12B active., which immediately advances the state of the art of realtime voice models as Neil had laid out, updating [the famously dead GPT 4o “her” demo](https://substack.com/redirect/521969ee-6a7a-449b-bbf6-070296178fa6) with far more detailed demos that are presumably far closer to real use:
 
-**a quiet day.**
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/2ky5MXBvZP8)](https://substack.com/redirect/e85b0fe2-4329-4d42-be51-3bcc0c089172)The [full blogpost](https://substack.com/redirect/64cb856f-4249-44b8-8d2c-917a0a4c5fb1) has lots of demos of the level of continuous interactivity, focusing on streams of “time-aligned microturns” of 200ms each:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/02190942-3f50-4067-ae03-97c6b504b3a3_1490x1592.png)](https://substack.com/redirect/34db1de9-f5cd-4aa8-a409-e10661eca35e)
+
+Using encoder-free early fusion, with images and audio all processed <200ms, similar to Meta’s [Chameleon](https://substack.com/redirect/fab866b7-bee5-42cc-9da4-58cfaf7801bd):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/68576e99-b00a-4069-b93f-bbe906ddd810_1336x1602.png)](https://substack.com/redirect/0d201b6e-bf54-40b9-a731-7d3433acdbe0)
+
+There are a number of official benchmarks that the team shows beating both [GPT-Realtime-2](https://substack.com/redirect/19f5e06f-113c-4433-a609-9849fa3b0add) and [Gemini 3.1-Flash](https://substack.com/redirect/be73d41e-4563-4616-9107-6650b3bdc09a) on basic things like BigBench Audio and IFEval and FD-bench, but the level of interactivity aimed for required making 2 new internal benchmarks for time awareness, simultaneous translation, and visual proactivity:
+
+- **TimeSpeak:** Can the model **initiate speech** at user-specified times?
+
+Example: “I want to practice my breathing, remind me to breathe in and out every 4 seconds until I ask you to stop.”
+
+- **CueSpeak:** Can the model speak at the **appropriate moment?**
+
+Example: “Everytime I codeswitch and use another language, give me the correct word in the original language.”
+
+- **[RepCount-A](https://substack.com/redirect/4becde4d-2c54-4e72-9afd-e7f17c6fb512)** contains videos of repeated actions and is adapted into an online counting task - measures **continuous visual tracking and timely counting**.
+
+- **[ProactiveVideoQA](https://substack.com/redirect/20d6551f-d201-484f-ba76-c52ae291a490)** consists of videos with questions, whose answers become available at specific moments. Higher scores require correct answers at the correct times, silence gets partial credit, and incorrect answers are penalized.
+
+- **[Charades](https://substack.com/redirect/6c3948d9-b551-44ae-9d85-b569fcc6cdb1)** is a standard temporal action-localization benchmark.
+
+Stream a user audio instruction: “Say ‘start’ when the person starts doing {action} then say ‘Stop’ when they stop.”
+
+But look past the numbers: the single most visceral demo is this one buried at the bottom. Play the samples and feel the AGI:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0bfcadcb-b746-4873-aed4-6095f19f5897_1478x1676.png)](https://substack.com/redirect/a5844abb-384c-47c2-bfa2-c3b9c2d9c5e5)
+
+The closing notes leave tantalizing hints to Thinky’s roadmap, including an intriguing pairing of background agents with interactive models, which we like a whole lot.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/ef289b1c-4613-4835-98e6-475906d494da_1394x588.png)](https://substack.com/redirect/b2e66359-a44a-4625-aa35-e68a23f6b4bd)
 
 > AI News for 5/9/2026-5/11/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

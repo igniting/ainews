@@ -40,20 +40,53 @@ people:
   - hwchase17
 ---
 
+The problem with wanting to cover AI without giving in to hype is, sometimes, there **REALLY IS **something warranting the hype every few weeks. It is hard to tell when many influencers make their living telling you {MODEL THAT JUST RELEASED} is AGI and {MODEL THEY PREVIOUSLY ENDORSED} is now absolute trash. The simple solution is to try to form your own opinions… and rely on credible voices that won’t sell out to the attention game.
 
-**There's a growing uneasy feeling that coding has changed forever — much much more than "normal" hype.**
+**There’s been an increasing number of the latter **(and also the noise as well).
+
+You can see Andrej trying to articulate his feelings about it in real time, from the original [vibe coding tweet](https://substack.com/redirect/1063c1a2-6583-4bb1-b31e-5a3f4f8765cb) to [agentic engineering](https://substack.com/redirect/c63ea751-5fd6-4f4f-a3fb-c205c3c267e3). Today he joins a chorus of people calling out December 2025 (where [Opus 4.5](https://substack.com/redirect/52781aae-df63-4352-b3d6-9b51e60294dd), [Gemini 3](https://substack.com/redirect/651a1f88-2c99-4925-b3e0-9e07ddd48a65), and [GPT 5.2 on the OpenAI 10 year anniversary](https://substack.com/redirect/396cffe1-4f7b-4fba-a8a2-2c1b2c3ef4f9) were all released in quick succession) as a major turning point:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0f4f333f-4bbe-4064-828d-f3007749cc59_1204x594.png)](https://substack.com/redirect/4fe87fbc-2fe0-40ec-9e7b-7e0c511cb8fa)
+
+[tweets](https://substack.com/redirect/c2ccdfda-33ac-4bad-96e0-14a3e4149fcd)
+
+We were already planning a mini essay around Greg Brockman’s similar observation:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/b7f2f20b-bce2-4b68-b061-758ce1dc5e16_1534x1634.png)](https://substack.com/redirect/944e91e4-b631-4003-9693-fc2fc1bfb2a4)
+
+and Boris’ observation that Claude Code is now self-hosting:
+
+> **Boris Cherny** (@bcherny) — [12:48 PM · Dec 27, 2025 · 1.38M Views](https://substack.com/redirect/5ce09c99-2df2-4e8d-b98f-eda9755c2ea9)
+>
+> @YashGouravKar1 Correct. In the last thirty days, 100% of my contributions to Claude Code were written by Claude Code
+
+and SemiAnalysis’ observation that Claude Code now writes about 5% of GitHub commits:
+
+[![](https://substackcdn.com/image/fetch/$s_!Ia8X!,w_140,h_140,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F189062462%2F9182648f-8d22-4631-ba0f-79b4fdbb4b86%2Ftranscoded-1771966425.png)](https://substack.com/redirect/ec94cfab-061c-4b8d-998a-970bf9c96cc6)
+
+#### [Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis](https://substack.com/redirect/ec94cfab-061c-4b8d-998a-970bf9c96cc6)
+
+[swyx (Shawn)](https://substack.com/profile/153747001-swyx-shawn)
+
+·
+
+Feb 24
+
+[Read full story
+
+](https://substack.com/redirect/ec94cfab-061c-4b8d-998a-970bf9c96cc6)
+
+We’ve made a microsite for this:
+
+# [wtfhappened2025.com](https://substack.com/redirect/c20b1b9a-1bb2-4851-a1d5-856419b1ab22)
+
+[https://wtfhappened2025.com/](https://substack.com/redirect/f4e717c3-fa53-40ea-99f6-dceeae93a388)
+
+We’ll maintain this as a live updating resource as more observations and chart inflections come in. The data is of course sparse now and lacks time series charts because it is [hard to estimate a sigmoid while you are living through it](https://substack.com/redirect/5f28aa9d-06b6-41f4-88e2-4480414d4b1c), but we will do our best to curate datapoints the way the old [WTF 1971](https://substack.com/redirect/13fe6242-d892-4af0-afaf-5ac78e601fa0) did. We like to joke that AINews is the “only newsletter that tells you not to read it” because of the prevalence of “[nothing days](https://substack.com/redirect/905037ab-8c79-4844-8e64-327536fae8fe)”, but this is increasingly not a laughing matter.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/b78fc771-ed91-4c32-bdd7-600533af4429_3050x2198.png)](https://substack.com/redirect/f632eec4-2a41-47d7-bfa4-46d93f9bb622)
 
 > AI News for 2/24/2026-2/25/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**262** channels, and **10751** messages) for you. Estimated reading time saved (at 200wpm): **1086** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-We've made a microsite for this:
-
-# https://wtfhappened2025.com/
-
-https://wtfhappened2025.com/
-
-Go now.
-
 
 ---
 

@@ -56,13 +56,37 @@ people:
   - fink
 ---
 
+It’s tempting to give [Meta Spark 1.2 and Muse Code](https://substack.com/redirect/d7676e7c-7ccb-4383-a6b9-16ea44edf3d2) the title story today because of their success launching a 5.6 Terra-level model, together with innovative harness design with a local event log for resumability and persistent background agents, both of which should put other coding agent builders on notice.
 
-**a quiet day.**
+It’s tempting to highlight [Prime Agent](https://substack.com/redirect/ab5af662-0194-4291-8bb5-48fb63a54f92), Prime Intellect’s [self-improving RLM based harness](https://substack.com/redirect/451de8e3-e5f7-4ec5-8289-9be06a2bce7f) that claims an incredible 95.5% on ARC-AGI-3 (not yet endorsed by ARC).
+
+We tried. Trust me, we tried.
+
+But it’s hard to beat around the bush — today’s most important story is the coordinated departures of Jeff Dean, Sanjay Ghemawat, Oriol Vinyals, and Quoc Le, some of the most senior engineering and research talent in both Google and in human history, from DeepMind [to cofound a new autoresearch startup Discovery Loop](https://substack.com/redirect/19033b7c-ad1d-464b-acde-2b84974776a5):
+
+> **Jeff Dean** (@JeffDean) — [4:06 PM · Aug 5, 2026 · 3.2M Views](https://substack.com/redirect/7cd0ea4e-63f0-4ad6-9699-2693456233c6)
+>
+> Announcing Discovery Loop! I am very excited to announce that, along with my longtime friends and collaborators @Sanjay_Ghemawat , @OriolVinyalsML and @quocleix , we are founding Discovery Loop ( @DiscoLoopAI ), a Public Benefit Corporation whose mission is to automate machine
+
+And Demis, who needs no introduction, goes from CEO to Chair and Chief Scientist, while “leaning into” Isomorphic with CTO Koray stepping up to SVP of GDM:
+
+> **Demis Hassabis** (@demishassabis) — [4:04 PM · Aug 5, 2026 · 1.06M Views](https://substack.com/redirect/4cac4431-5286-45d4-b727-16208e6f360a)
+>
+> I’ve been working towards AGI my whole life, and as we enter this pivotal moment, I’m stepping into a new role as Chair of Google DeepMind & Chief Scientist of Alphabet. This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including
+
+All the departures are very amicable; Google is investing in Discovery Loop, and Demis’ increased contributions to long term strategy and Isomorphic in particular will be very welcome by humanity, but surely we are not being told the full story here; why couldn’t Discovery Loop have been done inside Google?
+
+That one at least, we have some hints, given GDM’s history of 1000+ coauthor papers for Gemini, vs these 4 superhumans writing this manifesto:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/57c9d273-aa50-4bc7-a7c4-caaf9b4952c2_1540x1624.png)](https://substack.com/redirect/3b427178-be56-4842-a818-d8e7dea111bc)
+
+When [John Jumper left for Anthropic](https://substack.com/redirect/e124816a-0a36-4496-83b8-e522d4ceba20), one could maybe chalk it up to [Anthropic’s momentum](https://substack.com/redirect/3e1efc44-ebdd-4495-a82b-25e4dfd955d1). When [Noam Shazeer joined OpenAI](https://substack.com/redirect/7fe65908-a3ab-40cb-b861-1fe50a86e528), perhaps one could point to their [pioneering work in reasoning models](https://substack.com/redirect/5da855d2-41e1-429d-ac36-6f5c4c2666ef). But couple it with [David Silver](https://substack.com/redirect/800a8b73-2e34-4686-ae5c-8843e74f1e66), [Denny Zhou](https://substack.com/redirect/95da41b9-7295-47aa-a764-b17bacbdaac6), and other prominent departures, and the 6 months since the [last Gemini Pro update](https://substack.com/redirect/1190681b-7a5b-4096-8d6c-f02c1cba7777), one has to wonder 1) what happened that led to this, 2) how this latest shakeup was decided, 3) if the shuffle is the beginning of the middle of the end or the first prologue of a great and necessary comeback story.
+
+After all, Google STILL has great models, talented teams, excellent compute and infrastructure and the greatest trove of training data in human history…
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/441acff7-de95-4930-9383-285556fc8703_2604x1836.png)](https://substack.com/redirect/2a0d43c5-1867-4fbd-9f5f-51eabb5f9f73)
 
 > AI News for 8/4/2026-8/5/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

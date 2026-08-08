@@ -44,15 +44,21 @@ people:
   - kimmonismus
 ---
 
+Anthropic’s path as the [fastest growing company of all time](https://substack.com/redirect/1c436e75-49a4-4934-9f71-1a2456bd18c0) has put overtaking OpenAI in its sights for a while, but there were numerous asterisks for the past few months that put the timing (though perhaps not the fact) of the flippening in question. Today Anthropic [officially reported $47B](https://substack.com/redirect/02a804fc-d1b1-4fd7-9a37-887d67e85be4) in revenue run-rate (reminder, this number was $9B in December!) and confirmed their Series H raising $65B at a $900B pre-money valuation (including $15B from hyperscalers including [Amazon](https://substack.com/redirect/308074cb-fbad-4746-8c4f-0b6cb45c26e9), but also the entire memory industrial complex), putting them at least temporarily ahead of OpenAI in every headline dimension outside of compute and non-coding benchmarks:
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/feb0a3a2-e744-4174-a24b-be1fd75961bc_1888x1630.png)](https://substack.com/redirect/ff6b5427-7b7b-48ae-8ae8-e2d8ce94d856)
 
+By way of celebration, the company also released [Opus 4.8](https://substack.com/redirect/1e057c5e-e028-41e2-bbee-6ff4238724f4), which broadly reportedly fixed many of the issues the community had found/soured on [Opus 4.7 post launch](https://substack.com/redirect/3b485174-1051-429e-a0a7-7ba9f1d2d59b) (see recap below for details). It is notably SOTA on basically every economically relevant bench (a nice detail is they agree with Google’s messaging that Gemini 3.5 Flash is an improvement over Gemini 3.1 Pro):
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/7e7c3740-ab5b-4b98-88eb-c0576e73a2d1_1490x1350.png)](https://substack.com/redirect/551a973d-0792-47b4-bfe4-6d166698adb4)
 
+But perhaps of more long term significance is the massively parallel [“dynamic workflows” feature](https://substack.com/redirect/404a7776-0bea-4dd7-a0db-4f35384cb4b0) in Claude Code, also called ultracode, which was behind Jarred Sumner’s [750k LOC rewrite of Bun from Zig to Rust in 6 days](https://substack.com/redirect/2a7e47f7-5e7e-4201-8690-1e849783180b):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/e9ab93f6-c75f-4156-850a-81b99806aeea_1402x1256.png)](https://substack.com/redirect/581ce9b8-8410-479c-bca4-d5ff75b7c684)
+
+>
 
 > AI News for 5/27/2026-5/28/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

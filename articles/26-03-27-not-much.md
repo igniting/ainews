@@ -47,13 +47,17 @@ people:
   - gaoj0017
 ---
 
+At GTC 2022, NVIDIA announced the Hopper architecture and the first H100s started rolling out in October of that year. 2 years later, in October 2024, we [published a popular piece on the H100 rental price depreciation cycle](https://substack.com/redirect/996c7376-0b5f-4b94-9093-137dc725f349), which we had observed to be a going faster than previous cycles and theorized that it was a slight bubble burst dynamic due to temporarily inflated demand. While true for the time (bottoming out after [the DeepSeek R1 shock](https://substack.com/redirect/6e7ab922-f58b-4047-a2f2-fedd1f0dba45), it did not last; [since December 2025](https://substack.com/redirect/188ea328-5ea4-483e-a680-24bd0217f0bd) the H100 rental market has gone *VERY* up:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/efae087a-e8bd-4623-adc9-e8ef80115faa_1096x1122.png)](https://substack.com/redirect/12dcf229-c61e-429c-8589-ba7f51d03494)
+
+[chart](https://substack.com/redirect/42804e46-8496-4d56-a793-d4455db5f3dd)
+
+This is corroborated by [Dylan on Dwarkesh saying H100's are worth ](https://substack.com/redirect/8b823f9d-9b4d-46d5-85e6-6917ec34d584)*[more](https://substack.com/redirect/8b823f9d-9b4d-46d5-85e6-6917ec34d584)*[ today than they were 3 years ago](https://substack.com/redirect/8b823f9d-9b4d-46d5-85e6-6917ec34d584), and surely related to the [general chip shortage](https://substack.com/redirect/38f64f18-9459-4661-a626-b5172b7898d8) and reasoning model/agent inflection of [December 2025](https://substack.com/redirect/188ea328-5ea4-483e-a680-24bd0217f0bd), and the utility of a 4 year old chip now with much better reasoning models and inference software means the chip itself is much more valuable than initial 4-7 year depreciation schedules had assumed.
+
+If you are used to the razor’s edge of data center tokenomics, you should expect that this has *very* meaningful implications on the business models of data centers and GPUs… as long as it keeps going.
 
 > AI News for 3/26/2026-3/27/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

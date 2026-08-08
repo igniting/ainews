@@ -44,13 +44,13 @@ people:
   - ml_angelopoulos
 ---
 
+It’s an odd thing to say “not much happened” while running AIEWF workshops, but objectively, that is true - vibes were good but the wider world collectively took a breather to process that [shock Germany loss](https://substack.com/redirect/ed903a18-3dd8-4838-aa0e-115ed7244624) today. In the meantime you can think though how to build better Skills, which is emerging as a top theme of the conference throughout the week.
 
-**a quiet day.**
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/UNzCG3lw6O0)](https://substack.com/redirect/a4c971b6-6a88-4adc-81ec-57a9455f1cd4)and help us turn notifications on for the first keynote in 9 hours:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/htM02KMNZnk)](https://substack.com/redirect/94a96041-7531-4625-9435-288c4fb3de3e)
 
 > AI News for 6/27/2026-6/29/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

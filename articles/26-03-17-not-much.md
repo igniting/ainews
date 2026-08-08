@@ -48,13 +48,27 @@ people:
   - michpokrass
 ---
 
+*Note: AIE Europe is ~sold out! Tickets and limited sponsorships for [AIE Miami](https://substack.com/redirect/9fbe9d99-078c-4095-b425-141123fd86bf) are next — as you can see from [online buzz](https://substack.com/redirect/7003ddc0-17dd-4403-9a87-db80b39da0d3), [speakers](https://substack.com/redirect/32f802be-1793-44fb-a808-24f6829baaf1) are excited and prepping. We’ll be there!*
 
-**a quiet day.**
+By total coincidence, today’s [main pod guest](https://substack.com/redirect/807661dd-f685-4279-bc86-93af5ff7de80) also released today’s title story:
+
+> **swyx**: Does remote control work for Claude Cowork yet? No. Right.
+>
+> **Felix**: Excellent question.
+>
+> **swyx**: Coming soon.
+
+And today, [here it is](https://substack.com/redirect/6016f5d0-a1b1-4c48-8ca6-7aea683e776d):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/319f7604-68d5-44d5-b37e-61de653f6941_1208x1334.png)](https://substack.com/redirect/5f3ee8fd-d7ab-42dd-ac95-411e81024395)
+
+Multiple people, from [SimonW](https://substack.com/redirect/84a3c1a6-0189-456d-a77f-bb77485815e9) to [Ethan Mollick](https://substack.com/redirect/7ee94e97-33c5-434a-920a-55c069335bfb), are comparing it (favorably) to OpenClaw. As [Jensen said yesterday](https://substack.com/redirect/93a220c4-9693-4b22-8320-c2bb7e0acdb4), every company needs an OpenClaw strategy. Now Anthropic, which famously “[fumbled](https://substack.com/redirect/4979955b-1e76-46c0-8d57-47b0bde02579)” the Clawdbot relationship, has an answer, and it’s a pretty pretty good one.
+
+Tune in to the full pod to get the full origin story, usecases, and design thinking (particularly around the technical choices of sandboxing and Electron), on today’s pod.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/ZpZ7lFoWaT8)](https://substack.com/redirect/02252e08-643e-4247-96a5-fb666b27ae6a)
 
 > AI News for 3/14/2026-3/16/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

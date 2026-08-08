@@ -48,13 +48,17 @@ people:
   - fchollet
 ---
 
+It’s well known that org charts are changing with AI - the first trend we called out was in 2023 with [the Rise of the AI Engineer](https://substack.com/redirect/41e4380d-131d-4a64-91ae-49719f282883) (now [an official org at Meta](https://substack.com/redirect/fd3e39ae-2a7a-43e2-9aab-5734b853d890)!), and then in 2025 with [Tiny Teams](https://substack.com/redirect/40fdc457-03fd-427c-810f-4967d686cd9a) ([hired by Meta](https://substack.com/redirect/38c7385d-70fd-4b2e-b87a-0f44fbd98d1c)!), but it seems Yoni Rechtman over [at the 99D Substack](https://substack.com/redirect/943306ed-bc42-4cd6-9fe5-0a2b2d6e7363) has the mental model for the new post-AI roles (at least in white collar tech):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/aeae9f33-1a4e-4196-bd29-8864e79205f5_1644x1448.png)](https://substack.com/redirect/3f2f927c-1d42-4c53-9c9c-2a57bf1739a2)
+
+[top level tweet from Karri](https://substack.com/redirect/ea061a45-2b6e-4b74-9241-f79f03932058)
+
+Karri Saarinen, CEO of Linear, made a [popular analogy](https://substack.com/redirect/ea061a45-2b6e-4b74-9241-f79f03932058) to the teamwork roles that emerged in World of Warcraft. This is a good 2D augmentation of [an earlier age-based company model](https://substack.com/redirect/0fa5b828-9b46-4cde-aa42-2c8cb7fdb7df) (much less realistic, name a tech company that fits the latter format, they exist but are very hard to find):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/008c43a3-51a4-4663-aef2-0b0b5990d041_1190x576.png)](https://substack.com/redirect/e7453014-c73b-41d0-a883-99fe15692c87)
 
 > AI News for 3/28/2026-3/30/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

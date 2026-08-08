@@ -61,13 +61,39 @@ people:
   - omarsar0
 ---
 
+> *“If the news is fake — imagine history.” — [AmuseChimp via Naval](https://substack.com/redirect/cf26541c-bd0a-433a-b809-161552529af9)*
 
-**a quiet day**
+- The first news item prompting this editorial is the unofficial but credible reporting that Cursor is now at [$2B ARR](https://substack.com/redirect/e197d506-ecee-4e69-bbb8-f26ff26e9347), and [raising at $50B](https://substack.com/redirect/09052689-96c5-41c3-8818-c46a2ec571c7), contra a [couple](https://substack.com/redirect/7ea274f2-8c7f-4cc2-b930-58eb37079074) [weeks](https://substack.com/redirect/900ad76b-3ae3-4716-98ad-eafca9ca3275) of headlines that Cursor churn is ramping up. In this case, a [filter bubble](https://substack.com/redirect/5177f122-2073-41b6-bf75-837973f60333) cropped up on X, where novelty and scandal is rewarded and truth was hard to glean.
+
+- The second news item is [the Ars-Technica-Scott-Shambaugh saga](https://substack.com/redirect/f43b0b51-1f6f-4353-b25c-b15d0ab01e87), which, there is no polite way to say this, is a veritable clusterfuck of open source abuse, AI Clawbots, and the journalist covering it publishing made up AI quotes, eventually getting fired. As a bonus, human commentors *also *[hallucinated](https://substack.com/redirect/e2c7c934-2d2d-4f46-9608-798a5ad87a3e) more untruths.
+
+- The third is [a recent episode of a top podcast](https://substack.com/redirect/a410243f-d835-46aa-931c-3da17628ccfa) featuring the idea that the best way to launch products is to make 20 different fake TikTok videos of an app and only building it after the videos go viral, instead of building first and then marketing. (We first covered this idea in [the Hyperstitions of Moloch](https://substack.com/redirect/82f54328-c941-4118-a920-e730b0b46280), and it obviously works.)
+
+Left unchecked, the net result of all this is a declining trust in all media, which shatters consensus reality and therefore civil society — I do not have to care what you think is true if I can simply assert my truth louder.
+
+It would be different if we voted with our thumbs. [Dead Internet Theory](https://substack.com/redirect/2a61a919-1dae-4647-b44c-51c8a5da9d61) is not solely caused by AI, but is accelerated by it. I am reminded of an [old social media evolution framework](https://substack.com/redirect/0f4fe085-fa86-442c-8e25-21d1b3643665) that goes like this:
+
+- Before “social media”, people only got their news entertainment from magazines and newspapers — designed for mass distribution, so not at all personalized. Gossip was only by literal word of mouth, from a chatty neighbor or coworker.
+
+- **Your Friends kill Generic Celebrities**: Then Facebook happened, and suddenly you could see news about *people you know/might meet* and learn all the gossip about them. So much more interesting!
+
+- **Professional Friends kill Real Friends: **Your real friends are pretty boring. My Instagram posts about what I had for lunch aren’t as interesting as someone who treats their posts like a job; every photo filtered, every story boarded. The influencers best at this become superstars. Great engagement for everyone! But also - is it a surprise that [one of the biggest vloggers](https://substack.com/redirect/72fbd24d-e332-4768-b0ee-3d35edce3988) turned out to be… scripted?
+
+- **Recsys Long Tail Content kills Professional Friends:** The problem with professional friends is that they had the same problem as the generic celebrities of old — they converge on “merely good enough” for most. They also bring new problems: even when being paid millions they*[still](https://substack.com/redirect/259faab4-c3bc-4e44-b5fd-0a527d48e842)*[ don’t produce enough content ](https://substack.com/redirect/259faab4-c3bc-4e44-b5fd-0a527d48e842), and, yet, they are also divas who wield too much power over the platforms. So: the platforms stop prioritizing your follow graph (stated preferences) and start feeding your worst impulses (revealed preferences). Another huge jump in engagement, and 100x more creators are given the lottery ticket to Make It Big!
+
+- **AI Content kills Human Content**: The final stage — personalized creation replacing curation. Everyone lives in a Truman Show cage of their own making, happily swiping away their free will and connection to quotidian reality.
+
+We’re surely stepping closer and closer to this every day — as newswriters attempting to [Scale Without Slop](https://substack.com/redirect/141f4552-a0b9-4129-a285-e4cb8b977718), this is a problem we’re trying to navigate and create new solutions for.
+
+At the same time it has never been easier to signal taste and human effort — a lesser newsletter might leave you with a slop image like this:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/fece9f9b-ad0f-4c98-ba44-f626e08739ae_2816x1536.jpeg)](https://substack.com/redirect/59c2a0eb-87b5-41f3-ba9f-69187333ce93)
+
+But for now it still takes a human to make a truly useful graphic:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/b8a06c4f-f46a-4c91-ac81-445e5d85e20f_3164x1654.png)](https://substack.com/redirect/567dad2f-9bc2-47e9-a892-7d8d5b9aae68)
 
 > AI News for 2/27/2026-3/2/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**264** channels, and **31899** messages) for you. Estimated reading time saved (at 200wpm): **2895** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -51,13 +51,35 @@ people:
   - arena
 ---
 
+Congrats to the [ggml + Huggingface team](https://substack.com/redirect/9f6bf836-62d9-478e-8cc3-f183fec01c4b), note the [Opus 4.6 METR debate](https://substack.com/redirect/f9d384f7-03bc-4c37-8c88-abe88aa639a0), and read [Chris Lattner’s Claude C Compiler analysis](https://substack.com/redirect/7c304c11-a6fe-449d-88a9-69cf3ca2dfac). But those aren’t the top stories.
 
-**a quiet day**
+Today, 2.5 year old [Taalas announced](https://substack.com/redirect/5e15e828-5e4a-4ca9-8def-d0d7b58a99e2) a **shockingly fast 16,960 tokens per second** per user production API service for the Llama 3.1 8B model (launched July 2024):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/49185ac5-439f-4605-ba64-42d42591e30c_2050x1478.png)](https://substack.com/redirect/be5afe74-ac9c-484c-881d-c45df040d9bb)
+
+While there are some other non-speed gains (less build cost and power draw), it is also offset by some other footnotes on quantization (which they note the HC2 will resolve with standardized low precision FP4).
+
+**This is an impressive result…. that we have no idea how to productize yet.** And anytime there is a huge capability overhang opening up, AI Engineers should rush in to figure out the “capability market fit”.
+
+As for the overall proposition of going custom ASIC, we’re still thinking about this week’s Latent Space with [Martin Casado and Sarah Wang](https://substack.com/redirect/dc90cf2a-10b7-4d11-9924-83a4ccc4e2b1), where Martin reiterated his conviction in the math of doing custom accelerators (ASICs) **PER MODEL**, essentially “baking the LLM into silicon”, foreshadowing [the OpenAI Broadcom deal](https://substack.com/redirect/b3ff7537-5541-4293-b3d6-97604d52e587):
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/p1k7TiAFqdE)](https://substack.com/redirect/3e27749a-d24b-4528-8d9e-fe984c1a9f62)***Martin: **It makes sense to actually do a custom ASIC if you can do it in time. The question now is timelines, but not money because rough math: *
+
+- *If it’s a billion dollar training run, then the inference for that model has to be over a billion, otherwise it won’t be solvent. *
+
+- *So let’s assume if you could save 20%, (which you could save much more than 20% with an ASIC), that’s $200 million. *
+
+- *You can tape out a chip for $200 million. *
+
+*Right? So now you can literally like justify economically, not timeline wise. That’s a different issue. *
+
+***swyx:** An ASIC per model, because that, that’s how much we leave on the table every single time we do generic Nvidia.*
+
+***Martin Casado:** Exactly. No, it, it is actually much more than that. You could probably get, you know, a factor of two, which would be 500 million. Typical MFU would be like 50.*
+
+We understand the tradeoffs that custom chips offer faster/cheaper inference in exchange for lower model quality (by being, in Taalas’ case, 1.5 years behind the frontier), but that gap is virtually certain to close as LLMs continue to standardize in architecture and, more to the point, OpenAI and others start doing **fully** integrated model-chip codesign as Martin predicts. It’s not even about the cost savings at this point - the potential of actual **frontier quality + >20,000 tok/s inference **is incomprehensible to AI Engineers of today and we should start those thought experiments and product surfaces today with an expectation that we’ll get there in under 2 years from today.
 
 > AI News for 2/19/2026-2/20/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**262** channels, and **12582** messages) for you. Estimated reading time saved (at 200wpm): **1242** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -49,13 +49,34 @@ people:
   - reach_vb
 ---
 
+We love writing a newsletter that cares more about being high signal than telling you there’s breaking news every single waking minute. Everything in today’s trending topics, from [Kimi K3](https://substack.com/redirect/6aa5c98d-1f89-445e-a525-65a37b22bab9) to [Open Weights](https://substack.com/redirect/c59f13e9-5ab5-48e4-b3d3-220ec004cb63) to [the Security debate](https://substack.com/redirect/0c3b75c2-1dc9-41b2-88f2-1c7a00266539) to [The Big Pace](https://substack.com/redirect/97c6f07c-42ff-4da5-8367-f05bb309e9e6), we already featured once on AINews and it doesn’t bear further writeup.
 
-**a quiet day.**
+## AI in Finance
+
+One noteworthy trend we ARE tracking is **the rise of AI in Finance**, which though is often covered by [Forward Deployed Engineering](https://substack.com/redirect/78898aa6-d4c6-4b56-809e-08b8a5461787), is being broadly adopted in every subsector of financial services. You can tell it’s a big deal when [OpenAI gets ae to put on a suit](https://substack.com/redirect/ed25239f-b61a-4bbc-89f3-08ed295038ac) for their NYC event with dedicated [equity investing](https://substack.com/redirect/1ff0362b-acfb-4f98-b3c1-4de53c6edb59) and [investment banking plugins](https://substack.com/redirect/5c8cd7bb-0a77-4da7-839c-6f50fdf949fd) in [Codex](https://substack.com/redirect/f76c9f9c-4106-4076-a52d-e512439b0e06), and [Anthropic’s Financial Services team also does an NYC event](https://substack.com/redirect/edaa83cf-d714-4214-bafc-5da4e1ea21a3) and releases Cowork and Claude Code agent [templates covering every workflow in corporate finance](https://substack.com/redirect/6fee71bc-67b3-4f89-8bad-6837566fa94a).
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/50AhIyybR0M)](https://substack.com/redirect/edaa83cf-d714-4214-bafc-5da4e1ea21a3)To add to this coverage, [the full Finance track](https://substack.com/redirect/9bafcbf4-0510-4d87-8348-3cb8e97fa314) was released today, covering:
+
+- **FactSet / Yogendra Miraje:** At a company serving thousands of financial-data clients, “AI skills” aren’t just features — they need ownership, search, evals, audits, and governance to become enterprise-grade agent infrastructure.
+- **Nubank + Snowglobe:** For a digital bank with 100M+ customers, simulations can turn agent evals from a bottleneck into the release mechanism for shipping customer-facing AI faster.
+- **Intuit / Udi Menkes:** When you serve ~100M consumers, small businesses, and accountants, generic LLMs aren’t enough — finance AI has to understand real state, actions, outcomes, and risk.
+- **Kepler / Vinoo Ganesh:** In financial research, where Kepler indexes millions of filings and market documents, “verifiable AI” means every answer needs provenance, reconciliation, and review.
+- **Nubank / Lucas Palma:** At one of the world’s largest digital banks, vetting thousands of AI skills before developers use them becomes a supply-chain security problem, not just a DX problem.
+- **Morgan Stanley / Brendan Hogan Rappazzo:** Inside a global financial institution managing trillions in client assets, multi-agent research only matters if humans can trust the experimental environment it optimizes in.
+- **FlyersSoft / Divakar Kumar:** Event-sourced systems already preserve the historical trail that financial agents need, making them a natural foundation for auditable production decision loops.
+- **Fidelity Investments / Sai Krishna Rallabandi:** At an asset manager with trillions under administration, group-chat and wearable agents force new thinking around memory, permissions, and prompt-injection defense.
+- **China Resources Holdings / Shawn Chan:** For a Fortune Global 500-scale conglomerate, finance AI has to be built for the investment memo — reconciled numbers, uncertainty labels, and provenance beat demo polish.
+- **Auditoria AI / Ramana Siddanth Emani:** In back-office finance automation, the bottleneck may be the developer loop itself — agents can increasingly generate workflows while humans verify the financial truth.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/7jjudsEhBtM)](https://substack.com/redirect/c475bbac-256b-4c50-bda0-fa06d64015aa)
+
+This is why I am making **AI in Finance** our mainstage theme for **[the second annual AIE NYC this October](https://substack.com/redirect/f3e77349-149b-459c-972b-43df238244ae)**. [Early Bird Tickets opened today](https://substack.com/redirect/1ac537b7-c2e4-4984-9005-e0f292421ca7) and [Speaker applications](https://substack.com/redirect/7791dbd7-7417-4958-a6a5-f9294cf6546a) remain open (note; they don’t ALL have to be Finance focused, but those applications with a finance focus have a very very high bar given our expected attendee list).
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d7ec12df-76c8-4af8-a4aa-d0eede187099_2582x1658.png)](https://substack.com/redirect/6217a356-31bd-40aa-9acb-23eb6dc91d3a)
+
+For those in the West Coast, we expect to announce the second [AIE CODE](https://substack.com/redirect/f48f05ee-7763-469c-9b3c-fd4d96e24e4f) soon.
 
 > AI News for 7/28/2026-7/29/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -57,14 +57,27 @@ people:
   - andrew_curran
 ---
 
+On its own, [the launch of Projects.dev](https://substack.com/redirect/591593b3-8362-4646-a2db-4e5be22551a8), a way for agents to instantly provision services, is not immediately title-story worthy except for 2 things: 1) it comes from **STRIPE**, 2) it is a CLI. Run stripe projects add posthog/analytics and it’ll create a PostHog account, get an API key, and set up billing.
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a29a5ad3-a76b-4aa4-b5eb-58bb7e229370_665x500.jpeg)](https://substack.com/redirect/953b7e96-fbfa-4990-b9b8-cf4e50fd6bb0)
 
-**a quiet day.**
+If that sounds weird to you, it’s because Stripe doesn’t really have anything to do with PostHog’s setup or signup process. Neither do [these launch partners](https://substack.com/redirect/c73cce4d-ced4-4a59-896b-811fe67f81e5):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/4235a84e-655c-4e77-bced-3d73e105e793_1876x394.png)](https://substack.com/redirect/1b072743-c20b-4a40-a487-ac469ad232fc)
+
+Stripe is just doing this *because they can*, and [Patrick cites Andrej’s MenuGen as direct inspiration](https://substack.com/redirect/da2a15ef-f7fc-4d78-8107-04e44179e9b3) for how it is too hard for agents to set up backend services today. You’re sure to see the rest of the [agent-native](https://substack.com/redirect/87fc7802-4a84-4c62-af20-6b6a3c2ffe83) infra vendor [landscape charts](https://substack.com/redirect/d4aef79e-9c3a-4b9b-9dd4-64492c672000) all lobby Stripe for real estate:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0d122eee-c93b-4e8d-bbde-6924d3559da9_1065x1164.png)](https://substack.com/redirect/9d5247ae-4075-40be-9fb4-a4c4f60a11b3)
+
+But let’s not stop there: scroll down the timeline a little further and [here’s Ramp](https://substack.com/redirect/553d3680-82cd-4a76-85a4-d5b896ae8faf)’s CLI also launching today, with some [handy usecases](https://substack.com/redirect/6681de55-aac9-419a-90e4-e1ace816020d):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/6c2ebb50-77e8-4904-9bb1-d9b9e873bc3e_1096x1240.png)](https://substack.com/redirect/5ac403ed-0e30-4d24-aaff-39e872ae9e2b)
+
+Oh and look over here! It’s [the Sendblue CLI](https://substack.com/redirect/1f388650-b704-419c-954c-68667e478e4c) (iMessage) you’ve always wanted, also launching today! catching up from [the Kapso CLI](https://substack.com/redirect/3723c8ae-54d3-47f2-b06c-a3764b3a8644) (WhatsApp) from Monday! and did you miss [the ElevenLabs CLI](https://substack.com/redirect/0c5bfb82-5f59-4f0c-8c9b-cfeedda631dd) from yesterday? That’s fine, because you could also try [the Visa CLI](https://substack.com/redirect/ae229290-0c93-4720-86ce-d8b3491fe846), [the Resend CLI](https://substack.com/redirect/77282945-d9b1-464b-a59e-6d3b3822de36), or the [steipete’s Discord CLI](https://substack.com/redirect/581d6f97-d22b-496b-bd7e-61323fd60826), the big momma, [the official Google Workspace CLI](https://substack.com/redirect/d5dfad64-288f-4f3d-83f6-3310a37898d2)!
+
+[Many](https://substack.com/redirect/a1b95c01-ecf2-4a9b-ac05-d1262a8a2045), [many](https://substack.com/redirect/cd022209-57af-44da-809b-cb53194350d7) people have written about why CLIs can be handier than MCPs, which isn’t necessarily a fair nor false comparison, but at this point the trend is undeniable and worth reporting. We credit [Cloudflare’s Code Mode](https://substack.com/redirect/5359e827-b758-4f9c-a96f-724a3b7ef5c8) from last September in kicking off the “use more computer to wrap MCP” trend, and now of course CLIs in themselves don’t really expose or care about their underlying communication protocols.
 
 > AI News for 3/23/2026-3/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

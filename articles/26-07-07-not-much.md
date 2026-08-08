@@ -62,13 +62,25 @@ people:
   - _tim_brooks
 ---
 
+Congrats to Meta Superintelligence on [having the top 2/3 image/video models](https://substack.com/redirect/654dec1a-2247-4cdc-992f-a41a9d8e25b2) in the world! This would’ve been a candidate for a title story, but unfortunately that is pretty much all the detail we have about Muse Image/Video - no paper, no technical detail whatsoever. Still, this beats [the Microsoft MAI models from last month](https://substack.com/redirect/b8a888ae-78d8-4eb3-a290-633a964ccb8a) which is nice.
 
-**a quiet day.**
+We are noted [Lilian Weng fans](https://substack.com/redirect/1bf0f720-7558-4d8f-81e1-ead1dcda2502), so we take notice whenever she drops another research recap, especially rare now that she is a cofounder at Thinky. Today she is thinking about the relationship of harnesses to RSI:
+
+> **Lilian Weng** (@lilianweng) — [5:58 AM · Jul 7, 2026 · 405K Views](https://substack.com/redirect/e43edace-da4f-4e04-ad08-416c9702be78)
+>
+> new post on harness engineering for AI self-improvement: lilianweng.github.io/posts/2026-07-… It is hard to forecast how much the future of RSI will rely on harnesses. Likely harness engineering will evolve in the direction of self-improvement and enable auto-research, and, in turn, smarter
+
+While we have written before about how [even Greg Brockman is now quietly endorsing agent/harness engineering](https://substack.com/redirect/60acf202-6994-4cf4-9049-65c20bba1c68), it is refreshing for a respected thinker and neolab cofounder like Lilian to also agree that “*Even when many harness improvement[s] get eventually internalized into core model, **the need to specify goals and context will not disappear***.”
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/5005c722-fdff-4ea8-aee0-6b37e44da978_1512x886.png)](https://substack.com/redirect/b14ad83b-d695-4016-b691-aa8afe275e56)
+
+[Her post](https://substack.com/redirect/7b32cd42-b92f-4347-9539-9138840bccc2) breaks out the main proven design trends in harnesses that everyone should know, and then recaps the harness optimization literature, most notably from the well [known ACE paper](https://substack.com/redirect/3e19a19a-086f-4dd8-a22c-401de41f77e4) to even more recent trends like [Meta-Harnesses](https://substack.com/redirect/d91553e8-8e1c-47c5-98b2-fc0d714f5e4b), which we have [covered anecdotally on AINews](https://substack.com/redirect/89e0cf3f-0293-4783-a742-69522ee14116).
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/603a46c6-cedc-4b38-a660-2fa1d4b3f4ba_1626x1146.png)](https://substack.com/redirect/5c35a2cf-e117-4a8d-8b12-f8754975d951)
+
+It surely also provides a hint as to what Thinky is Thinking, beyond just [Interaction Models](https://substack.com/redirect/2c4c56a6-2d27-449b-93a7-798aee91f671).
 
 > AI News for 7/06/2026-7/07/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

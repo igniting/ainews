@@ -45,13 +45,21 @@ people:
   - sama
 ---
 
+We will leave coverage of the [SpaceXAI IPO filing](https://substack.com/redirect/89c208f3-7e11-4ef0-83c4-38faf11e7879) for the actual day of IPO. Today we celebrate OpenAI’s result, speculated to be [GPT 5.6 running for <32 hours or <$1000](https://substack.com/redirect/110c3042-337e-469d-be50-551d50618b90), on [the planar unit distance problem](https://substack.com/redirect/e8f0acd0-8403-4068-aa56-10a907be3e26). Similar to the 2025 [IMO Gold](https://substack.com/redirect/7ec66a48-8e66-446e-8c30-e9a3659a8ab2) result, this is a general purpose LLM, [not an AlphaProof/Lean style dedicated model](https://substack.com/redirect/83d54346-0a13-4a23-9277-1f2279c032c8), which lends hope that this extended reasoning will generalize beyond math:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0ff7bdc0-79ef-49ce-a5c0-f7db89d60637_1098x1582.png)](https://substack.com/redirect/10962048-adf9-43fd-bc8d-d431a8386eec)
+
+Among the 125 pages of output, there exists a “[page 39 moment](https://substack.com/redirect/6f28cdd3-85a0-4237-b6cc-8dde315c0854)” that is getting some attention:
+
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/8288cdb3-1d89-4582-9d70-0f251a57d477_753x620.png)](https://substack.com/redirect/a4a2f08e-2d2a-4286-99f2-1182e946c5c6)
+
+As the authors of [the opinion letter](https://substack.com/redirect/f52e423c-55c9-42c8-8e57-87520c08e1ef) note, this is a disproof, not a proof, which would have been more impressive, but nevertheless points towards the way of things to come:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f77d343f-e4c1-4125-b78a-33728e06a6ba_1778x1490.png)](https://substack.com/redirect/2b63c108-6868-4b9c-b9d4-ed9b0a952b8e)
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/c9cfd22b-4a17-47a2-a2b0-d2ae5a911ece_1654x352.png)](https://substack.com/redirect/f9118ab9-a286-45a7-b332-6957f8be558e)
 
 > AI News for 5/4/2026-5/5/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

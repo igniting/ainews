@@ -46,14 +46,21 @@ people:
   - neoaiforecast
 ---
 
+**Hot on the heels of [the Death of the Code Review](https://substack.com/redirect/9d186cdb-267a-40d7-bc88-20a7084984b8), the Pull Request may be next.**
 
+For anyone that learned to code in the last 15 years it is hard to imagine a life without Git, GitHub, and Pull Requests, but there was a time before them, and it well may come to pass that there is life after.
 
-**a quiet day.**
+Pull Requests were arguably [invented in 2005](https://substack.com/redirect/feee0483-fd21-4ae7-acd4-4ba3ce6dcf54), successfully [popularized by GitHub](https://substack.com/redirect/126f913e-ac2a-4e5d-850d-bb114b6dfd9c), and only 21 years later, [GitHub is for the first time in history](https://substack.com/redirect/1f886973-8b9f-430f-ae11-b491644b5e4b) allowing people to disable pull requests on their open source repos (you could only disable issues before).
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d974198b-3217-4de1-ae09-e8aba5710e67_1364x708.png)](https://substack.com/redirect/662a8c53-62e3-4f4a-9a7f-36dc483dab43)
+
+The rise of Generative AI in code has spelled the pending death of the Pull Request for a while now — [Pete Steinberger is by now well known](https://substack.com/redirect/bf18332e-da9e-4cf7-8d3c-e0831bbdd552) (along with [Theo](https://substack.com/redirect/6c964f0f-a8a0-432b-bbaa-c41126bf235a)) for only wanting Prompt Requests rather than Pull Requests (for multiple reasons, eg 1) no merge conflicts, 2) it’s easier for the maintainer to fix/add to the prompt than to look at code, 3) less likely to have malicious/insecure code slipped into an innocent looking PR), and other folks like [Mitchell Hashimoto](https://substack.com/redirect/8c74e4b7-ce1c-4cf0-a2e4-c4c57a3a7c82) and [Amp Code](https://substack.com/redirect/99525e73-7a54-4bbc-a0f1-05d986d1724d) have created “reputation”-based systems for handling untrusted code contributions.
+
+In [Building for Trillions of Agents](https://substack.com/redirect/96fbe3aa-b400-41fb-81d4-344b3c769d43), Aaron Levie noted that “the path forward is to make software that agents want.” Humans invented git for human collaboration reasons. It’s increasingly clear that Git-based workflows may not be suitable once we remove the human bottleneck from the flow of code.
+
+And if Code Reviews are dead, and Pull Reviews are dead… how long until Git itself is dead?
 
 > AI News for 4/14/2026-4/15/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

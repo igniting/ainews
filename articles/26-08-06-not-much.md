@@ -43,13 +43,17 @@ people:
   - sama
 ---
 
+In [The Custom ASIC Thesis](https://substack.com/redirect/9068e4e1-5ae8-471d-9a26-51b442dbb318) we said Taalas was worth paying attention to, and in [the Inference Inflection](https://substack.com/redirect/e2c35dbb-6317-41b7-ae82-eacfc072e5d3) we said everything would go vertical. Our Baseten episode had [some skeptical counterpoints against etched LLMs, not just custom ASICs](https://substack.com/redirect/93f1728a-92f7-4a57-9906-80ff4d872454), but clearly Lisa Su disagrees for now.
 
-**a quiet day.**
+> **Taalas Inc.** (@taalas_inc) — [8:10 PM · Aug 6, 2026 · 158K Views](https://substack.com/redirect/8ab8fab7-8d31-4486-a1c3-e705d06a3749)
+>
+> We are pleased to share that Taalas has agreed to join AMD. We built Taalas to rethink AI inference from the ground up: hardware designed around the model, rather than the other way around. The result is the world's fastest and most cost-effective inference silicon. Joining AMD
+
+Congrats!
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d3b60b0e-d47f-4723-bb40-be9594e9bab4_786x754.png)](https://substack.com/redirect/a985d57b-6569-4c40-9765-65f08445ec70)
 
 > AI News for 8/5/2026-8/6/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

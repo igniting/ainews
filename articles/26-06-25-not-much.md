@@ -58,13 +58,23 @@ people:
   - eliebakouch
 ---
 
+*Only 200 [AI Engineer tickets](https://substack.com/redirect/312a88ab-27fd-49d8-87ce-6284bf5672b0) left - on track to sell out in the next 24 hours. [Grab now](https://substack.com/redirect/b495103c-5d04-4bc3-a3e9-e7dde9fb33e8) for over $60k in sponsor credits!*
 
-**a quiet day.**
+Add this to the [WTF Happened in 2025?](https://substack.com/redirect/aacd5365-924a-41c3-ac8a-a68d7f1fbf2a) files: OpenAI Economic Research is [reporting](https://substack.com/redirect/43826353-f95a-4397-b2de-f56e772579b7) that token usage for everything outside coding is exploding:
+
+> *Through August 2025, the average OpenAI worker spent less than 10% of their tokens on Codex…*
+>
+> *Over the last six months, Codex usage has deepened and intensified at OpenAI. Among active internal users, change in combined output tokens rose sharply across departments. Research saw the biggest jump: by June 2026, **median use was 56 times higher than in November 2025. Customer Support rose 32 times and Engineering rose 27 times, while Legal grew more gradually but still reached 13 times its November level.***
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/3a48b472-a807-4211-b981-983f7a401c3a_2156x1576.png)](https://substack.com/redirect/b2925545-90e4-4e7f-9de4-2a2ffb6290a4)
+
+This should form an interesting baseline against Tokenmaxxing concerns - remember that OpenAI employees have had unlimited access at all times anyway, and SOMEHOW they were still grossly underusing AI even up til late 2025.
+
+Sometimes, you just have to [let them cook](https://substack.com/redirect/bcc69e84-1590-4315-8285-d2392c15664f):
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/fpAthTtha8c)](https://substack.com/redirect/bcc69e84-1590-4315-8285-d2392c15664f)
 
 > AI News for 6/24/2026-6/25/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

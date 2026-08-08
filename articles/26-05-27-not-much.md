@@ -71,13 +71,17 @@ people:
   - vtrivedy10
 ---
 
+We last [wrote about ](https://substack.com/redirect/686bf483-e076-47aa-8239-e0eed0c6e72d)**[Cognition](https://substack.com/redirect/686bf483-e076-47aa-8239-e0eed0c6e72d) in [September’s $10B Series C](https://substack.com/redirect/e7ab7550-6c37-4293-a57c-5029686d68f0) **when Smol.ai also joined Cognition and AINews was eventually [moved here to Latent Space](https://substack.com/redirect/47837957-62cc-473e-9402-0316b292d640). 8 months later, it is [worth 2.5x more](https://substack.com/redirect/5978e2ef-d488-40aa-9ad9-165f83646eb2), and officially the largest [remaining independent agent lab](https://substack.com/redirect/0c79ecd3-d28c-48fa-92da-d95370e8ef98) in AI, a thesis we [mapped out last year](https://substack.com/redirect/45957eb1-a888-4935-ae72-8100b94de8d3). With official ARR disclosures (now [projecting >$1B ARR by EOY](https://substack.com/redirect/66164937-5f83-4c60-8a15-2b17cbdfdeb4)) you can map out the growth, which looks oddly similar to the [WTF Happened in 2025 charts](https://substack.com/redirect/fcd5bf08-e1c1-47bd-943a-aeeb424448a2) (this [isn’t a coincidence](https://substack.com/redirect/eee002c6-9e9d-4185-a0a2-4b73cfa6054e)):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/c283a27b-c506-4ee9-8b9a-47650b429a01_2534x1694.png)](https://substack.com/redirect/062e1d24-59c2-4bbb-bfdd-062d02298620)
+
+In the enterprise SaaS business, ARR is a trailing indicator of utilization, as are the logos of some of the toughest/most discerning customers in the enterprise and startup ecosystem (including [Exa and Modal](https://substack.com/redirect/a2b4c22a-91af-4947-9470-facfa3e03635), featured last week)
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a1563dd3-9a40-45b1-9060-7ec196bf8e77_1316x1616.png)](https://substack.com/redirect/c5bbec4c-5656-44b4-9ab1-df64086a9b99)
+
+We will release more on the Cognition podcast tomorrow.
 
 > AI News for 5/26/2026-5/27/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -38,13 +38,35 @@ people:
   - scaling01
 ---
 
+By some measures, Opus 4.8, barely [two weeks old](https://substack.com/redirect/62324e24-e95b-4f96-ba5e-da7f7b191edd), was already the leading model in the world. But now, [34 days](https://substack.com/redirect/084d21a4-0a76-4441-a2ce-4f357bf8a9f3) after the SpaceXai deal and [63 days](https://substack.com/redirect/c41b8c06-fa05-4fee-9289-fd3fc5078426) after the original Mythos announcement*, we have a Mythos-class model (at least 2x size of Opus) available to everyone (in coinciding with [Claude Tokyo](https://substack.com/redirect/c0540aae-cf6d-4811-9cde-55e57fe5de7c)). It is a feat of incredible engineering (and commitment to access) to make these research models GA, and the benchmarks are great… with asterisks. Here they are on yesterday’s brand new, out of distribution, [FrontierCode Diamond](https://substack.com/redirect/6dac438b-aeb5-40f6-939a-773f25f78358), going from 13.4% to 29.3%:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/7af8f73c-7a20-4f7e-ac83-a05cbc892d8b_2318x1684.png)](https://substack.com/redirect/870454c9-cc26-4fd7-8e41-c8c2765fb7cc)
+
+[tweet](https://substack.com/redirect/9da193bb-f57f-44ae-acab-b99358a27c5b)
+
+The [blog](https://substack.com/redirect/7875e30c-88b7-4aa3-8b01-df51080422f6) and the [system card](https://substack.com/redirect/b9b4b89a-fc61-4c0c-9410-977ce2ebdb96) contain most of the authoritative information, but don’t miss the youtube videos showing it playing [Factorio](https://substack.com/redirect/2f3e7e3b-c975-4981-9edd-494b2494e296), [Pokemon](https://substack.com/redirect/6d7734bb-e7c1-4cde-b858-563e8f064247) (unlike [Claude Plays Pokemon](https://substack.com/redirect/624814fd-af49-4cef-8169-bb1499040a52), this is just using vision, no complex harness as we covered in our pod), [EDM visualization](https://substack.com/redirect/ef195e02-26bc-4e4b-b734-3e781b50a884) (never having head music before), [3D CAD editor creation and printing](https://substack.com/redirect/ef195e02-26bc-4e4b-b734-3e781b50a884) and more from their [main intro video](https://substack.com/redirect/1329b59c-b02a-47fc-9f18-2be7bbea14ab).
+
+API pricing is also fantastic, at roughly 2x Opus.
+
+The asterisks come because Fable is released with two controversial changes:
+
+- **[No ZDR](https://substack.com/redirect/b63c5023-e877-44bf-938d-dd4a9fc2ffba)**: “We will r**equire 30-day retention** for all traffic on Mythos-class models, on both first- and third-party surfaces. We won’t use this data to train new Claude models, or for any non-safety-related purpose, and we’ve instituted new privacy protections including logging all human access to the data and ensuring its deletion after 30 days in almost all cases ...” (see [full policy](https://substack.com/redirect/fa4e980d-4cb1-41dd-9342-3ec11c4dc522))
+
+- **RSI suppression**: “In light of the [ability of recent models to accelerate their own development](https://substack.com/redirect/8528107a-d008-4143-99d2-1812d470e700), we’ve implemented new interventions that limit Claude’s effectiveness for requests targeting frontier LLM development (for example, on building pretraining pipelines, distributed training infrastructure, or ML accelerator design). Using Claude to develop competing models already violates our Terms of Service, but enforcing this restriction through our safeguards avoids accelerating the actors most willing to violate these terms.
+
+> Unlike our interventions for cybersecurity, biology and chemistry, and distillation attempts, **these safeguards will not be visible to the user**. Fable 5 will not fall back to a different model. Instead, the safeguards will limit effectiveness through methods such as prompt modification, steering vectors, or parameter-efficient fine-tuning (PEFT). These interventions will not affect the vast majority of coding work. **We estimate they will impact ~0.03% of traffic, concentrated in fewer than 0.1% of organizations**”.
+
+The vast majority of users will not be affected by these limitations, but the open AI community is understandably upset, as you will see below.
+
+You can find more of their recommendations on usage in Diane Penn’s Tokyo talk, which we have clipped below.
+
+> **Latent.Space** (@latentspacepod) — [3:49 AM · Jun 10, 2026 · 8 Views](https://substack.com/redirect/1da94633-16cb-4e03-987d-88b738e0140c)
+>
+> live from Tokyo: Anthropic's first talk on Fable 5 from Dianne Penn, Anthropic's first PM (can't find her twitter)
+
+*(and 1 week-1 day after both [Anthropic](https://substack.com/redirect/6614af74-4666-45ac-ae57-b39f5e6327ae) and [OpenAI](https://substack.com/redirect/201da703-2d56-4a77-8e53-d733a59e727e) filed their S-1’s ahead of SpaceX’s IPO next week…)
 
 > AI News for 6/8/2026-6/9/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

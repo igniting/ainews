@@ -57,13 +57,37 @@ people:
   - imjaredz
 ---
 
+Congrats to Allen for the [next episode of the Latent Space Food show with Engram CEO Dan Biderman today](https://substack.com/redirect/254ce055-ef2d-43f4-bc7f-d8543d64856a), and to [the Prime Intellect folks on their 1B valuation, $100M ARR, and verifiers v1](https://substack.com/redirect/02600acb-eba0-47ed-889b-43f03de0cfa2).
 
-**a quiet day.**
+Today was pretty quiet and people are still deeply digesting [last week’s multiple frontier model launches](https://substack.com/redirect/7dbca6da-c2eb-4194-8269-e8398a5c7007). We were going to write “not much happened today”, but we also have [a policy of updating you repeatedly on outlier trends](https://substack.com/redirect/a99b7093-94c5-42db-91c1-9e5f8420fa09) that you should really be on top of. In reviewing the Reddit AINews recaps below surfaced [this post](https://substack.com/redirect/04abc4eb-17a0-405a-9ba8-3773bce85546), we saw a tweet we had missed before -
+
+> **Tibo** (@thsottiaux) — [5:59 PM · Jul 12, 2026 · 4.29M Views](https://substack.com/redirect/45526c8f-5b2e-404d-9234-da5c4ca4d414)
+>
+> Morning. The last 48 hours of Codex and ChatGPT Work have been intense! Three important updates: - Temporarily removing the 5 hour usage limit restriction for all Plus, Business and Pro plans - Rolling out changes that will make GPT 5.6 Sol more efficient across the board and
+
+[GPT 5.6 was launched on July 9](https://substack.com/redirect/0eea9e36-8aba-48a5-80bc-12f1d18de11b).
+
+This tweet on July 12 says they hit 6M users in the prior 48 hours (Jul 10-12).
+
+Then 24.5 hours later Tibo reports 7M users…
+
+> **Tibo** (@thsottiaux) — [6:29 PM · Jul 13, 2026 · 947K Views](https://substack.com/redirect/c93de78d-c94d-49f4-838a-60f020723f05)
+>
+> Thank you to the 7M active users who are now using Codex and ChatGPT Work. We have added a banked reset to everyone's account to celebrate the milestone. You can apply the reset in the desktop app or on web and it will replenish the weekly usage for you. Have fun out there.
+
+…oddly coinciding with [a surprise extension of Claude Fable’s subscription status](https://substack.com/redirect/d7789b63-4661-4650-98a7-6e8d8ac7afd0) (we have of course no idea if the two are related, but the permanently online conspiracy theorists are of course making a connection).
+
+We of course recall Fidji’s [March disclosure of 2M Codex users](https://substack.com/redirect/85810141-4394-4b62-9053-66d1a5d92b05), which allows us to update our [AIE NYC 2025](https://substack.com/redirect/b2fb4fc8-cee3-4c0f-85b1-a6351e65121e) chart ([AIE NYC 2026](https://substack.com/redirect/1fdd725f-a47a-453b-9911-d70f2117a1f8) is next!):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/09c078c3-d47d-4ab1-91e5-b09ad5d082dd_1388x902.png)](https://substack.com/redirect/48b9abc7-3fce-4004-91cc-012ca98b904a)
+
+Comparatively, the last update we got about Claude Code is the [roughly 2M users and $2.5B ARR in Feb](https://substack.com/redirect/64b02f88-80ee-456c-b201-2ec3b486909f) (“The number of weekly active Claude Code users has also doubled since January 1 [six weeks ago]."). Now we have a sense of where Codex started the year (Fidji [puts the Jan 1 number at around 550k-700k users](https://substack.com/redirect/85810141-4394-4b62-9053-66d1a5d92b05)), we can reasonably conclude that Codex has followed a similar trajectory and is now around 10x user growth year to date.
+
+The charitable interpretation on Claude Code’s comparative silence on reporting, of course, is that [they moved the bulk of coding to Claude Tag months ago and are now focusing users there](https://substack.com/redirect/161804dd-2532-4c50-a5db-31f6dd38365c), which will have different/hard to compare usage statistics given the different accessibility of a Slackbot vs a CLI tool.
+
+But 10x growth in 6 months is an impressive number to beat nonetheless.
 
 > AI News for 7/11/2026-7/13/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

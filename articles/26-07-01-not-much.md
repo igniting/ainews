@@ -63,13 +63,11 @@ people:
   - jon_durbin
 ---
 
+Fable was relaunched on schedule, and AIE was on top of it with **the first Field Guide to Fable talk**, as well as the rest of the excellent [Richard MacManus](https://open.substack.com/users/232063-richard-macmanus?utm_source=mentions) coverage of AIEWF Day 3 across [Autoresearch](https://substack.com/redirect/83c9d6a1-f857-43de-93f1-372de51cdea9), [Cursor FDE](https://substack.com/redirect/84f133c3-0c74-42fa-b2c5-441040bf8b3a), and a [followup](https://substack.com/redirect/058b3c81-f55f-411e-81c1-f7a6c13808e2) to [Zach Lloyd’s popular talk yesterday on Software Factories](https://substack.com/redirect/9103926b-d2e2-4b8b-9768-98ed8a704821), as well as “all killer no filler” closing keynotes:
 
-**a quiet day.**
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/4sX_He5c4sI)](https://substack.com/redirect/9103926b-d2e2-4b8b-9768-98ed8a704821)
 
 > AI News for 7/1/2026-7/1/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

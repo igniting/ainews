@@ -50,13 +50,33 @@ people:
   - angaisb_
 ---
 
+*Second batch of AI Leadership and Engineering+Workshops tickets for [AI Engineer World’s Fair](https://substack.com/redirect/fa1e661b-abb0-4287-a484-fa02b5842549) sold out last night! Last 500 tickets on sale now - get while stocks last! [20% off for the first 20 readers](https://substack.com/redirect/927623c9-a711-4cbc-a5d5-8694dc5099f8) who see this.*
 
-**a quiet day.**
+It is rare that we are personally involved in the title story of the day, and [Apple’s WWDC announcing Gemini-powered Siri](https://substack.com/redirect/04650f5e-ac09-4979-b9cc-aee35d4a3c19) was a possible candidate, but [we’ve been fooled before](https://substack.com/redirect/51cbf2c9-d3e9-4de0-b432-2bccf9d7566a). So instead, we’ve got [FrontierCode](https://substack.com/redirect/53bb40fa-3185-42d3-b05b-fe36a09061cf), the latest in our [War on Slop](https://substack.com/redirect/34e26cd1-c5c3-464f-bbec-b6c737b9f129)!
+
+> **Cognition** (@cognition) — [7:04 PM · Jun 8, 2026 · 470K Views](https://substack.com/redirect/53bb40fa-3185-42d3-b05b-fe36a09061cf)
+>
+> Introducing FrontierCode: a coding eval that raises the bar for difficulty & quality. Each task took 40+ hrs of work by leading open-source maintainers. Models write sloppy code that works but isn’t maintainable. Our eval is first to measure: would you actually merge this code?
+
+If that chart looks familiar, it’s because FrontierCode was explicitly inspired and named for FrontierMath - focusing its hardest tier on extremely hard problems for frontier models 2 years ago:
+
+> **Epoch AI** (@EpochAIResearch) — [9:05 PM · Nov 8, 2024 · 423K Views](https://substack.com/redirect/9e1e39aa-e7bc-4b41-b06f-c04e01065ef2)
+>
+> 3/10 We evaluated six leading models, including Claude 3.5 Sonnet, GPT-4o, and Gemini 1.5 Pro. Even with extended thinking time (10,000 tokens), Python access, and the ability to run experiments, success rates remained below 2%—compared to over 90% on traditional benchmarks.
+
+The context of FrontierCode revolves around past work we have done around [SWEBench-Verified](https://substack.com/redirect/1f75ab2d-fe17-4f74-aa05-60f5a150e263).
+
+- It is clear that even with the switch to SWEBench Pro, there has been insufficient articulation around [WTF Happened in 2025](https://substack.com/redirect/170b9522-7f04-4049-86af-670242de042d). As discussed with the OpenAI team in that podcast, there needed to be a lot more work around the rubrics for code quality and maintainability, and that is exactly what the Cog research team ended up building in this first release of FrontierCode.
+
+- Separately, METR found that [Many SWE-bench-Passing PRs Would Not Be Merged into Main](https://substack.com/redirect/293590d8-5a3b-41e9-83e3-1c0968220fc6) and the problem of false positive trajectories (not quite “reward hacks”, but spiritually similar in terms of the unreliability of the benchmark rather than the model) was directly measured and addressed in the FrontierCode report.
+
+With hindsight, FrontierCode’s third tier of problems shows the huge accceleration going into Dec 2025 that suddenly [made agentic engineering and vibe coding possible to go up one level of abstraction](https://substack.com/redirect/7b12f0a0-af7a-4bd7-bbc9-c49e525e8ba3), to the /goals and loops and metaprompts we are discussing today.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0acd2026-8f85-4504-a5f3-6a0cd82d0b6a_2170x1604.png)](https://substack.com/redirect/eb6addea-791f-4df9-b088-5e8c519c65d7)
+
+[more context here](https://substack.com/redirect/7b12f0a0-af7a-4bd7-bbc9-c49e525e8ba3)
 
 > AI News for 6/5/2026-6/8/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

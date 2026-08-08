@@ -48,13 +48,39 @@ people:
   - shannholmberg
 ---
 
+It is the day before Google I/O, when the next major Gemini releases are expected to be previewed, and it will probably be a quiet week from competitors, though [Anthropic](https://substack.com/redirect/0a71cfdb-c116-416a-bea7-55606efcc8b2) and [OpenAI](https://substack.com/redirect/c657f3cd-5cb9-429b-8b36-cae72e325ca0) both had minor wins today, and Cursor shipped their [first SpaceXAI model](https://substack.com/redirect/c785192a-696b-467b-9263-90ce7a3d147b) with some nice detail on synthetic data/reward hacking and continued pretraining with [Muon](https://substack.com/redirect/f0ecc722-0f42-4940-9ddd-c8e6b625cbe6). However the probable lasting title story candidate from today will be Vlad Feinberg’s (understandably Google/TPU centric) [notes on job preparation, specifically on Pretraining](https://substack.com/redirect/b2ca90ac-5eeb-43fb-bdbd-234f8502d503):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/2e69d902-1d29-4e8c-834c-41e83b07223f_1194x604.png)](https://substack.com/redirect/23838756-40be-49a8-b5e3-89a40c21e409)
+
+Specifically he references last year’s [Scaling handbook from DeepMind](https://substack.com/redirect/c889f93a-7e8d-49d4-999e-4488ef2d4507), and kernel work is an important part:
+
+> *The biggest bottleneck and innermost loop of all LLM work is **performance work that makes abstract, logical changes to the LLM practical to run**. Every project needs people who can **tune the LLMs at the kernel level**. It is a skill you can pick up and is the most direct path into the labs.*
+
+There’s a surprise mention of DSLs for kernel dev, of which there is a [concise history](https://substack.com/redirect/321f6e8b-0e0d-4638-86da-522f920b90d7):
+
+> **Yaroslav Bulatov** (@yaroslavvb) — [2:50 AM · May 11, 2026 · 6.93K Views](https://substack.com/redirect/321f6e8b-0e0d-4638-86da-522f920b90d7)
+>
+> What is the reason for proliferation of DSLs in the last year?
+
+For someone at this level of the stack, surprisingly he also calls out Agent Work like [autoresearch](https://substack.com/redirect/90c1b283-987f-4ae4-ab73-a207c6971701) and AlphaEvolve. He ends with a surprisingly simple exercise:
+
+> **swyx🛬 SFO** (@swyx) — [8:53 PM · May 18, 2026 · 61.6K Views](https://substack.com/redirect/6223256e-0744-4613-8340-30d540ee7c5c)
+>
+> this seems quite doable in the space of a single 2-3 hour workshop — any brave soul want to try to livecode this for people as a learning exercise?
+
+But the real hiring test is in the bottom paragraphs:
+
+- *Derive Chinchilla laws for this; see how they **differ for dense vs MoE** architectures. *
+
+*Code your solution from scratch in jax by hand if you actually want the learning experience.*
+
+- *Next, assuming you used jax.lax.ragged_dot for the MoE layer; **write a pallas kernel** that beats ragged dot for F > D by fusing the up/down projections. *
+
+*Find a setting where you notice a measurable forward pass speedup and explain why it’s there.*
+
+If you can teach this to the rest of the community, we’d [love to feature you as a workshop speaker.](https://substack.com/redirect/a1cfd041-c2e5-4dc2-a8a5-2606e2754741)
 
 > AI News for 5/16/2026-5/18/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

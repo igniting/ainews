@@ -49,13 +49,23 @@ people:
   - artificialanlys
 ---
 
+*Everyone say hi to [Richard MacManus, our new Head of Editorial](https://substack.com/redirect/d02a03bd-116d-4805-89d5-8aca3a99ecc2)!*
 
-**a quiet day.**
+The current debate about Open Weights is the kind that creates a lot of grandstanding on a topic, while they wait for a very small set of players that will actually decide how things go (in either direction); this is not very conducive for those of us trying to focus on high signal to noise.
+
+First, there was the open models letter signed by [NVIDIA](https://substack.com/redirect/df5339f3-d454-4eeb-ac7c-ea0f85e1307c) and [Microsoft](https://substack.com/redirect/bcf317fd-2f3f-419b-bb31-8cd53e258de2), which quickly devolved to [memes](https://substack.com/redirect/0379704a-5d04-40fd-91ac-0beb352b6d55) and [memes](https://substack.com/redirect/7f509d3c-28fc-4307-b273-c1f9592e647a) and everyone in the ecosystem (who obviously benefit from more open models) piling on to cosign the letter to adopt an already populist stance. Meanwhile, OpenAI was [rumored](https://substack.com/redirect/c602c5e3-0a63-4350-8b70-96da6eff4855) not to sign it, and then [signed it](https://substack.com/redirect/30df7d19-ad50-4222-a439-68f53b489b2b), and Anthropic did [not sign it](https://substack.com/redirect/28d1ffb5-6d20-436c-a369-d3ddcb237826).
+
+All very predictable, and all somewhat exhausting.
+
+Meanwhile the only people to actually ship open weights this week are likely to be Moonshot AI, which this weekend followed through on their promise to ship Kimi K3, which has now been [independently validated](https://substack.com/redirect/19b4d4fc-4677-4ddc-937d-38051f644dfd) multiple times to [beat Opus 4.8](https://substack.com/redirect/421074d4-e52e-4ae5-ade3-4602dd4dccd0) as hoped, and therefore claim the title of best open weights model in the world.
+
+> **Artificial Analysis** (@ArtificialAnlys) — [2:17 AM · Jul 28, 2026 · 14.6K Views](https://substack.com/redirect/19b4d4fc-4677-4ddc-937d-38051f644dfd)
+>
+> Open weights intelligence advanced today with the release of Kimi K3. The gap between the leading proprietary and open weights models is now just 4 points on the Artificial Analysis Intelligence Index, the smallest it has been since the GLM-5 release in February @Kimi_Moonshot 's
+
+If you don’t make law, make chips, or make models, we recommend [reading the Kimi K3 tech report](https://substack.com/redirect/4cc82bed-4394-47af-951e-4eb67ad4ca12) rather than 50 tweets of low-perplexity invective by the commentariat to the proletariat.
 
 > AI News for 7/25/2026-7/27/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

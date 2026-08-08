@@ -51,13 +51,21 @@ people:
   - omarsar0
 ---
 
+Following [our Satya podcast from MS Build](https://substack.com/redirect/2fa3769a-e8ce-4059-bdee-9af862ea4719), we published [Loopcraft](https://substack.com/redirect/2d95f0fb-bfea-4c69-b53e-43ae8b4a9284) last week, and over the weekend the Bill-Gates-quoting Microsoft CEO was back with [his first ever X article](https://substack.com/redirect/e50dac62-e599-45e4-95fe-b5f625145bc3) and an extreme (>60 million view) banger on frontier ecosystems over models:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/cf76265a-b9d4-4100-acf7-e262e9f15460_908x1210.png)](https://substack.com/redirect/b7149170-4e36-4dc0-bd4f-06d3e6b2c3f9)
+
+In it, he spells out many of the things he was already saying on [our pod](https://substack.com/redirect/2fa3769a-e8ce-4059-bdee-9af862ea4719), this time with the added terminology of **Loopcraft** that amounts to a new “[theory of the firm](https://substack.com/redirect/0a764991-4f8f-446c-8fbd-c2e7cbf4ea43)”- Loops building the new IP/”token capital” of the company:
+
+> *This is the first time we can create **a real cognitive loop between people and digital systems**. That is a mind-bender, because it changes how we even conceptualize work inside an enterprise….
+>
+> This means **the real opportunity is not in picking the best model** but instead in **building a learning loop** on top of models where human capital and token capital compound. You can offload a task, or even a job, but **you can never offload your learning**…
+>
+> In my view, our priority has to **be building a frontier ecosystem**, not just a frontier model, so value flows broadly across every company, every industry, and every country. One where **every organization can own the learning loop** that encodes its institutional knowledge, compounding its human and token capital.*
+
+Of course, to anyone familiar with **[the language of Big Model vs Big Harness](https://substack.com/redirect/8f4c13a4-6b86-4233-94ec-c987e7a3abca)**, you’ve all heard some variant of this before, and either view it as “cope” or timeless sage wisdom. What you’ve never heard, til this month in his series of well executed new media appearances, is the CEO of Microsoft so cogently articulating his new AI strategy for the first time [since the OpenAI breakup eight months ago](https://substack.com/redirect/2a6232e0-64f9-4762-a5fa-c6c20af6e6c7).
 
 > AI News for 6/10/2026-6/11/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

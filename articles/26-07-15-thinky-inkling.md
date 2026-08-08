@@ -43,14 +43,27 @@ people:
   - scaling01
 ---
 
+Thinky only seems to come up for air once every few months; most recently with [Interaction models](https://substack.com/redirect/af66a51d-1214-48d4-af63-5622ff67ecc8) - but each time they do they impress, showing both taste and depth. Today they [introduced Inkling](https://substack.com/redirect/816e1314-0bc3-4b94-bd20-510ef25fb48e) — not a SOTA model, but a very solid new family for a baseline American open model:
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/90048da3-a87f-44d8-8ad4-e954031d2721_2540x1692.png)](https://substack.com/redirect/5e03d716-63cd-4ea1-a253-4f166406a5f4)
 
-**a quiet day.**
+- Our model, called Inkling, is a Mixture-of-Experts transformer with 975B total parameters, 41B active.
+
+- It supports a context window of up to 1M tokens.
+
+- It was pretrained on 45 trillion tokens of text, images, audio and video.
+
+- It is the first in a family of models of different sizes: alongside it we are sharing a preview of Inkling-Small, a lighter-weight model with 12B active parameters, trained with a similar recipe, that achieves strong performance with even lower cost and latency.
+
+- Inkling reasons natively over text, images, and audio, and balances cost with performance through efficient and controllable thinking effort
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/7f9ce249-0d32-4168-a4c4-9b794019fc74_1620x1628.png)](https://substack.com/redirect/653dc778-72c1-4205-ba15-342603f0d163)
+
+The [Huggingface breakdown](https://substack.com/redirect/81b7831c-e01b-4d2e-a62e-5fe6f2397126) covers some interesting technical highlights:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/866e482a-de86-43e7-b497-b43f0da8a037_1610x1808.png)](https://substack.com/redirect/39730e64-fc1a-4b8a-853e-f5084650c15d)
 
 > AI News for 7/14/2026-7/15/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

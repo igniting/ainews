@@ -66,13 +66,23 @@ people:
   - scaling01
 ---
 
+It is Cloud Next today and Google TPUv8’s (training and inference iterations) were [announced as expected](https://substack.com/redirect/0f34ebea-1927-4d2a-8e10-c8292718f29d), though the numbers are mindboggling, they mostly serve to reinforce the sheer hardware advantage that a decade of investment has given to GDM and any models they train and serve.
 
-**a quiet day.**
+Over the last 2 days with **[AIE Miami](https://substack.com/redirect/05ceb7ed-ebe5-411a-886b-1f5d65e94ad1)** concluding ([Singapore](https://substack.com/redirect/de844ef4-dc46-4d2f-be01-e5ebd6744a9b) is next!) the top conversations we have been hearing from AI leadership (CTOs, VPs, Founders) have all centered around the concept of “Tokenmaxxing” and how leaders want to get their teams using more AI, WITHOUT the downside of incentivizing the kinds of horrendous waste our friend [Gergely Orosz](https://open.substack.com/users/30107029-gergely-orosz?utm_source=mentions) described at [his AIE keynote](https://substack.com/redirect/214fcdf5-69bb-476f-9eb3-e7db67e72956).
+
+Dex Horthy, coiner of Context Engineering and “the Dumb Zone”, [publicly retracted ](https://substack.com/redirect/5db42660-ff2c-4360-a7f9-4f27128f0768)his extremely vibe-coding-pilled call 6 months ago and encouraged people to **please read the code, **citing [Alex Volkov](https://open.substack.com/users/152216110-alex-volkov?utm_source=mentions)’s [Z/L continuum from AIE Europe](https://substack.com/redirect/4e8fd8c8-1c5d-4e4b-86b9-8670ecd444f8)**:**
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/cb2b6f77-150d-4fb4-a74a-259318cba0dd_1698x1172.png)](https://substack.com/redirect/9a12d7ac-b716-40fd-943c-d39d98f2d979)
+
+[timestamp](https://substack.com/redirect/5db42660-ff2c-4360-a7f9-4f27128f0768)
+
+Off the record, many senior leaders I talk to are more on [the Zechner side](https://substack.com/redirect/43374dfd-0e54-41be-9346-fda303c3706c) than [the Lopopolo side](https://substack.com/redirect/64fa049d-1014-4a06-bf04-8906e522bb22) of the Z/L spectrum — this does not mean that one side is true for every one in every situation, nor does it mean it will continue to be true with advancing model progress! To point out the most obvious, engineers and engineering leaders are the ones most setup to make a big deal out of minor architectural quality issues that sheer quantity of cheap code generation and code review *might* overcome.
+
+Today’s LS guest, Mikhail Parakhin, CTO of Shopify, had another take on the “tasteful tokenmaxxing” - you want to go for depth (e.g. do more serial autoresearch loops) than go for breadth (e.g. solve a problem by kicking off 5, 10, 50, 500 parallel runs of the LLM slot machine). Worth thinking through.
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/RrkGoX3Cw7o)](https://substack.com/redirect/14bbd382-02b5-43ee-afe4-65562e769a06)
 
 > AI News for 4/21/2026-4/22/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

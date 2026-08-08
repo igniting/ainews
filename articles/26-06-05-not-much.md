@@ -51,13 +51,33 @@ people:
   - pauliusztin_
 ---
 
+Do check out the excellent [RL Env guide](https://substack.com/redirect/3939a774-5bf4-433d-b55f-ea055e4791e8) we posted today! And more lightning pods over the weekend, starting with [our CommandCode remote pod on harness optimization for DeepSeek v4 Pro](https://substack.com/redirect/17654dc0-e4b2-488c-8354-6a670505b5b9).
 
-**a quiet day.**
+[
+
+## How to Stop Shipping Low-Quality RL Environments (with Examples)
+
+](https://substack.com/redirect/3939a774-5bf4-433d-b55f-ea055e4791e8)
+
+[Auriel Wright](https://substack.com/profile/39274261-auriel-wright)
+
+·
+
+Jun 5
+
+[![](https://substackcdn.com/image/fetch/$s_!NbXz!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe58868ac-23a0-453d-81e5-5ca830f7454d_1456x1394.png)](https://substack.com/redirect/3939a774-5bf4-433d-b55f-ea055e4791e8)
+
+[
+
+We’re so excited to publish this guest post from Auriel W, who has worked on RL at Gemini, and has an incredible “RL Pet Peeves” blog where she not-so-subtly explains the frustrations big labs have w…
+
+](https://substack.com/redirect/3939a774-5bf4-433d-b55f-ea055e4791e8)
+
+[Read full story
+
+](https://substack.com/redirect/3939a774-5bf4-433d-b55f-ea055e4791e8)
 
 > AI News for 6/4/2026-6/5/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

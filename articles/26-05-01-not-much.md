@@ -47,13 +47,43 @@ people:
   - omarsar0
 ---
 
+**TL;DR: we are announcing Wave 2 Call for Speakers for AIE World’s Fair this summer - apply here: [https://sessionize.com/aiewf2026/](https://substack.com/redirect/79a06575-1405-4074-9f77-55f920931543)** ESPECIALLY if you have projects relevant to our **new tracks in [Autoresearch](https://substack.com/redirect/31d03ae0-f0c2-4ba8-918f-76d48f0d6674), [Memory](https://substack.com/redirect/5c31b8da-5c02-4b91-8bc0-eff926f1881b), [World Models](https://substack.com/redirect/ffb57008-4cb1-4f2c-851e-3e510a61c1b4), [Tokenmaxxing](https://substack.com/redirect/88f02483-acd7-4f34-a8d7-15252d0151eb), Agentic Commerce, and Vertical AI in Law, Healthcare, GTM and Finance**!
 
-**a quiet day.**
+In January we laid out plans for [Scaling without Slop](https://substack.com/redirect/1a2b924d-f0fb-41c3-9e4e-aa152b123509) and despite some content exhaustion risk, your reception has been positive, with AIE viewership now trending to at least double 2025’s peak, serving **over a million unique AI engineers** a month.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/fed86a54-e3a3-42e1-bfae-d881dbbf3b0a_1484x972.png)](https://substack.com/redirect/bcda006b-2aa0-4164-ac69-9972eccda154)
+
+This year is our first in [Moscone West](https://substack.com/redirect/1d2c10e5-a046-43ab-9b9c-69b8cfcf45e2), doubling for the 3rd year in a row in our mission to bring all of the AI Engineering world to San Francisco to showcase the must-know research and product engineering work of the year, as well as to hire, fundraise, and close business deals. Sales are going well, but traditionally we do [one callout a year](https://substack.com/redirect/3374d19d-b343-4cbe-a2e7-f7c1501d8e02) for the World’s Fair to widen our net for people who might not traditionally think to submit a talk (because they didn’t know we were interested!).
+
+This year we are adding an entire day’s worth of talks to the schedule, so on top of the all the [evergreen themes we covered in 2025](https://substack.com/redirect/0fcbfd82-c2b3-4175-a6a1-0d1e592cf098) and [in Europe](https://substack.com/redirect/006ab6c0-89f3-4a29-bce9-1c482eb6fce5), we’re adding a few more new ones that I am specifically soliciting applications (and sponsors!) to cover:
+
+- **[Autoresearch](https://substack.com/redirect/31d03ae0-f0c2-4ba8-918f-76d48f0d6674): **recursive self improvement loops in harnesses and model training!
+
+- **[Tasteful Tokenmaxxing](https://substack.com/redirect/88f02483-acd7-4f34-a8d7-15252d0151eb): **as a company leader, how do you make your AI Eng teams 10x more AI-Native/scale AI adoption, BUT without Goodharting waste?
+
+- **[Memory](https://substack.com/redirect/5c31b8da-5c02-4b91-8bc0-eff926f1881b): **how are your agents/models improving as your users use them?
+
+- **[World Models](https://substack.com/redirect/ffb57008-4cb1-4f2c-851e-3e510a61c1b4): **how are you solving spatial intelligence and adversarial reasoning?
+
+- **Agentic Commerce: **how are agents paying for data, APIs, and other agents?
+
+- **Vertical AI in Law, Healthcare, GTM and Finance: **how are you applying AI in these specific domains? We are also open to submissions for **AI in Government and AI in Education**, though generally these seem less fast-moving.
+
+- **Robotics**: [last year](https://substack.com/redirect/910a6aed-7acb-49ee-9dd4-4e2d0e01fbcf), Physical Intelligence, Waymo, Tesla, Nvidia, K-Scale (RIP) and others presented their approaches to autonomy; this year **WE ARE ALLOCATING FREE EXPO FLOOR SPACE FOR GOOD ROBOTICS DEMOS**. (contact hello@ai.engineer to set up your demo area! Humanoids must be accompanied.)
+
+- **Founders: **a new Startup Battlefield event will be added where you can pitch your pre-series A company to our panel of top VCs and guest judges.
+
+There are other new tracks, which you can find in the [full application form](https://substack.com/redirect/79a06575-1405-4074-9f77-55f920931543) (don’t constrain yourself to tracks, just submit your best work and we’ll find a place for you)
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/6045585a-7095-4a04-bbef-7f29cbc35fe5_1938x1276.png)](https://substack.com/redirect/bc7cfa85-d8b4-42e9-af3a-8aa743f92039)
+
+If you already applied and were accepted in Wave 1, you should receive an email in your inbox informing you so - if not, don’t fret, you’ll still be considered in Wave 2, no further action needed.
+
+**This is for everyone else who weren’t aware we are soliciting applications for the biggest technical AI event of the year - **especially if you know someone who would be PERFECT to talk about some of these topics we are calling out, then **we need your help** to reach them.
+
+**[Apply here](https://substack.com/redirect/79a06575-1405-4074-9f77-55f920931543)** - and book your ticket/travel asap (because things are filling up fast for the World Cup also taking place in SF that week) — we will refund successful applicants. (*Also contact hello@ai.engineer if you need an invitation letter for international visa*).
 
 > AI News for 4/30/2026-5/1/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

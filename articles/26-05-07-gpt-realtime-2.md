@@ -43,40 +43,35 @@ people:
   - ryanpgreenblatt
 ---
 
+OpenAI launched [realtime-1.5](https://substack.com/redirect/cfd3256e-32c8-48c7-a301-5257dc9043a6) 3 months ago, but it was a relative drop in the bucket because it was still 4o based intelligence (a +5% bump in Big Bench Audio). You could tell the sheer confidence in today’s realtime-2 release (with a +15.2% bump in BBA), and it was [appropriately well received](https://substack.com/redirect/4011a84a-24af-46da-977a-b442d78f21c9):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/9c9ffc6c-3f36-4f23-a2c3-34d5e64955aa_1014x918.png)](https://substack.com/redirect/53e620ed-c65d-407e-bb11-988e7ea97f6b)
 
-> AI News for 5/6/2026-5/7/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
+As[ the blogpost](https://substack.com/redirect/10d2a833-a9a5-42bf-9ed3-d2f6c7c58502) explains, 3 models are being released, which one might simplify to “voice-in, voice-out, and voice-to-voice”:
 
+[![](https://substack-post-media.s3.amazonaws.com/public/images/81d9ff0f-63ea-4b44-85a9-7fcc0d659f75_1716x772.png)](https://substack.com/redirect/b969be62-3323-4c78-a9c2-0bc13c9553db)
 
-OpenAI launched realtime-1.5 3 months ago, but it was a relative drop in the bucket because it was still 4o based intelligence (a +5% bump in Big Bench Audio). You could tell the sheer confidence in today’s realtime-2 release (with a +15.2% bump in BBA), and it was appropriately well received:
+The focus is less about “voice quality”, and more on usability. **TLDR:**
 
+- **Preambles**: Developers can enable short phrases before a main response, like “let me check that” or “one moment while I look into it”.
 
+- **Parallel tool calls and tool transparency**: The model can **call multiple tools** at once and make those actions audible with phrases like “checking your calendar” or “looking that up now,” helping agents stay responsive while completing tasks.
 
+- **Stronger recovery behavior**: The model can recover more gracefully by saying things like “I’m having trouble with that right now,” instead of failing or breaking.
 
-As the blogpost explains, 3 models are being released, which one might simplify to “voice-in, voice-out, and voice-to-voice”:
+- **Longer context**: 32K → 128K
 
+- **Stronger domain understanding**: The model better retains specialized terminology, proper nouns, healthcare terms, and other vocabulary
 
+- **More controllable tone and delivery**: The model can better adjust its tone—speaking calmly, empathetically, or upbeat, based on context
 
-
-The focus is less about “voice quality”, and more on usability. TLDR:
-
-Preambles: Developers can enable short phrases before a main response, like “let me check that” or “one moment while I look into it”.
-
-Parallel tool calls and tool transparency: The model can call multiple tools at once and make those actions audible with phrases like “checking your calendar” or “looking that up now,” helping agents stay responsive while completing tasks.
-
-Stronger recovery behavior: The model can recover more gracefully by saying things like “I’m having trouble with that right now,” instead of failing or breaking.
-
-Longer context: 32K → 128K
-
-Stronger domain understanding: The model better retains specialized terminology, proper nouns, healthcare terms, and other vocabulary
-
-More controllable tone and delivery: The model can better adjust its tone—speaking calmly, empathetically, or upbeat, based on context
-
-Adjustable reasoning effort: Developers can now select from minimal, low, medium, high, and xhigh reasoning levels, with low as the default.
-
+- **Adjustable reasoning effort**: Developers can now select from **minimal, low, medium, high, and xhigh reasoning levels**, with low as the default.
 
 The Demo video showed off how the audio model is better tuned when the main speaker is speaking to someone else, so it stops interrupting so much:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/JOu8v6CBjkE)](https://substack.com/redirect/57c8fe25-85ed-4583-877b-5bed4c51e4d2)
+
+> AI News for 5/6/2026-5/7/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
 
 ---
 

@@ -63,13 +63,11 @@ people:
   - piotrz
 ---
 
+When we made the AINews → Substack move, we committed to having Matt Levine style op-eds every day, but some days there just isn’t much going on and we will just say so - we are working on small essays around inference demand and multiagents, but today is not that day.
 
-**a quiet day.**
+Interesting model releases from [Nvidia Nemotron](https://substack.com/redirect/f7c1e4e8-8b33-4f32-bd12-f64fc0ff6aa2), [Poolside](https://substack.com/redirect/616e91f2-4a6e-4b79-ada4-f5ea07d631c5), and [Alec Radford](https://substack.com/redirect/608117eb-d445-43f6-9c29-9806cc03371c), but it’s unclear any of them will stand the test of time. [GPT-6 hype](https://substack.com/redirect/eff5c70a-6866-46e6-beb4-02e8e1e7e708) is beginning.
 
 > AI News for 4/27/2026-4/28/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

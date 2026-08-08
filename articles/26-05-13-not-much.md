@@ -52,13 +52,33 @@ people:
   - pratyush_maini
 ---
 
+It has been a tale of two cities in the past 3 weeks since the launch of GPT 5.5; while the finance folks fall in love with [Anthropic’s growth](https://substack.com/redirect/dc6eeea8-d5c4-47bd-b4fa-cb7a62e25bfe) and [CFO](https://substack.com/redirect/e28b405a-ae2c-494d-b75a-8be10b95ca24) ahead of its likely October IPO, there has been a notable rise in pro-Codex sentiment among AI Engineers, likely a combination of GPT 5.5 being a really good (in [some scenarios Mythos-tier](https://substack.com/redirect/62bb0254-787c-4c84-8674-5fb648b29f3f)) model, launch of [Codex for Everything Else](https://substack.com/redirect/2f9d50a0-b57b-4d07-898d-773999370759), and, a third thing, which is the trigger for today’s op-ed: more generous limits.
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/1f3bb92f-f1bd-4329-9b9c-64c681eec378_1290x874.png)](https://substack.com/redirect/e1c7932b-48b1-4c3f-9e44-794d68a68bdb)
+
+The messaging for Claude’s pricing change was generally pretty well done, it is simply not what uses of alternative harnesses wanted to hear: [every Claude subscription now gets a monthly credit of API tokens equal to the dollar amount of the Claude subscription plan.](https://substack.com/redirect/78b1fb74-766c-4e70-b500-bb99b889443f) So you pay $200, you get BOTH a Claude subscription with its own limits for using Claude on Anthropic-owned harnesses like Claude.ai and Claude Code (“interactive usage”), AND $200 worth of API credits for using Claude everywhere else including claude-p, OpenClaw and others (“programmatic usage”).
+
+If things had worked this way from the start, it would have been viewed as a very good deal:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/148215c3-6a2e-4a77-b243-630d5c9c7247_1228x1640.png)](https://substack.com/redirect/0dabc5cd-5711-49a8-8313-5bc7081f2253)
+
+However, because of the historical subsidy/pricing advantages (estimated between 70-90% discount from API pricing), people are viewing it [as a “rug pull” of sorts](https://substack.com/redirect/0413650c-741d-4c2a-9ff8-bde68780c183) — however it’s nice to have an official policy in place as opposed to the selective targeting of [OpenClaw](https://substack.com/redirect/683d66e7-8353-4c7c-9c09-9c6c41cb7159), [OpenCode](https://substack.com/redirect/2c0545e3-77a6-4ec6-9fd7-4f369d7de934), and uncertain status of less popular harnesses.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/041d6b0a-7ea1-4e96-82ad-750ed4e73f25_1208x1394.png)](https://substack.com/redirect/45d12fde-52fd-40b1-b9fe-edd1b16750c9)
+
+That these headlines come on the same day as [OpenAI launches their enterprise switch](https://substack.com/redirect/6f0b92b8-c814-405d-9f36-1a5e1201a94e) promo is an incredible coincidence:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8449d76d-2f12-4dde-a825-744697b02502_1192x1116.png)](https://substack.com/redirect/26aa4363-f8cc-41cb-9438-5543f4abd40a)
+
+At the end of the day, we would caution against reading too much into swings either way - both labs are doing very well, and these are in the grand scheme of things normal pricing shifts by people inventing the future of coding while figuring out optimal pricing as they shake up a decades-old industry. Anthropic was more liberal in the beginning, but now that Claude Code has a sustainable brand and clout as an agent harness, Anthropic is putting its most favorable pricing behind its own tools and metering everything else, whereas Codex as the challenger is being more liberal with everything.
+
+Perhaps hardware is destiny, perhaps this is part of a longer 6 month alternating cycle of the “[mandate equinox](https://substack.com/redirect/cf403b6c-dd5f-44a8-8d18-a04900b64361)”:
+
+> **dan** (@irl_danB) — [3:17 AM · May 1, 2026 · 2.28K Views](https://substack.com/redirect/cf403b6c-dd5f-44a8-8d18-a04900b64361)
+>
+> wow, almost six months (to within three weeks) before that the mandate equinox is real on this schedule, Anthropic will retake hearts and minds circa October just in time for recursive self-improvement
 
 > AI News for 5/12/2026-5/13/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

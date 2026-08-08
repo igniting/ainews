@@ -52,13 +52,21 @@ people:
   - artificialanlys
 ---
 
+After a couple months’ delay and lots of speculation, [DeepSeek finally released the heavily anticipated DSV4](https://substack.com/redirect/c688d56d-7a08-4aca-b327-661aba56b2d5), the first major version model since DSV3 (Dec 2024) and DSR1 (Jan 2025). It brings the DeepSeek family up in line with [Kimi K2.6](https://substack.com/redirect/32a133e6-841d-4b6a-813c-1774505b6e61), the current open model leader, and [Xiaomi Mimo 2.5](https://substack.com/redirect/b945466f-015e-4578-8e6d-2c0ea0edaeb2), a lesser known family [released 2 days ago](https://substack.com/redirect/554435e0-fdf7-4a4f-8e2e-6f9e1d31b359).
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/a10f0270-c9c4-481b-962a-fcba50a2418b_1022x1104.png)](https://substack.com/redirect/8c5604e3-6d36-42e7-a607-6091efbe1814)
+
+The DSV4 family is roughly a Gemini 3.1, GPT 5.4, Opus 4.6 level model, up to 1.6T MOE withtrained on 32T tokens with [FP4](https://substack.com/redirect/dc7d099e-2998-4f10-8603-559fcdea0035), with 1M token context (supported by their new Compressed Sparse Attention (CSA) and Heavily Compressed Attention (HCA) techniques), and incredibly rarely, they released both the Base and Instruct versions - surely setting the stage for a possible “DeepSeek R2” in future, though this one already has reasoning effort.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f028c03e-53a7-4615-af85-fc5e6e11dab0_1226x940.png)](https://substack.com/redirect/a722c45b-ab3f-49a5-8071-e2dc670b5157)
+
+The [technical report](https://substack.com/redirect/a14b3fde-deb5-4993-a38d-32e2cebe559a) is a typically dense 58 pages, demonstrating training and inference insights and improvements from [the Manifold Constrained Hyper-Connections (mHC) paper](https://substack.com/redirect/1953ebb2-37d3-4c43-bcc5-9b95652e6230) they released in January, continued usage of [Moonshot’s Muon](https://substack.com/redirect/dfda2e2a-2cb1-442e-b8c5-7877df89095c), and CSA/HCA’s overall INCREDIBLE efficiency improvements on [DeepSeek 3.2-Exp’s already impressive Sparse Attention](https://substack.com/redirect/6ec46347-6f42-4676-8aad-18c77e8050c4) - at 1M tokens, requiring only 27% of FLOPs and 10% of KV cache memory compared with DeepSeek-V3.2:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f73baf75-34a0-46e8-8452-7cccd7481ba9_1156x730.png)](https://substack.com/redirect/9f858e6b-8502-47a5-a6cd-1b4648e4fea2)
+
+The geopolitical backdrop behind the [Huawei CANN compatibility](https://substack.com/redirect/ca836345-1267-4d52-adbc-a3017d720d89) is DeepSeek weaning dependence off export-controlled NVIDIA/CUDA chips — Ascends are still [a quarter the supply](https://substack.com/redirect/f5ba811b-ee9b-445f-a250-fa7508c37f6a) of H100s, but this is an important milestone for Chinese total independence.
 
 > AI News for 4/23/2026-4/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

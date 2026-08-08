@@ -56,13 +56,51 @@ people:
   - mervenoyann
 ---
 
+One of our big “hero charts” a year ago (eventually adopted by [Demis](https://substack.com/redirect/45f7e02d-2108-4257-b127-b17f724fe5bd)) made the stunning observation that, holding LMSys Elo constant, [GPT4 level intelligence fell by 1000x over 18 months](https://substack.com/redirect/da123c00-02a5-44ae-ba6e-a861cd7d2158):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/c2141d13-0751-4a61-8ffa-69c8d96f04f6_1308x929.png)](https://substack.com/redirect/f580045f-c770-42c6-83f7-77b55292edc3)
+
+Back then, it was unclear if these were “noob gains” - going from unoptimized to optimized, going from completions to reasoning, going from dense to MoE, with all the low hanging fruit gone. Another 18 months later, it seems the answer is no; constant-level intelligence is continuing to get precipitously cheaper.
+
+Yesterday, OpenAI [published](https://substack.com/redirect/f8140022-95ce-4ea3-a0c8-b6ba0493d854) findings on how GPT 5.6 had optimized its own serving:
+
+### 1. Inference Acceleration
+
+To serve more tokens on the same hardware without sacrificing quality, OpenAI focused on several systemic upgrades:
+
+- **Self-Optimization:** GPT-5.6 Sol was actively used to analyze production traffic, tune load balancing, and autonomously **rewrite production kernels in OpenAI’s own Triton and Gluon **languages. This autonomous kernel optimization reduced end-to-end serving costs by 20%.
+
+- **Speculative Decoding:** Improved its own draft model (by designing and running **hundreds of experiments** on its architecture, testing changes in size, structure, and features, while monitoring the speculator training process, **autonomously intervening** when issues arose, including hardware failures and training instability) increasing token-generation efficiency by over 15%.
+
+- **KV Caching:** Optimized batching, sharding, and cache management specific to different workloads (primarily Sol in Codex) to extract more inference from existing hardware.
+
+### 2. Agentic Harness Improvements
+
+To streamline the complex, multi-step tasks in tools like Codex and ChatGPT Work, OpenAI optimized their Rust orchestration layer to reduce repetitive compute costs:
+
+- **Avoiding Context Bloat:** Tools, skills, and plugins are only surfaced when needed (deferred discovery), and tool outputs are capped at 10,000 tokens by default to prevent the context window from expanding unnecessarily.
+
+- **Prompt Caching:** To avoid reprocessing the same instructions and history repeatedly, the harness treats all model-visible history as append-only. This preserves the prompt prefix, allowing the system to reuse previously computed data and maintain a high cache hit rate.
+
+Today, they proved it wasn’t just theory, announcing large price cuts for the smaller models and a new 2.5x Faster mode in Sol (though not the hinted 10x faster Cerebras-driven mode promised in July):
+
+> **Sam Altman** (@sama) — [5:27 PM · Jul 30, 2026 · 1.5M Views](https://substack.com/redirect/1ccecc74-c524-4d42-b865-259cdb2ebbab)
+>
+> major price cuts today: *80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output *20% drop for GPT-5.6 Terra, to $2/$12 *GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence
+
+That is a beautiful Pareto curve — if AA’s Cost per Task is reflective of real world tasks, then OpenAI has beat even open models like DeepSeek, GLM, and MiniMax, and dedicated cheap-but-good models like Gemini Flash-Lite.
+
+Good, but what is truly jaw dropping is [Nicdunz’s observation](https://substack.com/redirect/f0a32097-65fd-4384-a0b8-6867c707501d):
+
+> **GPT-5.4 full at xhigh scored 51, exactly where Luna max sits today**. GPT-5.4 costs $2.50/$15; Luna now costs $0.20/$1.20. In other words, roughly four months later, **OpenAI is selling March’s full flagship intelligence at about one-thirteenth the token price**.
+
+> **nic** (@nicdunz) — [5:40 PM · Jul 30, 2026 · 169K Views](https://substack.com/redirect/f0a32097-65fd-4384-a0b8-6867c707501d)
+>
+> GPT-5.4 full at xhigh scored 51, exactly where Luna max sits today. GPT-5.4 costs $2.50/$15; Luna now costs $0.20/$1.20. In other words, roughly four months later, OpenAI is selling March’s full flagship intelligence at about one-thirteenth the token price.
+
+That’s an annualized rate of ~2000x a year, a huge acceleration since our last observation - which you SHOULD discount because all public benchmarks like AA’s get trained to some extent whereas Elos are less directly trainable. While leading Chinese and American open models like Poolside’s [Laguna](https://substack.com/redirect/ff869a34-b193-4f18-9bda-bf547295c7d3) and [Thinky’s Inkling](https://substack.com/redirect/c73a2cde-fc8b-4aa9-a475-4270518bcb8b) offer full control and sovereignty, if your only goal is cost-effective non-finetuned intelligence, you will find it -very- hard to beat OpenAI right now.
 
 > AI News for 7/29/2026-7/30/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -47,13 +47,43 @@ people:
   - scaling01
 ---
 
+There’s a lot of small tidbits going on, with former guest [Fei-Fei Li’s World Labs](https://substack.com/redirect/95b20ab6-911c-45af-9d3f-4c14bc82f06c) and [The Era of Experience’s David Silver](https://substack.com/redirect/9d813def-a5fc-4bae-bd31-0cba87d8f132) both raising monster $1B rounds, and [Anthropic officially blocking OpenClaw](https://substack.com/redirect/95c335ab-f76b-4fb2-b148-1f6fa74cf464) using Claude OAuth tokens ([consistent with post-OpenCode policy](https://substack.com/redirect/af160b28-9258-40a9-9715-c63fd5360c67)), with OpenAI employees politely [reminding everyone](https://substack.com/redirect/cd299189-108f-4aa9-adbe-c74f386dc6c7) that they’re more than welcome to use OpenAI plans instead on the same day (complete coincidence, we are sure).
 
-**a quiet day**
+However, all that will pass. What we’d highlight today is Anthropic’s study of its own API usage patterns, [Measuring AI agent autonomy in practice](https://substack.com/redirect/05ea6c54-ddc0-41ef-8d4b-154fb5960734). As you might expect, most usage is coding, but you can start to go down the list of the other uses and pick off the next likely targets for agents:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/92d32668-1f3b-45bf-8cdb-975742145b44_1830x1154.png)](https://substack.com/redirect/5321cc5c-6428-4529-ba19-f3b368f1fc76)
+
+Most of the post is about Claude Code usage. We see Anthropic’s side of the “increasing autonomy story” - starting at 25 mins in Sept to over 45 mins in Jan, with a dip coinciding with the sudden [2x jump in userbase](https://substack.com/redirect/480bf8d6-9437-4597-9abb-13ff1b139ebd) in Jan-Feb 2026, and then rebounding with the release of Opus 4.6.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/18a91dee-c7fa-409d-9541-b34e24bba31c_1938x1236.png)](https://substack.com/redirect/fdee072c-0bdc-485a-bbe5-fe12a4ad5196)
+
+This is a somewhat different but directionally similar story with the famous METR chart, which, as we explain in our upcoming podcast with them, because it picks the 50th percentile success rate of **HUMAN EQUIVALENT HOURS** instead of the 99.9th percentile long tail autonomy of Claude Code autonomous execution, shows a very different (and volatile at the extremes) trend of almost 5 hours of human work done by agents:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0016aa23-88fb-4fb5-844a-d794ae5e7936_1992x1566.png)](https://substack.com/redirect/bbb0ef3a-876b-4c4c-91d5-0ce1b97b1113)
+
+as Anthropic notes:
+
+> The METR evaluation captures what a model is capable of in an idealized setting with no human interaction and no real-world consequences. Our measurements capture what happens in practice, where Claude pauses to ask for feedback and users interrupt. And METR’s five-hour figure measures task difficulty—how long the task would take a human—not how long the model actually runs.
+>
+> (also…
+>
+> **Most Claude Code turns are short. The median turn lasts around 45 seconds**, and this duration has fluctuated only slightly over the past few months (between 40 and 55 seconds). In fact, nearly every percentile below the 99th has remained relatively stable.
+
+Enough said. Because Anthropic has full access to Claude Code telemetry, there are other autonomy measures nobody else has. For example… new users start off with 20% auto-approve, and increase to >50% over time with experience
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/0c1ac831-d439-4a2e-8aac-2aa5b309e390_1720x1112.png)](https://substack.com/redirect/8b08edf0-f3bb-4e2a-97da-49bde1839ea8)
+
+…although they do also interrupt it almost twice as often:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/24df5029-cbb7-4d16-99b7-08bc18108a7b_1692x1158.png)](https://substack.com/redirect/4740f7ef-18c6-4e46-ba09-1e0853e7fbc6)
+
+There’s also good analysis of when -Claude- interrupts the flow to ask for clarification, with decent calibration and good breakdown of reasons with frequency:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/8518fe8e-229d-437d-9ab6-344b3c885c96_1404x1316.png)](https://substack.com/redirect/b2d4c308-6ab8-4b6a-8df6-28d352399245)
+
+The rest of the post is more safety oriented, but AI Engineers can take away alot from this agent usage data alone.
 
 > AI News for 2/17/2026-2/18/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**262** channels, and **10849** messages) for you. Estimated reading time saved (at 200wpm): **1103** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

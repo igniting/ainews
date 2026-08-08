@@ -57,13 +57,25 @@ people:
   - deredleritt3r
 ---
 
+While you could debate [ARR revenue recognition](https://substack.com/redirect/af7d6f2f-e002-4b0a-b728-80f131a00344), it is hard to deny very real reports of [secondary market](https://substack.com/redirect/4ac6fd98-cb72-4b58-a919-69f1d0457324) and [traditional media reporting](https://substack.com/redirect/c8ef9431-6246-4866-a716-086399231f83) that Anthropic, after their “miracle Q1” of [80x annualized growth](https://substack.com/redirect/af7d6f2f-e002-4b0a-b728-80f131a00344) and [one month jump of $15B ARR](https://substack.com/redirect/70236c63-3ddb-4a61-9697-643964dcc9ac), is now being valued at $1-1.2T, making it officially overtake OpenAI as the 11th-[15th](https://substack.com/redirect/b6a529dd-2b79-43bc-a282-6335c9e33004) most valuable company in the world.
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/52674313-df4c-453e-a3c9-e8177361596e_966x968.png)](https://substack.com/redirect/8cf585a4-4565-44ad-9f01-034a5cffa092)
+
+This is a REVENUE, not a financial speculation, chart:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/16948c4c-0672-46a5-bf0b-b80ccc0a2591_944x1016.png)](https://substack.com/redirect/01c043e6-8c15-45b6-a6bf-76adfcc1377a)
+
+All this and while [Block](https://substack.com/redirect/71cad492-b9bf-4777-9f1f-250de459f27b) (40%), [Coinbase](https://substack.com/redirect/18efa934-a021-4db6-9242-bb16f229b500) (14%), and [Cloudflare](https://substack.com/redirect/a7b19ddd-f4d0-413a-8bb4-6452fe7e7a79) (20%) have laid off massive swathes of their workforce, all citing AI readiness. It’s hard to tell the degree to which this is “AI-washing” “normal” layoffs, but it is clear that stronger companies, [like Linear](https://substack.com/redirect/ce2feb19-ab0d-4728-9da8-e80d78ceb7fd), are the ones that grow, not shrink, due to AI.
+
+And of course, the “AI” growth has mostly been hardware and energy, rather than software:
+
+[![Image](https://substack-post-media.s3.amazonaws.com/public/images/021c44bf-dba1-44ad-b3a5-d4de3e6a7644_1728x954.jpeg)](https://substack.com/redirect/27e3f0d6-bbf8-499f-8aed-a60338ea1858)
+
+With the AI growth and non-AI shrinkage, we are approaching bubble territories of concentrations in the economy:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/db8ea82d-37e1-404c-88b6-d99f5b745e2a_960x860.png)](https://substack.com/redirect/1cea916f-0834-4e0d-b2b7-7299422fbe32)
 
 > AI News for 5/7/2026-5/8/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

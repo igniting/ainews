@@ -55,13 +55,17 @@ people:
   - arena
 ---
 
+Against the backdrop of [ongoing Anthropic-Fable negotiations and a relaxation of Mythos](https://substack.com/redirect/a16d13f0-b6e1-4b95-a0e6-5e598f15468a) controls, [GPT-5.6 was announced](https://substack.com/redirect/c849e161-3be6-4f22-aa99-71a73a3dad66) today, but with limited access to trusted partners. It is Mythos-beating at a subset of coding agent tasks:
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/2899dbdf-7aed-499f-92b9-63cc194a604e_1328x932.png)](https://substack.com/redirect/a2db49c6-45ae-4c04-9435-be5b6f4f8932)
+
+But OpenAI took strong pains to explain that this model both Mythos-beating and also not as capable at Cyber as Mythos:
+
+> ***GPT‑5.6 Sol does not cross the Cyber Critical threshold under our Preparedness Framework⁠.** In evaluations involving Chromium and Firefox, it identified bugs and exploitation primitives—the building blocks of an exploit—**but did not autonomously produce a functional full-chain exploit** under the conditions tested.*
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/f8afd086-ae65-4104-857b-60b0b2a46d11_1324x1514.png)](https://substack.com/redirect/d5866a7d-04bf-4122-90de-569ae98f99c1)
 
 > AI News for 6/25/2026-6/26/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

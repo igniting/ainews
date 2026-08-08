@@ -46,13 +46,25 @@ people:
   - blancheminerva
 ---
 
+Congrats due to Baseten, who officially [announced](https://substack.com/redirect/618555bd-6e4b-439c-a4d5-05b1746e92fa) their [leaked](https://substack.com/redirect/b7a09f9e-03ae-4d32-b6aa-204eea7f638c) $13B Series F.
 
-**a quiet day.**
+Today had a smattering of midsize news across OpenAI Daybreak and Gemini Interactions and Sakana Fugu, but probably the trend to watch and hang your hat on is SpaceX’s THIRD GPU rental deal, this time with Reflection AI:
+
+> **Andrew Curran** (@AndrewCurran_) — [3:22 PM · Jun 22, 2026 · 108K Views](https://substack.com/redirect/ba169e3c-aaaf-4ded-a536-fbe00119a52f)
+>
+> SpaceX has signed a $6.3 billion dollar compute deal with Reflection. Reflection will gain immediate access to GB300s to train open source models, and will pay SpaceX $150 million per month beginning July 1, 2026, through 2029, according to materials viewed by CNBC.
+
+Combined with the well publicized [Anthropic](https://substack.com/redirect/426a9fe8-6ba8-453c-b17b-c8a9c200348c) and [Google](https://substack.com/redirect/70825fa4-6a89-4a9e-b0b0-f1888d653da9) deals (*hmmm… who’s missing from this customer list? Why?*), one might be wondering just how far SpaceX has to go. Jamin Ball from [Clouded Judgement](https://open.substack.com/pub/cloudedjudgement?utm_source=mentions) already tallied up like for like:
+
+> **Jamin Ball** (@jaminball) — [4:43 PM · Jun 22, 2026 · 42.8K Views](https://substack.com/redirect/56533067-661c-4031-9b24-fd83b7683630)
+>
+> SpaceX lands another computing deal, this time with Reflection, an open source model development company. $150m / month for GB300s. SpaceX the Neocloud! Deal 1 with Anthropic Colossus 1 and Colossus 2. Anthropic took all of Colossus 1 $1.25b / month ~325k total chips, split
+
+> **In Summary, $2.32B / month,** >$10 / hour for Blackwells (which is a very high rate)
+
+That annualizes to **$28B** a year, roughly [twice](https://substack.com/redirect/bd64dd66-91e1-4223-ba57-daa8ad894477) the current revenue of Coreweave, which is holding strong at a [$60B valuation](https://substack.com/redirect/bd64dd66-91e1-4223-ba57-daa8ad894477) today a year after [their IPO](https://substack.com/redirect/4b80ddbd-09da-4a83-bb7f-3e943c917355).
 
 > AI News for 6/20/2026-6/22/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

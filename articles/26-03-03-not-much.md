@@ -47,13 +47,19 @@ people:
   - justinlin610
 ---
 
+Probably the most consequential news of today is the confirmation that [Anthropic has hit $19B ARR](https://substack.com/redirect/6ca0b077-b8c7-4d7f-9bb5-37be1c0992c6) after an extraordinary month in the news and public consciousness, taking it remarkably close to [OpenAI’s latest disclosed $20B](https://substack.com/redirect/cd728e24-c189-46a3-9be0-de1d7087ecb9) and making the end of year 2026 target of $30B look comically close in retrospect. If Anthropic does “flip” OpenAI it will certainly be an earth-shattering reorder in the hierarchy that has existed since ChatGPT’s launch.
 
-**a quiet day**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/b8d40f52-7af5-4969-b941-896fbbd80306_1184x1702.png)](https://substack.com/redirect/e487d89e-8a66-4de3-8ff5-36d1a8631fb9)
+
+Lots of small notables today - we recommend the delightful sounds of [the Gemini 3.1 Flash-Lite demo](https://substack.com/redirect/def510da-9010-49e5-a532-a00310be1f77) video which does a more effective job of communicating speed compared to the overall alignment focus of [the GPT 5.3 Instant messaging](https://substack.com/redirect/121cdea9-4289-47e2-8d89-32ca1d9f24c9).
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/5c5846dc-3d68-436a-8549-b9b4dd707c5d_1556x1004.png)](https://substack.com/redirect/e98f03a1-a0a8-4785-accc-c02da6c58515)
+
+Finally, the mass departures of many Qwen researchers due to what seems like internal politics is a massive, perhaps lasting, blow to Open Source.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/9b9024fe-bb8e-481d-898d-d61a0513b082_1264x856.png)](https://substack.com/redirect/28d26092-ef2d-4e25-994f-f21d2a8a49be)
 
 > AI News for 3/2/2026-3/3/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**264** channels, and **12765** messages) for you. Estimated reading time saved (at 200wpm): **1137** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

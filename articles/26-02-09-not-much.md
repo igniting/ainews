@@ -44,13 +44,33 @@ people:
   - sam_altman
 ---
 
+Harvey is rumored to be [raising at $11B](https://substack.com/redirect/7fdb27ac-98fe-4269-b49a-c8c306fdf638), which triggers our decacorn rule, except we don’t count our chickens before they are announced. We have also released a [lightning pod today with Pratyush Maini of Datology](https://substack.com/redirect/94b47b48-2d3d-43b4-b74e-7e16ca15936b) on his work [tracing reasoning data footprints in GPT training data](https://substack.com/redirect/15fba215-4db1-40f6-af98-90edc042d99f).
 
-**a quiet day.**
+But on an otherwise low news day, we think back to a phrase we read in Armin Ronacher’s[ Pi: The Minimal Agent Within OpenClaw](https://substack.com/redirect/e0d2551f-fe4c-41e1-9481-231f25d4c9fa):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/7ba15034-2dd7-4e35-b07e-4e07638e34ca_1070x628.png)](https://substack.com/redirect/33c04518-b29e-468c-9dc5-8baf01055025)
+
+The point of Armin’s piece was that you should lean into “software that builds software” (key example: Pi doesn’t have an MCP integration, because with the 4 tools it has, it can trivially write a CLI that wraps the MCP and then use the CLI it just made). But we have higher level takeaways.
+
+Even if you are an OpenClaw doubter/hater (*and yes this is our [third](https://substack.com/redirect/ecc40d58-81d3-4668-ac5e-9c2592b06543) [post](https://substack.com/redirect/0ef88167-f83c-4010-8f01-09de2c4bf1ef) in 2 weeks about it, yes we don’t like overexposure/hype and this was not decided lightly — but errors of overambivalence are as bad or worse than errors of overexcitement*), you objectively have to accept that OpenClaw is now the most popular agent framework on earth, beating out many, many, many VC-backed open source agent companies with tens of millions of dollars in funding, beating out [Apple Intelligence](https://substack.com/redirect/cdb38489-040a-407e-8867-79ddc4bdb416), beating out [talks from Meta](https://substack.com/redirect/055ecae1-938b-42b6-b3db-5a9f90a4b759), beating out closed personal agents like [Lindy](https://substack.com/redirect/b1c20ad9-4b5a-4627-856c-7b3bfae02fe5) and [Dust](https://substack.com/redirect/a37f5b5d-ea61-4e5f-9114-6068c89ed885). When and if they join OpenAI ([you heard the prediction here first](https://substack.com/redirect/55c12e40-99fb-4743-bbde-a863e8696fc6)) for hundreds of millions of dollars, **this may be the fastest open source “company” exit in human history (3 months start-to-finish).** (*It is very important to note that OpenClaw is committed to being free and open source forever*).
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d5f18016-4b17-4837-b9da-82477cddb254_802x500.jpeg)](https://substack.com/redirect/b8d1a33c-9633-4ee1-b3cd-d728b07c41bf)
+
+Speculation aside, one of the more interesting firsts that OpenClaw also accomplishes is that it inverts the AI industry norm that the “open source version” of a thing usually is less popular and successful than the “closed source version” of a thing. This is a central driver of [The Agent Labs Thesis](https://substack.com/redirect/c34f2c6a-8291-4c28-a65d-dc59e9e6ece0) and is increasingly under attack what with [Ramp](https://substack.com/redirect/d1c835a3-c831-4cab-be14-9dbfc783e4a0) and now [Stripe](https://substack.com/redirect/2b42a443-e5f4-4276-b0df-e69e13ff5197) showing that you can build your own agents with open source versions of popular closed source agents.
+
+But again, we wonder how, JUST HOW, OpenClaw has been so successful.
+
+In our quest for an answer, we coming back to the title quote: “Sci-Fi with a touch of Madness”. Pete made it **fun**, but also **sci-fi**, which also is the term that people used to [describe](https://substack.com/redirect/5826cf89-5d4a-45d8-be93-7f86147fc8bd) the Moltbook phenomenon (probably short-lived, but early glimpses of Something).
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/cf834c9a-3530-46e6-9a2d-bed929ae85dd_1120x592.png)](https://substack.com/redirect/0f0f8161-2a0a-44bd-bf03-a96b45c3f13e)
+
+It turns out that, when building in AI, having a **sincere yearning for science fiction** is actually a pretty important trait, and one which many AI pretenders failed to consider, to their own loss.
+
+Don’t believe us? Ask a [guy](https://substack.com/redirect/86f3094e-87e3-4ffe-bfe2-4cc612590f92) who has made his entire life building science fiction.
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/60260bbd-2c47-4a0e-aafd-dc4f47d6e385_1124x984.png)](https://substack.com/redirect/faa7faa6-050d-4b6f-bc6e-8bed7da6aa6a)
 
 > AI News for 2/6/2026-2/9/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**255** channels, and **21172** messages) for you. Estimated reading time saved (at 200wpm): **1753** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

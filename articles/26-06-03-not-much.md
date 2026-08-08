@@ -50,13 +50,25 @@ people:
   - osanseviero
 ---
 
+4 years ago we argued that image composition was partially [AGI-Hard](https://substack.com/redirect/51c8e0c0-8110-43e5-b5cf-ac3aa94b541f). That gate has fallen this year. It can’t be pure coincidence that both [Reve](https://substack.com/redirect/298513a4-2f67-41f6-9272-3a5034814dfc) and [Ideogram](https://substack.com/redirect/d020241c-b7d3-4023-8d75-eb687ab41c8c) launched today, both with a heavy emphasis on how they made advances with strong labeling and [code](https://substack.com/redirect/f7e017bf-4cc1-47d7-83cc-fd02778c7171) for layouts:
 
-**a quiet day.**
+> **Reve** (@reve) — [7:50 PM · Jun 3, 2026 · 4.79M Views](https://substack.com/redirect/298513a4-2f67-41f6-9272-3a5034814dfc)
+>
+> Today, we’re launching Reve 2.0, the best 4K image model in the world. We invented a new way to generate and edit any image using precise layouts. For the first time, it’s possible to create images you can touch.
+
+and here’s Ideogram 4.0, now [the best open image model](https://substack.com/redirect/e844f50f-b2ac-4f66-a4ce-819c8645f533):
+
+> **Ideogram** (@ideogram_ai) — [3:58 PM · Jun 3, 2026 · 16.1K Views](https://substack.com/redirect/e4b18b40-fec1-4ec7-9979-3718d479438a)
+>
+> We trained Ideogram 4.0 with bounding boxes tied to region descriptions — teaching the model where every object, text region, and layout element belongs. Richer supervision → the model learns structure faster and understands it better → you can prompt with precise bounding-box
+
+These are great achievements, and all great US model achievements, but the Arena rankings do show [how far ahead GPT-Image-2](https://substack.com/redirect/36ada772-a706-4b5e-9373-72ff4e762238) is…
+
+> **Taesung Park** (@Taesung) — [8:36 PM · Jun 3, 2026 · 4.99K Views](https://substack.com/redirect/37b1e804-9e71-49be-adce-1b33f88c0fb1)
+>
+> Diffusion models are known to be very compute intensive, even more so than LLM training. Now that we reduce images into layouts, we turn it into a next token prediction problem. This gives us a big boost.
 
 > AI News for 6/2/2026-6/3/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

@@ -49,13 +49,19 @@ people:
   - _catwu
 ---
 
+It is considered uncouth in the news business to reflect on things that happened a few days ago — that is “olds”, not “news”. But we’re making a very conscious attempt to give you early and repeated signal on trends and not just headlines with AINews. To wit, although we already reported on [Claude Cowork Dispatch](https://substack.com/redirect/094fee73-efb4-4577-9bf7-5cf488b61527), and Claude Cowork Dispatch Computer Use (a result of last month’s [Vercept acquisition](https://substack.com/redirect/abb76238-1c44-407b-b811-094d0e709ef5)) was technically [launched yesterday](https://substack.com/redirect/6424f5ee-20a9-4546-b99b-54dc26f6d203), the reception has been FAR and away Claude’s biggest launch of all time (inclusive of @AnthropicAI):
 
-**a quiet day.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/6f346c8a-0223-4e5f-adc4-7b5c190beadf_1521x846.png)](https://substack.com/redirect/26aeac5d-9459-4ed7-b1fd-a50fb67da6c4)
+
+We created this chart by accumulating all the top tweets of the company accounts:
+
+(@openaidevs, the defacto Codex account, maxes out around 2.5M impressions)
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/1165be5d-99b4-4c99-906c-d4d446773e99_2574x1440.png)](https://substack.com/redirect/5e5036cb-a640-4a0a-ba7b-78549c8ccce5)
+
+Claude has shipped “[Channels, Dispatch, Projects, Computer Use, Auto Mode, and now iMessage - all in one week”](https://substack.com/redirect/3afa1d31-e27a-44b7-865d-30328f865666). If you’re in startups, you should know about [Anthropic’s resident growth hacker](https://substack.com/redirect/a623b0f5-c735-48c1-a202-ec1d00eaa42b), but the product pace and quality of shipping cannot be bought, inspiring [great Claude memes](https://substack.com/redirect/f8075e3e-0d80-4c94-b933-27cd7eb55b8c) and the pace of self recursive development here is itself worth observing.
 
 > AI News for 3/23/2026-3/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

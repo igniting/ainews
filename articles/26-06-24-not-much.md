@@ -59,13 +59,17 @@ people:
   - victormustar
 ---
 
+The brief history of Meta-Harnesses is a little undocumented, but it roughly goes: at first there was [Conductor](https://substack.com/redirect/a567dabb-3af6-4a06-85e7-651f5ba6c014) and [Zed’s ACP](https://substack.com/redirect/684b8f9f-14dc-4510-844d-1beed94f7c2f), then there came [OpenInspect](https://substack.com/redirect/c11d824c-c0f0-44e5-993d-5d371c030204), Cloudflare’s [Flue](https://substack.com/redirect/ac9b3607-2670-4678-bb5c-e78da2502302), and then Vercel’s [Eve](https://substack.com/redirect/795c5edb-523e-4d99-8064-5120d1adab3e) and [HarnessAgent](https://substack.com/redirect/04313cf1-217e-402b-a8d4-db43c81908b5), and [Heypi](https://substack.com/redirect/60aa196e-1b16-4c9a-9724-3d7782704e20).
 
-**a quiet day.**
+It should not go unnoticed that [today’s podcast guest](https://substack.com/redirect/de88889e-0a5c-486e-aa2c-a72f963cdd3b) Matei Zaharia, CTO of the enormously successful (for a pre LLM era company) Databricks, has a [big bet now on meta-harnesses](https://substack.com/redirect/0fe4849f-6bf6-4242-a5fe-36efa463727f) - **Omnigent, **an open source, pluggable architecture for pulling in any coding or knowledge work agent into a standardized, secure, reliable, scalable system:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/d1a3d909-a54b-4acd-aa2c-33823f9e032e_878x674.png)](https://substack.com/redirect/55be8d74-4584-45c8-bc74-236bea4f260b)
+
+[omnigent](https://substack.com/redirect/0fe4849f-6bf6-4242-a5fe-36efa463727f)
+
+It’s unclear whether or not **Omnigent** has [the same kind of ingredients that made MCP’s success inevitable](https://substack.com/redirect/78ec990f-2c2b-4bcc-aa23-77bcb4811ad4), but it is clear on an architectural level that some open source architecture that *looks like this* will probably win, if only because it is currently being independently rediscvoered at 1000 AI native shops.
 
 > AI News for 6/23/2026-6/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

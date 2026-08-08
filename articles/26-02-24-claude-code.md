@@ -54,13 +54,39 @@ people:
   - _catwu
 ---
 
+Through the [dozens ](https://substack.com/redirect/3ff2fe29-4722-49a4-8514-cb8b7ec81ebc)of midsize launches today (see the rest of the recaps below), one theme that we’re seeing is something I’ve come to call “[closing the loop](https://substack.com/redirect/f3cb79ab-0469-4df1-8d69-cac5c753aa65)”:
 
-**Everyone launching everything everywhere all at once.**
+[![](https://substack-post-media.s3.amazonaws.com/public/images/436292a8-2f3a-47fe-844e-a846b2c8d7fd_1186x1474.png)](https://substack.com/redirect/767bba52-2f90-4e35-abd5-355f5a365fbc)
+
+[tweet](https://substack.com/redirect/f3cb79ab-0469-4df1-8d69-cac5c753aa65)
+
+In the DevTools industry, we often talk about the concept of the “inner loop” (what happens in the IDE, “squashed” inside a git commit), vs the “outer loop” (what happens in the cloud, “between” git commits, say after every git push). For a long time in the 2010s, all the action was in the “outer loop” - GitLab and multiple CI/CD unicorns, GitHub, Netlify/Vercel, and more, whereas the “inner loop” was generally free and open source (often thanks to Microsoft, but increasingly Facebook and Atlassian/Vercel) - VSCode, Language Servers, TypeScript, Prettier, and so on.
+
+With AI, **things flipped dramatically** - Copilot kicked off the wave of Inner Loop coding agent applications that eventually became vanguarded by Cursor, whereas Outer Loop tools did grow thanks to AI, but remained relatively unchanged (or AI SRE or AI Data Engineering as a category seemed to particularly struggle).
+
+Today many of the leading coding agent companies took steps in the “Close the Outer Loop” direction. For a lead graphic the first thing that springs to mind is the og:image for the [Devin Autofix launch](https://substack.com/redirect/a8b01c0b-e155-4fcc-8e1e-7fb1b4271984) from a few weeks ago:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/6308ab6a-efac-48ed-b2ba-d2c569bec220_3840x2160.png)](https://substack.com/redirect/5a0a5df8-a9cf-474b-9c3b-8eae514b2117)
+
+The above only applies to review comments, but you can close the outer loop in many, many other ways. [Cursor’s highly anticipated big ship today](https://substack.com/redirect/961c46cd-9508-41c6-9719-eb2d142a43cd) was a combination of [full computer use](https://substack.com/redirect/6896fe03-eab8-4e16-aef4-7d12281b0b0f) and video output to give you high bandwidth review of the results rather than just looking at code diffs:
+
+> **Cursor** (@cursor_ai) — [6:53 PM · Feb 24, 2026 · 1.14M Views](https://substack.com/redirect/961c46cd-9508-41c6-9719-eb2d142a43cd)
+>
+> Cursor now shows you demos, not diffs. Agents can use the software they build and send you videos of their work.
+
+Claude Code, celebrating it’s first anniversary (as we discussed on today’s special podcast and short retrospective), launched **[Remote Control](https://substack.com/redirect/ce0d180f-f7e1-43e6-95a3-d850bc127ba3) for Max users**, which allows people to close the loop in their phones, away from the Inner Loop of the terminal:
+
+> **Claude** (@claudeai) — [10:06 PM · Feb 24, 2026 · 2.08M Views](https://substack.com/redirect/511ac6e4-cadb-4556-a55b-c304c13dec3a)
+>
+> New in Claude Code: Remote Control. Kick off a task in your terminal and pick it up from your phone while you take a walk or join a meeting. Claude keeps running on your machine, and you can control the session from the Claude app or claude.ai/code
+
+Last but not least, Cognition [launched Devin 2.2](https://substack.com/redirect/645e67c1-c33c-4169-adfc-0b0bedba9331), where a headline feature was how Devin Review now [automatically closes the loop](https://substack.com/redirect/efcb37d9-3ed2-4f2d-9ed0-2f66c255832a) back into Devin runs.
+
+If you are so inclined you could view all these as generalizations of the “Ralph Loops” that were popular in social media last month, often still with humans in the loop, but increasingly less so over time.
+
+Don’t miss the other midsize launches today that would otherwise have been title stories in their own right - Notion Custom Agents, Inception Mercury 2, and the smaller Qwen 3.5 variants.
 
 > AI News for 2/23/2026-2/24/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and 24 Discords (**262** channels, and **10075** messages) for you. Estimated reading time saved (at 200wpm): **874** minutes. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

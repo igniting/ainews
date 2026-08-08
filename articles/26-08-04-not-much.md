@@ -61,13 +61,50 @@ people:
   - tomas_hk
 ---
 
+Part of [our Inference Engineering Masterclass pod](https://substack.com/redirect/d9d88082-1587-4e1e-8c64-cdee659e005e) yesterday involved a spicy discussion about Megakernels:
 
-**a quiet day.**
+> **megakernels are dead**
+> *why are megakernels useful? you spend two months writing a kernel to save time on launch overhead and poor inter-kernel overlap. *
+>
+> *you had PDL but then people said it wasn't perfect, that you could still get some marginal gains due to straggler CTAs and therefore- wait, sorry, I forgot, Rubin fixes that (kernel two needs 10 CTAs and kernel one has seven finished and three straggling, kernel two launches seven of its CTAs). *
+>
+> *given a long enough timeline, it all evens out. no serious inference provider is using a 67k loc hand-fused forward pass kernel in production, and the teams doing that are doing so out of pure research. *
+>
+> *dead.*
+
+> **ali** (@waterloo_intern) — [11:49 PM · Aug 3, 2026 · 380K Views](https://substack.com/redirect/065baaac-bf2d-449a-9e44-bb97d5ffa8ac)
+>
+> The Inference Engineering Masterclass: 10x faster models, quantization, speculative decoding, Rubin, & self-optimizing AI https://t.co/uRYIWWDebj @Baseten @philipkiely and @waterloo_intern explain what actually happens after a model is trained, why turning weights into a fast
+
+The full discussion, for those who care to listen through:
+
+> **Ali:*A fused kernel can’t save you**. Like here with tensor parallelism, half the matrix is on one GPU and the other half is on another, and if I need the entire matrix in order to do like a nonlinear operation in the next step, which is, for instance, like if I’m doing attention, I need the softmax, or I need to do like exponentiation, I need to have the entire row. So I need to know what the partial result was from GPU 2 and what the partial result was from GPU 1 in order to be able to do the softmax in the next stage. *
+>
+> ***So I have to make them communicate with each other, even if I had a fused kernel, because of the nonlinearities within each one**. Also with like mega kernels, like honestly, I’m very bearish. It was a good research direction, and it seems like intuitively, theoretically, it’s nice. You have a lot of launch overhead from launching- Just- one kernel- Yeah, just keep fusing it and moving the data. Just fuse everything together. *
+>
+> *But the kernel complexity itself is very difficult to write a very optimized mega kernel. It’s very difficult to do so. And not to name [any companies](https://substack.com/redirect/29f6759a-fba0-4081-96f2-1a7302612cf3), but like even the companies that have worked or people that I’ve spoken to who work at companies that do fused mega kernels, **they very often don’t end up running those in production because the TensorRT-LLM and modular kernels that launch are faster because you can optimize each individual component, and you can just have them parallelize with each other.** *
+>
+> *One of the tech leads at NVIDIA launched a Twitter post said like, “We’re pulling the curtain on Rubin, and here’s the specs.” And the third tweet showed, like not to get too technical into it, I and I need to read it much more, but **the GPU is designed in such a way that it kills mega kernels.** So it seems like that entire research field won’t be continued.*
+
+He was quoting ([friend of the show!](https://substack.com/redirect/88f275fa-6a39-4ffa-aa0f-fe391da56b54)) Kyle Kranen announcing dependency triggers - one part of the pipeline blockage that previously justified kernel fusion:
+
+> **Kyle Kranen** (@KranenKyle) — [4:43 PM · Jul 21, 2026 · 27.2K Views](https://substack.com/redirect/23f5876c-e56c-47d8-ac76-25b919b11ceb)
+>
+> 3/ Improved Kernel Overlap: Rubin enables finer-grained kernel coordination, including tile-level dependency triggers. This means that as soon as the data to begin working on an part of an operation is available, the kernels to execute it can start!
+
+As voiced on the show, there are still physical constraints that are unanswered, but it makes complete sense that Nvidia is updating Rubin design to better fit macabre things that are being done in kernel-land.
+
+One of Ben Spector’s [megakernel coauthors](https://substack.com/redirect/4f8d8387-96d2-423f-95b6-cddffdc2987e), Stuart Sul, is now leading the team that released Mixture of Kittens (a reference to Ben’s delightfully named [ThunderKittens](https://substack.com/redirect/f421198d-1f68-45fc-84bf-c520fa4d0235), and part of [Dan Fu’s group](https://substack.com/redirect/147830b0-1d66-4bb0-bc5f-56b43d2739d6)), Cursor’s open source megakernel today:
+
+> **Cursor** (@cursor_ai) — [4:00 PM · Aug 4, 2026 · 277K Views](https://substack.com/redirect/acc9fc71-7229-481e-a5a6-6d595671e5c3)
+>
+> We're open-sourcing Mixture-of-Kittens (MoK), our MoE training megakernel for NVL72s. It fuses all Mixture-of-Experts communication and computation into a single, fully deterministic kernel, and runs up to 2.37x faster than the strongest public baselines.
+
+Headline results are compelling - a 41% increase in overall tokens per second.
+
+At scale, this translates to billions of dollars worth of savings.
 
 > AI News for 8/3/2026-8/4/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

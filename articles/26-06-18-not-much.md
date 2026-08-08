@@ -61,13 +61,33 @@ people:
   - _catwu
 ---
 
+*Don’t miss out on [our Anj Midha episode](https://substack.com/redirect/a65eb0a0-a428-4150-bab2-325484acb2c0) today and regular tix for [AIE World’s Fair](https://substack.com/redirect/f1ef4a4a-a7bd-4882-bf12-36cdd16cddee)!*
 
-**a quiet day.**
+In the AI News business, there’s a bit of trepidation talking about open models: they come out guns blazing, looking pretty on notable benchmarks, and then a month later they fade into disuse like they never existed. In other words: they were “**benchmaxxed**”. And we hate reporting news that you won’t remember here at LS.
+
+One of the policies readers tell us they like about AINews is that we will simply say if [nothing much happened today](https://substack.com/redirect/b2c0dad7-0353-4628-84eb-a7b791655de6) (a newsletter that tells you that you can skip it is rare, partly because we don’t have an eyeballs driven business model.¹). Increasingly, we’ve also tried to do the **inverse** — [repeatedly](https://substack.com/redirect/9e044cf3-a8a4-4800-a9a9-976c33984c71) [calling ](https://substack.com/redirect/d8b82a82-57e7-4917-9c9a-6c2d9620d640)[out](https://substack.com/redirect/27e7038d-4e78-4db7-a1e8-81ef9dad1f42) a notable trend is just as important as filtering out low signal.
+
+GLM 5 passed that bar, and GLM 5.1 didn’t. [GLM 5.2](https://substack.com/redirect/ce32149b-f19c-443c-99a9-5e9818ee67c3), which we reported on 2 days ago, felt a little different, and that instinct was confirmed today, with multiple out of sample datapoints passing the “**this is a frontier model that just happens to be open**” vibe check:
+
+Jeremy Howard, [friend of the show](https://substack.com/redirect/01a8b003-1c5a-4b75-b9fd-2d2a1df7eb25) not given to hype, sincerely [complimenting](https://substack.com/redirect/028cb5e0-4e12-4ddf-ba5d-af3c359bace8) it:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/3af66988-dd32-43bd-b9bf-84636ea1ccf8_816x514.png)](https://substack.com/redirect/0c4e1bb1-2808-4ab0-be02-854df1cfbf79)
+
+and [Artificial Analysis’ new knowledge work benchmark](https://substack.com/redirect/3dbae7b9-4b8f-47d7-aef1-ed5f9c99bf85) rates it higher than GPT 5.5:
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/96e55c58-9f9d-4573-af94-501283bf9161_814x636.png)](https://substack.com/redirect/f089d1b4-21d0-41de-8d5a-e7ce6039aaa2)
+
+And it is passing the [/r/LocalLlama vibe check](https://substack.com/redirect/1372cd9c-6b6d-4a76-8696-0562da7b6318):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/dad8658e-5b52-4d40-9757-5425bf9a5900_1188x434.png)](https://substack.com/redirect/507449fe-7f62-4db6-bb88-6fc99da9111f)
+
+This trajectory of Z.ai getting validation as a true frontier lab is now a serious trend; the final milestone of (Chinese) open models winning is the timeline for when we will get an open Fable-class model, without the possibility of distillation attacks (Z.ai was notably missing from the list of accused [Chinese labs in Anthropic’s Feb “industrial-scale distillation” report](https://substack.com/redirect/cf788b99-2c9c-4983-8e5b-0fb0a1c8ec32)):
+
+[![](https://substack-post-media.s3.amazonaws.com/public/images/6d65a533-3663-48cc-967c-00f2be74c7ca_914x968.png)](https://substack.com/redirect/72ce8706-c7f9-427a-a5c0-dabc140359eb)
+
+The tricky question no one can answer is - will any of the top 4 labs be able to release another Fable-class model again in the next 6 months, or has [the ongoing Mythos ban](https://substack.com/redirect/42562eb0-e6be-4421-b763-22d48118bdee) put everything on ice?
 
 > AI News for 6/17/2026-6/18/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

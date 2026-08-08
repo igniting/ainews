@@ -57,13 +57,13 @@ people:
   - togethercompute
 ---
 
+Reignited [distillation wars](https://substack.com/redirect/d6444131-7aec-4a60-9a35-0e32b59f1995) conversation aside, today was more of the same of previous news cycles, which is a good day to release [our interview with Eiso Kant](https://substack.com/redirect/5b6647b2-1782-4a19-ac78-66470119e75a), a new Western neolab that is somehow competitive with Thinking Machines (better benchmarks yet ~10x smaller) and more efficient than Chinese model equivalents. We can’t put it better than one of the Redditors you’ll see below: **[Cheaper than Deepseek v4 Flash, Better than V4 Pro](https://substack.com/redirect/49b951aa-d427-4036-8726-aa4794741f6f)**.
 
-**a quiet day.**
+Their secret? Eiso added it to [their tech report](https://substack.com/redirect/1c164a3b-5418-4af9-93a8-1c9ca31741b3), and we broke it down on the pod:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/9_0hs2sxHHo)](https://substack.com/redirect/4b474c6c-769d-4c93-87c1-0b9ff27f5f58)
 
 > AI News for 7/21/2026-7/22/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 

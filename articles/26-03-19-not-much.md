@@ -55,13 +55,15 @@ people:
   - hrishioa
 ---
 
+The news today of [OpenAI acquiring Astral](https://substack.com/redirect/395ba8ab-13dc-48ef-9166-b583bb010971) completes a loop first opened by GDM when they bought [what became the Antigravity team last July](https://substack.com/redirect/60546f96-bcc1-47b9-8f62-4a65270977df), and then[ Anthropic’s purchase of Bun last December](https://substack.com/redirect/38082374-7d28-41d9-a945-8494d88335ac). Astral joins OpenClaw and (to a lesser extent) gpt-oss and Whisper in OpenAI’s growing list of top tier open source AI projects.
 
-**a quiet day.**
+This comes against the backdrop of Fidji Simo explicitly [dropping “side quests”](https://substack.com/redirect/a41d6093-140e-4956-941e-ad12847815aa) like **Shopping** (with [key partner Walmart reporting awful conversion](https://substack.com/redirect/dd72800b-cdad-44e6-b12c-b25965fc5df5) about 1/3 of click-outs) and prioritizing **Enterprise** ([Frontier Alliances](https://substack.com/redirect/a31329bf-7467-4cd9-9842-84a7b9f9d342)) and **Coding** (Astral), and now [unifying ChatGPT and Codex apps](https://substack.com/redirect/008c1529-8761-4fac-ac3d-c64bca092047) into one “superapp” — [something we have predicted](https://substack.com/redirect/ba10c541-8f7c-4e9b-b35a-8a3aaa12d9a1) but is now explicitly being prioritized at the highest levels.
+
+If we got one thing wrong in [Rise of the AI Engineer](https://substack.com/redirect/d4006b06-d0e9-4f5f-b158-4cfcb2aeb9e1) 3 years ago, it is the importance of the role of code. Back then we framed the “1+2=3” thesis - that LLM-powered software would be capable of much more than either LLMs or software would alone - essentially presaging what would now be called harness engineering. But we almost **completely missed** the importance of the recursive nature of agentic coding improving agent/LLM training, which has been called out all over from Claude Code to [MiniMax 2.7](https://substack.com/redirect/28ff5d1d-974a-4a19-bebe-f541bcbbcc4e) as a key element of acceleration and importance in the labs. (we did end with a poignant “*As human Engineers learn to harness AI, AIs will increasingly do Engineering as well, until a distant future when we look up one day and can no longer tell the difference.*” — perhaps a half point there, but negative points on underestimating the importance and immediacy). Thankfully by the time the first AIE Summit came around, I was fully allocating 1/3 of the weight of AI Engineering to agentic coding:
+
+[![](https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/qaJXBMwUkoE)](https://substack.com/redirect/37b959aa-25e4-438a-bd4f-b9ed01f2bb8e)
 
 > AI News for 3/18/2026-3/19/2026. We checked 12 subreddits, [544 Twitters](https://twitter.com/i/lists/1585430245762441216) and no further Discords. [AINews' website](https://news.smol.ai/) lets you search all past issues. As a reminder, [AINews is now a section of Latent Space](https://www.latent.space/p/2026). You can [opt in/out](https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack) of email frequencies!
-
-
-
 
 ---
 
