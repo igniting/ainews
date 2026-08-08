@@ -53,6 +53,10 @@ def lines(labels, series, ticks, ylab="", h=H, note_last=True):
         for y, name, cls in placed:
             y = max(y, (laid[-1][0] + 15) if laid else y)
             laid.append((y, name, cls))
+        # if the stack ran past the plot area, slide all of it back up
+        over = laid[-1][0] - (h - PAD["b"]) if laid else 0
+        if over > 0:
+            laid = [(y - over, name, cls) for y, name, cls in laid]
         lx = _x(len(series[0][1]) - 1, len(series[0][1]))
         for y, name, cls in laid:
             out.append(f'<text class="serlab {cls}" x="{lx-7:.1f}" y="{y-8:.1f}" text-anchor="end">{esc(name)}</text>')

@@ -1348,8 +1348,9 @@ if __name__ == "__main__":
     body = renumber_subsections(renumber_tables(renumber_figures(build())))
     if standalone:
         html = SHELL.format(title=TITLE, desc=DESC, css=CSS, body=body)
-        out = pathlib.Path(__file__).resolve().parent.parent / "site" / "index.html"
-        out.parent.mkdir(parents=True, exist_ok=True)
+        # site/ belongs to the book (book/build_book.py); the report's standalone
+        # edition lives beside its fragment so the two never overwrite each other.
+        out = pathlib.Path(__file__).resolve().parent / "standalone.html"
     else:
         html = f"<title>{TITLE}</title>\n<style>{CSS}</style>\n{body}"
         out = OUT

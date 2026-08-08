@@ -3,6 +3,29 @@
 A local mirror of the [Latent Space AI News](https://www.latent.space/s/ainews/archive?sort=new)
 daily newsletter, plus scripts to analyze it.
 
+## The book
+
+The analysis is being written up as **_Written Forwards_** — a book about three
+years of AI as the field saw it happen, readable without an AI background. It is
+published to GitHub Pages from `book/`.
+
+```bash
+python3 book/build_book.py     # -> site/, one page per chapter
+python3 book/check.py site     # every page self-contained, balanced, no dead links
+```
+
+| Path | What it is |
+| --- | --- |
+| `book/STRUCTURE.md` | The plan: 16 chapters, 4 parts, 3 interludes |
+| `book/content.py` | The text, one entry per page |
+| `book/shell.py` | Typography and the page template |
+| `book/figs.py` | Figures the book needs that the report did not |
+| `book/build_book.py` | Generates `site/` |
+
+`report/` holds the earlier scientific-report edition of the same work
+(`python3 report/build_report.py`), which the book supersedes but does not
+replace — it is where the claims are defended in full.
+
 ## Contents
 
 | Path | What it is |
