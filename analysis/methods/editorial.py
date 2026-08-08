@@ -43,9 +43,9 @@ FRONT = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
 RECAP = re.compile(r"^#\s+AI (Twitter|Reddit|Discord) Recap.*$", re.M | re.I)
 SUMMARY = re.compile(r"^#{1,2}\s+.*(Recap|Discord Summary)", re.M | re.I)
 BLOCKQUOTE = re.compile(r"^>.*(?:\n>.*)*\n?", re.M)
-NOISE = [re.compile(r"\{%.*?%\}", re.S), re.compile(r"!\[[^\]]*\]\([^)]*\)"),
-         re.compile(r"\[TOC\]"), re.compile(r"\*\*Table of Contents\*\*"),
-         re.compile(r"^-{3,}\s*$", re.M)]
+NOISE = [re.compile(r"<!--.*?-->", re.S), re.compile(r"\{%.*?%\}", re.S),
+         re.compile(r"!\[[^\]]*\]\([^)]*\)"), re.compile(r"\[TOC\]"),
+         re.compile(r"\*\*Table of Contents\*\*"), re.compile(r"^-{3,}\s*$", re.M)]
 
 # The same patterns the other surfaces are measured with, plus one the other
 # surfaces cannot carry: the editor's own promotional vocabulary.
