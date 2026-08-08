@@ -52,8 +52,8 @@ def nav(prev, nxt) -> str:
         out.append(f'<a class="next" href="{nxt[0]}.html"><span class="dir">Next</span>'
                    f'<span class="t">{esc(nxt[1])}</span></a>')
     else:
-        out.append('<a class="next" href="index.html"><span class="dir">Contents</span>'
-                   '<span class="t">The rest of the book is in draft</span></a>')
+        out.append('<a class="next" href="index.html"><span class="dir">The end</span>'
+                   '<span class="t">Back to the contents</span></a>')
     out.append("</nav>")
     return "".join(out)
 
@@ -110,10 +110,11 @@ def contents_page(drafted: set[str]) -> str:
         parts.append("</ul>")
     parts.append(
         '<div class="col"><hr class="sep">'
-        '<p style="font-size:.92rem;color:var(--soft)">Chapters marked <em>in draft</em> are '
-        'written but not yet typeset here. The measurements behind all of them are already '
-        'published in this repository — the analysis scripts under <code>analysis/</code> '
-        'regenerate every number in the book from the corpus.</p></div>')
+        '<p style="font-size:.92rem;color:var(--soft)">Every number in this book is computed '
+        'from the corpus by the scripts under <code>analysis/</code> in the repository that '
+        'builds these pages, and every figure is generated rather than drawn. Findings that '
+        'were published and later withdrawn are kept in the text rather than removed — the '
+        'corrections are part of the argument.</p></div>')
     desc = ("A book about three years of AI read forwards, through 690 daily issues of a "
             "newsletter that never knew how it ended.")
     return page(f"{K.TITLE} — {K.SUB}", desc,

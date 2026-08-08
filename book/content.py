@@ -91,7 +91,7 @@ CONTENTS = [
     ("ch", "15", "The unit of observation",
      "Why did none of this get caught by better statistics?", "ch15"),
     ("ch", "16", "How to read a field",
-     "What do you do on Monday?", None),
+     "What do you do on Monday?", "ch16"),
 ]
 
 
@@ -2807,6 +2807,185 @@ to do all of it beautifully to a quantity nobody meant to measure.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 16
+
+CH16 = """
+<p class="first">The last issue in this archive is dated 6 August 2026. Its title is
+<em>not much happened today</em>, and the human-written line underneath it is four words
+long:</p>
+
+<blockquote><p><strong>a quiet day.</strong></p>
+<cite>AI News, 2026-08-06 — the final issue</cite></blockquote>
+
+<p>Here is part of what the machine summary underneath that sentence describes:</p>
+
+<blockquote><p>Meta's Muse Spark 1.2 rapidly rose to frontier-tier with top 5 ranking on Vals
+Index at <strong>$0.69/test</strong>, being 3× cheaper than Kimi and 10×+ cheaper than Fable,
+Opus, and 5.6 Sol. It achieved <strong>gold-medal-level performance in five STEM
+Olympiads</strong> with perfect theory scores in APhO and IPhO.</p>
+<cite>AI News, 2026-08-06</cite></blockquote>
+
+<p>Nothing at the top of that page tells you which of those two things is true. Both are, in
+different senses: it was an ordinary Thursday in a field where a model winning five Olympiad
+golds is an ordinary Thursday. The only way to find out was to read past the headline, and that
+is the whole problem, still present on the archive's last day.</p>
+
+<p>This chapter is what to do about it, stated so it works on any technical field and takes
+about an hour a month.</p>
+
+<h2>Find your three surfaces</h2>
+
+<p>Every technical field has at least three layers, kept separate by who is talking and what
+they are rewarded for.</p>
+
+<div class="tw"><table>
+<caption>The same three layers, in four fields</caption>
+<thead><tr><th>Field</th><th>Announcement</th><th>Community</th><th>Practice</th></tr></thead>
+<tbody>
+<tr><td>AI</td><td>lab accounts, launch posts</td><td>tooling Discords</td><td>local-inference
+forums</td></tr>
+<tr><td>Databases</td><td>vendor blogs, conference keynotes</td><td>project mailing
+lists</td><td>ops postmortems, incident writeups</td></tr>
+<tr><td>Frontend</td><td>framework release notes</td><td>maintainer
+discussions</td><td>bug trackers, migration threads</td></tr>
+<tr><td>Security</td><td>vendor advisories</td><td>research
+Slacks</td><td>incident-response writeups</td></tr>
+</tbody></table></div>
+
+<p>The announcement layer has a launch schedule and is rewarded for novelty; its volume tracks
+how much capital is chasing a category. The practice layer has a constraint — a hardware budget,
+an uptime target, a compliance boundary — and is rewarded for things that work under it. Neither
+is the truth. They are two populations with different incentives, and the useful information is
+in the difference between them.</p>
+
+<p>You do not need three. <strong>Two you can read weekly beats one you read thoroughly</strong>,
+and the practice layer is the one people skip.</p>
+
+<h2>Measure the same claim in both</h2>
+
+<p>Pick a specific claim — not a topic. “Everyone is moving to X” is a claim. Then look for it in
+both surfaces over the same window, and compare how much it moved in each.</p>
+"""
+
+CH16_B = """
+<p>That table is the entire method, and its value is in the second and third rows rather than
+the first. Spotting hype is easy and mostly useless — you were probably already suspicious.
+Spotting the thing practitioners have adopted while the coverage lags is where the decision
+changes, and it is invisible if you read only one layer.</p>
+
+<p>In this archive the clearest instance ran for about a year: a category of open-weights models
+was rising fastest among people running them on their own hardware, more slowly in the
+communities building tooling, and slowest in the announcement layer. Anyone comparing the two
+outer surfaces would have seen it a year before the coverage settled.</p>
+
+<h2>Check the machinery, not the name</h2>
+
+<p>Names rise and fall for reasons that have little to do with the technology underneath. A term
+can vanish because the idea failed, or because it won so completely that naming it became
+unnecessary — and those look identical in any count of the term.</p>
+
+<p>The fix is to count the <em>mechanism</em> alongside the name: the vocabulary the thing needs
+in order to work at all. In this corpus, one technique's own name fell a hundredfold while the
+words for its machinery — the specific operations it requires — fell less than twofold, which
+settles what happened without needing anyone's opinion. A different technique's name fell to
+zero and its machinery vocabulary went to zero with it. Same-shaped line, opposite conclusion.</p>
+
+<p>Run it forwards too. A name rising faster than its machinery is a term being marketed. A name
+rising more slowly than its machinery is real engineering that has not found its label yet.</p>
+
+<h2>Know what your surfaces cannot see</h2>
+
+<p>The practice layer is an excellent check on anything a person can run and <strong>no check at
+all</strong> on anything requiring a data centre, a licence, or a fleet. When it is quiet about
+something expensive, that silence carries no information — and reading it as scepticism is the
+most likely way to misuse everything above.</p>
+
+<p>The same applies to the other direction. The announcement layer genuinely leads on things
+that take enormous capital to build. It is not lying about those; it simply gets there
+first.</p>
+"""
+
+CH16_C = """
+<h2>Five checks on your own measurement</h2>
+
+<p>Every one of these cost me a published finding, and each takes minutes.</p>
+
+<div class="aside">
+<h4>Before you trust your own series</h4>
+<p><strong>Read twenty rows, spread across the range.</strong> Not the schema, not the
+aggregate. Fields stop meaning what they meant, and nothing else catches it.<br>
+<strong>Split by source and re-run.</strong> If the finding exists only in the pooled data, it
+may be a fact about the pooling.<br>
+<strong>State what one row is</strong>, and check that a decision would be made about that thing
+rather than a coarser or finer one.<br>
+<strong>Check your denominator has not changed shape.</strong> A document whose composition
+drifts turns every rate into a weighted average with moving weights.<br>
+<strong>Be most suspicious of your best-sounding result.</strong> Clean stories survive review
+longer than their corrections do, so the finding you most want to publish is the one that has
+been least tested by wanting it to be false.</p>
+</div>
+
+<h2>What thirty-two months of this actually contained</h2>
+
+<p>Compressed as far as it will go, and with the caveat that all of it measures attention within
+one curated view rather than deployment or revenue:</p>
+
+<ul>
+<li><strong>The job kept moving outward from the model.</strong> In early 2024 the central
+activity was adapting weights — fine-tuning language ran at 34.9 mentions per ten thousand words
+of announcement text. By the end it was 1.9, while the vocabulary for the software
+<em>around</em> the model rose eighteen- to twenty-threefold and evaluation language roughly
+doubled to become the densest technical term in the corpus.</li>
+<li><strong>The frontier of open weights changed continents, and not to a company.</strong> Two
+Western labs fell from 26.9 to 1.3 in announcement space; a bloc of five Chinese labs rose, with
+no individual member holding the lead for more than two half-years.</li>
+<li><strong>Scoreboards last about three quarters.</strong> Every fixed-answer benchmark that
+defined 2024 reaches literal zero. The ones still standing ask a model to complete a task and
+have a program check the result.</li>
+<li><strong>The safety conversation changed species rather than growing.</strong> Alignment
+language fell from 7.19 to 1.28; permission, sandboxing and least-privilege language rose
+tenfold in announcement space and nineteenfold among practitioners.</li>
+</ul>
+
+<h2>Monday</h2>
+
+<p>Concretely, for one technology you care about:</p>
+
+<ol>
+<li><strong>Twenty minutes, once.</strong> Name your announcement surface and your practice
+surface. Write the estimand sentence: <em>one observation is ___, drawn from ___, counted per
+___, in order to decide ___.</em></li>
+<li><strong>Fifteen minutes a week.</strong> Read both surfaces. Not exhaustively — the top of
+each.</li>
+<li><strong>An hour a quarter.</strong> Count your claim in each surface over the quarter.
+Compare the two numbers, not either one alone. Read twenty raw matches while you are there.</li>
+<li><strong>When they disagree, act on the gap</strong> rather than on either number: shrinking
+toward practice means wait, growing toward practice means move, moving together means it is
+real.</li>
+</ol>
+
+<p>That is roughly an hour a month, and it would have given you the agent narrative, the
+open-weights relocation, and the benchmark churn well before any of them were settled.</p>
+
+<h2>Forwards</h2>
+
+<p>Everything written about a fast-moving field afterwards is organised around what turned out
+to matter, which makes it excellent history and nearly useless for the decision in front of you.
+The value of a daily record is that it is <em>wrong in public</em>, with dates: the enthusiasms
+that went nowhere sit next to the ones that changed everything, at the same volume, with nothing
+marking which is which.</p>
+
+<p>Reading forwards means accepting that this is also true of today. The correct call and the
+expensive mistake are both in your feed this morning, indistinguishable, and no amount of
+retrospective clarity will be available in time to help. What is available is the gap between
+what is being announced and what is being run — and that gap, unlike the future, you can measure
+this afternoon.</p>
+
+<p class="pull">A quiet day, with five Olympiad golds underneath it. You only find out by
+reading.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -3175,6 +3354,25 @@ def pages():
                     "Table 16 · What the statistical toolkit is for")
             + CH15_C)
 
+    ch16 = (CH16
+            + table(["What you see", "What it means", "What to do"],
+                    [["The claim moved a lot in announcement space and little in practice",
+                      "A narrative. The people with something to launch are ahead of the "
+                      "people doing the work.", "<b>Wait.</b> Re-check in a quarter."],
+                     ["It moved more in practice than in announcement",
+                      "An adoption the coverage has not caught up with.",
+                      "<b>Move.</b> This is the only cheap edge on the table."],
+                     ["It moved about the same in both",
+                      "A real field-wide change.", "<b>Believe it</b> and plan accordingly."],
+                     ["It fell in both",
+                      "Either it died or it won so completely that nobody names it.",
+                      "<b>Check the machinery</b> before removing anything."],
+                     ["Practice space is silent and the thing needs a data centre",
+                      "Your check does not apply here.",
+                      "<b>Discount the silence.</b> Find another surface."]],
+                    "Table 17 · The two-surface test, as a decision table")
+            + CH16_B + CH16_C)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -3214,4 +3412,6 @@ def pages():
          "Consolidated, with what each one cost.", int3),
         ("ch15", "ch", "15", "The unit of observation",
          "Why did none of this get caught by better statistics?", ch15),
+        ("ch16", "ch", "16", "How to read a field",
+         "What do you do on Monday?", ch16),
     ]
