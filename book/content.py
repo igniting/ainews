@@ -668,6 +668,50 @@ looking at the falling line will tell you which is which.</p>
 
 <p class="pull">A line going down is not a verdict. It is a question about where the thing
 went.</p>
+
+<h2>Where it went</h2>
+
+<p>The answer is in the archive, in a surface the falling line does not cover. In April 2026,
+with fine-tuning language in announcement space down to 5.0 mentions per ten thousand words,
+the Reddit recap carried this:</p>
+
+<blockquote><p>The Chaperone-Thinking-LQ-1.0 model achieves an impressive 84% on MedQA, which is
+notable given its size and efficiency. This performance is achieved with a <strong>4-bit GPTQ +
+QLoRA fine-tuning</strong> of the DeepSeek-R1-32B model, allowing it to run on approximately
+20GB of VRAM. This makes it feasible to run on consumer-grade GPUs like the NVIDIA 3090, which
+is a significant advantage for accessibility and experimentation.</p>
+<cite>AI News, Reddit recap, 2026-04-21</cite></blockquote>
+
+<p>Every element of the 2024 recipe is present — take an open model, quantize it, adapt it with
+a low-rank update, run it on hardware you own. What has changed is that nobody thinks this is
+news. It is a person reporting a medical-exam score from a bedroom GPU, and the notable thing,
+to the room, is the VRAM figure.</p>
+
+<p>Two months later the same surface supplies the epitaph, in a single adverb:</p>
+
+<blockquote><p>Another commenter initially reacted to the benchmark screenshot skeptically, but
+updated after realizing it is Cohere's own architecture rather than <strong>merely a
+finetune</strong>, making the reported results more technically notable.</p>
+<cite>AI News, Reddit recap, 2026-06-11</cite></blockquote>
+
+<p>In early 2024 a finetune of Qwen was worth a headline and a joke about the year of the
+Dragon. By mid-2026 <em>merely a finetune</em> is a reason to discount a result before reading
+it. The technique did not fail and did not disappear. It was demoted — from the thing you
+announce to the thing you are assumed to have done already, which is the same destination
+retrieval reached by a different road.</p>
+
+<p>The editor marks the moment himself, in October 2025, and what he is describing is a
+technique that has begun to need defending:</p>
+
+<blockquote><p>the same day Jeremy Bernstein publishes Modular Manifolds … and 3 days later John
+Schulman writes <em>LoRA Without Regret</em>, an empirical endorsement of the original 2021
+paper validating its performance to full finetuning similar to Biderman et al when done
+right.</p>
+<cite>AI News lede, 2025-10-01</cite></blockquote>
+
+<p>Nobody writes <em>without regret</em> about a method that is winning. The title concedes the
+thing the density series had already recorded: by 2025 you had to argue for low-rank adaptation,
+where in 2024 you simply used it.</p>
 """
 
 
