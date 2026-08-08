@@ -79,7 +79,7 @@ CONTENTS = [
      "Which benchmarks are worth believing, and for how long?", "ch11"),
     ("ch", "12", "When words change meaning",
      "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
-     "you started counting in 2024?", None),
+     "you started counting in 2024?", "ch12"),
     ("ch", "13", "What people actually ran",
      "If announcements are unreliable, what does the ground truth look like?", None),
     ("ch", "14", "The half-life of a dependency",
@@ -2086,6 +2086,172 @@ build.</p>
 """
 
 
+# ---------------------------------------------------------------- chapter 12
+
+CH12 = """
+<p class="first">Here is a description of an agent, from September 2024:</p>
+
+<blockquote><p>The big launch of the day is <strong>Replit Agent</strong> … full text to running
+app generation with planning and self healing … it is live today to paid users, and can deploy
+on a live URL with postgres backend, from <strong>people who cannot code</strong>, including on
+your phone. Of course, Replit Agent can even make a Replit clone.</p>
+<p>There are unfortunately no benchmarks or even blogposts to write about. Which makes our job
+simple. Watch video, try it, or scroll on.</p>
+<cite>AI News, 2024-09-05</cite></blockquote>
+
+<p>And here is a description of an agent, from June 2026:</p>
+
+<blockquote><p>M3 was presented as an open-weight multimodal agent/coding model with 1M context,
+native multimodality, and competitive agent benchmarks. The headline figures repeated across
+launch partners were <strong>59.0% SWE-Bench Pro, 66.0% Terminal Bench 2.1, and 74.2% MCP
+Atlas</strong>.</p>
+<cite>AI News, 2026-06-01</cite></blockquote>
+
+<p>In 2024 an agent is a <em>product</em>, sold to people who cannot program, and the newsletter
+notes with mild regret that there is nothing to measure. In 2026 an agent is a <em>property of a
+model</em>, and it is nothing but measurements.</p>
+
+<p>Both passages are about agents. A count of the word across both is not counting one thing,
+and this chapter is about how far that problem extends, how to detect it, and what it does to
+software that has been running for two years.</p>
+
+<h2>Measuring a word's meaning</h2>
+
+<p>You cannot ask a corpus what a word meant. You can ask what company it kept, which turns out
+to be nearly as good.</p>
+
+<div class="aside">
+<h4>How the measurement works</h4>
+<p>Train a small word-embedding model on the 2024 text alone. It learns a position for every
+word such that words appearing in similar contexts land near each other — <code>GPU</code> near
+<code>VRAM</code>, <code>latency</code> near <code>throughput</code>. Train a second model on
+the 2026 text alone. Each model has its own arbitrary coordinate system, so the two are not
+directly comparable; you align them by finding the rotation that best matches the words whose
+meaning is least likely to have moved, then apply it. Now the two spaces are in register, and
+you can ask, for any word, how far its neighbourhood moved.</p>
+<p>The number reported below is the cosine distance between a word's 2024 neighbourhood and its
+2026 one. Zero means the same company; one means an entirely different crowd.</p>
+</div>
+
+<p>Run that over the corpus and the median technical term moves 0.313. Here are the extremes,
+with the actual nearest neighbours in each period.</p>
+"""
+
+CH12_B = """
+<p>Read the two neighbour columns rather than the numbers. In every high-drift row, the words on
+the left and the words on the right belong to different subjects — not to a more advanced
+version of the same subject.</p>
+
+<h2>The largest: a word that became a file format</h2>
+
+<p><code>Skills</code> moves 0.590, further than anything else in the corpus, and its trajectory
+is unusually easy to follow because it has three distinct phases in the archive.</p>
+
+<p>In April 2024 it is a term in an argument about what intelligence is:</p>
+
+<blockquote><p>Any task that does not involve significant novelty and uncertainty can be solved
+via memorization, but <strong>skill is never a sign of intelligence</strong>.</p>
+<cite>François Chollet, quoted in AI News, 2024-04-01</cite></blockquote>
+
+<p>Ten days later it is a robotics term:</p>
+
+<blockquote><p>Learning Agile Soccer Skills: DeepMind trained AI agents to demonstrate
+<strong>agile soccer skills like turning, kicking, and chasing a ball</strong> using
+reinforcement learning.</p>
+<cite>AI News, 2024-04-11</cite></blockquote>
+
+<p>And in October 2025 it is neither. It is a directory layout:</p>
+
+<blockquote><p>Anthropic gets two back-to-back headline stories with <strong>Agent Skills</strong>
+today, “a new way to build specialized agents <strong>using files and folders</strong>”. It turns
+out that Claude's recent new skills for creating and reading PDFs and Docs and PPTs were all
+Skills.</p>
+<cite>AI News, 2025-10-16</cite></blockquote>
+
+<p>A philosophical claim about the nature of intelligence, then motor control in a physical
+robot, then a convention for laying out files on disk. One string, three referents, nineteen
+months. Its neighbours move from <code>goals, abilities, experiences</code> to
+<code>middleware, reusable, ide, filesystem</code>, which is exactly what you would expect a
+word to do on that journey.</p>
+"""
+
+CH12_C = """
+<h2>The control, and why 0.590 is not noise</h2>
+
+<p>A drift score is only meaningful if some words hold still, and one does.
+<code>Context</code> moves <strong>0.170</strong>, the least of anything measured. Its 2024
+neighbours are <code>window, length, contexts, yarn</code>; its 2026 neighbours are
+<code>window, length, cache, kv, batch</code>.</p>
+
+<p>Look at what stayed and what changed. <code>Window</code> and <code>length</code> are in both
+lists — the core of the concept never moved. What arrived is <code>cache</code>,
+<code>kv</code> and <code>batch</code>: the implementation. In 2024 the field discussed context
+as a specification (how long is the window, how do you extend it). By 2026 it discusses it as a
+resource with a memory layout and a scheduling problem. The subject is the same and the
+engineering matured underneath it.</p>
+
+<p>That is what a stable term looks like, and it gives the scale meaning. 0.170 is a concept
+acquiring an implementation. <strong>0.590 is a different concept wearing the same word.</strong></p>
+
+<h2>Why this is a software problem</h2>
+
+<p>None of this would matter if the words only appeared in prose. They appear in systems.</p>
+
+<ul>
+<li><strong>Any metric keyed on a term.</strong> A dashboard counting mentions, tickets, queries
+or documents matching <code>agent</code> has been running continuously across a 0.371 drift.
+The line is smooth. The subject changed underneath it.</li>
+<li><strong>Evaluation suites.</strong> A test set assembled in 2024 to check “agent behaviour”
+was assembled against the 2024 referent — planning and self-healing app generation for
+non-programmers. Run it in 2026 and it still passes or fails, and the number still goes in the
+report, and it is no longer measuring the thing anyone means.</li>
+<li><strong>Classifiers and routing rules.</strong> Anything keyword-triggered inherits the
+drift silently. A rule that routes “skills” questions to the robotics team was correct for a
+year and is now sending filesystem-layout questions there.</li>
+<li><strong>Retrieval over a corpus that spans the change.</strong> If your index covers 2024 and
+2026 documents, a query for <code>skills</code> retrieves three unrelated subjects and ranks
+them by lexical similarity, which is precisely the case where lexical similarity is
+uninformative.</li>
+<li><strong>Training-data filters.</strong> A keyword filter written once and reused is a
+definition frozen at the moment it was written.</li>
+</ul>
+
+<p class="pull">There is no exception this class of error throws. The count is correct; the label
+is stale; every downstream consumer processes the new thing under the old name.</p>
+"""
+
+CH12_D = """
+<h2>What to do about it</h2>
+
+<div class="aside">
+<h4>Four habits that catch drift</h4>
+<p><strong>Store the definition next to the metric.</strong> Not the regular expression — a
+sentence saying what you meant, and three example matches from the week you wrote it. Drift is
+obvious the moment you compare today's matches with those three; it is invisible otherwise.<br>
+<strong>Re-read twenty random matches a quarter.</strong> Not the aggregate, not the top hits —
+a random sample, read by a person. This is the only check that reliably catches referent change,
+and it takes twenty minutes.<br>
+<strong>Watch the neighbours, not the count.</strong> If you can afford it, track which terms
+co-occur with yours. The neighbourhood shifts before the count does anything visible, so it is
+an early warning rather than a post-mortem.<br>
+<strong>Key on mechanisms where you can.</strong> <code>Retrieval</code>, <code>sandbox</code>
+and <code>kv-cache</code> name machinery and drift slowly. <code>Agent</code>,
+<code>skills</code> and <code>safety</code> name categories, and categories are what marketing
+and regulation both act on.</p>
+</div>
+
+<p>The last one is the closest thing to a general rule here, though the sample is eight words
+and it should be held loosely. Words for things that exist inside a computer tend to hold still:
+the most stable term measured, <code>context</code>, is the only one of the eight that names a
+data structure. The two largest movers are a category name that a company attached to a product
+(<code>skills</code>) and a technique that acquired a legal meaning (<code>distillation</code>) —
+neither of which is a change in the engineering, and both of which move the word.</p>
+
+<p>A word is not a measurement. It is a pointer to a measurement, and nothing in your pipeline
+checks that the pointer is still valid.</p>
+"""
+
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -2355,6 +2521,16 @@ def pages():
                   "asking a model to grade the output.")
             + CH11_D + CH11_E)
 
+    drift_rows = [[f"<code>{C.esc(w)}</code>",
+                   f"<b>{d:.3f}</b>" if d > 0.35 else f"{d:.3f}",
+                   C.esc(a), C.esc(b)] for w, d, a, b, _ in D.DRIFT]
+    ch12 = (CH12
+            + table(["Term", "Drift", "Nearest neighbours, 2024",
+                     "Nearest neighbours, 2026"], drift_rows,
+                    "Table 8 · Cosine distance between a term's 2024 and 2026 neighbourhoods. "
+                    "Median across the corpus: 0.313", (1,))
+            + CH12_B + CH12_C + CH12_D)
+
     return [
         ("ch1", "ch", "1", "A field talking to itself",
          "What is this thing, and why would anyone read three years of a newsletter?", ch1),
@@ -2383,4 +2559,7 @@ def pages():
          "Retrieval fell 99%. So did things that failed. How do you tell?", ch10),
         ("ch11", "ch", "11", "How the field keeps score",
          "Which benchmarks are worth believing, and for how long?", ch11),
+        ("ch12", "ch", "12", "When words change meaning",
+         "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
+         "you started counting in 2024?", ch12),
     ]
