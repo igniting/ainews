@@ -84,15 +84,17 @@ CONTENTS = [
      "you started counting in 2024?", "ch12"),
     ("ch", "14", "Where practitioners spent their attention",
      "If announcements are unreliable, what were the other rooms talking about?", "ch13"),
-    ("ch", "15", "The half-life of a dependency",
+    ("ch", "15", "Weights you can keep",
+     "What changed when a model you could download caught up?", "ch-open"),
+    ("ch", "16", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", "ch14"),
     ("inter", "III", "The six things I got wrong",
      "Consolidated, with what each one cost.", "interlude-3"),
 
     ("part", "Part IV — Reading forwards"),
-    ("ch", "16", "The unit of observation",
+    ("ch", "17", "The unit of observation",
      "Why did none of this get caught by better statistics?", "ch15"),
-    ("ch", "17", "How to read a field",
+    ("ch", "18", "How to read a field",
      "What do you do on Monday?", "ch16"),
 ]
 
@@ -3800,6 +3802,110 @@ one model that reads and writes text, images, audio and video, and the separate 
 chapter is named after have stopped being categories at all.</p>
 """
 
+# ---------------------------------------------------------------- chapter 15 (open weights)
+
+CHOPEN = """
+<p class="first">Every other vocabulary in this book rises or falls over years.
+<code>Open weights</code> does neither for two and a half years — and then triples in the final
+six months, in both surfaces at once.</p>
+
+<div class="tw"><table><thead><tr><th>Open-weights language</th><th class="n">24H1</th>
+<th class="n">24H2</th><th class="n">25H1</th><th class="n">25H2</th><th class="n">26H1</th>
+<th class="n">26H2</th></tr></thead><tbody>
+<tr><td>Announcement space</td><td class="n">11.9</td><td class="n">7.4</td><td class="n">9.0</td>
+<td class="n">11.7</td><td class="n">10.7</td><td class="n"><b>30.3</b></td></tr>
+<tr><td>Practice space</td><td class="n">5.5</td><td class="n">6.8</td><td class="n">5.4</td>
+<td class="n">5.1</td><td class="n">7.7</td><td class="n"><b>33.9</b></td></tr>
+</tbody></table></div>
+
+<p>By this book's own test that is the least ambiguous reading available: both surfaces move,
+they move together, and they move by about the same multiple. Whatever happened did not happen
+to the coverage.</p>
+
+<h2>What “open weights” means, and what it does not</h2>
+
+<p>The term is precise and narrower than <em>open source</em>. Open weights means the trained
+parameters are published: you can download the file, run it on your own hardware, fine-tune it,
+quantize it and serve it without asking anyone. It generally does <em>not</em> mean the training
+data is published, or the training code, or that the licence permits every commercial use. You
+are given the artefact, not the recipe.</p>
+
+<p>For a working engineer that distinction decides which risks you own. A published weight file
+cannot be deprecated out from under you, cannot change its behaviour overnight, cannot raise its
+price and cannot read your inputs. It also cannot be patched by anyone else, comes with no
+uptime, and is entirely your problem to serve.</p>
+
+<h2>The long flat middle</h2>
+
+<p>For most of the corpus this conversation is oddly steady, and the steadiness hides the actual
+event, which was happening under a different name. The models practitioners were downloading
+increasingly came from one place:</p>
+
+<div class="tw"><table><thead><tr><th>Chinese-lab language</th><th class="n">24H1</th>
+<th class="n">24H2</th><th class="n">25H1</th><th class="n">25H2</th><th class="n">26H1</th>
+<th class="n">26H2</th></tr></thead><tbody>
+<tr><td>Announcement space</td><td class="n">10.2</td><td class="n">13.3</td><td class="n">48.5</td>
+<td class="n">51.1</td><td class="n">46.7</td><td class="n">72.0</td></tr>
+<tr><td>Practice space</td><td class="n">6.5</td><td class="n">31.5</td><td class="n">49.5</td>
+<td class="n">37.0</td><td class="n">57.6</td><td class="n"><b>98.4</b></td></tr>
+</tbody></table></div>
+
+<p>Qwen, DeepSeek, Kimi, GLM and MiniMax end the corpus at 98.4 mentions per ten thousand words
+of practice space — the densest any subject gets on that surface in the archive's later years,
+and consistently ahead of its own announcement figure. This is the clearest practice-led
+gradient in the book: practitioners were running these models in volume while the announcement
+layer was still catching up.</p>
+
+<p class="pull">For most of this period “open weights” and “Chinese lab” were the same sentence,
+and only one of them was being counted.</p>
+
+<h2>What happened at the end</h2>
+
+<p>Then the final half-year, when the term stops being a niche and becomes the frame everyone
+argues inside. Two ledes give the texture:</p>
+
+<blockquote><p>At Computex in Taiwan, Jensen also brought the heat with Nemotron 3 Ultra, their
+550B-A55B, remarkably efficient/fast <strong>open weights LLM that is the new US SoTA</strong>.</p>
+<cite>AI News lede, 2026-06-01</cite></blockquote>
+
+<blockquote><p>On any given Sunday, the announcement that the 2.4T param Qwen 3.8 Max will be
+open weight would've earned title story status, but they had the misfortune to do this
+<strong>4 days after Kimi K3 2.8T was announced</strong>.</p>
+<cite>AI News lede, 2026-07-20</cite></blockquote>
+
+<p>Read together, the step change explains itself. In the first, an American hardware company
+ships an open-weights model and the newsletter calls it the US state of the art — the category
+has stopped being a Chinese speciality and become a competitive position Western vendors want.
+In the second, a 2.4-trillion-parameter open release is <em>not the headline</em>, because a
+larger one arrived four days earlier. Open weights had become crowded enough that scale alone no
+longer bought attention.</p>
+
+<h2>Why the price series moves with it</h2>
+
+<p>The other vocabulary rising through the same window is money — price cuts, cost per token,
+throughput, tokens per second:</p>
+
+<div class="tw"><table><thead><tr><th>Cost and throughput language</th><th class="n">24H1</th>
+<th class="n">24H2</th><th class="n">25H1</th><th class="n">25H2</th><th class="n">26H1</th>
+<th class="n">26H2</th></tr></thead><tbody>
+<tr><td>Announcement space</td><td class="n">1.9</td><td class="n">1.8</td><td class="n">2.2</td>
+<td class="n">6.8</td><td class="n">6.5</td><td class="n">9.4</td></tr>
+<tr><td>Practice space</td><td class="n">3.6</td><td class="n">3.0</td><td class="n">2.9</td>
+<td class="n">4.2</td><td class="n">6.2</td><td class="n">10.4</td></tr>
+</tbody></table></div>
+
+<p>A fivefold rise in one, a near-threefold rise in the other, tracking each other closely
+enough to be one phenomenon. This is what the two previous sections cash out as. Once a
+downloadable model is within reach of the frontier, the frontier has to compete on price, and
+the thing everybody discusses stops being what a model can do and becomes what it costs to make
+it do it. Test-time compute made quality a dial the caller pays for; open weights put the floor
+under that price at approximately zero.</p>
+
+<p>It is the least glamorous vocabulary in this book and the one whose rise is hardest to argue
+with. It moves in both surfaces, at the same time, in the same direction, for a reason anyone
+running a service can state in a sentence.</p>
+"""
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -4227,12 +4333,14 @@ def pages():
          "you started counting in 2024?", ch12),
         ("ch13", "ch", "14", "Where practitioners spent their attention",
          "If announcements are unreliable, what were the other rooms talking about?", ch13),
-        ("ch14", "ch", "15", "The half-life of a dependency",
+        ("ch-open", "ch", "15", "Weights you can keep",
+         "What changed when a model you could download caught up?", CHOPEN),
+        ("ch14", "ch", "16", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
         ("interlude-3", "inter", "III", "The six things I got wrong",
          "Consolidated, with what each one cost.", int3),
-        ("ch15", "ch", "16", "The unit of observation",
+        ("ch15", "ch", "17", "The unit of observation",
          "Why did none of this get caught by better statistics?", ch15),
-        ("ch16", "ch", "17", "How to read a field",
+        ("ch16", "ch", "18", "How to read a field",
          "What do you do on Monday?", ch16),
     ]
