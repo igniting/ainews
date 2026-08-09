@@ -568,6 +568,60 @@ wrong for both, and wrong in two different ways. This chapter is about the world
 that happened — what the job looked like when the answer to almost every question was
 <em>take an open model and change it</em>.</p>
 
+<h2>What the recipe actually was</h2>
+
+<p>Three words carry most of that architecture, and they are worth having straight, because
+they are still how a model gets adapted today even where nobody says so.</p>
+
+<p><strong>Fine-tuning</strong> is continuing to train a model that someone else already
+trained, on data of your own, so that it behaves the way you want. The base model supplies
+language and world knowledge; your data supplies the job. The catch is cost: a full fine-tune
+updates every weight, which needs enough memory to hold the model, its gradients and the
+optimiser's bookkeeping — in practice several times the model's own size.</p>
+
+<p><strong>LoRA</strong> is the trick that made this affordable, and the newsletter's Discord
+recap gives it its full name in January 2024:</p>
+
+<blockquote><p>Despite the emergence of newer models, @merve3234 advocated for the effectiveness
+of BERT in sequence classification tasks, suggesting <strong>Low-Ranking Adaptation (LoRA)</strong>
+for fine-tuning to enhance parameter efficiency.</p>
+<cite>AI News, Discord recap, 2024-01-23</cite></blockquote>
+
+<p>Instead of updating a weight matrix directly, LoRA freezes it and learns a small pair of
+matrices whose product is added on top. The pair has a low <em>rank</em> — a few million
+numbers standing in for a few billion — so training touches a fraction of a percent of the
+parameters. What you ship is not a new model but an adapter file measured in megabytes, and you
+can keep several and swap between them.</p>
+
+<p><strong>Quantization</strong> is the other half. Weights are normally 16-bit numbers;
+quantization stores them in 8, 5 or 4 bits instead, trading a little accuracy for a large
+reduction in memory. Combine the two — quantize the base model, train a LoRA on top — and you
+get QLoRA, which is why the same recap is full of people fitting training runs onto consumer
+cards:</p>
+
+<blockquote><p>Training DPO models, specifically on a 12GB graphics card, may require more VRAM
+than is available … Recommendations included utilizing <strong>QLoRA</strong> for fine-tuning to
+conserve VRAM.</p>
+<cite>AI News, Discord recap, 2024-01-23</cite></blockquote>
+
+<p>By mid-2024 the practice layer had turned this into a menu. A single release arrives as a
+dozen files, each a different point on the same tradeoff:</p>
+
+<blockquote><p>Llama-3.1 8B Instruct GGUF models have been released, offering various
+quantization levels including Q2K, Q3KS, Q3KM, Q40, Q4KS, Q4KM, Q50, Q5KS, Q5KM, Q6K, and Q80.
+These quantized versions provide options for different trade-offs between model size and
+performance, allowing users to choose the most suitable version for their specific use case and
+hardware constraints.</p>
+<cite>AI News, Reddit recap, 2024-07-24</cite></blockquote>
+
+<p><code>GGUF</code> is the file format those weights ship in; the <code>Q4</code> and
+<code>Q5</code> are bits per weight. None of this is glamorous and all of it is the actual
+substance of what people were doing, which one commenter put better than any specification
+could:</p>
+
+<blockquote><p>the knowledge of the whole world in a few GB of a gguf file.</p>
+<cite>AI News, Reddit recap, 2024-07-12</cite></blockquote>
+
 <h2>December 2023: the Mixtral rush</h2>
 
 <p>Mistral released the weights for an eight-expert mixture-of-experts model by posting a
@@ -2170,6 +2224,46 @@ archive. Inside announcement space it runs at 30.95 mentions per ten thousand wo
 2024 — the densest technical idea in the corpus at that point — and in the final half-year it
 runs at <strong>0.21</strong>. That is a hundred-and-fortyfold fall. Nothing else measured in
 this book falls that far.</p>
+
+<h2>What retrieval augmentation actually was</h2>
+
+<p>The idea is one sentence long. A model knows only what was in its training data, and its
+context window — the text you can hand it at question time — is finite and expensive. So
+instead of retraining the model on your documents, you fetch the handful of passages that look
+relevant to the question and paste them into the prompt. The model does not learn your data; it
+reads it, once, per question.</p>
+
+<p>Making that work is a pipeline, and every stage is a choice. You <em>chunk</em> documents
+into passages, because a whole PDF will not fit. You <em>embed</em> each chunk — run it through
+a model that turns text into a vector, so that passages about the same subject land near each
+other. You put those vectors in an <em>index</em> so you can find the nearest ones quickly. At
+question time you embed the question, retrieve its neighbours, and prepend them.</p>
+
+<p>The failure modes are all in the choices, and the archive is full of them from the start.
+February 2024, a complaint about the retrieval built into ChatGPT's custom GPTs:</p>
+
+<blockquote><p>Nick Dobos (of Grimoire fame) also blasted the entire knowledge files capability —
+it seems the RAG system <strong>naively includes 40k characters' worth of context from docs
+every time</strong>, reducing available context and adherence to system prompts.</p>
+<cite>AI News lede, 2024-02-01</cite></blockquote>
+
+<p>That is the canonical failure in miniature. Retrieve too much and you crowd out the
+instructions, spend money on tokens nobody reads, and make the model worse at following its own
+system prompt. Retrieve too little, or chunk badly, and the answer is not in the context at
+all. The engineering is entirely in the middle.</p>
+
+<p>Two years later the same problem is still being worked, at a scale that makes the tradeoffs
+explicit:</p>
+
+<blockquote><p>LEANN: “stop storing embeddings”. A notable systems claim: index <strong>60M text
+chunks using 6GB</strong> (vs “200GB”) by storing a compact graph and recomputing embeddings
+selectively at query time … Engineers should sanity-check latency/throughput tradeoffs and
+<strong>recall</strong> under recomputation.</p>
+<cite>AI News, Twitter recap, 2026-01-07</cite></blockquote>
+
+<p>Sixty million chunks, a storage budget, and recall as the thing you might lose — recall being
+the share of genuinely relevant passages your index actually returns. Those are the same four
+words as 2024: chunk, embed, index, retrieve. Only the scale and the storage layout changed.</p>
 
 <h2>The name and the machinery</h2>
 
