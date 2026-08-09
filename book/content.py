@@ -1313,14 +1313,37 @@ suite to a model and collected the scores.</p>
 <code>abstraction</code>.</p>
 
 <p>Same word. Different thing. The cosine distance between the two neighbourhoods is 0.439,
-the third-largest drift of any term in the corpus, and over the same window the word's density
-in announcement space goes from 1.78 to <strong>31.83</strong>.</p>
+the third-largest drift of any term in the corpus.</p>
+
+<p>Now count it. In the whole of 2024, the word <code>harness</code> appears in announcement
+space exactly <strong>once</strong> — one mention in the first half of the year, and none at
+all in the second. In the same two years it appears <strong>4,195 times</strong> in community
+space, and <strong>84% of those</strong> fall within ninety characters of the string
+<code>lm-eval</code>. They are not discussions of a concept. They are a project's bug tracker:</p>
+
+<blockquote><p>Don't use <code>get_task_dict()</code> in task registration / initialization by
+haileyschoelkopf · Pull Request 1331 · EleutherAI/lm-evaluation-harness</p>
+<cite>AI News, Discord recap, 2024-01-23</cite></blockquote>
+
+<p>By 2026 the word runs at 22.7 and then 31.83 per ten thousand words of announcement space,
+and it means this:</p>
+
+<blockquote><p>Harnesses may be the real differentiator: current agent harnesses underutilize
+frontier models; the key low-hanging fruit is turning setup into continuous skill-building —
+when the agent makes mistakes, it should patch itself with new skills, protections and
+reminders, effectively a lightweight continual-learning loop.</p>
+<cite>AI News, Twitter recap, 2026-01-02</cite></blockquote>
 
 <div class="warn">
-<p>A dashboard counting the string <code>harness</code> since 2024 would show a clean
-eighteen-fold rise and would be measuring two unrelated things. Nothing about the series would
-look wrong.</p>
+<p>A dashboard counting the string <code>harness</code> since 2024 would show a rise from one
+mention to several hundred, and would be measuring two unrelated things in two different rooms.
+Nothing about the series would look wrong. Worse, a whole-corpus count would show the word was
+<em>already common</em> in 2024 — because community space was 96% of the archive's words that
+year, and a single repository's pull requests were enough to make a term look established.</p>
 </div>
+
+<p class="pull">The word was not rare in 2024 and then popular in 2026. It was a filename in a
+chat room, and then a design problem on a main stage.</p>
 
 <p>The drift is a warning and worth taking. But it is not the subject of this chapter. The
 subject is what the <em>new</em> meaning is for, because the word changed at exactly the moment
