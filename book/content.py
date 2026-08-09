@@ -869,9 +869,10 @@ CH4_D = """
 <h2>Fate four: still open</h2>
 
 <p>On 10 March 2026 the headline was <em>Yann LeCun's AMI Labs launches with a $1.03B seed to
-build world models</em>. World-model language in announcement space goes from 0.31 in early
-2024 to 4.59 by early 2026 and 5.34 by the last half-year — a fifteenfold rise, on counts
-large enough to trust (4 mentions, then 91).</p>
+build world models</em>. World-model language in announcement space starts at 1.06 in early
+2024, dips to 0.37 later that year, then climbs to 5.85 by early 2026 and 7.05 by the last
+half-year — a sixfold rise off an unsteady base, on counts large enough to trust at the end
+though not at the start.</p>
 
 <p>Now compare the surfaces. The practice-space baseline is a single mention, so a fold change
 is meaningless; compare levels instead. In the first half of 2026 world models run at
@@ -1703,8 +1704,9 @@ report. The answer, in the data, is that the safety conversation did not grow.
 """
 
 CH9_B = """
-<p>Look at what fell. <code>Alignment</code> — the central word of AI safety in 2024 — runs at
-7.19 per ten thousand words of announcement space and ends at <strong>1.28</strong>.
+<p>Look at what fell. <code>Alignment</code> — the central word of AI safety in 2024 — peaks at
+6.47 per ten thousand words of announcement space in the second half of that year and ends at
+<strong>0.64</strong>, a tenfold fall from its height.
 Regulation spikes to <strong>14.60</strong> in the second half of 2024, the highest single
 value in this chapter, during the SB-1047 and EU AI Act window, and then collapses to 1.04 and
 stays there. Existential-risk language never exceeds 2.06 in the entire corpus and ends where
@@ -2060,9 +2062,10 @@ argued about.</p>
 """
 
 CH10_B = """
-<p>RAG's name falls a hundred and sevenfold. Its machinery falls <strong>1.9-fold</strong>, and
-it is <em>higher</em> in the first half of 2026 (13.37) than it was in the second half of 2024
-(12.38). The mechanism never went anywhere. Only the label did.</p>
+<p>RAG's name falls a hundred and fortyfold. Its machinery, counted as set out earlier in this
+chapter, falls a little over <strong>twofold</strong> — and is <em>higher</em> in the second
+half of 2025 (8.3) than it was in the second half of 2024 (6.2). The mechanism never went
+anywhere. Only the label did.</p>
 
 <p>And the line above both of them is the one that settles it. Memory — long-term memory,
 memory layers, what a system keeps and retrieves across turns — goes from 12.91 to a peak of
@@ -2229,8 +2232,8 @@ point a high score may mean the model can reason, or may mean it has seen the an
 nothing about the number distinguishes those.</p>
 
 <p>You can watch the anxiety about this build. Contamination language in announcement space runs
-at 0.39 in early 2024 and <strong>1.92</strong> in the final half-year — its highest value in
-the corpus, at the point where most of the benchmarks it refers to have already gone quiet.</p>
+at 1.06 in early 2024, disappears entirely in the second half of that year, and returns at
+<strong>1.92</strong> in the final half-year — its highest value in the corpus, at the point where most of the benchmarks it refers to have already gone quiet.</p>
 
 <p>By late 2025 it has stopped being a caveat and become a design requirement. Here is the
 newsletter describing a new benchmark in September 2025, and note where contamination sits in
@@ -3387,7 +3390,7 @@ def pages():
                  8, "What the reasoning turn left behind",
                  "Announcement space. Two vocabularies that did not exist in early 2024, one "
                  "that did and was displaced, and one — distillation — that was old and came "
-                 "back bigger. The word “reasoning” is off this chart at 37.7.")
+                 "back bigger. The word “reasoning” is off this chart at 40.3.")
            + CH5_D
            + table(["What", "Announcement", "Practice", "Outcome"], legacy_rows,
                    "Table 2 · Mentions per 10⁴ words, 2024H1 → 2026H2, in each surface",
