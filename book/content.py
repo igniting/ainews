@@ -1762,6 +1762,59 @@ value in this chapter, during the SB-1047 and EU AI Act window, and then collaps
 stays there. Existential-risk language never exceeds 2.06 in the entire corpus and ends where
 it started.</p>
 
+<h2>The handover, and where it happens</h2>
+
+<p>Put the outgoing vocabulary beside the incoming one and the chapter's claim stops being an
+impression. Broadening slightly — <code>alignment</code>, <code>RLHF</code> and
+<code>jailbreak</code> on one side; <code>prompt injection</code>, <code>exfiltration</code>,
+<code>sandbox</code>, <code>malware</code> and <code>cyber</code> on the other — in announcement
+space:</p>
+
+<div class="tw"><table><thead><tr><th>Half-year</th><th class="n">alignment vocabulary</th>
+<th class="n">security vocabulary</th><th class="n">autonomy vocabulary</th></tr></thead><tbody>
+<tr><td>2024H1</td><td class="n">10.39</td><td class="n">1.06</td><td class="n">1.70</td></tr>
+<tr><td>2024H2</td><td class="n">8.50</td><td class="n">1.66</td><td class="n">3.88</td></tr>
+<tr><td>2025H1</td><td class="n">5.33</td><td class="n">1.83</td><td class="n">3.28</td></tr>
+<tr><td>2025H2</td><td class="n">4.78</td><td class="n">3.33</td><td class="n">3.74</td></tr>
+<tr><td>2026H1</td><td class="n">2.42</td><td class="n"><b>12.67</b></td><td class="n">5.85</td></tr>
+<tr><td>2026H2</td><td class="n">2.14</td><td class="n"><b>19.22</b></td><td class="n">7.26</td></tr>
+</tbody></table></div>
+
+<p>One falls fivefold, the other rises eighteenfold, and they cross in the winter of 2025–26.
+That is not a subject growing. It is one subject being replaced by another, and the replacement
+is close enough in topic that a single count of “safety” language would have shown a
+respectable, misleading flat line straight through the handover.</p>
+
+<p class="pull">Safety did not decline. It was relieved of duty by a discipline with different
+words, different failure modes, and an incident queue.</p>
+
+<p>The third column is the reason. Autonomy language — <code>autonomous</code>,
+<code>rogue</code>, <code>oversight</code>, <code>human in the loop</code> — rises steadily
+throughout, from 1.70 to 7.26, and it is the bridge between the two. As long as a model only
+answered questions, its failure mode was saying something bad, which is an alignment problem.
+Once it could open a browser and hold a credential, its failure mode became doing something
+bad, which is a security problem. The vocabulary followed the capability by about a year.</p>
+
+<p>By early 2026 that reframing is simply how the field talks, and it arrives with the
+particular flatness of an engineering constraint rather than a moral argument:</p>
+
+<blockquote><p>Agent security in practice: multiple posts treat desktop and browser agents as
+inherently high-risk until prompt injection and sandboxing mature, reinforcing the need for
+strict isolation, least privilege, and careful handling of credentials.</p>
+<cite>AI News, Twitter recap, 2026-01-26</cite></blockquote>
+
+<p>Three days later, the same idea stated as a design trilemma:</p>
+
+<blockquote><p>Safety trilemma: community discussion frames “<strong>Useful vs Autonomous vs
+Safe</strong>” as a tri-constraint until prompt injection is solved. Another take argues
+capability bottlenecks dominate: users won't grant high-stakes autonomy — for example in
+finance — until agents are reliably competent.</p>
+<cite>AI News, Twitter recap, 2026-01-29</cite></blockquote>
+
+<p><em>Least privilege</em> and <em>credentials</em> are not words from the 2024 safety
+conversation. They are words from operations, and their arrival is the clearest sign in this
+archive that a research anxiety had turned into a deployment problem.</p>
+
 <p>Now look at what rose. Permission language — <code>least privilege</code>, approval gates,
 human-in-the-loop, allowlists, sandboxes — goes from 0.93 to <strong>9.59</strong> in
 announcement space and from 0.32 to <strong>6.08</strong> among practitioners: ten-fold and

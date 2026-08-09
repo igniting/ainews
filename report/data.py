@@ -771,3 +771,15 @@ CODING_TOOLS = {
     "Windsurf":    [0.0, 0.2, 1.7, 0.7, 0.3, 0.0],
     "Aider":       [0.3, 0.9, 1.6, 0.6, 0.1, 0.0],
 }
+
+# Announcement-space density per 10^4 words: the safety vocabulary being replaced
+# by a security one. alignment/RLHF/jailbreak falls 5x while prompt-injection/
+# exfiltration/sandbox/malware/cyber rises 18x; they cross in winter 2025-26.
+# Autonomy language is the bridge — as long as a model only answered questions its
+# failure mode was saying something bad; once it could hold a credential it was
+# doing something bad.
+SAFETY_HANDOVER = [
+    ("2024H1", 10.39, 1.06, 1.70), ("2024H2", 8.50, 1.66, 3.88),
+    ("2025H1", 5.33, 1.83, 3.28), ("2025H2", 4.78, 3.33, 3.74),
+    ("2026H1", 2.42, 12.67, 5.85), ("2026H2", 2.14, 19.22, 7.26),
+]
