@@ -1705,6 +1705,38 @@ rises by about three quarters in both surfaces — the same slope on each, which
 field-wide shift looks like — and ends higher than any other term in this chapter by a factor
 of two.</p>
 
+<div class="warn">
+<p><strong>Resist the temptation to pool.</strong> Broadening the pattern to include
+<code>leaderboard</code> and counting both text surfaces together makes this look far more
+dramatic than it is — I had it at 49.8 rising to 81.0 before splitting it, which overstates
+both the level and the drama. Split, it is 45.6 → 72.8 in announcement space and 43.3 → 65.7 in
+practice: a real, moderate, field-wide rise of about half again, with practice space dipping in
+the middle. Every large number in this book that was not split by surface turned out to be
+smaller than it looked.</p>
+</div>
+
+<p>What that rise is <em>made of</em> changes, though, and the archive is candid about it. By
+mid-2025 the complaint is no longer that benchmarks are hard, but that scores have stopped
+carrying information:</p>
+
+<blockquote><p>Post-training and RL saturation: lateinteraction critiques <strong>benchmark
+contamination and the overemphasis on RL-tuned gains</strong>, warning that much of the recent
+apparent progress may be due to <strong>prompt/template alignment rather than general
+capability</strong>.</p>
+<cite>AI News, Twitter recap, 2025-06-02</cite></blockquote>
+
+<p>That is a precise and uncomfortable claim: that a model tuned until it matches the exact
+phrasing a benchmark uses will score better without being better at anything. It is the same
+failure as contamination — the test leaking into the training — arriving by a subtler route,
+and it is why the second half of this chapter is about which benchmarks resist it.</p>
+
+<p>One caution on measuring the worry itself. <code>Contamination</code> is a word other
+industries use, and a pattern that counts it will happily count a thread about pesticides and
+heavy metals in the food supply, which is exactly what mine did on 1 July 2025. The
+contamination series in this chapter is small enough — never above 3.2 per ten thousand words —
+that a handful of such false positives moves it. Read it as evidence that the anxiety exists,
+not as a measurement of how large it is.</p>
+
 <p>The reason is mechanical. When the model was the product, you compared models. When the
 model is a component inside a system you wrote — with a retry policy, a context strategy, a
 tool set and a stopping rule, every one of which you chose — there is no way to know whether
