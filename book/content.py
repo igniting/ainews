@@ -101,6 +101,8 @@ CONTENTS = [
      "Why did none of this get caught by better statistics?", "ch15"),
     ("ch", "16", "How to read a field",
      "What do you do on Monday?", "ch16"),
+    ("ch", "A", "Appendix: methods, data and limits",
+     "How every number here was produced, and what it cannot support.", "appendix"),
 ]
 
 
@@ -3892,6 +3894,102 @@ a series that tracks one tells you nothing about the other.</p>
 frozen on the day you wrote it, and the field does not consult it before changing vocabulary.</p>
 """
 
+
+# ---------------------------------------------------------------- appendix
+
+APPENDIX = """
+<p class="first">Everything in this book is computed from one archive by scripts in one
+repository. This appendix says what the archive is, what the numbers mean, how to reproduce
+them, and what the whole thing cannot tell you.</p>
+
+<h2>The corpus</h2>
+
+<p>690 daily issues of <em>AI News</em>, 6 December 2023 to 6 August 2026, about 15.4 million
+words, in <code>articles/</code> as one markdown file per issue. Filenames are the day an issue
+<em>covers</em>; the front matter carries the day it was <em>published</em>, which is usually
+the next morning. Mixing those two is how three dates in the first edition came out wrong.</p>
+
+<p>Each issue has up to four layers. Three are machine-generated summaries of sampled sources —
+a Twitter recap, a Reddit recap and, until March 2026, a Discord recap. Above them sits the only
+text a person wrote: a lede of a few hundred words. For 2026 the public mirror carries a
+placeholder there instead of the real thing, so the editorial layer was reconstructed from 397
+sent emails; see <code>analysis/extract_commentary_eml.py</code>.</p>
+
+<h2>The estimand</h2>
+
+<p>Every figure measures <strong>attention within one curated view of a field's public
+conversation</strong> — not deployment, not revenue, not capability. The three surfaces have
+short names used throughout and longer accurate ones: announcement space is lab-linked Twitter
+discourse from 544 accounts on one editor's list; community space is sampled Discord activity
+across 56 servers; practice space is local-model Reddit discourse from 12 subreddits.</p>
+
+<h2>The unit</h2>
+
+<p>Almost every number is <strong>mentions of a regular expression per ten thousand words,
+inside a single named recap section, aggregated over a half-year</strong>. The section is the
+unit because whole-issue composition inverts across the corpus: the Discord recap is 96% of the
+median issue in early 2024 and absent by 2026, so any count taken across a whole issue is a
+weighted average whose weights are moving faster than the thing being measured.</p>
+
+<h2>Reproducing it</h2>
+
+<div class="tw"><table><thead><tr><th>Script</th><th>What it produces</th></tr></thead><tbody>
+<tr><td><code>analysis/methods/recaps.py --check</code></td><td>splits issues into sections;
+regression fixtures for the six heading styles</td></tr>
+<tr><td><code>analysis/methods/sections.py</code></td><td>the density series behind most
+figures</td></tr>
+<tr><td><code>analysis/methods/sensitivity.py</code></td><td>the same fold-changes from three
+different baselines</td></tr>
+<tr><td><code>analysis/methods/survival.py</code></td><td>Kaplan-Meier curves for model
+lifespan</td></tr>
+<tr><td><code>analysis/methods/semantic_drift.py</code></td><td>diachronic embeddings and the
+drift table</td></tr>
+<tr><td><code>analysis/methods/editorial.py</code></td><td>the human layer, measured
+separately</td></tr>
+<tr><td><code>analysis/methods/titles.py</code></td><td>stored titles against published
+subjects</td></tr>
+<tr><td><code>analysis/methods/summarizer.py</code></td><td>which model wrote which recap, and
+the same-day two-model comparison</td></tr>
+<tr><td><code>analysis/quotes.py</code></td><td>every quotation in this book, with its day and
+surface</td></tr>
+<tr><td><code>python3 book/build_book.py &amp;&amp; python3 book/check.py site</code></td>
+<td>rebuilds these pages and verifies them</td></tr>
+</tbody></table></div>
+
+<h2>What this cannot tell you</h2>
+
+<p><strong>It is discourse, not deployment.</strong> A gap between surfaces is a lead worth
+investigating, never a measurement of adoption, and nowhere in this book is it ground truth
+about what anyone ran.</p>
+
+<p><strong>The instrument is a language model, and it changed.</strong> Eight model families
+name themselves as the summarizer across the corpus, and 384 of 613 issues never declare the
+Twitter one. Three days were published twice with different summarizers: varying the model while
+holding the news constant moves a pattern's density by a median of 1.23× and up to 2.40×. That
+is the noise floor under every ratio here. A fold-change of 1.2 is indistinguishable from a
+summarizer swap.</p>
+
+<p><strong>Gradients are baseline-dependent.</strong> Directions mostly survive a change of
+baseline; the announcement-to-practice ratios mostly do not. The agent gradient is 4.5:1 from
+2024H1, 6.2:1 from the stable core, and 1.0:1 from 2024H2, where it disappears. Only retrieval's
+gradient survives all three.</p>
+
+<p><strong>The sampling frame widened.</strong> 7 subreddits to 12, 384 Twitter accounts to 544,
+30 Discord servers to none. Any count of <em>distinct things mentioned</em> is partly counting
+the newsletter's own appetite.</p>
+
+<p><strong>It is one editor's view</strong>, over-weighting the English-language,
+US-and-China, open-weights-adjacent conversation, and it stops in August 2026.</p>
+
+<h2>Corrections</h2>
+
+<p>Findings that were published here and later withdrawn are kept in the text rather than
+deleted, with what each one cost; the consolidated ledger is in the third interlude. The largest
+were a parser that misclassified 71% of the 2024H1 announcement baseline, a templated-title
+series that was measuring a lossy mirror rather than the newsletter, and an image-generation
+collapse that turned out to live in a single cell of a table.</p>
+"""
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -4350,4 +4448,6 @@ def pages():
          "Why did none of this get caught by better statistics?", ch15),
         ("ch16", "ch", "16", "How to read a field",
          "What do you do on Monday?", ch16),
+        ("appendix", "ch", "A", "Appendix: methods, data and limits",
+         "How every number here was produced, and what it cannot support.", APPENDIX),
     ]

@@ -73,9 +73,13 @@ def check_structure() -> list:
         if c != g:
             fail.append(f"position {i}: contents has {c[2]!r} ({c[3]}), "
                         f"reading order has {g[2]!r} ({g[3]})")
-    nums = [e[1] for e in pages if e[0] == "ch"]
+    # Numbered chapters must run 1..n. Lettered ones (the appendix) sit after them.
+    nums = [e[1] for e in pages if e[0] == "ch" and e[1].isdigit()]
     if nums != [str(i) for i in range(1, len(nums) + 1)]:
         fail.append(f"chapter numbers are not sequential: {','.join(nums)}")
+    order = [e[1].isdigit() for e in pages if e[0] == "ch"]
+    if order != sorted(order, reverse=True):
+        fail.append("a lettered chapter appears before a numbered one")
     slugs = [e[3] for e in pages]
     dupes = {s for s in slugs if slugs.count(s) > 1}
     if dupes:
