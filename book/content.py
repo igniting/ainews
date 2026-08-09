@@ -2064,6 +2064,54 @@ rule about reading before counting, and the second produced the three-surface sp
 this book's better findings depend on.</p>
 """
 
+INT2_D = """
+<h2>A worked example: the biggest fall I ever measured</h2>
+
+<p>Late in this project I ran a scan across twenty-two topics looking for arcs the book had
+missed, and one result dwarfed everything else. Image generation — <code>diffusion</code>,
+<code>text-to-image</code>, Midjourney, Stable Diffusion, FLUX — ran at <strong>61.8</strong>
+mentions per ten thousand words in the first half of 2024 and <strong>4.7</strong> at the end.
+A thirteenfold collapse. Larger than retrieval's, larger than fine-tuning's, and completely
+absent from this book. I drafted a chapter about it.</p>
+
+<p>Then I split it by surface, which is the only lesson this interlude has to teach.</p>
+
+<div class="tw"><table><thead><tr><th>Surface</th><th class="n">24H1</th><th class="n">24H2</th>
+<th class="n">25H1</th><th class="n">25H2</th><th class="n">26H1</th><th class="n">26H2</th>
+</tr></thead><tbody>
+<tr><td>Announcement (Twitter)</td><td class="n">11.9</td><td class="n">10.3</td>
+<td class="n">16.7</td><td class="n">15.4</td><td class="n">9.6</td><td class="n">5.3</td></tr>
+<tr><td>Practice (Reddit)</td><td class="n"><b>148.3</b></td><td class="n">42.7</td>
+<td class="n">23.2</td><td class="n">25.1</td><td class="n">12.1</td><td class="n">4.7</td></tr>
+<tr><td>Community (Discord)</td><td class="n">20.7</td><td class="n">17.6</td>
+<td class="n">10.1</td><td class="n">10.2</td><td class="n">10.0</td><td class="n">—</td></tr>
+<tr><td>The editor's own lede</td><td class="n">7.7</td><td class="n">9.4</td>
+<td class="n">8.5</td><td class="n">14.7</td><td class="n">8.2</td><td class="n">11.6</td></tr>
+</tbody></table></div>
+
+<p>The thirteenfold collapse is one number in one cell. Practice space in the first half of
+2024 ran at 148.3 — thirteen times its own announcement space, and the highest density any
+topic reaches on any surface anywhere in this corpus. It falls to 4.7. Everything else is
+undramatic: announcement space roughly halves, and <em>rises</em> through 2025 on the way. The
+editor's own writing does not fall at all; it ends higher than it started.</p>
+
+<p>So the largest fall I ever measured is a fact about a seven-subreddit sample in early 2024,
+in which local image generation was one of the most active communities on the internet. As the
+practice sample widened and the field's centre of gravity moved, that share collapsed. Nothing
+about image generation died. One room got bigger and the room I was listening to stopped being
+mostly about it.</p>
+
+<p class="pull">A thirteenfold collapse, and the human being writing the newsletter never
+noticed, because it did not happen.</p>
+
+<p>I include this because it is the only finding in the book that was killed by the method
+rather than corrected by it, and because of how nearly it survived. It was large. It was
+consistent across two years. It had an obvious story attached — image generation got good, got
+commoditised, stopped being news — and that story is even partly true in announcement space.
+What it did not have was a denominator I had looked at.</p>
+"""
+
+
 
 # ---------------------------------------------------------------- chapter 10
 
@@ -3615,7 +3663,7 @@ def pages():
                     mix_rows,
                     "Table 5 · Change from 2024H1 to the end of each surface's coverage",
                     (1, 2, 3, 4))
-            + INT2_C)
+            + INT2_C + INT2_D)
 
     nm_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
                 f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.NAME_MACH]

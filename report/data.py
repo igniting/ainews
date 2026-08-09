@@ -783,3 +783,16 @@ SAFETY_HANDOVER = [
     ("2025H1", 5.33, 1.83, 3.28), ("2025H2", 4.78, 3.33, 3.74),
     ("2026H1", 2.42, 12.67, 5.85), ("2026H2", 2.14, 19.22, 7.26),
 ]
+
+# Image-generation topic density per 10^4 words, split by surface. Pooled across
+# text surfaces this is the largest fall in the corpus, 61.8 -> 4.7. Split, it is
+# one cell: practice space in 2024H1 ran at 148.3 — the highest density any topic
+# reaches on any surface anywhere here — because the seven-subreddit sample of
+# early 2024 was heavily local image generation. Announcement space merely halves
+# and rises through 2025; the editor's own lede does not fall at all.
+IMAGEGEN_BY_SURFACE = {
+    "twitter": [11.9, 10.3, 16.7, 15.4, 9.6, 5.3],
+    "reddit":  [148.3, 42.7, 23.2, 25.1, 12.1, 4.7],
+    "discord": [20.7, 17.6, 10.1, 10.2, 10.0, 0.0],
+    "lede":    [7.7, 9.4, 8.5, 14.7, 8.2, 11.6],
+}
