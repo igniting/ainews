@@ -1037,9 +1037,10 @@ vocabulary looks like as opposed to a product entering a news cycle.</p>
 
 <h2>Then it peaks, and falls</h2>
 
-<p>Reasoning language in announcement space runs 6.26 &rarr; 20.33 &rarr; <strong>37.71</strong>
-in the first half of 2025, then 34.52, 16.80, and 14.10 in the last half-year of the corpus. A
-2.7&times; fall from the peak. In practice space the same shape, gentler: 18.41 down to 9.22.</p>
+<p>Reasoning language in announcement space runs 15.05 &rarr; 23.47 &rarr;
+<strong>40.30</strong> in the first half of 2025, then 35.84, 17.21 and 14.31 in the last
+half-year of the corpus &mdash; a 2.8&times; fall from the peak. Practice space has the same
+shape, gentler and earlier: 18.13 in late 2024, a 19.52 peak, then down to 9.84.</p>
 
 <p>A fall that size usually means one of two things: the idea failed, or the idea won so
 completely that naming it became unnecessary. It falls in every surface, so it is not an
@@ -1059,9 +1060,10 @@ is discussing the words, then the words are in an API reference and nobody discu
 
 <h3>Two: the training objective changed underneath</h3>
 
-<p>The alignment vocabulary of 2024 — RLHF, DPO, PPO, preference optimisation — runs at 8.04 in
-early 2024 and <strong>0.85</strong> at the end. What replaced it is verification: RLVR,
-verifiable rewards, verifiers, 0.00 rising to 2.35. GRPO, the specific algorithm that made
+<p>The alignment vocabulary of 2024 — RLHF, DPO, PPO, preference optimisation — runs at 9.33 in
+early 2024 and <strong>0.43</strong> at the end, a twenty-onefold fall. What replaced it is
+verification: RLVR, verifiable rewards, verifiers, 0.00 rising to 2.35, and the crossover falls
+in the second half of 2025. GRPO, the specific algorithm that made
 reasoning training cheap, spikes to 4.58 in late 2025 and settles at 0.43 — the same
 became-boring curve, one level down.</p>
 
