@@ -1090,6 +1090,41 @@ that keeps climbing for five months after the launch that triggered it, peaking 
 0, 0, 22, 24, 43, 77 raw mentions from July through December. That is what a concept entering a
 vocabulary looks like as opposed to a product entering a news cycle.</p>
 
+<h2>What test-time compute actually means</h2>
+
+<p>Until o1, making a model better meant making it bigger or training it longer. Both happen
+before you ever use it, and both are somebody else's capital expenditure. Test-time compute
+moves the lever to the other side: the model spends longer <em>on your question</em>, producing
+intermediate reasoning it mostly does not show you, and the answer improves as a function of
+how long you let it run.</p>
+
+<p>The reason that mattered is in the lede from the day of the launch, and it is not the
+benchmark scores:</p>
+
+<blockquote><p>You are used to new models showing flattering charts, but there is one of note
+that you don't see in many model announcements, that is probably the most important chart of
+all. Dr Jim Fan gets it right: we now have <strong>scaling laws for test time compute</strong>,
+and it looks like they scale loglinearly.</p>
+<cite>AI News lede, 2024-09-12</cite></blockquote>
+
+<p>A scaling law is a promise that a knob keeps working. Loglinear means each further
+multiplication of thinking time buys another fixed increment of accuracy — not forever, but
+predictably enough to plan around. For anyone building on models, that was a new kind of thing
+to own: quality had become a dial on the caller's side rather than a property of the weights.</p>
+
+<p>The bill arrived the same day. From the community recap of 12 September, hours after the
+lede above:</p>
+
+<blockquote><p>Users express frustration over o1's performance in coding tasks, citing hidden
+<strong>'thinking tokens'</strong> leading to unexpected costs, as noted at $60 per million
+tokens … many users report preferring alternatives like Sonnet.</p>
+<cite>AI News, Discord recap, 2024-09-12</cite></blockquote>
+
+<p>Both descriptions are of the same mechanism. The reasoning happens as tokens; the tokens are
+billed; and because the model decides how many to spend, the caller cannot know the price of a
+request before making it. Announcement space saw a scaling law. Practice space saw a bill it
+could not forecast, on the same afternoon, about the same feature.</p>
+
 <h2>Then it peaks, and falls</h2>
 
 <p>Reasoning language in announcement space runs 15.05 &rarr; 23.47 &rarr;
@@ -1413,6 +1448,20 @@ before giving up; when to stop. In 2024 you wrote a prompt and got a completion.
 write a harness, and the model is one component inside it — the one you did not write, cannot
 debug, and swap out every few months.</p>
 </div>
+
+<p>You can tell that list is real rather than tidy because of the arguments it produces. Here is
+the context-window line item, being fought over in August 2025:</p>
+
+<blockquote><p>Agentic coding posture: multiple reports argue for <strong>non-reasoning coders by
+default — reasoning can exhaust context in agent loops</strong>. Early Cline tests found v3.1
+“makes assumptions” in planning; tracking diff edit failure rate as more data comes in.</p>
+<cite>AI News, Twitter recap, 2025-08-22</cite></blockquote>
+
+<p>Every clause is a harness decision. Whether to use a reasoning model at all is a budget
+question, because reasoning tokens consume the same context the loop needs to remember what it
+has already tried. <em>Diff edit failure rate</em> is a harness metric — how often the model's
+proposed change fails to apply — and it has nothing to do with how clever the model is. This is
+what it looks like when the interesting engineering has moved outside the weights.</p>
 """
 
 CH7_B = """
