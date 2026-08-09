@@ -53,6 +53,36 @@ def check(path: pathlib.Path) -> list[str]:
     return fail
 
 
+
+def check_structure() -> list:
+    """The contents page and the reading order must agree.
+
+    They are built from two different lists — CONTENTS and pages() — and a chapter
+    inserted into one but not the other produces a book whose table of contents and
+    whose prev/next links disagree about what comes after Part II. That happened
+    twice while chapters were being added, and neither time did anything error.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    import content as K
+    contents = [(r[0], r[1], r[2], r[4]) for r in K.CONTENTS if r[0] != "part"]
+    pages = [(e[1], e[2], e[3], e[0]) for e in K.pages()]
+    fail = []
+    if len(contents) != len(pages):
+        fail.append(f"contents lists {len(contents)} entries, pages() yields {len(pages)}")
+    for i, (c, g) in enumerate(zip(contents, pages)):
+        if c != g:
+            fail.append(f"position {i}: contents has {c[2]!r} ({c[3]}), "
+                        f"reading order has {g[2]!r} ({g[3]})")
+    nums = [e[1] for e in pages if e[0] == "ch"]
+    if nums != [str(i) for i in range(1, len(nums) + 1)]:
+        fail.append(f"chapter numbers are not sequential: {','.join(nums)}")
+    slugs = [e[3] for e in pages]
+    dupes = {s for s in slugs if slugs.count(s) > 1}
+    if dupes:
+        fail.append(f"duplicate slugs: {sorted(dupes)}")
+    return fail
+
+
 def main(argv: list[str]) -> int:
     root = pathlib.Path(argv[1] if len(argv) > 1 else "site")
     pages = sorted(root.glob("*.html"))
@@ -68,8 +98,14 @@ def main(argv: list[str]) -> int:
             print(f"FAILED {p.name}", *(f"    {f}" for f in fail), sep="\n")
         else:
             print(f"ok {p.name:<20} {size:>8,} bytes")
+    struct = check_structure()
+    if struct:
+        print("\nSTRUCTURE", *(f"    {s}" for s in struct), sep="\n")
+        bad += 1
+    else:
+        print("ok contents and reading order agree")
     if bad:
-        print(f"\n{bad} of {len(pages)} pages failed")
+        print(f"\n{bad} problems")
         return 1
     print(f"\nall {len(pages)} pages self-contained and balanced")
     return 0
