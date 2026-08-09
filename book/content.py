@@ -11,6 +11,8 @@ import pathlib
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "report"))
 
+import re
+
 import charts as C  # noqa: E402
 import data as D  # noqa: E402
 import figs as F  # noqa: E402
@@ -23,6 +25,14 @@ SUB = ("Three years of AI, as the field saw it happen — "
 # ---------------------------------------------------------------- helpers
 
 def fig(svg, n, title, note):
+    """A figure with its caption, and the same caption given to the SVG itself.
+
+    The charts carry role="img" but no accessible name, which makes them invisible
+    to a screen reader. Since the caption already says what the figure shows, it is
+    reused verbatim as the accessible label rather than writing a second description
+    that could drift from the first."""
+    label = C.esc(f"Figure {n}. {title}. " + re.sub(r"<[^>]+>", "", note).strip())
+    svg = svg.replace("<svg ", f'<svg aria-label="{label}" ', 1)
     return (f'<figure><figcaption><b>Figure {n} · {C.esc(title)}</b>{note}</figcaption>'
             f'{svg}</figure>')
 

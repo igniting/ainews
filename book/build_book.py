@@ -11,7 +11,10 @@ all. Figures are computed SVG emitted inline by report/charts.py and book/figs.p
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import pathlib
+import re
+import subprocess
 import shutil
 import sys
 import urllib.parse
@@ -30,6 +33,42 @@ FAVICON = urllib.parse.quote(
     'stroke-linecap="round"/>'
     '<circle cx="21.5" cy="23" r="3.4" fill="#8C2F39"/></svg>',
     safe="")
+
+
+REPO_URL = "https://github.com/igniting/ainews"
+SOURCE = REPO_URL + "/blob/main/articles/"
+
+
+def issue_index() -> dict:
+    """`YY-MM-DD` -> the archive file that covers that day.
+
+    Every dated quotation in the book is linked to the issue it came from, and the
+    issue it is linked to is the copy in this repository rather than a publisher URL.
+    That is the only citation that can be checked against exactly what was measured:
+    the published post can be edited, and for 2026 the public mirror is missing the
+    commentary these quotations are drawn from.
+    """
+    out = {}
+    for f in sorted((REPO / "articles").glob("*.md")):
+        out.setdefault(f.name[:8], f.name)
+    return out
+
+
+ISSUES = issue_index()
+CITE = re.compile(r"<cite>([^<]*?)20(\d\d-\d\d-\d\d)([^<]*?)</cite>")
+
+
+def link_cites(html: str) -> str:
+    """Turn every dated <cite> into a link to that issue in the archive."""
+    def one(m):
+        before, day, after = m.group(1), m.group(2), m.group(3)
+        name = ISSUES.get(day)
+        if not name:
+            return m.group(0)
+        return (f'<cite>{before}<a href="{SOURCE}{urllib.parse.quote(name)}" '
+                f'rel="noreferrer">20{day}</a>{after}</cite>')
+    return CITE.sub(one, html)
+
 
 KIND_LABEL = {"ch": "Chapter", "inter": "Interlude"}
 
@@ -108,8 +147,16 @@ def contents_page(drafted: set[str]) -> str:
                      f'<span class="d">{question}</span></span></a></li>')
     if ul_open:
         parts.append("</ul>")
+    rev = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO,
+                         capture_output=True, text=True).stdout.strip() or "unversioned"
+    built = dt.date.today().isoformat()
     parts.append(
         '<div class="col"><hr class="sep">'
+        f'<p style="font-size:.92rem;color:var(--soft)"><b>Written Forwards.</b> Written by '
+        f'Claude, working from the AI News archive, and revised against reviewer comment. '
+        f'Version <code>{rev}</code>, built {built}. Source, corpus and every analysis script: '
+        f'<a href="{REPO_URL}" rel="noreferrer">{REPO_URL[8:]}</a>. Each dated quotation links '
+        f'to the issue it came from.</p>'
         '<p style="font-size:.92rem;color:var(--soft)">Every number in this book is computed '
         'from the corpus by the scripts under <code>analysis/</code> in the repository that '
         'builds these pages, and every figure is generated rather than drawn. Findings that '
@@ -132,7 +179,7 @@ def chapter_page(entry, prev, nxt) -> str:
     opener = (f'<header class="{cls}"><p class="chno">{esc(label)}{tag}</p>'
               f'<h1>{esc(title)}</h1><p class="q">{question}</p></header>')
     html = ('<div class="col">' + opener + '</div>'
-            + wrap_columns(body)
+            + wrap_columns(link_cites(body))
             + '<div class="col">' + nav(prev, nxt) + '</div>')
     return page(f"{title} — {K.TITLE}", strip_tags(question), runhead(K.TITLE, esc(label)), html)
 
