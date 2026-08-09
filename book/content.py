@@ -3040,6 +3040,41 @@ procurement policy on the difference between 398 and 315.</p>
 """
 
 CH14_F = """
+<h2>What churn feels like from underneath</h2>
+
+<p>A median is an abstraction. What it describes, for anyone who has built on a model, is the
+specific experience of a successor arriving and not being a drop-in. The archive records these
+as they happen, and they are rarely announced as regressions.</p>
+
+<p>July 2024, on the model that replaced the one everyone had standardised on:</p>
+
+<blockquote><p>A vibrant discussion compared GPT-4o and Llama 405 tokenizers, highlighting
+<strong>GPT-4o's regression in coding language token efficiency versus its predecessor,
+GPT-4t</strong> — GPT-4o yielding more tokens in XML than GPT-4t, signaling a step back in
+specialized tokenizer performance.</p>
+<cite>AI News, Discord recap, 2024-07-17</cite></blockquote>
+
+<p>Nothing about that is a failure of the newer model, which was better at most things and
+cheaper. It is a failure of the assumption that <em>better</em> is a scalar. If your costs are
+denominated in tokens and your payloads are XML, the upgrade is a price rise.</p>
+
+<p>Two years later, the same shape at the frontier, and this time with a number on it:</p>
+
+<blockquote><p>CraigVG highlights a <strong>significant regression in long-context retrieval
+performance between Opus 4.6 and 4.7</strong>, with MRCR v2 scores dropping from 78.3% to
+32.2%. However, Boris explains that MRCR is being phased out in favor of Graphwalks, which
+better reflects real-world usage and applied reasoning over long contexts.</p>
+<cite>AI News, Reddit recap, 2026-04-16</cite></blockquote>
+
+<p>Read the second half of that carefully, because it is the more interesting half. A point
+release drops forty-six points on a published benchmark, and the response is not that the
+regression is disputed but that <em>the benchmark is being retired</em>. Both things can be
+true. But it means the instrument you would have used to detect the regression is itself on the
+same clock as the model, and retiring first.</p>
+
+<p class="pull">The dependency you are managing is not the model. It is the pair: the model, and
+the measurement you trusted to tell you it still worked.</p>
+
 <h2>What this is a clock for</h2>
 
 <p>One thing this number is not: a switch-off date. <code>GPT-4</code> remained callable long
