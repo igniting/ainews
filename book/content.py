@@ -69,28 +69,30 @@ CONTENTS = [
      "How does a technological lead change hands?", "ch8"),
     ("ch", "9", "Containment",
      "What happens after the capability race?", "ch9"),
+    ("ch", "10", "Pictures first",
+     "Which capability went open, commoditised and absorbed inside three years?", "ch-img"),
     ("inter", "II", "The day the corpus changed shape underneath me",
      "On measuring a document whose composition inverted.", "interlude-2"),
 
     ("part", "Part III — What it means"),
-    ("ch", "10", "How ideas die",
+    ("ch", "11", "How ideas die",
      "Retrieval fell 99%. So did things that failed. How do you tell?", "ch10"),
-    ("ch", "11", "How the field keeps score",
+    ("ch", "12", "How the field keeps score",
      "Which benchmarks are worth believing, and for how long?", "ch11"),
-    ("ch", "12", "When words change meaning",
+    ("ch", "13", "When words change meaning",
      "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
      "you started counting in 2024?", "ch12"),
-    ("ch", "13", "Where practitioners spent their attention",
+    ("ch", "14", "Where practitioners spent their attention",
      "If announcements are unreliable, what were the other rooms talking about?", "ch13"),
-    ("ch", "14", "The half-life of a dependency",
+    ("ch", "15", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", "ch14"),
     ("inter", "III", "The six things I got wrong",
      "Consolidated, with what each one cost.", "interlude-3"),
 
     ("part", "Part IV — Reading forwards"),
-    ("ch", "15", "The unit of observation",
+    ("ch", "16", "The unit of observation",
      "Why did none of this get caught by better statistics?", "ch15"),
-    ("ch", "16", "How to read a field",
+    ("ch", "17", "How to read a field",
      "What do you do on Monday?", "ch16"),
 ]
 
@@ -3636,6 +3638,113 @@ You only find out by reading.</p>
 """
 
 
+
+# ---------------------------------------------------------------- chapter 10 (images)
+
+CHIMG = """
+<p class="first">For the first half of this archive, the most active practitioner community in
+it was not arguing about agents or reasoning. It was making pictures. In the first half of 2024
+image-generation language runs at <strong>148.3</strong> mentions per ten thousand words of the
+Reddit recap — thirteen times its density in announcement space, and the highest figure any
+topic reaches on any surface anywhere in this corpus.</p>
+
+<p>That number falls to 4.7 by the end, and the reasons are mostly about who the newsletter was
+listening to rather than what was happening; the arithmetic is taken apart in the interlude
+before this part. What is left once you set the arithmetic aside is a genuine and unusually
+complete story, because image generation is the one capability in this book that went through
+the whole cycle — open, commoditised, absorbed — inside three years.</p>
+
+<h2>What a diffusion model is</h2>
+
+<p>Start with pure noise: a grid of random pixels. Train a network to remove a little of that
+noise, over and over, and to do it conditioned on a piece of text. Run it a few dozen steps and
+the noise resolves into an image that matches the description. That is diffusion, and the
+counter-intuitive part is that the model never learns to draw. It learns to <em>denoise</em>,
+and drawing is what repeated denoising looks like from outside.</p>
+
+<p>Doing this on raw pixels is expensive, so production systems work in a compressed
+<em>latent space</em> — a smaller representation an autoencoder can expand back into a picture
+— which is where the "latent" in Stable Diffusion's name comes from. The archive tracks the
+architecture being reworked underneath that idea throughout 2024:</p>
+
+<blockquote><p>a hierarchical pure transformer backbone for image generation with diffusion
+models that scales to high resolutions more efficiently than previous transformer-based
+backbones. Instead of treating images the same regardless of resolution, this architecture
+adapts to the target resolution, processing local phenomena locally at high resolutions and
+separately processing global phenomena in low-resolution parts of the hierarchy.</p>
+<cite>AI News lede, 2024-01-23</cite></blockquote>
+
+<h2>The open era, and why practice space was so loud</h2>
+
+<p>Image generation reached practitioners before text generation did, and it reached them with
+weights. Stable Diffusion ran on a gaming card, and the ecosystem that grew around it —
+fine-tunes, LoRAs, samplers, upscalers, interfaces — was the first place where large numbers of
+people built things with a model they had downloaded. That is why practice space in early 2024
+is so dense with it, and it is also why the vocabulary of the fine-tuning chapter appears here
+first: LoRA was an image-model technique that text models borrowed.</p>
+
+<p>Then the named products turn over, fast:</p>
+
+<div class="tw"><table><thead><tr><th>Announcement space</th><th class="n">24H1</th>
+<th class="n">24H2</th><th class="n">25H1</th><th class="n">25H2</th><th class="n">26H1</th>
+<th class="n">26H2</th></tr></thead><tbody>
+<tr><td>Stable Diffusion / SDXL</td><td class="n">1.7</td><td class="n">1.5</td>
+<td class="n">0.2</td><td class="n">0.1</td><td class="n">0.1</td><td class="n">0.0</td></tr>
+<tr><td>DALL-E</td><td class="n">1.5</td><td class="n">0.2</td><td class="n">0.2</td>
+<td class="n">0.0</td><td class="n">0.0</td><td class="n">0.0</td></tr>
+<tr><td>FLUX</td><td class="n">0.0</td><td class="n"><b>2.2</b></td><td class="n">1.1</td>
+<td class="n">1.7</td><td class="n">0.6</td><td class="n">2.1</td></tr>
+<tr><td>Midjourney</td><td class="n">0.2</td><td class="n">0.9</td><td class="n">0.7</td>
+<td class="n">0.4</td><td class="n">1.3</td><td class="n">0.0</td></tr>
+<tr><td>Imagen / Nano Banana</td><td class="n">2.8</td><td class="n">0.2</td>
+<td class="n">1.0</td><td class="n"><b>4.3</b></td><td class="n">0.8</td><td class="n">0.4</td></tr>
+</tbody></table></div>
+
+<p>Stable Diffusion and DALL-E, the two names that defined the category, are effectively gone
+from the conversation by 2025. FLUX — from a team of ex-Stability researchers — takes the
+open-weights lineage over almost immediately. This is the fastest turnover of leading products
+anywhere in the corpus, and it happened while the underlying capability was steadily improving,
+which is worth holding onto: a name disappearing here means a company lost, not that the
+technique did.</p>
+
+<h2>The turn: generation moves inside the model</h2>
+
+<p>The structural change arrives in 2025, and the archive catches it being described as a
+distinction rather than an upgrade:</p>
+
+<blockquote><p>the team's progress in creating <strong>native image generation</strong> for
+Gemini 2, highlighting its difference from text-to-image models.</p>
+<cite>AI News, Twitter recap, 2025-03-14</cite></blockquote>
+
+<p>The difference is the whole chapter. A text-to-image model is a separate system you send a
+prompt to. Native generation means the same model that holds the conversation emits the image,
+so it can use everything it already knows — what you asked for three turns ago, the document
+you pasted, the correction you just made. Editing becomes a conversation instead of a new
+prompt, and the model can read images as fluently as it writes them.</p>
+
+<p>Once that lands, a standalone image generator stops being a frontier product and becomes a
+feature of a chat assistant. Which is exactly what the density series shows, and exactly what it
+cannot explain on its own.</p>
+
+<h2>Where diffusion went next</h2>
+
+<p>The most interesting afterlife is that the <em>method</em> outlived its application. Counted
+on its own, <code>diffusion</code> in announcement space runs 4.5, 3.5, <strong>7.5</strong>,
+5.5, 4.1, 1.5 — peaking in the first half of 2025, well after image generation stopped being the
+story. The reason is that researchers began applying denoising to text, producing language
+models that generate a whole sequence in parallel and refine it, rather than one token at a
+time. The archive covers LLaDA, a large language diffusion model, in February 2025.</p>
+
+<p class="pull">The image-generation era ended by winning twice: its interface was absorbed into
+chat, and its mathematics was borrowed by text.</p>
+
+<p>Video followed the same arc a year later and faster — Sora, Veo and Kling arrive as separate
+products in 2024 and 2025, and video-generation language peaks in the second half of 2024 at
+12.1 before settling. By the end of the corpus the frontier releases are multimodal by default:
+one model that reads and writes text, images, audio and video, and the separate categories this
+chapter is named after have stopped being categories at all.</p>
+"""
+
 # ---------------------------------------------------------------- pages
 
 def pages():
@@ -4052,21 +4161,23 @@ def pages():
          "What happens after the capability race?", ch9),
         ("interlude-2", "inter", "II", "The day the corpus changed shape underneath me",
          "On measuring a document whose composition inverted.", int2),
-        ("ch10", "ch", "10", "How ideas die",
+        ("ch-img", "ch", "10", "Pictures first",
+         "Which capability went open, commoditised and absorbed inside three years?", CHIMG),
+        ("ch10", "ch", "11", "How ideas die",
          "Retrieval fell 99%. So did things that failed. How do you tell?", ch10),
-        ("ch11", "ch", "11", "How the field keeps score",
+        ("ch11", "ch", "12", "How the field keeps score",
          "Which benchmarks are worth believing, and for how long?", ch11),
-        ("ch12", "ch", "12", "When words change meaning",
+        ("ch12", "ch", "13", "When words change meaning",
          "Is <code>agent</code> in your 2026 dashboard the same <code>agent</code> "
          "you started counting in 2024?", ch12),
-        ("ch13", "ch", "13", "Where practitioners spent their attention",
+        ("ch13", "ch", "14", "Where practitioners spent their attention",
          "If announcements are unreliable, what were the other rooms talking about?", ch13),
-        ("ch14", "ch", "14", "The half-life of a dependency",
+        ("ch14", "ch", "15", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
         ("interlude-3", "inter", "III", "The six things I got wrong",
          "Consolidated, with what each one cost.", int3),
-        ("ch15", "ch", "15", "The unit of observation",
+        ("ch15", "ch", "16", "The unit of observation",
          "Why did none of this get caught by better statistics?", ch15),
-        ("ch16", "ch", "16", "How to read a field",
+        ("ch16", "ch", "17", "How to read a field",
          "What do you do on Monday?", ch16),
     ]
