@@ -748,3 +748,13 @@ EDITORIAL_SIZE = [
     ("2025H2", 127, 13052, 72, 1), ("2026H1", 126, 10411, 3, 77),
     ("2026H2", 26, 78, 3, 26),
 ]
+
+# analysis/quotes.py + a name-vs-machinery scan inside fixed recap sections.
+# "RAG" the label against the vocabulary you must use to build retrieval —
+# embeddings, chunking, reranking, vector indexes, semantic search, BM25.
+# The label falls 13x; the machinery falls a little over 2x and rises again
+# through 2025. That divergence is the evidence for absorption rather than death.
+RAG_NAME_MACHINERY = [
+    ("2024H1", 23.7, 17.8), ("2024H2", 6.6, 6.2), ("2025H1", 3.2, 4.8),
+    ("2025H2", 2.4, 8.3), ("2026H1", 1.8, 8.1), ("2026H2", 2.0, 4.4),
+]

@@ -1944,6 +1944,66 @@ archive. Inside announcement space it runs at 30.95 mentions per ten thousand wo
 runs at <strong>0.21</strong>. That is a hundred-and-fortyfold fall. Nothing else measured in
 this book falls that far.</p>
 
+<h2>The name and the machinery</h2>
+
+<p>A fall that steep has two possible explanations and the line cannot tell them apart. Either
+the technique failed, or it succeeded so completely that people stopped naming it. The way to
+find out is to stop counting the name and start counting the <em>mechanism</em> — embeddings,
+chunking, reranking, vector indexes, semantic search, BM25 — the words you have to use if you
+are actually building retrieval, whether or not you call it RAG.</p>
+
+<div class="tw"><table><thead><tr><th>Half-year</th><th class="n">“RAG”</th>
+<th class="n">its machinery</th><th class="n">machinery ÷ name</th></tr></thead><tbody>
+<tr><td>2024H1</td><td class="n">23.7</td><td class="n">17.8</td><td class="n">0.8×</td></tr>
+<tr><td>2024H2</td><td class="n">6.6</td><td class="n">6.2</td><td class="n">0.9×</td></tr>
+<tr><td>2025H1</td><td class="n">3.2</td><td class="n">4.8</td><td class="n">1.5×</td></tr>
+<tr><td>2025H2</td><td class="n">2.4</td><td class="n">8.3</td><td class="n">3.5×</td></tr>
+<tr><td>2026H1</td><td class="n">1.8</td><td class="n">8.1</td><td class="n"><b>4.6×</b></td></tr>
+<tr><td>2026H2</td><td class="n">2.0</td><td class="n">4.4</td><td class="n">2.2×</td></tr>
+</tbody></table></div>
+
+<p>In 2024 the name and the mechanism are mentioned about equally: if you were talking about
+embeddings you were probably saying <em>RAG</em> in the same breath. The two then come apart.
+The name falls thirteenfold. The machinery falls a little over twofold, and in the second half
+of 2025 it is <em>higher</em> than it was in the second half of 2024 — more talk about
+chunking and reranking, at the moment the word RAG had all but vanished.</p>
+
+<p class="pull">The name fell thirteenfold. The thing it named fell by half, and spent a year
+going back up.</p>
+
+<p>This is what absorption looks like from inside a text corpus, and it is worth being precise
+about what it does and does not establish. It does not show that retrieval was deployed more
+widely; nothing in this archive can show that. It shows that the vocabulary of building
+retrieval outlived the label by a factor that grew every half-year for two years — which is the
+signature of a technique that stopped being a topic and became a component.</p>
+
+<p>You can watch it happen in a single passage. January 2026, announcement space, at the moment
+the word <em>RAG</em> is running at under two mentions per ten thousand words:</p>
+
+<blockquote><p>LEANN: “stop storing embeddings”. A notable systems claim: index 60M text chunks
+using 6GB (vs “200GB”) by storing a compact graph and recomputing embeddings selectively at
+query time; pitched as enabling <strong>local RAG at new scales</strong>. Engineers should
+sanity-check latency/throughput tradeoffs and recall under recomputation, but the “graph +
+selective recompute” direction matches broader storage/edge constraints.</p>
+<cite>AI News, Twitter recap, 2026-01-07</cite></blockquote>
+
+<p>Sixty million chunks, an index, a recall tradeoff, and a warning about latency. That is a
+retrieval engineering problem being taken seriously enough to argue about storage layouts. The
+name survives only as a modifier — <em>local RAG</em> — attached to the thing that actually
+matters, which is the graph.</p>
+
+<p>Compare it to where the chapter started, February 2024, when RAG was not a component but a
+product surface people complained about:</p>
+
+<blockquote><p>Nick Dobos (of Grimoire fame) also blasted the entire knowledge files capability —
+it seems the RAG system naively includes 40k characters' worth of context from docs every time,
+reducing available context and adherence to system prompts.</p>
+<cite>AI News lede, 2024-02-01</cite></blockquote>
+
+<p>Two years apart, the same subject. In 2024 it is a feature with a name, behaving badly
+enough to be blasted by name. In 2026 it is a storage problem with a benchmark. The word did
+almost all of the dying.</p>
+
 <p>"RAG is dead" was a real position, argued in public by people who build things, and the data
 above is exactly what you would show to support it.</p>
 
