@@ -66,42 +66,40 @@ CONTENTS = [
     ("part", "Part II — What happened"),
     ("ch", "3", "Everyone is fine-tuning",
      "What did the field think the job was?", "ch3"),
-    ("ch", "4", "The road not taken",
-     "What does it look like when a good idea simply does not arrive?", "ch4"),
-    ("ch", "5", "Learning to think",
+    ("ch", "4", "Learning to think",
      "How does a whole field change its mind in four months?", "ch5"),
-    ("ch", "6", "Seven days in January",
+    ("ch", "5", "Seven days in January",
      "What does it look like when something actually breaks through?", "ch6"),
-    ("ch", "7", "The harness",
+    ("ch", "6", "The harness",
      "When did the field stop talking about models and start talking about the "
      "software around them?", "ch7"),
-    ("ch", "8", "The handover",
+    ("ch", "7", "The handover",
      "How does a technological lead change hands?", "ch8"),
-    ("ch", "9", "Containment",
+    ("ch", "8", "Containment",
      "What happens after the capability race?", "ch9"),
-    ("ch", "10", "Pictures first",
+    ("ch", "9", "Pictures first",
      "Which capability went open, commoditised and absorbed inside three years?", "ch-img"),
     ("inter", "II", "The day the corpus changed shape underneath me",
      "On measuring a document whose composition inverted.", "interlude-2"),
 
     ("part", "Part III — What it means"),
-    ("ch", "11", "How ideas die",
-     "Retrieval fell 99%. So did things that failed. How do you tell?", "ch10"),
-    ("ch", "12", "How the field keeps score",
+    ("ch", "10", "How ideas die",
+     "Four ideas ended and one only looked like it. How do you tell?", "ch10"),
+    ("ch", "11", "How the field keeps score",
      "Which benchmarks are worth believing, and for how long?", "ch11"),
-    ("ch", "13", "Where practitioners spent their attention",
+    ("ch", "12", "Where practitioners spent their attention",
      "If announcements are unreliable, what were the other rooms talking about?", "ch13"),
-    ("ch", "14", "Weights you can keep",
+    ("ch", "13", "Weights you can keep",
      "What changed when a model you could download caught up?", "ch-open"),
-    ("ch", "15", "The half-life of a dependency",
+    ("ch", "14", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", "ch14"),
     ("inter", "III", "The six things I got wrong",
      "Consolidated, with what each one cost.", "interlude-3"),
 
     ("part", "Part IV — Reading forwards"),
-    ("ch", "16", "The unit of observation",
+    ("ch", "15", "The unit of observation",
      "Why did none of this get caught by better statistics?", "ch15"),
-    ("ch", "17", "How to read a field",
+    ("ch", "16", "How to read a field",
      "What do you do on Monday?", "ch16"),
 ]
 
@@ -2365,7 +2363,13 @@ What it did not have was a denominator I had looked at.</p>
 # ---------------------------------------------------------------- chapter 10
 
 CH10 = """
-<p class="first">Retrieval-augmented generation is the most complete disappearance in this
+<h2>A fifth case, and the one that breaks the scheme</h2>
+
+<p>Four fates, four signatures, and a scheme that looks complete. It is not, and the idea that
+breaks it is the one this book has already used twice — because the largest fall in the whole
+archive belongs to none of the four.</p>
+
+<p>Retrieval-augmented generation is the most complete disappearance in this
 archive. Inside announcement space it runs at 30.95 mentions per ten thousand words in early
 2024 — the densest technical idea in the corpus at that point — and in the final half-year it
 runs at <strong>0.21</strong>. That is a hundred-and-fortyfold fall. Nothing else measured in
@@ -3853,32 +3857,6 @@ def pages():
 
     fate_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
                   f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.FATES]
-    ch4 = (CH4
-           + fig(C.lines(D.P6,
-                         [("state-space", D.FATES_TW["state-space"], "sig"),
-                          ("1-bit / ternary", D.FATES_TW["1-bit"], "bench"),
-                          ("model merging", D.FATES_TW["model merging"], "ink2"),
-                          ("world models", D.FATES_TW["world model"], "ink")],
-                         [0, 4, 8, 12], "mentions / 10⁴ words", gutter=112),
-                 5, "Four ideas, announcement space",
-                 "Mentions per 10⁴ words inside the Twitter recap. Three of these lines end "
-                 "at or near zero and one is climbing — but the shape of a line says nothing "
-                 "about which fate produced it.")
-           + CH4_B + CH4_C
-           + fig(C.lines(D.P6,
-                         [("1-bit (announcement)", D.FATES_TW["1-bit"], "sig"),
-                          ("1-bit (practice)", D.FATES_RD["1-bit"], "bench")],
-                         [0, 2, 4, 6], "mentions / 10⁴ words"),
-                 6, "An idea returning from below",
-                 "The same pattern in the Twitter and Reddit recaps. Announcement space "
-                 "peaks in 2024 and effectively stops; practice space reaches its corpus "
-                 "high two years later, on hardware that did not exist for it in 2024.")
-           + CH4_D
-           + table(["Idea", "Announcement", "Practice", "Fate"], fate_rows,
-                   "Table 1 · Mentions per 10⁴ words, 2024H1 → 2026H2, in each surface",
-                   (1, 2))
-           + CH4_E)
-
     legacy_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
                     f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.LEGACY]
     ch5 = (CH5 + CH5_B
@@ -4037,7 +4015,32 @@ def pages():
 
     nm_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
                 f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.NAME_MACH]
-    ch10 = (CH10
+    ch10 = (CH4
+           + fig(C.lines(D.P6,
+                         [("state-space", D.FATES_TW["state-space"], "sig"),
+                          ("1-bit / ternary", D.FATES_TW["1-bit"], "bench"),
+                          ("model merging", D.FATES_TW["model merging"], "ink2"),
+                          ("world models", D.FATES_TW["world model"], "ink")],
+                         [0, 4, 8, 12], "mentions / 10⁴ words", gutter=112),
+                 5, "Four ideas, announcement space",
+                 "Mentions per 10⁴ words inside the Twitter recap. Three of these lines end "
+                 "at or near zero and one is climbing — but the shape of a line says nothing "
+                 "about which fate produced it.")
+           + CH4_B + CH4_C
+           + fig(C.lines(D.P6,
+                         [("1-bit (announcement)", D.FATES_TW["1-bit"], "sig"),
+                          ("1-bit (practice)", D.FATES_RD["1-bit"], "bench")],
+                         [0, 2, 4, 6], "mentions / 10⁴ words"),
+                 6, "An idea returning from below",
+                 "The same pattern in the Twitter and Reddit recaps. Announcement space "
+                 "peaks in 2024 and effectively stops; practice space reaches its corpus "
+                 "high two years later, on hardware that did not exist for it in 2024.")
+           + CH4_D
+           + table(["Idea", "Announcement", "Practice", "Fate"], fate_rows,
+                   "Table 1 · Mentions per 10⁴ words, 2024H1 → 2026H2, in each surface",
+                   (1, 2))
+           + CH4_E
+            + CH10
             + fig(C.lines(D.P6,
                           [("RAG (the name)", D.NAME_MACH_TW["RAG (the name)"], "sig"),
                            ("retrieval machinery", D.NAME_MACH_TW["retrieval machinery"], "bench"),
@@ -4205,37 +4208,35 @@ def pages():
          "On checking what the field you are counting actually contains.", INT1),
         ("ch3", "ch", "3", "Everyone is fine-tuning",
          "What did the field think the job was?", ch3),
-        ("ch4", "ch", "4", "The road not taken",
-         "What does it look like when a good idea simply does not arrive?", ch4),
-        ("ch5", "ch", "5", "Learning to think",
+        ("ch5", "ch", "4", "Learning to think",
          "How does a whole field change its mind in four months?", ch5),
-        ("ch6", "ch", "6", "Seven days in January",
+        ("ch6", "ch", "5", "Seven days in January",
          "What does it look like when something actually breaks through?", ch6),
-        ("ch7", "ch", "7", "The harness",
+        ("ch7", "ch", "6", "The harness",
          "When did the field stop talking about models and start talking about the "
          "software around them?", ch7),
-        ("ch8", "ch", "8", "The handover",
+        ("ch8", "ch", "7", "The handover",
          "How does a technological lead change hands?", ch8),
-        ("ch9", "ch", "9", "Containment",
+        ("ch9", "ch", "8", "Containment",
          "What happens after the capability race?", ch9),
-        ("ch-img", "ch", "10", "Pictures first",
+        ("ch-img", "ch", "9", "Pictures first",
          "Which capability went open, commoditised and absorbed inside three years?", CHIMG),
         ("interlude-2", "inter", "II", "The day the corpus changed shape underneath me",
          "On measuring a document whose composition inverted.", int2),
-        ("ch10", "ch", "11", "How ideas die",
-         "Retrieval fell 99%. So did things that failed. How do you tell?", ch10),
-        ("ch11", "ch", "12", "How the field keeps score",
+        ("ch10", "ch", "10", "How ideas die",
+         "Four ideas ended and one only looked like it. How do you tell?", ch10),
+        ("ch11", "ch", "11", "How the field keeps score",
          "Which benchmarks are worth believing, and for how long?", ch11),
-        ("ch13", "ch", "13", "Where practitioners spent their attention",
+        ("ch13", "ch", "12", "Where practitioners spent their attention",
          "If announcements are unreliable, what were the other rooms talking about?", ch13),
-        ("ch-open", "ch", "14", "Weights you can keep",
+        ("ch-open", "ch", "13", "Weights you can keep",
          "What changed when a model you could download caught up?", CHOPEN),
-        ("ch14", "ch", "15", "The half-life of a dependency",
+        ("ch14", "ch", "14", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
         ("interlude-3", "inter", "III", "The six things I got wrong",
          "Consolidated, with what each one cost.", int3),
-        ("ch15", "ch", "16", "The unit of observation",
+        ("ch15", "ch", "15", "The unit of observation",
          "Why did none of this get caught by better statistics?", ch15),
-        ("ch16", "ch", "17", "How to read a field",
+        ("ch16", "ch", "16", "How to read a field",
          "What do you do on Monday?", ch16),
     ]
