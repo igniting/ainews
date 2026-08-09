@@ -1406,6 +1406,55 @@ was promoted into the harness, and things inside the harness do not get discusse
 """
 
 CH7_C = """
+<h2>What MCP actually is</h2>
+
+<p>Before the adoption curve, the thing itself, because it is simpler than its acronym suggests
+and the newsletter explained it on the day it appeared. On 25 November 2024:</p>
+
+<blockquote><p>The Model Context Protocol (MCP) is an open protocol that enables seamless
+integration between LLM applications and external data sources and tools. Similar to the
+<strong>Language Server Protocol</strong>, MCP standardises how to integrate additional context
+and tools into the ecosystem of AI applications.</p>
+<cite>AI News lede, 2024-11-25</cite></blockquote>
+
+<p>The Language Server Protocol comparison is the whole idea, and for anyone who has written
+software it is the only explanation needed. Before LSP, supporting <em>n</em> languages in
+<em>m</em> editors meant writing <em>n</em>&nbsp;&times;&nbsp;<em>m</em> integrations: a Python
+plugin for VS Code, a different Python plugin for Vim, and so on for every pair. LSP made it
+<em>n</em>&nbsp;+&nbsp;<em>m</em>. Each language ships one server that speaks the protocol; each
+editor ships one client; anything works with anything.</p>
+
+<p>MCP does that for models and the things they need to reach. Before it, connecting a model to
+your database, your issue tracker and your filesystem meant bespoke glue for each model-tool
+pair, rewritten whenever either end changed. After it, a tool ships one server and any model
+that speaks MCP can use it.</p>
+
+<p>The same issue lays out the parts, and they are deliberately unexciting:</p>
+
+<blockquote><p>Resources: any kind of data that an MCP server wants to make available to clients.
+This can include file contents, database records, API responses, live system data, screenshots
+and images, log files, and more. Each resource is identified by a unique URI and can contain
+either text or binary data.</p>
+<cite>AI News lede, 2024-11-25</cite></blockquote>
+
+<p>A server exposes resources and tools. A client — the model's application — connects and
+consumes them. Resources are addressed by URI. There is nothing in that sentence a web engineer
+from 2005 would find strange, and that is the point: MCP is not a clever idea about
+intelligence, it is an integration standard, and integration standards win or fail on adoption
+rather than on cleverness.</p>
+
+<p>What it looks like once it works is a list of company names. By September 2025:</p>
+
+<blockquote><p>Mistral Le Chat adds 20+ MCP connectors and “Memories.” Le Chat now plugs into
+Stripe, GitHub, Atlassian, Linear, Notion, Snowflake, and more, with fine-grained access
+controls and persistent, user-editable memory. This turns Le Chat into a single surface for
+cross-SaaS action and retrieval, while remaining enterprise-manageable.</p>
+<cite>AI News, Twitter recap, 2025-09-02</cite></blockquote>
+
+<p>That is the <em>n</em>&nbsp;+&nbsp;<em>m</em> promise cashed: one client, twenty servers
+somebody else wrote, and the interesting engineering has moved to access control. Which is
+where the rest of this chapter comes in, because none of it happened on launch day.</p>
+
 <h2>MCP, or what adoption looks like when it is not a spike</h2>
 
 <p>On 25 November 2024, Anthropic published the Model Context Protocol — a specification for
