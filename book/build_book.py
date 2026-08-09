@@ -153,7 +153,10 @@ def contents_page(drafted: set[str]) -> str:
     parts.append(
         '<div class="col"><hr class="sep">'
         f'<p style="font-size:.92rem;color:var(--soft)"><b>Written Forwards.</b> Written by '
-        f'Claude, working from the AI News archive, and revised against reviewer comment. '
+        f'Claude, working from the archive of <b>AI News</b> — the daily newsletter written and '
+        f'edited by Shawn Wang (swyx), published 2023–2026 via Buttondown, smol.ai and '
+        f'Substack — and revised against reviewer comment. Every quotation is his newsletter’s; '
+        f'the arguments made about it are this book’s and not his. '
         f'Version <code>{rev}</code>, built {built}. Source, corpus and every analysis script: '
         f'<a href="{REPO_URL}" rel="noreferrer">{REPO_URL[8:]}</a>. Each dated quotation links '
         f'to the issue it came from.</p>'

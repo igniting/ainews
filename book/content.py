@@ -93,7 +93,7 @@ CONTENTS = [
      "What changed when a model you could download caught up?", "ch-open"),
     ("ch", "14", "The half-life of a dependency",
      "You are about to build on a model. How long will it stay relevant?", "ch14"),
-    ("inter", "III", "The six things I got wrong",
+    ("inter", "III", "The seven things I got wrong",
      "Consolidated, with what each one cost.", "interlude-3"),
 
     ("part", "Part IV — Reading forwards"),
@@ -130,10 +130,22 @@ everyone else reported. Then it says something that no retrospective would ever 
 
 <h2>The artifact</h2>
 
-<p>The newsletter is called <em>AI News</em>. It ran from that first issue to 6 August 2026,
-which is where this book's copy of the archive stops — <strong>690 issues, 15,265,094
-words</strong>, covering 82% of the weekdays in between. The median issue is about 24,000
-words long, which is a third of a short novel, published daily, about the previous day.</p>
+<p>The newsletter is called <em>AI News</em>, and it is written and edited by Shawn Wang, who
+signs everything <em>swyx</em> — the same person behind the <em>Latent Space</em> podcast and
+the AI Engineer conferences, both of which the archive covers as news while he is running them.
+It changed publisher twice in three years, which you can read off the sender address on the
+emails: <code>ainews@buttondown.email</code>, then <code>news@smol.ai</code>, then
+<code>swyx+ainews@substack.com</code>. It ran from that first issue to 6 August 2026, which is
+where this book's copy of the archive stops — <strong>690 issues, 15,265,094 words</strong>,
+covering 82% of the weekdays in between. The median issue is about 24,000 words long, which is a
+third of a short novel, published daily, about the previous day.</p>
+
+<p>Naming him matters more than courtesy. This book is going to argue, repeatedly, that the
+archive is one editor's view with one editor's taste, and that caveat is worth nothing if the
+editor is anonymous. Everything here is a measurement of what one identifiable person, with a
+podcast and a conference and a position in the field he is reporting on, chose to point a
+scraper at. He appears in this book as “the editor” from here on, for readability, and it is
+always the same person.</p>
 
 <p>Each issue reads the same set of places and summarises them separately: a Twitter recap
 built from a declared list of accounts, a Reddit recap from a declared list of subreddits, and
@@ -326,6 +338,36 @@ one samples a <em>person</em>. That makes it a confound when you are measuring t
 signal when you are measuring the coverage, and it is worth keeping separate for both
 reasons.</p>
 
+<p>Kept separate, it turns out to be the best-performing layer in the archive, and it is worth
+saying so at the start rather than letting it accumulate unremarked. Six times in this book the
+human paragraph gets somewhere before the three machine layers underneath it do, or flags the
+exact confound that later had to be corrected for:</p>
+
+<ul>
+<li><strong>June 2024</strong> — <em>Qwen 2 beats Llama 3 (and we don't know how)</em>. Chapter 7
+calls that parenthesis the earliest actionable signal in the archive. It is eighteen months early
+and it is phrased as a joke.</li>
+<li><strong>September 2024</strong> — on the evening o1 shipped, picking the test-time-compute
+scaling chart out of the launch rather than the benchmark table, and saying it was the important
+one.</li>
+<li><strong>12 November 2024</strong> — <em>BitNet was a lie?</em> over the quantization
+scaling-laws result, months before the idea went quiet everywhere else.</li>
+<li><strong>21 November 2024</strong> — <em>DeepSeek-R1 claims to beat o1-preview AND will be
+open sourced</em>, two months before the week that reorganised the field.</li>
+<li><strong>June 2025</strong> — quoting a 91.9% market-share figure and giving the two reasons
+it is wrong in the same breath.</li>
+<li><strong>Image generation</strong> — the one line in chapter 9 that does not fall is the
+editor's own, and the thirteenfold collapse that looked field-wide turned out to live in a
+single cell of the table.</li>
+</ul>
+
+<p>None of that makes the lede a measuring instrument; a sample of one person is not a
+population, and a track record assembled after the fact from the cases a book chose to quote is
+not a batting average. But it is a standing argument against the reflex this book could
+otherwise encourage — that the machine layers are the data and the human on top is noise to be
+controlled for. The human layer is the only place in the corpus where anyone commits to a claim
+early enough to be wrong in public, which is exactly the property the whole book is about.</p>
+
 <h2>The measurement</h2>
 
 <p>The method is deliberately dull. Take a pattern — a regular expression for
@@ -469,10 +511,12 @@ not much happened today</p></blockquote>
 
 <p>Underneath those four issues, among other things, were an agent launch from Replit, an
 essay on raising your expectations of language models, and an NVIDIA GTC keynote announcing a
-trillion-dollar sale. The phrase is not a description. It is what sits in the
-<code>title</code> field when nothing else does, and the share of issues carrying it climbs
-steadily across the corpus: 8% in late 2023, 27% by the second half of 2024, 46% through late
-2025, <strong>85%</strong> in the final months.</p>
+trillion-dollar sale. So the phrase is not a description of the day — that much was immediately
+clear, and it was as far as I got for a long time. What I concluded was that it is simply what
+sits in the <code>title</code> field when nothing else does, and the share of issues carrying it
+climbs steadily across the corpus: 8% in late 2023, 27% by the second half of 2024, 46% through
+late 2025, <strong>85%</strong> in the final months. That conclusion turns out to be wrong twice
+over, in two different ways, and the rest of this interlude is the two ways.</p>
 
 <p>My series was not measuring which companies led the news. It was measuring <em>how often
 the title field got filled in</em>. And because the templating ramped up over exactly the
@@ -506,10 +550,10 @@ anyone received. They went out as <em>Replit Agent 4: The Knowledge Work Agent</
 high-return activity of raising your aspirations for LLMs</em>, <em>Context Drought</em>, and
 <em>NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sale</em>.</p>
 
-<p>Of the 397 issues I could eventually recover, <strong>80</strong> that the archive files
-under a templated title had been published under a real headline — 84 of them. In the first half of 2026 the
-templated share of what was actually sent is <strong>4.6%</strong>, against the 64% the archive
-stores.</p>
+<p>Of the 397 issues I could eventually recover, 196 are filed under a templated title in the
+archive — and <strong>80 of those went out under a real headline</strong>. In the first half of
+2026 the templated share of what was actually sent is <strong>4.6%</strong>, against the 64% the
+archive stores.</p>
 
 <p>Which looks like a clean verdict: the mirror invented the trend. It is not, and the way it is
 not is the more useful lesson. Compare the two series on the same issues:</p>
@@ -539,13 +583,51 @@ untouched. It was real, and the mirror's failure was layered on top of it.</p>
 <p class="pull">The first correction caught a field that had changed meaning. The second caught
 a real trend and an artifact of the copy, superimposed, moving opposite ways.</p>
 
+<h2>The third level, which is about reading rather than data</h2>
+
+<p>There is one more error in the paragraphs above, and it is mine rather than the mirror's. I
+have been calling that phrase a placeholder — “what sits in the <code>title</code> field when
+nothing else does” — and for 2026 that is exactly what it is. For 2024 and 2025 it is nothing of
+the kind. The table says so: through those two years the stored share and the sent share agree
+within a few points, and match exactly across 118 issues in the first half of 2025. Which means
+that for most of the corpus a person typed <em>not much happened today</em> into the subject line
+of an email and pressed send, on purpose, more and more often. That is not a blank field. It is
+a judgement, published.</p>
+
+<p>So the question I should have asked two corrections ago is whether the judgement was any good
+— whether the days he called quiet were quiet. It is answerable, and the answer surprised me.
+Restricted to the window where stored and sent agree, on the 367 issues carrying a full Twitter
+recap, the front matter says this:</p>
+
+<div class="tw"><table><thead><tr><th>Issues from 2024H2–2025H2</th><th class="n">issues</th>
+<th class="n">companies named</th><th class="n">models named</th>
+<th class="n">companies per 1,000 recap words</th></tr></thead><tbody>
+<tr><td>titled <em>not much happened today</em></td><td class="n">139</td>
+<td class="n"><b>7.4</b></td><td class="n"><b>6.4</b></td><td class="n"><b>7.8</b></td></tr>
+<tr><td>given a real headline</td><td class="n">228</td>
+<td class="n">5.6</td><td class="n">5.0</td><td class="n">6.5</td></tr>
+</tbody></table></div>
+
+<p>The quiet days are <em>busier</em>. More companies, more models, a longer recap, and it
+survives dividing through by the length of the recap, so it is not an artifact of those issues
+simply being bigger. Which makes sense the moment you stop reading the phrase as a description of
+the volume of news and start reading it as what an editor means by it. A headline needs a lead
+story. When the day's attention is spread across seven companies and none of them owns it, there
+is no headline to write — so you write the template and let the recaps do the work. <em>Not much
+happened today</em> does not mean nothing happened. It means <em>nothing dominated</em>, which is
+a different and more specific claim, and on this evidence a correct one.</p>
+
+<p class="pull">I spent two corrections establishing that the field did not contain what its name
+implied, and then read the values it did contain as though they meant nothing. They meant
+something. I had just assumed the phrase was an absence.</p>
+
 <h2>What survived</h2>
 
 <p>There is no fix that rescues the original series. The stored title cannot be repaired, and
-the published subject lines exist only for the last seven months of the corpus, which is
-another way of saying that the measurement I wanted cannot be made across the window I wanted
-it for. The OpenAI collapse disappears either way, and so does most of the fragmentation story
-built on top of it.</p>
+the published subject lines exist only from November 2024 onwards — 397 issues out of 690, and
+none at all from the year the original series started in. The measurement I wanted cannot be made
+across the window I wanted it for. The OpenAI collapse disappears either way, and so does most of
+the fragmentation story built on top of it.</p>
 
 <p>What survived was the thing I had not built a story around: measurements taken inside the
 body of the issues, in fixed sections, where the population writing the text was held constant.
@@ -699,11 +781,14 @@ weights, and the newsletter's coverage sat there with them.</p>
 <h2>Mistral, briefly, everywhere</h2>
 
 <p>The most concentrated presence in the entire archive belongs to a company most engineers
-would now struggle to place. Mistral appears in <strong>42% of all issues in late 2023 and
-40% in the first half of 2024</strong> — two of every five days, for half a year. No other
+would now struggle to place. Mistral is tagged as a <em>subject</em> of <strong>42% of all
+issues in late 2023 and 40% in the first half of 2024</strong> — not merely mentioned somewhere,
+but one of the things the issue was about, two of every five days, for half a year. No other
 company outside OpenAI holds that share for that long.</p>
 
-<p>By the first half of 2026 it is in <strong>2%</strong>.</p>
+<p>By the first half of 2026 it is in <strong>2%</strong>. It is still <em>named</em> in half of
+them; chapter 7 takes apart the difference, which turns out to be most of what losing a lead
+looks like.</p>
 
 <p>Nothing in this chapter's period would have let you predict that, and the naive explanation
 — they got worse — is not what the archive says. In December 2025, the month its density
@@ -934,10 +1019,12 @@ CH4_D = """
 <h2>Fate four: still open</h2>
 
 <p>On 10 March 2026 the headline was <em>Yann LeCun's AMI Labs launches with a $1.03B seed to
-build world models</em>. World-model language in announcement space starts at 1.06 in early
-2024, dips to 0.37 later that year, then climbs to 5.85 by early 2026 and 7.05 by the last
-half-year — a sixfold rise off an unsteady base, on counts large enough to trust at the end
-though not at the start.</p>
+build world models</em>. World-model language in announcement space starts at 0.31 in early
+2024, sits under one mention per ten thousand words for a year and a half, and then climbs to
+4.59 by early 2026 and 5.34 in the last half-year. That is a seventeenfold rise, which is
+precisely the sort of ratio this book has spent two interludes telling you not to trust: the
+denominator is four mentions in 47,175 words. The levels at the end are the trustworthy part,
+and they are large.</p>
 
 <p>Now compare the surfaces. The practice-space baseline is a single mention, so a fold change
 is meaningless; compare levels instead. In the first half of 2026 world models run at
@@ -967,23 +1054,12 @@ following week.</p>
 """
 
 CH4_E = """
-<div class="aside">
-<h4>How to tell them apart</h4>
-<p><strong>Falls everywhere, and a product exists that nobody argues about</strong> →
-absorbed. Stop tracking the word; track the product.<br>
-<strong>Falls everywhere, and nothing succeeded it</strong> → gone. Safe to drop, and worth
-asking what else depended on the world it assumed.<br>
-<strong>Falls in announcement space, returns in practice space</strong> → deferred. It was
-waiting on hardware or tooling, not on ideas. This is the one worth watching for.<br>
-<strong>Rises in announcement space, and cannot be run by anyone outside a lab</strong> →
-undecided. The test does not apply; do not read the silence as a verdict.</p>
-</div>
-
 <p>None of these four is visible from the falling line alone. A chart of attention tells you
 where the conversation went; it never tells you why, and the why is the entire decision. What
 it does give you, if you look at more than one surface and read a few of the days around the
-break, is enough to sort a fall into the right bucket — which is all the decision usually
-needs.</p>
+break, is enough to sort a fall into the right bucket — which is all the decision usually needs.
+The rules for doing that sorting are worth stating once, at the end of the chapter, when there
+is a fifth fate to put beside them.</p>
 """
 
 
@@ -1973,8 +2049,8 @@ report. The answer, in the data, is that the safety conversation did not grow.
 
 CH9_B = """
 <p>Look at what fell. <code>Alignment</code> — the central word of AI safety in 2024 — peaks at
-6.47 per ten thousand words of announcement space in the second half of that year and ends at
-<strong>0.64</strong>, a tenfold fall from its height.
+7.21 per ten thousand words of announcement space in the second half of that year and ends at
+<strong>1.28</strong>, a fivefold fall from its height.
 Regulation spikes to <strong>14.60</strong> in the second half of 2024, the highest single
 value in this chapter, during the SB-1047 and EU AI Act window, and then collapses to 1.04 and
 stays there. Existential-risk language never exceeds 2.06 in the entire corpus and ends where
@@ -2372,10 +2448,17 @@ breaks it is the one this book has already used twice — because the largest fa
 archive belongs to none of the four.</p>
 
 <p>Retrieval-augmented generation is the most complete disappearance in this
-archive. Inside announcement space it runs at 30.95 mentions per ten thousand words in early
-2024 — the densest technical idea in the corpus at that point — and in the final half-year it
-runs at <strong>0.21</strong>. That is a hundred-and-fortyfold fall. Nothing else measured in
-this book falls that far.</p>
+archive. Inside announcement space the name runs at 22.6 mentions per ten thousand words in
+early 2024 — the densest technical idea in the corpus at that point — and in the final
+half-year it runs at <strong>0.21</strong>. That is a hundred-and-sevenfold fall. Nothing else
+measured in this book falls that far.</p>
+
+<p>One note on which pattern that is, because this chapter is about to compare a name against a
+mechanism and the comparison is worthless if the two are counted on different footings. The
+30.9 quoted back in chapter 3 is a broader pattern that also catches <em>retrieval-augmented</em>
+written out in full; it falls to 0.2, the same shape and a little larger. Everything in this
+chapter uses the narrow one — the string people actually said when they meant the architecture —
+so that the name and its machinery are measured the same way.</p>
 
 <h2>What retrieval augmentation actually was</h2>
 
@@ -2425,23 +2508,25 @@ find out is to stop counting the name and start counting the <em>mechanism</em> 
 chunking, reranking, vector indexes, semantic search, BM25 — the words you have to use if you
 are actually building retrieval, whether or not you call it RAG.</p>
 
-<div class="tw"><table><thead><tr><th>Half-year</th><th class="n">“RAG”</th>
+<div class="tw"><table><thead><tr><th>Half-year</th><th class="n">“RAG”, the name</th>
 <th class="n">its machinery</th><th class="n">machinery ÷ name</th></tr></thead><tbody>
-<tr><td>2024H1</td><td class="n">23.7</td><td class="n">17.8</td><td class="n">0.8×</td></tr>
-<tr><td>2024H2</td><td class="n">6.6</td><td class="n">6.2</td><td class="n">0.9×</td></tr>
-<tr><td>2025H1</td><td class="n">3.2</td><td class="n">4.8</td><td class="n">1.5×</td></tr>
-<tr><td>2025H2</td><td class="n">2.4</td><td class="n">8.3</td><td class="n">3.5×</td></tr>
-<tr><td>2026H1</td><td class="n">1.8</td><td class="n">8.1</td><td class="n"><b>4.6×</b></td></tr>
-<tr><td>2026H2</td><td class="n">2.0</td><td class="n">4.4</td><td class="n">2.2×</td></tr>
+<tr><td>2024H1</td><td class="n">22.6</td><td class="n">14.2</td><td class="n">0.6×</td></tr>
+<tr><td>2024H2</td><td class="n">21.1</td><td class="n">12.4</td><td class="n">0.6×</td></tr>
+<tr><td>2025H1</td><td class="n">5.6</td><td class="n">4.5</td><td class="n">0.8×</td></tr>
+<tr><td>2025H2</td><td class="n">5.6</td><td class="n">12.8</td><td class="n">2.3×</td></tr>
+<tr><td>2026H1</td><td class="n">2.6</td><td class="n">13.4</td><td class="n">5.2×</td></tr>
+<tr><td>2026H2</td><td class="n">0.2</td><td class="n">7.5</td><td class="n"><b>35×</b></td></tr>
 </tbody></table></div>
 
-<p>In 2024 the name and the mechanism are mentioned about equally: if you were talking about
-embeddings you were probably saying <em>RAG</em> in the same breath. The two then come apart.
-The name falls thirteenfold. The machinery falls a little over twofold, and in the second half
-of 2025 it is <em>higher</em> than it was in the second half of 2024 — more talk about
-chunking and reranking, at the moment the word RAG had all but vanished.</p>
+<p>In 2024 the name is mentioned rather more than the mechanism: if you were talking about
+embeddings you were probably saying <em>RAG</em> in the same breath, and often only that. The
+two then come apart, and the last column does it monotonically — every half-year the machinery
+gains on the name, and it never once gives ground. The name falls a hundred and sevenfold. The
+machinery falls 1.9-fold, and in the second half of 2025 it is <em>higher</em> than it was in
+the second half of 2024 — more talk about chunking and reranking, at the moment the word RAG had
+all but vanished.</p>
 
-<p class="pull">The name fell thirteenfold. The thing it named fell by half, and spent a year
+<p class="pull">The name fell a hundredfold. The thing it named fell by half, and spent a year
 going back up.</p>
 
 <p>This is what absorption looks like from inside a text corpus, and it is worth being precise
@@ -2450,48 +2535,20 @@ widely; nothing in this archive can show that. It shows that the vocabulary of b
 retrieval outlived the label by a factor that grew every half-year for two years — which is the
 signature of a technique that stopped being a topic and became a component.</p>
 
-<p>You can watch it happen in a single passage. January 2026, announcement space, at the moment
-the word <em>RAG</em> is running at under two mentions per ten thousand words:</p>
-
-<blockquote><p>LEANN: “stop storing embeddings”. A notable systems claim: index 60M text chunks
-using 6GB (vs “200GB”) by storing a compact graph and recomputing embeddings selectively at
-query time; pitched as enabling <strong>local RAG at new scales</strong>. Engineers should
-sanity-check latency/throughput tradeoffs and recall under recomputation, but the “graph +
-selective recompute” direction matches broader storage/edge constraints.</p>
-<cite>AI News, Twitter recap, 2026-01-07</cite></blockquote>
-
-<p>Sixty million chunks, an index, a recall tradeoff, and a warning about latency. That is a
-retrieval engineering problem being taken seriously enough to argue about storage layouts. The
-name survives only as a modifier — <em>local RAG</em> — attached to the thing that actually
-matters, which is the graph.</p>
-
-<p>Compare it to where the chapter started, February 2024, when RAG was not a component but a
-product surface people complained about:</p>
-
-<blockquote><p>Nick Dobos (of Grimoire fame) also blasted the entire knowledge files capability —
-it seems the RAG system naively includes 40k characters' worth of context from docs every time,
-reducing available context and adherence to system prompts.</p>
-<cite>AI News lede, 2024-02-01</cite></blockquote>
-
-<p>Two years apart, the same subject. In 2024 it is a feature with a name, behaving badly
-enough to be blasted by name. In 2026 it is a storage problem with a benchmark. The word did
-almost all of the dying.</p>
+<p>Put the chapter's two quotations side by side and the reclassification is visible without any
+counting at all. In 2024, Nick Dobos is blasting the RAG system by name, as a product surface
+that behaves badly. In 2026, the same subject arrives as LEANN — sixty million chunks, a storage
+budget, a recall tradeoff — and the name survives only as a modifier, <em>local RAG</em>,
+attached to the thing that actually matters, which is the graph. Two years apart: a feature with
+a name, then a storage problem with a benchmark. The word did almost all of the dying.</p>
 
 <p>"RAG is dead" was a real position, argued in public by people who build things, and the data
 above is exactly what you would show to support it.</p>
 
-<p>It is also wrong, and this chapter is about the test that shows why — a test that costs about
-twenty minutes and works on any technology, in any field, without needing to know the story.</p>
-
-<h2>The problem with a falling line</h2>
-
-<p>A line going down has at least four possible causes. The idea was absorbed so completely
-that nobody names it any more; the idea genuinely died; the idea was early and will come back
-when the hardware does; or the measurement is broken. All four look the same on a chart, and you
-can usually settle it by reading a few weeks of coverage around the fall — but reading does not
-scale, and it is not falsifiable.</p>
-
-<p>Here is a test that is both.</p>
+<p>It is also wrong, and the second column is what shows it. Reading a few weeks of coverage
+around the fall would have shown it too — but reading does not scale and it is not falsifiable,
+and the second column is both. Stated generally, so it works on something other than
+retrieval:</p>
 
 <div class="aside">
 <h4>The name / machinery test</h4>
@@ -2508,12 +2565,8 @@ argued about.</p>
 """
 
 CH10_B = """
-<p>RAG's name falls a hundred and fortyfold. Its machinery, counted as set out earlier in this
-chapter, falls a little over <strong>twofold</strong> — and is <em>higher</em> in the second
-half of 2025 (8.3) than it was in the second half of 2024 (6.2). The mechanism never went
-anywhere. Only the label did.</p>
-
-<p>And the line above both of them is the one that settles it. Memory — long-term memory,
+<p>The two lower lines are the table above, drawn. The line above both of them is the one the
+table does not contain, and it is the one that settles the case. Memory — long-term memory,
 memory layers, what a system keeps and retrieves across turns — goes from 12.91 to a peak of
 <strong>20.74</strong>. The job RAG existed to do is discussed <em>more</em> at the end of the
 corpus than at the beginning. It simply is not called RAG, because it stopped being an
@@ -2839,8 +2892,12 @@ Structured help channels account for 3.2%. Research and paper channels account f
 Showcase channels, where people post the things they built, account for 0.6%.</p>
 
 <p>If your mental model of a technical community is a place where people ask well-formed
-questions and receive well-formed answers, the census does not support it. The activity is
-overwhelmingly undifferentiated conversation, and the second-largest identifiable topic — after
+questions in the channel provided and receive well-formed answers there, the census does not
+support it. What it supports is that the structure is mostly decorative: the technical
+conversation happens, but it happens in <code>general</code>, unlabelled, next to everything
+else. That is a fact about where the talk sits rather than about its quality — the extract below
+is from an ordinary chat channel and it is as specific as anything in a help forum. The
+second-largest identifiable topic — after
 <code>general</code>, <code>ai-discussions</code> and <code>off-topic</code> — is hardware.
 <code>hardware-discussion</code> carries 46,273 messages, which puts it fractionally ahead of
 every channel named <code>help</code> in the archive combined.</p>
@@ -3127,10 +3184,11 @@ name, and let the lab decide which weights are behind it.</p>
 # ---------------------------------------------------------------- interlude III
 
 INT3 = """
-<p class="first">Six findings in this work were published and then withdrawn or reversed. That
-is the honest number, and it is worth setting out in one place — not as a penance, but because
-they are not six unrelated mistakes. They are three mistakes made twice each, and each of the
-three has a different detection method that costs almost nothing to run.</p>
+<p class="first">Seven findings in this work were published and then withdrawn or reversed.
+That is the honest number, and it is worth setting out in one place — not as a penance, but
+because they are not seven unrelated mistakes. They are three mistakes, made three times, three
+times and once, and each of the three has a different detection method that costs almost nothing
+to run.</p>
 """
 
 INT3_B = """
@@ -3152,6 +3210,35 @@ Every company's headline share falls; I picked the two I expected to fall and wr
 about them. The same mechanism produced a second finding — that quiet-day language was rising,
 so the field was slowing down — which is a measurement of the template rather than the
 field.</p>
+
+<p>What it looks like in the file is this. Here is the entire human-written opening of the last
+issue in the archive, as stored:</p>
+
+<blockquote><p>a quiet day.</p>
+<cite>AI News lede, 2026-08-06, as the public mirror carried it</cite></blockquote>
+
+<p>And here is the opening of the same issue, as it was actually sent, on a day the editor
+titled <em>AMD buys Taalas</em>:</p>
+
+<blockquote><p>In <em>The Custom ASIC Thesis</em> we said Taalas was worth paying attention to,
+and in the <em>Inference Inflection</em> we said everything would go vertical. Our Baseten
+episode had some skeptical counterpoints against etched LLMs, not just custom ASICs, but clearly
+Lisa Su disagrees for now.</p>
+<cite>AI News lede, 2026-08-06, as published</cite></blockquote>
+
+<p>Three words against a paragraph collecting on a call made twice. Nothing in the schema, the
+types or the row count distinguishes them, and a series that counts words in the
+<code>lede</code> field will read the first one as a field going quiet. One consequence for
+anyone checking this: the corpus in the repository behind these pages has since been repaired
+from the emails, so the placeholder above is no longer there to look at. The repair is the
+commit; the mistake is only in this account of it.</p>
+
+<p>And it is worth noting what the reading still missed even after that correction, because it
+is the subtler half. <em>Not much happened today</em> is a real editorial signal for most of the
+corpus, not a blank — and on the issues genuinely sent under it, the front matter names
+<em>more</em> companies than on the headlined days, not fewer. It marks the absence of a lead
+story rather than the absence of news. I had corrected the artifact and still misread the value
+underneath it; the first interlude works through that in full.</p>
 
 <p><strong>Detection:</strong> read the values, not the schema. Twenty rows, spread across the
 range, read by a person. It takes an afternoon and nothing else catches this.</p>
@@ -3216,14 +3303,14 @@ The question is not statistical, and no diagnostic will raise it.</p>
 """
 
 INT3_D = """
-<h2>What all six have in common</h2>
+<h2>What all seven have in common</h2>
 
 <p><strong>Not one of them was a statistical error.</strong> Every count was correct. Every
 difference was far outside anything sampling noise could produce. Every significance test would
 have passed, every confidence interval would have been narrow, and every one of those numbers
 would have been describing the wrong quantity.</p>
 
-<p>All six live in the step before statistics — the one where you decide what to count, over
+<p>All seven live in the step before statistics — the one where you decide what to count, over
 what population, treating what as a subject. That step has essentially no tooling. There is no
 linter for it, no test that fails, and no warning in any output. It is checked by reading, or it
 is not checked.</p>
@@ -3418,10 +3505,10 @@ to do all of it beautifully to a quantity nobody meant to measure.</p>
 # ---------------------------------------------------------------- chapter 16
 
 CH16 = """
-<p class="first">The last issue in this archive is dated 6 August 2026. In the archive its title
-is <em>not much happened today</em> and the human-written line underneath it is three words
-long — <em>a quiet day.</em> Neither is what was published. The issue went out under a
-headline and a subtitle of its own:</p>
+<p class="first">The last issue in this archive is dated 6 August 2026. In the copy of it I was
+handed, its title is <em>not much happened today</em> and the human-written line underneath is
+three words long — <em>a quiet day.</em> Neither is what was published. The issue went out under
+a headline and a subtitle of its own:</p>
 
 <blockquote><p><strong>AMD buys Taalas</strong><br>
 <em>The Inference Inflection is HEATING up.</em></p>
@@ -3733,6 +3820,19 @@ one model that reads and writes text, images, audio and video, and the separate 
 chapter is named after have stopped being categories at all.</p>
 """
 
+CHIMG_END = """
+<p>Read the four rows of that figure in the order they appear and you have the whole arc without
+needing the prose. Practitioners got there first, loudly, because the weights were downloadable
+and the hardware was a gaming card. The announcement layer arrived late, peaked in 2025 and
+declined gently, because a capability that has become a feature of a chat assistant is nobody's
+launch. Community space barely moves at all. And the editor's line — the only human one — ends
+higher than it started, which is the tell that nothing about the subject actually died.</p>
+
+<p class="pull">Image generation is the completed example the rest of the book only has
+fragments of: open first, commoditised second, absorbed into a general model third, and its
+mathematics borrowed by the thing that replaced it.</p>
+"""
+
 # ---------------------------------------------------------------- chapter 15 (open weights)
 
 CHOPEN = """
@@ -3867,6 +3967,19 @@ with. It moves in both surfaces, at the same time, in the same direction, for a 
 running a service can state in a sentence.</p>
 """
 
+CHOPEN_END = """
+<p>What that flat middle conceals is worth stating plainly, because it is the reason this
+chapter is short and its finding is not. For two and a half years the words <em>open weights</em>
+did not move, while the thing they describe moved continents — from Llama and Mistral to a
+rotating bloc of five Chinese labs, at four to ten times the density, on the surface where people
+actually download things. The vocabulary only caught up in the last six months, once a Western
+hardware company shipped an open model and called it the US state of the art. The category had
+been the story for two years before the category had a name anyone was using.</p>
+
+<p class="pull">A term that stays flat while the world underneath it changes is not a control.
+It is a term nobody needed yet.</p>
+"""
+
 CH7_DRIFT = """
 <h2>The general hazard</h2>
 
@@ -3904,8 +4017,9 @@ them, and what the whole thing cannot tell you.</p>
 
 <h2>The corpus</h2>
 
-<p>690 daily issues of <em>AI News</em>, 6 December 2023 to 6 August 2026, about 15.4 million
-words, in <code>articles/</code> as one markdown file per issue. Filenames are the day an issue
+<p>690 daily issues of <em>AI News</em> — written and edited by Shawn Wang (swyx), published
+between 6 December 2023 and 6 August 2026 through Buttondown, then smol.ai, then Substack — about
+15.4 million words, in <code>articles/</code> as one markdown file per issue. Filenames are the day an issue
 <em>covers</em>; the front matter carries the day it was <em>published</em>, which is usually
 the next morning. Mixing those two is how three dates in the first edition came out wrong.</p>
 
@@ -3914,6 +4028,13 @@ a Twitter recap, a Reddit recap and, until March 2026, a Discord recap. Above th
 text a person wrote: a lede of a few hundred words. For 2026 the public mirror carries a
 placeholder there instead of the real thing, so the editorial layer was reconstructed from 397
 sent emails; see <code>analysis/extract_commentary_eml.py</code>.</p>
+
+<p>This book is a reading of a copy, not a substitute for the thing. The newsletter was still
+publishing when this archive stops, under the name it moved to at the second provider change —
+<code>news.smol.ai</code> — and every quotation here is a few sentences lifted out of an issue
+that ran to twenty-four thousand words. Anything that looks interesting in these pages is worth
+reading at its original length, which is one reason each dated citation links back to the issue
+it came from.</p>
 
 <h2>The estimand</h2>
 
@@ -4208,7 +4329,8 @@ def pages():
                     "Image-generation language by surface. Practice space in early 2024 is "
                     "the highest density any topic reaches anywhere in this corpus, and it "
                     "is the only line that collapses. The editor's own writing ends higher "
-                    "than it started."))
+                    "than it started.")
+              + CHIMG_END)
 
     ch_open = (CHOPEN
                + fig(C.lines(D.P6,
@@ -4222,7 +4344,8 @@ def pages():
                      27, "Flat, then a step",
                      "Two and a half years of a steady conversation, then a tripling in the "
                      "final half-year in both surfaces at once. The money vocabulary rises "
-                     "through the same window."))
+                     "through the same window.")
+               + CHOPEN_END)
 
     ch10 = (CH4
            + fig(C.lines(D.P6,
@@ -4361,12 +4484,14 @@ def pages():
                              [("stored titles", [v for _, v in D.TEMPLATED], "sig")],
                              [0, 25, 50, 75], "% of issues", every=1, gutter=126,
                              events=D.TEMPLATED_EVENT),
-                  25, "A placeholder that was never published",
+                  25, "One column, two things happening in it",
                   "Share of issues whose stored title is a template — “not much happened "
-                  "today”, “a quiet weekend” — rather than a description of the day. The rise "
-                  "is real and the explanation is not: on the 133 issues recoverable from the "
-                  f"sent emails, only <b>{D.TEMPLATED_PUBLISHED}%</b> went out under a "
-                  "templated subject. The series measures the mirror, not the newsletter.")
+                  "today”, “a quiet weekend” — rather than a description of the day. Through "
+                  "2024 and 2025 the rise is the editor's own habit and the stored series "
+                  "tracks what was sent. In 2026 the two part company: of the 133 issues of "
+                  f"that year recoverable from the sent emails, only <b>{D.TEMPLATED_PUBLISHED}%</b> "
+                  "went out under a templated subject. A real trend and a lossy mirror, in "
+                  "one column, moving opposite ways.")
             + INT3_C + INT3_D)
 
     unit_rows = [[C.esc(u), f"<i>{C.esc(row)}</i>", a, b, f"<b>{chg}</b>"]
@@ -4442,7 +4567,7 @@ def pages():
          "What changed when a model you could download caught up?", ch_open),
         ("ch14", "ch", "14", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
-        ("interlude-3", "inter", "III", "The six things I got wrong",
+        ("interlude-3", "inter", "III", "The seven things I got wrong",
          "Consolidated, with what each one cost.", int3),
         ("ch15", "ch", "15", "The unit of observation",
          "Why did none of this get caught by better statistics?", ch15),

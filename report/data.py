@@ -676,12 +676,14 @@ KM_WHY = [("Chinese labs", "5.44", "2025-07-29", "77 d"),
 # (what was published, what was true, root cause)
 LEDGER = [
     ("OpenAI's share of headlines fell from 18% to 4%",
-     "Templated titles rose from 8% to 68% of issues, so every company falls. The template "
-     "was the mirror's, not the newsletter's: 8% of issues were sent that way.",
+     "Templated titles rose from 8% to 68% of issues, so every company falls. Through 2024–25 "
+     "the templating is the editor's own; in 2026 it is the mirror's, and only 8% of that "
+     "year's issues were actually sent that way.",
      "copy"),
     ("Quiet-day language rose sharply, so the field was slowing",
-     "The stored title and lede are placeholders. 80 of 133 recoverable issues went out "
-     "under a real headline, including several major launches.",
+     "Of 397 recovered issues, 196 are stored under a template and 80 of those were sent "
+     "under a real headline. Worse, the template is not an absence: on the issues genuinely "
+     "sent that way it marks days that name <i>more</i> companies, not fewer.",
      "copy"),
     ("The editorial layer thinned to nothing — a median of 3 words per issue by 2026",
      "The mirror had stopped carrying it. Restored from the sent emails the 2026 median is "
