@@ -796,3 +796,9 @@ IMAGEGEN_BY_SURFACE = {
     "discord": [20.7, 17.6, 10.1, 10.2, 10.0, 0.0],
     "lede":    [7.7, 9.4, 8.5, 14.7, 8.2, 11.6],
 }
+
+# Open-weights language and the cost/throughput vocabulary that rises with it,
+# per 10^4 words. Flat for two and a half years, then a step change in 2026H2.
+OPEN_WEIGHTS = {"open weights (announcement)": [11.9, 7.4, 9.0, 11.7, 10.7, 30.3],
+                "open weights (practice)": [5.5, 6.8, 5.4, 5.1, 7.7, 33.9],
+                "cost and throughput": [1.9, 1.8, 2.2, 6.8, 6.5, 9.4]}

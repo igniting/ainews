@@ -3674,6 +3674,25 @@ anywhere in the corpus, and it happened while the underlying capability was stea
 which is worth holding onto: a name disappearing here means a company lost, not that the
 technique did.</p>
 
+<p>What that density is actually made of is worth seeing, because it is not people
+discussing image generation as a topic. It is people using it:</p>
+
+<blockquote><p>In /r/StableDiffusion, users share tips and tricks such as base prompts for
+realistic SDXL renders, colouring in with AI, and creating <strong>custom Stardew Valley player
+portraits</strong>.</p>
+<cite>AI News, Reddit recap, 2024-04-01</cite></blockquote>
+
+<blockquote><p>Regional prompting experiments with A8R8, Forge, and a forked Forge Couple
+extension allow more granular control over image generation, with the new interface supporting
+<strong>dynamic attention regions, mask painting, and prompt weighting to minimize
+leakage</strong>.</p>
+<cite>AI News, Reddit recap, 2024-04-02</cite></blockquote>
+
+<p>Two days apart, and between them the whole character of the era: game portraits and a
+forked extension for controlling which prompt applies to which region of the canvas. This is a
+craft community with tooling, not an audience for launches — which is exactly why its density
+was so high, and exactly why it does not survive the sample widening.</p>
+
 <h2>The turn: generation moves inside the model</h2>
 
 <p>The structural change arrives in 2025, and the archive catches it being described as a
@@ -3789,6 +3808,36 @@ has stopped being a Chinese speciality and become a competitive position Western
 In the second, a 2.4-trillion-parameter open release is <em>not the headline</em>, because a
 larger one arrived four days earlier. Open weights had become crowded enough that scale alone no
 longer bought attention.</p>
+
+<h2>Who needs the file rather than the API</h2>
+
+<p>The abstract case for open weights is autonomy. The concrete case, in practice space, is
+narrower and more convincing — it is people for whom sending the input somewhere else is not an
+option:</p>
+
+<blockquote><p>A commenter working in drug discovery noted they <strong>“can't use
+mainstream/closed LLMs,”</strong> implying constraints around proprietary molecular and IP data,
+confidentiality, compliance and auditability when sending prompts to hosted models … domains
+like pharma may prefer local or open-weight models to avoid data exfiltration and policy-filter
+limitations.</p>
+<cite>AI News, Reddit recap, 2026-06-25</cite></blockquote>
+
+<p>That is the whole argument in one sentence, and it has nothing to do with cost or ideology.
+For some data the question is not which model is best, it is which models are legally reachable
+at all.</p>
+
+<p>What it costs to exercise that option is the other half, and practice space is unsentimental
+about it:</p>
+
+<blockquote><p>Commenters focused on the deployment feasibility of unsloth/GLM-5.2-GGUF, with
+one noting the apparent <strong>800GB footprint</strong> and asking how aggressively it would
+need to be quantized to run locally. Another technical concern was KV-cache scaling for very
+long context: <strong>“imagine the KV Cache size to reach 1M CTX”</strong>.</p>
+<cite>AI News, Reddit recap, 2026-06-17</cite></blockquote>
+
+<p>Eight hundred gigabytes of weights before you have served a single token, and a memory cost
+for context that scales on top of that. The freedom is real and so is the bill; what changed by
+2026 is that the bill was worth arguing about in public.</p>
 
 <h2>Why the price series moves with it</h2>
 
@@ -4050,6 +4099,33 @@ def pages():
 
     nm_rows = [[C.esc(n), f"{a:.2f} → {b:.2f}", f"{c:.2f} → {d:.2f}",
                 f"<b>{C.esc(v)}</b>"] for n, a, b, c, d, v in D.NAME_MACH]
+    ch_img = (CHIMG
+              + fig(C.lines(D.P6,
+                            [("practice", D.IMAGEGEN_BY_SURFACE["reddit"], "sig"),
+                             ("community", D.IMAGEGEN_BY_SURFACE["discord"], "ink2"),
+                             ("announcement", D.IMAGEGEN_BY_SURFACE["twitter"], "bench"),
+                             ("the editor", D.IMAGEGEN_BY_SURFACE["lede"], "ink")],
+                            [0, 50, 100, 150], "mentions / 10⁴ words", gutter=124),
+                    26, "One collapse, and it is in one cell",
+                    "Image-generation language by surface. Practice space in early 2024 is "
+                    "the highest density any topic reaches anywhere in this corpus, and it "
+                    "is the only line that collapses. The editor's own writing ends higher "
+                    "than it started."))
+
+    ch_open = (CHOPEN
+               + fig(C.lines(D.P6,
+                             [("open weights (practice)",
+                               D.OPEN_WEIGHTS["open weights (practice)"], "sig"),
+                              ("open weights (announcement)",
+                               D.OPEN_WEIGHTS["open weights (announcement)"], "bench"),
+                              ("cost and throughput",
+                               D.OPEN_WEIGHTS["cost and throughput"], "ink")],
+                             [0, 10, 20, 30], "mentions / 10⁴ words", gutter=168),
+                     27, "Flat, then a step",
+                     "Two and a half years of a steady conversation, then a tripling in the "
+                     "final half-year in both surfaces at once. The money vocabulary rises "
+                     "through the same window."))
+
     ch10 = (CH4
            + fig(C.lines(D.P6,
                          [("state-space", D.FATES_TW["state-space"], "sig"),
@@ -4255,7 +4331,7 @@ def pages():
         ("ch9", "ch", "8", "Containment",
          "What happens after the capability race?", ch9),
         ("ch-img", "ch", "9", "Pictures first",
-         "Which capability went open, commoditised and absorbed inside three years?", CHIMG),
+         "Which capability went open, commoditised and absorbed inside three years?", ch_img),
         ("interlude-2", "inter", "II", "The day the corpus changed shape underneath me",
          "On measuring a document whose composition inverted.", int2),
         ("ch10", "ch", "10", "How ideas die",
@@ -4265,7 +4341,7 @@ def pages():
         ("ch13", "ch", "12", "Where practitioners spent their attention",
          "If announcements are unreliable, what were the other rooms talking about?", ch13),
         ("ch-open", "ch", "13", "Weights you can keep",
-         "What changed when a model you could download caught up?", CHOPEN),
+         "What changed when a model you could download caught up?", ch_open),
         ("ch14", "ch", "14", "The half-life of a dependency",
          "You are about to build on a model. How long will it stay relevant?", ch14),
         ("interlude-3", "inter", "III", "The six things I got wrong",
