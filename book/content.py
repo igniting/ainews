@@ -1464,6 +1464,56 @@ different framings of the same unsettled question, ten months apart.</p>
 """
 
 CH7_E = """
+<h2>Who actually built one</h2>
+
+<p>Abstract argument aside, the harness had products, and the archive keeps a running tally of
+which ones people were talking about. Counting the named tools across both text surfaces:</p>
+
+<div class="tw"><table><thead><tr><th>Tool</th><th class="n">24H1</th><th class="n">24H2</th>
+<th class="n">25H1</th><th class="n">25H2</th><th class="n">26H1</th><th class="n">26H2</th>
+</tr></thead><tbody>
+<tr><td>Claude Code</td><td class="n">0.0</td><td class="n">0.0</td><td class="n">2.7</td>
+<td class="n">5.3</td><td class="n"><b>12.9</b></td><td class="n">6.6</td></tr>
+<tr><td>Codex</td><td class="n">0.3</td><td class="n">0.0</td><td class="n">1.1</td>
+<td class="n">2.9</td><td class="n"><b>8.5</b></td><td class="n">6.9</td></tr>
+<tr><td>Cursor</td><td class="n">0.0</td><td class="n">0.8</td><td class="n">1.7</td>
+<td class="n">1.7</td><td class="n">3.3</td><td class="n">3.4</td></tr>
+<tr><td>Copilot</td><td class="n"><b>4.0</b></td><td class="n">0.9</td><td class="n">1.4</td>
+<td class="n">1.6</td><td class="n">1.9</td><td class="n">1.0</td></tr>
+<tr><td>Windsurf</td><td class="n">0.0</td><td class="n">0.2</td><td class="n">1.7</td>
+<td class="n">0.7</td><td class="n">0.3</td><td class="n">0.0</td></tr>
+<tr><td>Aider</td><td class="n">0.3</td><td class="n">0.9</td><td class="n">1.6</td>
+<td class="n">0.6</td><td class="n">0.1</td><td class="n">0.0</td></tr>
+</tbody></table></div>
+
+<p>Four different shapes in one table. <strong>Copilot</strong> is the category in early 2024 —
+at 4.0 it is discussed more than every other coding tool in this table combined — and it never
+rises again; by the end it is a footnote in its own market. <strong>Windsurf</strong> and
+<strong>Aider</strong> both climb to a respectable 1.6 or 1.7 in the first half of 2025 and then
+go to zero, which in this archive is what acquisition and abandonment look like from outside;
+the series cannot tell you which, only that people stopped saying the name.</p>
+
+<p><strong>Claude Code</strong> and <strong>Codex</strong> do the thing nothing else in this
+book does: they go from literally absent — 0.0 in both halves of 2024 — to the two most
+discussed tools in the corpus inside eighteen months. Neither existed as a name when the
+harness argument started. Both were shipped into the argument while it was running.</p>
+
+<p>And the archive is honest about how badly it can measure this, in a lede from June 2025 that
+is worth the whole chapter:</p>
+
+<blockquote><p>Anj from the newly rebranded a16z points out that there is a way to track
+background coding agent PRs in open source, and it's not much of a surprise that OpenAI Codex
+has something like <strong>91.9% market share</strong> — but these numbers don't capture Claude
+Code's contributions, and Cursor's Background Agents are still prelaunch.</p>
+<cite>AI News lede, 2025-06-20</cite></blockquote>
+
+<p>A precise number, a named source, and in the same breath the two reasons it is wrong. The
+denominator is public pull requests, which is where one product works and the others do not.
+Six months later Claude Code is the most-discussed tool in the archive. The 91.9% was never a
+lie; it was an answer to a question nobody had checked was the question they meant.</p>
+
+<p class="pull">Market share of the thing you can count is not market share.</p>
+
 <h2>What it all turned into</h2>
 
 <p>There is one line in this chapter's data that is larger than everything else and that I have

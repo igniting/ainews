@@ -758,3 +758,16 @@ RAG_NAME_MACHINERY = [
     ("2024H1", 23.7, 17.8), ("2024H2", 6.6, 6.2), ("2025H1", 3.2, 4.8),
     ("2025H2", 2.4, 8.3), ("2026H1", 1.8, 8.1), ("2026H2", 2.0, 4.4),
 ]
+
+# Named coding tools, mentions per 10^4 words across announcement + practice space.
+# Four shapes in one table: Copilot is the whole category in early 2024 and never
+# recovers; Windsurf and Aider peak in 2025H1 and go to zero; Claude Code and Codex
+# go from literally absent in 2024 to the two most-discussed tools in the corpus.
+CODING_TOOLS = {
+    "Claude Code": [0.0, 0.0, 2.7, 5.3, 12.9, 6.6],
+    "Codex":       [0.3, 0.0, 1.1, 2.9, 8.5, 6.9],
+    "Cursor":      [0.0, 0.8, 1.7, 1.7, 3.3, 3.4],
+    "Copilot":     [4.0, 0.9, 1.4, 1.6, 1.9, 1.0],
+    "Windsurf":    [0.0, 0.2, 1.7, 0.7, 0.3, 0.0],
+    "Aider":       [0.3, 0.9, 1.6, 0.6, 0.1, 0.0],
+}
